@@ -1,5 +1,8 @@
 {
   "type": "commonjs",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "build": "sass assets/sass/main.scss assets/css/main.css && esbuild assets/ts/main.ts --bundle --outfile=assets/js/main.js && esbuild assets/ts/browser.ts --bundle --outfile=assets/js/browser.js && esbuild assets/ts/breakpoints.ts --bundle --outfile=assets/js/breakpoints.js && esbuild assets/ts/util.ts --bundle --outfile=assets/js/util.js"
   },
