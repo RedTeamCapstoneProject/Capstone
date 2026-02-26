@@ -1,5 +1,5 @@
 {
+  "framework": null,
   "buildCommand": "npm run build",
-  "outputDirectory": "assets",
-  "framework": null
+  "outputDirectory": "assets"
 }
