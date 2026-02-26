@@ -4,7 +4,7 @@
     "node": "24.x"
   },
   "scripts": {
-    "build": "sass assets/sass/main.scss dist/main.css && esbuild-wasm assets/ts/main.ts --bundle --outfile=dist/main.js && esbuild-wasm assets/ts/browser.ts --bundle --outfile=dist/browser.js && esbuild-wasm assets/ts/breakpoints.ts --bundle --outfile=dist/breakpoints.js && esbuild-wasm assets/ts/util.ts --bundle --outfile=dist/util.js"
+    "build": "sass assets/sass/main.scss dist/main.css && esbuild assets/ts/main.ts --bundle --outfile=dist/main.js && esbuild assets/ts/browser.ts --bundle --outfile=dist/browser.js && esbuild assets/ts/breakpoints.ts --bundle --outfile=dist/breakpoints.js && esbuild assets/ts/util.ts --bundle --outfile=dist/util.js"
   },
   "dependencies": {
     "jquery": "^3.7.0"
