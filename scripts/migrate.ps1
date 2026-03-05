@@ -1,5 +1,16 @@
 $ErrorActionPreference = "Stop"
 
+# Load .env file
+if (Test-Path ".env") {
+  Get-Content ".env" | ForEach-Object {
+    if ($_ -match "^\s*([^#][^=]*)=(.*)$") {
+      $name = $matches[1]
+      $value = $matches[2]
+      Set-Item -Path "env:$name" -Value $value
+    }
+  }
+}
+
 if (-not $env:DATABASE_URL) {
   throw "DATABASE_URL is not set. Load your .env first or set it in your terminal."
 }
