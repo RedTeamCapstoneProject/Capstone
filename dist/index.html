@@ -3,19 +3,9 @@
 	<head>
 		<title>Title</title>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 		<link rel="stylesheet" href="css/main.css" />
-		<!-- Scripts -->
-		<script src="js/browser.js"></script>
-		<script src="js/breakpoints.js"></script>
-		<script src="js/util.js"></script>
-		<script src="js/main.js"></script>
-		<!-- Favicon -->
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest">
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -46,23 +36,51 @@
 				</nav>
 				<nav class="main">
 					<ul>
+						<li>
+							<a class="fa-user" href="#login-popup" title="Account">Account</a>
+						</li>
 						<li class="search">
-							<a class="fa-search" href="#search">Search</a>
+							<a class="fa-magnifying-glass" href="#search">Search</a>
 							<form id="search" method="get" action="#">
 								<input type="text" name="query" placeholder="Search" />
 							</form>
 						</li>
-						<!-- 
-						<li class="menu">
-							<a class="fa-bars" href="#menu">Menu</a>
-						</li>
-						-->
 					</ul>
 				</nav>
 			</header>
+			<!-- Login / Create Account Popup -->
+			<div id="login-popup" class="login-popup-overlay">
+				<a href="#" class="login-popup-backdrop" title="Close"></a>
+				<div class="login-popup">
+					<a href="#" class="login-popup-close" title="Close">&times;</a>
+					<div class="login-popup-inner">
+						<h2>Welcome</h2>
+						<form class="login-form" method="post" action="#">
+							<div class="field">
+								<label for="login-email">Email</label>
+								<input type="email" id="login-email" name="email" placeholder="Email" />
+							</div>
+							<div class="field">
+								<label for="login-password">Password</label>
+								<input type="password" id="login-password" name="password" placeholder="Password" />
+							</div>
+							<ul class="actions stacked">
+								<li>
+									<input type="submit" class="large fit" value="Log In" />
+								</li>
+								<li>
+									<a href="#" class="button large fit">Create Account</a>
+								</li>
+							</ul>
+							<a href="#" class="forgot-password">Forgot Password?</a>
+						</form>
+					</div>
+				</div>
+			</div>
 			<!-- Menu -->
 			<section id="menu">
 				<!-- Search -->
+				<a class="fa-bars" href="#menu">Menu</a>
 				<section>
 					<form class="search" method="get" action="#">
 						<input type="text" name="query" placeholder="Search" />
@@ -213,7 +231,7 @@
 					</a>
 					<header>
 						<h2>Real News</h2>
-						<p>The truth found here</a>
+						<p>The truth found here </a>
 						</p>
 					</header>
 				</section>
@@ -352,26 +370,14 @@
 						</li>
 					</ul>
 				</section>
-
 				<!-- Footer -->
-				 <!--
-				<section id="footer">
-					<ul class="icons">
-						<li>
-							<a href="#" class="icon solid fa-rss">
-								<span class="label">RSS</span>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="icon solid fa-envelope">
-								<span class="label">Email</span>
-							</a>
-						</li>
-					</ul>
-					<p class="copyright">&copy; Untdecided. Design: <a href="http://<placeholder.net>">Place Holder</a>. Images: <a href="http://placeholder.com">Undecided</a>. </p>
-				</section>
-			</section>
-		</div>
+				<!--
+				<section id="footer"><ul class="icons"><li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li><li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li></ul><p class="copyright">&copy; Untdecided. Design: <a href="http://<placeholder.net>">Place Holder</a>. Images: <a href="http://placeholder.com">Undecided</a>. </p></section></section></div>
 -->
+				<!-- Scripts -->
+				<script src="js/browser.js"></script>
+				<script src="js/breakpoints.js"></script>
+				<script src="js/util.js"></script>
+				<script src="js/main.js"></script>
 	</body>
 </html>
