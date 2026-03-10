@@ -3,11 +3,22 @@
     "build": "sass assets/sass/main.scss assets/css/main.css && esbuild assets/ts/main.ts --bundle --outfile=assets/js/main.js && esbuild assets/ts/browser.ts --bundle --outfile=assets/js/browser.js && esbuild assets/ts/breakpoints.ts --bundle --outfile=assets/js/breakpoints.js && esbuild assets/ts/util.ts --bundle --outfile=assets/js/util.js"
   },
   "dependencies": {
-    "jquery": "^3.7.0"
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "jquery": "^3.7.0",
+    "pg": "^8.20.0"
   },
   "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
     "@types/jquery": "^3.5.33",
+    "@types/node": "^25.4.0",
     "esbuild": "^0.20.0",
-    "sass": "^1.70.0"
+    "sass": "^1.70.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
   }
 }
