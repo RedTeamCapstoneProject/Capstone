@@ -16,7 +16,9 @@
   "skipLibCheck": true,
   "baseUrl": "./",
   "types": [
-   "jquery"
+   "jquery",
+   "node"
+
   ]
  },
  "include": [
