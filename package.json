@@ -4,7 +4,7 @@
     "node": "24.x"
   },
   "scripts": {
-    "build": "sass assets/sass/main.scss dist/main.css && esbuild assets/ts/main.ts --bundle --outfile=dist/main.js && esbuild assets/ts/browser.ts --bundle --outfile=dist/browser.js && esbuild assets/ts/breakpoints.ts --bundle --outfile=dist/breakpoints.js && esbuild assets/ts/util.ts --bundle --outfile=dist/util.js"
+    "build": "node node_modules/sass/sass.js assets/sass/main.scss dist/main.css && node node_modules/esbuild/bin/esbuild assets/ts/main.ts --bundle --outfile=dist/main.js && node node_modules/esbuild/bin/esbuild assets/ts/browser.ts --bundle --outfile=dist/browser.js && node node_modules/esbuild/bin/esbuild assets/ts/breakpoints.ts --bundle --outfile=dist/breakpoints.js && node node_modules/esbuild/bin/esbuild assets/ts/util.ts --bundle --outfile=dist/util.js"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
