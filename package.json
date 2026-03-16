@@ -7,6 +7,7 @@
     "build": "sass assets/sass/main.scss dist/main.css && esbuild assets/ts/main.ts --bundle --outfile=dist/main.js && esbuild assets/ts/browser.ts --bundle --outfile=dist/browser.js && esbuild assets/ts/breakpoints.ts --bundle --outfile=dist/breakpoints.js && esbuild assets/ts/util.ts --bundle --outfile=dist/util.js"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
     "dotenv": "^17.3.1",
