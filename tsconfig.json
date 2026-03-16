@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+  "target": "ES6",
+  "module": "ESNext",
+  "lib": [
+   "DOM",
+   "ESNext"
+  ],
+  "allowJs": true,
+  "outDir": "./dist",
+  "moduleResolution": "node",
+  "esModuleInterop": true,
+  "forceConsistentCasingInFileNames": true,
+  "strict": true,
+  "noImplicitAny": false,
+  "skipLibCheck": true,
+  "baseUrl": "./",
+  "types": [
+   "jquery"
+  ]
+ },
+ "include": [
+  "**/*.ts"
+ ],
+ "exclude": [
+  "node_modules",
+  "**/*.spec.ts"
+ ]
+}
