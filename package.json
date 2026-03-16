@@ -1,6 +1,10 @@
 {
+  "type": "commonjs",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
-    "build": "sass assets/sass/main.scss assets/css/main.css && esbuild assets/ts/main.ts --bundle --outfile=assets/js/main.js && esbuild assets/ts/browser.ts --bundle --outfile=assets/js/browser.js && esbuild assets/ts/breakpoints.ts --bundle --outfile=assets/js/breakpoints.js && esbuild assets/ts/util.ts --bundle --outfile=assets/js/util.js"
+    "build": "sass assets/sass/main.scss dist/main.css && esbuild assets/ts/main.ts --bundle --outfile=dist/main.js && esbuild assets/ts/browser.ts --bundle --outfile=dist/browser.js && esbuild assets/ts/breakpoints.ts --bundle --outfile=dist/breakpoints.js && esbuild assets/ts/util.ts --bundle --outfile=dist/util.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
