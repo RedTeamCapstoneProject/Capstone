@@ -47,5 +47,4 @@ const breakpoints = (function () {
 
   return fn;
 })();
-
 export default breakpoints;
