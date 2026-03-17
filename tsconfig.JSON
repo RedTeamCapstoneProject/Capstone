@@ -1,31 +1,27 @@
 {
   "compilerOptions": {
-  "target": "ES6",
-  "module": "ESNext",
-  "lib": [
-   "DOM",
-   "ESNext"
+    "target": "ES2020",
+    "module": "CommonJS",
+    "lib": ["DOM", "ESNext"],
+    "allowJs": true,
+    "outDir": "./dist",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "rootDir": ".",
+    "types": ["jquery", "node"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "assets/ts/**/*.ts"
   ],
-  "allowJs": true,
-  "outDir": "./dist",
-  "moduleResolution": "node",
-  "esModuleInterop": true,
-  "forceConsistentCasingInFileNames": true,
-  "strict": true,
-  "noImplicitAny": false,
-  "skipLibCheck": true,
-  "baseUrl": "./",
-  "types": [
-   "jquery",
-   "node"
-
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.spec.ts"
   ]
- },
- "include": [
-  "**/*.ts"
- ],
- "exclude": [
-  "node_modules",
-  "**/*.spec.ts"
- ]
 }
