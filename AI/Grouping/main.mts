@@ -1,10 +1,19 @@
 import 'dotenv/config';
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { config } from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// point to the .env 
+config({ path: path.resolve(__dirname, '../../.env') });
 
 const geminiKey = process.env.geminiAPI;
 
 if (!geminiKey) {
-  throw new Error("Missing geminiAPI in .env file!");
+    throw new Error("Missing geminiAPI in .env file! Checked path: " + path.resolve(__dirname, '../../.env'));
 }
 
 const genAI = new GoogleGenerativeAI(geminiKey);
@@ -18,7 +27,7 @@ async function callAI(newsTitle: string) {
   return response.text();
 }
 
-// Example usage:
+// Example call
 callAI("hello gemini how are you").then(console.log);
 
 
