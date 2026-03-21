@@ -1,0 +1,71 @@
+{
+  "status": "ok",
+  "totalResults": 5,
+  "articles": [
+    {
+      "source": {
+        "id": null,
+        "name": "CNBC"
+      },
+      "author": "Terri Cullen",
+      "title": "Trump threatens to deploy ICE agents to airports if DHS shutdown doesn't end, while Elon Musk offers to cover TSA agents' pay",
+      "description": "President Trump claimed ICE agents handling airport security would arrest immigrants who are in the U.S. illegally.",
+      "url": "https://www.cnbc.com/2026/03/21/trump-ice-tsa-dhs.html",
+      "urlToImage": "https://image.cnbcfm.com/api/v1/image/108281144-17740362652026-03-20t195007z_2109074335_rc2j8ka9f25s_rtrmadp_0_usa-trump.jpeg?v=1774036308&w=1920&h=1080",
+      "publishedAt": "2026-03-21T18:31:12Z",
+      "content": "U.S. President Donald Trump on Saturday threatened to send federal immigration agents to U.S. airports unless congressional Democrats immediately agree to fund the Department of Homeland Security."
+    },
+    {
+      "source": {
+        "id": "fortune",
+        "name": "Fortune"
+      },
+      "author": "Jason Ma",
+      "title": "OpenAI cofounder says he hasn’t written a line of code in months and is in a ‘state of psychosis’ trying to figure out what’s possible",
+      "description": "\"I don't think a normal person actually realizes that this happened or how dramatic it was.\"",
+      "url": "https://fortune.com/2026/03/21/andrej-karpathy-openai-cofounder-ai-agents-coding-state-of-psychosis-openclaw/",
+      "urlToImage": "https://fortune.com/img-assets/wp-content/uploads/2026/03/GettyImages-1321808924-e1774114026200.jpg?resize=1200,600",
+      "publishedAt": "2026-03-21T18:18:31Z",
+      "content": "Andrej Karpathy, an OpenAI cofounder and former director of AI at Tesla, admitted that hes not on the forefront of the field and feels nervous about it..."
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Electrek"
+      },
+      "author": "Jo Borrás",
+      "title": "Auto(nomous)bots, roll(er) out! The $1.75 BILLION future of self driving asphalt",
+      "description": "Autonomous construction tech startup Bedrock Robotics has just closed on a $270 million Series B funding round that brings total investment in the self-driving roller and excavator firm to more than $350 million.",
+      "url": "http://electrek.co/2026/03/21/autonomousbots-roller-out-the-1-75-billion-future-of-self-driving-asphalt/",
+      "urlToImage": "https://i0.wp.com/electrek.co/wp-content/uploads/sites/3/2026/03/ha-news-2017-autonomous_roller-stage.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2026-03-21T16:32:52Z",
+      "content": "Autonomous construction tech startup Bedrock Robotics has just closed on a $270 million Series B funding round that brings total investment..."
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Electrek"
+      },
+      "author": "Jo Borrás",
+      "title": "Vermont utility makes it easier than ever to add a home backup battery",
+      "description": "Vermont utility Green Mountain Power is expanding one of the country’s most exciting virtual power plant programs, adding a new battery lease program to its menu of home energy offerings.",
+      "url": "http://electrek.co/2026/03/21/vermont-utility-makes-it-easier-than-ever-to-add-a-home-backup-battery/",
+      "urlToImage": "https://i0.wp.com/electrek.co/wp-content/uploads/sites/3/2026/03/enphase_battery.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2026-03-21T15:14:28Z",
+      "content": "Vermont utility Green Mountain Power is expanding one of the country’s most exciting virtual power plant programs..."
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "The Daily Caller"
+      },
+      "author": "Harold Hutchison",
+      "title": "Elon Musk Offers To Pay Salaries Of TSA Agents Working Through Government Shutdown",
+      "description": "Tesla CEO Elon Musk volunteered Saturday to pay the salaries of TSA workers who have missed paychecks since the government partially shut down in February.",
+      "url": "https://dailycaller.com/2026/03/21/elon-musk-offers-pay-transportation-security-agency-agents-salaries-working-government-shutdown/",
+      "urlToImage": "https://images.dailycaller.com/image/width=1280,height=549,fit=cover,format=webp,f=auto/https://cdn01.dailycaller.com/wp-content/uploads/2026/01/GettyImages-2246892188-1-scaled-e1768836752802.jpg",
+      "publishedAt": "2026-03-21T14:31:24Z",
+      "content": "Tesla CEO Elon Musk volunteered Saturday to pay the salaries of federal airport security workers who have missed multiple paychecks..."
+    }
+  ]
+}
