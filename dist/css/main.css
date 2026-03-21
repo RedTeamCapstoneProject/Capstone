@@ -3505,6 +3505,29 @@ body {
 	border-bottom-color: transparent;
 }
 
+.back-to-login {
+	display: block;
+	margin-top: 1.25em;
+	font-family: "Raleway", Helvetica, sans-serif;
+	font-size: 0.7em;
+	font-weight: 400;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	text-align: center;
+	color: #646464;
+	border-bottom: dotted 1px rgba(160, 160, 160, 0.65);
+	text-decoration: none;
+	padding-bottom: 0.25em;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.back-to-login:hover {
+	color: #743863;
+	border-bottom-color: transparent;
+}
+
 #wrapper {
 	display: -moz-flex;
 	display: -webkit-flex;
