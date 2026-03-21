@@ -48,7 +48,7 @@
 					</ul>
 				</nav>
 			</header>
-			<!-- Login / Create Account Popup -->
+			<!-- Login Popup -->
 			<div id="login-popup" class="login-popup-overlay">
 				<a href="#" class="login-popup-backdrop" title="Close"></a>
 				<div class="login-popup">
@@ -69,10 +69,67 @@
 									<input type="submit" class="large fit" value="Log In" />
 								</li>
 								<li>
-									<a href="#" class="button large fit">Create Account</a>
+									<a href="#create-account-popup" class="button large fit">Create Account</a>
 								</li>
 							</ul>
-							<a href="#" class="forgot-password">Forgot Password?</a>
+							<a href="#forgot-password-popup" class="forgot-password">Forgot Password?</a>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- Create Account Popup -->
+			<div id="create-account-popup" class="login-popup-overlay">
+				<a href="#" class="login-popup-backdrop" title="Close"></a>
+				<div class="login-popup">
+					<a href="#" class="login-popup-close" title="Close">&times;</a>
+					<div class="login-popup-inner">
+						<h2>Create Account</h2>
+						<form class="login-form" method="post" action="#">
+							<div class="field">
+								<label for="signup-name">Name</label>
+								<input type="text" id="signup-name" name="name" placeholder="Name" />
+							</div>
+							<div class="field">
+								<label for="signup-email">Email</label>
+								<input type="email" id="signup-email" name="email" placeholder="Email" />
+							</div>
+							<div class="field">
+								<label for="signup-password">Password</label>
+								<input type="password" id="signup-password" name="password" placeholder="Password" />
+							</div>
+							<div class="field">
+								<label for="signup-confirm-password">Confirm Password</label>
+								<input type="password" id="signup-confirm-password" name="confirm-password" placeholder="Confirm Password" />
+							</div>
+							<ul class="actions stacked">
+								<li>
+									<input type="submit" class="large fit" value="Sign Up" />
+								</li>
+							</ul>
+							<a href="#login-popup" class="back-to-login">Already have an account? Log In</a>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- Forgot Password Popup -->
+			<div id="forgot-password-popup" class="login-popup-overlay">
+				<a href="#" class="login-popup-backdrop" title="Close"></a>
+				<div class="login-popup">
+					<a href="#" class="login-popup-close" title="Close">&times;</a>
+					<div class="login-popup-inner">
+						<h2>Reset Password</h2>
+						<p>Enter your email address and we'll send you a link to reset your password.</p>
+						<form class="login-form" method="post" action="#">
+							<div class="field">
+								<label for="reset-email">Email</label>
+								<input type="email" id="reset-email" name="email" placeholder="Email" />
+							</div>
+							<ul class="actions stacked">
+								<li>
+									<input type="submit" class="large fit" value="Send Reset Link" />
+								</li>
+							</ul>
+							<a href="#login-popup" class="back-to-login">Back to Log In</a>
 						</form>
 					</div>
 				</div>
