@@ -86,16 +86,23 @@
 						<h2>Create Account</h2>
 						<form class="login-form" method="post" action="#">
 							<div class="field">
-								<label for="signup-name">Name</label>
-								<input type="text" id="signup-name" name="name" placeholder="Name" />
-							</div>
-							<div class="field">
 								<label for="signup-email">Email</label>
 								<input type="email" id="signup-email" name="email" placeholder="Email" />
 							</div>
-							<div class="field">
+							<div class="field password-field-wrapper">
 								<label for="signup-password">Password</label>
 								<input type="password" id="signup-password" name="password" placeholder="Password" />
+								<div id="password-requirements" class="password-requirements">
+									<div class="pw-req-item" id="req-length">
+										<span class="pw-req-icon">&#10005;</span> Use at least 8 characters
+									</div>
+									<div class="pw-req-item" id="req-case">
+										<span class="pw-req-icon">&#10005;</span> Use upper or lower case characters
+									</div>
+									<div class="pw-req-item" id="req-number">
+										<span class="pw-req-icon">&#10005;</span> Use one or more numbers
+									</div>
+								</div>
 							</div>
 							<div class="field">
 								<label for="signup-confirm-password">Confirm Password</label>
@@ -436,5 +443,36 @@
 				<script src="js/breakpoints.js"></script>
 				<script src="js/util.js"></script>
 				<script src="js/main.js"></script>
+				<script>
+					(function() {
+						var pw = document.getElementById('signup-password');
+						var box = document.getElementById('password-requirements');
+						if (!pw || !box) return;
+						pw.addEventListener('focus', function() {
+							box.classList.add('visible');
+						});
+						pw.addEventListener('blur', function() {
+							if (!pw.value) box.classList.remove('visible');
+						});
+						pw.addEventListener('input', function() {
+							var val = pw.value;
+							toggle('req-length', val.length >= 8);
+							toggle('req-case', /[a-zA-Z]/.test(val));
+							toggle('req-number', /[0-9]/.test(val));
+							if (val) box.classList.add('visible');
+						});
+
+						function toggle(id, met) {
+							var el = document.getElementById(id);
+							if (!el) return;
+							if (met) {
+								el.classList.add('met');
+							} else {
+								el.classList.remove('met');
+							}
+							el.querySelector('.pw-req-icon').innerHTML = met ? '&#10003;' : '&#10005;';
+						}
+					})();
+				</script>
 	</body>
 </html>
