@@ -19,6 +19,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
   }
 
   try {
+    console.log("Database URL:", process.env.DATABASE_URL ? "Set" : "Not set");
     const { email, password } = req.body;
 
     if (!email || !password) {
@@ -27,6 +28,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
 
     const normalizedEmail = email.trim().toLowerCase();
 
+    console.log("Checking existing user...");
     const existingUser = await pool.query(
       "SELECT id FROM users WHERE email = $1",
       [normalizedEmail]
@@ -36,8 +38,10 @@ export default async (req: VercelRequest, res: VercelResponse) => {
       return res.status(409).json({ error: "Account already exists" });
     }
 
+    console.log("Hashing password...");
     const passwordHash = await bcrypt.hash(password, 10);
 
+    console.log("Inserting user...");
     const result = await pool.query(
       `INSERT INTO users (email, password_hash)
        VALUES ($1, $2)
@@ -50,7 +54,10 @@ export default async (req: VercelRequest, res: VercelResponse) => {
       user: result.rows[0],
     });
   } catch (error) {
-    console.error("Signup error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Signup error details:", error);
+    return res.status(500).json({ 
+      error: "Internal server error",
+      details: error instanceof Error ? error.message : String(error)
+    });
   }
 };
