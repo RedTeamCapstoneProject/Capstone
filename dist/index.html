@@ -473,6 +473,49 @@
 							el.querySelector('.pw-req-icon').innerHTML = met ? '&#10003;' : '&#10005;';
 						}
 					})();
+							// Login form handler
+							var loginForm = document.querySelector('#login-popup form.login-form');
+							if (loginForm) {
+								loginForm.addEventListener('submit', async function(event) {
+									event.preventDefault();
+									var emailInput = document.getElementById('login-email');
+									var passwordInput = document.getElementById('login-password');
+									if (!emailInput || !passwordInput) {
+										alert('Login fields not found.');
+										return;
+									}
+
+									var email = emailInput.value.trim();
+									var password = passwordInput.value;
+
+									if (!email || !password) {
+										alert('Please enter email and password.');
+										return;
+									}
+
+									try {
+										var response = await fetch('/api/auth/login', {
+											method: 'POST',
+											headers: { 'Content-Type': 'application/json' },
+											body: JSON.stringify({ email: email, password: password }),
+										});
+
+										var result = await response.json();
+										if (response.ok) {
+											alert('Login successful! Welcome, ' + result.user.email);
+											loginForm.reset();
+											window.location.hash = '';
+										} else {
+											alert(result.error || 'Login failed.');
+										}
+									} catch (err) {
+										console.error('Login request failed', err);
+										alert('Could not reach server. Please try again later.');
+									}
+								});
+							}
+
+							// Signup form handler
 							var signupForm = document.querySelector('#create-account-popup form.login-form');
 							if (signupForm) {
 								signupForm.addEventListener('submit', async function(event) {
