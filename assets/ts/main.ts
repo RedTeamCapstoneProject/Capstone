@@ -76,4 +76,44 @@ import "./util"; // Load jQuery plugins
   breakpoints.on(">large", () => {
     $intro.prependTo($sidebar);
   });
+
+  // Forgot Password Form Handler
+  const $forgotPasswordForm = $("form.login-form").filter(function () {
+    return $(this).closest("#forgot-password-popup").length > 0;
+  });
+
+  $forgotPasswordForm.on("submit", async (event) => {
+    event.preventDefault();
+
+    const $form = $(event.target as HTMLFormElement);
+    const email = $form.find('input[name="email"]').val() as string;
+
+    if (!email) {
+      alert("Please enter your email address");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:3001/api/auth/forgot-password", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: email.trim().toLowerCase() }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert("If an account with this email exists, a password reset link has been sent.");
+        $form[0].reset();
+        window.location.hash = "#login-popup"; // Go back to login popup
+      } else {
+        alert(result.error || "An error occurred. Please try again.");
+      }
+    } catch (error) {
+      console.error("Forgot password error:", error);
+      alert("An error occurred. Please try again.");
+    }
+  });
 })(jQuery);
