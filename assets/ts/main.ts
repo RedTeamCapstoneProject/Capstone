@@ -78,12 +78,15 @@ import "./util"; // Load jQuery plugins
   });
 
   // Forgot Password Form Handler
-  const $forgotPasswordForm = $("form.login-form").filter(function () {
-    return $(this).closest("#forgot-password-popup").length > 0;
-  });
+  const $forgotPasswordForm = $("#forgot-password-form");
+
+  if ($forgotPasswordForm.length === 0) {
+    console.warn("Forgot password form not found");
+  }
 
   $forgotPasswordForm.on("submit", async (event) => {
     event.preventDefault();
+    console.log("[forgot-password] submit intercepted");
 
     const $form = $(event.target as HTMLFormElement);
     const email = $form.find('input[name="email"]').val() as string;
