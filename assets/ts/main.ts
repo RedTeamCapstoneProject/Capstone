@@ -96,9 +96,10 @@ import "./util"; // Load jQuery plugins
       return;
     }
 
-    const apiBaseUrl = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
-      ? "http://localhost:3001"
-      : window.location.origin;
+    const apiBaseUrl = (window as any).API_BASE_URL ||
+      (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+        ? "http://localhost:3001"
+        : "");
 
     try {
       const response = await fetch(`${apiBaseUrl}/api/auth/forgot-password`, {

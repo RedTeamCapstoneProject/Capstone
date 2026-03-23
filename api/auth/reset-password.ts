@@ -1,0 +1,58 @@
+import { VercelRequest, VercelResponse } from "@vercel/node";
+import { Pool } from "pg";
+import bcrypt from "bcrypt";
+import crypto from "crypto";
+
+if (!process.env.DATABASE_URL) {
+  throw new Error("DATABASE_URL environment variable is not set");
+}
+
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: process.env.DATABASE_URL.includes("supabase")
+    ? { rejectUnauthorized: false }
+    : false,
+});
+
+export default async (req: VercelRequest, res: VercelResponse) => {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
+
+  try {
+    const { token, password } = req.body;
+
+    if (!token || !password || typeof token !== "string" || typeof password !== "string") {
+      return res.status(400).json({ error: "Token and password are required" });
+    }
+
+    if (password.length < 8) {
+      return res.status(400).json({ error: "Password must be at least 8 characters" });
+    }
+
+    const hashedToken = crypto.createHash("sha256").update(token).digest("hex");
+    const now = new Date();
+
+    const query = await pool.query(
+      "SELECT id FROM users WHERE password_reset_token = $1 AND reset_token_expires_at > $2",
+      [hashedToken, now]
+    );
+
+    if (query.rows.length === 0) {
+      return res.status(400).json({ error: "Invalid or expired token" });
+    }
+
+    const userId = query.rows[0].id;
+    const passwordHash = await bcrypt.hash(password, 10);
+
+    await pool.query(
+      "UPDATE users SET password_hash = $1, password_reset_token = NULL, reset_token_expires_at = NULL WHERE id = $2",
+      [passwordHash, userId]
+    );
+
+    return res.status(200).json({ message: "Password has been updated" });
+  } catch (error) {
+    console.error("reset-password error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+};
