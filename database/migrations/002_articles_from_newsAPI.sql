@@ -9,5 +9,6 @@ CREATE TABLE news_articles (
     url_to_image TEXT,
     published_at TIMESTAMPTZ,
     content TEXT,
+    category TEXT,
     created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
 );
