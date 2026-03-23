@@ -473,6 +473,100 @@
 							el.querySelector('.pw-req-icon').innerHTML = met ? '&#10003;' : '&#10005;';
 						}
 					})();
-				</script>
+							// Login form handler
+							var loginForm = document.querySelector('#login-popup form.login-form');
+							if (loginForm) {
+								loginForm.addEventListener('submit', async function(event) {
+									event.preventDefault();
+									var emailInput = document.getElementById('login-email');
+									var passwordInput = document.getElementById('login-password');
+									if (!emailInput || !passwordInput) {
+										alert('Login fields not found.');
+										return;
+									}
+
+									var email = emailInput.value.trim();
+									var password = passwordInput.value;
+
+									if (!email || !password) {
+										alert('Please enter email and password.');
+										return;
+									}
+
+									try {
+										var response = await fetch('/api/auth/login', {
+											method: 'POST',
+											headers: { 'Content-Type': 'application/json' },
+											body: JSON.stringify({ email: email, password: password }),
+										});
+
+										var result = await response.json();
+										if (response.ok) {
+											alert('Login successful! Welcome, ' + result.user.email);
+											loginForm.reset();
+											window.location.hash = '';
+										} else {
+											alert(result.error || 'Login failed.');
+										}
+									} catch (err) {
+										console.error('Login request failed', err);
+										alert('Could not reach server. Please try again later.');
+									}
+								});
+							}
+
+							// Signup form handler
+							var signupForm = document.querySelector('#create-account-popup form.login-form');
+							if (signupForm) {
+								signupForm.addEventListener('submit', async function(event) {
+									event.preventDefault();
+									var emailInput = document.getElementById('signup-email');
+									var passwordInput = document.getElementById('signup-password');
+									var confirmPasswordInput = document.getElementById('signup-confirm-password');
+									if (!emailInput || !passwordInput || !confirmPasswordInput) {
+										alert('Signup fields not found.');
+										return;
+									}
+
+									var email = emailInput.value.trim();
+									var password = passwordInput.value;
+									var confirmPassword = confirmPasswordInput.value;
+
+									if (!email || !password || !confirmPassword) {
+										alert('Please fill in all signup fields.');
+										return;
+									}
+
+									if (password !== confirmPassword) {
+										alert('Passwords do not match.');
+										return;
+									}
+
+									if (password.length < 8) {
+										alert('Password must be at least 8 characters.');
+										return;
+									}
+
+									try {
+										var response = await fetch('/api/auth/signup', {
+											method: 'POST',
+											headers: { 'Content-Type': 'application/json' },
+											body: JSON.stringify({ email: email, password: password }),
+										});
+
+										var result = await response.json();
+										if (response.ok) {
+											alert('Account created successfully. You can now log in.');
+											window.location.hash = '#login-popup';
+											signupForm.reset();
+										} else {
+											alert(result.error || 'Signup failed.');
+										}
+									} catch (err) {
+										console.error('Signup request failed', err);
+										alert('Could not reach server. Please try again later.');
+									}
+								});
+							}				</script>
 	</body>
 </html>

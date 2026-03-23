@@ -32,6 +32,7 @@
   // node_modules/jquery/dist/jquery.js
   var require_jquery = __commonJS({
     "node_modules/jquery/dist/jquery.js"(exports, module) {
+      "use strict";
       (function(global, factory) {
         "use strict";
         if (typeof module === "object" && typeof module.exports === "object") {
