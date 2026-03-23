@@ -6620,8 +6620,13 @@
             alert("Please enter your email address");
             return;
           }
+
+          const apiBaseUrl = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+            ? "http://localhost:3001"
+            : window.location.origin;
+
           try {
-            const response = await fetch("http://localhost:3001/api/auth/forgot-password", {
+            const response = await fetch(`${apiBaseUrl}/api/auth/forgot-password`, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json"
