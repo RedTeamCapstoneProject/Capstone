@@ -1,6 +1,8 @@
 import { Router, Request, Response } from "express";
 import bcrypt from "bcrypt";
+import { randomBytes } from "crypto";
 import pool from "../db";
+import { sendPasswordResetEmail } from "../email";
 
 const router = Router();
 
@@ -84,6 +86,98 @@ router.post("/login", async (req: Request, res: Response) => {
     });
   } catch (error) {
     console.error("Login error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+router.post("/forgot-password", async (req: Request, res: Response) => {
+  try {
+    const { email } = req.body as { email?: string };
+
+    if (!email) {
+      return res.status(400).json({ error: "Email is required" });
+    }
+
+    const normalizedEmail = email.trim().toLowerCase();
+
+    const result = await pool.query(
+      "SELECT id FROM users WHERE email = $1",
+      [normalizedEmail]
+    );
+
+    if (result.rows.length === 0) {
+      return res.status(200).json({
+        message: "If an account with this email exists, a password reset link will be sent",
+      });
+    }
+
+    const resetToken = randomBytes(32).toString("hex");
+    const resetTokenHash = await bcrypt.hash(resetToken, 10);
+    const expiresAt = new Date(Date.now() + 3600000);
+
+    await pool.query(
+      "UPDATE users SET password_reset_token = $1, reset_token_expires_at = $2 WHERE email = $3",
+      [resetTokenHash, expiresAt, normalizedEmail]
+    );
+
+    const resetUrl =
+      process.env.RESET_PASSWORD_URL ||
+      `${process.env.APP_URL || "http://localhost:3000"}/reset-password`;
+
+    await sendPasswordResetEmail(normalizedEmail, resetToken, resetUrl);
+
+    return res.status(200).json({
+      message: "If an account with this email exists, a password reset link will be sent",
+    });
+  } catch (error) {
+    console.error("Forgot password error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+router.post("/reset-password", async (req: Request, res: Response) => {
+  try {
+    const { token, newPassword } = req.body as {
+      token?: string;
+      newPassword?: string;
+    };
+
+    if (!token || !newPassword) {
+      return res.status(400).json({ error: "Token and new password are required" });
+    }
+
+    const result = await pool.query(
+      "SELECT id, email, password_reset_token, reset_token_expires_at FROM users WHERE password_reset_token IS NOT NULL",
+      []
+    );
+
+    let validUser = null;
+    for (const user of result.rows) {
+      const isTokenValid = await bcrypt.compare(token, user.password_reset_token);
+      if (isTokenValid) {
+        validUser = user;
+        break;
+      }
+    }
+
+    if (!validUser) {
+      return res.status(401).json({ error: "Invalid or expired reset token" });
+    }
+
+    if (new Date() > new Date(validUser.reset_token_expires_at)) {
+      return res.status(401).json({ error: "Reset token has expired" });
+    }
+
+    const newPasswordHash = await bcrypt.hash(newPassword, 10);
+
+    await pool.query(
+      "UPDATE users SET password_hash = $1, password_reset_token = NULL, reset_token_expires_at = NULL WHERE id = $2",
+      [newPasswordHash, validUser.id]
+    );
+
+    return res.status(200).json({ message: "Password reset successfully" });
+  } catch (error) {
+    console.error("Reset password error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 });
