@@ -79,20 +79,21 @@ import "./util"; // Load jQuery plugins
 
   // Forgot Password Form Handler
   const $forgotPasswordForm = $("#forgot-password-form");
+  const $forgotMsg = $("#forgot-message");
 
-  if ($forgotPasswordForm.length === 0) {
-    console.warn("Forgot password form not found");
+  function showForgotMsg(text: string, type: string) {
+    $forgotMsg.text(text).attr("class", "auth-message " + type).show();
   }
 
   $forgotPasswordForm.on("submit", async (event) => {
     event.preventDefault();
-    console.log("[forgot-password] submit intercepted");
+    $forgotMsg.hide();
 
     const $form = $(event.target as HTMLFormElement);
     const email = $form.find('input[name="email"]').val() as string;
 
     if (!email) {
-      alert("Please enter your email address");
+      showForgotMsg("Please enter your email address.", "error");
       return;
     }
 
@@ -113,15 +114,14 @@ import "./util"; // Load jQuery plugins
       const result = await response.json();
 
       if (response.ok) {
-        alert("If an account with this email exists, a password reset link has been sent.");
-        $form[0].reset();
-        window.location.hash = "#login-popup"; // Go back to login popup
+        showForgotMsg("If an account with this email exists, a password reset link has been sent.", "success");
+        ($form[0] as HTMLFormElement).reset();
       } else {
-        alert(result.error || "An error occurred. Please try again.");
+        showForgotMsg(result.error || "An error occurred. Please try again.", "error");
       }
     } catch (error) {
       console.error("Forgot password error:", error);
-      alert("An error occurred. Please try again.");
+      showForgotMsg("An error occurred. Please try again.", "error");
     }
   });
 })(jQuery);

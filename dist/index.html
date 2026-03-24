@@ -8,6 +8,8 @@
 		<link rel="stylesheet" href="css/main.css" />
 	</head>
 	<body class="is-preload">
+		<!-- Toast Notifications -->
+		<div id="toast-container" class="toast-container"></div>
 		<!-- Wrapper -->
 		<div id="wrapper">
 			<!-- Header -->
@@ -36,8 +38,12 @@
 				</nav>
 				<nav class="main">
 					<ul>
-						<li>
-							<a class="fa-user" href="#login-popup" title="Account">Account</a>
+						<li id="account-nav">
+							<a class="fa-user" href="#login-popup" title="Account" id="account-link">Account</a>
+						<span id="user-email-display" class="user-email-display">
+							<span id="user-email-text"></span>
+							<a href="#" id="logout-link" title="Log Out" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+						</span>
 						</li>
 						<li class="search">
 							<a class="fa-magnifying-glass" href="#search">Search</a>
@@ -55,10 +61,11 @@
 					<a href="#" class="login-popup-close" title="Close">&times;</a>
 					<div class="login-popup-inner">
 						<h2>Welcome</h2>
-						<form class="login-form" method="post" action="#">
-							<div class="field">
-								<label for="login-email">Email</label>
-								<input type="email" id="login-email" name="email" placeholder="Email" />
+						<div id="login-message" class="auth-message" style="display:none;"></div>
+					<form class="login-form" method="post" action="#" novalidate>
+						<div class="field">
+							<label for="login-email">Email</label>
+							<input type="email" id="login-email" name="email" placeholder="Email" />
 							</div>
 							<div class="field">
 								<label for="login-password">Password</label>
@@ -84,10 +91,11 @@
 					<a href="#" class="login-popup-close" title="Close">&times;</a>
 					<div class="login-popup-inner">
 						<h2>Create Account</h2>
-						<form class="login-form" method="post" action="#">
-							<div class="field">
-								<label for="signup-email">Email</label>
-								<input type="email" id="signup-email" name="email" placeholder="Email" />
+						<div id="signup-message" class="auth-message" style="display:none;"></div>
+					<form class="login-form" method="post" action="#" novalidate>
+						<div class="field">
+							<label for="signup-email">Email</label>
+							<input type="email" id="signup-email" name="email" placeholder="Email" />
 							</div>
 							<div class="field password-field-wrapper">
 								<label for="signup-password">Password</label>
@@ -125,8 +133,9 @@
 					<a href="#" class="login-popup-close" title="Close">&times;</a>
 					<div class="login-popup-inner">
 						<h2>Reset Password</h2>
+						<div id="forgot-message" class="auth-message" style="display:none;"></div>
 						<p>Enter your email address and we'll send you a link to reset your password.</p>
-						<form id="forgot-password-form" class="login-form" method="post" action="#">
+						<form id="forgot-password-form" class="login-form" method="post" action="#" novalidate>
 							<div class="field">
 								<label for="reset-email">Email</label>
 								<input type="email" id="reset-email" name="email" placeholder="Email" />
@@ -443,130 +452,187 @@
 				<script src="js/breakpoints.js"></script>
 				<script src="js/util.js"></script>
 				<script src="js/main.js"></script>
-				<script>
-					(function() {
-						var pw = document.getElementById('signup-password');
-						var box = document.getElementById('password-requirements');
-						if (!pw || !box) return;
-						pw.addEventListener('focus', function() {
-							box.classList.add('visible');
-						});
-						pw.addEventListener('blur', function() {
-							if (!pw.value) box.classList.remove('visible');
-						});
-						pw.addEventListener('input', function() {
-							var val = pw.value;
-							toggle('req-length', val.length >= 8);
-							toggle('req-case', /[a-zA-Z]/.test(val));
-							toggle('req-number', /[0-9]/.test(val));
-							if (val) box.classList.add('visible');
-						});
+		<script>
+			(function() {
+				function getApiBaseUrl() {
+					if (window.API_BASE_URL) return window.API_BASE_URL;
+					var h = window.location.hostname;
+					return (h === 'localhost' || h === '127.0.0.1') ? 'http://localhost:3001' : '';
+				}
+				var apiBaseUrl = getApiBaseUrl();
 
-						function toggle(id, met) {
-							var el = document.getElementById(id);
-							if (!el) return;
-							if (met) {
-								el.classList.add('met');
-							} else {
-								el.classList.remove('met');
-							}
-							el.querySelector('.pw-req-icon').innerHTML = met ? '&#10003;' : '&#10005;';
+				// Toast notification system
+				function showToast(message, type) {
+					type = type || 'success';
+					var container = document.getElementById('toast-container');
+					if (!container) return;
+					var toast = document.createElement('div');
+					toast.className = 'toast toast-' + type;
+					var iconMap = { success: 'fa-circle-check', error: 'fa-circle-xmark', info: 'fa-circle-info' };
+					toast.innerHTML = '<i class="fa-solid ' + (iconMap[type] || iconMap.info) + '"></i>' +
+						'<span class="toast-text">' + message + '</span>' +
+						'<button class="toast-close" aria-label="Dismiss">&times;</button>';
+					container.appendChild(toast);
+					requestAnimationFrame(function() {
+						toast.classList.add('toast-visible');
+					});
+					var dismiss = function() {
+						toast.classList.remove('toast-visible');
+						toast.classList.add('toast-hiding');
+						toast.addEventListener('transitionend', function() { toast.remove(); });
+						setTimeout(function() { toast.remove(); }, 400);
+					};
+					toast.querySelector('.toast-close').addEventListener('click', dismiss);
+					setTimeout(dismiss, 4000);
+				}
+
+				function updateAuthUI() {
+					var user = null;
+					try { user = JSON.parse(localStorage.getItem('user')); } catch(e) {}
+					var accountLink = document.getElementById('account-link');
+					var emailDisplay = document.getElementById('user-email-display');
+					var emailText = document.getElementById('user-email-text');
+					if (user && user.email) {
+						if (accountLink) accountLink.classList.add('hidden');
+						if (emailDisplay) emailDisplay.classList.add('visible');
+						if (emailText) emailText.textContent = user.email;
+					} else {
+						if (accountLink) accountLink.classList.remove('hidden');
+						if (emailDisplay) emailDisplay.classList.remove('visible');
+						if (emailText) emailText.textContent = '';
+					}
+				}
+				updateAuthUI();
+
+				function showMsg(id, text, type) {
+					var el = document.getElementById(id);
+					if (!el) return;
+					el.textContent = text;
+					el.className = 'auth-message ' + (type || 'success');
+					el.style.display = 'block';
+				}
+				function hideMsg(id) {
+					var el = document.getElementById(id);
+					if (el) el.style.display = 'none';
+				}
+
+				var logoutLink = document.getElementById('logout-link');
+				if (logoutLink) {
+					logoutLink.addEventListener('click', function(e) {
+						e.preventDefault();
+						localStorage.removeItem('user');
+						updateAuthUI();
+						showToast('You have been logged out.', 'info');
+					});
+				}
+
+				// Password requirements
+				var pw = document.getElementById('signup-password');
+				var box = document.getElementById('password-requirements');
+				if (pw && box) {
+					pw.addEventListener('focus', function() { box.classList.add('visible'); });
+					pw.addEventListener('blur', function() { if (!pw.value) box.classList.remove('visible'); });
+					pw.addEventListener('input', function() {
+						var val = pw.value;
+						toggleReq('req-length', val.length >= 8);
+						toggleReq('req-case', /[a-zA-Z]/.test(val));
+						toggleReq('req-number', /[0-9]/.test(val));
+						if (val) box.classList.add('visible');
+					});
+				}
+				function toggleReq(id, met) {
+					var el = document.getElementById(id);
+					if (!el) return;
+					el.classList.toggle('met', met);
+					el.querySelector('.pw-req-icon').innerHTML = met ? '&#10003;' : '&#10005;';
+				}
+
+				// Login
+				var loginForm = document.querySelector('#login-popup form.login-form');
+				if (loginForm) {
+					loginForm.addEventListener('submit', async function(e) {
+						e.preventDefault();
+						hideMsg('login-message');
+						var email = document.getElementById('login-email').value.trim();
+						var password = document.getElementById('login-password').value;
+						if (!email || !password) {
+							showMsg('login-message', 'Please enter email and password.', 'error');
+							return;
 						}
-					})();
-							// Login form handler
-							var loginForm = document.querySelector('#login-popup form.login-form');
-							if (loginForm) {
-								loginForm.addEventListener('submit', async function(event) {
-									event.preventDefault();
-									var emailInput = document.getElementById('login-email');
-									var passwordInput = document.getElementById('login-password');
-									if (!emailInput || !passwordInput) {
-										alert('Login fields not found.');
-										return;
-									}
-
-									var email = emailInput.value.trim();
-									var password = passwordInput.value;
-
-									if (!email || !password) {
-										alert('Please enter email and password.');
-										return;
-									}
-
-									try {
-										var response = await fetch('/api/auth/login', {
-											method: 'POST',
-											headers: { 'Content-Type': 'application/json' },
-											body: JSON.stringify({ email: email, password: password }),
-										});
-
-										var result = await response.json();
-										if (response.ok) {
-											alert('Login successful! Welcome, ' + result.user.email);
-											loginForm.reset();
-											window.location.hash = '';
-										} else {
-											alert(result.error || 'Login failed.');
-										}
-									} catch (err) {
-										console.error('Login request failed', err);
-										alert('Could not reach server. Please try again later.');
-									}
-								});
+						try {
+							var res = await fetch(apiBaseUrl + '/api/auth/login', {
+								method: 'POST',
+								headers: { 'Content-Type': 'application/json' },
+								body: JSON.stringify({ email: email, password: password }),
+							});
+							var data = await res.json();
+							if (res.ok) {
+								localStorage.setItem('user', JSON.stringify(data.user));
+								loginForm.reset();
+								hideMsg('login-message');
+								window.location.hash = '';
+								updateAuthUI();
+								showToast('Welcome back, ' + data.user.email + '!', 'success');
+							} else {
+								showMsg('login-message', data.error || 'Login failed.', 'error');
 							}
+						} catch (err) {
+							console.error('Login error', err);
+							showMsg('login-message', 'Could not reach server. Please try again later.', 'error');
+						}
+					});
+				}
 
-							// Signup form handler
-							var signupForm = document.querySelector('#create-account-popup form.login-form');
-							if (signupForm) {
-								signupForm.addEventListener('submit', async function(event) {
-									event.preventDefault();
-									var emailInput = document.getElementById('signup-email');
-									var passwordInput = document.getElementById('signup-password');
-									var confirmPasswordInput = document.getElementById('signup-confirm-password');
-									if (!emailInput || !passwordInput || !confirmPasswordInput) {
-										alert('Signup fields not found.');
-										return;
-									}
+				// Signup
+				var signupForm = document.querySelector('#create-account-popup form.login-form');
+				if (signupForm) {
+					signupForm.addEventListener('submit', async function(e) {
+						e.preventDefault();
+						hideMsg('signup-message');
+						var email = document.getElementById('signup-email').value.trim();
+						var password = document.getElementById('signup-password').value;
+						var confirm = document.getElementById('signup-confirm-password').value;
+						if (!email || !password || !confirm) {
+							showMsg('signup-message', 'Please fill in all fields.', 'error');
+							return;
+						}
+						if (password !== confirm) {
+							showMsg('signup-message', 'Passwords do not match.', 'error');
+							return;
+						}
+						if (password.length < 8) {
+							showMsg('signup-message', 'Password must be at least 8 characters.', 'error');
+							return;
+						}
+						try {
+							var res = await fetch(apiBaseUrl + '/api/auth/signup', {
+								method: 'POST',
+								headers: { 'Content-Type': 'application/json' },
+								body: JSON.stringify({ email: email, password: password }),
+							});
+							var data = await res.json();
+							if (res.ok) {
+								signupForm.reset();
+								window.location.hash = '#login-popup';
+								showMsg('login-message', 'Account created! You can now log in.', 'success');
+								showToast('Account created successfully!', 'success');
+							} else {
+								showMsg('signup-message', data.error || 'Signup failed.', 'error');
+							}
+						} catch (err) {
+							console.error('Signup error', err);
+							showMsg('signup-message', 'Could not reach server. Please try again later.', 'error');
+						}
+					});
+				}
 
-									var email = emailInput.value.trim();
-									var password = passwordInput.value;
-									var confirmPassword = confirmPasswordInput.value;
-
-									if (!email || !password || !confirmPassword) {
-										alert('Please fill in all signup fields.');
-										return;
-									}
-
-									if (password !== confirmPassword) {
-										alert('Passwords do not match.');
-										return;
-									}
-
-									if (password.length < 8) {
-										alert('Password must be at least 8 characters.');
-										return;
-									}
-
-									try {
-										var response = await fetch('/api/auth/signup', {
-											method: 'POST',
-											headers: { 'Content-Type': 'application/json' },
-											body: JSON.stringify({ email: email, password: password }),
-										});
-
-										var result = await response.json();
-										if (response.ok) {
-											alert('Account created successfully. You can now log in.');
-											window.location.hash = '#login-popup';
-											signupForm.reset();
-										} else {
-											alert(result.error || 'Signup failed.');
-										}
-									} catch (err) {
-										console.error('Signup request failed', err);
-										alert('Could not reach server. Please try again later.');
-									}
-								});
-							}				</script>
+				// Clear messages when switching between popups
+				window.addEventListener('hashchange', function() {
+					if (window.location.hash !== '#login-popup') hideMsg('login-message');
+					if (window.location.hash !== '#create-account-popup') hideMsg('signup-message');
+					if (window.location.hash !== '#forgot-password-popup') hideMsg('forgot-message');
+				});
+			})();
+		</script>
 	</body>
 </html>
