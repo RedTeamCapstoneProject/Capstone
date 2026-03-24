@@ -6606,17 +6606,16 @@
           $intro.prependTo($sidebar);
         });
         const $forgotPasswordForm = $("#forgot-password-form");
-        const $forgotMsg = $("#forgot-message");
-        function showForgotMsg(text, type) {
-          $forgotMsg.text(text).attr("class", "auth-message " + type).show();
+        if ($forgotPasswordForm.length === 0) {
+          console.warn("Forgot password form not found");
         }
         $forgotPasswordForm.on("submit", async (event) => {
           event.preventDefault();
-          $forgotMsg.hide();
+          console.log("[forgot-password] submit intercepted");
           const $form = $(event.target);
           const email = $form.find('input[name="email"]').val();
           if (!email) {
-            showForgotMsg("Please enter your email address.", "error");
+            alert("Please enter your email address");
             return;
           }
           const apiBaseUrl = window.API_BASE_URL || (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" ? "http://localhost:3001" : "");
@@ -6630,14 +6629,15 @@
             });
             const result = await response.json();
             if (response.ok) {
-              showForgotMsg("If an account with this email exists, a password reset link has been sent.", "success");
+              alert("If an account with this email exists, a password reset link has been sent.");
               $form[0].reset();
+              window.location.hash = "#login-popup";
             } else {
-              showForgotMsg(result.error || "An error occurred. Please try again.", "error");
+              alert(result.error || "An error occurred. Please try again.");
             }
           } catch (error) {
             console.error("Forgot password error:", error);
-            showForgotMsg("An error occurred. Please try again.", "error");
+            alert("An error occurred. Please try again.");
           }
         });
       })(import_jquery.default);
