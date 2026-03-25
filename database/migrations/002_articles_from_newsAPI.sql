@@ -10,5 +10,6 @@ CREATE TABLE news_articles (
     published_at TIMESTAMPTZ,
     content TEXT,
     category TEXT,
+    topic TEXT,
     created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
 );
