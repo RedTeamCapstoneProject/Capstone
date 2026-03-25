@@ -1,5 +1,5 @@
 CREATE TABLE summary (
-    id SERIAL PRIMARY KEY,
+    id BIGSERIAL PRIMARY KEY,
     source_names VARCHAR(255),
     authors VARCHAR(255),
     AI_title TEXT,
@@ -9,4 +9,4 @@ CREATE TABLE summary (
     topic TEXT,
     summary TEXT,
     created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
-)
+);

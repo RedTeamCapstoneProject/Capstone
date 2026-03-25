@@ -1,5 +1,5 @@
 CREATE TABLE news_articles (
-    id SERIAL PRIMARY KEY,
+    id BIGSERIAL PRIMARY KEY,
     source_id VARCHAR(255),
     source_name VARCHAR(255),
     author VARCHAR(255),
