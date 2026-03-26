@@ -4,6 +4,7 @@
   "outputDirectory": "dist",
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/reset-password", "dest": "/reset-password.html" },
     { "handle": "filesystem" }
   ]
 }
