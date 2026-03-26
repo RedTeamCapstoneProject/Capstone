@@ -15,6 +15,7 @@ const pool = new Pool({
 });
 
 export default async (req: VercelRequest, res: VercelResponse) => {
+  // Allow preflight requests from browser/network probes.
   if (req.method === "OPTIONS") {
     res.setHeader("Allow", "POST, OPTIONS");
     return res.status(200).end();
@@ -36,6 +37,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
       return res.status(400).json({ error: "Password must be at least 8 characters" });
     }
 
+    // Compare hash(token) against stored token hash and enforce expiry.
     const hashedToken = crypto.createHash("sha256").update(token).digest("hex");
     const now = new Date();
 
@@ -49,6 +51,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     }
 
     const userId = query.rows[0].id;
+    // Hash the new password before persisting it.
     const passwordHash = await bcrypt.hash(password, 10);
 
     await pool.query(
