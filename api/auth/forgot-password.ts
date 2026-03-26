@@ -29,7 +29,9 @@ async function sendResetEmail(email: string, token: string): Promise<void> {
     },
   });
 
-  const resetUrl = `${process.env.NEXT_PUBLIC_APP_URL}/reset-password?token=${encodeURIComponent(token)}`;
+  const appUrl = (process.env.NEXT_PUBLIC_APP_URL || "").replace(/\/$/, "");
+  // Use the static reset page so Vercel serves the page reliably.
+  const resetUrl = `${appUrl}/reset-password.html?token=${encodeURIComponent(token)}`;
 
   await transporter.sendMail({
     from: process.env.EMAIL_FROM || process.env.EMAIL_USER,
@@ -57,11 +59,12 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     const userRes = await pool.query("SELECT id FROM users WHERE email = $1", [normalizedEmail]);
 
     if (userRes.rows.length === 0) {
-      // Always return success to avoid leaking email existence.
+      // Always return success to avoid leaking whether an account exists.
       return res.status(200).json({ message: "If an account with this email exists, a password reset link has been sent." });
     }
 
     const resetToken = crypto.randomBytes(32).toString("hex");
+    // Store only a hash of the token in DB; send the raw token only by email.
     const hashedToken = crypto.createHash("sha256").update(resetToken).digest("hex");
     const expiresAt = new Date(Date.now() + 60 * 60 * 1000); // 1 hour
 
@@ -74,7 +77,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
       await sendResetEmail(normalizedEmail, resetToken);
     } catch (sendError) {
       console.error("Failed to send reset email", sendError);
-      // Not exposing email error to caller for security.
+      // Do not expose mail delivery details to clients.
     }
 
     return res.status(200).json({ message: "If an account with this email exists, a password reset link has been sent." });

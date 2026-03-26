@@ -6609,6 +6609,7 @@
         if ($forgotPasswordForm.length === 0) {
           console.warn("Forgot password form not found");
         }
+        // Delegated binding keeps handler working for popup/overlay DOM states.
         $(document).on("submit", "#forgot-password-form", async (event) => {
           event.preventDefault();
           event.stopPropagation();
@@ -6641,6 +6642,7 @@
             alert("An error occurred. Please try again.");
           }
         });
+        // Reset flow expects token from URL and posts the new password to API.
         $(document).on("submit", "#reset-password-form", async (event) => {
           event.preventDefault();
           event.stopPropagation();

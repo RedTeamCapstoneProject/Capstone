@@ -1,5 +1,6 @@
 import nodemailer from "nodemailer";
 
+// Shared SMTP transporter used for transactional emails.
 const transporter = nodemailer.createTransport({
   host: process.env.EMAIL_HOST,
   port: parseInt(process.env.EMAIL_PORT || "587"),
@@ -15,6 +16,7 @@ export async function sendPasswordResetEmail(
   resetToken: string,
   resetUrl: string
 ): Promise<void> {
+  // Keep token in the link query string so the reset page can submit it back.
   const mailOptions = {
     from: process.env.EMAIL_FROM || process.env.EMAIL_USER,
     to: email,

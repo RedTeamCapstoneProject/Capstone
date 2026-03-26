@@ -173,11 +173,11 @@ $(document).on("submit", "#forgot-password-form", async (event) => {
       const result = await response.json();
 
       if (response.ok) {
-        $message.text("Your password has been reset. Redirecting to home...").removeClass("error").addClass("success").show();
+        $message.text("Password reset successful. Redirecting to login...").removeClass("error").addClass("success").show();
         ($form[0] as HTMLFormElement).reset();
         window.setTimeout(() => {
-          window.location.href = "/";
-        }, 2000);
+          window.location.href = "/#login-popup";
+        }, 3000);
       } else {
         $message.text(result.error || "An error occurred. Please try again.").removeClass("success").addClass("error").show();
         submitBtn.val("Reset Password").prop("disabled", false);
