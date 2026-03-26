@@ -29,7 +29,8 @@ async function sendResetEmail(email: string, token: string): Promise<void> {
     },
   });
 
-  const resetUrl = `${process.env.NEXT_PUBLIC_APP_URL}/reset-password?token=${encodeURIComponent(token)}`;
+  const appUrl = (process.env.NEXT_PUBLIC_APP_URL || "").replace(/\/$/, "");
+  const resetUrl = `${appUrl}/reset-password.html?token=${encodeURIComponent(token)}`;
 
   await transporter.sendMail({
     from: process.env.EMAIL_FROM || process.env.EMAIL_USER,
