@@ -69,7 +69,7 @@
         var isWindow = function isWindow2(obj) {
           return obj != null && obj === obj.window;
         };
-        var document = window2.document;
+        var document2 = window2.document;
         var preservedScriptAttributes = {
           type: true,
           src: true,
@@ -77,7 +77,7 @@
           noModule: true
         };
         function DOMEval(code, node, doc) {
-          doc = doc || document;
+          doc = doc || document2;
           var i, val, script = doc.createElement("script");
           script.text = code;
           if (node) {
@@ -390,9 +390,9 @@
         jQuery.escapeSelector = function(sel) {
           return (sel + "").replace(rcssescape, fcssescape);
         };
-        var preferredDoc = document, pushNative = push;
+        var preferredDoc = document2, pushNative = push;
         (function() {
-          var i, Expr, outermostContext, sortInput, hasDuplicate, push2 = pushNative, document2, documentElement2, documentIsHTML, rbuggyQSA, matches, expando = jQuery.expando, dirruns = 0, done = 0, classCache = createCache(), tokenCache = createCache(), compilerCache = createCache(), nonnativeSelectorCache = createCache(), sortOrder = function(a, b) {
+          var i, Expr, outermostContext, sortInput, hasDuplicate, push2 = pushNative, document3, documentElement2, documentIsHTML, rbuggyQSA, matches, expando = jQuery.expando, dirruns = 0, done = 0, classCache = createCache(), tokenCache = createCache(), compilerCache = createCache(), nonnativeSelectorCache = createCache(), sortOrder = function(a, b) {
             if (a === b) {
               hasDuplicate = true;
             }
@@ -429,7 +429,7 @@
           );
           function safeActiveElement() {
             try {
-              return document2.activeElement;
+              return document3.activeElement;
             } catch (err) {
             }
           }
@@ -457,7 +457,7 @@
             }
             if (!seed) {
               setDocument(context);
-              context = context || document2;
+              context = context || document3;
               if (documentIsHTML) {
                 if (nodeType !== 11 && (match = rquickExpr2.exec(selector))) {
                   if (m = match[1]) {
@@ -536,7 +536,7 @@
             return fn;
           }
           function assert(fn) {
-            var el = document2.createElement("fieldset");
+            var el = document3.createElement("fieldset");
             try {
               return !!fn(el);
             } catch (e) {
@@ -597,33 +597,33 @@
           }
           function setDocument(node) {
             var subWindow, doc = node ? node.ownerDocument || node : preferredDoc;
-            if (doc == document2 || doc.nodeType !== 9 || !doc.documentElement) {
-              return document2;
+            if (doc == document3 || doc.nodeType !== 9 || !doc.documentElement) {
+              return document3;
             }
-            document2 = doc;
-            documentElement2 = document2.documentElement;
-            documentIsHTML = !jQuery.isXMLDoc(document2);
+            document3 = doc;
+            documentElement2 = document3.documentElement;
+            documentIsHTML = !jQuery.isXMLDoc(document3);
             matches = documentElement2.matches || documentElement2.webkitMatchesSelector || documentElement2.msMatchesSelector;
             if (documentElement2.msMatchesSelector && // Support: IE 11+, Edge 17 - 18+
             // IE/Edge sometimes throw a "Permission denied" error when strict-comparing
             // two documents; shallow comparisons work.
             // eslint-disable-next-line eqeqeq
-            preferredDoc != document2 && (subWindow = document2.defaultView) && subWindow.top !== subWindow) {
+            preferredDoc != document3 && (subWindow = document3.defaultView) && subWindow.top !== subWindow) {
               subWindow.addEventListener("unload", unloadHandler);
             }
             support.getById = assert(function(el) {
               documentElement2.appendChild(el).id = jQuery.expando;
-              return !document2.getElementsByName || !document2.getElementsByName(jQuery.expando).length;
+              return !document3.getElementsByName || !document3.getElementsByName(jQuery.expando).length;
             });
             support.disconnectedMatch = assert(function(el) {
               return matches.call(el, "*");
             });
             support.scope = assert(function() {
-              return document2.querySelectorAll(":scope");
+              return document3.querySelectorAll(":scope");
             });
             support.cssHas = assert(function() {
               try {
-                document2.querySelector(":has(*,:jqfake)");
+                document3.querySelector(":has(*,:jqfake)");
                 return false;
               } catch (e) {
                 return true;
@@ -699,14 +699,14 @@
               if (!el.querySelectorAll(":checked").length) {
                 rbuggyQSA.push(":checked");
               }
-              input = document2.createElement("input");
+              input = document3.createElement("input");
               input.setAttribute("type", "hidden");
               el.appendChild(input).setAttribute("name", "D");
               documentElement2.appendChild(el).disabled = true;
               if (el.querySelectorAll(":disabled").length !== 2) {
                 rbuggyQSA.push(":enabled", ":disabled");
               }
-              input = document2.createElement("input");
+              input = document3.createElement("input");
               input.setAttribute("name", "");
               el.appendChild(input);
               if (!el.querySelectorAll("[name='']").length) {
@@ -731,17 +731,17 @@
                 1
               );
               if (compare & 1 || !support.sortDetached && b.compareDocumentPosition(a) === compare) {
-                if (a === document2 || a.ownerDocument == preferredDoc && find.contains(preferredDoc, a)) {
+                if (a === document3 || a.ownerDocument == preferredDoc && find.contains(preferredDoc, a)) {
                   return -1;
                 }
-                if (b === document2 || b.ownerDocument == preferredDoc && find.contains(preferredDoc, b)) {
+                if (b === document3 || b.ownerDocument == preferredDoc && find.contains(preferredDoc, b)) {
                   return 1;
                 }
                 return sortInput ? indexOf.call(sortInput, a) - indexOf.call(sortInput, b) : 0;
               }
               return compare & 4 ? -1 : 1;
             };
-            return document2;
+            return document3;
           }
           find.matches = function(expr, elements) {
             return find(expr, null, null, elements);
@@ -760,16 +760,16 @@
                 nonnativeSelectorCache(expr, true);
               }
             }
-            return find(expr, document2, null, [elem]).length > 0;
+            return find(expr, document3, null, [elem]).length > 0;
           };
           find.contains = function(context, elem) {
-            if ((context.ownerDocument || context) != document2) {
+            if ((context.ownerDocument || context) != document3) {
               setDocument(context);
             }
             return jQuery.contains(context, elem);
           };
           find.attr = function(elem, name) {
-            if ((elem.ownerDocument || elem) != document2) {
+            if ((elem.ownerDocument || elem) != document3) {
               setDocument(elem);
             }
             var fn = Expr.attrHandle[name.toLowerCase()], val = fn && hasOwn.call(Expr.attrHandle, name.toLowerCase()) ? fn(elem, name, !documentIsHTML) : void 0;
@@ -1047,7 +1047,7 @@
                 return elem === documentElement2;
               },
               focus: function(elem) {
-                return elem === safeActiveElement() && document2.hasFocus() && !!(elem.type || elem.href || ~elem.tabIndex);
+                return elem === safeActiveElement() && document3.hasFocus() && !!(elem.type || elem.href || ~elem.tabIndex);
               },
               // Boolean properties
               enabled: createDisabledPseudo(false),
@@ -1389,17 +1389,17 @@
             var bySet = setMatchers.length > 0, byElement = elementMatchers.length > 0, superMatcher = function(seed, context, xml, results, outermost) {
               var elem, j, matcher, matchedCount = 0, i2 = "0", unmatched = seed && [], setMatched = [], contextBackup = outermostContext, elems = seed || byElement && Expr.find.TAG("*", outermost), dirrunsUnique = dirruns += contextBackup == null ? 1 : Math.random() || 0.1, len = elems.length;
               if (outermost) {
-                outermostContext = context == document2 || context || outermost;
+                outermostContext = context == document3 || context || outermost;
               }
               for (; i2 !== len && (elem = elems[i2]) != null; i2++) {
                 if (byElement && elem) {
                   j = 0;
-                  if (!context && elem.ownerDocument != document2) {
+                  if (!context && elem.ownerDocument != document3) {
                     setDocument(elem);
                     xml = !documentIsHTML;
                   }
                   while (matcher = elementMatchers[j++]) {
-                    if (matcher(elem, context || document2, xml)) {
+                    if (matcher(elem, context || document3, xml)) {
                       push2.call(results, elem);
                       break;
                     }
@@ -1520,7 +1520,7 @@
           support.sortStable = expando.split("").sort(sortOrder).join("") === expando;
           setDocument();
           support.sortDetached = assert(function(el) {
-            return el.compareDocumentPosition(document2.createElement("fieldset")) & 1;
+            return el.compareDocumentPosition(document3.createElement("fieldset")) & 1;
           });
           jQuery.find = find;
           jQuery.expr[":"] = jQuery.expr.pseudos;
@@ -1640,7 +1640,7 @@
                 context = context instanceof jQuery ? context[0] : context;
                 jQuery.merge(this, jQuery.parseHTML(
                   match[1],
-                  context && context.nodeType ? context.ownerDocument || context : document,
+                  context && context.nodeType ? context.ownerDocument || context : document2,
                   true
                 ));
                 if (rsingleTag.test(match[1]) && jQuery.isPlainObject(context)) {
@@ -1654,7 +1654,7 @@
                 }
                 return this;
               } else {
-                elem = document.getElementById(match[2]);
+                elem = document2.getElementById(match[2]);
                 if (elem) {
                   this[0] = elem;
                   this.length = 1;
@@ -1679,7 +1679,7 @@
           return jQuery.makeArray(selector, this);
         };
         init.prototype = jQuery.fn;
-        rootjQuery = jQuery(document);
+        rootjQuery = jQuery(document2);
         var rparentsprev = /^(?:parents|prev(?:Until|All))/, guaranteedUnique = {
           children: true,
           contents: true,
@@ -2230,19 +2230,19 @@
             if (wait !== true && --jQuery.readyWait > 0) {
               return;
             }
-            readyList.resolveWith(document, [jQuery]);
+            readyList.resolveWith(document2, [jQuery]);
           }
         });
         jQuery.ready.then = readyList.then;
         function completed() {
-          document.removeEventListener("DOMContentLoaded", completed);
+          document2.removeEventListener("DOMContentLoaded", completed);
           window2.removeEventListener("load", completed);
           jQuery.ready();
         }
-        if (document.readyState === "complete" || document.readyState !== "loading" && !document.documentElement.doScroll) {
+        if (document2.readyState === "complete" || document2.readyState !== "loading" && !document2.documentElement.doScroll) {
           window2.setTimeout(jQuery.ready);
         } else {
-          document.addEventListener("DOMContentLoaded", completed);
+          document2.addEventListener("DOMContentLoaded", completed);
           window2.addEventListener("load", completed);
         }
         var access = function(elems, fn, key, value, chainable, emptyGet, raw) {
@@ -2580,7 +2580,7 @@
         var pnum = /[+-]?(?:\d*\.|)\d+(?:[eE][+-]?\d+|)/.source;
         var rcssNum = new RegExp("^(?:([+-])=|)(" + pnum + ")([a-z%]*)$", "i");
         var cssExpand = ["Top", "Right", "Bottom", "Left"];
-        var documentElement = document.documentElement;
+        var documentElement = document2.documentElement;
         var isAttached = function(elem) {
           return jQuery.contains(elem.ownerDocument, elem);
         }, composed = { composed: true };
@@ -2700,7 +2700,7 @@
         var rtagName = /<([a-z][^\/\0>\x20\t\r\n\f]*)/i;
         var rscriptType = /^$|^module$|\/(?:java|ecma)script/i;
         (function() {
-          var fragment = document.createDocumentFragment(), div = fragment.appendChild(document.createElement("div")), input = document.createElement("input");
+          var fragment = document2.createDocumentFragment(), div = fragment.appendChild(document2.createElement("div")), input = document2.createElement("input");
           input.setAttribute("type", "radio");
           input.setAttribute("checked", "checked");
           input.setAttribute("name", "t");
@@ -3228,7 +3228,7 @@
         }, jQuery.event.addProp);
         jQuery.each({ focus: "focusin", blur: "focusout" }, function(type, delegateType) {
           function focusMappedHandler(nativeEvent) {
-            if (document.documentMode) {
+            if (document2.documentMode) {
               var handle = dataPriv.get(this, "handle"), event = jQuery.event.fix(nativeEvent);
               event.type = nativeEvent.type === "focusin" ? "focus" : "blur";
               event.isSimulated = true;
@@ -3249,7 +3249,7 @@
             setup: function() {
               var attaches;
               leverageNative(this, type, true);
-              if (document.documentMode) {
+              if (document2.documentMode) {
                 attaches = dataPriv.get(this, delegateType);
                 if (!attaches) {
                   this.addEventListener(delegateType, focusMappedHandler);
@@ -3265,7 +3265,7 @@
             },
             teardown: function() {
               var attaches;
-              if (document.documentMode) {
+              if (document2.documentMode) {
                 attaches = dataPriv.get(this, delegateType) - 1;
                 if (!attaches) {
                   this.removeEventListener(delegateType, focusMappedHandler);
@@ -3286,9 +3286,9 @@
           };
           jQuery.event.special[delegateType] = {
             setup: function() {
-              var doc = this.ownerDocument || this.document || this, dataHolder = document.documentMode ? this : doc, attaches = dataPriv.get(dataHolder, delegateType);
+              var doc = this.ownerDocument || this.document || this, dataHolder = document2.documentMode ? this : doc, attaches = dataPriv.get(dataHolder, delegateType);
               if (!attaches) {
-                if (document.documentMode) {
+                if (document2.documentMode) {
                   this.addEventListener(delegateType, focusMappedHandler);
                 } else {
                   doc.addEventListener(type, focusMappedHandler, true);
@@ -3297,9 +3297,9 @@
               dataPriv.set(dataHolder, delegateType, (attaches || 0) + 1);
             },
             teardown: function() {
-              var doc = this.ownerDocument || this.document || this, dataHolder = document.documentMode ? this : doc, attaches = dataPriv.get(dataHolder, delegateType) - 1;
+              var doc = this.ownerDocument || this.document || this, dataHolder = document2.documentMode ? this : doc, attaches = dataPriv.get(dataHolder, delegateType) - 1;
               if (!attaches) {
-                if (document.documentMode) {
+                if (document2.documentMode) {
                   this.removeEventListener(delegateType, focusMappedHandler);
                 } else {
                   doc.removeEventListener(type, focusMappedHandler, true);
@@ -3700,7 +3700,7 @@
           function roundPixelMeasures(measure) {
             return Math.round(parseFloat(measure));
           }
-          var pixelPositionVal, boxSizingReliableVal, scrollboxSizeVal, pixelBoxStylesVal, reliableTrDimensionsVal, reliableMarginLeftVal, container = document.createElement("div"), div = document.createElement("div");
+          var pixelPositionVal, boxSizingReliableVal, scrollboxSizeVal, pixelBoxStylesVal, reliableTrDimensionsVal, reliableMarginLeftVal, container = document2.createElement("div"), div = document2.createElement("div");
           if (!div.style) {
             return;
           }
@@ -3740,9 +3740,9 @@
             reliableTrDimensions: function() {
               var table, tr, trChild, trStyle;
               if (reliableTrDimensionsVal == null) {
-                table = document.createElement("table");
-                tr = document.createElement("tr");
-                trChild = document.createElement("div");
+                table = document2.createElement("table");
+                tr = document2.createElement("tr");
+                trChild = document2.createElement("div");
                 table.style.cssText = "position:absolute;left:-11111px;border-collapse:separate";
                 tr.style.cssText = "box-sizing:content-box;border:1px solid";
                 tr.style.height = "1px";
@@ -3796,7 +3796,7 @@
             }
           };
         }
-        var cssPrefixes = ["Webkit", "Moz", "ms"], emptyStyle = document.createElement("div").style, vendorProps = {};
+        var cssPrefixes = ["Webkit", "Moz", "ms"], emptyStyle = document2.createElement("div").style, vendorProps = {};
         function vendorPropName(name) {
           var capName = name[0].toUpperCase() + name.slice(1), i = cssPrefixes.length;
           while (i--) {
@@ -4171,7 +4171,7 @@
         var fxNow, inProgress, rfxtypes = /^(?:toggle|show|hide)$/, rrun = /queueHooks$/;
         function schedule() {
           if (inProgress) {
-            if (document.hidden === false && window2.requestAnimationFrame) {
+            if (document2.hidden === false && window2.requestAnimationFrame) {
               window2.requestAnimationFrame(schedule);
             } else {
               window2.setTimeout(schedule, jQuery.fx.interval);
@@ -4643,11 +4643,11 @@
           });
         };
         (function() {
-          var input = document.createElement("input"), select = document.createElement("select"), opt = select.appendChild(document.createElement("option"));
+          var input = document2.createElement("input"), select = document2.createElement("select"), opt = select.appendChild(document2.createElement("option"));
           input.type = "checkbox";
           support.checkOn = input.value !== "";
           support.optSelected = opt.selected;
-          input = document.createElement("input");
+          input = document2.createElement("input");
           input.value = "t";
           input.type = "radio";
           support.radioValue = input.value === "t";
@@ -5084,8 +5084,8 @@
         };
         jQuery.extend(jQuery.event, {
           trigger: function(event, data, elem, onlyHandlers) {
-            var i, cur, tmp, bubbleType, ontype, handle, special, lastElement, eventPath = [elem || document], type = hasOwn.call(event, "type") ? event.type : event, namespaces = hasOwn.call(event, "namespace") ? event.namespace.split(".") : [];
-            cur = lastElement = tmp = elem = elem || document;
+            var i, cur, tmp, bubbleType, ontype, handle, special, lastElement, eventPath = [elem || document2], type = hasOwn.call(event, "type") ? event.type : event, namespaces = hasOwn.call(event, "namespace") ? event.namespace.split(".") : [];
+            cur = lastElement = tmp = elem = elem || document2;
             if (elem.nodeType === 3 || elem.nodeType === 8) {
               return;
             }
@@ -5120,7 +5120,7 @@
                 eventPath.push(cur);
                 tmp = cur;
               }
-              if (tmp === (elem.ownerDocument || document)) {
+              if (tmp === (elem.ownerDocument || document2)) {
                 eventPath.push(tmp.defaultView || tmp.parentWindow || window2);
               }
             }
@@ -5260,7 +5260,7 @@
             }).get();
           }
         });
-        var r20 = /%20/g, rhash = /#.*$/, rantiCache = /([?&])_=[^&]*/, rheaders = /^(.*?):[ \t]*([^\r\n]*)$/mg, rlocalProtocol = /^(?:about|app|app-storage|.+-extension|file|res|widget):$/, rnoContent = /^(?:GET|HEAD)$/, rprotocol = /^\/\//, prefilters = {}, transports = {}, allTypes = "*/".concat("*"), originAnchor = document.createElement("a");
+        var r20 = /%20/g, rhash = /#.*$/, rantiCache = /([?&])_=[^&]*/, rheaders = /^(.*?):[ \t]*([^\r\n]*)$/mg, rlocalProtocol = /^(?:about|app|app-storage|.+-extension|file|res|widget):$/, rnoContent = /^(?:GET|HEAD)$/, rprotocol = /^\/\//, prefilters = {}, transports = {}, allTypes = "*/".concat("*"), originAnchor = document2.createElement("a");
         originAnchor.href = location.href;
         function addToPrefiltersOrTransports(structure) {
           return function(dataTypeExpression, func) {
@@ -5555,7 +5555,7 @@
             s.type = options.method || options.type || s.method || s.type;
             s.dataTypes = (s.dataType || "*").toLowerCase().match(rnothtmlwhite) || [""];
             if (s.crossDomain == null) {
-              urlAnchor = document.createElement("a");
+              urlAnchor = document2.createElement("a");
               try {
                 urlAnchor.href = s.url;
                 urlAnchor.href = urlAnchor.href;
@@ -5969,7 +5969,7 @@
                     complete(evt.type === "error" ? 404 : 200, evt.type);
                   }
                 });
-                document.head.appendChild(script[0]);
+                document2.head.appendChild(script[0]);
               },
               abort: function() {
                 if (callback) {
@@ -6027,7 +6027,7 @@
           }
         });
         support.createHTMLDocument = function() {
-          var body = document.implementation.createHTMLDocument("").body;
+          var body = document2.implementation.createHTMLDocument("").body;
           body.innerHTML = "<form></form><form></form>";
           return body.childNodes.length === 2;
         }();
@@ -6042,12 +6042,12 @@
           var base, parsed, scripts;
           if (!context) {
             if (support.createHTMLDocument) {
-              context = document.implementation.createHTMLDocument("");
+              context = document2.implementation.createHTMLDocument("");
               base = context.createElement("base");
-              base.href = document.location.href;
+              base.href = document2.location.href;
               context.head.appendChild(base);
             } else {
-              context = document;
+              context = document2;
             }
           }
           parsed = rsingleTag.exec(data);
@@ -6609,11 +6609,12 @@
         if ($forgotPasswordForm.length === 0) {
           console.warn("Forgot password form not found");
         }
-        $forgotPasswordForm.on("submit", async (event) => {
+        $(document).on("submit", "#forgot-password-form", async (event) => {
           event.preventDefault();
+          event.stopPropagation();
           console.log("[forgot-password] submit intercepted");
-          const $form = $(event.target);
-          const email = $form.find('input[name="email"]').val();
+          const $form = $(event.currentTarget);
+          const email = ($form.find('input[name="email"]').val() || "").trim().toLowerCase();
           if (!email) {
             alert("Please enter your email address");
             return;
@@ -6625,7 +6626,7 @@
               headers: {
                 "Content-Type": "application/json"
               },
-              body: JSON.stringify({ email: email.trim().toLowerCase() })
+              body: JSON.stringify({ email })
             });
             const result = await response.json();
             if (response.ok) {
