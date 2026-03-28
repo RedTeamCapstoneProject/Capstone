@@ -24,6 +24,26 @@ function getApiBaseUrl(): string {
   return "";
 }
 
+async function postResetPassword(apiBaseUrl: string, token: string, password: string): Promise<Response> {
+  const candidates = [`${apiBaseUrl}/api/auth/reset-password`, `${apiBaseUrl}/api/auth/reset-password/`];
+  let lastResponse: Response | null = null;
+
+  for (const endpoint of candidates) {
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ token, password, newPassword: password }),
+    });
+
+    lastResponse = response;
+    if (response.status !== 405) {
+      return response;
+    }
+  }
+
+  return lastResponse as Response;
+}
+
 function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -332,11 +352,7 @@ function ResetPasswordPage() {
 
     setSubmitting(true);
     try {
-      const response = await fetch(`${apiBaseUrl}/api/auth/reset-password`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ token, password }),
-      });
+      const response = await postResetPassword(apiBaseUrl, token, password);
 
       const result = (await response.json()) as AuthResponse;
 

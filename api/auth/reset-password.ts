@@ -27,13 +27,14 @@ export default async (req: VercelRequest, res: VercelResponse) => {
   }
 
   try {
-    const { token, password } = req.body;
+    const { token, password, newPassword } = req.body;
+    const submittedPassword = password ?? newPassword;
 
-    if (!token || !password || typeof token !== "string" || typeof password !== "string") {
+    if (!token || !submittedPassword || typeof token !== "string" || typeof submittedPassword !== "string") {
       return res.status(400).json({ error: "Token and password are required" });
     }
 
-    if (password.length < 8) {
+    if (submittedPassword.length < 8) {
       return res.status(400).json({ error: "Password must be at least 8 characters" });
     }
 
@@ -52,7 +53,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
 
     const userId = query.rows[0].id;
     // Hash the new password before persisting it.
-    const passwordHash = await bcrypt.hash(password, 10);
+    const passwordHash = await bcrypt.hash(submittedPassword, 10);
 
     await pool.query(
       "UPDATE users SET password_hash = $1, password_reset_token = NULL, reset_token_expires_at = NULL WHERE id = $2",

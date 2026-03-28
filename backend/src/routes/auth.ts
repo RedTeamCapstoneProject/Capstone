@@ -142,12 +142,15 @@ router.post("/forgot-password", async (req: Request, res: Response) => {
 // Validate reset token and replace the user's password hash.
 router.post("/reset-password", async (req: Request, res: Response) => {
   try {
-    const { token, newPassword } = req.body as {
+    const { token, newPassword, password } = req.body as {
       token?: string;
       newPassword?: string;
+      password?: string;
     };
 
-    if (!token || !newPassword) {
+    const submittedPassword = newPassword ?? password;
+
+    if (!token || !submittedPassword) {
       return res.status(400).json({ error: "Token and new password are required" });
     }
 
@@ -173,7 +176,7 @@ router.post("/reset-password", async (req: Request, res: Response) => {
       return res.status(401).json({ error: "Reset token has expired" });
     }
 
-    const newPasswordHash = await bcrypt.hash(newPassword, 10);
+    const newPasswordHash = await bcrypt.hash(submittedPassword, 10);
 
     await pool.query(
       "UPDATE users SET password_hash = $1, password_reset_token = NULL, reset_token_expires_at = NULL WHERE id = $2",

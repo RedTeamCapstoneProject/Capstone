@@ -22013,6 +22013,22 @@
         }
         return "";
       }
+      async function postResetPassword(apiBaseUrl, token, password) {
+        const candidates = [`${apiBaseUrl}/api/auth/reset-password`, `${apiBaseUrl}/api/auth/reset-password/`];
+        let lastResponse = null;
+        for (const endpoint of candidates) {
+          const response = await fetch(endpoint, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ token, password, newPassword: password })
+          });
+          lastResponse = response;
+          if (response.status !== 405) {
+            return response;
+          }
+        }
+        return lastResponse;
+      }
       function LoginForm() {
         const [email, setEmail] = (0, import_react.useState)("");
         const [password, setPassword] = (0, import_react.useState)("");
@@ -22284,11 +22300,7 @@
           }
           setSubmitting(true);
           try {
-            const response = await fetch(`${apiBaseUrl}/api/auth/reset-password`, {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ token, password })
-            });
+            const response = await postResetPassword(apiBaseUrl, token, password);
             const result = await response.json();
             if (response.ok) {
               setMessage("Password reset successful. Redirecting to login...");
