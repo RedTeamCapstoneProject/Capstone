@@ -2,8 +2,23 @@
   "framework": null,
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "headers": [
+    {
+      "source": "/reset-password.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, max-age=0" }
+      ]
+    },
+    {
+      "source": "/js/auth-react.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, max-age=0" }
+      ]
+    }
+  ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/reset-password(?:\\.html)?", "methods": ["POST"], "dest": "/api/auth/reset-password" },
     { "src": "/reset-password", "dest": "/reset-password.html" },
     { "handle": "filesystem" }
   ]

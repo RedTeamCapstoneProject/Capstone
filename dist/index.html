@@ -55,25 +55,7 @@
 					<a href="#" class="login-popup-close" title="Close">&times;</a>
 					<div class="login-popup-inner">
 						<h2>Welcome</h2>
-						<form class="login-form" method="post" action="#">
-							<div class="field">
-								<label for="login-email">Email</label>
-								<input type="email" id="login-email" name="email" placeholder="Email" />
-							</div>
-							<div class="field">
-								<label for="login-password">Password</label>
-								<input type="password" id="login-password" name="password" placeholder="Password" />
-							</div>
-							<ul class="actions stacked">
-								<li>
-									<input type="submit" class="large fit" value="Log In" />
-								</li>
-								<li>
-									<a href="#create-account-popup" class="button large fit">Create Account</a>
-								</li>
-							</ul>
-							<a href="#forgot-password-popup" class="forgot-password">Forgot Password?</a>
-						</form>
+						<div id="login-form-root"></div>
 					</div>
 				</div>
 			</div>
@@ -84,37 +66,7 @@
 					<a href="#" class="login-popup-close" title="Close">&times;</a>
 					<div class="login-popup-inner">
 						<h2>Create Account</h2>
-						<form class="login-form" method="post" action="#">
-							<div class="field">
-								<label for="signup-email">Email</label>
-								<input type="email" id="signup-email" name="email" placeholder="Email" />
-							</div>
-							<div class="field password-field-wrapper">
-								<label for="signup-password">Password</label>
-								<input type="password" id="signup-password" name="password" placeholder="Password" />
-								<div id="password-requirements" class="password-requirements">
-									<div class="pw-req-item" id="req-length">
-										<span class="pw-req-icon">&#10005;</span> Use at least 8 characters
-									</div>
-									<div class="pw-req-item" id="req-case">
-										<span class="pw-req-icon">&#10005;</span> Use upper or lower case characters
-									</div>
-									<div class="pw-req-item" id="req-number">
-										<span class="pw-req-icon">&#10005;</span> Use one or more numbers
-									</div>
-								</div>
-							</div>
-							<div class="field">
-								<label for="signup-confirm-password">Confirm Password</label>
-								<input type="password" id="signup-confirm-password" name="confirm-password" placeholder="Confirm Password" />
-							</div>
-							<ul class="actions stacked">
-								<li>
-									<input type="submit" class="large fit" value="Sign Up" />
-								</li>
-							</ul>
-							<a href="#login-popup" class="back-to-login">Already have an account? Log In</a>
-						</form>
+						<div id="signup-form-root"></div>
 					</div>
 				</div>
 			</div>
@@ -126,18 +78,7 @@
 					<div class="login-popup-inner">
 						<h2>Reset Password</h2>
 						<p>Enter your email address and we'll send you a link to reset your password.</p>
-						<form id="forgot-password-form" class="login-form" method="post" action="/api/auth/forgot-password">
-							<div class="field">
-								<label for="reset-email">Email</label>
-								<input type="email" id="reset-email" name="email" placeholder="Email" />
-							</div>
-							<ul class="actions stacked">
-								<li>
-									<input type="submit" class="large fit" value="Send Reset Link" />
-								</li>
-							</ul>
-							<a href="#login-popup" class="back-to-login">Back to Log In</a>
-						</form>
+						<div id="forgot-form-root"></div>
 					</div>
 				</div>
 			</div>
@@ -443,130 +384,6 @@
 				<script src="js/breakpoints.js"></script>
 				<script src="js/util.js"></script>
 				<script src="js/main.js"></script>
-				<script>
-					(function() {
-						var pw = document.getElementById('signup-password');
-						var box = document.getElementById('password-requirements');
-						if (!pw || !box) return;
-						pw.addEventListener('focus', function() {
-							box.classList.add('visible');
-						});
-						pw.addEventListener('blur', function() {
-							if (!pw.value) box.classList.remove('visible');
-						});
-						pw.addEventListener('input', function() {
-							var val = pw.value;
-							toggle('req-length', val.length >= 8);
-							toggle('req-case', /[a-zA-Z]/.test(val));
-							toggle('req-number', /[0-9]/.test(val));
-							if (val) box.classList.add('visible');
-						});
-
-						function toggle(id, met) {
-							var el = document.getElementById(id);
-							if (!el) return;
-							if (met) {
-								el.classList.add('met');
-							} else {
-								el.classList.remove('met');
-							}
-							el.querySelector('.pw-req-icon').innerHTML = met ? '&#10003;' : '&#10005;';
-						}
-					})();
-							// Login form handler
-							var loginForm = document.querySelector('#login-popup form.login-form');
-							if (loginForm) {
-								loginForm.addEventListener('submit', async function(event) {
-									event.preventDefault();
-									var emailInput = document.getElementById('login-email');
-									var passwordInput = document.getElementById('login-password');
-									if (!emailInput || !passwordInput) {
-										alert('Login fields not found.');
-										return;
-									}
-
-									var email = emailInput.value.trim();
-									var password = passwordInput.value;
-
-									if (!email || !password) {
-										alert('Please enter email and password.');
-										return;
-									}
-
-									try {
-										var response = await fetch('/api/auth/login', {
-											method: 'POST',
-											headers: { 'Content-Type': 'application/json' },
-											body: JSON.stringify({ email: email, password: password }),
-										});
-
-										var result = await response.json();
-										if (response.ok) {
-											alert('Login successful! Welcome, ' + result.user.email);
-											loginForm.reset();
-											window.location.hash = '';
-										} else {
-											alert(result.error || 'Login failed.');
-										}
-									} catch (err) {
-										console.error('Login request failed', err);
-										alert('Could not reach server. Please try again later.');
-									}
-								});
-							}
-
-							// Signup form handler
-							var signupForm = document.querySelector('#create-account-popup form.login-form');
-							if (signupForm) {
-								signupForm.addEventListener('submit', async function(event) {
-									event.preventDefault();
-									var emailInput = document.getElementById('signup-email');
-									var passwordInput = document.getElementById('signup-password');
-									var confirmPasswordInput = document.getElementById('signup-confirm-password');
-									if (!emailInput || !passwordInput || !confirmPasswordInput) {
-										alert('Signup fields not found.');
-										return;
-									}
-
-									var email = emailInput.value.trim();
-									var password = passwordInput.value;
-									var confirmPassword = confirmPasswordInput.value;
-
-									if (!email || !password || !confirmPassword) {
-										alert('Please fill in all signup fields.');
-										return;
-									}
-
-									if (password !== confirmPassword) {
-										alert('Passwords do not match.');
-										return;
-									}
-
-									if (password.length < 8) {
-										alert('Password must be at least 8 characters.');
-										return;
-									}
-
-									try {
-										var response = await fetch('/api/auth/signup', {
-											method: 'POST',
-											headers: { 'Content-Type': 'application/json' },
-											body: JSON.stringify({ email: email, password: password }),
-										});
-
-										var result = await response.json();
-										if (response.ok) {
-											alert('Account created successfully. You can now log in.');
-											window.location.hash = '#login-popup';
-											signupForm.reset();
-										} else {
-											alert(result.error || 'Signup failed.');
-										}
-									} catch (err) {
-										console.error('Signup request failed', err);
-										alert('Could not reach server. Please try again later.');
-									}
-								});
-							}				</script>
+				<script src="js/auth-react.js?v=20260328b"></script>
 	</body>
 </html>
