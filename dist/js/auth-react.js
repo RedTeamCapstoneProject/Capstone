@@ -22282,7 +22282,6 @@
         const [showGoLogin, setShowGoLogin] = (0, import_react.useState)(false);
         const apiBaseUrl = (0, import_react.useMemo)(() => getApiBaseUrl(), []);
         const token = (0, import_react.useMemo)(() => new URLSearchParams(window.location.search).get("token") || "", []);
-        const fallbackAction = `${apiBaseUrl}/api/auth/reset-password`;
         const hasLength = password.length >= 8;
         const hasLetter = /[a-zA-Z]/.test(password);
         const hasNumber = /[0-9]/.test(password);
@@ -22292,8 +22291,7 @@
           setMessageType("error");
           setShowGoLogin(false);
         };
-        const onSubmit = async (event) => {
-          event.preventDefault();
+        const submitReset = async () => {
           if (!token) {
             setError("Invalid or missing reset token. Please request a new password reset link.");
             return;
@@ -22342,8 +22340,7 @@
         const requirementClass = (met) => `pw-req-item${met ? " met" : ""}`;
         const requirementIcon = (met) => met ? "\u2713" : "\u2715";
         return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", { id: "reset-password-form", method: "post", action: fallbackAction, onSubmit, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", { type: "hidden", name: "token", value: token }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { id: "reset-password-form", children: [
             /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "field password-field-wrapper", children: [
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { htmlFor: "new-password", children: "New Password" }),
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
@@ -22389,7 +22386,7 @@
                 }
               )
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", { className: "actions stacked", style: { marginTop: "1.5em" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", { type: "submit", className: "large fit", value: submitting ? "Resetting..." : "Reset Password", disabled: submitting }) }) })
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", { className: "actions stacked", style: { marginTop: "1.5em" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", { type: "button", className: "large fit", value: submitting ? "Resetting..." : "Reset Password", disabled: submitting, onClick: submitReset }) }) })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { id: "reset-password-message", className: messageType, style: { display: message ? "block" : "none" }, children: message }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { id: "go-login-wrapper", style: { display: showGoLogin ? "block" : "none", marginTop: "0.75em", marginBottom: 0, textAlign: "center" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", { id: "go-login-link", href: "/#login-popup", className: "button", children: "Go to login now" }) }),
