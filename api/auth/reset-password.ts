@@ -14,6 +14,42 @@ const pool = new Pool({
     : false,
 });
 
+function normalizeBody(body: unknown): Record<string, unknown> {
+  if (!body) {
+    return {};
+  }
+
+  if (typeof body === "object") {
+    return body as Record<string, unknown>;
+  }
+
+  if (typeof body === "string") {
+    const trimmed = body.trim();
+
+    if (!trimmed) {
+      return {};
+    }
+
+    try {
+      const parsed = JSON.parse(trimmed) as Record<string, unknown>;
+      if (parsed && typeof parsed === "object") {
+        return parsed;
+      }
+    } catch {
+      // Fallback to urlencoded parsing.
+    }
+
+    const params = new URLSearchParams(trimmed);
+    const output: Record<string, unknown> = {};
+    for (const [key, value] of params.entries()) {
+      output[key] = value;
+    }
+    return output;
+  }
+
+  return {};
+}
+
 export default async (req: VercelRequest, res: VercelResponse) => {
   // Allow preflight requests from browser/network probes.
   if (req.method === "OPTIONS") {
@@ -27,7 +63,8 @@ export default async (req: VercelRequest, res: VercelResponse) => {
   }
 
   try {
-    const { token, password, newPassword } = req.body;
+    const parsedBody = normalizeBody(req.body);
+    const { token, password, newPassword } = parsedBody;
     const submittedPassword = password ?? newPassword;
 
     if (!token || !submittedPassword || typeof token !== "string" || typeof submittedPassword !== "string") {
