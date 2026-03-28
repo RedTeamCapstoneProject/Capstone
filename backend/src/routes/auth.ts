@@ -140,6 +140,7 @@ router.post("/forgot-password", async (req: Request, res: Response) => {
 });
 
 // Validate reset token and replace the user's password hash.
+// Accepts either 'password' or 'newPassword' field names for compatibility with different clients.
 router.post("/reset-password", async (req: Request, res: Response) => {
   try {
     const { token, newPassword, password } = req.body as {
@@ -148,6 +149,7 @@ router.post("/reset-password", async (req: Request, res: Response) => {
       password?: string;
     };
 
+    // Accept either field name for compatibility.
     const submittedPassword = newPassword ?? password;
 
     if (!token || !submittedPassword) {
@@ -159,6 +161,7 @@ router.post("/reset-password", async (req: Request, res: Response) => {
       []
     );
 
+    // Find user by comparing submitted token against stored bcrypt hash.
     let validUser = null;
     for (const user of result.rows) {
       const isTokenValid = await bcrypt.compare(token, user.password_reset_token);
