@@ -327,7 +327,6 @@ function ResetPasswordPage() {
 
   const apiBaseUrl = useMemo(() => getApiBaseUrl(), []);
   const token = useMemo(() => new URLSearchParams(window.location.search).get("token") || "", []);
-  const fallbackAction = `${apiBaseUrl}/api/auth/reset-password`;
 
   const hasLength = password.length >= 8;
   const hasLetter = /[a-zA-Z]/.test(password);
@@ -340,8 +339,7 @@ function ResetPasswordPage() {
     setShowGoLogin(false);
   };
 
-  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const submitReset = async () => {
 
     if (!token) {
       setError("Invalid or missing reset token. Please request a new password reset link.");
@@ -400,8 +398,7 @@ function ResetPasswordPage() {
 
   return (
     <>
-      <form id="reset-password-form" method="post" action={fallbackAction} onSubmit={onSubmit}>
-        <input type="hidden" name="token" value={token} />
+      <div id="reset-password-form">
         <div className="field password-field-wrapper">
           <label htmlFor="new-password">New Password</label>
           <input
@@ -440,10 +437,10 @@ function ResetPasswordPage() {
         </div>
         <ul className="actions stacked" style={{ marginTop: "1.5em" }}>
           <li>
-            <input type="submit" className="large fit" value={submitting ? "Resetting..." : "Reset Password"} disabled={submitting} />
+            <input type="button" className="large fit" value={submitting ? "Resetting..." : "Reset Password"} disabled={submitting} onClick={submitReset} />
           </li>
         </ul>
-      </form>
+      </div>
 
       <div id="reset-password-message" className={messageType} style={{ display: message ? "block" : "none" }}>
         {message}
