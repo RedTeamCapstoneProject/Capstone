@@ -10,6 +10,8 @@ type AuthResponse = {
   };
 };
 
+// Determine the API base URL based on environment (local dev vs production).
+// Returns localhost:3001 for local development, empty string for production (uses relative paths).
 function getApiBaseUrl(): string {
   const fromWindow = (window as typeof window & { API_BASE_URL?: string }).API_BASE_URL;
   if (fromWindow) {
@@ -24,9 +26,13 @@ function getApiBaseUrl(): string {
   return "";
 }
 
+// POST password reset to the API endpoint. Tries multiple endpoint variants to handle
+// both relative and absolute paths (helpful when routing configuration varies).
+// Returns on first non-405 response, or the last response if all return 405.
 async function postResetPassword(apiBaseUrl: string, token: string, password: string): Promise<Response> {
   const relativeBase = apiBaseUrl || "";
   const absoluteBase = window.location.origin;
+  // Try both with and without trailing slashes, with relative and absolute bases.
   const candidates = Array.from(new Set([
     `${relativeBase}/api/auth/reset-password`,
     `${relativeBase}/api/auth/reset-password/`,
@@ -39,6 +45,7 @@ async function postResetPassword(apiBaseUrl: string, token: string, password: st
     const response = await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
+      // Send both 'password' and 'newPassword' for backend compatibility.
       body: JSON.stringify({ token, password, newPassword: password }),
     });
 
@@ -339,8 +346,10 @@ function ResetPasswordPage() {
     setShowGoLogin(false);
   };
 
+  // Handle password reset form submission. Uses async fetch instead of native form submit
+  // to prevent browser navigation to error pages (which would be behind a chrome-error:// context).
   const submitReset = async () => {
-
+    // Validate token from URL query parameter.
     if (!token) {
       setError("Invalid or missing reset token. Please request a new password reset link.");
       return;
@@ -358,6 +367,7 @@ function ResetPasswordPage() {
 
     setSubmitting(true);
     try {
+      // Make async POST request to reset endpoint.
       const response = await postResetPassword(apiBaseUrl, token, password);
       const raw = await response.text();
       let result: AuthResponse = {};
@@ -376,12 +386,14 @@ function ResetPasswordPage() {
         setPassword("");
         setConfirmPassword("");
 
+        // Redirect to login popup after 3 seconds.
         window.setTimeout(() => {
           window.location.href = "/#login-popup";
         }, 3000);
         return;
       }
 
+      // Display HTTP status code and error message from API response.
       const statusPrefix = `HTTP ${response.status}`;
       const errorText = result.error || result.message || "An error occurred. Please try again.";
       setError(`${statusPrefix}: ${errorText}`);

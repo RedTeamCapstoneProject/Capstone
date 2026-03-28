@@ -22027,6 +22027,7 @@
           const response = await fetch(endpoint, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
+            // Send both 'password' and 'newPassword' for backend compatibility.
             body: JSON.stringify({ token, password, newPassword: password })
           });
           lastResponse = response;

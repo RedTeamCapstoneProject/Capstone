@@ -14,6 +14,8 @@ const pool = new Pool({
     : false,
 });
 
+// Parse request body in multiple formats: JSON or URL-encoded form data.
+// This allows the endpoint to accept both fetch(body: JSON.stringify(...)) and traditional form POSTs.
 function normalizeBody(body: unknown): Record<string, unknown> {
   if (!body) {
     return {};
@@ -30,15 +32,17 @@ function normalizeBody(body: unknown): Record<string, unknown> {
       return {};
     }
 
+    // Try JSON first.
     try {
       const parsed = JSON.parse(trimmed) as Record<string, unknown>;
       if (parsed && typeof parsed === "object") {
         return parsed;
       }
     } catch {
-      // Fallback to urlencoded parsing.
+      // Fallback to URL-encoded parsing.
     }
 
+    // Parse URL-encoded form data (e.g., 'token=xyz&password=123').
     const params = new URLSearchParams(trimmed);
     const output: Record<string, unknown> = {};
     for (const [key, value] of params.entries()) {
@@ -63,8 +67,10 @@ export default async (req: VercelRequest, res: VercelResponse) => {
   }
 
   try {
+    // Parse body supporting both JSON and URL-encoded payloads.
     const parsedBody = normalizeBody(req.body);
     const { token, password, newPassword } = parsedBody;
+    // Accept either 'password' or 'newPassword' field name for compatibility.
     const submittedPassword = password ?? newPassword;
 
     if (!token || !submittedPassword || typeof token !== "string" || typeof submittedPassword !== "string") {
@@ -75,10 +81,12 @@ export default async (req: VercelRequest, res: VercelResponse) => {
       return res.status(400).json({ error: "Password must be at least 8 characters" });
     }
 
-    // Compare hash(token) against stored token hash and enforce expiry.
+    // Hash the token using SHA256 and look up in database.
+    // Tokens are stored hashed in the DB for security.
     const hashedToken = crypto.createHash("sha256").update(token).digest("hex");
     const now = new Date();
 
+    // Query for valid token that hasn't expired.
     const query = await pool.query(
       "SELECT id FROM users WHERE password_reset_token = $1 AND reset_token_expires_at > $2",
       [hashedToken, now]
@@ -89,9 +97,10 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     }
 
     const userId = query.rows[0].id;
-    // Hash the new password before persisting it.
+    // Hash the new password with bcrypt before storing.
     const passwordHash = await bcrypt.hash(submittedPassword, 10);
 
+    // Update password and clear reset token/expiry.
     await pool.query(
       "UPDATE users SET password_hash = $1, password_reset_token = NULL, reset_token_expires_at = NULL WHERE id = $2",
       [passwordHash, userId]
