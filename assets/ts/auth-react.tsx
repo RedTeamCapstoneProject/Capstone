@@ -224,6 +224,72 @@ function SignupForm() {
   );
 }
 
+function ForgotPasswordForm() {
+  const [email, setEmail] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+
+  const apiBaseUrl = useMemo(() => getApiBaseUrl(), []);
+
+  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const normalizedEmail = email.trim().toLowerCase();
+    if (!normalizedEmail) {
+      alert("Please enter your email address");
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      const response = await fetch(`${apiBaseUrl}/api/auth/forgot-password`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: normalizedEmail }),
+      });
+
+      const result = (await response.json()) as AuthResponse;
+
+      if (response.ok) {
+        alert("If an account with this email exists, a password reset link has been sent.");
+        setEmail("");
+        window.location.hash = "#login-popup";
+        return;
+      }
+
+      alert(result.error || "An error occurred. Please try again.");
+    } catch (error) {
+      console.error("Forgot password error:", error);
+      alert("An error occurred. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  return (
+    <form id="forgot-password-form" className="login-form" method="post" action="#" onSubmit={onSubmit}>
+      <div className="field">
+        <label htmlFor="reset-email">Email</label>
+        <input
+          type="email"
+          id="reset-email"
+          name="email"
+          placeholder="Email"
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
+        />
+      </div>
+      <ul className="actions stacked">
+        <li>
+          <input type="submit" className="large fit" value={submitting ? "Sending..." : "Send Reset Link"} disabled={submitting} />
+        </li>
+      </ul>
+      <a href="#login-popup" className="back-to-login">Back to Log In</a>
+    </form>
+  );
+}
+
 function mountAuthUi() {
   const loginRootEl = document.getElementById("login-form-root");
   if (loginRootEl) {
@@ -233,6 +299,11 @@ function mountAuthUi() {
   const signupRootEl = document.getElementById("signup-form-root");
   if (signupRootEl) {
     createRoot(signupRootEl).render(<SignupForm />);
+  }
+
+  const forgotRootEl = document.getElementById("forgot-form-root");
+  if (forgotRootEl) {
+    createRoot(forgotRootEl).render(<ForgotPasswordForm />);
   }
 }
 

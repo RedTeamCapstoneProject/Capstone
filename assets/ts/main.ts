@@ -77,56 +77,6 @@ import "./util"; // Load jQuery plugins
     $intro.prependTo($sidebar);
   });
 
-  // Forgot Password Form Handler
-  const $forgotPasswordForm = $("#forgot-password-form");
-
-  if ($forgotPasswordForm.length === 0) {
-    console.warn("Forgot password form not found");
-  }
-
-  // Forgot Password Form Handler (delegated binding)
-$(document).on("submit", "#forgot-password-form", async (event) => {
-  event.preventDefault();
-  event.stopPropagation();
-  console.log("[forgot-password] submit intercepted");
-
-  const $form = $(event.currentTarget as HTMLFormElement);
-  const email = (($form.find('input[name="email"]').val() as string) || "").trim().toLowerCase();
-
-  if (!email) {
-    alert("Please enter your email address");
-    return;
-  }
-
-  const apiBaseUrl = (window as any).API_BASE_URL ||
-    (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
-      ? "http://localhost:3001"
-      : "");
-
-  try {
-    const response = await fetch(`${apiBaseUrl}/api/auth/forgot-password`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email }),
-    });
-
-    const result = await response.json();
-
-    if (response.ok) {
-      alert("If an account with this email exists, a password reset link has been sent.");
-      ($form[0] as HTMLFormElement).reset();
-      window.location.hash = "#login-popup";
-    } else {
-      alert(result.error || "An error occurred. Please try again.");
-    }
-  } catch (error) {
-    console.error("Forgot password error:", error);
-    alert("An error occurred. Please try again.");
-  }
-});
-
   // Reset Password Form Handler
   $(document).on("submit", "#reset-password-form", async (event) => {
     event.preventDefault();

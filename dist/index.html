@@ -78,18 +78,7 @@
 					<div class="login-popup-inner">
 						<h2>Reset Password</h2>
 						<p>Enter your email address and we'll send you a link to reset your password.</p>
-						<form id="forgot-password-form" class="login-form" method="post" action="/api/auth/forgot-password">
-							<div class="field">
-								<label for="reset-email">Email</label>
-								<input type="email" id="reset-email" name="email" placeholder="Email" />
-							</div>
-							<ul class="actions stacked">
-								<li>
-									<input type="submit" class="large fit" value="Send Reset Link" />
-								</li>
-							</ul>
-							<a href="#login-popup" class="back-to-login">Back to Log In</a>
-						</form>
+						<div id="forgot-form-root"></div>
 					</div>
 				</div>
 			</div>

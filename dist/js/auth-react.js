@@ -22196,6 +22196,60 @@
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", { href: "#login-popup", className: "back-to-login", children: "Already have an account? Log In" })
         ] });
       }
+      function ForgotPasswordForm() {
+        const [email, setEmail] = (0, import_react.useState)("");
+        const [submitting, setSubmitting] = (0, import_react.useState)(false);
+        const apiBaseUrl = (0, import_react.useMemo)(() => getApiBaseUrl(), []);
+        const onSubmit = async (event) => {
+          event.preventDefault();
+          const normalizedEmail = email.trim().toLowerCase();
+          if (!normalizedEmail) {
+            alert("Please enter your email address");
+            return;
+          }
+          setSubmitting(true);
+          try {
+            const response = await fetch(`${apiBaseUrl}/api/auth/forgot-password`, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify({ email: normalizedEmail })
+            });
+            const result = await response.json();
+            if (response.ok) {
+              alert("If an account with this email exists, a password reset link has been sent.");
+              setEmail("");
+              window.location.hash = "#login-popup";
+              return;
+            }
+            alert(result.error || "An error occurred. Please try again.");
+          } catch (error) {
+            console.error("Forgot password error:", error);
+            alert("An error occurred. Please try again.");
+          } finally {
+            setSubmitting(false);
+          }
+        };
+        return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", { id: "forgot-password-form", className: "login-form", method: "post", action: "#", onSubmit, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "field", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { htmlFor: "reset-email", children: "Email" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+              "input",
+              {
+                type: "email",
+                id: "reset-email",
+                name: "email",
+                placeholder: "Email",
+                value: email,
+                onChange: (event) => setEmail(event.target.value)
+              }
+            )
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", { className: "actions stacked", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", { type: "submit", className: "large fit", value: submitting ? "Sending..." : "Send Reset Link", disabled: submitting }) }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", { href: "#login-popup", className: "back-to-login", children: "Back to Log In" })
+        ] });
+      }
       function mountAuthUi() {
         const loginRootEl = document.getElementById("login-form-root");
         if (loginRootEl) {
@@ -22204,6 +22258,10 @@
         const signupRootEl = document.getElementById("signup-form-root");
         if (signupRootEl) {
           (0, import_client.createRoot)(signupRootEl).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SignupForm, {}));
+        }
+        const forgotRootEl = document.getElementById("forgot-form-root");
+        if (forgotRootEl) {
+          (0, import_client.createRoot)(forgotRootEl).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ForgotPasswordForm, {}));
         }
       }
       mountAuthUi();
