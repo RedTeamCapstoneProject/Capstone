@@ -6609,7 +6609,6 @@
         if ($forgotPasswordForm.length === 0) {
           console.warn("Forgot password form not found");
         }
-        // Delegated binding keeps handler working for popup/overlay DOM states.
         $(document).on("submit", "#forgot-password-form", async (event) => {
           event.preventDefault();
           event.stopPropagation();
@@ -6642,7 +6641,6 @@
             alert("An error occurred. Please try again.");
           }
         });
-        // Reset flow expects token from URL and posts the new password to API.
         $(document).on("submit", "#reset-password-form", async (event) => {
           event.preventDefault();
           event.stopPropagation();
@@ -6675,11 +6673,11 @@
             });
             const result = await response.json();
             if (response.ok) {
-              $message.text("Your password has been reset. Redirecting to home...").removeClass("error").addClass("success").show();
+              $message.text("Password reset successful. Redirecting to login...").removeClass("error").addClass("success").show();
               $form[0].reset();
               window.setTimeout(() => {
-                window.location.href = "/";
-              }, 2e3);
+                window.location.href = "/#login-popup";
+              }, 3e3);
             } else {
               $message.text(result.error || "An error occurred. Please try again.").removeClass("success").addClass("error").show();
               submitBtn.val("Reset Password").prop("disabled", false);
