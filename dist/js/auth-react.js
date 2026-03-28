@@ -22014,7 +22014,14 @@
         return "";
       }
       async function postResetPassword(apiBaseUrl, token, password) {
-        const candidates = [`${apiBaseUrl}/api/auth/reset-password`, `${apiBaseUrl}/api/auth/reset-password/`];
+        const relativeBase = apiBaseUrl || "";
+        const absoluteBase = window.location.origin;
+        const candidates = Array.from(/* @__PURE__ */ new Set([
+          `${relativeBase}/api/auth/reset-password`,
+          `${relativeBase}/api/auth/reset-password/`,
+          `${absoluteBase}/api/auth/reset-password`,
+          `${absoluteBase}/api/auth/reset-password/`
+        ]));
         let lastResponse = null;
         for (const endpoint of candidates) {
           const response = await fetch(endpoint, {
@@ -22275,6 +22282,7 @@
         const [showGoLogin, setShowGoLogin] = (0, import_react.useState)(false);
         const apiBaseUrl = (0, import_react.useMemo)(() => getApiBaseUrl(), []);
         const token = (0, import_react.useMemo)(() => new URLSearchParams(window.location.search).get("token") || "", []);
+        const fallbackAction = `${apiBaseUrl}/api/auth/reset-password`;
         const hasLength = password.length >= 8;
         const hasLetter = /[a-zA-Z]/.test(password);
         const hasNumber = /[0-9]/.test(password);
@@ -22301,7 +22309,15 @@
           setSubmitting(true);
           try {
             const response = await postResetPassword(apiBaseUrl, token, password);
-            const result = await response.json();
+            const raw = await response.text();
+            let result = {};
+            if (raw) {
+              try {
+                result = JSON.parse(raw);
+              } catch {
+                result = { error: raw };
+              }
+            }
             if (response.ok) {
               setMessage("Password reset successful. Redirecting to login...");
               setMessageType("success");
@@ -22313,7 +22329,9 @@
               }, 3e3);
               return;
             }
-            setError(result.error || "An error occurred. Please try again.");
+            const statusPrefix = `HTTP ${response.status}`;
+            const errorText = result.error || result.message || "An error occurred. Please try again.";
+            setError(`${statusPrefix}: ${errorText}`);
           } catch (error) {
             console.error("Reset password error:", error);
             setError("An error occurred. Please try again.");
@@ -22324,7 +22342,8 @@
         const requirementClass = (met) => `pw-req-item${met ? " met" : ""}`;
         const requirementIcon = (met) => met ? "\u2713" : "\u2715";
         return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", { id: "reset-password-form", method: "post", action: "#", onSubmit, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", { id: "reset-password-form", method: "post", action: fallbackAction, onSubmit, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", { type: "hidden", name: "token", value: token }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "field password-field-wrapper", children: [
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { htmlFor: "new-password", children: "New Password" }),
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
@@ -22332,7 +22351,7 @@
                 {
                   type: "password",
                   id: "new-password",
-                  name: "password",
+                  name: "newPassword",
                   placeholder: "New Password",
                   required: true,
                   minLength: 8,

@@ -25,7 +25,14 @@ function getApiBaseUrl(): string {
 }
 
 async function postResetPassword(apiBaseUrl: string, token: string, password: string): Promise<Response> {
-  const candidates = [`${apiBaseUrl}/api/auth/reset-password`, `${apiBaseUrl}/api/auth/reset-password/`];
+  const relativeBase = apiBaseUrl || "";
+  const absoluteBase = window.location.origin;
+  const candidates = Array.from(new Set([
+    `${relativeBase}/api/auth/reset-password`,
+    `${relativeBase}/api/auth/reset-password/`,
+    `${absoluteBase}/api/auth/reset-password`,
+    `${absoluteBase}/api/auth/reset-password/`,
+  ]));
   let lastResponse: Response | null = null;
 
   for (const endpoint of candidates) {
@@ -320,6 +327,7 @@ function ResetPasswordPage() {
 
   const apiBaseUrl = useMemo(() => getApiBaseUrl(), []);
   const token = useMemo(() => new URLSearchParams(window.location.search).get("token") || "", []);
+  const fallbackAction = `${apiBaseUrl}/api/auth/reset-password`;
 
   const hasLength = password.length >= 8;
   const hasLetter = /[a-zA-Z]/.test(password);
@@ -353,8 +361,15 @@ function ResetPasswordPage() {
     setSubmitting(true);
     try {
       const response = await postResetPassword(apiBaseUrl, token, password);
-
-      const result = (await response.json()) as AuthResponse;
+      const raw = await response.text();
+      let result: AuthResponse = {};
+      if (raw) {
+        try {
+          result = JSON.parse(raw) as AuthResponse;
+        } catch {
+          result = { error: raw };
+        }
+      }
 
       if (response.ok) {
         setMessage("Password reset successful. Redirecting to login...");
@@ -369,7 +384,9 @@ function ResetPasswordPage() {
         return;
       }
 
-      setError(result.error || "An error occurred. Please try again.");
+      const statusPrefix = `HTTP ${response.status}`;
+      const errorText = result.error || result.message || "An error occurred. Please try again.";
+      setError(`${statusPrefix}: ${errorText}`);
     } catch (error) {
       console.error("Reset password error:", error);
       setError("An error occurred. Please try again.");
@@ -383,13 +400,14 @@ function ResetPasswordPage() {
 
   return (
     <>
-      <form id="reset-password-form" method="post" action="#" onSubmit={onSubmit}>
+      <form id="reset-password-form" method="post" action={fallbackAction} onSubmit={onSubmit}>
+        <input type="hidden" name="token" value={token} />
         <div className="field password-field-wrapper">
           <label htmlFor="new-password">New Password</label>
           <input
             type="password"
             id="new-password"
-            name="password"
+            name="newPassword"
             placeholder="New Password"
             required
             minLength={8}
