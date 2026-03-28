@@ -290,6 +290,142 @@ function ForgotPasswordForm() {
   );
 }
 
+function ResetPasswordPage() {
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [message, setMessage] = useState("");
+  const [messageType, setMessageType] = useState<"success" | "error" | "">("");
+  const [showGoLogin, setShowGoLogin] = useState(false);
+
+  const apiBaseUrl = useMemo(() => getApiBaseUrl(), []);
+  const token = useMemo(() => new URLSearchParams(window.location.search).get("token") || "", []);
+
+  const hasLength = password.length >= 8;
+  const hasLetter = /[a-zA-Z]/.test(password);
+  const hasNumber = /[0-9]/.test(password);
+  const showRequirements = password.length > 0;
+
+  const setError = (text: string) => {
+    setMessage(text);
+    setMessageType("error");
+    setShowGoLogin(false);
+  };
+
+  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    if (!token) {
+      setError("Invalid or missing reset token. Please request a new password reset link.");
+      return;
+    }
+
+    if (!hasLength) {
+      setError("Password must be at least 8 characters.");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setError("Passwords do not match.");
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      const response = await fetch(`${apiBaseUrl}/api/auth/reset-password`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ token, password }),
+      });
+
+      const result = (await response.json()) as AuthResponse;
+
+      if (response.ok) {
+        setMessage("Password reset successful. Redirecting to login...");
+        setMessageType("success");
+        setShowGoLogin(true);
+        setPassword("");
+        setConfirmPassword("");
+
+        window.setTimeout(() => {
+          window.location.href = "/#login-popup";
+        }, 3000);
+        return;
+      }
+
+      setError(result.error || "An error occurred. Please try again.");
+    } catch (error) {
+      console.error("Reset password error:", error);
+      setError("An error occurred. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  const requirementClass = (met: boolean): string => `pw-req-item${met ? " met" : ""}`;
+  const requirementIcon = (met: boolean): string => (met ? "✓" : "✕");
+
+  return (
+    <>
+      <form id="reset-password-form" method="post" action="#" onSubmit={onSubmit}>
+        <div className="field password-field-wrapper">
+          <label htmlFor="new-password">New Password</label>
+          <input
+            type="password"
+            id="new-password"
+            name="password"
+            placeholder="New Password"
+            required
+            minLength={8}
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+          />
+          <div id="password-requirements" className={`password-requirements${showRequirements ? " visible" : ""}`}>
+            <div className={requirementClass(hasLength)} id="req-length">
+              <span className="pw-req-icon">{requirementIcon(hasLength)}</span> Use at least 8 characters
+            </div>
+            <div className={requirementClass(hasLetter)} id="req-case">
+              <span className="pw-req-icon">{requirementIcon(hasLetter)}</span> Use upper or lower case characters
+            </div>
+            <div className={requirementClass(hasNumber)} id="req-number">
+              <span className="pw-req-icon">{requirementIcon(hasNumber)}</span> Use one or more numbers
+            </div>
+          </div>
+        </div>
+        <div className="field">
+          <label htmlFor="confirm-password">Confirm Password</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            placeholder="Confirm Password"
+            required
+            value={confirmPassword}
+            onChange={(event) => setConfirmPassword(event.target.value)}
+          />
+        </div>
+        <ul className="actions stacked" style={{ marginTop: "1.5em" }}>
+          <li>
+            <input type="submit" className="large fit" value={submitting ? "Resetting..." : "Reset Password"} disabled={submitting} />
+          </li>
+        </ul>
+      </form>
+
+      <div id="reset-password-message" className={messageType} style={{ display: message ? "block" : "none" }}>
+        {message}
+      </div>
+
+      <p id="go-login-wrapper" style={{ display: showGoLogin ? "block" : "none", marginTop: "0.75em", marginBottom: 0, textAlign: "center" }}>
+        <a id="go-login-link" href="/#login-popup" className="button">Go to login now</a>
+      </p>
+
+      <p style={{ marginTop: "1em", marginBottom: 0, textAlign: "center" }}>
+        <a href="index.html">Back to Home</a>
+      </p>
+    </>
+  );
+}
+
 function mountAuthUi() {
   const loginRootEl = document.getElementById("login-form-root");
   if (loginRootEl) {
@@ -304,6 +440,11 @@ function mountAuthUi() {
   const forgotRootEl = document.getElementById("forgot-form-root");
   if (forgotRootEl) {
     createRoot(forgotRootEl).render(<ForgotPasswordForm />);
+  }
+
+  const resetPageRootEl = document.getElementById("reset-page-root");
+  if (resetPageRootEl) {
+    createRoot(resetPageRootEl).render(<ResetPasswordPage />);
   }
 }
 

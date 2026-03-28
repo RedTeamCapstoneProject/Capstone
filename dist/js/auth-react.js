@@ -22250,6 +22250,121 @@
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", { href: "#login-popup", className: "back-to-login", children: "Back to Log In" })
         ] });
       }
+      function ResetPasswordPage() {
+        const [password, setPassword] = (0, import_react.useState)("");
+        const [confirmPassword, setConfirmPassword] = (0, import_react.useState)("");
+        const [submitting, setSubmitting] = (0, import_react.useState)(false);
+        const [message, setMessage] = (0, import_react.useState)("");
+        const [messageType, setMessageType] = (0, import_react.useState)("");
+        const [showGoLogin, setShowGoLogin] = (0, import_react.useState)(false);
+        const apiBaseUrl = (0, import_react.useMemo)(() => getApiBaseUrl(), []);
+        const token = (0, import_react.useMemo)(() => new URLSearchParams(window.location.search).get("token") || "", []);
+        const hasLength = password.length >= 8;
+        const hasLetter = /[a-zA-Z]/.test(password);
+        const hasNumber = /[0-9]/.test(password);
+        const showRequirements = password.length > 0;
+        const setError = (text) => {
+          setMessage(text);
+          setMessageType("error");
+          setShowGoLogin(false);
+        };
+        const onSubmit = async (event) => {
+          event.preventDefault();
+          if (!token) {
+            setError("Invalid or missing reset token. Please request a new password reset link.");
+            return;
+          }
+          if (!hasLength) {
+            setError("Password must be at least 8 characters.");
+            return;
+          }
+          if (password !== confirmPassword) {
+            setError("Passwords do not match.");
+            return;
+          }
+          setSubmitting(true);
+          try {
+            const response = await fetch(`${apiBaseUrl}/api/auth/reset-password`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ token, password })
+            });
+            const result = await response.json();
+            if (response.ok) {
+              setMessage("Password reset successful. Redirecting to login...");
+              setMessageType("success");
+              setShowGoLogin(true);
+              setPassword("");
+              setConfirmPassword("");
+              window.setTimeout(() => {
+                window.location.href = "/#login-popup";
+              }, 3e3);
+              return;
+            }
+            setError(result.error || "An error occurred. Please try again.");
+          } catch (error) {
+            console.error("Reset password error:", error);
+            setError("An error occurred. Please try again.");
+          } finally {
+            setSubmitting(false);
+          }
+        };
+        const requirementClass = (met) => `pw-req-item${met ? " met" : ""}`;
+        const requirementIcon = (met) => met ? "\u2713" : "\u2715";
+        return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", { id: "reset-password-form", method: "post", action: "#", onSubmit, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "field password-field-wrapper", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { htmlFor: "new-password", children: "New Password" }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+                "input",
+                {
+                  type: "password",
+                  id: "new-password",
+                  name: "password",
+                  placeholder: "New Password",
+                  required: true,
+                  minLength: 8,
+                  value: password,
+                  onChange: (event) => setPassword(event.target.value)
+                }
+              ),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { id: "password-requirements", className: `password-requirements${showRequirements ? " visible" : ""}`, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: requirementClass(hasLength), id: "req-length", children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "pw-req-icon", children: requirementIcon(hasLength) }),
+                  " Use at least 8 characters"
+                ] }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: requirementClass(hasLetter), id: "req-case", children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "pw-req-icon", children: requirementIcon(hasLetter) }),
+                  " Use upper or lower case characters"
+                ] }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: requirementClass(hasNumber), id: "req-number", children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "pw-req-icon", children: requirementIcon(hasNumber) }),
+                  " Use one or more numbers"
+                ] })
+              ] })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "field", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { htmlFor: "confirm-password", children: "Confirm Password" }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+                "input",
+                {
+                  type: "password",
+                  id: "confirm-password",
+                  name: "confirm-password",
+                  placeholder: "Confirm Password",
+                  required: true,
+                  value: confirmPassword,
+                  onChange: (event) => setConfirmPassword(event.target.value)
+                }
+              )
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", { className: "actions stacked", style: { marginTop: "1.5em" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", { type: "submit", className: "large fit", value: submitting ? "Resetting..." : "Reset Password", disabled: submitting }) }) })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { id: "reset-password-message", className: messageType, style: { display: message ? "block" : "none" }, children: message }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { id: "go-login-wrapper", style: { display: showGoLogin ? "block" : "none", marginTop: "0.75em", marginBottom: 0, textAlign: "center" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", { id: "go-login-link", href: "/#login-popup", className: "button", children: "Go to login now" }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { marginTop: "1em", marginBottom: 0, textAlign: "center" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", { href: "index.html", children: "Back to Home" }) })
+        ] });
+      }
       function mountAuthUi() {
         const loginRootEl = document.getElementById("login-form-root");
         if (loginRootEl) {
@@ -22262,6 +22377,10 @@
         const forgotRootEl = document.getElementById("forgot-form-root");
         if (forgotRootEl) {
           (0, import_client.createRoot)(forgotRootEl).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ForgotPasswordForm, {}));
+        }
+        const resetPageRootEl = document.getElementById("reset-page-root");
+        if (resetPageRootEl) {
+          (0, import_client.createRoot)(resetPageRootEl).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ResetPasswordPage, {}));
         }
       }
       mountAuthUi();
