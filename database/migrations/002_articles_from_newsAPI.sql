@@ -1,5 +1,5 @@
-CREATE TABLE news_articles (
-    id SERIAL PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS news_articles (
+    id BIGSERIAL PRIMARY KEY,
     source_id VARCHAR(255),
     source_name VARCHAR(255),
     author VARCHAR(255),
@@ -10,5 +10,6 @@ CREATE TABLE news_articles (
     published_at TIMESTAMPTZ,
     content TEXT,
     category TEXT,
+    topic TEXT,
     created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
 );
