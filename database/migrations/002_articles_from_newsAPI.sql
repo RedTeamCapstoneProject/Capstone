@@ -1,4 +1,4 @@
-CREATE TABLE news_articles (
+CREATE TABLE IF NOT EXISTS news_articles (
     id BIGSERIAL PRIMARY KEY,
     source_id VARCHAR(255),
     source_name VARCHAR(255),
