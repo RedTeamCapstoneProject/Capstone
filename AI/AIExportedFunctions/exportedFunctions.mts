@@ -4,7 +4,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import fs, { write } from 'fs';
 
-
 //this is how the news articles are formated with category and topic as an object
 //often used in an array like this: newsArticle[]
 export interface newsArticle{
