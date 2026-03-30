@@ -127,6 +127,5 @@ async function constructJSON(summarizedContent:string,summarizedDescription:stri
 
 
 
-
 var catArray = await tempReadMethodForTesting()
 summaryManager(catArray)

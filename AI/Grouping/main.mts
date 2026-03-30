@@ -5,78 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import fs, { write } from 'fs';
 import { type newsArticle, callAI, readJSON, writeToJSON } from "../AIExportedFunctions/exportedFunctions.mts";
-/*
-interface newsArticle{
-   source: {
-        id: string | null;
-        name: string;
-    };
-    author: string | null;
-    title: string;
-    description: string;
-    url: string;
-    urlToImage: string | null;
-    publishedAt: string;
-    content: string;
-    category?: string; 
-    topic?: string;    
-}
 
-//category: tech politics,sports
-//topic: specific/granular
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const envPath = path.resolve(__dirname, '../../.env');
-config({ path: envPath });
-
-const GROQ_API_KEY = process.env.GROQ_API_KEY;
-
-
-
-if (!GROQ_API_KEY) {
-    throw new Error(`Missing geminiAPI in .env file. path: ${envPath}`);
-}
-
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
-
-
-async function readJSON(): Promise<newsArticle[]>{
-    const data = JSON.parse(fs.readFileSync('testData.json', 'utf-8'));
-    const originalArticleArray: newsArticle[] = data.articles;
-    return originalArticleArray
-}
-
-
-
-
-//call the groq api with a prompt as input.
-// retun the response from api
-async function callAI(prompt: string) {
-    try {
-        console.log("Attempting to connect to Groq...");
-        
-        // This is the Groq-specific way to call the model
-        const response = await groq.chat.completions.create({
-            messages: [
-                {
-                    role: "user",
-                    content: prompt,
-                },
-            ],
-            model: "llama-3.3-70b-versatile", 
-           // model: "llama-3.1-8b-instant", 
-
-        });
-
-        const aiText = response.choices[0]?.message?.content || "";
-        console.log("AI Response:", aiText);
-        return aiText;
-    } catch (error: any) {
-        console.error("Groq Connection failed!", error.message);
-    }
-}
-*/
 
 
 
@@ -163,14 +92,13 @@ async function writeToJSON(completedArray: newsArticle[]){
 */
 
 
-async function run() {
+export async function run() {
     try {
         var originalArticleArray = await readJSON("AI/Grouping/testData.json")
         var categoryArticleArray = await categorizeNews(originalArticleArray)
         var completedArray = await determineTopics(categoryArticleArray)
         await writeToJSON(completedArray)
         console.log("articles written succesfully")
-
     } catch(error){
         console.error("Error processing the data: ", error);
     }finally {
