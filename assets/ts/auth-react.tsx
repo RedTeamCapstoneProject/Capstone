@@ -1,4 +1,4 @@
-import React, { FormEvent, useMemo, useState } from "react";
+import React, { FormEvent, useEffect, useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
 
 type AuthResponse = {
@@ -10,8 +10,8 @@ type AuthResponse = {
   };
 };
 
-// Determine the API base URL based on environment (local dev vs production).
-// Returns localhost:3001 for local development, empty string for production (uses relative paths).
+// ── API helpers ─────────────────────────────────────────────────────────
+
 function getApiBaseUrl(): string {
   const fromWindow = (window as typeof window & { API_BASE_URL?: string }).API_BASE_URL;
   if (fromWindow) {
@@ -26,13 +26,9 @@ function getApiBaseUrl(): string {
   return "";
 }
 
-// POST password reset to the API endpoint. Tries multiple endpoint variants to handle
-// both relative and absolute paths (helpful when routing configuration varies).
-// Returns on first non-405 response, or the last response if all return 405.
 async function postResetPassword(apiBaseUrl: string, token: string, password: string): Promise<Response> {
   const relativeBase = apiBaseUrl || "";
   const absoluteBase = window.location.origin;
-  // Try both with and without trailing slashes, with relative and absolute bases.
   const candidates = Array.from(new Set([
     `${relativeBase}/api/auth/reset-password`,
     `${relativeBase}/api/auth/reset-password/`,
@@ -45,7 +41,6 @@ async function postResetPassword(apiBaseUrl: string, token: string, password: st
     const response = await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      // Send both 'password' and 'newPassword' for backend compatibility.
       body: JSON.stringify({ token, password, newPassword: password }),
     });
 
@@ -57,6 +52,111 @@ async function postResetPassword(apiBaseUrl: string, token: string, password: st
 
   return lastResponse as Response;
 }
+
+// ── Toast notification system ───────────────────────────────────────────
+
+type ToastType = "success" | "error" | "info";
+
+interface ToastData {
+  id: number;
+  message: string;
+  type: ToastType;
+}
+
+let nextToastId = 0;
+
+function showToast(message: string, type: ToastType = "info") {
+  window.dispatchEvent(
+    new CustomEvent("show-toast", { detail: { message, type, id: ++nextToastId } })
+  );
+}
+
+function ToastContainer() {
+  const [toasts, setToasts] = useState<ToastData[]>([]);
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent).detail as ToastData;
+      setToasts((prev) => [...prev, detail]);
+      setTimeout(() => {
+        setToasts((prev) => prev.filter((t) => t.id !== detail.id));
+      }, 4500);
+    };
+    window.addEventListener("show-toast", handler);
+    return () => window.removeEventListener("show-toast", handler);
+  }, []);
+
+  if (toasts.length === 0) return null;
+
+  return (
+    <div className="toast-container">
+      {toasts.map((toast) => (
+        <div key={toast.id} className={`toast toast-${toast.type}`}>
+          <span className="toast-icon">
+            {toast.type === "success" ? "\u2713" : toast.type === "error" ? "\u2715" : "\u2139"}
+          </span>
+          <span className="toast-message">{toast.message}</span>
+          <button
+            className="toast-close"
+            onClick={() => setToasts((prev) => prev.filter((t) => t.id !== toast.id))}
+            aria-label="Dismiss"
+          >
+            &times;
+          </button>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// ── Auth state (localStorage) ───────────────────────────────────────────
+
+interface StoredUser {
+  id: number;
+  email: string;
+}
+
+function getStoredUser(): StoredUser | null {
+  try {
+    const raw = localStorage.getItem("loggedInUser");
+    return raw ? (JSON.parse(raw) as StoredUser) : null;
+  } catch {
+    return null;
+  }
+}
+
+function setStoredUser(user: StoredUser | null) {
+  if (user) {
+    localStorage.setItem("loggedInUser", JSON.stringify(user));
+  } else {
+    localStorage.removeItem("loggedInUser");
+  }
+  window.dispatchEvent(new CustomEvent("auth-state-changed"));
+}
+
+// Swap the header account icon between user (logged out) and gear (logged in).
+function syncHeaderIcon() {
+  const link = document.querySelector(
+    "#header .main ul li > a.fa-user, #header .main ul li > a.fa-gear"
+  ) as HTMLAnchorElement | null;
+  if (!link) return;
+
+  if (getStoredUser()) {
+    link.classList.remove("fa-user");
+    link.classList.add("fa-gear");
+    link.href = "#settings-popup";
+    link.title = "Settings";
+    link.textContent = "Settings";
+  } else {
+    link.classList.remove("fa-gear");
+    link.classList.add("fa-user");
+    link.href = "#login-popup";
+    link.title = "Account";
+    link.textContent = "Account";
+  }
+}
+
+// ── Form components ─────────────────────────────────────────────────────
 
 function LoginForm() {
   const [email, setEmail] = useState("");
@@ -70,7 +170,7 @@ function LoginForm() {
 
     const normalizedEmail = email.trim().toLowerCase();
     if (!normalizedEmail || !password) {
-      alert("Please enter email and password.");
+      showToast("Please enter email and password.", "error");
       return;
     }
 
@@ -85,17 +185,19 @@ function LoginForm() {
       const result = (await response.json()) as AuthResponse;
 
       if (response.ok && result.user?.email) {
-        alert(`Login successful! Welcome, ${result.user.email}`);
+        setStoredUser({ id: result.user.id, email: result.user.email });
+        syncHeaderIcon();
+        showToast(`Welcome back, ${result.user.email}!`, "success");
         setEmail("");
         setPassword("");
         window.location.hash = "";
         return;
       }
 
-      alert(result.error || "Login failed.");
+      showToast(result.error || "Login failed.", "error");
     } catch (error) {
       console.error("Login request failed", error);
-      alert("Could not reach server. Please try again later.");
+      showToast("Could not reach server. Please try again later.", "error");
     } finally {
       setSubmitting(false);
     }
@@ -157,17 +259,17 @@ function SignupForm() {
     const normalizedEmail = email.trim().toLowerCase();
 
     if (!normalizedEmail || !password || !confirmPassword) {
-      alert("Please fill in all signup fields.");
+      showToast("Please fill in all signup fields.", "error");
       return;
     }
 
     if (password !== confirmPassword) {
-      alert("Passwords do not match.");
+      showToast("Passwords do not match.", "error");
       return;
     }
 
     if (!hasLength) {
-      alert("Password must be at least 8 characters.");
+      showToast("Password must be at least 8 characters.", "error");
       return;
     }
 
@@ -182,7 +284,7 @@ function SignupForm() {
       const result = (await response.json()) as AuthResponse;
 
       if (response.ok) {
-        alert("Account created successfully. You can now log in.");
+        showToast("Account created successfully! You can now log in.", "success");
         setEmail("");
         setPassword("");
         setConfirmPassword("");
@@ -190,17 +292,17 @@ function SignupForm() {
         return;
       }
 
-      alert(result.error || "Signup failed.");
+      showToast(result.error || "Signup failed.", "error");
     } catch (error) {
       console.error("Signup request failed", error);
-      alert("Could not reach server. Please try again later.");
+      showToast("Could not reach server. Please try again later.", "error");
     } finally {
       setSubmitting(false);
     }
   };
 
   const requirementClass = (met: boolean): string => `pw-req-item${met ? " met" : ""}`;
-  const requirementIcon = (met: boolean): string => (met ? "✓" : "✕");
+  const requirementIcon = (met: boolean): string => (met ? "\u2713" : "\u2715");
 
   return (
     <form className="login-form" method="post" action="#" onSubmit={onSubmit}>
@@ -269,7 +371,7 @@ function ForgotPasswordForm() {
 
     const normalizedEmail = email.trim().toLowerCase();
     if (!normalizedEmail) {
-      alert("Please enter your email address");
+      showToast("Please enter your email address.", "error");
       return;
     }
 
@@ -286,16 +388,16 @@ function ForgotPasswordForm() {
       const result = (await response.json()) as AuthResponse;
 
       if (response.ok) {
-        alert("If an account with this email exists, a password reset link has been sent.");
+        showToast("If an account with this email exists, a password reset link has been sent.", "success");
         setEmail("");
         window.location.hash = "#login-popup";
         return;
       }
 
-      alert(result.error || "An error occurred. Please try again.");
+      showToast(result.error || "An error occurred. Please try again.", "error");
     } catch (error) {
       console.error("Forgot password error:", error);
-      alert("An error occurred. Please try again.");
+      showToast("An error occurred. Please try again.", "error");
     } finally {
       setSubmitting(false);
     }
@@ -346,10 +448,7 @@ function ResetPasswordPage() {
     setShowGoLogin(false);
   };
 
-  // Handle password reset form submission. Uses async fetch instead of native form submit
-  // to prevent browser navigation to error pages (which would be behind a chrome-error:// context).
   const submitReset = async () => {
-    // Validate token from URL query parameter.
     if (!token) {
       setError("Invalid or missing reset token. Please request a new password reset link.");
       return;
@@ -367,7 +466,6 @@ function ResetPasswordPage() {
 
     setSubmitting(true);
     try {
-      // Make async POST request to reset endpoint.
       const response = await postResetPassword(apiBaseUrl, token, password);
       const raw = await response.text();
       let result: AuthResponse = {};
@@ -386,14 +484,12 @@ function ResetPasswordPage() {
         setPassword("");
         setConfirmPassword("");
 
-        // Redirect to login popup after 3 seconds.
         window.setTimeout(() => {
           window.location.href = "/#login-popup";
         }, 3000);
         return;
       }
 
-      // Display HTTP status code and error message from API response.
       const statusPrefix = `HTTP ${response.status}`;
       const errorText = result.error || result.message || "An error occurred. Please try again.";
       setError(`${statusPrefix}: ${errorText}`);
@@ -406,7 +502,7 @@ function ResetPasswordPage() {
   };
 
   const requirementClass = (met: boolean): string => `pw-req-item${met ? " met" : ""}`;
-  const requirementIcon = (met: boolean): string => (met ? "✓" : "✕");
+  const requirementIcon = (met: boolean): string => (met ? "\u2713" : "\u2715");
 
   return (
     <>
@@ -469,6 +565,41 @@ function ResetPasswordPage() {
   );
 }
 
+// ── Settings panel (shown when logged in) ───────────────────────────────
+
+function SettingsPanel() {
+  const [user, setUser] = useState<StoredUser | null>(getStoredUser);
+
+  useEffect(() => {
+    const handler = () => setUser(getStoredUser());
+    window.addEventListener("auth-state-changed", handler);
+    return () => window.removeEventListener("auth-state-changed", handler);
+  }, []);
+
+  const handleLogOut = () => {
+    setStoredUser(null);
+    syncHeaderIcon();
+    window.location.hash = "";
+    showToast("You have been logged out.", "info");
+  };
+
+  return (
+    <div className="settings-panel">
+      {user && <p className="settings-email">{user.email}</p>}
+      <ul className="actions stacked">
+        <li>
+          <button type="button" className="button large fit">Preferences</button>
+        </li>
+        <li>
+          <button type="button" className="button large fit settings-logout-btn" onClick={handleLogOut}>Log Out</button>
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+// ── Mount everything ────────────────────────────────────────────────────
+
 function mountAuthUi() {
   const loginRootEl = document.getElementById("login-form-root");
   if (loginRootEl) {
@@ -489,6 +620,18 @@ function mountAuthUi() {
   if (resetPageRootEl) {
     createRoot(resetPageRootEl).render(<ResetPasswordPage />);
   }
+
+  const settingsRootEl = document.getElementById("settings-form-root");
+  if (settingsRootEl) {
+    createRoot(settingsRootEl).render(<SettingsPanel />);
+  }
+
+  const toastRootEl = document.getElementById("toast-root");
+  if (toastRootEl) {
+    createRoot(toastRootEl).render(<ToastContainer />);
+  }
+
+  syncHeaderIcon();
 }
 
 mountAuthUi();
