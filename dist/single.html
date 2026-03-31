@@ -1,16 +1,12 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Title</title>
+		<title>Real News</title>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 		<link rel="stylesheet" href="css/main.css" />
-		<!-- Scripts -->
-		<script src="js/browser.js"></script>
-		<script src="js/breakpoints.js"></script>
-		<script src="js/util.js"></script>
-		<script src="js/main.js"></script>
 		<!-- Favicon -->
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -28,38 +24,89 @@
 				<nav class="links">
 					<ul>
 						<li>
-							<a href="#">Link</a>
+							<a href="#">Technology</a>
 						</li>
 						<li>
-							<a href="#">Link</a>
+							<a href="#">Politics</a>
 						</li>
 						<li>
-							<a href="#">Link</a>
+							<a href="#">Sports</a>
 						</li>
 						<li>
-							<a href="#">Link</a>
+							<a href="#">World News</a>
 						</li>
 						<li>
-							<a href="#">Link</a>
+							<a href="#">Economics</a>
+						</li>
+						<li>
+							<a href="#">Entertainment</a>
+						</li>
+						<li>
+							<a href="#">Culture</a>
 						</li>
 					</ul>
 				</nav>
 				<nav class="main">
 					<ul>
+						<li>
+							<a class="fa-user" href="#login-popup" title="Account">Account</a>
+						</li>
 						<li class="search">
-							<a class="fa-search" href="#search">Search</a>
+							<a class="fa-magnifying-glass" href="#search">Search</a>
 							<form id="search" method="get" action="#">
 								<input type="text" name="query" placeholder="Search" />
 							</form>
 						</li>
-						<!--
-						<li class="menu">
-							<a class="fa-bars" href="#menu">Menu</a>
-						</li>
-						-->
 					</ul>
 				</nav>
 			</header>
+			<!-- Login Popup -->
+			<div id="login-popup" class="login-popup-overlay">
+				<a href="#" class="login-popup-backdrop" title="Close"></a>
+				<div class="login-popup">
+					<a href="#" class="login-popup-close" title="Close">&times;</a>
+					<div class="login-popup-inner">
+						<h2>Welcome</h2>
+						<div id="login-form-root"></div>
+					</div>
+				</div>
+			</div>
+			<!-- Create Account Popup -->
+			<div id="create-account-popup" class="login-popup-overlay">
+				<a href="#" class="login-popup-backdrop" title="Close"></a>
+				<div class="login-popup">
+					<a href="#" class="login-popup-close" title="Close">&times;</a>
+					<div class="login-popup-inner">
+						<h2>Create Account</h2>
+						<div id="signup-form-root"></div>
+					</div>
+				</div>
+			</div>
+			<!-- Forgot Password Popup -->
+			<div id="forgot-password-popup" class="login-popup-overlay">
+				<a href="#" class="login-popup-backdrop" title="Close"></a>
+				<div class="login-popup">
+					<a href="#" class="login-popup-close" title="Close">&times;</a>
+					<div class="login-popup-inner">
+						<h2>Reset Password</h2>
+						<p>Enter your email address and we'll send you a link to reset your password.</p>
+						<div id="forgot-form-root"></div>
+					</div>
+				</div>
+			</div>
+			<!-- Settings Popup -->
+			<div id="settings-popup" class="login-popup-overlay">
+				<a href="#" class="login-popup-backdrop" title="Close"></a>
+				<div class="login-popup">
+					<a href="#" class="login-popup-close" title="Close">&times;</a>
+					<div class="login-popup-inner">
+						<h2>Settings</h2>
+						<div id="settings-form-root"></div>
+					</div>
+				</div>
+			</div>
+			<!-- Toast notifications -->
+			<div id="toast-root"></div>
 			<!-- Menu -->
 			<section id="menu">
 				<!-- Search -->
@@ -132,28 +179,22 @@
 					<p>A more in-depth explanation and sense of nuance will go here. </p>
 					<footer>
 						<!-- Maybe utilize some sources/external links here -->
-						 <p>(Sources / External Links)</p>
+						<p>(Sources / External Links)</p>
 					</footer>
 				</article>
 			</div>
 			<!-- Footer -->
 			<section id="footer">
 				<!--
-				<ul class="icons">
-					<li>
-						<a href="#" class="icon solid fa-rss">
-							<span class="label">RSS</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="icon solid fa-envelope">
-							<span class="label">Email</span>
-						</a>
-					</li>
-				</ul>
-				<p class="copyright">&copy; Untdecided. Design: <a href="http://<placeholder.net>">Place Holder</a>. Images: <a href="http://placeholder.com">Undecided</a>. </p>\
+				<ul class="icons"><li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li><li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li></ul><p class="copyright">&copy; Untdecided. Design: <a href="http://<placeholder.net>">Place Holder</a>. Images: <a href="http://placeholder.com">Undecided</a>. </p>\
 				-->
 			</section>
 		</div>
+		<!-- Scripts -->
+		<script src="js/browser.js"></script>
+		<script src="js/breakpoints.js"></script>
+		<script src="js/util.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/auth-react.js?v=20260328b"></script>
 	</body>
 </html>
