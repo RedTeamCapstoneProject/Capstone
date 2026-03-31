@@ -10,6 +10,12 @@
       ]
     },
     {
+      "source": "/resetPassword.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, max-age=0" }
+      ]
+    },
+    {
       "source": "/js/auth-react.js",
       "headers": [
         { "key": "Cache-Control", "value": "no-store, max-age=0" }
@@ -18,8 +24,9 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1" },
-    { "src": "/reset-password(?:\\.html)?", "methods": ["POST"], "dest": "/api/auth/reset-password" },
-    { "src": "/reset-password", "dest": "/reset-password.html" },
+    { "src": "/reset-password(?:\\.html)?", "methods": ["POST"], "dest": "/api/auth/resetPassword" },
+    { "src": "/reset-password", "dest": "/resetPassword.html" },
+    { "src": "/reset-password.html", "dest": "/resetPassword.html" },
     { "handle": "filesystem" }
   ]
 }

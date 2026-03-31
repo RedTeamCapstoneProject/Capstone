@@ -1,8 +1,8 @@
 import { Router, Request, Response } from "express";
 import bcrypt from "bcrypt";
 import { randomBytes } from "crypto";
-import pool from "../db";
-import { sendPasswordResetEmail } from "../email";
+import pool from "../database";
+import { sendPasswordResetEmail } from "../mailer";
 
 const router = Router();
 

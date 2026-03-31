@@ -21996,9 +21996,9 @@
     }
   });
 
-  // assets/ts/auth-react.tsx
-  var require_auth_react = __commonJS({
-    "assets/ts/auth-react.tsx"() {
+  // assets/ts/authReact.tsx
+  var require_authReact = __commonJS({
+    "assets/ts/authReact.tsx"() {
       var import_react = __toESM(require_react());
       var import_client = __toESM(require_client());
       var import_jsx_runtime = __toESM(require_jsx_runtime());
@@ -22018,16 +22018,19 @@
         const absoluteBase = window.location.origin;
         const candidates = Array.from(/* @__PURE__ */ new Set([
           `${relativeBase}/api/auth/reset-password`,
+          `${relativeBase}/api/auth/resetPassword`,
           `${relativeBase}/api/auth/reset-password/`,
+          `${relativeBase}/api/auth/resetPassword/`,
           `${absoluteBase}/api/auth/reset-password`,
-          `${absoluteBase}/api/auth/reset-password/`
+          `${absoluteBase}/api/auth/resetPassword`,
+          `${absoluteBase}/api/auth/reset-password/`,
+          `${absoluteBase}/api/auth/resetPassword/`
         ]));
         let lastResponse = null;
         for (const endpoint of candidates) {
           const response = await fetch(endpoint, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            // Send both 'password' and 'newPassword' for backend compatibility.
             body: JSON.stringify({ token, password, newPassword: password })
           });
           lastResponse = response;
@@ -22036,6 +22039,106 @@
           }
         }
         return lastResponse;
+      }
+      async function postForgotPassword(apiBaseUrl, email) {
+        const relativeBase = apiBaseUrl || "";
+        const absoluteBase = window.location.origin;
+        const candidates = Array.from(/* @__PURE__ */ new Set([
+          `${relativeBase}/api/auth/forgot-password`,
+          `${relativeBase}/api/auth/forgotPassword`,
+          `${relativeBase}/api/auth/forgot-password/`,
+          `${relativeBase}/api/auth/forgotPassword/`,
+          `${absoluteBase}/api/auth/forgot-password`,
+          `${absoluteBase}/api/auth/forgotPassword`,
+          `${absoluteBase}/api/auth/forgot-password/`,
+          `${absoluteBase}/api/auth/forgotPassword/`
+        ]));
+        let lastResponse = null;
+        for (const endpoint of candidates) {
+          const response = await fetch(endpoint, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ email })
+          });
+          lastResponse = response;
+          if (response.status !== 404 && response.status !== 405) {
+            return response;
+          }
+        }
+        return lastResponse;
+      }
+      var nextToastId = 0;
+      function showToast(message, type = "info") {
+        window.dispatchEvent(
+          new CustomEvent("show-toast", { detail: { message, type, id: ++nextToastId } })
+        );
+      }
+      function ToastContainer() {
+        const [toasts, setToasts] = (0, import_react.useState)([]);
+        (0, import_react.useEffect)(() => {
+          const handler = (e) => {
+            const detail = e.detail;
+            setToasts((prev) => [...prev, detail]);
+            setTimeout(() => {
+              setToasts((prev) => prev.filter((t) => t.id !== detail.id));
+            }, 4500);
+          };
+          window.addEventListener("show-toast", handler);
+          return () => window.removeEventListener("show-toast", handler);
+        }, []);
+        if (toasts.length === 0)
+          return null;
+        return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "toast-container", children: toasts.map((toast) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: `toast toast-${toast.type}`, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "toast-icon", children: toast.type === "success" ? "\u2713" : toast.type === "error" ? "\u2715" : "\u2139" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "toast-message", children: toast.message }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+            "button",
+            {
+              className: "toast-close",
+              onClick: () => setToasts((prev) => prev.filter((t) => t.id !== toast.id)),
+              "aria-label": "Dismiss",
+              children: "\xD7"
+            }
+          )
+        ] }, toast.id)) });
+      }
+      function getStoredUser() {
+        try {
+          const raw = localStorage.getItem("loggedInUser");
+          return raw ? JSON.parse(raw) : null;
+        } catch {
+          return null;
+        }
+      }
+      function setStoredUser(user) {
+        if (user) {
+          localStorage.setItem("loggedInUser", JSON.stringify(user));
+        } else {
+          localStorage.removeItem("loggedInUser");
+        }
+        window.dispatchEvent(new CustomEvent("auth-state-changed"));
+      }
+      function syncHeaderIcon() {
+        const link = document.querySelector(
+          "#header .main ul li > a.fa-user, #header .main ul li > a.fa-gear"
+        );
+        if (!link)
+          return;
+        if (getStoredUser()) {
+          link.classList.remove("fa-user");
+          link.classList.add("fa-gear");
+          link.href = "#settings-popup";
+          link.title = "Settings";
+          link.textContent = "Settings";
+        } else {
+          link.classList.remove("fa-gear");
+          link.classList.add("fa-user");
+          link.href = "#login-popup";
+          link.title = "Account";
+          link.textContent = "Account";
+        }
       }
       function LoginForm() {
         const [email, setEmail] = (0, import_react.useState)("");
@@ -22046,7 +22149,7 @@
           event.preventDefault();
           const normalizedEmail = email.trim().toLowerCase();
           if (!normalizedEmail || !password) {
-            alert("Please enter email and password.");
+            showToast("Please enter email and password.", "error");
             return;
           }
           setSubmitting(true);
@@ -22058,16 +22161,18 @@
             });
             const result = await response.json();
             if (response.ok && result.user?.email) {
-              alert(`Login successful! Welcome, ${result.user.email}`);
+              setStoredUser({ id: result.user.id, email: result.user.email });
+              syncHeaderIcon();
+              showToast(`Welcome back, ${result.user.email}!`, "success");
               setEmail("");
               setPassword("");
               window.location.hash = "";
               return;
             }
-            alert(result.error || "Login failed.");
+            showToast(result.error || "Login failed.", "error");
           } catch (error) {
             console.error("Login request failed", error);
-            alert("Could not reach server. Please try again later.");
+            showToast("Could not reach server. Please try again later.", "error");
           } finally {
             setSubmitting(false);
           }
@@ -22122,15 +22227,15 @@
           event.preventDefault();
           const normalizedEmail = email.trim().toLowerCase();
           if (!normalizedEmail || !password || !confirmPassword) {
-            alert("Please fill in all signup fields.");
+            showToast("Please fill in all signup fields.", "error");
             return;
           }
           if (password !== confirmPassword) {
-            alert("Passwords do not match.");
+            showToast("Passwords do not match.", "error");
             return;
           }
           if (!hasLength) {
-            alert("Password must be at least 8 characters.");
+            showToast("Password must be at least 8 characters.", "error");
             return;
           }
           setSubmitting(true);
@@ -22142,17 +22247,17 @@
             });
             const result = await response.json();
             if (response.ok) {
-              alert("Account created successfully. You can now log in.");
+              showToast("Account created successfully! You can now log in.", "success");
               setEmail("");
               setPassword("");
               setConfirmPassword("");
               window.location.hash = "#login-popup";
               return;
             }
-            alert(result.error || "Signup failed.");
+            showToast(result.error || "Signup failed.", "error");
           } catch (error) {
             console.error("Signup request failed", error);
-            alert("Could not reach server. Please try again later.");
+            showToast("Could not reach server. Please try again later.", "error");
           } finally {
             setSubmitting(false);
           }
@@ -22228,29 +22333,23 @@
           event.preventDefault();
           const normalizedEmail = email.trim().toLowerCase();
           if (!normalizedEmail) {
-            alert("Please enter your email address");
+            showToast("Please enter your email address.", "error");
             return;
           }
           setSubmitting(true);
           try {
-            const response = await fetch(`${apiBaseUrl}/api/auth/forgot-password`, {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json"
-              },
-              body: JSON.stringify({ email: normalizedEmail })
-            });
+            const response = await postForgotPassword(apiBaseUrl, normalizedEmail);
             const result = await response.json();
             if (response.ok) {
-              alert("If an account with this email exists, a password reset link has been sent.");
+              showToast("If an account with this email exists, a password reset link has been sent.", "success");
               setEmail("");
               window.location.hash = "#login-popup";
               return;
             }
-            alert(result.error || "An error occurred. Please try again.");
+            showToast(result.error || "An error occurred. Please try again.", "error");
           } catch (error) {
             console.error("Forgot password error:", error);
-            alert("An error occurred. Please try again.");
+            showToast("An error occurred. Please try again.", "error");
           } finally {
             setSubmitting(false);
           }
@@ -22394,6 +22493,27 @@
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { marginTop: "1em", marginBottom: 0, textAlign: "center" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", { href: "index.html", children: "Back to Home" }) })
         ] });
       }
+      function SettingsPanel() {
+        const [user, setUser] = (0, import_react.useState)(getStoredUser);
+        (0, import_react.useEffect)(() => {
+          const handler = () => setUser(getStoredUser());
+          window.addEventListener("auth-state-changed", handler);
+          return () => window.removeEventListener("auth-state-changed", handler);
+        }, []);
+        const handleLogOut = () => {
+          setStoredUser(null);
+          syncHeaderIcon();
+          window.location.hash = "";
+          showToast("You have been logged out.", "info");
+        };
+        return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "settings-panel", children: [
+          user && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "settings-email", children: user.email }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", { className: "actions stacked", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { type: "button", className: "button large fit", children: "Preferences" }) }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { type: "button", className: "button large fit settings-logout-btn", onClick: handleLogOut, children: "Log Out" }) })
+          ] })
+        ] });
+      }
       function mountAuthUi() {
         const loginRootEl = document.getElementById("login-form-root");
         if (loginRootEl) {
@@ -22411,11 +22531,20 @@
         if (resetPageRootEl) {
           (0, import_client.createRoot)(resetPageRootEl).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ResetPasswordPage, {}));
         }
+        const settingsRootEl = document.getElementById("settings-form-root");
+        if (settingsRootEl) {
+          (0, import_client.createRoot)(settingsRootEl).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SettingsPanel, {}));
+        }
+        const toastRootEl = document.getElementById("toast-root");
+        if (toastRootEl) {
+          (0, import_client.createRoot)(toastRootEl).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ToastContainer, {}));
+        }
+        syncHeaderIcon();
       }
       mountAuthUi();
     }
   });
-  require_auth_react();
+  require_authReact();
 })();
 /*! Bundled license information:
 

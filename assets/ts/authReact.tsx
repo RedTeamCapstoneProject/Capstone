@@ -31,9 +31,13 @@ async function postResetPassword(apiBaseUrl: string, token: string, password: st
   const absoluteBase = window.location.origin;
   const candidates = Array.from(new Set([
     `${relativeBase}/api/auth/reset-password`,
+    `${relativeBase}/api/auth/resetPassword`,
     `${relativeBase}/api/auth/reset-password/`,
+    `${relativeBase}/api/auth/resetPassword/`,
     `${absoluteBase}/api/auth/reset-password`,
+    `${absoluteBase}/api/auth/resetPassword`,
     `${absoluteBase}/api/auth/reset-password/`,
+    `${absoluteBase}/api/auth/resetPassword/`,
   ]));
   let lastResponse: Response | null = null;
 
@@ -46,6 +50,40 @@ async function postResetPassword(apiBaseUrl: string, token: string, password: st
 
     lastResponse = response;
     if (response.status !== 405) {
+      return response;
+    }
+  }
+
+  return lastResponse as Response;
+}
+
+async function postForgotPassword(apiBaseUrl: string, email: string): Promise<Response> {
+  const relativeBase = apiBaseUrl || "";
+  const absoluteBase = window.location.origin;
+  const candidates = Array.from(new Set([
+    `${relativeBase}/api/auth/forgot-password`,
+    `${relativeBase}/api/auth/forgotPassword`,
+    `${relativeBase}/api/auth/forgot-password/`,
+    `${relativeBase}/api/auth/forgotPassword/`,
+    `${absoluteBase}/api/auth/forgot-password`,
+    `${absoluteBase}/api/auth/forgotPassword`,
+    `${absoluteBase}/api/auth/forgot-password/`,
+    `${absoluteBase}/api/auth/forgotPassword/`,
+  ]));
+
+  let lastResponse: Response | null = null;
+
+  for (const endpoint of candidates) {
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email }),
+    });
+
+    lastResponse = response;
+    if (response.status !== 404 && response.status !== 405) {
       return response;
     }
   }
@@ -377,13 +415,7 @@ function ForgotPasswordForm() {
 
     setSubmitting(true);
     try {
-      const response = await fetch(`${apiBaseUrl}/api/auth/forgot-password`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email: normalizedEmail }),
-      });
+      const response = await postForgotPassword(apiBaseUrl, normalizedEmail);
 
       const result = (await response.json()) as AuthResponse;
 
