@@ -10,14 +10,12 @@ import { type newsArticle, callAI, readJSON, writeToJSON } from "../AIExportedFu
 
 
 async function categorizeNews(originalArticleArray: newsArticle[]){
-  
-
 
     //create an array of promise. only retrun when all promises are done
     const categorizationTasks = originalArticleArray.map(async (article)=>{
         const systemPrompt = `analyze the content of this news article ${article.content}
             reply with the only the one word category that the article fits in. An article can only be in one category.
-            Here are the set categories that you can choose from: Technology, Politics, Sports, World News. Economics, Entertainment, Culture`;
+            Here are the set categories that you can choose from: Technology, Politics, Sports, World News, Economics, Entertainment, Culture`;
         
             const category = callAI(systemPrompt);
         article.category = (await category)?.trim().toLowerCase().replace(/[^a-z]/g, '');  
@@ -78,18 +76,6 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
 }
 
 
-
-
-/*
-
-async function writeToJSON(completedArray: newsArticle[]){
-    const withTopic = completedArray.filter(a => a.topic).length;
-    console.log(`Total Articles: ${completedArray.length}`);
-    console.log(`Articles with Topics: ${withTopic}`);
-    fs.writeFileSync('outputTestData.json', JSON.stringify(completedArray, null, 2), 'utf-8');
-  
-}
-*/
 
 
 export async function run() {
