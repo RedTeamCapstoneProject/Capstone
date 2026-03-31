@@ -42,18 +42,22 @@ async function tempReadMethodForTesting(){
 async function summaryManager(articleObjArray: newsArticle[]){
     let contentArray:Array<string> = []
     let descriptionArray:Array<string> = []
+    let titleArray:Array<string>=[]
     for(const article of articleObjArray){
         let content:string = article.content
         let description:string= article.description
+        let title = article.title
         contentArray.push(content)
         descriptionArray.push(description)
+        titleArray.push(title)
     }
 
 
     var summarizedContent:string= await summarizeContent(contentArray)
     var summarizedDescription:string = await summarizeDescription(descriptionArray)
-    await constructJSON(summarizedContent,summarizedDescription)
-
+    var summarizedTitle:string = await summarizeTitle(titleArray)
+    var completedObject = await constructJSON(articleObjArray,summarizedContent,summarizedDescription,summarizedTitle)
+    writeSummarizedJSON(completedObject)
 }
 
 
@@ -110,19 +114,69 @@ async function summarizeDescription(descriptionArray: Array<string>){
 
 }
 
+// given all the titles summarize them into one
+async function summarizeTitle(titleArray: Array<string>){
+    const sysPrompt = `You are an expert Headlines Editor for a global news agency.
+        INPUT:
+        An array of titles from different news outlets covering the same story: ${JSON.stringify(titleArray)}
+
+        YOUR TASK:
+        Create ONE single, cohesive headline that encompasses the core news shared across all these articles.
+
+        CONSTRAINTS:
+        1. LENGTH: Keep it under 10 words.
+        2. STYLE: Use "Title Case" (Capitalize Major Words).
+        3. TONE: Neutral, authoritative, and punchy.
+        4. NO CLICKBAIT: Avoid sensationalist fluff like "You won't believe..." or "Shocking reveal."
+        5. SYNTHESIS: If the articles mention different aspects (e.g., one mentions a discovery, another mentions the cost), try to include both if space allows (e.g., "NASA Discovers Lunar Water, Signaling Multi-Billion Dollar Space Race").
+
+        OUTPUT:
+        Return ONLY the headline text. No intro, no quotes, no explanation.
+        `;
+    var response = await callAI(sysPrompt)
+    return response
+}
 
 //takes in the summarized content and descriptions and builds the summarizedArticle structure
 //uses articleArray and the summized things to create the object summarizedArticle
-//finally it writes the summarizedJSON
-async function constructJSON(summarizedContent:string,summarizedDescription:string){
-    console.log("\nTHIS IS SUMMARY:")
-    console.log(summarizedContent)
-    console.log("\nTHIS IS description:")
-    console.log(summarizedDescription)
+//returns the object
+async function constructJSON(articleObjArray:newsArticle[],summarizedContent:string,summarizedDescription:string,summarizedTitle:string){
+   //console.log("\nTHIS IS SUMMARY:")
+    //console.log(summarizedContent)
+    //console.log("\nTHIS IS description:")
+   // console.log(summarizedDescription)
+    const summaryObjArray:summarizedArticle[]=[]
+    const article_sources: string[] = []
+    const authors:string[]= []
+    const urls:string[]=[]
     
+    for(const article of articleObjArray){
+        article_sources.push(article.source.name)
+        authors.push(article.author ?? "Unknown Author")
+        urls.push(article.url)
+       
+    }
     //quickWrite(summarizedContent)  //just for testing
     
+     const summarizedArticle:summarizedArticle = {
+        source_names: article_sources,
+        authors: authors,
+        ai_title:summarizedTitle,
+        ai_description:summarizedDescription,
+        urls: urls,
+        category: articleObjArray[0].category ?? "unkown",
+        topic:articleObjArray[0].topic ?? "unkown",
+        summary:summarizedContent,
+    }
 
+    return summarizedArticle
+
+}
+
+
+//write the object to a json
+async function writeSummarizedJSON(summarizedObject:summarizedArticle){
+    fs.writeFileSync("outputJSONs/summarizedJSON/summarizedTopic.json",JSON.stringify(summarizedObject, null,2),"utf8")
 }
 
 

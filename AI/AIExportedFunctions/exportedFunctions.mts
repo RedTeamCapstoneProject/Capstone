@@ -78,7 +78,7 @@ export async function writeToJSON(completedArray: newsArticle[]){
     const withTopic = completedArray.filter(a => a.topic).length;
     console.log(`Total Articles: ${completedArray.length}`);
     console.log(`Articles with Topics: ${withTopic}`);
-    fs.writeFileSync('AI/Grouping/outputTestData.json', JSON.stringify(completedArray, null, 2), 'utf-8');
+    fs.writeFileSync('outputJSONs/JSONAfterTopic/outputTestData.json', JSON.stringify(completedArray, null, 2), 'utf-8');
 }
 
 
