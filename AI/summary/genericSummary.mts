@@ -176,7 +176,7 @@ async function constructJSON(articleObjArray:newsArticle[],summarizedContent:str
 
 //write the object to a json
 async function writeSummarizedJSON(summarizedObject:summarizedArticle){
-    fs.writeFileSync("outputJSONs/summarizedTopic.json",JSON.stringify(summarizedObject, null,2),"utf8")
+    fs.writeFileSync("outputJSONs/summarizedJSON/summarizedTopic.json",JSON.stringify(summarizedObject, null,2),"utf8")
 }
 
 
