@@ -5,6 +5,7 @@ CREATE TABLE IF NOT EXISTS summary (
     ai_title TEXT,
     ai_description TEXT,
     urls TEXT[] NOT NULL,
+    url_to_image TEXT[] NOT NULL,
     category TEXT NOT NULL,
     topic TEXT NOT NULL,
     summary TEXT NOT NULL,
