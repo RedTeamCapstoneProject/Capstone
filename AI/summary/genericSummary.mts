@@ -2,10 +2,11 @@ import { writeFile } from "fs";
 import { type newsArticle, callAI, readJSON, tempreadJSON } from "../AIExportedFunctions/exportedFunctions.mts";
 import fs from 'fs';
 
+/*
 function quickWrite(content: string) {
     fs.writeFileSync('test.txt', content, 'utf-8');
 }
-
+*/
 
 //this is the object structure of the summarized articles in a JSON
 interface summarizedArticle{
@@ -14,13 +15,14 @@ interface summarizedArticle{
     ai_title:string,
     ai_description:string,
     urls: string[],
+    url_to_image: string,
     category: string,
     topic:string,
     summary:string,
 }
 
 
-
+/*
 async function tempReadMethodForTesting(){
     var array:newsArticle[] =  await tempreadJSON("AI/Grouping/outputTestData.json")
     //console.log("Raw Array Length:", array?.length); // If this is 0, the file read failed to find data
@@ -34,7 +36,7 @@ async function tempReadMethodForTesting(){
     //console.log(objArray)
     return objArray
 }
-
+*/
 
 // the main function, handles calling other functions. loops through every article
 //create content and description arrays and sends the arrays to the summarizeContent or summarizeDescription functions
@@ -151,11 +153,12 @@ async function constructJSON(articleObjArray:newsArticle[],summarizedContent:str
     const authors:string[]= []
     const urls:string[]=[]
     
+    
     for(const article of articleObjArray){
         article_sources.push(article.source.name)
         authors.push(article.author ?? "Unknown Author")
         urls.push(article.url)
-       
+
     }
     //quickWrite(summarizedContent)  //just for testing
     
@@ -165,8 +168,9 @@ async function constructJSON(articleObjArray:newsArticle[],summarizedContent:str
         ai_title:summarizedTitle,
         ai_description:summarizedDescription,
         urls: urls,
-        category: articleObjArray[0].category ?? "unkown",
-        topic:articleObjArray[0].topic ?? "unkown",
+        url_to_image: articleObjArray[0].urlToImage ?? "unknown",
+        category: articleObjArray[0].category ?? "unknown",
+        topic:articleObjArray[0].topic ?? "unknown",
         summary:summarizedContent,
     }
 

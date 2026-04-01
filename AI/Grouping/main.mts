@@ -3,9 +3,35 @@ import path from 'path';
 import { type newsArticle, callAI, readJSON, writeToJSON } from "../AIExportedFunctions/exportedFunctions.mts";
 import { exec } from 'child_process';
 import { fileURLToPath } from 'url';
+import * as fs from 'fs';
+import chokidar from 'chokidar';
+
+const targetFile = path.resolve('outputJSONs/newsAPI/trending_news.json');
+
+console.log(`checking for stuff at: ${targetFile}`);
+
+const watcher = chokidar.watch(targetFile, {
+    persistent: true,
+    ignoreInitial: true, //only run on new changes
+    awaitWriteFinish: {
+        stabilityThreshold: 10000, // wait 10 seconds after the last change to ensure file is closed/done 
+        pollInterval: 100
+    }
+});
+
+watcher.on('change', async (filePath) => {
+    console.log(`\n change detected in ${path.basename(filePath)}`);
+    try {
+        console.log("running main.mts");
+        run();
+    } catch (err) {
+        console.error("Error :", err);
+    }
+});
 
 
-/*
+
+//runs the powershell script to get data in DB
 export const runDataImport = () => {
     const currentFile = fileURLToPath(import.meta.url);
     const currentDir = path.dirname(currentFile);
@@ -30,7 +56,7 @@ export const runDataImport = () => {
   });
 };
 
-*/
+
 
 async function categorizeNews(originalArticleArray: newsArticle[]){
 
@@ -102,7 +128,7 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
 
 export async function run() {
     try {
-        var originalArticleArray = await readJSON("../../outputJSONs/newsAPI/trending_news.json")
+        var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news.json")
         var categoryArticleArray = await categorizeNews(originalArticleArray)
         var completedArray = await determineTopics(categoryArticleArray)
         await writeToJSON(completedArray)
@@ -115,4 +141,4 @@ export async function run() {
     }
 }
 
-run();
+//run();
