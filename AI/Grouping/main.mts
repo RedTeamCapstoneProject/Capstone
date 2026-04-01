@@ -102,7 +102,7 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
 
 export async function run() {
     try {
-        var originalArticleArray = await readJSON("AI/Grouping/testData.json")
+        var originalArticleArray = await readJSON("outputJSONs/newsAPI/testData.json")
         var categoryArticleArray = await categorizeNews(originalArticleArray)
         var completedArray = await determineTopics(categoryArticleArray)
         await writeToJSON(completedArray)
