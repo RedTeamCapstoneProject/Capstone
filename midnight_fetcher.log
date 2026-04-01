@@ -1,0 +1,96 @@
+2026-03-31 15:48:20,574 - INFO -    - Total articles: 92
+2026-03-31 15:48:20,574 - INFO -    - Saved to: test_output\trending_news_20260331_154820.json
+2026-03-31 15:48:20,575 - INFO -    - Categories: business, entertainment, general, health, science, sports, technology
+2026-03-31 15:50:21,345 - INFO -    - Total articles: 92
+2026-03-31 15:50:21,345 - INFO -    - Saved to: test_output\trending_news_20260331_155021.json
+2026-03-31 15:50:21,345 - INFO -    - Categories: business, entertainment, general, health, science, sports, technology
+2026-03-31 15:51:59,342 - INFO -  Running midnight news fetch...
+2026-03-31 15:51:59,342 - INFO -  Starting midnight news fetch...
+2026-03-31 15:51:59,829 - INFO -  Fetched 13 articles for business
+2026-03-31 15:51:59,913 - INFO -  Fetched 15 articles for entertainment
+2026-03-31 15:51:59,995 - INFO -  Fetched 12 articles for general
+2026-03-31 15:52:00,079 - INFO -  Fetched 15 articles for health
+2026-03-31 15:52:00,164 - INFO -  Fetched 14 articles for science
+2026-03-31 15:52:00,250 - INFO -  Fetched 15 articles for sports
+2026-03-31 15:52:00,337 - INFO -  Fetched 14 articles for technology
+2026-03-31 15:52:00,338 - INFO -  Total unique articles fetched: 92
+2026-03-31 15:52:00,341 - INFO -  Saved data to: test_output\trending_news_20260331_155200.json
+2026-03-31 15:52:00,344 - INFO -  Updated latest.json
+2026-03-31 15:52:00,344 - INFO -  Fetch Summary:
+2026-03-31 15:52:00,344 - INFO -    - Total articles: 92
+2026-03-31 15:52:00,344 - INFO -    - Saved to: test_output\trending_news_20260331_155200.json
+2026-03-31 15:52:00,344 - INFO -    - Categories: business, entertainment, general, health, science, sports, technology
+2026-03-31 15:53:38,913 - INFO -  Running midnight news fetch...
+2026-03-31 15:53:38,913 - INFO -  Starting midnight news fetch...
+2026-03-31 15:53:39,540 - INFO -  Fetched 13 articles for business
+2026-03-31 15:53:39,651 - INFO -  Fetched 15 articles for entertainment
+2026-03-31 15:53:39,751 - INFO -  Fetched 12 articles for general
+2026-03-31 15:53:39,873 - INFO -  Fetched 15 articles for health
+2026-03-31 15:53:39,989 - INFO -  Fetched 14 articles for science
+2026-03-31 15:53:40,101 - INFO -  Fetched 15 articles for sports
+2026-03-31 15:53:40,227 - INFO -  Fetched 14 articles for technology
+2026-03-31 15:53:40,228 - INFO -  Total unique articles fetched: 92
+2026-03-31 15:53:40,239 - INFO -  Fetch Summary:
+2026-03-31 15:53:40,239 - INFO -    - Total articles: 92
+2026-03-31 15:53:40,240 - INFO -    - Saved to: test_output\trending_news.json
+2026-03-31 15:53:40,240 - INFO -    - Categories: business, entertainment, general, health, science, sports, technology
+2026-03-31 15:53:58,579 - INFO -  Running midnight news fetch...
+2026-03-31 15:53:58,580 - INFO -  Starting midnight news fetch...
+2026-03-31 15:53:59,070 - INFO -  Fetched 13 articles for business
+2026-03-31 15:53:59,154 - INFO -  Fetched 15 articles for entertainment
+2026-03-31 15:53:59,238 - INFO -  Fetched 12 articles for general
+2026-03-31 15:53:59,323 - INFO -  Fetched 15 articles for health
+2026-03-31 15:53:59,405 - INFO -  Fetched 14 articles for science
+2026-03-31 15:53:59,489 - INFO -  Fetched 15 articles for sports
+2026-03-31 15:53:59,577 - INFO -  Fetched 14 articles for technology
+2026-03-31 15:53:59,577 - INFO -  Total unique articles fetched: 92
+2026-03-31 15:53:59,586 - INFO -  Fetch Summary:
+2026-03-31 15:53:59,588 - INFO -    - Total articles: 92
+2026-03-31 15:53:59,588 - INFO -    - Saved to: test_output\trending_news.json
+2026-03-31 15:53:59,588 - INFO -    - Categories: business, entertainment, general, health, science, sports, technology
+2026-03-31 15:55:30,087 - INFO -  Running midnight news fetch...
+2026-03-31 15:55:30,087 - INFO -  Starting midnight news fetch...
+2026-03-31 15:55:30,595 - INFO -  Fetched 13 articles for business
+2026-03-31 15:55:30,684 - INFO -  Fetched 15 articles for entertainment
+2026-03-31 15:55:30,767 - INFO -  Fetched 12 articles for general
+2026-03-31 15:55:30,849 - INFO -  Fetched 15 articles for health
+2026-03-31 15:55:30,936 - INFO -  Fetched 14 articles for science
+2026-03-31 15:55:31,015 - INFO -  Fetched 15 articles for sports
+2026-03-31 15:55:31,095 - INFO -  Fetched 14 articles for technology
+2026-03-31 15:55:31,095 - INFO -  Total unique articles fetched: 92
+2026-03-31 15:55:31,106 - INFO -  Fetch Summary:
+2026-03-31 15:55:31,106 - INFO -    - Total articles: 92
+2026-03-31 15:55:31,106 - INFO -    - Saved to: test_output\trending_news.json
+2026-03-31 15:55:31,106 - INFO -    - Categories: business, entertainment, general, health, science, sports, technology
+2026-03-31 15:58:08,961 - INFO -  Running midnight news fetch...
+2026-03-31 15:58:08,961 - INFO -  Starting midnight news fetch...
+2026-03-31 15:58:09,440 - INFO -  Fetched 13 articles for business
+2026-03-31 15:58:09,519 - INFO -  Fetched 15 articles for entertainment
+2026-03-31 15:58:09,600 - INFO -  Fetched 12 articles for general
+2026-03-31 15:58:09,686 - INFO -  Fetched 15 articles for health
+2026-03-31 15:58:09,767 - INFO -  Fetched 14 articles for science
+2026-03-31 15:58:09,850 - INFO -  Fetched 15 articles for sports
+2026-03-31 15:58:09,936 - INFO -  Fetched 14 articles for technology
+2026-03-31 15:58:09,936 - INFO -  Total unique articles fetched: 92
+2026-03-31 15:58:09,943 - INFO -  Fetch Summary:
+2026-03-31 15:58:09,943 - INFO -    - Total articles: 92
+2026-03-31 15:58:09,943 - INFO -    - Saved to: test_output\trending_news.json
+2026-03-31 15:58:09,943 - INFO -    - Categories: business, entertainment, general, health, science, sports, technology
+2026-04-01 14:15:05,181 - INFO -  Running midnight news fetch...
+2026-04-01 14:15:05,182 - ERROR -  Midnight fetch failed: 'NewsFetcher' object has no attribute 'fetch_all_trending'
+2026-04-01 14:18:34,267 - INFO -  Running midnight news fetch...
+2026-04-01 14:18:34,267 - ERROR -  Midnight fetch failed: 'NewsFetcher' object has no attribute 'fetch_all_trending'
+2026-04-01 14:21:38,569 - INFO -  Running midnight news fetch...
+2026-04-01 14:21:38,570 - ERROR -  Midnight fetch failed: 'NewsFetcher' object has no attribute 'fetch_all_trending'
+2026-04-01 14:35:31,248 - INFO -  Running news fetch...
+2026-04-01 14:35:31,947 - INFO -    Reached end of results after 1 pages
+2026-04-01 14:35:31,947 - INFO -  Total unique articles fetched: 31
+2026-04-01 14:35:31,948 - INFO -  Saved 31 articles to test_output\trending_news.json
+2026-04-01 14:40:15,932 - INFO -  Running news fetch...
+2026-04-01 14:40:15,932 - ERROR - Fetch failed: NewsFetcher.fetch_trending_news() got an unexpected keyword argument 'page_size'
+2026-04-01 14:41:09,308 - INFO -  Running news fetch...
+2026-04-01 14:41:10,124 - INFO -  Saved 31 articles to test_output\trending_news.json
+2026-04-01 14:45:08,984 - INFO -  Running news fetch...
+2026-04-01 14:45:17,254 - INFO -  Saved 200 articles to test_output\trending_news.json
+2026-04-01 14:45:40,993 - INFO -  Running news fetch...
+2026-04-01 14:45:49,007 - INFO -  Saved 294 articles to test_output\trending_news.json
