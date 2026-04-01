@@ -5,7 +5,7 @@ import { exec } from 'child_process';
 import { fileURLToPath } from 'url';
 
 
-
+/*
 export const runDataImport = () => {
     const currentFile = fileURLToPath(import.meta.url);
     const currentDir = path.dirname(currentFile);
@@ -30,7 +30,7 @@ export const runDataImport = () => {
   });
 };
 
-
+*/
 
 async function categorizeNews(originalArticleArray: newsArticle[]){
 
@@ -102,7 +102,7 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
 
 export async function run() {
     try {
-        var originalArticleArray = await readJSON("outputJSONs/newsAPI/testData.json")
+        var originalArticleArray = await readJSON("../../outputJSONs/newsAPI/trending_news.json")
         var categoryArticleArray = await categorizeNews(originalArticleArray)
         var completedArray = await determineTopics(categoryArticleArray)
         await writeToJSON(completedArray)
@@ -111,7 +111,7 @@ export async function run() {
         console.error("Error processing the data: ", error);
     }finally {
         console.log("Shutting down...");
-        runDataImport()
+        //runDataImport()
     }
 }
 

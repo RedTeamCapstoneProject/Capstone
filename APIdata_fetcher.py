@@ -8,7 +8,7 @@ from typing import List, Dict, Optional
 from dataclasses import dataclass
 import schedule
 import time
-
+from dotenv import load_dotenv
 # ============================================
 # LOGGING SETUP
 # ============================================
@@ -59,7 +59,7 @@ class NewsFetcher:
     
     BASE_URL = "https://newsapi.org/v2"
     
-    def __init__(self, api_key: str, output_dir: str = "news_data"):
+    def __init__(self, api_key: str, output_dir: str = "outputJSONs/newsAPI"):
         self.api_key = api_key
         self.output_dir = output_dir
         self.session = requests.Session()
@@ -177,7 +177,7 @@ class NewsFetcher:
 # ============================================
 # SCHEDULER FUNCTIONS
 # ============================================
-def run_fetch_job(api_key: str, output_dir: str = "news_data"):
+def run_fetch_job(api_key: str, output_dir: str = "outputJSONs/newsAPI"):
 
     fetcher = NewsFetcher(api_key, output_dir)
     try:
@@ -186,7 +186,7 @@ def run_fetch_job(api_key: str, output_dir: str = "news_data"):
     finally:
         fetcher.close()
 
-def start_midnight_scheduler(api_key: str, output_dir: str = "news_data"):
+def start_midnight_scheduler(api_key: str, output_dir: str = "outputJSONs/newsAPI"):
 
     schedule.every().day.at("00:00").do(run_fetch_job, api_key, output_dir)
     
@@ -212,7 +212,7 @@ def manual_fetch_test(api_key: str):
 # ============================================
 if __name__ == "__main__":
     import sys
-    
+    load_dotenv()
     # Get API key from environment variable
     API_KEY = os.getenv("NEWS_API_KEY")
     
