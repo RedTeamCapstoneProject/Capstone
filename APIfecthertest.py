@@ -4,7 +4,7 @@ import os
 import sys
 import json
 
-load_dotenv('APIkeyenv.env')
+load_dotenv('.env')
 
 def simple_test():
     print("=" * 60)
