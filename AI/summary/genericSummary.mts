@@ -39,7 +39,8 @@ async function tempReadMethodForTesting(){
 // the main function, handles calling other functions. loops through every article
 //create content and description arrays and sends the arrays to the summarizeContent or summarizeDescription functions
 //finally it uses output of previous functions and calls constructJSON
-async function summaryManager(articleObjArray: newsArticle[]){
+export async function summaryManager(articleObjArray: newsArticle[]){
+    console.log(articleObjArray.length)
     let contentArray:Array<string> = []
     let descriptionArray:Array<string> = []
     let titleArray:Array<string>=[]
@@ -181,5 +182,5 @@ async function writeSummarizedJSON(summarizedObject:summarizedArticle){
 
 
 
-var catArray = await tempReadMethodForTesting()
-summaryManager(catArray)
+//var catArray = await tempReadMethodForTesting()
+//summaryManager(catArray)

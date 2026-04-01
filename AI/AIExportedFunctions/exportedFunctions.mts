@@ -3,6 +3,7 @@ import { config } from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import fs, { write } from 'fs';
+import { exec } from 'child_process';
 
 //this is how the news articles are formated with category and topic as an object
 //often used in an array like this: newsArticle[]
@@ -104,3 +105,5 @@ export async function tempreadJSON(path: string): Promise<newsArticle[]> {
         return []; 
     }
 }
+
+
