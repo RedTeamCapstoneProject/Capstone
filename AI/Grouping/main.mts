@@ -1,11 +1,32 @@
 //import { GoogleGenerativeAI } from "@google/generative-ai";
-import Groq from "groq-sdk";
-import { config } from 'dotenv';
 import path from 'path';
-import { fileURLToPath } from 'url';
-import fs, { write } from 'fs';
 import { type newsArticle, callAI, readJSON, writeToJSON } from "../AIExportedFunctions/exportedFunctions.mts";
+import { exec } from 'child_process';
 
+
+
+export const runDataImport = () => {
+  // Get the absolute path to your script (assuming it's in the project root)
+  const scriptPath = path.resolve(__dirname, '../../import-data.ps1');
+
+  console.log('Starting database import...');
+
+  // 'powershell -ExecutionPolicy Bypass -File' ensures the script isn't blocked by Windows security
+  exec(`powershell -ExecutionPolicy Bypass -File "${scriptPath}"`, (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Execution Error: ${error.message}`);
+      return;
+    }
+
+    if (stderr) {
+      console.error(`PowerShell Error: ${stderr}`);
+      return;
+    }
+
+    // This will show the "Inserted rows: X" message from your script
+    console.log(`Success: ${stdout}`);
+  });
+};
 
 
 
@@ -77,7 +98,6 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
 
 
 
-
 export async function run() {
     try {
         var originalArticleArray = await readJSON("AI/Grouping/testData.json")
@@ -89,7 +109,7 @@ export async function run() {
         console.error("Error processing the data: ", error);
     }finally {
         console.log("Shutting down...");
-
+        runDataImport()
     }
 }
 
