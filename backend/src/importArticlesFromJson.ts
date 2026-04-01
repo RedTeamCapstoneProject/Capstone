@@ -18,6 +18,7 @@ interface newsArticle {
   topic?: string | null;
 }
 
+
 async function tempreadJSON(filePath: string): Promise<newsArticle[]> {
   const rawData = fs.readFileSync(filePath, "utf-8");
   const data = JSON.parse(rawData);

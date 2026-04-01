@@ -2,12 +2,14 @@
 import path from 'path';
 import { type newsArticle, callAI, readJSON, writeToJSON } from "../AIExportedFunctions/exportedFunctions.mts";
 import { exec } from 'child_process';
+import { fileURLToPath } from 'url';
 
 
 
 export const runDataImport = () => {
-  // Get the absolute path to your script (assuming it's in the project root)
-  const scriptPath = path.resolve(__dirname, '../../import-data.ps1');
+    const currentFile = fileURLToPath(import.meta.url);
+    const currentDir = path.dirname(currentFile);
+    const scriptPath = path.resolve(currentDir, '../../scripts/importArticlesFromJson.ps1');
 
   console.log('Starting database import...');
 
