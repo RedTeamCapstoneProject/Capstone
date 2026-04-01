@@ -3,6 +3,8 @@ import { pathToFileURL } from "url";
 import pool from "./database";
 import type { newsArticle as NewsArticle } from "../../AI/AIExportedFunctions/exportedFunctions.mts";
 
+
+
 export type RowCell = {
 	column: string;
 	value: unknown;
@@ -49,6 +51,7 @@ function toStringWithFallback(value: unknown, fallback = ""): string {
 
 function rowCellsToNewsArticle(cells: RowAsCellObjects): NewsArticle {
 	// Rehydrate the cell-object row back into the shape expected by summaryManager.
+	console.log("test")
 	const publishedRaw = getCellValue(cells, "published_at");
 	const publishedAt =
 		publishedRaw instanceof Date
@@ -71,6 +74,7 @@ function rowCellsToNewsArticle(cells: RowAsCellObjects): NewsArticle {
 		topic: toNullableString(getCellValue(cells, "topic")) ?? undefined,
 	};
 }
+
 
 async function importSummaryManager(): Promise<
 	(articleObjArray: NewsArticle[]) => Promise<void>
@@ -96,6 +100,9 @@ async function importSummaryManager(): Promise<
 
 	return module.summaryManager;
 }
+
+
+
 
 export async function fetchNewsArticlesAndSummarize(): Promise<{
 	rowCount: number;
@@ -154,3 +161,6 @@ export async function fetchNewsArticlesAndSummarize(): Promise<{
 	};
 }
 
+fetchNewsArticlesAndSummarize()
+  .then(() => console.log("Done!"))
+  .catch(err => console.error(err));
