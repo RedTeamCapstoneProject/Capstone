@@ -1,4 +1,5 @@
-Set-Location "c:\Users\12059\Desktop\UAB\Spring 2026\CS499\Capstone GitHub\Capstone"
+$projectRoot = Resolve-Path (Join-Path $PSScriptRoot "..")
+Set-Location $projectRoot
 
 $envFilePath = ".env"
 if (-not (Test-Path $envFilePath)) {
