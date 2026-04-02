@@ -3595,14 +3595,21 @@ body {
 	font-size: 1.75em;
 	line-height: 1;
 	color: #646464;
-	background: none;
-	border: none;
+	background: none !important;
+	border: none !important;
+	box-shadow: none !important;
 	cursor: pointer;
 	padding: 0;
+	letter-spacing: normal;
+	text-transform: none;
+	font-family: inherit;
+	font-weight: 400;
 }
 
 .preferences-close:hover {
 	color: #743863;
+	background: none !important;
+	box-shadow: none !important;
 }
 
 .preferences-list {
@@ -3627,6 +3634,14 @@ body {
 }
 
 .preferences-label input[type="checkbox"] {
+	-moz-appearance: checkbox !important;
+	-webkit-appearance: checkbox !important;
+	appearance: checkbox !important;
+	opacity: 1 !important;
+	z-index: auto !important;
+	position: relative !important;
+	float: none !important;
+	margin-right: 0 !important;
 	width: 1.15em;
 	height: 1.15em;
 	accent-color: #743863;
