@@ -597,10 +597,75 @@ function ResetPasswordPage() {
   );
 }
 
+// ── Preferences popup ────────────────────────────────────────────────────
+
+const FILTER_CATEGORIES = [
+  "Technology",
+  "Politics",
+  "Sports",
+  "World News",
+  "Economics",
+  "Entertainment",
+  "Culture",
+] as const;
+
+type FilterCategory = (typeof FILTER_CATEGORIES)[number];
+
+function loadSavedFilters(): Record<FilterCategory, boolean> {
+  try {
+    const raw = localStorage.getItem("newsFilters");
+    if (raw) return JSON.parse(raw) as Record<FilterCategory, boolean>;
+  } catch { /* ignore */ }
+  return Object.fromEntries(FILTER_CATEGORIES.map((c) => [c, true])) as Record<FilterCategory, boolean>;
+}
+
+function PreferencesPopup({ onClose }: { onClose: () => void }) {
+  const [filters, setFilters] = useState<Record<FilterCategory, boolean>>(loadSavedFilters);
+
+  const toggle = (category: FilterCategory) => {
+    setFilters((prev) => ({ ...prev, [category]: !prev[category] }));
+  };
+
+  const handleSave = () => {
+    localStorage.setItem("newsFilters", JSON.stringify(filters));
+    showToast("Preferences saved.", "success");
+    onClose();
+  };
+
+  return (
+    <div className="preferences-overlay" onClick={onClose}>
+      <div className="preferences-popup" onClick={(e) => e.stopPropagation()}>
+        <button type="button" className="preferences-close" onClick={onClose} aria-label="Close">&times;</button>
+        <h3>Filter Categories</h3>
+        <ul className="preferences-list">
+          {FILTER_CATEGORIES.map((category) => (
+            <li key={category}>
+              <label className="preferences-label">
+                <input
+                  type="checkbox"
+                  checked={filters[category]}
+                  onChange={() => toggle(category)}
+                />
+                <span>{category}</span>
+              </label>
+            </li>
+          ))}
+        </ul>
+        <ul className="actions stacked">
+          <li>
+            <button type="button" className="button large fit" onClick={handleSave}>Save Preferences</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
 // ── Settings panel (shown when logged in) ───────────────────────────────
 
 function SettingsPanel() {
   const [user, setUser] = useState<StoredUser | null>(getStoredUser);
+  const [showPrefs, setShowPrefs] = useState(false);
 
   useEffect(() => {
     const handler = () => setUser(getStoredUser());
@@ -620,12 +685,13 @@ function SettingsPanel() {
       {user && <p className="settings-email">{user.email}</p>}
       <ul className="actions stacked">
         <li>
-          <button type="button" className="button large fit">Preferences</button>
+          <button type="button" className="button large fit" onClick={() => setShowPrefs(true)}>Preferences</button>
         </li>
         <li>
           <button type="button" className="button large fit settings-logout-btn" onClick={handleLogOut}>Log Out</button>
         </li>
       </ul>
+      {showPrefs && <PreferencesPopup onClose={() => setShowPrefs(false)} />}
     </div>
   );
 }
