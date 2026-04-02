@@ -27,13 +27,7 @@ async function tempreadJSON(filePath: string): Promise<newsArticle[]> {
   return Array.isArray(data) ? data : data.articles;
 }
 
-function getSourceId(article: newsArticle): string | null {
-  return article.source?.id ?? article.source_id ?? null;
-}
 
-function getSourceName(article: newsArticle): string | null {
-  return article.source?.name ?? article.source_name ?? null;
-}
 
 function resolveJsonFromFolder(folderPath: string, preferredFileName?: string): string {
   const resolvedFolder = path.resolve(folderPath);
@@ -67,6 +61,7 @@ export async function importArticlesFromJson(filePath: string): Promise<number> 
   let inserted = 0;
 
   for (const article of articles) {
+    
     const result = await pool.query(
       `INSERT INTO news_articles
         (source_id, source_name, author, title, description, url,
@@ -74,8 +69,9 @@ export async function importArticlesFromJson(filePath: string): Promise<number> 
        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
        ON CONFLICT (url) DO NOTHING`,
       [
-        getSourceId(article),
-        getSourceName(article),
+       
+        article.source_id ?? null,
+        article.source_name ?? null,
         article.author ?? "Unknown Author",
         article.title ?? null,
         article.description ?? null,
