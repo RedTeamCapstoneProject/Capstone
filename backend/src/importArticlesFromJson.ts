@@ -6,7 +6,9 @@ interface newsArticle {
   source: {
     id: string | null;
     name: string;
-  };
+  } | null;
+  source_id?: string | null;
+  source_name?: string | null;
   author: string | null;
   title: string;
   description: string;
@@ -23,6 +25,14 @@ async function tempreadJSON(filePath: string): Promise<newsArticle[]> {
   const rawData = fs.readFileSync(filePath, "utf-8");
   const data = JSON.parse(rawData);
   return Array.isArray(data) ? data : data.articles;
+}
+
+function getSourceId(article: newsArticle): string | null {
+  return article.source?.id ?? article.source_id ?? null;
+}
+
+function getSourceName(article: newsArticle): string | null {
+  return article.source?.name ?? article.source_name ?? null;
 }
 
 function resolveJsonFromFolder(folderPath: string, preferredFileName?: string): string {
@@ -64,8 +74,8 @@ export async function importArticlesFromJson(filePath: string): Promise<number> 
        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
        ON CONFLICT (url) DO NOTHING`,
       [
-        article.source?.id ?? null,
-        article.source?.name ?? null,
+        getSourceId(article),
+        getSourceName(article),
         article.author ?? "Unknown Author",
         article.title ?? null,
         article.description ?? null,
