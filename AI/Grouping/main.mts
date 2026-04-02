@@ -137,7 +137,7 @@ export async function run() {
         console.error("Error processing the data: ", error);
     }finally {
         console.log("Shutting down...");
-        //runDataImport()
+        runDataImport()
     }
 }
 
