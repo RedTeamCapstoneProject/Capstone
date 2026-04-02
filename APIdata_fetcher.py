@@ -3,13 +3,11 @@ import requests
 import json
 import os
 import logging
-import re
 from datetime import datetime
 from typing import List, Dict, Optional
 from dataclasses import dataclass
 import schedule
 import time
-from html import unescape
 from dotenv import load_dotenv
 # ============================================
 # LOGGING SETUP
@@ -64,79 +62,12 @@ class NewsFetcher:
     def __init__(self, api_key: str, output_dir: str = "outputJSONs/newsAPI"):
         self.api_key = api_key
         self.output_dir = output_dir
-        self.api_session = requests.Session()
-        self.api_session.headers.update({
+        self.session = requests.Session()
+        self.session.headers.update({
             'User-Agent': 'RedTeam-Fetcher/1.0',
-        })
-        self.web_session = requests.Session()
-        self.web_session.headers.update({
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
+            'X-Api-Key': api_key
         })
         os.makedirs(output_dir, exist_ok=True)
-
-    @staticmethod
-    def _is_truncated_newsapi_content(content: Optional[str]) -> bool:
-        if not content:
-            return True
-        return bool(re.search(r"\[\+\d+ chars\]$", content.strip()))
-
-    @staticmethod
-    def _normalize_text(text: str) -> str:
-        text = unescape(text)
-        text = re.sub(r"\s+", " ", text)
-        return text.strip()
-
-    def _extract_full_article_text(self, url: Optional[str]) -> Optional[str]:
-        if not url:
-            return None
-
-        try:
-            response = self.web_session.get(url, timeout=8)
-            response.raise_for_status()
-            html = response.text
-
-            # Remove noisy sections before parsing paragraphs.
-            html = re.sub(r"<script\b[^>]*>.*?</script>", "", html, flags=re.IGNORECASE | re.DOTALL)
-            html = re.sub(r"<style\b[^>]*>.*?</style>", "", html, flags=re.IGNORECASE | re.DOTALL)
-
-            article_blocks = re.findall(
-                r"<article\b[^>]*>(.*?)</article>",
-                html,
-                flags=re.IGNORECASE | re.DOTALL,
-            )
-            parse_target = "\n".join(article_blocks) if article_blocks else html
-
-            paragraph_html = re.findall(
-                r"<p\b[^>]*>(.*?)</p>",
-                parse_target,
-                flags=re.IGNORECASE | re.DOTALL,
-            )
-            paragraphs = []
-            for paragraph in paragraph_html:
-                cleaned = re.sub(r"<[^>]+>", " ", paragraph)
-                normalized = self._normalize_text(cleaned)
-                if len(normalized) >= 40:
-                    paragraphs.append(normalized)
-
-            if not paragraphs:
-                return None
-
-            full_text = "\n\n".join(paragraphs)
-            return full_text if len(full_text) >= 200 else None
-        except Exception:
-            return None
-
-    def _resolve_article_content(self, article: Dict) -> Optional[str]:
-        content = article.get("content")
-        if not self._is_truncated_newsapi_content(content):
-            return content
-
-        full_text = self._extract_full_article_text(article.get("url"))
-        if full_text:
-            return full_text
-
-        # Fallback so downstream steps still have useful text.
-        return content or article.get("description")
     
     def fetch_trending_news(self, target_articles: int = 500) -> List[Dict]:
         all_articles = []
@@ -153,7 +84,7 @@ class NewsFetcher:
         }
         
             try:
-                response = self.api_session.get(
+                response = self.session.get(
                     f"{self.BASE_URL}/top-headlines", 
                     params=params, 
                     timeout=15
@@ -175,10 +106,10 @@ class NewsFetcher:
                                 "url": article.get("url"),
                                 "urlToImage": article.get("urlToImage"),
                                 "publishedAt": article.get("publishedAt"),
-                                "content": self._resolve_article_content(article)
+                                "content": article.get("content")
                         })
                 
-                    logger.info(f"✅ {category}: Got {len(articles)} articles (Total: {len(all_articles)})")
+                    logger.info(f" {category}: Got {len(articles)} articles (Total: {len(all_articles)})")
                     time.sleep(1)  # Delay between categories
                 
                 else:
@@ -197,7 +128,7 @@ class NewsFetcher:
         unique_list = list(unique_articles.values())
         unique_list.sort(key=lambda x: x.get("publishedAt", ""), reverse=True)
     
-        logger.info(f"📊 Total unique articles: {len(unique_list)}")
+        logger.info(f" Total unique articles: {len(unique_list)}")
     
         return unique_list[:target_articles]  # Limit to target     
     
@@ -241,8 +172,7 @@ class NewsFetcher:
     
     def close(self):
         """Close the HTTP session"""
-        self.api_session.close()
-        self.web_session.close()
+        self.session.close()
 
 # ============================================
 # SCHEDULER FUNCTIONS
@@ -287,7 +217,7 @@ if __name__ == "__main__":
     API_KEY = os.getenv("NEWS_API_KEY")
     
     if not API_KEY:
-        print("❌ Please set NEWS_API_KEY environment variable")
+        print("Please set NEWS_API_KEY environment variable")
         print("Example: export NEWS_API_KEY=your_key_here")
         exit(1)
     

@@ -59,10 +59,8 @@ function rowCellsToNewsArticle(cells: RowAsCellObjects): NewsArticle {
 			: toStringWithFallback(publishedRaw);
 
 	return {
-		source: {
-			id: toNullableString(getCellValue(cells, "source_id")),
-			name: toStringWithFallback(getCellValue(cells, "source_name"), "Unknown Source"),
-		},
+		source_id: toNullableString(getCellValue(cells, "source_id")),
+		source_name: toStringWithFallback(getCellValue(cells, "source_name"), "Unknown Source"),
 		author: toNullableString(getCellValue(cells, "author")),
 		title: toStringWithFallback(getCellValue(cells, "title")),
 		description: toStringWithFallback(getCellValue(cells, "description")),

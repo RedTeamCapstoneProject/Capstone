@@ -1,22 +1,23 @@
 {
   "source_names": [
-    "TechRadar",
-    "MLB",
-    "ESPN"
+    "Investor's Business Daily",
+    "NPR",
+    "The Washington Post"
   ],
   "authors": [
-    "James Peckham",
-    "Brian Kenny",
-    "Jeff Passan"
+    "Unknown Author",
+    "NPR Staff",
+    "Scott Nover, Mustafa Salim"
   ],
-  "ai_title": "Shohei Ohtani Hits 60th Home Run",
-  "ai_description": "Ohtani shatters records, joining the elite 60-60 club.",
+  "ai_title": "US Exits Iran In Weeks",
+  "ai_description": "Trump claims US will leave Iran in weeks.",
   "urls": [
-    "https://techradar.com/vision-pro-vs-google-glass-neural",
-    "https://mlb.com/ohtani-goat-debate-2026",
-    "https://espn.com/mlb/ohtani-60-home-runs-2026"
+    "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-trump-iran-war-exit-oil-prices-sandisk-stock/",
+    "https://www.npr.org/2026/03/31/nx-s1-5766991/iran-war-lebanon-israel-dubai-trump-oil-europe",
+    "https://www.washingtonpost.com/world/2026/03/31/shelly-kittleson-journalist-kidnapped-baghdad/"
   ],
-  "category": "technology",
-  "topic": "Shohei Ohtanis Historic Season",
-  "summary": "Executive Summary: The world of technology and sports is witnessing significant milestones, with spatial computing evolving into neural computing and athletes pushing human performance to new heights. Shohei Ohtani has made history in MLB by achieving a 60-60 season, surpassing the feats of legendary athletes like Jordan and Brady. As tech giants like Apple and Google innovate with neural interfaces and AR-driven alternatives, the boundaries of human potential continue to expand.\n\nThree Major Highlights:\n* Shohei Ohtani becomes the first player in MLB history to record 60 home runs and 60 stolen bases in a single season, cementing his legacy at Dodger Stadium.\n* Apple's Neural Link allows users to control apps with their mind, representing a significant leap in neural computing technology.\n* Google promises a lighter, AR-driven alternative to Apple's Neural Link, potentially revolutionizing the way people interact with technology."
+  "url_to_image": "https://www.investors.com/wp-content/uploads/2025/11/Stock-Trump-GoldRoom-shut.jpg",
+  "category": "economics",
+  "topic": "Daily Brief",
+  "summary": "Executive Summary: The S is involved in a war with Iran, with President Trump stating that the US will be leaving Iran soon, and giving a two to three week timetable. The conflict has led to a kidnapped American journalist, Shelly Kittleson, in Baghdad, and has resulted in the deaths of three UN peacekeepers in Lebanon. The war has also caused a significant increase in gas prices, with the national average reaching $4 a gallon, and has led to tensions between the US and its allies, including Spain, France, and the UK.\n\n* The US is negotiating with Iran, but the Iranian government has denied that talks are happening, and the US has stated that it will not rule out using ground troops.\n* An American journalist, Shelly Kittleson, has been kidnapped in Baghdad, with Iraqi authorities reporting that they have apprehended a suspect associated with an Iran-backed Iraqi militia.\n* The conflict has led to a significant escalation of violence in the region, including the deaths of three UN peacekeepers in Lebanon and a large oil tanker being hit by Iran off the coast of Dubai."
 }
