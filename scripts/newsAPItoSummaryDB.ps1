@@ -1,9 +1,9 @@
-$ErrorActionPreference = "Stop"
-
 param(
   [switch]$SkipFetch,
   [switch]$RunOnce
 )
+
+$ErrorActionPreference = "Stop"
 
 $projectRoot = Resolve-Path (Join-Path $PSScriptRoot "..")
 Set-Location $projectRoot
@@ -42,14 +42,59 @@ function Invoke-Step {
 
 function Invoke-NewsJsonPipeline {
   Invoke-Step -Name "Run topic grouping and write outputJSONs/JSONAfterTopic/outputTestData.json" -Action {
-    npx ts-node --esm -e "import('./AI/Grouping/main.mts').then((m)=>m.run()).then(()=>process.exit(0)).catch((e)=>{console.error(e);process.exit(1);})"
+    $previousTsNodeOptions = $env:TS_NODE_COMPILER_OPTIONS
+    $previousTranspileOnly = $env:TS_NODE_TRANSPILE_ONLY
+    $runnerPath = Join-Path $projectRoot "scripts/.tmp-run-grouping.mts"
+    try {
+      $env:TS_NODE_COMPILER_OPTIONS = '{"module":"NodeNext","moduleResolution":"NodeNext","allowImportingTsExtensions":true}'
+      $env:TS_NODE_TRANSPILE_ONLY = "1"
+
+      @'
+import { run } from '../AI/Grouping/main.mts';
+
+run()
+  .then(() => process.exit(0))
+  .catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+'@ | Set-Content -Path $runnerPath -Encoding UTF8
+
+      npx ts-node --esm $runnerPath
+    }
+    finally {
+      if (Test-Path $runnerPath) {
+        Remove-Item $runnerPath -Force -ErrorAction SilentlyContinue
+      }
+      $env:TS_NODE_COMPILER_OPTIONS = $previousTsNodeOptions
+      $env:TS_NODE_TRANSPILE_ONLY = $previousTranspileOnly
+    }
+
     if ($LASTEXITCODE -ne 0) {
       throw "AI grouping step failed."
     }
   }
 
+  Invoke-Step -Name "Import grouped JSON into news_articles" -Action {
+    powershell -ExecutionPolicy Bypass -File "scripts/importArticlesFromJson.ps1"
+    if ($LASTEXITCODE -ne 0) {
+      throw "Database import step failed."
+    }
+  }
+
   Invoke-Step -Name "Summarize grouped articles from DB to outputJSONs/summarizedJSON/summarizedTopic.json" -Action {
-    npx ts-node --transpile-only backend/src/newsArticlesToSummary.ts
+    $previousTsNodeOptions = $env:TS_NODE_COMPILER_OPTIONS
+    $previousTranspileOnly = $env:TS_NODE_TRANSPILE_ONLY
+    try {
+      $env:TS_NODE_COMPILER_OPTIONS = '{"module":"NodeNext","moduleResolution":"NodeNext","allowImportingTsExtensions":true}'
+      $env:TS_NODE_TRANSPILE_ONLY = "1"
+      npx ts-node --esm backend/src/newsArticlesToSummary.ts
+    }
+    finally {
+      $env:TS_NODE_COMPILER_OPTIONS = $previousTsNodeOptions
+      $env:TS_NODE_TRANSPILE_ONLY = $previousTranspileOnly
+    }
+
     if ($LASTEXITCODE -ne 0) {
       throw "Summary generation step failed."
     }
@@ -58,7 +103,30 @@ function Invoke-NewsJsonPipeline {
 
 function Invoke-SummaryImport {
   Invoke-Step -Name "Import summarized JSON into database" -Action {
-    npx ts-node --transpile-only -e "require('./backend/src/summaryJsonToDB').summaryFolderToDB('outputJSONs/summarizedJSON','summarizedTopic.json').then(c=>{console.log('Inserted summary rows:',c);process.exit(0)}).catch(e=>{console.error(e);process.exit(1)})"
+    $runnerPath = Join-Path $projectRoot "scripts/.tmp-run-summary-import.ts"
+    try {
+      @'
+const { summaryFolderToDB } = require('../backend/src/summaryJsonToDB');
+
+summaryFolderToDB('outputJSONs/summarizedJSON', 'summarizedTopic.json')
+  .then((count: number) => {
+    console.log('Inserted summary rows:', count);
+    process.exit(0);
+  })
+  .catch((err: unknown) => {
+    console.error(err);
+    process.exit(1);
+  });
+'@ | Set-Content -Path $runnerPath -Encoding UTF8
+
+      npx ts-node --transpile-only $runnerPath
+    }
+    finally {
+      if (Test-Path $runnerPath) {
+        Remove-Item $runnerPath -Force -ErrorAction SilentlyContinue
+      }
+    }
+
     if ($LASTEXITCODE -ne 0) {
       throw "Summary DB import step failed."
     }
