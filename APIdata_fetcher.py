@@ -132,37 +132,55 @@ class NewsFetcher:
     
         return unique_list[:target_articles]  # Limit to target     
     
-    def run_fetch(self) -> Dict:
-        """Run the fetch and save to JSON"""
-        logger.info(" Running news fetch...")
-        
+    def run_fetch(self, target_articles: int = 300) -> Dict:
+        logger.info("🌙 Running news fetch...")
+    
         try:
             # Fetch trending news
-            articles = self.fetch_trending_news(target_articles=500)
+            articles = self.fetch_trending_news(target_articles=target_articles)
+        
+            if not articles:
+                return {"success": False, "error": "No articles fetched"}
+        
+        # Create output directory
+            os.makedirs(self.output_dir, exist_ok=True)
+        
+        # Save to 3 separate files (0-100, 100-200, 200-300)
+            saved_files = []
+            chunk_size = 100
+        
+            for i in range(3):  # 3 files
+                start_idx = i * chunk_size
+                end_idx = start_idx + chunk_size
+                chunk = articles[start_idx:end_idx]
             
-            # Prepare data package
-            data = {
-                "fetch_info": {
-                    "timestamp": datetime.now().isoformat(),
-                    "total_articles": len(articles)
-                },
-                "articles": articles
-            }
-            
-            # Save to JSON (always overwrites)
-            filepath = os.path.join(self.output_dir, "trending_news.json")
-            with open(filepath, 'w', encoding='utf-8') as f:
-                json.dump(data, f, indent=2, ensure_ascii=False)
-            
-            logger.info(f" Saved {len(articles)} articles to {filepath}")
-            
+                if chunk:  # Only save if there are articles
+                    data = {
+                        "fetch_info": {
+                                "timestamp": datetime.now().isoformat(),
+                                "article_range": f"{start_idx}-{end_idx}",
+                                "articles_in_file": len(chunk),
+                                "file_number": i + 1
+                    },
+                        "articles": chunk
+                }
+                
+                    filename = f"trending_news_{start_idx}_{end_idx}.json"
+                    filepath = os.path.join(self.output_dir, filename)
+
+                    with open(filepath, 'w', encoding='utf-8') as f:
+                        json.dump(data, f, indent=2, ensure_ascii=False)
+                
+                    logger.info(f"💾 File {i+1}: Saved {len(chunk)} articles to {filename}")
+                    saved_files.append(filepath)
+        
             return {
                 "success": True,
-                "filepath": filepath,
+                "files_created": saved_files,
                 "articles_count": len(articles),
-                "timestamp": data['fetch_info']['timestamp']
+                "timestamp": datetime.now().isoformat()
             }
-            
+        
         except Exception as e:
             logger.error(f"Fetch failed: {e}")
             return {
@@ -196,13 +214,13 @@ def start_midnight_scheduler(api_key: str, output_dir: str = "outputJSONs/newsAP
         time.sleep(60)  # Check every minute
 
 def manual_fetch_test(api_key: str):
-
     fetcher = NewsFetcher(api_key)
     try:
         result = fetcher.run_fetch()
-        print(f"\n Fetch complete!")
-        print(f"Articles saved: {result['articles_count']}")
-        print(f"File: {result['filepath']}")
+        print(f"Fetch complete, Articles saved: {result['articles_count']}")
+        print(f"Files created: {len(result['files_created'])}")  
+        for f in result['files_created']:
+            print(f"   - {f}")
         return result
     finally:
         fetcher.close()
