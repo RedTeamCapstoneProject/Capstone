@@ -1,22 +1,23 @@
 {
   "source_names": [
-    "TechRadar",
-    "MLB",
-    "ESPN"
+    "Investor's Business Daily",
+    "Deadline",
+    "Politico"
   ],
   "authors": [
-    "James Peckham",
-    "Brian Kenny",
-    "Jeff Passan"
+    "Unknown Author",
+    "Armando Tinoco",
+    "Josh Gerstein"
   ],
-  "ai_title": "Shohei Ohtani Hits 60th Home Run",
-  "ai_description": "Ohtani shatters records, joining the elite 60-60 club.",
+  "ai_title": "Trump To Attend Supreme Court Hearing",
+  "ai_description": "President floats visit to Supreme Court to end birthright citizenship.",
   "urls": [
-    "https://techradar.com/vision-pro-vs-google-glass-neural",
-    "https://mlb.com/ohtani-goat-debate-2026",
-    "https://espn.com/mlb/ohtani-60-home-runs-2026"
+    "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-trump-iran-war-exit-oil-prices-sandisk-stock/",
+    "http://deadline.com/2026/03/summer-house-amanda-batula-west-wilson-bombshell-bravo-1236770425/",
+    "https://www.politico.com/news/2026/03/31/donald-trump-supreme-court-birthright-arguments-00853581"
   ],
-  "category": "technology",
-  "topic": "Shohei Ohtanis Historic Season",
-  "summary": "Executive Summary: The world of technology and sports is witnessing significant milestones, with spatial computing evolving into neural computing and athletes pushing human performance to new heights. Shohei Ohtani has made history in MLB by achieving a 60-60 season, surpassing the feats of legendary athletes like Jordan and Brady. As tech giants like Apple and Google innovate with neural interfaces and AR-driven alternatives, the boundaries of human potential continue to expand.\n\nThree Major Highlights:\n* Shohei Ohtani becomes the first player in MLB history to record 60 home runs and 60 stolen bases in a single season, cementing his legacy at Dodger Stadium.\n* Apple's Neural Link allows users to control apps with their mind, representing a significant leap in neural computing technology.\n* Google promises a lighter, AR-driven alternative to Apple's Neural Link, potentially revolutionizing the way people interact with technology."
+  "url_to_image": "https://www.investors.com/wp-content/uploads/2025/11/Stock-Trump-GoldRoom-shut.jpg",
+  "category": "economics",
+  "topic": "Trumps Birthright Citizenship Stance",
+  "summary": "The President of the United States has expressed interest in attending arguments at the Supreme Court regarding birthright citizenship. A White House spokesperson referred to the President's previous comments when asked about his plans. The Supreme Court has not immediately responded to requests for comment on the matter. Birthright citizenship refers to the automatic granting of citizenship to individuals born on U.S. soil. The President has previously suggested ending automatic citizenship for those born in the U.S. The Supreme Court's decision on this matter could have significant implications for U.S. immigration law. The case in question involves the interpretation of the 14th Amendment to the U.S. Constitution, which guarantees citizenship to all persons born or naturalized in the United States.\n\n* The President's potential attendance at the Supreme Court arguments could draw attention to the issue of birthright citizenship and its potential impact on U.S. immigration law.\n* The Supreme Court's decision on birthright citizenship could affect the lives of millions of people born in the United States to non-citizen parents.\n* The case has significant implications for the interpretation of the 14th Amendment to the U.S. Constitution, which has been in effect since 1868."
 }

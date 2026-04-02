@@ -1,8 +1,8 @@
 CREATE TABLE IF NOT EXISTS news_articles (
     id BIGSERIAL PRIMARY KEY,
-    source_id VARCHAR(255),
-    source_name VARCHAR(255),
-    author VARCHAR(255),
+    source_id TEXT,
+    source_name TEXT,
+    author TEXT,
     title TEXT,
     description TEXT,
     url TEXT UNIQUE,

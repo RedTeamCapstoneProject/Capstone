@@ -8,10 +8,9 @@ import { exec } from 'child_process';
 //this is how the news articles are formated with category and topic as an object
 //often used in an array like this: newsArticle[]
 export interface newsArticle{
-   source: {
-        id: string | null;
-        name: string;
-    };
+   
+    source_id: string | null;
+    source_name: string;
     author: string | null;
     title: string;
     description: string;

@@ -1,6 +1,7 @@
 import { writeFile } from "fs";
 import { type newsArticle, callAI, readJSON, tempreadJSON } from "../AIExportedFunctions/exportedFunctions.mts";
 import fs from 'fs';
+import { title } from "process";
 
 /*
 function quickWrite(content: string) {
@@ -56,7 +57,7 @@ export async function summaryManager(articleObjArray: newsArticle[]){
     }
 
 
-    var summarizedContent:string= await summarizeContent(contentArray)
+    var summarizedContent:string= await summarizeContent(contentArray,descriptionArray,titleArray)
     var summarizedDescription:string = await summarizeDescription(descriptionArray)
     var summarizedTitle:string = await summarizeTitle(titleArray)
     var completedObject = await constructJSON(articleObjArray,summarizedContent,summarizedDescription,summarizedTitle)
@@ -68,22 +69,48 @@ export async function summaryManager(articleObjArray: newsArticle[]){
 //takes the content from all articles in an array as parameter 
 // pass the whole array for the ai to check out and respond with summary
 // returns a string response
-async function summarizeContent(contentArray: Array<string>){
-   const sysPrompt = `
+async function summarizeContent(contentArray: Array<string>,descriptionArray: Array<string>,titleArray: Array<string>){
+   /*
+    const sysPrompt = `
         You are a concise news editor. 
 
         INPUT DATA: ${JSON.stringify(contentArray)}
 
         TASK:
-        1. Write a single, 3-sentence "Executive Summary" paragraph.
+        1. Write a single, 7-sentence "Executive Summary" paragraph.
         2. Provide a SINGLE bulleted list titled "Three Major Highlights".
         3. ONLY provide 3 bullets total for the entire topic.
+        4. if there are key terms then explain them in a easy to understand way. 
+        5. if there are major details missing, fill them in.
 
         STRICT RULES:
         - Do NOT repeat the "Key Takeaways" header.
         - Do NOT provide a separate list for each article.
         - Combine all information into ONE unified response.
         `;
+        */
+       const sysPrompt =`
+           
+            You are a Senior Research Editor. Your goal is to create a definitive brief by synthesizing the provided Input Data with verified real-world facts to ensure technical and historical accuracy.
+
+            **TASK:**
+            1. **Executive Summary:** Write exactly one paragraph of seven sentences. You must use the provided data but cross-reference it with your internal knowledge to fill in missing "Who, What, Where, and Why" details. If any terms are complex or specific, define them clearly within the narrative flow.
+            2. **Three Major Highlights:** Provide a single bulleted list of exactly three points. These must represent the most critical legal, social, or financial implications of the topic.
+            3. **Neutrality & Fact-Correction:** Remove any biased or "loaded" language found in the input data (e.g., replace "performative antics" with "legal challenge"). Ensure all dates, names, and legal claims are factually accurate for the current year (2026).
+            4. this summary should include only explicitly stated facts, removing all speculation, general explanations, and filler, while making it concise and clear in 7 sentences.”
+            
+            **STRICT RULES:**
+            - Do NOT use the header "Key Takeaways."
+            - Do NOT separate the response by article or source. 
+            - Provide ONE unified, professional response.
+            - Strictly adhere to the 7-sentence summary and 3-bullet highlight constraints.
+            - dont analyize just keep it to strict facts 
+
+            **INPUT DATA:**
+            contents: ${JSON.stringify(contentArray)}
+            descriptions: ${JSON.stringify(descriptionArray)}
+            titles: ${JSON.stringify(titleArray)}
+            `
 
     var response = await callAI(sysPrompt)
     
@@ -155,7 +182,7 @@ async function constructJSON(articleObjArray:newsArticle[],summarizedContent:str
     
     
     for(const article of articleObjArray){
-        article_sources.push(article.source.name)
+        article_sources.push(article.source_name)
         authors.push(article.author ?? "Unknown Author")
         urls.push(article.url)
 
