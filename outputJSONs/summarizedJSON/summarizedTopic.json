@@ -1,23 +1,50 @@
 {
   "source_names": [
-    "Investor's Business Daily",
-    "Deadline",
-    "Politico"
+    "The Washington Post",
+    "ScienceAlert",
+    "SciTechDaily",
+    "ScienceAlert",
+    "Umn.edu",
+    "ZME Science",
+    "cleveland.com",
+    "Moneytalksnews.com",
+    "Neurosciencenews.com",
+    "Gizmodo.com",
+    "OregonLive",
+    "Business Insider"
   ],
   "authors": [
+    "Kathleen Felton",
+    "David Nield",
     "Unknown Author",
-    "Armando Tinoco",
-    "Josh Gerstein"
+    "David Nield",
+    "Unknown Author",
+    "Phil Starks, Lilia Goncharova",
+    "Julie Washington, cleveland.com",
+    "Stacy Johnson CPA",
+    "Neuroscience News",
+    "Ed Cara",
+    "Kristine de Leon | The Oregonian/OregonLive",
+    "Kim Schewitz"
   ],
-  "ai_title": "Trump To Attend Supreme Court Hearing",
-  "ai_description": "President floats visit to Supreme Court to end birthright citizenship.",
+  "ai_title": "Health Advances And Warning Signs Emerge",
+  "ai_description": "Measles shatters immune memory, leaving survivors vulnerable for years.",
   "urls": [
-    "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-trump-iran-war-exit-oil-prices-sandisk-stock/",
-    "http://deadline.com/2026/03/summer-house-amanda-batula-west-wilson-bombshell-bravo-1236770425/",
-    "https://www.politico.com/news/2026/03/31/donald-trump-supreme-court-birthright-arguments-00853581"
+    "https://www.washingtonpost.com/wellness/2026/04/01/allergy-symptom-prevention/",
+    "https://www.sciencealert.com/us-cardiologists-have-just-published-new-guidelines-for-managing-cholesterol",
+    "https://scitechdaily.com/?p=514915",
+    "https://www.sciencealert.com/giant-study-reveals-why-some-viruses-hide-inside-your-body-for-life",
+    "https://www.cidrap.umn.edu/covid-19/more-people-requesting-unvaccinated-blood-themselves-or-their-children",
+    "https://www.zmescience.com/science/news-science/the-appendix-has-evolved-dozens-of-times-scientists-are-finally-figuring-out-why/",
+    "https://www.cleveland.com/news/2026/03/what-really-happens-to-your-weight-after-stopping-ozempic-cleveland-clinic-study-offers-answers.html",
+    "https://www.moneytalksnews.com/a-new-stanford-study-ties-this-routine-shot-to-a-lower-dementia-risk/",
+    "https://neurosciencenews.com/ai-blood-test-multiple-dementias-30427/",
+    "https://gizmodo.com/vaping-comes-with-a-cancer-risk-review-finds-2000740275",
+    "https://www.oregonlive.com/health/2026/03/measles-is-back-and-more-dangerous-than-most-people-realize-heres-why-doctors-are-worried.html",
+    "https://www.businessinsider.com/snacks-nutrition-scientist-eats-boost-heart-health-2026-3"
   ],
-  "url_to_image": "https://www.investors.com/wp-content/uploads/2025/11/Stock-Trump-GoldRoom-shut.jpg",
-  "category": "economics",
-  "topic": "Trumps Birthright Citizenship Stance",
-  "summary": "The President of the United States has expressed interest in attending arguments at the Supreme Court regarding birthright citizenship. A White House spokesperson referred to the President's previous comments when asked about his plans. The Supreme Court has not immediately responded to requests for comment on the matter. Birthright citizenship refers to the automatic granting of citizenship to individuals born on U.S. soil. The President has previously suggested ending automatic citizenship for those born in the U.S. The Supreme Court's decision on this matter could have significant implications for U.S. immigration law. The case in question involves the interpretation of the 14th Amendment to the U.S. Constitution, which guarantees citizenship to all persons born or naturalized in the United States.\n\n* The President's potential attendance at the Supreme Court arguments could draw attention to the issue of birthright citizenship and its potential impact on U.S. immigration law.\n* The Supreme Court's decision on birthright citizenship could affect the lives of millions of people born in the United States to non-citizen parents.\n* The case has significant implications for the interpretation of the 14th Amendment to the U.S. Constitution, which has been in effect since 1868."
+  "url_to_image": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://cloudfront-us-east-1.images.arcpublishing.com/wapo/B3NHZT6AR6XWNLJBRT5QAYRDWE.jpg&w=1440",
+  "category": "health",
+  "topic": "US Cardiologists Have Just Published New Guidelines For Managing Cholesterol",
+  "summary": "According to recent research, approximately 82 million Americans suffer from seasonal allergic rhinitis, also known as hay fever. Leading US cardiologists have published new guidelines for managing high cholesterol to reduce the risk of heart problems and strokes. Cooking meals at home may be linked to a lower risk of dementia in older adults. A study found that even healthy individuals can carry viruses in their bodies, which may eventually manifest as disease. Researchers have discovered that the appendix has independently evolved at least 32 times across 361 mammalian species. New findings suggest that a common vaccine can slash dementia risk by 20%. The American Heart Association and other medical organizations continue to monitor and provide guidance on various health topics, including the risks associated with vaping and the importance of vaccination.\n\n* The risk of dementia may be reduced by 30% through regular cooking at home, as reported in a recent study.\n* Vaping has been found to be almost certainly carcinogenic, according to a review published by scientists in Australia.\n* Measles is one of the world's most contagious viruses, and a small drop in vaccination rates can be particularly dangerous, as stated by doctors and medical experts."
 }
