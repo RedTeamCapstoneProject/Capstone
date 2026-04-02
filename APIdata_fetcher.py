@@ -109,7 +109,7 @@ class NewsFetcher:
                                 "content": article.get("content")
                         })
                 
-                    logger.info(f" {category}: Got {len(articles)} articles (Total: {len(all_articles)})")
+                    logger.info(f"✅ {category}: Got {len(articles)} articles (Total: {len(all_articles)})")
                     time.sleep(1)  # Delay between categories
                 
                 else:
@@ -128,7 +128,7 @@ class NewsFetcher:
         unique_list = list(unique_articles.values())
         unique_list.sort(key=lambda x: x.get("publishedAt", ""), reverse=True)
     
-        logger.info(f" Total unique articles: {len(unique_list)}")
+        logger.info(f"📊 Total unique articles: {len(unique_list)}")
     
         return unique_list[:target_articles]  # Limit to target     
     
@@ -217,7 +217,7 @@ if __name__ == "__main__":
     API_KEY = os.getenv("NEWS_API_KEY")
     
     if not API_KEY:
-        print("Please set NEWS_API_KEY environment variable")
+        print("❌ Please set NEWS_API_KEY environment variable")
         print("Example: export NEWS_API_KEY=your_key_here")
         exit(1)
     
