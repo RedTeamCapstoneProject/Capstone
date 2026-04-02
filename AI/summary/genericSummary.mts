@@ -155,7 +155,7 @@ async function constructJSON(articleObjArray:newsArticle[],summarizedContent:str
     
     
     for(const article of articleObjArray){
-        article_sources.push(article.source.name)
+        article_sources.push(article.source_name)
         authors.push(article.author ?? "Unknown Author")
         urls.push(article.url)
 
