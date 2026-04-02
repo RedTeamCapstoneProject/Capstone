@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import pool from "./database";
 
-<<<<<<< HEAD
 interface newsArticle {
   source: {
     id: string | null;
@@ -19,20 +18,6 @@ interface newsArticle {
   content: string;
   category?: string | null;
   topic?: string | null;
-=======
- interface newsArticle{
-    source_id: string | null;
-    source_name: string;
-    author: string | null;
-    title: string;
-    description: string;
-    url: string;
-    urlToImage: string | null;
-    publishedAt: string;
-    content: string;
-    category?: string; 
-    topic?: string;    
->>>>>>> 1443e2b304dd08d8fa0a7697fb8adee19af3cca6
 }
 
 
@@ -89,13 +74,8 @@ export async function importArticlesFromJson(filePath: string): Promise<number> 
        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
        ON CONFLICT (url) DO NOTHING`,
       [
-<<<<<<< HEAD
         getSourceId(article),
         getSourceName(article),
-=======
-        article.source_id ?? null,
-        article.source_name ?? null,
->>>>>>> 1443e2b304dd08d8fa0a7697fb8adee19af3cca6
         article.author ?? "Unknown Author",
         article.title ?? null,
         article.description ?? null,
