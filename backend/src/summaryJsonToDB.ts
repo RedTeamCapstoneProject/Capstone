@@ -20,6 +20,7 @@ watcher.on('change', async (filePath) => {
     console.log(`\n change detected in ${path.basename(filePath)}`);
     try {
         const inserted = await summaryJsonToDB(filePath);
+        console.log("added summary to DB")
     } catch (err) {
         console.error("Error :", err);
     }
