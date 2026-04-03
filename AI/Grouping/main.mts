@@ -5,29 +5,44 @@ import { exec } from 'child_process';
 import { fileURLToPath } from 'url';
 import * as fs from 'fs';
 import chokidar from 'chokidar';
+import cron from 'node-cron';
+import Fs from 'node:fs/promises';
 
-const targetFile = path.resolve('outputJSONs/newsAPI/trending_news.json');
 
-console.log(`checking for stuff at: ${targetFile}`);
-
-const watcher = chokidar.watch(targetFile, {
-    persistent: true,
-    ignoreInitial: true, //only run on new changes
-    awaitWriteFinish: {
-        stabilityThreshold: 10000, // wait 10 seconds after the last change to ensure file is closed/done 
-        pollInterval: 100
-    }
-});
-
-watcher.on('change', async (filePath) => {
-    console.log(`\n change detected in ${path.basename(filePath)}`);
+//wait for 12:10 to read 0_100
+cron.schedule('10 0 * * *', async () => {
+    console.log('It is 12:10! Starting the fetch and summary...');
     try {
-        console.log("running main.mts");
-        run();
+        await run("12:10");
+        console.log(' 12:10 task complete.');
     } catch (err) {
-        console.error("Error :", err);
+        console.log('12:10 task failed:', err);
     }
 });
+
+//wait for 3:00am to read 100_200
+cron.schedule('0 3 * * *', async () => {
+    console.log('It is 3:00! Starting the fetch and summary...');
+    try {
+        await run("3:00");
+        console.log(' 3:00 task complete.');
+    } catch (err) {
+        console.log('3:00 task failed:', err);
+    }
+});
+
+//wait for 5am to read 200_300 and delete the files to reset
+cron.schedule('0 5 * * *', async () => {
+    console.log('It is 5:00! Starting the fetch and summary...');
+    try {
+        await run("5:00");
+        console.log(' 5:00 task complete.');
+    } catch (err) {
+        console.log('5:00 task failed:', err);
+    }
+});
+
+console.log('Scheduler is running. Standing by for 12:10, 3:00, and 5:00');
 
 
 
@@ -80,6 +95,8 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
     
    // console.log(`\n working on: ${articles}`); 
     const articlesString = JSON.stringify(categoryArticleArray);
+    
+    /*
     const systemPrompt = `You are an expert News Editor at an AI-first news platform. 
         Your goal is to perform "Story Clustering" on this batch of news articles ${articlesString}.
 
@@ -99,6 +116,26 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
         - Autonomous Construction: The $1.75B Robotics Boom
         - Enphase & Vermont’s Virtual Power Plant Expansion
         - Cam Ward's Path to the Hall of Fame`;
+    */
+    
+    const systemPrompt = `
+        ### ROLE
+        You are a Senior Data Architect specializing in "Semantic Story Clustering."
+
+        ### INPUT DATA
+        Batch of news articles: ${articlesString}
+
+        ### TASK
+        1. Group these articles into distinct, granular "Story Clusters."
+        2. STRENGTH RULE: A cluster should only be created if at least 2-3 articles share the same specific event or development.
+        3. GRANULARITY RULE: Do not use broad categories (e.g., "Sports"). Use specific event titles (e.g., "Ohtani's 60-60 Milestone").
+        4. RESIDUAL RULE: Any article that is a unique, standalone story should be grouped into "Global Daily Brief."
+
+        ### OUTPUT FORMAT
+        - Return ONLY a comma-separated list of the generated Story Titles.
+        - Example: Title A, Title B, Title C
+        - NO numbering, NO intro text, NO periods.
+        `;
 
     var topics = await callAI(systemPrompt);
     console.log(topics)
@@ -106,6 +143,8 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
 
     //create an array of promises. execute all promises till all are done then return them all at once
     const assigningTopics = categoryArticleArray.map(async (article)=>{
+       
+        /*
         const systemPrompt2 = ` ### INSTRUCTION
             You are a classification engine. Your task is to match the provided News Article to EXACTLY ONE topic from the provided list.
             ### TOPIC LIST
@@ -117,6 +156,29 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
             - If no topic fits perfectly, choose "General" or the closest match.
             - Respond with ONLY the name of the topic. 
             - Do NOT include a period, quotes, or any introductory text like "The topic is...".`
+            */
+       
+       const systemPrompt2 = `
+            ### MISSION
+            Act as a strict Classification Engine. Assign the provided article to EXACTLY ONE topic from the allowed list.
+
+            ### ALLOWED TOPICS
+            [ ${topics} ]
+
+            ### ARTICLE TO CLASSIFY
+            Content: ${article.content}
+            Title: ${article.title}
+
+            ### MANDATORY RULES
+            1. You MUST choose a topic from the "ALLOWED TOPICS" list above.
+            2. If no topic fits, you MUST return "Global Daily Brief".
+            3. OUTPUT: Return the TOPIC NAME ONLY. 
+            4. DO NOT include punctuation, explanations, or quotes.
+
+            ### EXAMPLE OUTPUT
+            Apple's Neural Link Breakthrough
+            `;
+       
         const assignedTopic = await callAI(systemPrompt2) 
         article.topic = assignedTopic?.trim().replace(/['"]+/g, '');
     });
@@ -125,19 +187,45 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
 }
 
 
-
-export async function run() {
+// handels calling all the functions.
+//if 12:20 only read 0-100 
+//if 3:00 only read 100-200
+//if 5:00 only read 200-300 and delete files to reset 
+//call runDataImport to store the topicJSON after each run
+export async function run(time:string) {
     try {
-        var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news.json")
-        var categoryArticleArray = await categorizeNews(originalArticleArray)
-        var completedArray = await determineTopics(categoryArticleArray)
-        await writeToJSON(completedArray)
-        console.log("articles written succesfully")
+        if (time == "12:10"){
+            var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_0_100.json")
+            var categoryArticleArray = await categorizeNews(originalArticleArray)
+            var completedArray = await determineTopics(categoryArticleArray)
+            await writeToJSON(completedArray)
+            console.log("articles written succesfully")
+        } else if(time == "3:00"){
+            var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_100_200.json")
+            var categoryArticleArray = await categorizeNews(originalArticleArray)
+            var completedArray = await determineTopics(categoryArticleArray)
+            await writeToJSON(completedArray)
+            console.log("articles written succesfully")
+        }else if(time == "5:00"){
+            var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_200_300.json")
+            var categoryArticleArray = await categorizeNews(originalArticleArray)
+            var completedArray = await determineTopics(categoryArticleArray)
+            await writeToJSON(completedArray)
+            console.log("articles written succesfully")
+            console.log("deleting the jsons to reset...")
+            await Fs.unlink('outputJSONs/newsAPI/trending_news_0_100.json');
+            await Fs.unlink('outputJSONs/newsAPI/trending_news_100_200.json');
+            await Fs.unlink('outputJSONs/newsAPI/trending_news_200_300.json');
+           
+        }else{
+            console.log("there was an error with fetching based on time")
+        }
+
     } catch(error){
         console.error("Error processing the data: ", error);
     }finally {
-        console.log("Shutting down...");
-        runDataImport()
+        console.log("finished running Main.mts. resuming listening till 12:10, 3:00, and 5:00");
+        //runDataImport()
     }
 }
 

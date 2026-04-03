@@ -9,6 +9,7 @@ from dataclasses import dataclass
 import schedule
 import time
 from dotenv import load_dotenv
+
 # ============================================
 # LOGGING SETUP
 # ============================================
