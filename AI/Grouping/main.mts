@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 import * as fs from 'fs';
 import chokidar from 'chokidar';
 
-const targetFile = path.resolve('outputJSONs/newsAPI/trending_news.json');
+const targetFile = path.resolve('outputJSONs/newsAPI/trending_news_0_100.json.json');
 
 console.log(`checking for stuff at: ${targetFile}`);
 
@@ -128,7 +128,7 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
 
 export async function run() {
     try {
-        var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news.json")
+        var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_0_100.json")
         var categoryArticleArray = await categorizeNews(originalArticleArray)
         var completedArray = await determineTopics(categoryArticleArray)
         await writeToJSON(completedArray)
