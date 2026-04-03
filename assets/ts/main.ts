@@ -2,7 +2,42 @@ import jQuery from "jquery";
 import breakpoints from "./breakpoints";
 import "./util"; // Load jQuery plugins
 
+type SummaryItem = {
+  ai_title: string | null;
+  ai_description: string | null;
+  summary: string;
+};
+
+async function hydrateSummaryPosts(): Promise<void> {
+  const posts = Array.from(document.querySelectorAll<HTMLElement>("#main article.post"));
+  if (posts.length === 0) return;
+
+  try {
+    const response = await fetch(`/api/summaries?limit=${posts.length}`);
+    if (!response.ok) return;
+
+    const payload = (await response.json()) as { data?: SummaryItem[] };
+    const summaries = payload.data ?? [];
+
+    summaries.slice(0, posts.length).forEach((item, index) => {
+      const post = posts[index];
+      const title = item.ai_title?.trim() || "Untitled Summary";
+      const description = item.ai_description?.trim() || "No description available.";
+
+      const headingLink = post.querySelector<HTMLAnchorElement>("header .title h2 a");
+      if (headingLink) headingLink.textContent = title;
+
+      const headerDescription = post.querySelector<HTMLParagraphElement>("header .title p");
+      if (headerDescription) headerDescription.textContent = description;
+    });
+  } catch {
+    // Keep static fallback content if API request fails.
+  }
+}
+
 (function ($: JQueryStatic) {
+  void hydrateSummaryPosts();
+
   const $window = $(window);
   const $body = $("body");
   const $menu = $("#menu");
