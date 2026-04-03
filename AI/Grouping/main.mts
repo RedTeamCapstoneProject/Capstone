@@ -9,6 +9,7 @@ import cron from 'node-cron';
 import Fs from 'node:fs/promises';
 
 
+/*
 //wait for 12:10 to read 0_100
 cron.schedule('10 0 * * *', async () => {
     console.log('It is 12:10! Starting the fetch and summary...');
@@ -43,7 +44,7 @@ cron.schedule('0 5 * * *', async () => {
 });
 
 console.log('Scheduler is running. Standing by for 12:10, 3:00, and 5:00');
-
+*/
 
 
 //runs the powershell script to get data in DB
@@ -194,6 +195,12 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
 //call runDataImport to store the topicJSON after each run
 export async function run(time:string) {
     try {
+        var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_0_100.json")
+        // var categoryArticleArray = await categorizeNews(originalArticleArray)
+        var completedArray = await determineTopics(originalArticleArray)
+        await writeToJSON(completedArray)
+        console.log("articles written succesfully")
+        
         if (time == "12:10"){
             var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_0_100.json")
            // var categoryArticleArray = await categorizeNews(originalArticleArray)
