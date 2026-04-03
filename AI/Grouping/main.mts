@@ -95,6 +95,8 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
     
    // console.log(`\n working on: ${articles}`); 
     const articlesString = JSON.stringify(categoryArticleArray);
+    
+    /*
     const systemPrompt = `You are an expert News Editor at an AI-first news platform. 
         Your goal is to perform "Story Clustering" on this batch of news articles ${articlesString}.
 
@@ -114,6 +116,26 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
         - Autonomous Construction: The $1.75B Robotics Boom
         - Enphase & Vermont’s Virtual Power Plant Expansion
         - Cam Ward's Path to the Hall of Fame`;
+    */
+    
+    const systemPrompt = `
+        ### ROLE
+        You are a Senior Data Architect specializing in "Semantic Story Clustering."
+
+        ### INPUT DATA
+        Batch of news articles: ${articlesString}
+
+        ### TASK
+        1. Group these articles into distinct, granular "Story Clusters."
+        2. STRENGTH RULE: A cluster should only be created if at least 2-3 articles share the same specific event or development.
+        3. GRANULARITY RULE: Do not use broad categories (e.g., "Sports"). Use specific event titles (e.g., "Ohtani's 60-60 Milestone").
+        4. RESIDUAL RULE: Any article that is a unique, standalone story should be grouped into "Global Daily Brief."
+
+        ### OUTPUT FORMAT
+        - Return ONLY a comma-separated list of the generated Story Titles.
+        - Example: Title A, Title B, Title C
+        - NO numbering, NO intro text, NO periods.
+        `;
 
     var topics = await callAI(systemPrompt);
     console.log(topics)
@@ -121,6 +143,8 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
 
     //create an array of promises. execute all promises till all are done then return them all at once
     const assigningTopics = categoryArticleArray.map(async (article)=>{
+       
+        /*
         const systemPrompt2 = ` ### INSTRUCTION
             You are a classification engine. Your task is to match the provided News Article to EXACTLY ONE topic from the provided list.
             ### TOPIC LIST
@@ -132,6 +156,29 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
             - If no topic fits perfectly, choose "General" or the closest match.
             - Respond with ONLY the name of the topic. 
             - Do NOT include a period, quotes, or any introductory text like "The topic is...".`
+            */
+       
+       const systemPrompt2 = `
+            ### MISSION
+            Act as a strict Classification Engine. Assign the provided article to EXACTLY ONE topic from the allowed list.
+
+            ### ALLOWED TOPICS
+            [ ${topics} ]
+
+            ### ARTICLE TO CLASSIFY
+            Content: ${article.content}
+            Title: ${article.title}
+
+            ### MANDATORY RULES
+            1. You MUST choose a topic from the "ALLOWED TOPICS" list above.
+            2. If no topic fits, you MUST return "Global Daily Brief".
+            3. OUTPUT: Return the TOPIC NAME ONLY. 
+            4. DO NOT include punctuation, explanations, or quotes.
+
+            ### EXAMPLE OUTPUT
+            Apple's Neural Link Breakthrough
+            `;
+       
         const assignedTopic = await callAI(systemPrompt2) 
         article.topic = assignedTopic?.trim().replace(/['"]+/g, '');
     });
