@@ -145,7 +145,7 @@ export async function fetchNewsArticlesAndSummarize(): Promise<{
 		if (!byTopic.has(topic)) byTopic.set(topic, []);
 		byTopic.get(topic)!.push(article);
 	}
-
+	console.log("there are: ", byTopic.size, "topics that need to be summarized" )
 	// Call summaryManager once per qualifying topic group.
 	const summaryManager = await importSummaryManager();
 	for (const [topic, articles] of byTopic) {

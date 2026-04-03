@@ -196,20 +196,20 @@ export async function run(time:string) {
     try {
         if (time == "12:10"){
             var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_0_100.json")
-            var categoryArticleArray = await categorizeNews(originalArticleArray)
-            var completedArray = await determineTopics(categoryArticleArray)
+           // var categoryArticleArray = await categorizeNews(originalArticleArray)
+            var completedArray = await determineTopics(originalArticleArray)
             await writeToJSON(completedArray)
             console.log("articles written succesfully")
         } else if(time == "3:00"){
             var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_100_200.json")
-            var categoryArticleArray = await categorizeNews(originalArticleArray)
-            var completedArray = await determineTopics(categoryArticleArray)
+            //var categoryArticleArray = await categorizeNews(originalArticleArray)
+            var completedArray = await determineTopics(originalArticleArray)
             await writeToJSON(completedArray)
             console.log("articles written succesfully")
         }else if(time == "5:00"){
             var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_200_300.json")
-            var categoryArticleArray = await categorizeNews(originalArticleArray)
-            var completedArray = await determineTopics(categoryArticleArray)
+            //var categoryArticleArray = await categorizeNews(originalArticleArray)
+            var completedArray = await determineTopics(originalArticleArray)
             await writeToJSON(completedArray)
             console.log("articles written succesfully")
             console.log("deleting the jsons to reset...")
@@ -225,7 +225,7 @@ export async function run(time:string) {
         console.error("Error processing the data: ", error);
     }finally {
         console.log("finished running Main.mts. resuming listening till 12:10, 3:00, and 5:00");
-        //runDataImport()
+        runDataImport()
     }
 }
 

@@ -30,7 +30,6 @@ config({ path: envPath });
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
 
-
 if (!GROQ_API_KEY) {
     throw new Error(`Missing geminiAPI in .env file. path: ${envPath}`);
 }
@@ -73,6 +72,7 @@ export async function readJSON(path:string): Promise<newsArticle[]>{
     return originalArticleArray
 }
 
+
 //write an array of articles with category and topic to a output.json
 export async function writeToJSON(completedArray: newsArticle[]){
     const withTopic = completedArray.filter(a => a.topic).length;
@@ -80,7 +80,6 @@ export async function writeToJSON(completedArray: newsArticle[]){
     console.log(`Articles with Topics: ${withTopic}`);
     fs.writeFileSync('outputJSONs/JSONAfterTopic/outputTestData.json', JSON.stringify(completedArray, null, 2), 'utf-8');
 }
-
 
 
 //just a temp read function for testing 
@@ -104,5 +103,3 @@ export async function tempreadJSON(path: string): Promise<newsArticle[]> {
         return []; 
     }
 }
-
-
