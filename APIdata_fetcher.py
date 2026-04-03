@@ -110,7 +110,7 @@ class NewsFetcher:
                                 "url": article.get("url"),
                                 "urlToImage": article.get("urlToImage"),
                                 "publishedAt": article.get("publishedAt"),
-                                "content": article.get("content")
+                                "content": article.get("content"),
                                 "category": category 
                         })
                 
@@ -138,7 +138,7 @@ class NewsFetcher:
         return unique_list[:target_articles]  # Limit to target     
     
     def run_fetch(self, target_articles: int = 300) -> Dict:
-        logger.info("🌙 Running news fetch...")
+        logger.info(" Running news fetch...")
     
         try:
             # Fetch trending news
@@ -176,7 +176,7 @@ class NewsFetcher:
                     with open(filepath, 'w', encoding='utf-8') as f:
                         json.dump(data, f, indent=2, ensure_ascii=False)
                 
-                    logger.info(f"💾 File {i+1}: Saved {len(chunk)} articles to {filename}")
+                    logger.info(f" File {i+1}: Saved {len(chunk)} articles to {filename}")
                     saved_files.append(filepath)
         
             return {
