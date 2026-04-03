@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import authRoutes from "./routes/auth";
-import summariesRoutes from "./routes/summaries";
+import summariesRoutes from "./routes/summariesController";
 
 const app = express();
 const PORT = 3001;
