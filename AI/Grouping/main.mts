@@ -5,29 +5,44 @@ import { exec } from 'child_process';
 import { fileURLToPath } from 'url';
 import * as fs from 'fs';
 import chokidar from 'chokidar';
+import cron from 'node-cron';
+import Fs from 'node:fs/promises';
 
-const targetFile = path.resolve('outputJSONs/newsAPI/trending_news_0_100.json.json');
 
-console.log(`checking for stuff at: ${targetFile}`);
-
-const watcher = chokidar.watch(targetFile, {
-    persistent: true,
-    ignoreInitial: true, //only run on new changes
-    awaitWriteFinish: {
-        stabilityThreshold: 10000, // wait 10 seconds after the last change to ensure file is closed/done 
-        pollInterval: 100
-    }
-});
-
-watcher.on('change', async (filePath) => {
-    console.log(`\n change detected in ${path.basename(filePath)}`);
+//wait for 12:10 to read 0_100
+cron.schedule('10 0 * * *', async () => {
+    console.log('It is 12:10! Starting the fetch and summary...');
     try {
-        console.log("running main.mts");
-        run();
+        await run("12:10");
+        console.log(' 12:10 task complete.');
     } catch (err) {
-        console.error("Error :", err);
+        console.log('12:10 task failed:', err);
     }
 });
+
+//wait for 3:00am to read 100_200
+cron.schedule('0 3 * * *', async () => {
+    console.log('It is 3:00! Starting the fetch and summary...');
+    try {
+        await run("3:00");
+        console.log(' 3:00 task complete.');
+    } catch (err) {
+        console.log('3:00 task failed:', err);
+    }
+});
+
+//wait for 5am to read 200_300 and delete the files to reset
+cron.schedule('0 5 * * *', async () => {
+    console.log('It is 5:00! Starting the fetch and summary...');
+    try {
+        await run("5:00");
+        console.log(' 5:00 task complete.');
+    } catch (err) {
+        console.log('5:00 task failed:', err);
+    }
+});
+
+console.log('Scheduler is running. Standing by for 12:10, 3:00, and 5:00');
 
 
 
@@ -125,19 +140,45 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
 }
 
 
-
-export async function run() {
+// handels calling all the functions.
+//if 12:20 only read 0-100 
+//if 3:00 only read 100-200
+//if 5:00 only read 200-300 and delete files to reset 
+//call runDataImport to store the topicJSON after each run
+export async function run(time:string) {
     try {
-        var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_0_100.json")
-        var categoryArticleArray = await categorizeNews(originalArticleArray)
-        var completedArray = await determineTopics(categoryArticleArray)
-        await writeToJSON(completedArray)
-        console.log("articles written succesfully")
+        if (time == "12:10"){
+            var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_0_100.json")
+            var categoryArticleArray = await categorizeNews(originalArticleArray)
+            var completedArray = await determineTopics(categoryArticleArray)
+            await writeToJSON(completedArray)
+            console.log("articles written succesfully")
+        } else if(time == "3:00"){
+            var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_100_200.json")
+            var categoryArticleArray = await categorizeNews(originalArticleArray)
+            var completedArray = await determineTopics(categoryArticleArray)
+            await writeToJSON(completedArray)
+            console.log("articles written succesfully")
+        }else if(time == "5:00"){
+            var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_200_300.json")
+            var categoryArticleArray = await categorizeNews(originalArticleArray)
+            var completedArray = await determineTopics(categoryArticleArray)
+            await writeToJSON(completedArray)
+            console.log("articles written succesfully")
+            console.log("deleting the jsons to reset...")
+            await Fs.unlink('outputJSONs/newsAPI/trending_news_0_100.json');
+            await Fs.unlink('outputJSONs/newsAPI/trending_news_100_200.json');
+            await Fs.unlink('outputJSONs/newsAPI/trending_news_200_300.json');
+           
+        }else{
+            console.log("there was an error with fetching based on time")
+        }
+
     } catch(error){
         console.error("Error processing the data: ", error);
     }finally {
-        console.log("Shutting down...");
-        runDataImport()
+        console.log("finished running Main.mts. resuming listening till 12:10, 3:00, and 5:00");
+        //runDataImport()
     }
 }
 
