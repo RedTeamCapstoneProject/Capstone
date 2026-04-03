@@ -5,6 +5,7 @@ import "./util"; // Load jQuery plugins
 type SummaryItem = {
   ai_title: string | null;
   ai_description: string | null;
+  url_to_image: string | null;
   summary: string;
 };
 
@@ -23,12 +24,30 @@ async function hydrateSummaryPosts(): Promise<void> {
       const post = posts[index];
       const title = item.ai_title?.trim() || "Untitled Summary";
       const description = item.ai_description?.trim() || "No description available.";
+      const summaryText = item.summary?.trim() || description;
 
       const headingLink = post.querySelector<HTMLAnchorElement>("header .title h2 a");
       if (headingLink) headingLink.textContent = title;
 
       const headerDescription = post.querySelector<HTMLParagraphElement>("header .title p");
       if (headerDescription) headerDescription.textContent = description;
+
+      const bodyDescription = post.querySelector<HTMLParagraphElement>(":scope > p");
+      if (bodyDescription) bodyDescription.textContent = summaryText;
+
+      const image = post.querySelector<HTMLImageElement>("a.image.featured img");
+      const rawImage = item.url_to_image?.trim();
+      if (image && rawImage) {
+        const isDirectSource =
+          rawImage.startsWith("data:") ||
+          rawImage.startsWith("http://") ||
+          rawImage.startsWith("https://") ||
+          rawImage.startsWith("//") ||
+          rawImage.startsWith("/");
+
+        image.src = isDirectSource ? rawImage : `data:image/jpeg;base64,${rawImage}`;
+        image.alt = title;
+      }
     });
   } catch {
     // Keep static fallback content if API request fails.
