@@ -22034,7 +22034,7 @@
             body: JSON.stringify({ token, password, newPassword: password })
           });
           lastResponse = response;
-          if (response.status !== 405) {
+          if (response.status !== 404 && response.status !== 405) {
             return response;
           }
         }
@@ -22493,8 +22493,54 @@
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { marginTop: "1em", marginBottom: 0, textAlign: "center" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", { href: "index.html", children: "Back to Home" }) })
         ] });
       }
+      var FILTER_CATEGORIES = [
+        "Technology",
+        "Politics",
+        "Sports",
+        "World News",
+        "Economics",
+        "Entertainment",
+        "Culture"
+      ];
+      function loadSavedFilters() {
+        try {
+          const raw = localStorage.getItem("newsFilters");
+          if (raw)
+            return JSON.parse(raw);
+        } catch {
+        }
+        return Object.fromEntries(FILTER_CATEGORIES.map((c) => [c, true]));
+      }
+      function PreferencesPopup({ onClose }) {
+        const [filters, setFilters] = (0, import_react.useState)(loadSavedFilters);
+        const toggle = (category) => {
+          setFilters((prev) => ({ ...prev, [category]: !prev[category] }));
+        };
+        const handleSave = () => {
+          localStorage.setItem("newsFilters", JSON.stringify(filters));
+          showToast("Preferences saved.", "success");
+          onClose();
+        };
+        return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "preferences-overlay", onClick: onClose, children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "preferences-popup", onClick: (e) => e.stopPropagation(), children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { type: "button", className: "preferences-close", onClick: onClose, "aria-label": "Close", children: "\xD7" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { children: "Filter Categories" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", { className: "preferences-list", children: FILTER_CATEGORIES.map((category) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("label", { className: "preferences-label", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+              "input",
+              {
+                type: "checkbox",
+                checked: filters[category],
+                onChange: () => toggle(category)
+              }
+            ),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: category })
+          ] }) }, category)) }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", { className: "actions stacked", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { type: "button", className: "button large fit", onClick: handleSave, children: "Save Preferences" }) }) })
+        ] }) });
+      }
       function SettingsPanel() {
         const [user, setUser] = (0, import_react.useState)(getStoredUser);
+        const [showPrefs, setShowPrefs] = (0, import_react.useState)(false);
         (0, import_react.useEffect)(() => {
           const handler = () => setUser(getStoredUser());
           window.addEventListener("auth-state-changed", handler);
@@ -22509,9 +22555,10 @@
         return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "settings-panel", children: [
           user && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "settings-email", children: user.email }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", { className: "actions stacked", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { type: "button", className: "button large fit", children: "Preferences" }) }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { type: "button", className: "button large fit", onClick: () => setShowPrefs(true), children: "Preferences" }) }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { type: "button", className: "button large fit settings-logout-btn", onClick: handleLogOut, children: "Log Out" }) })
-          ] })
+          ] }),
+          showPrefs && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PreferencesPopup, { onClose: () => setShowPrefs(false) })
         ] });
       }
       function mountAuthUi() {

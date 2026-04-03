@@ -49,7 +49,7 @@ async function postResetPassword(apiBaseUrl: string, token: string, password: st
     });
 
     lastResponse = response;
-    if (response.status !== 405) {
+    if (response.status !== 404 && response.status !== 405) {
       return response;
     }
   }
