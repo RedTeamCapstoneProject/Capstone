@@ -38,6 +38,7 @@ class NewsArticle:
     urlToImage: Optional[str]
     publishedAt: str
     content: Optional[str]
+    category: str
     
     def to_dict(self):
         return {
@@ -49,7 +50,9 @@ class NewsArticle:
             "url": self.url,
             "urlToImage": self.urlToImage,
             "publishedAt": self.publishedAt,
-            "content": self.content
+            "content": self.content,
+            "category": self.category
+
         }
 
 # ============================================
@@ -108,6 +111,7 @@ class NewsFetcher:
                                 "urlToImage": article.get("urlToImage"),
                                 "publishedAt": article.get("publishedAt"),
                                 "content": article.get("content")
+                                "category": category 
                         })
                 
                     logger.info(f" {category}: Got {len(articles)} articles (Total: {len(all_articles)})")
