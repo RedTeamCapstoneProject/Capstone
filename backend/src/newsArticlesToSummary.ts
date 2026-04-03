@@ -75,7 +75,7 @@ function rowCellsToNewsArticle(cells: RowAsCellObjects): NewsArticle {
 
 
 async function importSummaryManager(): Promise<
-	(articleObjArray: NewsArticle[]) => Promise<void>
+	(articleObjArray: NewsArticle[],numberOfTopics:number) => Promise<void>
 > {
 	// Resolve the .mts summary module from backend/src at runtime.
 	const summaryModulePath = pathToFileURL(
@@ -87,7 +87,7 @@ async function importSummaryManager(): Promise<
 		"modulePath",
 		"return import(modulePath);"
 	) as (modulePath: string) => Promise<{
-		summaryManager: (articleObjArray: NewsArticle[]) => Promise<void>;
+		summaryManager: (articleObjArray: NewsArticle[],numberOfTopics:number) => Promise<void>;
 	}>;
 
 	const module = await dynamicImport(summaryModulePath);
@@ -150,7 +150,8 @@ export async function fetchNewsArticlesAndSummarize(): Promise<{
 	const summaryManager = await importSummaryManager();
 	for (const [topic, articles] of byTopic) {
 		console.log(`Summarizing topic "${topic}" (${articles.length} articles)`);
-		await summaryManager(articles);
+		await summaryManager(articles,byTopic.size);
+		
 	}
 
 	return {

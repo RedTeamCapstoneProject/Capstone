@@ -2,7 +2,7 @@ import { writeFile } from "fs";
 import { type newsArticle, callAI, readJSON, tempreadJSON } from "../AIExportedFunctions/exportedFunctions.mts";
 import fs from 'fs';
 import { title } from "process";
-
+const finalSummaryDatabase: summarizedArticle[] = [];
 /*
 function quickWrite(content: string) {
     fs.writeFileSync('test.txt', content, 'utf-8');
@@ -42,7 +42,7 @@ async function tempReadMethodForTesting(){
 // the main function, handles calling other functions. loops through every article
 //create content and description arrays and sends the arrays to the summarizeContent or summarizeDescription functions
 //finally it uses output of previous functions and calls constructJSON
-export async function summaryManager(articleObjArray: newsArticle[]){
+export async function summaryManager(articleObjArray: newsArticle[],numberOfTopics:number){
     console.log(articleObjArray.length)
     let contentArray:Array<string> = []
     let descriptionArray:Array<string> = []
@@ -61,7 +61,13 @@ export async function summaryManager(articleObjArray: newsArticle[]){
     var summarizedDescription:string = await summarizeDescription(descriptionArray)
     var summarizedTitle:string = await summarizeTitle(titleArray)
     var completedObject = await constructJSON(articleObjArray,summarizedContent,summarizedDescription,summarizedTitle)
-    writeSummarizedJSON(completedObject)
+    finalSummaryDatabase.push(completedObject);
+    console.log(`Progress: ${finalSummaryDatabase.length} / ${numberOfTopics}`);
+
+    if (finalSummaryDatabase.length === Number(numberOfTopics)) {
+        console.log("All topics summarized. Writing final JSON...");
+        await writeSummarizedJSON(finalSummaryDatabase);
+    }
 }
 
 
@@ -207,11 +213,19 @@ async function constructJSON(articleObjArray:newsArticle[],summarizedContent:str
 
 
 //write the object to a json
-async function writeSummarizedJSON(summarizedObject:summarizedArticle){
-    fs.writeFileSync("outputJSONs/summarizedJSON/summarizedTopic.json",JSON.stringify(summarizedObject, null,2),"utf8")
+
+async function writeSummarizedJSON(finalSummarizedList:summarizedArticle[]){
+const filePath = "outputJSONs/summarizedJSON/summarizedTopic.json";
+    
+    const dir = "outputJSONs/summarizedJSON";
+    if (!fs.existsSync(dir)){
+        fs.mkdirSync(dir, { recursive: true });
+    }
+
+    // Write the full batch as a proper JSON array
+    fs.writeFileSync(filePath, JSON.stringify(finalSummarizedList, null, 2), "utf8");
+    console.log(`Success! saved ${finalSummarizedList.length} topics to ${filePath}`);
 }
-
-
 
 //var catArray = await tempReadMethodForTesting()
 //summaryManager(catArray)
