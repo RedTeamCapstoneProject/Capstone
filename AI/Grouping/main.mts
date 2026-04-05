@@ -130,11 +130,11 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
         1. Group these articles into distinct, granular "Story Clusters."
         2. STRENGTH RULE: A cluster should only be created if at least 2-3 articles share the same specific event or development.
         3. GRANULARITY RULE: Do not use broad categories (e.g., "Sports"). Use specific event titles (e.g., "Ohtani's 60-60 Milestone").
-        4. RESIDUAL RULE: Any article that is a unique, standalone story should be grouped into "Global Daily Brief."
+        4. If an article doesn't fit into a specific cluster, give it a new one that is unique to the content within the article.
 
         ### OUTPUT FORMAT
-        - Return ONLY a comma-separated list of the generated Story Titles.
-        - Example: Title A, Title B, Title C
+        - Return ONLY a comma-separated list of the generated Story topics.
+        - Example: Topic A, Topic B, Topic C
         - NO numbering, NO intro text, NO periods.
         `;
 
@@ -172,7 +172,7 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
 
             ### MANDATORY RULES
             1. You MUST choose a topic from the "ALLOWED TOPICS" list above.
-            2. If no topic fits, you MUST return "Global Daily Brief".
+            2. If no topic fits, you MUST return a topic that makes sense to the content within that article.
             3. OUTPUT: Return the TOPIC NAME ONLY. 
             4. DO NOT include punctuation, explanations, or quotes.
 
@@ -187,6 +187,9 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
     return categoryArticleArray
 }
 
+
+
+//FIX THE RUN FUNCTION TO CHECK FOR TIMES
 
 // handels calling all the functions.
 //if 12:20 only read 0-100 
