@@ -4124,10 +4124,6 @@ body.is-menu-visible #menu {
 	}
 }
 .post p {
-  display: -webkit-box !important;
-  -webkit-line-clamp: 3 !important;
-  line-clamp: 3 !important;
-  -webkit-box-orient: vertical !important;
-  overflow: hidden !important;
+  display: none !important;
 }
 /*# sourceMappingURL=main.css.map */
