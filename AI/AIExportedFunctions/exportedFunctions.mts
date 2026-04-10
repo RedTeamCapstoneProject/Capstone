@@ -4,6 +4,8 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import fs, { write } from 'fs';
 import { exec } from 'child_process';
+import { GoogleGenerativeAI } from "@google/generative-ai";
+import { time } from "console";
 
 //this is how the news articles are formated with category and topic as an object
 //often used in an array like this: newsArticle[]
@@ -28,16 +30,25 @@ const envPath = path.resolve(__dirname, '../../.env');
 config({ path: envPath });
 
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
-
-
-if (!GROQ_API_KEY) {
-    throw new Error(`Missing geminiAPI in .env file. path: ${envPath}`);
-}
-
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
+
+const GEMINI_API_KEY = process.env.geminiAPI;
+const genAI = new GoogleGenerativeAI(GEMINI_API_KEY || "");
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+if (!GROQ_API_KEY) {
+    throw new Error(`Missing groq in .env file`);
+}
+
+if (!GEMINI_API_KEY){
+    throw new Error (`missing GEMINI key in .env file`)
+}
+
+//IMPLEMENT EXPONENTIAL BACKOFF, READ ERROR AND WAIT TO PROCESS REQUEST
+
 //input a prompt as parameter and return results from AI 
-export async function callAI(prompt: string) {
+export async function callAI(prompt: string):Promise<string> {
     try {
         console.log("Attempting to connect to Groq...");
         
@@ -55,13 +66,51 @@ export async function callAI(prompt: string) {
         });
 
         const aiText = response.choices[0]?.message?.content || "";
-        //console.log("AI Response:", aiText);
+        console.log("groq reponse complete");
         return aiText;
     } catch (error: any) {
         console.error("Groq Connection failed!", error.message);
-        return "ERROR_FETCHING_TOPIC"; 
+        if (error.message.includes("rate_limit_exceeded")) {
+            
+            const match = error.message.match(/try again in ([\d.]+)(ms|s)/);
+            
+            if (match) {
+                const delay = match[2] === "s" ? parseFloat(match[1]) * 1000 : parseFloat(match[1]);
+                
+                console.log(`Rate limited. Sleeping for ${delay}ms...`);
+                
+                await new Promise(resolve => setTimeout(resolve, delay + 50)); 
+                
+                return await callAI(prompt);
+            }
+        }
+        console.log('ATTEMPTING TO SWITCH TO GEMINI')
+        return await callGeminiAI(prompt)       //try to switch to gemini
     }
 }
+
+
+
+export async function callGeminiAI(prompt:string):Promise<string>{
+    try {
+            console.log("Attempting to connect to Gemini...");
+            const result = await model.generateContent(prompt);
+            
+            const response = await result.response;
+            
+            const aiText = response.text();
+            console.log("gemini reponse complete")
+            return aiText;
+        } catch (error: any) {
+            console.error("Gemini Connection failed!", error.message);
+            
+            return "ERROR ON GEMINI CALL";
+        }
+}
+
+
+
+
 
 
 
@@ -102,4 +151,10 @@ export async function tempreadJSON(path: string): Promise<newsArticle[]> {
         console.error(`Error reading JSON at ${path}:`, error.message);
         return []; 
     }
+}
+
+
+
+function handleAIErrors(error:Error){
+
 }

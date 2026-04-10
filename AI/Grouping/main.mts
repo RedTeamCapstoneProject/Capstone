@@ -9,6 +9,9 @@ import cron from 'node-cron';
 import Fs from 'node:fs/promises';
 
 
+//MAKE DYNAMIC KEY SWITCHING FOR AI CALLS GEMINI OR GROQ
+
+
 /*
 //wait for 12:10 to read 0_100
 cron.schedule('10 0 * * *', async () => {
@@ -91,34 +94,22 @@ async function categorizeNews(originalArticleArray: newsArticle[]){
 }
 
 
-
+//takes in the news article array and determins the topics that fits with each article
+//sysprompt1 goes over whole json and writes topics to csv
+//sysprompt2 looks at the topics in csv and assigns them to each individual article.
 async function determineTopics(categoryArticleArray: newsArticle[]){
     
    // console.log(`\n working on: ${articles}`); 
-    const articlesString = JSON.stringify(categoryArticleArray);
+
+   const articlesString = JSON.stringify(categoryArticleArray);
     
+   //the list that contains all topcs generated for the run cycle
+    const path = `AI/Grouping/topicList.csv`
+    var content = fs.readFileSync(path).toString()
+    let existingCSVTopics = content.split('\n').map(t => t.trim()).filter(t => t.length > 0);
+    const csvTopicsString = existingCSVTopics.join(", ");
+   
     /*
-    const systemPrompt = `You are an expert News Editor at an AI-first news platform. 
-        Your goal is to perform "Story Clustering" on this batch of news articles ${articlesString}.
-
-        TASKS:
-        1. Analyze the provided JSON of news articles.
-        2. Identify distinct "Stories" or "Thematic Clusters" where multiple articles overlap.
-        3. Create a granular, punchy "Story Title" for each cluster (e.g., "The DHS Shutdown Standoff" rather than just "Politics").
-        4. Ensure titles are descriptive enough to summarize later.
-        5. If an article doesn't fit a cluster, group it into a "Daily Brief" or "General" category.
-
-        OUTPUT FORMAT:
-        Return ONLY a comma-separated list of these Story Titles. 
-        No numbers, no explanations, no formatting—just the names.
-
-        EXAMPLES of Particle-style titles:
-        - OpenAI's "Psychosis" & The Future of AI Coding
-        - Autonomous Construction: The $1.75B Robotics Boom
-        - Enphase & Vermont’s Virtual Power Plant Expansion
-        - Cam Ward's Path to the Hall of Fame`;
-    */
-    
     const systemPrompt = `
         ### ROLE
         You are a Senior Data Architect specializing in "Semantic Story Clustering."
@@ -137,55 +128,91 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
         - Example: Topic A, Topic B, Topic C
         - NO numbering, NO intro text, NO periods.
         `;
-
-    var topics = await callAI(systemPrompt);
-    console.log(topics)
+    */
     
+    const systemPrompt=`
+       ### ROLE
+        You are a Senior Forensic News Editor. Your job is to detect and name unique "News Stories" within a batch of articles while comparing them to an existing archive.
 
-    //create an array of promises. execute all promises till all are done then return them all at once
+        ### EXISTING TOPICS (MEMORY)
+        [ ${csvTopicsString} ]
+
+        ### NEW ARTICLES TO PROCESS
+        ${articlesString}
+
+        ### MANDATORY EXECUTION RULES (CRITICAL)
+        1. **ZERO CATEGORIES:** Never use broad words like "Sports," "Politics," "Business," or "Basketball."
+        2. **THE TEAM-LOCK RULE:** You are strictly forbidden from grouping different teams under one name. "UConn" is NOT "Alabama." "Tesla" is NOT "Ford." If the team/company is different, it is a NEW topic.
+        3. **GRANULARITY:** Use a 3-5 word specific headline format (e.g., "Tennessee Lady Vols Transfers" instead of "College Basketball").
+        4. **DEDUPLICATION:** - Check the EXISTING TOPICS first. If a story fits exactly, do NOT output it.
+        - If multiple NEW articles are about the same specific event, generate ONLY ONE topic for them.
+        5. **NO LAZINESS:** You must account for every article provided. Do not truncate the list. Do not summarize the task.
+        6. **SILENT OUTPUT:** Return ONLY a comma-separated list of the new specific topics found. No intros, no apologies, no quotes, no newlines.
+
+        ### FAIL-SAFE
+        If no new topics are found, return the word "None".
+
+        ### TARGET OUTPUT FORMAT
+        Topic A, Topic B, Topic C
+        `;
+                    
+   
+        var response = await callAI(systemPrompt);
+
+        //if the topic is new to the lsit then add it to the list for the cycle
+        if (response.toLowerCase() !== "none") {
+            const newTopics = response.split(',')
+                .map(t => t.trim())
+                .filter(t => t.length > 0);
+                
+            newTopics.forEach(topic => {
+                if (!existingCSVTopics.includes(topic)) {
+                    fs.appendFileSync(path, topic + '\n');
+                    existingCSVTopics.push(topic); 
+                 }           
+            });
+        }
+        console.log("topics written")
+
+
+
+    const updatedTopicList = existingCSVTopics.join(", ");    //create an array of promises. execute all promises till all are done then return them all at once
     const assigningTopics = categoryArticleArray.map(async (article)=>{
        
-        /*
-        const systemPrompt2 = ` ### INSTRUCTION
-            You are a classification engine. Your task is to match the provided News Article to EXACTLY ONE topic from the provided list.
-            ### TOPIC LIST
-            [ ${topics} ]
-            ### ARTICLE CONTENT
-            ${article.content}
-            ### CONSTRAINT
-            - You must choose a topic ONLY from the list above.
-            - If no topic fits perfectly, choose "General" or the closest match.
-            - Respond with ONLY the name of the topic. 
-            - Do NOT include a period, quotes, or any introductory text like "The topic is...".`
-            */
-       
+        
+    
        const systemPrompt2 = `
-            ### MISSION
-            Act as a strict Classification Engine. Assign the provided article to EXACTLY ONE topic from the allowed list.
+            #### MISSION
+            Act as a Zero-Latency Classification Router. Your only job is to output a single string representing the topic name.
 
             ### ALLOWED TOPICS
-            [ ${topics} ]
+            [ ${updatedTopicList} ]
 
-            ### ARTICLE TO CLASSIFY
-            Content: ${article.content}
+            ### ARTICLE DATA
             Title: ${article.title}
+            Content: ${(article.content)}
 
-            ### MANDATORY RULES
-            1. You MUST choose a topic from the "ALLOWED TOPICS" list above.
-            2. If no topic fits, you MUST return a topic that makes sense to the content within that article.
-            3. OUTPUT: Return the TOPIC NAME ONLY. 
-            4. DO NOT include punctuation, explanations, or quotes.
+            ### STRICT OUTPUT PROTOCOL (CRITICAL)
+            1. **Match or Create:** If the article fits an "ALLOWED TOPIC," return it exactly. If not, generate a new 3-5 word granular topic (e.g., "Apple Security Patch" instead of just "Apple").
+            2. **NO CONTEXT:** Do not explain why you chose a topic. Do not say "Based on..." or "None of the topics match." 
+            3. **FORBIDDEN:** It is strictly forbidden to use a newline (\n). Your entire response must be a single line of text.
+            4. **NO PUNCTUATION:** Do not use quotes, periods, or colons.
+            5. **FAIL-SAFE:** If you are unsure, output the 3 most important words from the article title.
 
-            ### EXAMPLE OUTPUT
-            Apple's Neural Link Breakthrough
+            ### TARGET OUTPUT FORMAT
+            Topic Name Only
             `;
        
+        
+        
         const assignedTopic = await callAI(systemPrompt2) 
         article.topic = assignedTopic?.trim().replace(/['"]+/g, '');
     });
+
     await Promise.all(assigningTopics);
     return categoryArticleArray
 }
+
 
 
 
@@ -198,12 +225,13 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
 //call runDataImport to store the topicJSON after each run
 export async function run(time:string) {
     try {
+        /*
         var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_0_100.json")
         // var categoryArticleArray = await categorizeNews(originalArticleArray)
         var completedArray = await determineTopics(originalArticleArray)
         await writeToJSON(completedArray)
         console.log("articles written succesfully")
-        
+        */
         if (time == "12:10"){
             var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_0_100.json")
            // var categoryArticleArray = await categorizeNews(originalArticleArray)
@@ -222,10 +250,11 @@ export async function run(time:string) {
             var completedArray = await determineTopics(originalArticleArray)
             await writeToJSON(completedArray)
             console.log("articles written succesfully")
-            console.log("deleting the jsons to reset...")
+            console.log("deleting the jsons and topic csv to reset...")
             await Fs.unlink('outputJSONs/newsAPI/trending_news_0_100.json');
             await Fs.unlink('outputJSONs/newsAPI/trending_news_100_200.json');
             await Fs.unlink('outputJSONs/newsAPI/trending_news_200_300.json');
+            fs.writeFileSync('AI/Grouping/topicList.csv', '');
            
         }else{
             console.log("there was an error with fetching based on time")
@@ -235,8 +264,8 @@ export async function run(time:string) {
         console.error("Error processing the data: ", error);
     }finally {
         console.log("finished running Main.mts. resuming listening till 12:10, 3:00, and 5:00");
-        runDataImport()
+        //runDataImport()
     }
 }
 
-//run();
+run("12:10");
