@@ -268,4 +268,39 @@ export async function run(time:string) {
     }
 }
 
-run("12:10");
+
+
+
+
+const startAction = async () => {
+    // Get current hour in UTC (GitHub Runners use UTC)
+    // 12:10 AM EST is 4:10 AM UTC
+    // 3:00 AM EST is 7:00 AM UTC
+    // 5:00 AM EST is 9:00 AM UTC
+    const hourUTC = new Date().getUTCHours();
+    const minuteUTC = new Date().getUTCMinutes();
+
+    let timeParam = "";
+
+    if (hourUTC === 4) {
+        timeParam = "12:10";
+    } else if (hourUTC === 7) {
+        timeParam = "3:00";
+    } else if (hourUTC === 9) {
+        timeParam = "5:00";
+    } else {
+        // This allows you to still test manually if needed
+        console.log("Not a scheduled window. Defaulting to 12:10 for testing...");
+        timeParam = "12:10";
+    }
+
+    console.log(`Dispatcher: Waking up for ${timeParam} batch...`);
+    await run(timeParam);
+};
+
+
+startAction().catch(err => {
+    console.error(err);
+    process.exit(1);
+});
+//run("12:10");

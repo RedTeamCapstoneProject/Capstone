@@ -1,0 +1,39 @@
+name: Scheduled News Processing
+
+on:
+  schedule:
+    - cron: '10 4 * * *'  # 12:10 AM EST (4:10 UTC)
+    - cron: '0 7 * * *'   # 3:00 AM EST (7:00 UTC)
+    - cron: '0 9 * * *'   # 5:00 AM EST (9:00 UTC)
+  workflow_dispatch:      # Manual "Run Now" button
+
+jobs:
+  process-news:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Execute Main Dispatcher
+        run: npx ts-node main.mts 
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
+
+      - name: Commit and Push Changes
+        # This part is CRITICAL: It saves the CSV topics and the JSON files
+        # back to GitHub so the next cycle has the memory.
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add AI/Grouping/topicList.csv
+          git add outputJSONs/
+          git commit -m "Automated update of news and topics" || exit 0
+          git push
