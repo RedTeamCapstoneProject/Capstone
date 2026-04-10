@@ -6548,12 +6548,20 @@
       var import_jquery = __toESM(require_jquery());
       init_breakpoints();
       var import_util = __toESM(require_util());
+      function resolveImageSource(rawImage) {
+        const isDirectSource = rawImage.startsWith("data:") || rawImage.startsWith("http://") || rawImage.startsWith("https://") || rawImage.startsWith("//") || rawImage.startsWith("/");
+        return isDirectSource ? rawImage : `data:image/jpeg;base64,${rawImage}`;
+      }
       async function hydrateSummaryPosts() {
         const posts = Array.from(document.querySelectorAll("#main article.post"));
-        if (posts.length === 0)
+        const miniPosts = Array.from(
+          document.querySelectorAll("#sidebar .mini-posts article.mini-post")
+        );
+        const recordsNeeded = posts.length + miniPosts.length;
+        if (recordsNeeded === 0)
           return;
         try {
-          const response = await fetch(`/api/summaries?limit=${posts.length}`);
+          const response = await fetch(`/api/summaries?limit=${recordsNeeded}`);
           if (!response.ok)
             return;
           const payload = await response.json();
@@ -6575,8 +6583,22 @@
             const image = post.querySelector("a.image.featured img");
             const rawImage = item.url_to_image?.trim();
             if (image && rawImage) {
-              const isDirectSource = rawImage.startsWith("data:") || rawImage.startsWith("http://") || rawImage.startsWith("https://") || rawImage.startsWith("//") || rawImage.startsWith("/");
-              image.src = isDirectSource ? rawImage : `data:image/jpeg;base64,${rawImage}`;
+              image.src = resolveImageSource(rawImage);
+              image.alt = title;
+            }
+          });
+          miniPosts.forEach((miniPost, index) => {
+            const item = summaries[posts.length + index] ?? summaries[index];
+            if (!item)
+              return;
+            const title = item.ai_title?.trim() || "Untitled Summary";
+            const headingLink = miniPost.querySelector("header h3 a");
+            if (headingLink)
+              headingLink.textContent = title;
+            const image = miniPost.querySelector("a.image img");
+            const rawImage = item.url_to_image?.trim();
+            if (image && rawImage) {
+              image.src = resolveImageSource(rawImage);
               image.alt = title;
             }
           });
