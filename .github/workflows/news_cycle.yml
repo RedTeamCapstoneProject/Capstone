@@ -29,7 +29,7 @@ jobs:
           geminiAPI: ${{ secrets.GEMINIAPI }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           #NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
-
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
       - name: Commit and Push Changes
         # This part is CRITICAL: It saves the CSV topics and the JSON files
         # back to GitHub so the next cycle has the memory.
