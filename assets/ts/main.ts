@@ -25,8 +25,11 @@ async function hydrateSummaryPosts(): Promise<void> {
   const miniPosts = Array.from(
     document.querySelectorAll<HTMLElement>("#sidebar .mini-posts article.mini-post")
   );
+  const sidebarPosts = Array.from(
+    document.querySelectorAll<HTMLElement>("#sidebar ul.posts > li > article")
+  );
 
-  const recordsNeeded = posts.length + miniPosts.length;
+  const recordsNeeded = posts.length + miniPosts.length + sidebarPosts.length;
   if (recordsNeeded === 0) return;
 
   try {
@@ -68,6 +71,22 @@ async function hydrateSummaryPosts(): Promise<void> {
       if (headingLink) headingLink.textContent = title;
 
       const image = miniPost.querySelector<HTMLImageElement>("a.image img");
+      const rawImage = item.url_to_image?.trim();
+      if (image && rawImage) {
+        image.src = resolveImageSource(rawImage);
+        image.alt = title;
+      }
+    });
+
+    sidebarPosts.forEach((sidebarPost, index) => {
+      const item = summaries[posts.length + miniPosts.length + index] ?? summaries[index];
+      if (!item) return;
+
+      const title = item.ai_title?.trim() || "Untitled Summary";
+      const headingLink = sidebarPost.querySelector<HTMLAnchorElement>("header h3 a");
+      if (headingLink) headingLink.textContent = title;
+
+      const image = sidebarPost.querySelector<HTMLImageElement>("a.image img");
       const rawImage = item.url_to_image?.trim();
       if (image && rawImage) {
         image.src = resolveImageSource(rawImage);
