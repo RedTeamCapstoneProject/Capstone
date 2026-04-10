@@ -4123,7 +4123,10 @@ body.is-menu-visible #menu {
 		white-space: normal;
 	}
 }
-.post p {
+.post .excerpt,
+.post .summary,
+.post .description,
+.post .blurb p {
   display: none !important;
 }
 /*# sourceMappingURL=main.css.map */
