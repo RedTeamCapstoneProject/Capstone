@@ -94,11 +94,6 @@ async function importUserSummaryManager(): Promise<
 
   const module = await dynamicImport(summaryModulePath);
 
-  if (typeof module.summaryManager !== "function") {
-    throw new Error(
-      "summaryManager export was not found in AI/userSummaries/userSummary.mts"
-    );
-  }
 
   return module.summaryManager;
 }
@@ -151,13 +146,8 @@ async function fetchNewsArticlesAndUserSummarize(
     byTopic.get(topic)!.push(article);
   }
 
-  console.log("there are:", byTopic.size, "topics that need user summaries");
-
   const summaryManager = await importUserSummaryManager();
   for (const [topic, articles] of byTopic) {
-    console.log(
-      `Generating user summary for topic \"${topic}\" (${articles.length} articles) using type \"${summaryType}\"`
-    );
     await summaryManager(articles, summaryType, userPrompt);
   }
 
@@ -171,7 +161,6 @@ export async function fetchNewsArticlesAndFiveWs(userPrompt?: string): Promise<{
   rowCount: number;
   rowsAsCellObjects: RowAsCellObjects[];
 }> {
-  // Mirror the summary pipeline but route each topic to userSummary's fiveWs mode.
   return fetchNewsArticlesAndUserSummarize("fiveWs", userPrompt);
 }
 
