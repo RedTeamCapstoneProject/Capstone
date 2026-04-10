@@ -24,7 +24,7 @@ jobs:
       - name: Execute Main Dispatcher
         run: npx tsx AI/Grouping/main.mts
         env:
-          GEMINI: ${{ secrets.geminiAPI }}
+          GEMINI: ${{ secrets.GEMINIAPI }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           #NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
 
