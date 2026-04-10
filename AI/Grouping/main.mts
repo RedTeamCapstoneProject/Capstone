@@ -264,7 +264,7 @@ export async function run(time:string) {
         console.error("Error processing the data: ", error);
     }finally {
         console.log("finished running Main.mts. resuming listening till 12:10, 3:00, and 5:00");
-        //runDataImport()
+        runDataImport()
     }
 }
 
