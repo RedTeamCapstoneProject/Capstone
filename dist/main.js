@@ -6570,6 +6570,18 @@
           return data[0] ?? null;
         return data;
       }
+      function formatSummaryForDisplay(summaryText) {
+        const normalized = summaryText.replace(/\r\n/g, "\n").trim();
+        const bulletsOnNewLines = normalized.replace(/\n?\s*\*\s+/g, "\n* ");
+        const firstBulletIndex = bulletsOnNewLines.indexOf("\n* ");
+        if (firstBulletIndex === -1)
+          return bulletsOnNewLines;
+        const body = bulletsOnNewLines.slice(0, firstBulletIndex).trimEnd();
+        const bullets = bulletsOnNewLines.slice(firstBulletIndex).trimStart();
+        return `${body}
+
+${bullets}`;
+      }
       function toCleanList(values) {
         if (!Array.isArray(values))
           return [];
@@ -6687,8 +6699,10 @@
           if (subtitle)
             subtitle.textContent = description;
           const bodyParagraphs = Array.from(document.querySelectorAll("#main article.post > p"));
-          if (bodyParagraphs[0])
-            bodyParagraphs[0].textContent = summaryText;
+          if (bodyParagraphs[0]) {
+            bodyParagraphs[0].textContent = formatSummaryForDisplay(summaryText);
+            bodyParagraphs[0].style.whiteSpace = "pre-line";
+          }
           bodyParagraphs.slice(1).forEach((paragraph) => {
             paragraph.textContent = "";
             paragraph.style.display = "none";

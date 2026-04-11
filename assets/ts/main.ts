@@ -50,6 +50,18 @@ function readSummaryItemFromPayload(payload: SummariesResponse): SummaryItem | n
   return data;
 }
 
+function formatSummaryForDisplay(summaryText: string): string {
+  const normalized = summaryText.replace(/\r\n/g, "\n").trim();
+  const bulletsOnNewLines = normalized.replace(/\n?\s*\*\s+/g, "\n* ");
+  const firstBulletIndex = bulletsOnNewLines.indexOf("\n* ");
+
+  if (firstBulletIndex === -1) return bulletsOnNewLines;
+
+  const body = bulletsOnNewLines.slice(0, firstBulletIndex).trimEnd();
+  const bullets = bulletsOnNewLines.slice(firstBulletIndex).trimStart();
+  return `${body}\n\n${bullets}`;
+}
+
 function toCleanList(values?: string[] | null): string[] {
   if (!Array.isArray(values)) return [];
   return values
@@ -186,7 +198,10 @@ async function hydrateSingleSummaryPage(): Promise<boolean> {
     if (subtitle) subtitle.textContent = description;
 
     const bodyParagraphs = Array.from(document.querySelectorAll<HTMLParagraphElement>("#main article.post > p"));
-    if (bodyParagraphs[0]) bodyParagraphs[0].textContent = summaryText;
+    if (bodyParagraphs[0]) {
+      bodyParagraphs[0].textContent = formatSummaryForDisplay(summaryText);
+      bodyParagraphs[0].style.whiteSpace = "pre-line";
+    }
     bodyParagraphs.slice(1).forEach((paragraph) => {
       paragraph.textContent = "";
       paragraph.style.display = "none";
