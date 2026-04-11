@@ -223,7 +223,7 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
 //if 3:00 only read 100-200
 //if 5:00 only read 200-300 and delete files to reset 
 //call runDataImport to store the topicJSON after each run
-export async function run(time:string) {
+export async function run() {
     try {
         /*
         var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_0_100.json")
@@ -231,7 +231,7 @@ export async function run(time:string) {
         var completedArray = await determineTopics(originalArticleArray)
         await writeToJSON(completedArray)
         console.log("articles written succesfully")
-        */
+        
         if (time == "12:10"){
             var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_0_100.json")
            // var categoryArticleArray = await categorizeNews(originalArticleArray)
@@ -255,23 +255,81 @@ export async function run(time:string) {
             await Fs.unlink('outputJSONs/newsAPI/trending_news_100_200.json');
             await Fs.unlink('outputJSONs/newsAPI/trending_news_200_300.json');
             fs.writeFileSync('AI/Grouping/topicList.csv', '');
+           */
+          
+            try{
+                let originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_0_100.json")
+            // var categoryArticleArray = await categorizeNews(originalArticleArray)
+                let completedArray = await determineTopics(originalArticleArray)
+                await writeToJSON(completedArray)
+                console.log("first batch written... waiting 1 minute")
+                await new Promise(resolve => setTimeout(resolve, 100000)); // 100,000ms = 1 minute
+
+            }catch(error){
+                 console.error("Error processing batch 1 data: ", error);
+
+            }finally{
+                console.log("finished processing batch 1, running db script and waiting 5 minutes");
+                runDataImport()
+                await new Promise(resolve => setTimeout(resolve, 300000)); // 300,000ms = 5 minutes
+
+            }
+            try{
+                let originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_100_200.json")
+            // var categoryArticleArray = await categorizeNews(originalArticleArray)
+                let completedArray = await determineTopics(originalArticleArray)
+                await writeToJSON(completedArray)
+                console.log("second batch written... waiting 1 minute")
+
+                await new Promise(resolve => setTimeout(resolve, 100000)); // 100,000ms = 1 minute
+
+            }catch(error){
+                 console.error("Error processing batch 2 data: ", error);
+
+            }finally{
+                console.log("finished processing batch 2, running db script and waiting 5 minutes");
+                runDataImport()
+                await new Promise(resolve => setTimeout(resolve, 300000)); // 300,000ms = 5 minutes
+
+            }
            
-        }else{
-            console.log("there was an error with fetching based on time")
-        }
+            try{
+                let originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_200_300.json")
+            // var categoryArticleArray = await categorizeNews(originalArticleArray)
+                let completedArray = await determineTopics(originalArticleArray)
+                await writeToJSON(completedArray)
+                console.log("third batch written... waiting 1 minute")
+
+                await new Promise(resolve => setTimeout(resolve, 100000)); // 100,000ms = 1 minute
+            }catch(error){
+                 console.error("Error processing batch 3 data: ", error);
+
+            }finally{
+                console.log("finished processing batch 3, running db script and waiting 5 minutes");
+                runDataImport()
+                await new Promise(resolve => setTimeout(resolve, 300000)); // 300,000ms = 5 minutes
+
+            }
+        
+           
+        
 
     } catch(error){
         console.error("Error processing the data: ", error);
     }finally {
-        console.log("finished running Main.mts. resuming listening till 12:10, 3:00, and 5:00");
-        runDataImport()
+            console.log("articles written succesfully")
+            console.log("deleting the jsons and topic csv to reset...")
+            fs.writeFileSync('outputJSONs/newsAPI/trending_news_0_100.json', '');
+            fs.writeFileSync('outputJSONs/newsAPI/trending_news_100_200.json','');
+            fs.writeFileSync('outputJSONs/newsAPI/trending_news_200_300.json','');
+            fs.writeFileSync('AI/Grouping/topicList.csv', '');
     }
 }
 
 
 
 
-
+/*
 const startAction = async () => {
     // Get current hour in UTC (GitHub Runners use UTC)
     // 12:10 AM EST is 4:10 AM UTC
@@ -303,4 +361,5 @@ startAction().catch(err => {
     console.error(err);
     process.exit(1);
 });
-//run("12:10");
+*/
+run();
