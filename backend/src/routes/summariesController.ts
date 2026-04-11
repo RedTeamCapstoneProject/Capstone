@@ -19,6 +19,20 @@ function parsePositiveInt(value: string | undefined, fallback: number): number {
 }
 
 router.get("/", async (req: Request, res: Response) => {
+  const rawId = req.query.id as string | undefined;
+  const id = rawId ? Number.parseInt(rawId, 10) : Number.NaN;
+
+  if (Number.isFinite(id) && id > 0) {
+    const byIdResult = await pool.query<SummaryRow>(
+      `SELECT id, ai_title, ai_description, url_to_image, summary
+       FROM summary
+       WHERE id = $1`,
+      [id]
+    );
+
+    return res.status(200).json({ data: byIdResult.rows[0] });
+  }
+
   const limit = Math.min(parsePositiveInt(req.query.limit as string | undefined, 10), 50);
   const offset = Math.max(parsePositiveInt(req.query.offset as string | undefined, 0), 0);
   const topic = (req.query.topic as string | undefined)?.trim();
