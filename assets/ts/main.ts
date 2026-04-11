@@ -3,7 +3,7 @@ import breakpoints from "./breakpoints";
 import "./util"; // Load jQuery plugins
 
 type SummaryItem = {
-  id: number;
+  id: number | string;
   ai_title: string | null;
   ai_description: string | null;
   url_to_image: string | null;
@@ -23,9 +23,21 @@ function resolveImageSource(rawImage: string): string {
   return isDirectSource ? rawImage : `data:image/jpeg;base64,${rawImage}`;
 }
 
-function buildSummaryHref(id: number | null | undefined): string {
-  if (!Number.isFinite(id)) return "single.html";
-  return `single.html?id=${id}`;
+function normalizeSummaryId(value: number | string | null | undefined): number | null {
+  const numeric =
+    typeof value === "number"
+      ? value
+      : typeof value === "string"
+        ? Number.parseInt(value, 10)
+        : Number.NaN;
+
+  return Number.isFinite(numeric) && numeric > 0 ? numeric : null;
+}
+
+function buildSummaryHref(id: number | string | null | undefined): string {
+  const normalizedId = normalizeSummaryId(id);
+  if (normalizedId === null) return "single.html";
+  return `single.html?id=${normalizedId}`;
 }
 
 function readSummaryItemFromPayload(payload: SummariesResponse): SummaryItem | null {
