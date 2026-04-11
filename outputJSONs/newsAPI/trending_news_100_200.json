@@ -1,11 +1,299 @@
 {
   "fetch_info": {
-    "timestamp": "2026-04-11T20:31:37.355001",
+    "timestamp": "2026-04-11T21:34:32.723168",
     "article_range": "100-200",
     "articles_in_file": 100,
     "file_number": 2
   },
   "articles": [
+    {
+      "source_name": "Gematsu",
+      "source_id": null,
+      "author": "Sal Romano",
+      "title": "Honkai: Star Rail version 4.2 update ‘So Laughed the Masses’ launches April 22 - Gematsu",
+      "description": "The version 4.2 update for Honkai: Star Rail, dubbed “So Laughed the Masses,” will launch on April 22, developer miHoYo announced.",
+      "url": "https://www.gematsu.com/2026/04/honkai-star-rail-version-4-2-update-so-laughed-the-masses-launches-april-22",
+      "urlToImage": "https://www.gematsu.com/wp-content/uploads/2026/04/Honkai-Star-Rail-Update_04-10-26.jpg",
+      "publishedAt": "2026-04-10T13:00:46Z",
+      "content": "The version 4.2 update for Honkai: Star Rail, dubbed “So Laughed the Masses,” will launch on April 22, developer miHoYo announced. With the rewards of Phantasmoon Games receiving a massive escalation… [+9064 chars]",
+      "category": "technology"
+    },
+    {
+      "source_name": "Cageside Seats",
+      "source_id": null,
+      "author": "Cain A. Knight",
+      "title": "WWE SmackDown preview (Apr. 10, 2026): WWE tries to save the main event of WrestleMania with a big surprise - Cageside Seats",
+      "description": "Let’s break down what to expect on the Apr. 10 SmackDown, where heel Pat McAfee has a MASSIVE SURPRISE, Royce Keys finally debuts, Jacob Fatu exposed, and more!",
+      "url": "https://www.cagesideseats.com/wwe/432361/wwe-smackdown-preview-apr-10-2026-pat-mcafee-massive-surprise-royce-keys-debut-fatu-exposed",
+      "urlToImage": "https://platform.cagesideseats.com/wp-content/uploads/sites/54/2026/04/codyrhodes1.jpg?quality=90&strip=all&crop=0,1.3279813845259,100,93.077370564282",
+      "publishedAt": "2026-04-10T13:00:24Z",
+      "content": "SmackDown airs tonight (Apr. 10) with a live show emanating from SAP Center in San Jose, California. This is the sixth episode of SmackDown during the seven week build to WrestleMania 42, which takes… [+5218 chars]",
+      "category": "entertainment"
+    },
+    {
+      "source_name": "Theregister.com",
+      "source_id": null,
+      "author": "Carly Page",
+      "title": "CPUID site hijacked to serve malware instead of HWMonitor downloads - theregister.com",
+      "description": ": Six-hour breach turned trusted links into a coin toss between legit tools and credential stealers",
+      "url": "https://www.theregister.com/2026/04/10/cpuid_site_hijacked/",
+      "urlToImage": "https://regmedia.co.uk/2021/04/13/malware.jpg",
+      "publishedAt": "2026-04-10T12:53:00Z",
+      "content": "Visitors to the CPUID website were briefly exposed to malware this week after attackers hijacked part of its backend, turning trusted download links into a delivery mechanism for something far less w… [+2604 chars]",
+      "category": "technology"
+    },
+    {
+      "source_name": "NBCSports.com",
+      "source_id": null,
+      "author": "Josh Alper",
+      "title": "Report: Jaguars plan for Travis Hunter to be a full-time corner - NBC Sports",
+      "description": "Jaguars General Manager James Gladstone updated Travis Hunter's knee rehab this week and said that the second overall pick in the 2025 draft will be limited in the offseason with the expectation that he'll be fully cleared for training camp.",
+      "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-jaguars-plan-for-travis-hunter-to-be-a-full-time-corner",
+      "urlToImage": "https://nbcsports.brightspotcdn.com/dims4/default/95163e6/2147483647/strip/true/crop/3008x1692+0+0/resize/1440x810!/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2F22%2F0c%2F39d160a644d9b2f8929f7808c0ca%2Fhttps-delivery-gettyimages.com%2Fdownloads%2F2242457215",
+      "publishedAt": "2026-04-10T12:49:14Z",
+      "content": "Jaguars General Manager James Gladstone updated Travis Hunters knee rehab this week and said that the second overall pick in the 2025 draft will be limited in the offseason with the expectation that … [+990 chars]",
+      "category": "sports"
+    },
+    {
+      "source_name": "Forbes",
+      "source_id": null,
+      "author": "Paul Tassi",
+      "title": "‘Crimson Desert’ To Add 8 Big Player-Requested Additions Soon - Forbes",
+      "description": "Crimson Desert is listening to players and adding eight big new additions to the game over the next two months or so.",
+      "url": "https://www.forbes.com/sites/paultassi/2026/04/10/crimson-desert-to-add-8-big-player-requested-additions-soon/",
+      "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/69d8ef5d6c1eb339fb92bb93/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+      "publishedAt": "2026-04-10T12:39:37Z",
+      "content": "Pearl Abyss\r\nI wondered where Crimson Deserts next giant game-changing patch would be, as Pearl Abyss has been pumping these out non-stop. We got an update last night where there wasnt a patch drop, … [+3771 chars]",
+      "category": "technology"
+    },
+    {
+      "source_name": "Bring Me The News",
+      "source_id": null,
+      "author": "Will Ragatz",
+      "title": "If ‘Game 0’ was any indication, Wild-Stars is going to be a bloodbath - Bring Me The News",
+      "description": "Gripes with the playoff format aside, Minnesota vs. Dallas has a chance to be a truly epic first-round series.",
+      "url": "https://bringmethenews.com/minnesota-sports/if-game-0-was-any-indication-wild-stars-is-going-to-be-a-bloodbath",
+      "urlToImage": "https://bringmethenews.com/.image/NTM6MDAwMDAwMDAwMTg5NDUy/nhl-minnesota-wild-at-dallas-stars.jpg?io=1&profile=share16-9",
+      "publishedAt": "2026-04-10T12:37:31Z",
+      "content": "Somehow, that was just the appetizer.\r\nThe Minnesota Wild and Dallas Stars, already locked in as opponents in a first-round playoff series that will start in a little over a week, played an epic hock… [+5208 chars]",
+      "category": "sports"
+    },
+    {
+      "source_name": "Fangraphs.com",
+      "source_id": null,
+      "author": "Paul Sporer",
+      "title": "Starting Pitcher Chart – April 10th, 2026 - FanGraphs",
+      "description": "Could be a big day for offense with only a handful of must-starts on Friday’s board…",
+      "url": "https://fantasy.fangraphs.com/starting-pitcher-chart-april-10th-2026/",
+      "urlToImage": "https://fantasy.fangraphs.com/wp-content/uploads/sites/3/2024/05/glasnow-5-scaled-e1775824431628.jpg",
+      "publishedAt": "2026-04-10T12:37:13Z",
+      "content": "Gary A. Vasquez-USA TODAY Sports\r\nWelcome to the Daily SP Chart.\r\nThe chart includes their performance for 2025 until we get some actual data for this year (I changed over in late-April last year), t… [+3073 chars]",
+      "category": "sports"
+    },
+    {
+      "source_name": "KWLM (Willmar Radio)",
+      "source_id": null,
+      "author": "Learfield Wire Service",
+      "title": "New strain of COVID detected in 25 states including Minnesota - Willmar Radio",
+      "description": "(St. Paul, MN) -- State health officials are keeping an eye on a highly mutated new COVID variant called B-A 3-dot-2, or “cicada.” Minnesota Department of Health Epidemiologist Keeley Morris",
+      "url": "https://www.willmarradio.com/news/new-strain-of-covid-detected-in-25-states-including-minnesota/article_f3ee23d4-3c1f-40f0-9a69-f123ad1ba27a.html",
+      "urlToImage": "https://bloximages.chicago2.vip.townnews.com/willmarradio.com/content/tncms/assets/v3/editorial/b/99/b995bcaa-3e68-11ec-b002-9bf235960ebf/61857c281af36.image.jpg?crop=298%2C298%2C42%2C0&resize=200%2C200&order=crop%2Cresize",
+      "publishedAt": "2026-04-10T12:36:00Z",
+      "content": "(St. Paul, MN) -- State health officials are keeping an eye on a highly mutated new COVID variant called B-A 3-dot-2, or cicada. Minnesota Department of Health Epidemiologist Keeley Morris says, \"Wit… [+488 chars]",
+      "category": "health"
+    },
+    {
+      "source_name": "Push Square",
+      "source_id": null,
+      "author": "Sammy Barker",
+      "title": "Professor Layton Makes His Long-Awaited PS5 Debut Later This Year, Almost 20 Years After the Series Started - Push Square",
+      "description": "Tip of the hat to you, sir",
+      "url": "https://www.pushsquare.com/news/2026/04/professor-layton-makes-his-long-awaited-ps5-debut-later-this-year-almost-20-years-after-the-series-started",
+      "urlToImage": "https://images.pushsquare.com/0f56e4e5ed439/large.jpg",
+      "publishedAt": "2026-04-10T12:30:00Z",
+      "content": "We got Inazuma Eleven and Fantasy Life last year, and now legendary dev Level-5 has announced that Professor Layton will finally make his PS5 debut in 2026.\r\nThe latest game in the series, Professor … [+839 chars]",
+      "category": "technology"
+    },
+    {
+      "source_name": "Eurogamer.net",
+      "source_id": null,
+      "author": "Fran Ruiz",
+      "title": "Phantom Blade Zero developer rejects gen-AI and promises \"every single piece of content in our game has been crafted by the hands of real artists\" - Eurogamer",
+      "description": "Phantom Blade Zero studio S-Game says no generative AI was used in its development.",
+      "url": "https://www.eurogamer.net/phantom-blade-zero-studio-rejects-generative-ai",
+      "urlToImage": "https://assetsio.gnwcdn.com/Phantom-Blade-Zero_fire-boss-fight.jpg?width=1200&height=630&fit=crop&enable=upscale&auto=webp",
+      "publishedAt": "2026-04-10T11:51:05Z",
+      "content": "Wuxia-inspired action game Phantom Blade Zero is now in the final stages of development ahead of its launch later this year, and developer S-Game has released a statement about its stance regarding t… [+2186 chars]",
+      "category": "technology"
+    },
+    {
+      "source_name": "9to5google.com",
+      "source_id": null,
+      "author": "Ben Schoon",
+      "title": "Some Google Pixel phones hit with bootloop issues following recent updates, fix in the works - 9to5Google",
+      "description": "Following some of their latest updates, a number of Google Pixel owners are reporting bootloop issues, with Google “working to...",
+      "url": "http://9to5google.com/2026/04/10/google-pixel-bootloop-issue-march-update/",
+      "urlToImage": "https://i0.wp.com/9to5google.com/wp-content/uploads/sites/4/2025/09/Pixel-8-Pro-and-Pixel-10-Pro-XL-9.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2026-04-10T11:30:00Z",
+      "content": "Following some of their latest updates, a number of Google Pixel owners are reporting bootloop issues, with Google “working to identify a fix.”\r\nWhile it doesn’t appear to be extremely widespread, a … [+1638 chars]",
+      "category": "general"
+    },
+    {
+      "source_name": "BBC News",
+      "source_id": null,
+      "author": null,
+      "title": "Bafta fell short in duty of care when racial slur was shouted, review finds - BBC",
+      "description": "A Tourette's campaigner involuntarily shouted a racial slur while two black actors were on stage.",
+      "url": "https://www.bbc.com/news/articles/cy017z179z9o",
+      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/224a/live/56b31110-1950-11f1-9120-a910fc22c6ac.jpg",
+      "publishedAt": "2026-04-10T11:19:39Z",
+      "content": "The independent review, carried out by Rise Associates, \"identified a number of structural weaknesses in Bafta's planning, escalation procedures and crisis coordination arrangements,\" the organisatio… [+6 chars]",
+      "category": "entertainment"
+    },
+    {
+      "source_name": "Pure Xbox",
+      "source_id": null,
+      "author": "Fraser Gilbert",
+      "title": "Xbox Is Sending Out Project Helix Gift Packages Signed By New Boss Asha Sharma - Pure Xbox",
+      "description": "No console yet, just a bunch of free merch",
+      "url": "https://www.purexbox.com/news/2026/04/xbox-is-sending-out-project-helix-gift-packages-signed-by-new-boss-asha-sharma",
+      "urlToImage": "https://images.purexbox.com/09f3f30ce187b/large.jpg",
+      "publishedAt": "2026-04-10T11:07:17Z",
+      "content": "We're sure you've already heard about the codename for Xbox's next console by now \"Project Helix\" and although the console itself won't be in developers' hands until next year, Xbox is clearly trying… [+1440 chars]",
+      "category": "technology"
+    },
+    {
+      "source_name": "ScienceAlert",
+      "source_id": null,
+      "author": "David Nield",
+      "title": "Common Vitamin May Reduce Buildup of Alzheimer's Proteins, Study Finds - ScienceAlert",
+      "description": "New research has linked levels of vitamin D in midlife with toxic tangles of tau protein that accumulate in the brains of those with Alzheimer's disease.",
+      "url": "https://www.sciencealert.com/common-vitamin-may-reduce-buildup-of-alzheimers-proteins-study-finds",
+      "urlToImage": "https://www.sciencealert.com/images/2026/04/TauTangle.jpg",
+      "publishedAt": "2026-04-10T11:04:07Z",
+      "content": "New research has linked levels of vitamin D in midlife with toxic tangles of tau protein that accumulate in the brains of those with Alzheimer's disease.\r\nA statistical analysis of blood samples and … [+3961 chars]",
+      "category": "health"
+    },
+    {
+      "source_name": "CNN",
+      "source_id": "cnn",
+      "author": null,
+      "title": "Menopause products are having a hot minute. But doctors urge women to be wary of the marketing surge - CNN",
+      "description": "Women suffering through the hot flashes, night sweats, mood changes and sleep problems that can come with menopause — all while looking in the mirror and noticing signs of aging — are being bombarded with products.",
+      "url": "https://www.cnn.com/2026/04/10/health/menopause-products-wellness",
+      "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/ap26093706698031.jpg?c=16x9&q=w_800,c_fill",
+      "publishedAt": "2026-04-10T11:00:55Z",
+      "content": "Women suffering through the hot flashes, night sweats, mood changes and sleep problems that can come with menopause all while looking in the mirror and noticing signs of aging are being bombarded wit… [+6508 chars]",
+      "category": "health"
+    },
+    {
+      "source_name": "Nfltraderumors.co",
+      "source_id": null,
+      "author": "Logan Ulrich",
+      "title": "Potential Trade Destinations For Giants DT Dexter Lawrence - NFLTradeRumors.co",
+      "description": "Giants DT Dexter Lawrence requested a trade this past week, which is a relatively common card for veteran players in his position who are seeking to apply pressure on the team for a contract extension.",
+      "url": "https://nfltraderumors.co/potential-trade-destinations-for-giants-dt-dexter-lawrence/",
+      "urlToImage": "https://i0.wp.com/nfltraderumors.co/wp-content/uploads/2024/11/USATSI_24667166_168383805_lowres-scaled.jpg?fit=1620%2C1080&ssl=1",
+      "publishedAt": "2026-04-10T11:00:54Z",
+      "content": "Giants DT Dexter Lawrence requested a trade this past week, which is a relatively common card for veteran players in his position who are seeking to apply pressure on the team for a contract extensio… [+14286 chars]",
+      "category": "sports"
+    },
+    {
+      "source_name": "NPR",
+      "source_id": null,
+      "author": "",
+      "title": "In Steven Soderbergh's 'The Christophers,' an aging artist meets his match - NPR",
+      "description": "The newest movie from director Steven Soderbergh, whose films range from Erin Brockovich to Magic Mike and the spy thriller Black Bag, is about artistic legacy itself.",
+      "url": "https://www.npr.org/2026/04/10/nx-s1-5769346/the-christophers-review-ian-mckellen-michaela-coel",
+      "urlToImage": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/7758x4364+498+0/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F57%2F5c%2F2f05cb234d44aaa5cd49c5e0e496%2Fthe-christophers-still-1-michaela-coel-and-ian-mckellen-credit-claudette-barius.jpg",
+      "publishedAt": "2026-04-10T11:00:00Z",
+      "content": "Though director Steven Soderbergh's legacy is probably secure at this point, he keeps burnishing it every year or so with a twisty, tricky dramedy. His latest The Christophers turns out to be a deep … [+3099 chars]",
+      "category": "entertainment"
+    },
+    {
+      "source_name": "Maize n Brew",
+      "source_id": null,
+      "author": "Von Lozon",
+      "title": "Everything Brandon Naurato said after Michigan’s loss in the Frozen Four - Maize n Brew",
+      "description": "The Michigan hockey team lost to Denver in overtime in the Frozen Four on Thursday night. Here’s everything head coach Brandon Naurato said after the game.",
+      "url": "https://www.maizenbrew.com/michigan-hockey/111800/ncaa-hockey-frozen-four-michigan-wolverines-brandon-naurato-denver-ncaa-tournament",
+      "urlToImage": "https://platform.maizenbrew.com/wp-content/uploads/sites/102/2026/04/gettyimages-2270060654.jpg?quality=90&strip=all&crop=0%2C10.72963757746%2C100%2C78.540724845081&w=1200",
+      "publishedAt": "2026-04-10T11:00:00Z",
+      "content": "The Michigan Wolverines lost to Denver, 4-3, in overtime in the Frozen Four on Thursday night in Las Vegas. Heres everything head coach Brandon Naurato, and players TJ Hughes and Josh Eernisse told t… [+6033 chars]",
+      "category": "sports"
+    },
+    {
+      "source_name": "ESPN",
+      "source_id": "espn",
+      "author": "Bradford Doolittle",
+      "title": "The best (and worst) free agent signings in MLB history - ESPN",
+      "description": "The first free agent contract ever was signed 50 years ago today. We rate the 8,340 deals of the past half-century.",
+      "url": "https://www.espn.com/mlb/story/_/id/48370280/mlb-2026-free-agency-ranking-best-worst-free-agent-signings-ever-50th-anniversary",
+      "urlToImage": "https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0408%2Fr1640534_2_1296x729_16%2D9.jpg",
+      "publishedAt": "2026-04-10T11:00:00Z",
+      "content": "Baseball free agency recently celebrated its 50th anniversary, insofar as a contractual classification can celebrate something.\r\nThere's no apparent consensus on who the first free agent actually was… [+23898 chars]",
+      "category": "sports"
+    },
+    {
+      "source_name": "BleepingComputer",
+      "source_id": null,
+      "author": "Sergiu Gatlan",
+      "title": "Google rolls out Gmail end-to-end encryption on mobile devices - BleepingComputer",
+      "description": "Google says Gmail end-to-end encryption (E2EE) is now available on all Android and iOS devices, allowing enterprise users to read and compose emails without additional tools.",
+      "url": "https://www.bleepingcomputer.com/news/google/google-rolls-out-gmail-end-to-end-encryption-on-mobile-devices/",
+      "urlToImage": "https://www.bleepstatic.com/content/hl-images/2025/10/03/Gmail.jpg",
+      "publishedAt": "2026-04-10T10:44:08Z",
+      "content": "Google says Gmail end-to-end encryption (E2EE) is now available on all Android and iOS devices, allowing enterprise users to read and compose emails without additional tools.\r\nStarting this week, enc… [+2702 chars]",
+      "category": "general"
+    },
+    {
+      "source_name": "Associated Press",
+      "source_id": "associated-press",
+      "author": "Anthony Izaguirre",
+      "title": "In his first 100 days, Mamdani brings a unique star power to New York City governance - AP News",
+      "description": "In his first 100 days in office, New York City Mayor Zohran Mamdani has governed with a star power unusual in politics. Crowds of supporters show up to his news conferences. Basic municipal services have been infused with newfound excitement. Celebrities help…",
+      "url": "https://apnews.com/article/zohran-mamdani-nyc-mayor-100-days-4588280d3f2cc5b369ff0ddcf3dbf29e",
+      "urlToImage": "https://dims.apnews.com/dims4/default/495af37/2147483647/strip/true/crop/6000x3998+0+1/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F79%2F08%2Fc1ecad1fe41db911a4e74529aae5%2F0835bc6920f9475289084680bcfe5042",
+      "publishedAt": "2026-04-10T10:22:00Z",
+      "content": "NEW YORK (AP) In his first 100 days in office, New York City Mayor Zohran Mamdani has governed with a star power unusual in politics. \r\nCrowds of supporters show up to his news conferences. Basic mun… [+6661 chars]",
+      "category": "general"
+    },
+    {
+      "source_name": "GMEN HQ",
+      "source_id": null,
+      "author": "Matt Fitzgerald",
+      "title": "Giants 7-round mock draft ignites John Harbaugh era with instant game-changers - GMEN HQ",
+      "description": "The New York Giants are one quality draft away from vaulting into the playoff mix under John Harbaugh. This seven-round mock draft would be a winner.",
+      "url": "https://gmenhq.com/new-york-giants-7-round-mock-draft-ignites-john-harbaugh-era-instant-game-changers",
+      "urlToImage": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_193,w_6349,h_3571/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/ImagnImages/mmsport/31/01knf590378ygkx14dqm.jpg",
+      "publishedAt": "2026-04-10T10:00:01Z",
+      "content": "The New York Giants are on an upward trajectory, if for no other reason than their hiring of Super Bowl-winning head coach John Harbaugh. There's a certain credibility and gravitas Harbaugh brings to… [+5101 chars]",
+      "category": "sports"
+    },
+    {
+      "source_name": "Flickering Myth",
+      "source_id": null,
+      "author": null,
+      "title": "Movie Review – Thrash (2026) - Flickering Myth",
+      "description": null,
+      "url": "https://www.flickeringmyth.com/movie-review-thrash-2026/",
+      "urlToImage": null,
+      "publishedAt": "2026-04-10T09:45:22Z",
+      "content": "Description: Group Number: Group Name: Ip Address: Username: Computer Name:",
+      "category": "entertainment"
+    },
+    {
+      "source_name": "Android Authority",
+      "source_id": null,
+      "author": null,
+      "title": "5 Android phones you should buy instead of the Samsung Galaxy A57 - Android Authority",
+      "description": "The Galaxy A57 is a really solid Android deal at just $550. But for some people, these five other phones might be better options.",
+      "url": "https://www.androidauthority.com/samsung-galaxy-a57-alternatives-3655627/",
+      "urlToImage": "https://www.androidauthority.com/wp-content/uploads/2026/04/Samsung-Galaxy-A57-back.jpg",
+      "publishedAt": "2026-04-10T09:37:10Z",
+      "content": "The Galaxy A57 officially went on sale this week as Samsungs latest mid-range Android phone. And you know what? It looks pretty solid. For $550, the A57 offers a big AMOLED display, a decent chipset,… [+7001 chars]",
+      "category": "technology"
+    },
     {
       "source_name": "Gamingbible.com",
       "source_id": null,
@@ -19,18 +307,6 @@
       "category": "technology"
     },
     {
-      "source_name": "The Verge",
-      "source_id": "the-verge",
-      "author": "Tom Warren",
-      "title": "Microsoft starts removing Copilot buttons from Windows 11 apps - The Verge",
-      "description": "Microsoft is removing unnecessary Copilot buttons from Windows 11 apps. Notepad no longer has a Copilot button, as part of plans to fix Windows 11.",
-      "url": "https://www.theverge.com/news/909640/microsoft-removing-copilot-windows-11-buttons",
-      "urlToImage": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/04/copilotbutton.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
-      "publishedAt": "2026-04-10T09:22:06Z",
-      "content": "<ul><li></li><li></li><li></li></ul>\r\nThe unnecessary Copilot buttons are disappearing from Notepad, Snipping Tool, Photos, and Widgets.\r\nThe unnecessary Copilot buttons are disappearing from Notepad… [+2465 chars]",
-      "category": "technology"
-    },
-    {
       "source_name": "Bloomberg",
       "source_id": "bloomberg",
       "author": "Luca Casiraghi, Antonio Vanuzzo, Giulia Morpurgo, Angelina Rascouet",
@@ -40,7 +316,19 @@
       "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iVs6w5kWYqF4/v0/1200x800.jpg",
       "publishedAt": "2026-04-10T09:10:51Z",
       "content": "Stefano Gabbana resigned as chairman of Dolce &amp; Gabbana and is considering options for his stake in the Italian fashion company ahead of negotiations with its bank lenders. \r\nGabbana, 63, who fou… [+210 chars]",
-      "category": "entertainment"
+      "category": "business"
+    },
+    {
+      "source_name": "The Conversation Africa",
+      "source_id": null,
+      "author": "Jennifer Botha, Julien Benoit, Vincent Fernandez",
+      "title": "Embryo fossil found in South Africa is world’s oldest proof that mammal ancestors laid eggs - The Conversation",
+      "description": "A detailed scan of a fossil therapsid embryo reveals the oldest egg belonging to a mammalian ancestor.",
+      "url": "https://theconversation.com/embryo-fossil-found-in-south-africa-is-worlds-oldest-proof-that-mammal-ancestors-laid-eggs-277673",
+      "urlToImage": "https://images.theconversation.com/files/727119/original/file-20260330-69-puembz.jpg?ixlib=rb-4.1.0&rect=0%2C18%2C9449%2C4724&q=45&auto=format&w=1356&h=668&fit=crop",
+      "publishedAt": "2026-04-10T09:06:15Z",
+      "content": "Between 280 and 200 million years ago, a group of animals evolved which would eventually give rise to mammals, including humans: the therapsids. They were first described more than 150 years ago, bas… [+5639 chars]",
+      "category": "science"
     },
     {
       "source_name": "NBC News",
@@ -91,18 +379,6 @@
       "category": "business"
     },
     {
-      "source_name": "Business Insider",
-      "source_id": "business-insider",
-      "author": "Charles Rollet",
-      "title": "Visa is burning through nearly 2 trillion AI tokens a month — and rewarding employees for building faster - Business Insider",
-      "description": "AI usage is surging at Visa, almost doubling in just a few weeks, says its president of technology Rajat Taneja.",
-      "url": "https://www.businessinsider.com/visa-says-its-burning-through-one-trillion-ai-tokens-month-2026-4",
-      "urlToImage": "https://i.insider.com/69d6e379cc468aeec524d267?width=1200&format=jpeg",
-      "publishedAt": "2026-04-10T09:00:00Z",
-      "content": "'Tokenmaxxing' or the controversial practice of showing off how many AI tokens you spend is taking off outside Silicon Valley.\r\nVisa, the world's largest payments company, is spending 1.9 trillion to… [+2447 chars]",
-      "category": "business"
-    },
-    {
       "source_name": "cleveland.com",
       "source_id": null,
       "author": "Dan Labbe, cleveland.com",
@@ -113,6 +389,18 @@
       "publishedAt": "2026-04-10T09:00:00Z",
       "content": "CLEVELAND, Ohio -- NFL Draft season has reached its turning point, from the March-April slog to the moment when you realize there are only two weeks left and this thing is happening soon.\r\nThe Browns… [+6268 chars]",
       "category": "sports"
+    },
+    {
+      "source_name": "Android Authority",
+      "source_id": null,
+      "author": null,
+      "title": "Google's working on a great Android feature to save you from 'storage full' struggles - Android Authority",
+      "description": "Google is working on an Automatic backup feature that can copy your phone's photos, videos, and audio to your PC without using cloud storage.",
+      "url": "https://www.androidauthority.com/android-storage-new-automatic-pc-backup-feature-3656481/",
+      "urlToImage": "https://www.androidauthority.com/wp-content/uploads/2025/04/Close-up_of_storage_settings_on_an_Android_phone-scaled.jpg",
+      "publishedAt": "2026-04-10T08:33:10Z",
+      "content": "<ul><li>Google is working on an Automatic backup feature that can copy your phones photos, videos, and audio to your PC without using cloud storage.</li><li>The feature appears in Quick Share setting… [+2675 chars]",
+      "category": "technology"
     },
     {
       "source_name": "NBCSports.com",
@@ -142,48 +430,12 @@
       "source_name": "NPR",
       "source_id": null,
       "author": "The Associated Press",
-      "title": "Hip-hop pioneer Afrika Bambaataa dies at age 68 - NPR",
-      "description": "Afrika Bambaataa, a man widely considered one of the main pioneers of hip-hop, died in Pennsylvania of prostate cancer on Thursday, according to his lawyer.",
-      "url": "https://www.npr.org/2026/04/10/nx-s1-5780575/hip-hop-pioneer-afrika-bambaataa-dies-obituary",
-      "urlToImage": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/1736x977+0+90/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F07%2F47%2Fd4ecf4e149518a7be28851aba7c1%2Fap26099714188275.jpg",
-      "publishedAt": "2026-04-10T07:47:42Z",
-      "content": "Afrika Bambaataa, a man widely considered one of the main pioneers of hip-hop, died in Pennsylvania of prostate cancer on Thursday, according to his lawyer. He was 68.\r\nBambaataa's sudden death was m… [+4367 chars]",
-      "category": "entertainment"
-    },
-    {
-      "source_name": "NPR",
-      "source_id": null,
-      "author": "The Associated Press",
       "title": "Well-timed bets on Polymarket tied to the Iran war draw calls for investigations from lawmakers - NPR",
       "description": "Calls are increasing inside Congress for investigations into the prediction market platform Polymarket after the latest instance where groups of anonymous traders made strategic, well-timed bets on a major geopolitical event hours before it occurred.",
       "url": "https://www.npr.org/2026/04/10/nx-s1-5780569/betting-polymarket-iran-investigation-lawmakers",
       "urlToImage": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/6438x3621+0+335/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F25%2F0a%2F52f7799640e7abf148852ce4de71%2Fap26099663578389.jpg",
       "publishedAt": "2026-04-10T07:33:15Z",
       "content": "NEW YORK Calls are increasing inside Congress for investigations into the prediction market platform Polymarket after the latest instance where groups of anonymous traders made strategic, well-timed … [+4845 chars]",
-      "category": "business"
-    },
-    {
-      "source_name": "Polygon",
-      "source_id": "polygon",
-      "author": "Jesse Hassenger",
-      "title": "Shark-infested floodwaters are the new haunted houses in this Netflix thriller - Polygon.com",
-      "description": "The shark-attack movie Thrash feels like a brainstorming session for sequels to the superior Crawl, but at least it moves quickly and efficiently.",
-      "url": "https://www.polygon.com/thrash-review-netflix-shark-thriller/",
-      "urlToImage": "https://static0.polygonimages.com/wordpress/wp-content/uploads/2026/04/thrash-1.jpg?w=1600&h=900&fit=crop",
-      "publishedAt": "2026-04-10T07:01:20Z",
-      "content": "Typically, it takes years of neglect for a house to really look haunted, whether or not it actually has ghosts lurking around every corner. Nature, however, can get that job done with greater, terrif… [+4740 chars]",
-      "category": "entertainment"
-    },
-    {
-      "source_name": "Fortune",
-      "source_id": "fortune",
-      "author": "Nick Lichtenberg",
-      "title": "'Good for Russia, good for China, bad for America': how the Iran war is reshaping global economies and power - Fortune",
-      "description": "Stagflation, unemployment, recession: The Iran war is rewriting the global economy and the damage may be permanent.",
-      "url": "https://fortune.com/2026/04/10/what-will-world-economy-look-like-after-iran-war-china-russia-win/",
-      "urlToImage": "https://fortune.com/img-assets/wp-content/uploads/2026/04/GettyImages-2261059706-e1775765284785.jpg?resize=1200,600",
-      "publishedAt": "2026-04-10T07:00:00Z",
-      "content": "The missiles may eventually stop for good. Oil tankers will once again pass through the Strait of Hormuz. But even if the tenuous two-week ceasefire gives way to a lasting end to hostilities, the wor… [+13840 chars]",
       "category": "business"
     },
     {
@@ -197,30 +449,6 @@
       "publishedAt": "2026-04-10T06:39:48Z",
       "content": "The U.S. Postal Service said Thursday it has informed federal budget officials it will temporarily suspend its employer contributions to Federal Employees Retirement System annuities, allowing it to … [+3025 chars]",
       "category": "business"
-    },
-    {
-      "source_name": "DogTime",
-      "source_id": null,
-      "author": "Suushmmita Sen",
-      "title": "Golden Retriever Puppy Soaks up a Magical Moment in Brother’s Arms - Yahoo",
-      "description": "When kids form a bond with a fur baby, their moments turn magical. This viral Instagram video brings out the exact emotion. It shows a Golden Retriever puppy...",
-      "url": "https://dogtime.com/news/213564-golden-retriever-puppy-brother-hummingbirds-video-wholesome",
-      "urlToImage": "https://s.yimg.com/os/en/dog_time_927/05e6ed28d92ff5e8d193eae600701502",
-      "publishedAt": "2026-04-10T06:22:00Z",
-      "content": "When kids form a bond with a fur baby, their moments turn magical. This viral Instagram video brings out the exact emotion. It shows a Golden Retriever puppy named Maple bird watching in her brothers… [+1655 chars]",
-      "category": "health"
-    },
-    {
-      "source_name": "Hollywood Reporter",
-      "source_id": null,
-      "author": null,
-      "title": "'The Devil Wears Prada 2' to Kick Off Summer Box Office in High Style - The Hollywood Reporter",
-      "description": null,
-      "url": "https://www.hollywoodreporter.com/movies/movie-news/devil-wears-prada-2-summer-box-office-high-style-1236560947/",
-      "urlToImage": null,
-      "publishedAt": "2026-04-10T06:09:13Z",
-      "content": "{\"en\":{\"access_disabled\":\"Internet access has been disabled on this device\",\"code\":\"Code\",\"custom_block_list\":\"it is on a custom block list\",\"email\":\"Email\",\"file_ext_blocked\":\"the file extension is … [+5417 chars]",
-      "category": "entertainment"
     },
     {
       "source_name": "Silver Screen and Roll ",
@@ -319,30 +547,6 @@
       "category": "entertainment"
     },
     {
-      "source_name": "Bloomberg",
-      "source_id": "bloomberg",
-      "author": "Weilun Soon",
-      "title": "Japanese Tankers Head Closer to Hormuz as More Ships Gather - Bloomberg.com",
-      "description": "Two Japanese crude tankers are heading east along the Persian Gulf in the direction of the Strait of Hormuz, adding to a growing number of vessels gathered at the entrance to the waterway during a US-Iran ceasefire, even as President Donald Trump ramps up cri…",
-      "url": "https://www.bloomberg.com/news/articles/2026-04-10/japanese-tankers-head-toward-hormuz-strait-as-more-ships-gather",
-      "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i0T0MaeyVHyU/v0/1200x799.jpg",
-      "publishedAt": "2026-04-10T04:20:00Z",
-      "content": "Two Japanese crude tankers are heading east along the Persian Gulf in the direction of the Strait of Hormuz, adding to a growing number of vessels gathered at the entrance to the waterway during a US… [+430 chars]",
-      "category": "general"
-    },
-    {
-      "source_name": "Associated Press",
-      "source_id": "associated-press",
-      "author": "Devi Shastri, Laura Ungar",
-      "title": "Too young for the MMR shot, babies become ‘sitting ducks’ in measles outbreaks - AP News",
-      "description": "Babies too young to be vaccinated are among the most vulnerable in measles outbreaks like the one in South Carolina, which is the largest the U.S. has seen in decades. Babies lack protection against the disease and are more likely to suffer severe complicatio…",
-      "url": "https://apnews.com/article/measles-vaccines-mmr-babies-south-carolina-outbreak-85b2ab8ec8baec808f258987b13af9dc",
-      "urlToImage": "https://dims.apnews.com/dims4/default/17766cd/2147483647/strip/true/crop/6000x3998+0+1/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F98%2F4e%2F536ff570a1e4db4c22a66145ac0b%2Fe46e5fa3733749fea29e5912e7c7e5c4",
-      "publishedAt": "2026-04-10T04:15:00Z",
-      "content": "LANDRUM, South Carolina (AP) With baby Arthur too young for the measles vaccine and a sibling due in June, the Otwells grew nervous when the threat of the highly contagious virus started factoring in… [+7962 chars]",
-      "category": "general"
-    },
-    {
       "source_name": "Eatingwell.com",
       "source_id": null,
       "author": "Carrie Myers, M.S.",
@@ -352,6 +556,18 @@
       "urlToImage": "https://s.yimg.com/ny/api/res/1.2/IAihQaUVt1SxedOanxKf8A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MTA-/https://media.zenfs.com/en/aol_eating_well_articles_739/1539dc3239d181755788dbb980220266",
       "publishedAt": "2026-04-10T04:06:16Z",
       "content": "Reviewed by Dietitian Mandy Enright, M.S., RDN, RYT\r\n<ul><li>A study found that people with type 2 diabetes tend to be deficient in several micronutrients.\r\n</li><li>Vitamin D, vitamin B12 and magnes… [+6962 chars]",
+      "category": "health"
+    },
+    {
+      "source_name": "SciTechDaily",
+      "source_id": null,
+      "author": null,
+      "title": "Scientists Say This Natural Hormone Reverses Obesity by Targeting the Brain - SciTechDaily",
+      "description": "A newly studied hormone is revealing an unexpected connection between metabolism and the brain. A hormone that can reverse obesity in mice is offering new clues about how the brain controls body weight. Researchers at the University of Oklahoma found that FGF…",
+      "url": "https://scitechdaily.com/?p=515805",
+      "urlToImage": "https://scitechdaily.com/images/Brain-Obesity-Weight-Loss.jpg",
+      "publishedAt": "2026-04-10T04:05:40Z",
+      "content": "Researchers have uncovered how a naturally occurring hormone influences body weight by acting on a specific brain circuit linked to metabolism. The discovery reveals an unexpected overlap with pathwa… [+3530 chars]",
       "category": "health"
     },
     {
@@ -365,6 +581,18 @@
       "publishedAt": "2026-04-10T04:05:00Z",
       "content": "This is absolutely ridiculous.\r\nThe correct and perfect kind of absolutely ridiculous, mind you.\r\nI am glad to see GW showing their goofy side for once again. I have severely disliked the path they h… [+279 chars]",
       "category": "technology"
+    },
+    {
+      "source_name": "TribLIVE",
+      "source_id": null,
+      "author": "Tim Benz",
+      "title": "Tim Benz’s NFL Draft preview: Steelers should feel the need … the need for speed in secondary - TribLIVE.com",
+      "description": "The 2026 NFL Draft takes place April 23-25, in Pittsburgh. &ldquo;Breakfast with Benz&rdquo; is previewing the Steelers&rsquo; potential selections at each position group with Matt Williamson, a former pro and college scout who has worked at Pitt and with the…",
+      "url": "https://triblive.com/sports/tim-benzs-nfl-draft-preview-steelers-should-feel-the-need-the-need-for-speed-in-secondary/",
+      "urlToImage": "https://assets-varnish.triblive.com/2026/04/9452785_web1_AP25306138320989.jpg",
+      "publishedAt": "2026-04-10T04:04:56Z",
+      "content": "The 2026 NFL Draft takes place April 23-25, in Pittsburgh. “Breakfast with Benz” is previewing the Steelers’ potential selections at each position group with Matt Williamson, a former pro and college… [+4302 chars]",
+      "category": "sports"
     },
     {
       "source_name": "Medical Xpress",
@@ -391,6 +619,18 @@
       "category": "health"
     },
     {
+      "source_name": "GoodHousekeeping.com",
+      "source_id": null,
+      "author": "Brittany Burke Robert",
+      "title": "What Really Happens to Your Body a Week After You Stop Drinking - AOL.com",
+      "description": "From weight loss and skin improvement, these are the top health side effects/benefits of what happens to your body when you quit alcohol, according to doctor...",
+      "url": "https://www.goodhousekeeping.com/health/a70396122/what-happens-when-you-stop-drinking-alcohol/",
+      "urlToImage": "https://s.yimg.com/ny/api/res/1.2/qjo0ezYO41bs4iZE.ClCwA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD0xMDg4/https://media.zenfs.com/en/aol_good_housekeeping_154/225b438037a0e4c08d2c71d3acf5dd6e",
+      "publishedAt": "2026-04-10T03:18:21Z",
+      "content": "If youre thinking about joining the #SoberCurious movement, youre not alone. There are currently more than 939,000 uses of the hashtag on Instagram. More and more people are considering giving up alc… [+9315 chars]",
+      "category": "health"
+    },
+    {
       "source_name": "Forbes",
       "source_id": null,
       "author": "Penny Abeywardena",
@@ -400,31 +640,7 @@
       "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/69d84ef13b61339c08490642/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
       "publishedAt": "2026-04-10T02:52:56Z",
       "content": "IN SPACE - APRIL 07: by NASA, The Artemis II crew (Photo by NASA via Getty Images)\r\nNASA via Getty Images\r\nSomething genuinely pure is happening on the internet this week. People are obsessed. Not ov… [+12856 chars]",
-      "category": "science"
-    },
-    {
-      "source_name": "ScienceAlert",
-      "source_id": null,
-      "author": "The Conversation",
-      "title": "Strange Microbes Found in Shark Bay Could Reveal How Complex Life Began - ScienceAlert",
-      "description": "On the shores of the west coast of Australia lies a window to our past: the stromatolites and microbial mats of Gathaagudu (Shark Bay).",
-      "url": "https://www.sciencealert.com/strange-microbes-found-in-shark-bay-could-reveal-how-complex-life-began",
-      "urlToImage": "https://www.sciencealert.com/images/2026/04/Microscopic-image-of-newly-discovered-Asgard-archaeon.jpg",
-      "publishedAt": "2026-04-10T02:50:37Z",
-      "content": "On the shores of the west coast of Australia lies a window to our past: the stromatolites and microbial mats of Gathaagudu (Shark Bay).\r\nTo the untrained eye they look like a collection of rocks and … [+5475 chars]",
-      "category": "science"
-    },
-    {
-      "source_name": "Soxmachine.com",
-      "source_id": null,
-      "author": "Jim Margalus",
-      "title": "White Sox 2, Royals 0: Anthony Kay solves The K - Sox Machine",
-      "description": "For the first time in 15 tries, the White Sox have won a game in Kansas City. “I don’t even know about that,” said Edgar Quero. “As they say, we’ve lost a lot of games straight here and finally we get a W,” said Seranthony Domínguez, who seemed…recently infor…",
-      "url": "https://soxmachine.com/2026/04/white-sox-2-royals-0-anthony-kay-solves-the-k",
-      "urlToImage": "https://lede-admin.soxmachine.com/wp-content/uploads/sites/62/2019/03/widget-soxwin.png",
-      "publishedAt": "2026-04-10T02:39:00Z",
-      "content": "For the first time in 15 tries, the White Sox have won a game in Kansas City.\r\n\"I don't even know about that,\" said Edgar Quero.\r\n\"As they say, we've lost a lot of games straight here and finally we … [+6105 chars]",
-      "category": "sports"
+      "category": "general"
     },
     {
       "source_name": "PhillyVoice.com",
@@ -436,6 +652,30 @@
       "urlToImage": "https://media.phillyvoice.com/media/images/USATSI_28695330.57c64181.fill-1200x630-c0.jpg",
       "publishedAt": "2026-04-10T02:32:57Z",
       "content": "It is difficult to recall many days in the recent history of the Sixers as rough as Thursday, April 9.\r\nDisaster had ensued before the Sixers could even get on the floor for their most important game… [+7141 chars]",
+      "category": "sports"
+    },
+    {
+      "source_name": "Science Daily",
+      "source_id": null,
+      "author": null,
+      "title": "Goodbye colonoscopy? New stool test detects 90% of colorectal cancers - ScienceDaily",
+      "description": "A breakthrough in microbiome research could change how colorectal cancer is detected—no colonoscopy required. Scientists used AI to map gut bacteria at an unprecedented level of detail, revealing subtle microbial patterns linked to cancer. By analyzing simple…",
+      "url": "https://www.sciencedaily.com/releases/2026/04/260409221823.htm",
+      "urlToImage": "https://www.sciencedaily.com/images/1920/colon-cancer-bacteria-viruses.webp",
+      "publishedAt": "2026-04-10T02:25:25Z",
+      "content": "Colorectal cancer is the second leading cause of cancer-related deaths worldwide. When caught early, it is often highly treatable. However, colonoscopies -- the primary screening method used today --… [+3965 chars]",
+      "category": "health"
+    },
+    {
+      "source_name": "New York Daily News",
+      "source_id": null,
+      "author": "Kristian Winfield",
+      "title": "Knicks outlast Celtics, 112-106, after Jaylen Brown demands revenge - New York Daily News",
+      "description": "New York survived Boston’s attempt at vengeance on Thursday in a 112-106 victory.",
+      "url": "https://www.nydailynews.com/2026/04/09/knicks-celtics-jaylen-brown-jayson-tatum-nba-jalen-brunson-playoffs/",
+      "urlToImage": "https://www.nydailynews.com/wp-content/uploads/2026/04/AP26100076147038.jpg?w=1024&h=653",
+      "publishedAt": "2026-04-10T02:13:53Z",
+      "content": "Jaylen Brown wants all the smoke. The Knicks have it, and more, for the Boston Celtics.\r\nIts been roughly 11 months since the Knicks and Celtics met in the second round of the Eastern Conference play… [+4968 chars]",
       "category": "sports"
     },
     {
@@ -475,6 +715,18 @@
       "category": "sports"
     },
     {
+      "source_name": "hoopsrumors.com",
+      "source_id": null,
+      "author": "Luke Adams",
+      "title": "Joel Embiid Diagnosed With Appendicitis, Undergoes Surgery - Hoops Rumors",
+      "description": "The Sixers center was originally ruled out for Thursday's game with an illness before his diagnosis was updated.",
+      "url": "https://www.hoopsrumors.com/2026/04/joel-embiid-diagnosed-with-appendicitis-will-undergo-surgery.html",
+      "urlToImage": "https://cdn.hoopsrumors.com/files/2026/02/Joel-Embiid1-900x601.jpg",
+      "publishedAt": "2026-04-10T01:28:00Z",
+      "content": "7:28 pm: Embiid’s appendectomy was successful, the Sixers announced (Twitter link).\r\n2:34 pm: After initially ruling out Joel Embiid for Thursday’s game against the Rockets due to an illness, the Six… [+2343 chars]",
+      "category": "sports"
+    },
+    {
       "source_name": "New York Post",
       "source_id": null,
       "author": "Brian Costello",
@@ -499,6 +751,18 @@
       "category": "entertainment"
     },
     {
+      "source_name": "Womansworld.com",
+      "source_id": null,
+      "author": "Kristina Mastrocola",
+      "title": "How To Measure Your Blood Pressure at Home—Are You Making These Mistakes? - AOL.com",
+      "description": "A powerful tool for managing your blood pressure is surprisingly simple: a home blood pressure monitor. Checking your numbers regularly at home gives you and...",
+      "url": "https://www.womansworld.com/wellness/heart-health/how-to-measure-your-blood-pressure-at-home-more-accurately",
+      "urlToImage": "https://s.yimg.com/os/en/aol_womans_world_388/57a6dfc756928618d96c265897133051",
+      "publishedAt": "2026-04-10T01:03:37Z",
+      "content": "A powerful tool for managing your blood pressureis surprisingly simple: a home blood pressure monitor. Checking your numbers regularly at home gives you and your doctor or care team a much clearer pi… [+5595 chars]",
+      "category": "health"
+    },
+    {
       "source_name": "The Washington Post",
       "source_id": "the-washington-post",
       "author": "Brady Dennis",
@@ -508,7 +772,7 @@
       "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/HAYQ6JJ4OFDM33MZ65GYIAG2KM_size-normalized.jpg&w=1440",
       "publishedAt": "2026-04-10T01:00:00Z",
       "content": "The global wildlife trade a massive industry encompassing exotic pets, trophy hunting, materials used in fashion and more is amplifying the transmission of pathogensbetween animals and humans, accord… [+34 chars]",
-      "category": "general"
+      "category": "health"
     },
     {
       "source_name": "Ars Technica",
@@ -521,78 +785,6 @@
       "publishedAt": "2026-04-10T00:55:51Z",
       "content": null,
       "category": "science"
-    },
-    {
-      "source_name": "UM Hoops",
-      "source_id": null,
-      "author": "Dylan Burkhardt",
-      "title": "Elliot Cadeau agrees to deal to return to Michigan for senior season - UM Hoops.com",
-      "description": "Fresh off his Most Outstanding Player honors at the Final Four, Elliot Cadeau is going to run it back in Ann Arbor for his final season. ESPN’s Pete Thamel first reported the news that Cadeau was returning. Cadeau averaged 10.5 points, 5.9 assists, and 2.7 re…",
-      "url": "https://umhoops.com/2026/04/09/elliot-cadeau-agrees-to-deal-to-return-to-michigan-for-senior-season/",
-      "urlToImage": "https://cdn.umhoops.com/wp-content/uploads/2026/04/07005434/Michigan-69-UConn-63-34-1000x600.jpg",
-      "publishedAt": "2026-04-10T00:45:47Z",
-      "content": "Fresh off his Most Outstanding Player honors at the Final Four, Elliot Cadeau is going to run it back in Ann Arbor for his final season.\r\nESPN’s Pete Thamel first reported the news that Cadeau was re… [+494 chars]",
-      "category": "sports"
-    },
-    {
-      "source_name": "MLB.com",
-      "source_id": null,
-      "author": null,
-      "title": "How the first 11 picks of the 2026 Draft could look - MLB.com",
-      "description": "Can you feel it? We've hit that sweet-spot time of year. Spring has officially greeted us with those 'leave the jacket in the closet' temps, the Majors and the full-season Minor League levels are in full swing, and college baseball teams are gearing up for th…",
-      "url": "https://www.mlb.com/news/projecting-top-picks-2026-mlb-draft",
-      "urlToImage": "https://img.mlbstatic.com/mlb-images/image/upload/t_2x1/t_w1536/mlb/nl6kkskbbdmlrdcw4ais.jpg",
-      "publishedAt": "2026-04-10T00:44:20Z",
-      "content": "Can you feel it? We've hit that sweet-spot time of year. Spring has officially greeted us with those 'leave the jacket in the closet' temps, the Majors and the full-season Minor League levels are in … [+7449 chars]",
-      "category": "sports"
-    },
-    {
-      "source_name": "TheGamer",
-      "source_id": null,
-      "author": "Johnny Flores Jr.",
-      "title": "For The First Time, A Denuvo Game From 2026 Has Been Fully Cracked By Pirates - TheGamer",
-      "description": "It's the first title from 2026 to be fully cracked by pirates.",
-      "url": "https://www.thegamer.com/resident-evil-requiem-cracked/",
-      "urlToImage": "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2026/03/resident-evil-requiem-story-guide-what-you-need-to-know-parry-1920x1080-c449188cda60.jpg?w=1600&h=900&fit=crop",
-      "publishedAt": "2026-04-10T00:44:00Z",
-      "content": "In another landmark achievement in the world of video game piracy, the first title released in 2026 has been fully cracked by pirates. Resident Evil Requiem, a title that launched just 41 days ago, h… [+2173 chars]",
-      "category": "technology"
-    },
-    {
-      "source_name": "Associated Press",
-      "source_id": "associated-press",
-      "author": "Kristie Rieken",
-      "title": "Joel Embiid has appendectomy, leaving former MVP’s status for postseason in doubt - AP News",
-      "description": "Joel Embiid had an appendectomy in Houston after Philadelphia’s star big man was stricken with appendicitis overnight. The team announced that the surgery had been completed Thursday night as the 76ers were playing the Houston Rockets. Coach Nick Nurse did no…",
-      "url": "https://apnews.com/article/76ers-embiid-appendicitis-26b2f62c0531faa75fa09ff33adaf0be",
-      "urlToImage": "https://dims.apnews.com/dims4/default/b05f767/2147483647/strip/true/crop/3345x2229+0+1/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F06%2F86%2F5af2a11df7845f5c88bf18d900be%2F31b660fed7ba434ebab927f1f1b5fc15",
-      "publishedAt": "2026-04-10T00:42:00Z",
-      "content": "HOUSTON (AP) Joel Embiid had an appendectomy in Houston on Thursday after Philadelphias star big man was stricken with appendicitis overnight.\r\nThe team announced that the surgery had been completed … [+2604 chars]",
-      "category": "sports"
-    },
-    {
-      "source_name": "Bleacher Report",
-      "source_id": "bleacher-report",
-      "author": "Zach Bachar",
-      "title": "Masters Cut Line 2026 Projections After Thursday's Leaderboard Analysis - Bleacher Report",
-      "description": "Sam Burns and Rory McIlroy stood tied atop the leaderboard at five-under-par 67 following the first round of the 2026 Masters on Thursday at Augusta National Golf Club.",
-      "url": "https://bleacherreport.com/articles/25416324-masters-cut-line-2026-projections-after-thursdays-leaderboard-analysis",
-      "urlToImage": "https://gsp-image-cdn.wmsports.io/cms/prod/bleacher-report/getty_images/2026-04/2270618924_large_cropped.jpg?w=3800&h=2000",
-      "publishedAt": "2026-04-10T00:33:54Z",
-      "content": "Sam Burns and Rory McIlroy stood tied atop the leaderboard at five-under-par 67 following the first round of the 2026 Masters on Thursday at Augusta National Golf Club.\r\nMeanwhile, several players ar… [+1392 chars]",
-      "category": "sports"
-    },
-    {
-      "source_name": "Tampa Bay Times",
-      "source_id": null,
-      "author": "Nicolas Villamil, Nina Moske",
-      "title": "Money for Lightning, Yankees needed to meet Rays’ stadium ask: county - Tampa Bay Times",
-      "description": "Hillsborough County Administrator Bonnie Wise shared a document with commissioners outlining key elements of a potential Rays stadium deal.",
-      "url": "https://www.tampabay.com/news/2026/04/09/tampa-bay-rays-stadium-baseball-mlb-hillsborough-county/",
-      "urlToImage": "https://www.tampabay.com/resizer/v2/5IXVCHKED5HRNIFGF7QRO5YXPU.jpg?auth=77499f5927489e0ba9d0aaba1f27aa687bdb2c60c284de9a575c6b1e4c04f374&height=675&width=1200&smart=true",
-      "publishedAt": "2026-04-10T00:32:07Z",
-      "content": null,
-      "category": "sports"
     },
     {
       "source_name": "Thefp.com",
@@ -616,6 +808,18 @@
       "urlToImage": "https://ew.com/thmb/ENSNQGwx1bT_2RXBuIDcLNnTsyU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Ken-Jennings-Jamie-Ding-040926-32e9ff5c285d49ecb57bd3062f1c1b53.jpg",
       "publishedAt": "2026-04-10T00:17:58Z",
       "content": "It was a big day forJeopardy!champion Jamie Ding, as he won his 20th straight game, which is no small feat.\r\nThe self-described beaurocrat and law student from Lawrenceville, N.J., went into Thursday… [+2065 chars]",
+      "category": "entertainment"
+    },
+    {
+      "source_name": "Vulture",
+      "source_id": null,
+      "author": "Alejandra Gularte",
+      "title": "Did Love on the Spectrum’s Abbey and David Break Up? - Vulture",
+      "description": "Did Love on the Spectrum’s Abbey Romeo and David Isaacman break up? ‘The Sun’ reports the couple, who were together for five years, broke up over disagreements on marriage.",
+      "url": "http://www.vulture.com/article/abbey-david-breakup-love-on-the-spectrum.html",
+      "urlToImage": "https://pyxis.nymag.com/v1/imgs/377/0b3/06f7eec669ae1c0c86a60f0cad4b17154d-Love-on-the-Spectrum.1x.rsocial.w1200.jpg",
+      "publishedAt": "2026-04-09T23:49:23Z",
+      "content": "Love on the Spectrum follows love and dating, and sometimes with that comes breakups. Abbey Romeo and David Isaacman, who began dating in season one, have reportedly split, The Sun reports. Vulture r… [+1371 chars]",
       "category": "entertainment"
     },
     {
@@ -655,16 +859,16 @@
       "category": "health"
     },
     {
-      "source_name": "Indiandefencereview.com",
+      "source_name": "MacRumors",
       "source_id": null,
-      "author": "Emily Carter",
-      "title": "250-Million-Year-Old Fossil Confirms That Mammal Ancestors Laid Eggs, Solving a Long-Standing Mystery - Indian Defence Review",
-      "description": "A 250-million-year-old fossil of Lystrosaurus has uncovered new evidence that mammal ancestors, like this species, laid eggs.",
-      "url": "https://indiandefencereview.com/250-million-year-fossil-mammal-laid-eggs/",
-      "urlToImage": "https://indiandefencereview.com/wp-content/uploads/2026/04/250-million-year-old-fossil-confirms-that-mammal-ancestors-laid-eggs-solving-a-long-standing-mystery-scaled.png",
-      "publishedAt": "2026-04-09T23:21:21Z",
-      "content": "A 250-million-year-old fossil has just answered one of evolutions biggest mysteries. Long before modern mammals evolved, their distant ancestors were already reproducing in a radically different way,… [+5707 chars]",
-      "category": "science"
+      "author": "Juli Clover",
+      "title": "Mac OS X Cheetah Successfully Ported to Nintendo Wii - MacRumors",
+      "description": "Developer Bryan Keller was curious whether an old version of Apple's Mac operating system was capable of running on the Nintendo Wii after seeing...",
+      "url": "https://www.macrumors.com/2026/04/09/mac-os-x-cheetah-nintendo-wii/",
+      "urlToImage": "https://images.macrumors.com/t/nS2ZFDl4pvJ25DZrPMAZ7cAlZXY=/2000x/article-new/2026/04/os-x-cheetah-wii.jpg",
+      "publishedAt": "2026-04-09T23:25:41Z",
+      "content": "Developer Bryan Keller was curious whether an old version of Apple's Mac operating system was capable of running on the Nintendo Wii after seeing Windows NT ported to the gaming device, so he decided… [+1405 chars]",
+      "category": "technology"
     },
     {
       "source_name": "IGN",
@@ -677,18 +881,6 @@
       "publishedAt": "2026-04-09T23:19:36Z",
       "content": "A new report has claimed Marathons budget is over $200 million, and while player numbers have fallen significantly since launch, Bungies extraction shooter is allegedly not facing an imminent shutdow… [+4489 chars]",
       "category": "technology"
-    },
-    {
-      "source_name": "Sports Illustrated",
-      "source_id": null,
-      "author": "Will Ragatz",
-      "title": "Reacting to Some Wild Hypothetical Vikings NFL Draft Trade Ideas - Sports Illustrated",
-      "description": "Do any of these ideas from ESPN's Bill Barnwell and FOX Sports' Ralph Vacchiano make sense for Minnesota?",
-      "url": "https://www.si.com/nfl/vikings/onsi/news/reacting-some-wild-hypothetical-vikings-nfl-draft-trade-ideas",
-      "urlToImage": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_57,w_4784,h_2691/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/ImagnImages/mmsport/inside_the_vikings/01knsvxtzn050mk5gsa8.jpg",
-      "publishedAt": "2026-04-09T23:08:43Z",
-      "content": "The first thing to note here is that the trade ideas you're about to see are almost certainly not going to happen in real life. They're nothing more than fun hypothetical content from ESPN's Bill Bar… [+5260 chars]",
-      "category": "sports"
     },
     {
       "source_name": "Rolling Stone",
@@ -715,30 +907,6 @@
       "category": "business"
     },
     {
-      "source_name": "Billboard",
-      "source_id": null,
-      "author": "Hannah Dailey, Katie Atkinson",
-      "title": "BTS’ ‘ARIRANG’ Concert Setlist: Every Song From Night 1 at South Korea’s Goyang Stadium - Billboard",
-      "description": "BTS' concert setlist features 23 songs. Here's every track the band played on the 'ARIRANG' tour kickoff.",
-      "url": "http://www.billboard.com/lists/bts-setlist-every-song-arirang-tour-goyang-stadium/",
-      "urlToImage": "https://www.billboard.com/wp-content/uploads/2026/04/bts-goyang-stadium-2026-billboard-1800.jpg?w=1024",
-      "publishedAt": "2026-04-09T22:50:57Z",
-      "content": "After months of buildup, BTS finally kicked off its global tour in support of new album ARIRANG, performing in front of thousands of ARMY at Goyang Stadium in South Korea on Thursday (April 9).\r\nRM, … [+2571 chars]",
-      "category": "entertainment"
-    },
-    {
-      "source_name": "NHL News",
-      "source_id": "nhl-news",
-      "author": null,
-      "title": "Projected Lineup: April 9 at Chicago | Carolina Hurricanes - NHL.com",
-      "description": "Several Chicago Wolves standouts to skate for Carolina this evening",
-      "url": "https://www.nhl.com/hurricanes/news/projected-lineup-april-9-at-chicago",
-      "urlToImage": "https://media.d3.nhle.com/image/private/t_ratio16_9-size50/prd/egrpbifwwg5bpthapu1t.png",
-      "publishedAt": "2026-04-09T22:45:45Z",
-      "content": "CHICAGO - The Carolina Hurricanes will have \"significant players\" out of the lineup on Thursday when they skate against the Chicago Blackhawks.\r\nWith a division title already locked up, the Canes wou… [+2001 chars]",
-      "category": "sports"
-    },
-    {
       "source_name": "Medscape",
       "source_id": null,
       "author": "Richard Mark Kirkner",
@@ -751,64 +919,28 @@
       "category": "health"
     },
     {
-      "source_name": "Entertainment Weekly",
-      "source_id": "entertainment-weekly",
-      "author": "https://www.facebook.com/entertainmentweekly",
-      "title": "Melissa Etheridge recalls moment 11-year-old son came out to her as straight: ‘Mom, I’m sorry’ - Entertainment Weekly",
-      "description": "Melissa Etheridge laughed remembering when her 11-year-old son Beckett came out to her as straight",
-      "url": "https://ew.com/melissa-etheridge-recalls-moment-late-son-came-out-straight-11947055",
-      "urlToImage": "https://ew.com/thmb/c_N_-OmxUPoW09PjJfmiOcq8y_c=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/melissa-etheridge-beckett-2011-040826-d4aa1c82d76c4dd7aa3e4a3e7506f11f.jpg",
-      "publishedAt": "2026-04-09T22:39:48Z",
-      "content": "Melissa Etheridge stopped by The Kelly Clarkson Show to discuss her new album, when the topic of the autobiographical song \"Tomboy\" stirred up a fond memory of her late son Beckett.\r\nThe two singers … [+3133 chars]",
+      "source_name": "Yahoo Entertainment",
+      "source_id": null,
+      "author": "Kaitlin Reilly",
+      "title": "Nikki Glaser is OK with her boyfriend hooking up with other women. Why some experts say these relationships can totally work. - Yahoo",
+      "description": "As non-monogamy becomes more visible in pop culture, experts explain what people often misunderstand about open relationships and why communication and...",
+      "url": "https://www.yahoo.com/lifestyle/family-relationships/article/nikki-glaser-is-ok-with-her-boyfriend-hooking-up-with-other-women-why-some-experts-say-these-relationships-can-totally-work-221918556.html",
+      "urlToImage": "https://s.yimg.com/ny/api/res/1.2/P9WnxJHU6T7NO6gimSr7xw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU7Y2Y9d2VicA--/https://d29szjachogqwa.cloudfront.net/images/user-uploaded/thumb-nikki-glaser-boyfriend_8502.jpg",
+      "publishedAt": "2026-04-09T22:19:18Z",
+      "content": "Nikki Glaser would be totally OK with her boyfriend, TV producer Chris Convy, hooking up with other women.\r\nIn a relationship, I don't really care if my boyfriend were to hook up [with others],\" Glas… [+6641 chars]",
       "category": "entertainment"
     },
     {
-      "source_name": "New York Post",
+      "source_name": "Rolling Stone",
       "source_id": null,
-      "author": "Christian Arnold",
-      "title": "Jaguars GM asked about potential trade for Giants’ Dexter Lawrence - New York Post",
-      "description": "Jacksonville general manager James Gladstone was asked about potential interest in making a play for the veteran defensive tackle.",
-      "url": "https://nypost.com/2026/04/09/sports/jaguars-gm-asked-about-potential-trade-for-giants-dexter-lawrence/",
-      "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2026/04/newspress-collage-w57sqpl7m-1775772243439.jpg?quality=75&strip=all&1775757874&w=1200",
-      "publishedAt": "2026-04-09T22:34:00Z",
-      "content": "Trading for Dexter Lawrence may be catnip for some, but right now, for the Jaguars, it doesn’t appear to be. \r\nJacksonville general manager James Gladstone was asked about potential interest in makin… [+1866 chars]",
-      "category": "sports"
-    },
-    {
-      "source_name": "Sports Illustrated",
-      "source_id": null,
-      "author": "Chad Jensen",
-      "title": "The Prospect Broncos Fans Are Sleeping On at No. 62 - Sports Illustrated",
-      "description": "Don't be surprised if the Broncos call his name in Round 2.",
-      "url": "https://www.si.com/nfl/broncos/onsi/news/the-prospect-broncos-fans-are-sleeping-on-pick-62-aj-haulcy",
-      "urlToImage": "https://images2.minutemediacdn.com/image/upload/c_crop,x_335,y_101,w_1374,h_772/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/ImagnImages/mmsport/mile_high_huddle/01knt5gjtzbwq2d2vj63.jpg",
-      "publishedAt": "2026-04-09T22:32:34Z",
-      "content": "The Denver Broncos don't have any desperate roster needs entering the 2026 NFL draft, and that's a credit to GM George Paton and head coach Sean Payton. As a tandem, Paton and Payton have a great che… [+3859 chars]",
-      "category": "sports"
-    },
-    {
-      "source_name": "NBCSports.com",
-      "source_id": null,
-      "author": "Michael David Smith",
-      "title": "NFL announces 16 players will attend the 2026 NFL draft - NBC Sports",
-      "description": "Five Ohio State players made the list of those in attendance in Pittsburgh.",
-      "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-announces-16-players-will-attend-the-2026-nfl-draft",
-      "urlToImage": "https://nbcsports.brightspotcdn.com/dims4/default/9d43512/2147483647/strip/true/crop/5760x3240+0+300/resize/1440x810!/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2Ff2%2Fcb%2F1551e6b443069112caf75d1ea6df%2Fhttps-delivery-gettyimages.com%2Fdownloads%2F2244937753",
-      "publishedAt": "2026-04-09T22:31:45Z",
-      "content": "The NFL announced today that 16 prospects will attend the 2026 NFL draft.\r\nAmong those in attendance will be five players from Ohio State, spotlighting what an enormously talented roster the Buckeyes… [+842 chars]",
-      "category": "sports"
-    },
-    {
-      "source_name": "ESPN",
-      "source_id": "espn",
-      "author": null,
-      "title": "Bryson DeChambeau triples No. 11, cards 76 to open Masters - ESPN",
-      "description": "Bryson DeChambeau needed three shots to exit a greenside bunker on the 11th hole at Augusta National, and he never really recovered from that triple bogey in a first-round 76 at the Masters on Thursday.",
-      "url": "https://www.espn.com/golf/story/_/id/48442025/bryson-dechambeau-cards-76-rocky-masters-opening-round",
-      "urlToImage": "https://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0409%2Fr1641100_1296x729_16%2D9.jpg",
-      "publishedAt": "2026-04-09T22:09:00Z",
-      "content": "Apr 9, 2026, 06:09 PM ET\r\nAUGUSTA, Ga. -- Amen Corner put Bryson DeChambeau through the wringer again.\r\nDeChambeau needed three shots to exit a greenside bunker on the 11th hole at Augusta National, … [+2470 chars]",
-      "category": "sports"
+      "author": "Mosi Reeves",
+      "title": "Hip-Hop Pioneer Afrika Bambaataa Dead at 68 - rollingstone.com",
+      "description": "Afrika Bambaataa, the visionary DJ, rapper, producer, and activist and later faced multiple, widespread accusations of sexual abuse, has died at 68.",
+      "url": "http://www.rollingstone.com/music/music-news/afrika-bambaataa-dead-obituary-1234868031/",
+      "urlToImage": "https://www.rollingstone.com/wp-content/uploads/2026/04/afrika-bambaataa-obit.jpg?w=1600&h=900&crop=1",
+      "publishedAt": "2026-04-09T22:06:21Z",
+      "content": "Afrika Bambaataa, the visionary DJ, rapper, producer, and activist who became one of the first global hip-hop stars and later faced multiple, widespread accusations of child sexual abuse, died today … [+13472 chars]",
+      "category": "entertainment"
     },
     {
       "source_name": "Vulture",
@@ -859,16 +991,16 @@
       "category": "health"
     },
     {
-      "source_name": "TMZ",
+      "source_name": "Medical Xpress",
       "source_id": null,
-      "author": "TMZ Staff",
-      "title": "'Love on the Spectrum's Abbey Romeo & David Isaacman Split After Nearly 5 Years - TMZ",
-      "description": "Love might need a reality check ... 'cause Abbey Romeo and David Isaacman are reportedly done after nearly five years together.",
-      "url": "https://www.tmz.com/2026/04/09/abbey-romeo-david-isaacman-split-up/",
-      "urlToImage": "https://imagez.tmz.com/image/af/16by9/2026/04/09/afb30427c6324237af91e04e4254cc4f_xl.jpg",
-      "publishedAt": "2026-04-09T21:43:10Z",
-      "content": "Love might need a reality check ... 'cause Abbey Romeo and David Isaacman are reportedly done after nearly five years together.\r\nThe \"Love on the Spectrum\" fan faves have split, according to The Sun … [+520 chars]",
-      "category": "entertainment"
+      "author": "Medical Xpress",
+      "title": "AI model suggests CPAP can massively swing heart risk in sleep apnea - Medical Xpress",
+      "description": null,
+      "url": "https://medicalxpress.com/news/2026-04-ai-cpap-massively-heart-apnea.html",
+      "urlToImage": null,
+      "publishedAt": "2026-04-09T21:40:03Z",
+      "content": null,
+      "category": "health"
     },
     {
       "source_name": "TheStreet",
@@ -881,30 +1013,6 @@
       "publishedAt": "2026-04-09T21:37:00Z",
       "content": "Key Points\r\n<ul><li>Goldman moved its numbers in one direction but kept its risk warning pointing the other way</li><li>The ceasefire is already showing cracks and the bank anticipated exactly that s… [+4027 chars]",
       "category": "business"
-    },
-    {
-      "source_name": "PBS",
-      "source_id": null,
-      "author": null,
-      "title": "States are struggling to meet their clean energy goals. Blame data centers - PBS",
-      "description": "Nevada's largest utility says it will need three times the electricity required to power Las Vegas just to handle proposed data centers — and it probably can't do that without fossil fuels.",
-      "url": "https://www.pbs.org/newshour/nation/states-are-struggling-to-meet-their-clean-energy-goals-blame-data-centers",
-      "urlToImage": "https://d3i6fh83elv35t.cloudfront.net/static/2026/04/2025-12-10T121044Z_1823933565_RC2B2IA3YQWK_RTRMADP_3_USA-ENERGY-PERMITTING-1024x683.jpg",
-      "publishedAt": "2026-04-09T21:32:35Z",
-      "content": "LAS VEGAS (AP) Nevada's largest utility says it will need three times the electricity required to power Las Vegas just to handle proposed data centers and it probably can't do that without fossil fue… [+7116 chars]",
-      "category": "business"
-    },
-    {
-      "source_name": "Frontofficesports.com",
-      "source_id": null,
-      "author": "Yanyan Li",
-      "title": "Early Olympic Ticket Sales: Fans Met With High Prices, Tech Issues - Front Office Sports",
-      "description": "LA28 tickets went on sale Thursday for fans who previously registered in a ticket draw. It followed a presale for local residents.",
-      "url": "http://frontofficesports.com/early-olympic-ticket-sales-fans-met-with-high-prices-tech-issues/",
-      "urlToImage": "https://frontofficesports.com/wp-content/uploads/2026/04/USATSI_23083910_168420755_lowres-scaled-e1775769368259.jpg?quality=100",
-      "publishedAt": "2026-04-09T21:25:44Z",
-      "content": "Fans who hoped to get tickets this week for the 2028 Summer Olympics were met with high prices, sold out events, and technology glitches. \r\nThe presale for local residents and subsequent drop for all… [+4441 chars]",
-      "category": "sports"
     },
     {
       "source_name": "Gizmodo.com",
@@ -931,40 +1039,16 @@
       "category": "entertainment"
     },
     {
-      "source_name": "Abcnews.com",
+      "source_name": "PetaPixel",
       "source_id": null,
-      "author": "ABC News",
-      "title": "DOJ probing NFL over potential antitrust violations in TV deals, sources say - ABC News",
-      "description": null,
-      "url": "https://abcnews.com/Politics/doj-probing-nfl-potential-antitrust-violations-tv-deals/story?id\\\\u003d131889076",
-      "urlToImage": null,
-      "publishedAt": "2026-04-09T21:11:54Z",
-      "content": null,
-      "category": "sports"
-    },
-    {
-      "source_name": "Financial Times",
-      "source_id": null,
-      "author": "Alex Rogers, George Hammond",
-      "title": "xAI sues Colorado over first state AI anti-discrimination law - Financial Times",
-      "description": "Elon Musk’s AI lab claims the regulations violate free speech protections",
-      "url": "https://www.ft.com/content/55e8cba9-d09c-4f94-b710-4ab447b987f9?syn-25a6b1a6\\\\u003d1",
-      "urlToImage": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F82d5fee8-1c7d-4e78-aebf-2cda2255e98d.jpg?source=next-barrier-page",
-      "publishedAt": "2026-04-09T20:45:27Z",
-      "content": "Then $75 per month. Complete digital access to quality FT journalism on any device. Cancel anytime during your trial.",
-      "category": "business"
-    },
-    {
-      "source_name": "Financial Times",
-      "source_id": null,
-      "author": "Jamie Smyth, Verity Ratcliffe",
-      "title": "North Sea oil prices hit record high as Iran keeps hold over Strait of Hormuz - Financial Times",
-      "description": "Washington-Tehran ceasefire agreement fails to stem global energy crunch",
-      "url": "https://www.ft.com/content/f04ad855-81e3-49c5-827e-d3c4acb901c9?syn-25a6b1a6\\\\u003d1",
-      "urlToImage": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F4babff39-fcc7-4f0d-9843-96111a3b5840.jpg?source=next-barrier-page",
-      "publishedAt": "2026-04-09T20:18:16Z",
-      "content": "Then $75 per month. Complete digital access to quality FT journalism on any device. Cancel anytime during your trial.",
-      "category": "business"
+      "author": "Jeremy Gray",
+      "title": "NASA Captured the Artemis II Launch in Infrared and it Looks Awesome - PetaPixel",
+      "description": "Glorious infrared.",
+      "url": "https://petapixel.com/2026/04/09/nasa-captured-the-artemis-ii-launch-in-infrared-and-it-looks-awesome/",
+      "urlToImage": "https://petapixel.com/assets/uploads/2026/04/artemis-ii-infrared.jpg",
+      "publishedAt": "2026-04-09T21:07:39Z",
+      "content": "NASA continues to upload more media from its exciting Artemis II launch last week and ongoing lunar mission. Part of the latest batch of images is infrared still frames and videos from the Artemis II… [+3731 chars]",
+      "category": "science"
     },
     {
       "source_name": "Bloomberg",
@@ -977,6 +1061,18 @@
       "publishedAt": "2026-04-09T20:14:23Z",
       "content": "OpenAI told investors this week that its early push to dramatically increase computing resources gives it a key advantage over Anthropic PBC at a moment when its longtime rival is gaining ground and … [+475 chars]",
       "category": "business"
+    },
+    {
+      "source_name": "Nintendoeverything.com",
+      "source_id": null,
+      "author": null,
+      "title": "Early Punch-Out prototype surfaces, ROM shared online - Nintendo Everything",
+      "description": null,
+      "url": "https://nintendoeverything.com/early-punch-out-prototype-surfaces-rom-shared-online/",
+      "urlToImage": null,
+      "publishedAt": "2026-04-09T20:11:22Z",
+      "content": null,
+      "category": "technology"
     },
     {
       "source_name": "ABC15 Arizona",
@@ -1013,30 +1109,6 @@
       "publishedAt": "2026-04-09T20:00:00Z",
       "content": "Sunset Visitor got off to a mesmerizing start with its 2024 debut, 1000XResist, a sci-fi game that paired personal storytelling about being a first-generation immigrant with commentary on, well, basi… [+17081 chars]",
       "category": "technology"
-    },
-    {
-      "source_name": "Triangle Business Journal",
-      "source_id": null,
-      "author": "Eli Chavez",
-      "title": "Three Boston billionaires named to Forbes' Self-Made 250 list - The Business Journals",
-      "description": "Three Boston billionaires—Noubar Afeyan, Bill Cummings and Herb Chambers—made Forbes' new Self-Made 250 list recognizing self-made wealth creators.",
-      "url": "https://www.bizjournals.com/boston/news/2026/04/09/boston-billionaires-make-forbes-self-made-250-list.html",
-      "urlToImage": "https://media.bizj.us/view/img/11012669/cummingsbill02*1200xx5184-2922-0-138.jpg",
-      "publishedAt": "2026-04-09T19:58:00Z",
-      "content": "2026 Top Charitable Contributors List\r\nIs philanthropy an important initiative of your company? The Boston Business Journal will once again measure the impact of the business community's charitable-g… [+86 chars]",
-      "category": "entertainment"
-    },
-    {
-      "source_name": "Ringside News",
-      "source_id": null,
-      "author": "Subhojeet Mukherjee",
-      "title": "Chris Jericho Signed Multi-Year Contract With AEW - Ringside News",
-      "description": "Chris Jericho’s future has officially been locked in—and the real update here is now confirmed straight from Tony Khan. Following Chris Jericho's return",
-      "url": "https://www.ringsidenews.com/chris-jericho-signed-multi-year-contract-aew/",
-      "urlToImage": "https://www.ringsidenews.com/wp-content/uploads/2026/04/chris-jericho-signed-multi-year-contract-with-aew-12.jpg",
-      "publishedAt": "2026-04-09T19:57:23Z",
-      "content": "Chris Jerichos future has officially been locked inand the real update here is now confirmed straight from Tony Khan.\r\nFollowing Chris Jerichos return to AEW last week, Khan has now revealed during t… [+1527 chars]",
-      "category": "entertainment"
     },
     {
       "source_name": "Umn.edu",
@@ -1133,78 +1205,6 @@
       "publishedAt": "2026-04-09T19:00:00Z",
       "content": "Tofu has long been the OG plant-based protein since its a budget-friendly staple with plenty of culinary versatility. Tofu-haters may say its bland and boring, but the neutral flavor profile of tofu … [+4631 chars]",
       "category": "health"
-    },
-    {
-      "source_name": "Delish.com",
-      "source_id": null,
-      "author": "Allison Arnold, Gabby Romero",
-      "title": "What Happens When You Drink Wine Every Day? Health Experts Weigh In - AOL.com",
-      "description": "Health experts explain whether drinking wine every day is healthy, including cancer risk, heart health claims, and how much alcohol is too much.",
-      "url": "https://www.delish.com/food/a70966737/is-it-healthy-drinking-wine-every-day/",
-      "urlToImage": "https://s.yimg.com/ny/api/res/1.2/qzI2wStg2Moo7zlVCPyRXw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/en/aol_delish_448/c4ab2e53ec4679e1907cc5165be89788",
-      "publishedAt": "2026-04-09T18:39:09Z",
-      "content": "\"Hearst Magazines and Yahoo may earn commission or revenue on some items through these links.\"\r\nWinemaking is a tradition that has thrived for millennia, with evidence of the practice dating back as … [+4563 chars]",
-      "category": "health"
-    },
-    {
-      "source_name": "Riotgames.com",
-      "source_id": null,
-      "author": null,
-      "title": "Akali Brings the Smoke in Patch 1.1.5 - 2XKO",
-      "description": "Spotlighting the Rogue Assassin with community creations. Also, an update on how 1.1.5 is going.",
-      "url": "https://2xko.riotgames.com/en-us/news/announcements/akali-brings-the-smoke-in-patch-1-1-5/",
-      "urlToImage": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/8b67b74a60ce229516b73b419fcedee5667468f1-1920x1080.jpg?accountingTag=2XKO?w=1200&h=630&fm=webp&fit=crop&crop=center",
-      "publishedAt": "2026-04-09T18:09:17Z",
-      "content": "Akali header art by Lambsplash (Duy An)\r\nWelcome back to the Weekend Warmup. Akali teleported into 2XKO just two days ago, and weve already seen a huge outpouring of love and creativity from the FGC.… [+6329 chars]",
-      "category": "technology"
-    },
-    {
-      "source_name": "Gizmodo.com",
-      "source_id": null,
-      "author": "Passant Rabie",
-      "title": "Yellowstone’s Dreaded Supervolcano Has an Unexpected Power Source, Study Says - Gizmodo",
-      "description": "A new model suggests Yellowstone's underground magma is driven by tectonic forces that shape Earth's crust.",
-      "url": "https://gizmodo.com/yellowstones-dreaded-supervolcano-has-an-unexpected-power-source-study-says-2000744448",
-      "urlToImage": "https://gizmodo.com/app/uploads/2025/07/yellowstone-1200x675.jpg",
-      "publishedAt": "2026-04-09T18:00:45Z",
-      "content": "Beneath the geysers and steaming ground of Yellowstone National Park lies one of the most studied, yet still elusive, volcanic systems on Earth. Unlike most volcanoes that form along shifting tectoni… [+3434 chars]",
-      "category": "science"
-    },
-    {
-      "source_name": "Investor's Business Daily",
-      "source_id": null,
-      "author": null,
-      "title": "Amazon Rises Toward Key Level; CEO Says This Is 'On Fire' - Investor's Business Daily",
-      "description": "Andy Jassy touted growth for the tech giant's custom AI chips.",
-      "url": "https://www.investors.com/news/technology/amazon-stock-jassy-letter-2025-ai-chips-nvidia/",
-      "urlToImage": "https://www.investors.com/wp-content/uploads/2025/05/Stock-AIchip-motherboard-genAI-01-adobe.jpg",
-      "publishedAt": "2026-04-09T17:52:00Z",
-      "content": "Information in Investors Business Daily is for informational and educational purposes only and should not be construed as an offer, recommendation, solicitation, or rating to buy or sell securities. … [+1064 chars]",
-      "category": "business"
-    },
-    {
-      "source_name": "Tipranks.com",
-      "source_id": null,
-      "author": "Eddie Pan",
-      "title": "U.S. Mortgage Rates Ease Lower on U.S.-Iran Ceasefire - TipRanks",
-      "description": "The average 30-year fixed-rate mortgage (FRM) fell by 9 basis points this week to 6.38%, according to Freddie Mac. That marks the first drop in five weeks as rates cooled",
-      "url": "https://www.tipranks.com/news/u-s-mortgage-rates-ease-lower-on-u-s-iran-ceasefire",
-      "urlToImage": "https://blog.tipranks.com/wp-content/uploads/2026/03/shutterstock_2490316275-750x406.jpg",
-      "publishedAt": "2026-04-09T17:41:46Z",
-      "content": "Story Highlights<ul><li>The average 30-year fixed-rated mortgage fell from a six-month high this week.</li><li>Last month, a record 34.2% of home sellers lowered their prices.</li></ul>",
-      "category": "business"
-    },
-    {
-      "source_name": "NPR",
-      "source_id": null,
-      "author": "Katia Riddle",
-      "title": "Artemis II astronauts have fitness lessons for everyone - NPR",
-      "description": "The Artemis II astronauts don't have a lot of space to exercise. That's why they've got the flywheel — a small device that can be used for strength and cardio workouts.",
-      "url": "https://www.npr.org/2026/04/09/nx-s1-5779671/artemis-flywheel-astronauts-resistance-workout-bone-loss",
-      "urlToImage": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/1920x1080+0+100/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F8a%2F44%2F9c754d764d63a84b2be7ff862e1a%2Fart002e013365-large.jpg",
-      "publishedAt": "2026-04-09T17:41:34Z",
-      "content": "Even a few days away from Earth can significantly alter the human body. Without the constant pull of gravity on the skeleton, muscle and bone can quickly atrophy. To combat this immediate physical de… [+4377 chars]",
-      "category": "science"
     }
   ]
 }

@@ -1,22 +1,142 @@
 {
   "fetch_info": {
-    "timestamp": "2026-04-11T20:31:37.358769",
+    "timestamp": "2026-04-11T21:34:32.725182",
     "article_range": "200-300",
-    "articles_in_file": 60,
+    "articles_in_file": 54,
     "file_number": 3
   },
   "articles": [
     {
-      "source_name": "Nodq.com",
+      "source_name": "Delish.com",
       "source_id": null,
-      "author": "Aaron Rift",
-      "title": "WWE makes announcement regarding plans for the SmackDown television debut of Royce Keys - NoDQ.com",
-      "description": "The latest WWE and AEW backstage wrestling news, rumors, opinions, and special features.",
-      "url": "https://nodq.com/news/wwe-makes-announcement-regarding-plans-for-the-smackdown-television-debut-of-royce-keys/",
-      "urlToImage": "https://nodq.com/wp-content/uploads/2022/05/Screenshot-2022-05-22-at-21-18-00-Hobbs2.jpg-WEBP-Image-2930-×-1990-pixels-—-Scaled-24.png",
-      "publishedAt": "2026-04-09T17:30:48Z",
-      "content": "As seen during the 2026 WWE Royal Rumble PLE, Royce Keys (formerly Powerhouse Hobbs in AEW) made his debut with the company in the men’s Rumble match. Since then, Keys has wrestled in dark matches bu… [+864 chars]",
+      "author": "Allison Arnold, Gabby Romero",
+      "title": "What Happens When You Drink Wine Every Day? Health Experts Weigh In - AOL.com",
+      "description": "Health experts explain whether drinking wine every day is healthy, including cancer risk, heart health claims, and how much alcohol is too much.",
+      "url": "https://www.delish.com/food/a70966737/is-it-healthy-drinking-wine-every-day/",
+      "urlToImage": "https://s.yimg.com/ny/api/res/1.2/qzI2wStg2Moo7zlVCPyRXw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/en/aol_delish_448/c4ab2e53ec4679e1907cc5165be89788",
+      "publishedAt": "2026-04-09T18:39:09Z",
+      "content": "\"Hearst Magazines and Yahoo may earn commission or revenue on some items through these links.\"\r\nWinemaking is a tradition that has thrived for millennia, with evidence of the practice dating back as … [+4563 chars]",
+      "category": "health"
+    },
+    {
+      "source_name": "Pure Xbox",
+      "source_id": null,
+      "author": "Ben Kerry",
+      "title": "'Graveyard Keeper' Is Available To Claim For Free On Xbox For A Limited Time - Pure Xbox",
+      "description": "Here's when you can grab it!",
+      "url": "https://www.purexbox.com/news/2026/04/graveyard-keeper-is-available-to-claim-for-free-on-xbox-for-a-limited-time",
+      "urlToImage": "https://images.purexbox.com/9d31004fcca3a/large.jpg",
+      "publishedAt": "2026-04-09T18:30:00Z",
+      "content": "As part of today's 'Triple-I Interactive' showcase, Graveyard Keeper 2 has been announced for Xbox and other platforms, and to celebrate its reveal, the team has announced that folks can grab Graveya… [+1362 chars]",
+      "category": "technology"
+    },
+    {
+      "source_name": "Riotgames.com",
+      "source_id": null,
+      "author": null,
+      "title": "Akali Brings the Smoke in Patch 1.1.5 - 2XKO",
+      "description": "Spotlighting the Rogue Assassin with community creations. Also, an update on how 1.1.5 is going.",
+      "url": "https://2xko.riotgames.com/en-us/news/announcements/akali-brings-the-smoke-in-patch-1-1-5/",
+      "urlToImage": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/8b67b74a60ce229516b73b419fcedee5667468f1-1920x1080.jpg?accountingTag=2XKO?w=1200&h=630&fm=webp&fit=crop&crop=center",
+      "publishedAt": "2026-04-09T18:09:17Z",
+      "content": "Akali header art by Lambsplash (Duy An)\r\nWelcome back to the Weekend Warmup. Akali teleported into 2XKO just two days ago, and weve already seen a huge outpouring of love and creativity from the FGC.… [+6329 chars]",
+      "category": "technology"
+    },
+    {
+      "source_name": "Billboard",
+      "source_id": null,
+      "author": "Hannah Dailey",
+      "title": "BTS’ Jin Reflects on Band’s First Concert of ARIRANG World Tour: ‘I Feel Like I’m Back Home’ - Billboard",
+      "description": "BTS' Jin reflected on the band's ARIRANG Tour kickoff show, saying, \"I feel like I'm back home.\"",
+      "url": "http://www.billboard.com/music/music-news/bts-jin-reflects-arirang-tour-kickoff-show-1236218974/",
+      "urlToImage": "https://www.billboard.com/wp-content/uploads/2026/04/2216173487-e1775685572397.jpg?w=1024",
+      "publishedAt": "2026-04-09T17:58:08Z",
+      "content": "BTS gave ARMY permission to dance for the first of many times on the band’s world tour supporting ARIRANG, which kicked off Thursday (April 9) with a spectacular performance at Goyang Stadium in Sout… [+1500 chars]",
       "category": "entertainment"
+    },
+    {
+      "source_name": "The Verge",
+      "source_id": "the-verge",
+      "author": "Emma Roth",
+      "title": "Google’s Gemini AI can answer your questions with 3D models and simulations - The Verge",
+      "description": "Google is rolling out a new feature for its Gemini AI chatbot, allowing the tool to generate 3D models and simulations to explain the concepts you’re asking about.",
+      "url": "https://www.theverge.com/tech/909391/google-gemini-ai-3d-models-simulations",
+      "urlToImage": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK255_Google_Gemini_D.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+      "publishedAt": "2026-04-09T17:57:58Z",
+      "content": "<ul><li></li><li></li><li></li></ul>\r\nYou can interact with the 3D models and adjust variables in real-time.\r\nYou can interact with the 3D models and adjust variables in real-time.\r\nby\r\nEmma RothClos… [+2323 chars]",
+      "category": "technology"
+    },
+    {
+      "source_name": "The Information",
+      "source_id": null,
+      "author": "Theo Wayt, Cory Weinberg, Valida Pau",
+      "title": "SpaceX Woos Investors As C-Suite Shakeups Continue - The Information",
+      "description": "Some of the biggest Wall Street fund managers are planning to trek to the southernmost tip of Texas, then about 950 miles to Memphis, Tenn, in two weeks, for exclusive visits to SpaceX facilities ahead of what could be the biggest initial public offering of a…",
+      "url": "https://www.theinformation.com/articles/spacex-woos-investors-c-suite-shakeups-continue",
+      "urlToImage": "https://tii.imgix.net/production/articles/16904/dc46ea62-9862-4ac3-9526-93c9e054947c.png?fm=jpg&auto=compress&w=1200&frame=0",
+      "publishedAt": "2026-04-09T17:53:00Z",
+      "content": null,
+      "category": "business"
+    },
+    {
+      "source_name": "Variety",
+      "source_id": null,
+      "author": "Todd Spangler",
+      "title": "David Zaslav Paramount Deal 'Windfall' Payout: ISS Says Warner Bros Shareholders Should Vote Against Measure - variety.com",
+      "description": "ISS recommends Warner Bros. Discovery shareholders vote against CEO David Zaslav's \"golden parachute\" payout package worth more than $550 million, to be granted with the Paramount sale.",
+      "url": "https://variety.com/2026/film/news/david-zaslav-golden-parachute-windfall-payout-paramount-deal-iss-shareholders-1236712564/",
+      "urlToImage": "https://variety.com/wp-content/uploads/2026/04/David-Zaslav.jpg?w=1000&h=563&crop=1",
+      "publishedAt": "2026-04-09T17:47:00Z",
+      "content": "Does David Zaslav deserve to receive more than half a billion dollars in connection with the sale of Warner Bros. Discovery to David Ellison’s Paramount Skydance?\r\nInfluential shareholder advisory se… [+3426 chars]",
+      "category": "business"
+    },
+    {
+      "source_name": "The Daily Galaxy --Great Discoveries Channel",
+      "source_id": null,
+      "author": "Lydia Amazouz",
+      "title": "Northern Lights Set to Illuminate Skies Across the U.S. Tonight: Here’s Where to See Them! - The Daily Galaxy",
+      "description": "The northern lights may be visible farther south than usual due to heightened solar activity. Here's where to see them!",
+      "url": "https://dailygalaxy.com/2026/04/northern-lights-u-s-tonight-heres-where/",
+      "urlToImage": "https://dailygalaxy.com/wp-content/uploads/2026/04/Northern-Lights-Set-to-Illuminate-Skies-Across-the-U.S.-Tonight-Heres-Where-to-See-Them-scaled.png",
+      "publishedAt": "2026-04-09T17:45:00Z",
+      "content": "A dazzling spectacle of color is set to light up the sky tonight, April 9, 2026, as the northern lights (aurora borealis) prepare to make a rare, vivid appearance. According to NOAA (National Oceanic… [+4049 chars]",
+      "category": "science"
+    },
+    {
+      "source_name": "NPR",
+      "source_id": null,
+      "author": "Katia Riddle",
+      "title": "Artemis II astronauts have fitness lessons for everyone - NPR",
+      "description": "The Artemis II astronauts don't have a lot of space to exercise. That's why they've got the flywheel — a small device that can be used for strength and cardio workouts.",
+      "url": "https://www.npr.org/2026/04/09/nx-s1-5779671/artemis-flywheel-astronauts-resistance-workout-bone-loss",
+      "urlToImage": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/1920x1080+0+100/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F8a%2F44%2F9c754d764d63a84b2be7ff862e1a%2Fart002e013365-large.jpg",
+      "publishedAt": "2026-04-09T17:41:34Z",
+      "content": "Even a few days away from Earth can significantly alter the human body. Without the constant pull of gravity on the skeleton, muscle and bone can quickly atrophy. To combat this immediate physical de… [+4377 chars]",
+      "category": "science"
+    },
+    {
+      "source_name": "9to5google.com",
+      "source_id": null,
+      "author": "Abner Li",
+      "title": "Pixel Now Playing brings back ‘Tap to see what’s playing’ lockscreen search - 9to5Google",
+      "description": "Google is bringing back Pixel Now Playing’s ability to manually start a ‘Tap to see what’s playing’ song search from the lockscreen.",
+      "url": "http://9to5google.com/2026/04/09/pixel-now-playing-search/",
+      "urlToImage": "https://i0.wp.com/9to5google.com/wp-content/uploads/sites/4/2026/03/Pixel-Now-Playing-redesign-cover.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2026-04-09T17:36:00Z",
+      "content": "Google is bringing back Pixel Now Playings ability to manually start a song search from the lockscreen.\r\nThe Now Playing redesign removed the ability to trigger a manual song search on your lockscree… [+842 chars]",
+      "category": "technology"
+    },
+    {
+      "source_name": "Videocardz.com",
+      "source_id": null,
+      "author": null,
+      "title": "ASUS introduces ROG Equalizer 12V-2x6 cable, free upgrade planned for existing ROG PSU users - VideoCardz.com",
+      "description": "Update: ASUS has clarified that the upgrade program will not include a free cable. Eligible users will instead receive a discount on the ROG Equalizer",
+      "url": "https://videocardz.com/newz/asus-introduces-rog-equalizer-12v-2x6-cable-free-upgrade-planned-for-existing-rog-psu-users",
+      "urlToImage": "https://cdn.videocardz.com/1/2026/04/ASUS-ROG-EQUALIZER-CABLE-HERO.jpg",
+      "publishedAt": "2026-04-09T17:36:00Z",
+      "content": "Update: ASUS has clarified that the upgrade program will not include a free cable. Eligible users will instead receive a discount on the ROG Equalizer upgrade.\r\nThe program is currently planned to of… [+2154 chars]",
+      "category": "technology"
     },
     {
       "source_name": "Benzinga",
@@ -55,6 +175,18 @@
       "category": "health"
     },
     {
+      "source_name": "Android Authority",
+      "source_id": null,
+      "author": null,
+      "title": "Is your Galaxy on the list? Every Samsung phone getting AirDrop support in today's update - Android Authority",
+      "description": "Samsung has released a One UI 8.5 beta update. That update expands AirDrop support through Quick Share to more Galaxy devices.",
+      "url": "https://www.androidauthority.com/samsung-expands-airdrop-support-3656304/",
+      "urlToImage": "https://www.androidauthority.com/wp-content/uploads/2025/09/samsung-galaxy-s25-back-in-hand-outside-scaled.jpg",
+      "publishedAt": "2026-04-09T17:26:35Z",
+      "content": "<ul><li>AirDrop support through Quick Share is expanding to more Galaxy devices.</li><li>Its now available on the Galaxy S25 series, S24 series, Z Fold 7, Z Flip 7, Z Fold 6, and Z Flip 6.</li><li>Yo… [+1288 chars]",
+      "category": "technology"
+    },
+    {
       "source_name": "Polygon",
       "source_id": "polygon",
       "author": "Jen Glennon",
@@ -76,7 +208,7 @@
       "urlToImage": "https://images.macrumors.com/t/3HBJW5MBQ069prdrci8nDNKobls=/2500x/article-new/2025/06/macOS-Tahoe-26-Thumb.jpg",
       "publishedAt": "2026-04-09T17:18:45Z",
       "content": "Apple today released macOS Tahoe 26.4.1, a minor update to the ‌macOS Tahoe‌ operating system that came out last September. ‌macOS Tahoe‌ 26.4.1 comes two weeks after Apple launched macOS Tahoe 26.4.… [+332 chars]",
-      "category": "general"
+      "category": "technology"
     },
     {
       "source_name": "The Verge",
@@ -88,6 +220,18 @@
       "urlToImage": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/04/ss_8ef8b46f7d9f5e1878c40caca5febcf594e3d4c9.1920x1080.jpg?quality=90&strip=all&crop=0%2C3.4613147178592%2C100%2C93.077370564282&w=1200",
       "publishedAt": "2026-04-09T17:13:38Z",
       "content": "<ul><li></li><li></li><li></li></ul>\r\nHeres some of the news from the third Triple-I showcase.\r\nHeres some of the news from the third Triple-I showcase.\r\nby\r\nJay PetersClose\r\nPosts from this author w… [+5360 chars]",
+      "category": "technology"
+    },
+    {
+      "source_name": "Windows Central",
+      "source_id": null,
+      "author": "Jez Corden",
+      "title": "Windows and Xbox rediscover user feedback and fans are wondering what took so long - Windows Central",
+      "description": "Is Microsoft's big AI push falling off the rails? Possibly, but not for the reasons you might think.",
+      "url": "https://www.windowscentral.com/microsoft/windows-and-xbox-are-now-prioritizing-user-feedback-in-a-huge-pivot-but-why-now",
+      "urlToImage": "https://cdn.mos.cms.futurecdn.net/wqtsyV68fTaFo6f4ti4Qt6-1099-80.jpg",
+      "publishedAt": "2026-04-09T17:13:29Z",
+      "content": "Something odd happened this year. Microsoft actually seemed to start to listen.\r\nAfter years of Xbox Series X|S being ignored and bereft of updates, Microsoft began issuing a flurry of new Xbox featu… [+9029 chars]",
       "category": "technology"
     },
     {
@@ -127,18 +271,6 @@
       "category": "entertainment"
     },
     {
-      "source_name": "Variety",
-      "source_id": null,
-      "author": null,
-      "title": "‘Heated Rivalry,’ ‘Jimmy Kimmel Live,’ ‘The Pitt’ Among Peabody Award 2026 Entertainment Nominees - variety.com",
-      "description": null,
-      "url": "https://variety.com/2026/tv/news/heated-rivalry-jimmy-kimmel-pitt-peabody-nominations-1236712012/",
-      "urlToImage": null,
-      "publishedAt": "2026-04-09T17:00:00Z",
-      "content": "Description: Group Number: Group Name: Ip Address: Username: Computer Name:",
-      "category": "entertainment"
-    },
-    {
       "source_name": "Eatingwell.com",
       "source_id": null,
       "author": "https://www.facebook.com/EatingWell/",
@@ -163,18 +295,6 @@
       "category": "business"
     },
     {
-      "source_name": "Gematsu",
-      "source_id": null,
-      "author": "Sal Romano",
-      "title": "Don’t Starve Elsewhere announced for PC - Gematsu",
-      "description": "Klei has announced Don’t Starve Elsewhere, a new Don’t Starve survival game. It will launch for PC via Steam. A release date was not announced.",
-      "url": "https://www.gematsu.com/2026/04/dont-starve-elsewhere-announced-for-pc",
-      "urlToImage": "https://www.gematsu.com/wp-content/uploads/2026/04/Dont-Starve-Elsewhere_2026_04-09-26_007.jpg",
-      "publishedAt": "2026-04-09T16:50:07Z",
-      "content": "About\r\nDon’t Starve returns in an all-new experience!\r\nSurvive a strange and unforgiving new world filled with magic, monsters and mystery, armed with only your wits (and whatever else you can scroun… [+1121 chars]",
-      "category": "technology"
-    },
-    {
       "source_name": "Live Science",
       "source_id": null,
       "author": "Shreejaya Karantha",
@@ -190,37 +310,25 @@
       "source_name": "Gematsu",
       "source_id": null,
       "author": "Sal Romano",
-      "title": "The Lift adds PS5 and Xbox Series versions, delayed to 2027 - Gematsu",
-      "description": "First-person, narrative-driven, supernatural handyman simulator The Lift for PlayStation 5, Xbox Series, and PC via Steam in 2027, publisher tinyBuild and developer Fantastic Signals announced. The…",
-      "url": "https://www.gematsu.com/2026/04/the-lift-adds-ps5-and-xbox-series-versions-delayed-to-2027",
-      "urlToImage": "https://www.gematsu.com/wp-content/uploads/2026/04/The-Lift-Consoles_04-09-26.jpg",
-      "publishedAt": "2026-04-09T16:40:41Z",
-      "content": "First-person, narrative-driven, supernatural handyman simulator The Lift for PlayStation 5, Xbox Series, and PC via Steam in 2027, publisher tinyBuild and developer Fantastic Signals announced. The c… [+1365 chars]",
+      "title": "Neverway launches in October; ‘Prologue’ demo now available for PC - Gematsu",
+      "description": "Neverway, the horror, life simulation, and action RPG hybrid co-created by the pixel artist behind Celeste, will launch for Switch and PC via Steam in October, with “more consoles to be annou…",
+      "url": "https://www.gematsu.com/2026/04/neverway-launches-in-october-prologue-demo-now-available-for-pc",
+      "urlToImage": "https://www.gematsu.com/wp-content/uploads/2026/04/Neverway_2026_04-09-26_013.png",
+      "publishedAt": "2026-04-09T16:45:37Z",
+      "content": "Neverway, the horror, life simulation, and action RPG hybrid co-created by the pixel artist behind Celeste, will launch for Switch and PC via Steam in October, with “more consoles to be announced,” d… [+1502 chars]",
       "category": "technology"
     },
     {
-      "source_name": "Android Police",
-      "source_id": null,
-      "author": "Chethan Rao",
-      "title": "More Samsung Galaxy phones pick up AirDrop support through Quick Share - Android Police",
-      "description": "Thanks to One UI 8.5 beta",
-      "url": "https://www.androidpolice.com/samsung-galaxy-airdrop-iphone-one-ui-8-5-beta-quick-share/",
-      "urlToImage": "https://static0.anpoimages.com/wordpress/wp-content/uploads/2025/11/quick-share-airdrop.png?w=1600&h=900&fit=crop",
-      "publishedAt": "2026-04-09T16:39:55Z",
-      "content": "While devices like the Galaxy S26 launched with the Android 16-based One UI 8.5 software out of the box, older Samsung devices are still stuck in beta. This means that the list of Galaxy devices that… [+2379 chars]",
-      "category": "technology"
-    },
-    {
-      "source_name": "Inc.",
-      "source_id": null,
-      "author": "Leila Sheridan",
-      "title": "Amazon Just Brought Same-Day Delivery to GLP-1 Weight-Loss Drugs - inc.com",
-      "description": "Amazon Pharmacy will now deliver Eli Lilly’s new GLP-1 pill within hours in thousands of cities.",
-      "url": "https://www.inc.com/leila-sheridan/amazon-just-brought-same-day-delivery-to-glp-1-weight-loss-drugs/91328991",
-      "urlToImage": "https://img-cdn.inc.com/image/upload/f_webp,q_auto,c_fit,w_1024/vip/2026/04/amazon-glp1-delivery-inc.jpg",
-      "publishedAt": "2026-04-09T16:38:55Z",
-      "content": "Earlier this month, Eli Lilly, the drugmaker behind blockbuster medications like Mounjaro and Zepbound, introduced Foundayo, a new GLP-1 designed around a simple idea: convenience. Unlike many existi… [+1838 chars]",
-      "category": "business"
+      "source_name": "NBC News",
+      "source_id": "nbc-news",
+      "author": "Rebecca Cohen",
+      "title": "'The Housemaid' author Freida McFadden reveals her true identity - NBC News",
+      "description": "Your favorite mystery writer has been keeping her own secret for over a decade",
+      "url": "https://www.nbcnews.com/pop-culture/books/-housemaid-author-freida-mcfadden-reveals-true-identity-rcna267406",
+      "urlToImage": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2026-04/260409-Freida-McFadden--rs-023b8c.jpg",
+      "publishedAt": "2026-04-09T16:35:18Z",
+      "content": "Your favorite mystery writer has been keeping her own secret for over a decade.\r\nSubscribe to read this story ad-free \r\nGet unlimited access to ad-free articles and exclusive content.\r\nFreida McFadde… [+2649 chars]",
+      "category": "entertainment"
     },
     {
       "source_name": "Andscape.com",
@@ -307,76 +415,28 @@
       "category": "science"
     },
     {
-      "source_name": "The Verge",
-      "source_id": "the-verge",
-      "author": "Tom Warren",
-      "title": "The MacBook Neo is the best thing to happen to Windows in years - The Verge",
-      "description": "Microsoft is always willing to respond to a threat to Windows. The MacBook Neo is the latest in a line of competition that will force Windows to improve.",
-      "url": "https://www.theverge.com/tech/909140/microsoft-windows-11-fixes-macbook-neo-response-notepad",
-      "urlToImage": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/03/268387_Apple_MacBook_Neo_AKrales_0507.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
-      "publishedAt": "2026-04-09T16:00:00Z",
-      "content": "<ul><li></li><li></li><li></li></ul>\r\nMicrosoft always responds to a threat to Windows by improving the operating system.\r\nMicrosoft always responds to a threat to Windows by improving the operating … [+12999 chars]",
-      "category": "technology"
-    },
-    {
-      "source_name": "IGN",
-      "source_id": "ign",
-      "author": "Josh Du",
-      "title": "One Piece Team Answers the BIG Question About What's Next for the Live-Action Show - IGN",
-      "description": "One Piece team answers the BIG question about what's next for the live-action show.",
-      "url": "https://www.ign.com/articles/one-piece-live-action-creative-team-on-the-future-of-the-show-working-with-oda-and-whether-well-see-a-fan-favorite-character-in-season-3",
-      "urlToImage": "https://assets-prd.ignimgs.com/2026/04/09/one-piece-main-1775732491573.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "publishedAt": "2026-04-09T15:56:45Z",
-      "content": "Once thought impossible, Netflix and Tomorrow Studios actually pulled off a live-action adaptation of One Piece. Not only were fans pleasantly surprised by the first season, the follow-up was receive… [+26189 chars]",
-      "category": "entertainment"
-    },
-    {
-      "source_name": "Tipranks.com",
+      "source_name": "The Points Guy",
       "source_id": null,
-      "author": "William White",
-      "title": "AMD Stock Climbs Alongside the Reveal of the Most Expensive Ryzen CPU Yet - TipRanks",
-      "description": "AMD stock was up on Thursday after the company revealed the price of the Ryzen 9950X3D2 Dual Edition CPU.",
-      "url": "https://www.tipranks.com/news/amd-stock-climbs-alongside-the-reveal-of-the-most-expensive-ryzen-cpu-yet",
-      "urlToImage": "https://blog.tipranks.com/wp-content/uploads/2026/04/amdstock-3-750x406.jpg",
-      "publishedAt": "2026-04-09T15:56:40Z",
-      "content": "Story Highlights<ul><li>AMD stock rallied on Thursday after it announced a new Ryzen price.</li><li>The company revealed an $899 MSRP for the Ryzen 9950X3D2 Dual Edition CPU.</li></ul>",
-      "category": "technology"
+      "author": "Sean Cudahy",
+      "title": "American Airlines hikes bag fees, adds tough new basic economy restrictions - The Points Guy",
+      "description": "American Airlines became the latest to hike checked bag fees as the industry grapples with rising prices. The carrier also tightened its basic economy policies.",
+      "url": "https://thepointsguy.com/news/american-airlines-raises-checked-bag-fees-basic-economy-rules/",
+      "urlToImage": "https://runway-media-production.global.ssl.fastly.net/us/originals/2026/02/american-wingtips.jpeg",
+      "publishedAt": "2026-04-09T15:23:38Z",
+      "content": "American Airlines is raising its checked bag fees, a move that was hardly surprising after most of its competitors in the airline industry just did the same.\r\nBut American's shake-up announced Thursd… [+4391 chars]",
+      "category": "business"
     },
     {
       "source_name": "Gizmodo.com",
       "source_id": null,
-      "author": "Kyle Barr",
-      "title": "Laptops Are About to Get Very Exciting Again… Thanks to Nvidia - Gizmodo",
-      "description": "Nvidia is about to throw another wrench into laptops led by Intel, AMD, and Qualcomm.",
-      "url": "https://gizmodo.com/laptops-are-about-to-get-very-exciting-again-thanks-to-nvidia-2000744490",
-      "urlToImage": "https://gizmodo.com/app/uploads/2026/02/Nvidia-CEO-Jensen-Huang-RTX-50-Series-GPU-1-1200x675.jpg",
-      "publishedAt": "2026-04-09T15:15:00Z",
-      "content": "Nvidia is gearing up to throw the entire laptop scene out of wack. Eagle-eyed leakers spotted a listing for a supposed Nvidia N1 chip housed on an engineering motherboard listed on the Chinese-langua… [+3027 chars]",
-      "category": "technology"
-    },
-    {
-      "source_name": "MacRumors",
-      "source_id": null,
-      "author": "Hartley Charlton",
-      "title": "Apple Apparently Still Undecided on iPhone 18 Pro Dynamic Island - MacRumors",
-      "description": "Apple is weighing two options for the iPhone 18 Pro's Dynamic Island, and a final decision has yet to be made, according to the Weibo leaker...",
-      "url": "https://www.macrumors.com/2026/04/09/apple-undecided-on-iphone-18-pro-dynamic-island/",
-      "urlToImage": "https://images.macrumors.com/t/GEiBu2iaA9GrrmRRMXVC3ULLfZo=/2500x/article-new/2026/01/Dynamic-Island-iPhone-18-Pro-Feature.jpg",
-      "publishedAt": "2026-04-09T15:11:01Z",
-      "content": "Apple is weighing two options for the iPhone 18 Pro's Dynamic Island, and a final decision has yet to be made, according to the Weibo leaker known as Digital Chat Station.\r\nIn a new post today, the l… [+1715 chars]",
-      "category": "technology"
-    },
-    {
-      "source_name": "STAT",
-      "source_id": null,
-      "author": "Isabella Cueto",
-      "title": "5 years after lupus breakthrough, CAR-T is still surprising autoimmunity researchers - statnews.com",
-      "description": "CAR-T therapy is toting up more remissions in autoimmune disease, and generating a flood of experimentation and investment.",
-      "url": "https://www.statnews.com/2026/04/09/autoimmune-diseases-car-t-therapy-advances/",
-      "urlToImage": "https://www.statnews.com/wp-content/uploads/2022/09/AdobeStock_441716844-1024x576.jpeg",
-      "publishedAt": "2026-04-09T15:06:47Z",
-      "content": "Georg Schett had two things: a young patient deathly ill with lupus, and a couple of mouse studies raising the possibility that special T cells could tame the condition.\r\nThe German physician-scienti… [+918 chars]",
-      "category": "health"
+      "author": "Ece Yildirim",
+      "title": "Gen Z’s Use of AI Is Plateauing as Youth Feel Less Hopeful About the Tech - Gizmodo",
+      "description": "Adoption by the rising generation in the workforce could have big implications for the economy.",
+      "url": "https://gizmodo.com/gen-zs-use-of-ai-is-plateauing-and-its-feeling-less-hopeful-about-the-tech-2000744463",
+      "urlToImage": "https://gizmodo.com/app/uploads/2026/04/shutterstock_2751351053-1200x675.jpg",
+      "publishedAt": "2026-04-09T14:55:20Z",
+      "content": "Young people have grown increasingly skeptical of artificial intelligence, even those who use it daily, according to a new Gallup poll of more than 1,500 people aged 14 to 29.\r\nThere is no decline in… [+4542 chars]",
+      "category": "business"
     },
     {
       "source_name": "Daily Beast",
@@ -415,42 +475,6 @@
       "category": "health"
     },
     {
-      "source_name": "Deadline",
-      "source_id": null,
-      "author": "Jill Goldsmith",
-      "title": "Paramount Details Separation Agreement With Jeff Shell - Deadline",
-      "description": "Paramount Skydance today detailed is separation agreement with former President Jeff Shell.",
-      "url": "http://deadline.com/2026/04/paramount-jeff-shell-separation-agreement-1236785688/",
-      "urlToImage": "https://deadline.com/wp-content/uploads/2024/07/Paramount-Jeff-Shell.jpg?w=1024",
-      "publishedAt": "2026-04-09T14:29:00Z",
-      "content": "Paramount Skydance confirmed that its former president Jeff Shell exited the company on April 8 and outlined in a SEC filing how much he will be leaving with.\r\nHis cash severance will equal the sum o… [+3054 chars]",
-      "category": "business"
-    },
-    {
-      "source_name": "Science Daily",
-      "source_id": null,
-      "author": null,
-      "title": "Scientists just found a hidden “drain” inside the human brain - ScienceDaily",
-      "description": "A hidden waste-removal pathway in the brain has finally been caught in action. Using cutting-edge MRI scans, researchers discovered that fluid flows along the middle meningeal artery in a slow, lymphatic-like pattern—very different from blood. This confirms t…",
-      "url": "https://www.sciencedaily.com/releases/2026/04/260408225934.htm",
-      "urlToImage": "https://www.sciencedaily.com/images/1920/lymphatic-vessels-brain-drainage-area.webp",
-      "publishedAt": "2026-04-09T14:12:44Z",
-      "content": "How does the brain get rid of waste? It relies on a specialized drainage network known as the lymphatic system. Scientists have been working to understand how this system functions, and in the proces… [+4226 chars]",
-      "category": "science"
-    },
-    {
-      "source_name": "KGO-TV",
-      "source_id": null,
-      "author": "Tim Johns",
-      "title": "Bay Area-based Philz Coffee to remove Pride flags, all other flags from its locations - ABC7 San Francisco",
-      "description": "A coffee controversy is brewing after Philz Coffee says it's removing not just Pride flags, but also other flags and decor as well, to be inclusive to all customers. Many of those customers are upset over the new policy.",
-      "url": "https://abc7news.com/post/bay-area-based-philz-coffee-remove-pride-flags-other-locations/18859275/",
-      "urlToImage": "https://cdn.abcotvs.com/dip/images/18860781_040926-kgo-philz-pride-flags-split-img.jpg?w=1600",
-      "publishedAt": "2026-04-09T14:10:31Z",
-      "content": "SAN FRANCISCO (KGO) -- A new policy by Bay Area-based Philz Coffee has some people upset as the chain says it will no longer allow flags of any kind in its stores, including Pride flags.\r\nWhat starte… [+2060 chars]",
-      "category": "business"
-    },
-    {
       "source_name": "Science Daily",
       "source_id": null,
       "author": null,
@@ -485,18 +509,6 @@
       "publishedAt": "2026-04-09T13:57:01Z",
       "content": "Small changes to the non-coding genome can alter whether a mouse embryo (pictured here at 9.5 days old) develops male or female sex organs.Credit: Sinclair Stammers/SPL\r\nFemale mouse embryos with a s… [+2330 chars]",
       "category": "science"
-    },
-    {
-      "source_name": "Aa.com",
-      "source_id": null,
-      "author": null,
-      "title": "American Airlines updates bag fees and Basic Economy fares - American Airlines",
-      "description": "American Airlines is adjusting its checked bag fees and further differentiating its Basic Economy fare from its standard Main Cabin offering. These changes are the result of the airline’s continuing evaluation of pricing and in light of the current operating …",
-      "url": "https://news.aa.com/news/news-details/2026/American-Airlines-updates-bag-fees-and-Basic-Economy-fares-OPS-POL-04/default.aspx",
-      "urlToImage": "https://s202.q4cdn.com/986123435/files/images/thumbs/260409-Newsroom-Bag-fees.jpg",
-      "publishedAt": "2026-04-09T13:00:45Z",
-      "content": "FORT WORTH, Texas American Airlines is adjusting its checked bag fees and\r\nfurther differentiating its Basic Economy fare from its standard Main Cabin\r\noffering. These changes are the result of the a… [+5256 chars]",
-      "category": "business"
     },
     {
       "source_name": "Space.com",
@@ -559,30 +571,6 @@
       "category": "science"
     },
     {
-      "source_name": "The Daily Galaxy --Great Discoveries Channel",
-      "source_id": null,
-      "author": "Arezki Amiri",
-      "title": "If You See Bats Flying Over Your House at Night, It Often Means a Good Thing for Your Yard - The Daily Galaxy",
-      "description": "Scientists tracked what these nighttime visitors are actually hunting above homes and the numbers are staggering.",
-      "url": "https://dailygalaxy.com/2026/04/bats-flying-at-night-over-house-means-garden-benefits/",
-      "urlToImage": "https://dailygalaxy.com/wp-content/uploads/2026/04/Bats-Circling-Your-Yard-at-Night-Mean-Something-Remarkable-Is-Happening-Underground-scaled.jpg",
-      "publishedAt": "2026-04-09T11:15:00Z",
-      "content": "Bats seen swooping over gardens and yards at night are responding directly to insect abundance below, signaling a healthy local ecosystem and providing substantial natural pest control. When these no… [+6926 chars]",
-      "category": "health"
-    },
-    {
-      "source_name": "One Mile at a Time",
-      "source_id": null,
-      "author": "Ben Schlappig",
-      "title": "Delta CEO Predicts Multiple Airline Mergers, Says They’ll All Benefit Delta - One Mile at a Time",
-      "description": "Delta CEO Ed Bastian is predicting a lot of airline consolidation, and says that whatever happens will be good for his airline.",
-      "url": "https://onemileatatime.com/news/delta-ceo-predicts-airline-mergers/",
-      "urlToImage": "https://cdn.onemileatatime.com/wp-content/uploads/2024/09/Delta-Airbus-A330-900neo.jpeg",
-      "publishedAt": "2026-04-09T11:11:25Z",
-      "content": null,
-      "category": "business"
-    },
-    {
       "source_name": "STAT",
       "source_id": null,
       "author": "David S. Ludwig",
@@ -604,54 +592,6 @@
       "urlToImage": "https://img.huffingtonpost.com/asset/69d6d684140000cad486d9de.jpg?cache=8QEtec0lAv&ops=500_281%2Cscalefit_1200_630",
       "publishedAt": "2026-04-09T11:00:18Z",
       "content": "Sock marks commonly show up on peoples ankles and legs after wearing the garment all day long, or even after several hours. Most people dont think much of these indentations but the seemingly-innocuo… [+6051 chars]",
-      "category": "health"
-    },
-    {
-      "source_name": "HuffPost",
-      "source_id": null,
-      "author": null,
-      "title": "6 Somatic Exercises To Try Mid Fight To Avoid Acting Like A Dysregulated Jerk - HuffPost",
-      "description": "We all have our moments in fights. This can help.",
-      "url": "https://www.huffpost.com/entry/somatic-exercises-arguments_l_69d65e27e4b0ccb589e9cdc8",
-      "urlToImage": "https://img.huffingtonpost.com/asset/69d665ca140000a9b286d8fa.jpeg?cache=mjDwT8Gs3k&ops=500_281%2Cscalefit_1200_630",
-      "publishedAt": "2026-04-09T11:00:18Z",
-      "content": "Weve all been there. Whether its a fight with a partner or a tense moment with a co-worker, something gets triggered and suddenly it feels like your nervous system has been hijacked. You say or do so… [+6597 chars]",
-      "category": "health"
-    },
-    {
-      "source_name": "Tom's Guide",
-      "source_id": null,
-      "author": "Frances Daniels",
-      "title": "Waking up groggy? Here's the 5-second habit that boosts morning energy - Tom's Guide",
-      "description": "If you're waking up feeling groggy even after getting enough sleep, Dr. Fábio Luiz Vieira suggests trying this simple 5-second habit for a burst of energy",
-      "url": "https://www.tomsguide.com/wellness/sleep/sleeping-for-8-hours-but-waking-up-exhausted-this-popular-household-item-could-be-to-blame-heres-how-to-fix-it-in-5-seconds",
-      "urlToImage": "https://cdn.mos.cms.futurecdn.net/mo8aaxGkHTianYc9Umq3VY-1920-80.jpg",
-      "publishedAt": "2026-04-09T11:00:08Z",
-      "content": null,
-      "category": "health"
-    },
-    {
-      "source_name": "SciTechDaily",
-      "source_id": null,
-      "author": null,
-      "title": "Scientists Discover Hidden Virus Linked to Colorectal Cancer - SciTechDaily",
-      "description": "A newly identified virus may be linked to colorectal cancer.",
-      "url": "https://scitechdaily.com/?p=516147",
-      "urlToImage": "https://scitechdaily.com/images/Colon-Colorectal-Cancer.jpg",
-      "publishedAt": "2026-04-09T10:46:05Z",
-      "content": "A new study suggests that the key to understanding colorectal cancer may lie not only in gut bacteria, but in the viruses hidden within them. By tracing an unusual viral pattern across patient sample… [+7342 chars]",
-      "category": "health"
-    },
-    {
-      "source_name": "Science Daily",
-      "source_id": null,
-      "author": null,
-      "title": "Scientists discover hidden gut trigger behind ALS and dementia - ScienceDaily",
-      "description": "A new study reveals that gut bacteria may play a key role in triggering ALS and frontotemporal dementia. Harmful sugars produced by these microbes can spark immune responses that damage the brain. This breakthrough explains why some genetically at-risk people…",
-      "url": "https://www.sciencedaily.com/releases/2026/04/260408225944.htm",
-      "urlToImage": "https://www.sciencedaily.com/images/1920/brain-gut-connection.webp",
-      "publishedAt": "2026-04-09T10:38:21Z",
-      "content": "Researchers at Case Western Reserve University have uncovered a finding that could reshape how doctors approach two of the most devastating brain disorders. Their work points to an unexpected player … [+4277 chars]",
       "category": "health"
     },
     {
@@ -703,27 +643,15 @@
       "category": "science"
     },
     {
-      "source_name": "Nature.com",
+      "source_name": "KUER 90.1",
       "source_id": null,
-      "author": null,
-      "title": "Why obesity drugs work better for some people: these genes hold clues - Nature",
-      "description": "Study of almost 28,000 people also identifies genetic variants that raise the risk of gastrointestinal side effects from GLP-1 medications.",
-      "url": "https://www.nature.com/articles/d41586-026-01107-5",
-      "urlToImage": "https://media.nature.com/lw1200/magazine-assets/d41586-026-01107-5/d41586-026-01107-5_52258730.jpg",
-      "publishedAt": "2026-04-08T19:34:22Z",
-      "content": "A study of the varied response to obesity drugs harnessed data from people who used 23andMe DNA tests.Credit: Tiffany Hagler-Geard/Bloomberg via Getty\r\nScientists have identified a set of genetic var… [+4017 chars]",
-      "category": "general"
-    },
-    {
-      "source_name": "ABC News (AU)",
-      "source_id": "abc-news-au",
-      "author": "https://www.abc.net.au/news/rudi-maxwell/105702270",
-      "title": "Mining on the Moon is closer than ever, but challenges remain - Australian Broadcasting Corporation",
-      "description": "A scientist, an engineer, an archaeologist and a lawyer break down some of the physical, environmental, ethical and legal challenges of mining on the Moon.",
-      "url": "https://www.abc.net.au/news/2026-04-09/mining-on-the-moon-new-space-race/106228190",
-      "urlToImage": "https://live-production.wcms.abc-cdn.net.au/e178f30d520ed1d3c6121d1d6dfdf793?impolicy=wcms_watermark_news&cropH=2813&cropW=5000&xPos=0&yPos=260&width=862&height=485&imformat=generic",
-      "publishedAt": "2026-04-08T18:55:31Z",
-      "content": "Since Neil Armstrong took his giant step for mankind onto the Moon almost 60 years ago, small samples from the lunar surface have been brought back to Earth.\r\nThe samples provide a glimpse into what … [+15508 chars]",
+      "author": "Sean Higgins",
+      "title": "Measles outbreak spreads in Utah, hitting people without the vaccine - KUER",
+      "description": "What started as a small outbreak of measles along the Utah-Arizona border has spread to every corner of the Beehive State.",
+      "url": "https://www.kuer.org/health/2026-04-08/measles-outbreak-spreads-in-utah-hitting-people-without-the-vaccine",
+      "urlToImage": "https://npr.brightspotcdn.com/dims4/default/6a27cdd/2147483647/strip/true/crop/4032x2117+0+454/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fcd%2F20%2F194fc06a4f04a0fcf1d194d78cd7%2Fredmed-u-clinic-measles-higgins.jpeg",
+      "publishedAt": "2026-04-08T23:21:00Z",
+      "content": "Utahs measles outbreak started in a remote area, but is now spreading across the state.\r\nAs of the most recent update\r\n from the Utah Department of Health and Human Services, there have now been 583 … [+4556 chars]",
       "category": "general"
     }
   ]
