@@ -4,9 +4,8 @@ Set-Location $projectRoot
 
 Write-Host "Triggering Summarizer: backend\src\newsArticlesToSummary.ts"
 
-# Set Node to handle the TypeScript modules correctly
-$env:TS_NODE_COMPILER_OPTIONS = '{"module":"CommonJS","moduleResolution":"node"}'
+# Set Node to handle ES Modules for your .mts files
+$env:TS_NODE_COMPILER_OPTIONS = '{"module":"ESNext","moduleResolution":"node"}'
 
-# Execute the specific function
-# Note: Ensure the function name 'newsArticlesToSummaryFolder' matches the export in your .ts file
-npx ts-node --esm --transpile-only -e "const api = require('./backend/src/newsArticlesToSummary'); api.newsArticlesToSummaryFolder().then(c => { process.exit(0); }).catch(e => { console.error('TS Error:', e); process.exit(1); })"
+# Use dynamic import() instead of require()
+npx ts-node --esm --transpile-only -e "import('./backend/src/newsArticlesToSummary.ts').then(api => { api.fetchNewsArticlesAndSummarize().then(() => { process.exit(0); }).catch(e => { console.error('TS Error:', e); process.exit(1); }); }).catch(err => { console.error('Import Error:', err); process.exit(1); })"
