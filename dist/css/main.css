@@ -4148,4 +4148,23 @@ body.is-menu-visible #menu {
 	}
 }
 
+.actions.pagination .button {
+	color: transparent !important;
+	box-shadow: none !important;
+	background-color: transparent !important;
+	border: none !important;
+}
+
+.actions.pagination .button:hover {
+	color: transparent !important;
+	box-shadow: none !important;
+	background-color: transparent !important;
+}
+
+.actions.pagination .button.disabled,
+.actions.pagination .button:disabled {
+	color: transparent !important;
+	pointer-events: auto;
+}
+
 /*# sourceMappingURL=main.css.map */
