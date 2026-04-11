@@ -15,6 +15,16 @@ type SummaryItem = {
 
 type SummariesResponse = { data?: SummaryItem[] | SummaryItem };
 
+const categories = new Set([
+  "business",
+  "entertainment",
+  "general",
+  "health",
+  "science",
+  "sports",
+  "technology",
+]);
+
 function resolveImageSource(rawImage: string): string {
   const isDirectSource =
     rawImage.startsWith("data:") ||
@@ -48,6 +58,16 @@ function readSummaryItemFromPayload(payload: SummariesResponse): SummaryItem | n
   if (!data) return null;
   if (Array.isArray(data)) return data[0] ?? null;
   return data;
+}
+
+function getCategoryFromUrl(): string | null {
+  const rawCategory = new URLSearchParams(window.location.search).get("category");
+  if (!rawCategory) return null;
+
+  const normalized = rawCategory.trim().toLowerCase();
+  if (!categories.has(normalized)) return null;
+
+  return normalized;
 }
 
 function formatSummaryForDisplay(summaryText: string): string {
@@ -236,8 +256,15 @@ async function hydrateSummaryPosts(): Promise<void> {
   const recordsNeeded = posts.length + miniPosts.length + sidebarPosts.length;
   if (recordsNeeded === 0) return;
 
+  const selectedCategory = getCategoryFromUrl();
+  const queryParams = new URLSearchParams({ limit: String(recordsNeeded) });
+
+  if (selectedCategory) {
+    queryParams.set("category", selectedCategory);
+  }
+
   try {
-    const response = await fetch(`/api/summaries?limit=${recordsNeeded}`);
+    const response = await fetch(`/api/summaries?${queryParams.toString()}`);
     if (!response.ok) return;
 
     const payload = (await response.json()) as { data?: SummaryItem[] };
