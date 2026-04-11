@@ -79,7 +79,10 @@ async function hydrateSingleSummaryPage(): Promise<boolean> {
 
     const bodyParagraphs = Array.from(document.querySelectorAll<HTMLParagraphElement>("#main article.post > p"));
     if (bodyParagraphs[0]) bodyParagraphs[0].textContent = summaryText;
-    if (bodyParagraphs[1]) bodyParagraphs[1].textContent = description;
+    bodyParagraphs.slice(1).forEach((paragraph) => {
+      paragraph.textContent = "";
+      paragraph.style.display = "none";
+    });
 
     const image = document.querySelector<HTMLImageElement>("#main article.post .image.featured img");
     const rawImage = item.url_to_image?.trim();
