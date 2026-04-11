@@ -214,9 +214,9 @@ def start_midnight_scheduler(api_key: str, output_dir: str = "outputJSONs/newsAP
     #schedule.every().day.at("11:25").do(run_fetch_job, api_key, output_dir)
     run_fetch_job(api_key,output_dir)
     
-    while True:
-        schedule.run_pending()
-        time.sleep(60)  # Check every minute
+   # while True:
+    #    schedule.run_pending()
+     #   time.sleep(60)  # Check every minute
 
 def manual_fetch_test(api_key: str):
     fetcher = NewsFetcher(api_key)
