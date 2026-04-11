@@ -22069,6 +22069,29 @@
         }
         return lastResponse;
       }
+      async function postPreferences(apiBaseUrl, userId, preferences) {
+        const relativeBase = apiBaseUrl || "";
+        const absoluteBase = window.location.origin;
+        const candidates = Array.from(/* @__PURE__ */ new Set([
+          `${relativeBase}/api/auth/preferences`,
+          `${relativeBase}/api/auth/preferences/`,
+          `${absoluteBase}/api/auth/preferences`,
+          `${absoluteBase}/api/auth/preferences/`
+        ]));
+        let lastResponse = null;
+        for (const endpoint of candidates) {
+          const response = await fetch(endpoint, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ userId, preferences })
+          });
+          lastResponse = response;
+          if (response.status !== 404 && response.status !== 405) {
+            return response;
+          }
+        }
+        return lastResponse;
+      }
       var nextToastId = 0;
       function showToast(message, type = "info") {
         window.dispatchEvent(
@@ -22104,10 +22127,31 @@
           )
         ] }, toast.id)) });
       }
+      function parseUserId(value) {
+        const parsed = typeof value === "number" ? value : typeof value === "string" ? Number.parseInt(value, 10) : Number.NaN;
+        if (!Number.isInteger(parsed) || parsed <= 0) {
+          return null;
+        }
+        return parsed;
+      }
       function getStoredUser() {
         try {
           const raw = localStorage.getItem("loggedInUser");
-          return raw ? JSON.parse(raw) : null;
+          if (!raw) {
+            return null;
+          }
+          const parsed = JSON.parse(raw);
+          const id = parseUserId(parsed.id);
+          const email = typeof parsed.email === "string" ? parsed.email : "";
+          if (!id || !email) {
+            localStorage.removeItem("loggedInUser");
+            return null;
+          }
+          return {
+            id,
+            email,
+            preferences: Array.isArray(parsed.preferences) ? parsed.preferences.filter((item) => typeof item === "string") : void 0
+          };
         } catch {
           return null;
         }
@@ -22161,7 +22205,14 @@
             });
             const result = await response.json();
             if (response.ok && result.user?.email) {
-              setStoredUser({ id: result.user.id, email: result.user.email });
+              const parsedUserId = parseUserId(result.user.id);
+              if (!parsedUserId) {
+                showToast("Login response is missing a valid user id.", "error");
+                return;
+              }
+              const serverPreferences = Array.isArray(result.user.preferences) ? result.user.preferences.filter((item) => typeof item === "string") : [];
+              setStoredUser({ id: parsedUserId, email: result.user.email, preferences: serverPreferences });
+              localStorage.setItem("newsFilters", JSON.stringify(filtersFromPreferences(serverPreferences)));
               syncHeaderIcon();
               showToast(`Welcome back, ${result.user.email}!`, "success");
               setEmail("");
@@ -22494,32 +22545,96 @@
         ] });
       }
       var FILTER_CATEGORIES = [
-        "Technology",
-        "Politics",
-        "Sports",
-        "World News",
-        "Economics",
+        "Business",
         "Entertainment",
-        "Culture"
+        "General",
+        "Health",
+        "Science",
+        "Sports",
+        "Technology"
       ];
-      function loadSavedFilters() {
+      var FILTER_CATEGORY_TO_KEY = {
+        Business: "business",
+        Entertainment: "entertainment",
+        General: "general",
+        Health: "health",
+        Science: "science",
+        Sports: "sports",
+        Technology: "technology"
+      };
+      function buildDefaultFilters() {
+        return Object.fromEntries(FILTER_CATEGORIES.map((category) => [category, true]));
+      }
+      function filtersFromPreferences(preferences) {
+        const selected = new Set(preferences.map((item) => item.trim().toLowerCase()));
+        return Object.fromEntries(
+          FILTER_CATEGORIES.map((category) => [category, selected.has(FILTER_CATEGORY_TO_KEY[category])])
+        );
+      }
+      function preferencesFromFilters(filters) {
+        return FILTER_CATEGORIES.filter((category) => filters[category]).map((category) => FILTER_CATEGORY_TO_KEY[category]);
+      }
+      function loadSavedFilters(savedPreferences) {
+        if (savedPreferences && Array.isArray(savedPreferences)) {
+          return filtersFromPreferences(savedPreferences);
+        }
         try {
           const raw = localStorage.getItem("newsFilters");
           if (raw)
             return JSON.parse(raw);
         } catch {
         }
-        return Object.fromEntries(FILTER_CATEGORIES.map((c) => [c, true]));
+        return buildDefaultFilters();
       }
-      function PreferencesPopup({ onClose }) {
-        const [filters, setFilters] = (0, import_react.useState)(loadSavedFilters);
+      function PreferencesPopup({
+        user,
+        onClose,
+        onUserUpdated
+      }) {
+        const [filters, setFilters] = (0, import_react.useState)(loadSavedFilters(user?.preferences));
+        const [submitting, setSubmitting] = (0, import_react.useState)(false);
+        const apiBaseUrl = (0, import_react.useMemo)(() => getApiBaseUrl(), []);
+        (0, import_react.useEffect)(() => {
+          setFilters(loadSavedFilters(user?.preferences));
+        }, [user]);
         const toggle = (category) => {
           setFilters((prev) => ({ ...prev, [category]: !prev[category] }));
         };
-        const handleSave = () => {
-          localStorage.setItem("newsFilters", JSON.stringify(filters));
-          showToast("Preferences saved.", "success");
-          onClose();
+        const handleSave = async () => {
+          if (!user) {
+            showToast("Please log in to save preferences.", "error");
+            return;
+          }
+          const parsedUserId = parseUserId(user.id);
+          if (!parsedUserId) {
+            showToast("Please log out and log back in before saving preferences.", "error");
+            return;
+          }
+          const selectedPreferences = preferencesFromFilters(filters);
+          setSubmitting(true);
+          try {
+            const response = await postPreferences(apiBaseUrl, parsedUserId, selectedPreferences);
+            const result = await response.json();
+            if (!response.ok || !result.user) {
+              showToast(result.error || "Could not save preferences.", "error");
+              return;
+            }
+            const updatedUser = {
+              id: result.user.id,
+              email: result.user.email,
+              preferences: Array.isArray(result.user.preferences) ? result.user.preferences : selectedPreferences
+            };
+            setStoredUser(updatedUser);
+            onUserUpdated(updatedUser);
+            localStorage.setItem("newsFilters", JSON.stringify(filtersFromPreferences(updatedUser.preferences || selectedPreferences)));
+            showToast("Preferences saved.", "success");
+            onClose();
+          } catch (error) {
+            console.error("Save preferences request failed", error);
+            showToast("Could not reach server. Please try again later.", "error");
+          } finally {
+            setSubmitting(false);
+          }
         };
         return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "preferences-overlay", onClick: onClose, children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "preferences-popup", onClick: (e) => e.stopPropagation(), children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { type: "button", className: "preferences-close", onClick: onClose, "aria-label": "Close", children: "\xD7" }),
@@ -22535,7 +22650,7 @@
             ),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: category })
           ] }) }, category)) }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", { className: "actions stacked", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { type: "button", className: "button large fit", onClick: handleSave, children: "Save Preferences" }) }) })
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", { className: "actions stacked", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { type: "button", className: "button large fit", onClick: handleSave, disabled: submitting, children: submitting ? "Saving..." : "Save Preferences" }) }) })
         ] }) });
       }
       function SettingsPanel() {
@@ -22548,6 +22663,7 @@
         }, []);
         const handleLogOut = () => {
           setStoredUser(null);
+          localStorage.removeItem("newsFilters");
           syncHeaderIcon();
           window.location.hash = "";
           showToast("You have been logged out.", "info");
@@ -22558,7 +22674,14 @@
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { type: "button", className: "button large fit", onClick: () => setShowPrefs(true), children: "Preferences" }) }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { type: "button", className: "button large fit settings-logout-btn", onClick: handleLogOut, children: "Log Out" }) })
           ] }),
-          showPrefs && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PreferencesPopup, { onClose: () => setShowPrefs(false) })
+          showPrefs && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+            PreferencesPopup,
+            {
+              user,
+              onClose: () => setShowPrefs(false),
+              onUserUpdated: (updatedUser) => setUser(updatedUser)
+            }
+          )
         ] });
       }
       function mountAuthUi() {
