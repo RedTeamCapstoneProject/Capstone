@@ -1,14 +1,20 @@
-# Move up to project root
+# Move up from \scripts\ to project root
 $projectRoot = Resolve-Path (Join-Path $PSScriptRoot "..")
 Set-Location $projectRoot
 
 Write-Host "Starting Summarizer Pipeline..."
 
-# This flag is the "magic" for GitHub Actions Node 20+
-# It tells Node: "Use ts-node to handle all .ts and .mts imports"
-$env:NODE_OPTIONS = "--loader ts-node/esm --no-warnings"
+# Explicitly tell the TS compiler to allow modern ESM features and .mts extensions
+$env:TS_NODE_COMPILER_OPTIONS = '{
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ESNext",
+    "allowImportingTsExtensions": true,
+    "noEmit": true
+}'
 
-# This is the "Lock" that ensures the function only runs when WE say so
+# Use the ESM loader for Node 20+
+$env:NODE_OPTIONS = "--loader ts-node/esm --no-warnings"
 $env:TRIGGER_RUN = "true"
 
 # Execute the file directly
