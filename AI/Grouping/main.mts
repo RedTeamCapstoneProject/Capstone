@@ -56,23 +56,23 @@ export const runDataImport = () => {
     const currentDir = path.dirname(currentFile);
     const scriptPath = path.resolve(currentDir, '../../scripts/importArticlesFromJson.ps1');
 
-  console.log('Starting database import...');
+    console.log('Starting database import...');
 
-  // 'powershell -ExecutionPolicy Bypass -File' ensures the script isn't blocked by Windows security
-  exec(`powershell -ExecutionPolicy Bypass -File "${scriptPath}"`, (error, stdout, stderr) => {
-    if (error) {
-      console.error(`Execution Error: ${error.message}`);
-      return;
-    }
+    // We add { env: process.env } as the second argument
+    exec(`powershell -ExecutionPolicy Bypass -File "${scriptPath}"`, { env: process.env }, (error, stdout, stderr) => {
+        if (error) {
+            console.error(`Execution Error: ${error.message}`);
+            return;
+        }
 
-    if (stderr) {
-      console.error(`PowerShell Error: ${stderr}`);
-      return;
-    }
+        if (stderr) {
+            console.error(`PowerShell Error: ${stderr}`);
+            // Note: Some PS warnings show up here; check if it actually failed
+            return;
+        }
 
-    // This will show the "Inserted rows: X" message from your script
-    console.log(`Success: ${stdout}`);
-  });
+        console.log(`Success: ${stdout}`);
+    });
 };
 
 
