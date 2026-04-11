@@ -6548,6 +6548,15 @@
       var import_jquery = __toESM(require_jquery());
       init_breakpoints();
       var import_util = __toESM(require_util());
+      var categories = /* @__PURE__ */ new Set([
+        "business",
+        "entertainment",
+        "general",
+        "health",
+        "science",
+        "sports",
+        "technology"
+      ]);
       function resolveImageSource(rawImage) {
         const isDirectSource = rawImage.startsWith("data:") || rawImage.startsWith("http://") || rawImage.startsWith("https://") || rawImage.startsWith("//") || rawImage.startsWith("/");
         return isDirectSource ? rawImage : `data:image/jpeg;base64,${rawImage}`;
@@ -6569,6 +6578,15 @@
         if (Array.isArray(data))
           return data[0] ?? null;
         return data;
+      }
+      function getCategoryFromUrl() {
+        const rawCategory = new URLSearchParams(window.location.search).get("category");
+        if (!rawCategory)
+          return null;
+        const normalized = rawCategory.trim().toLowerCase();
+        if (!categories.has(normalized))
+          return null;
+        return normalized;
       }
       function formatSummaryForDisplay(summaryText) {
         const normalized = summaryText.replace(/\r\n/g, "\n").trim();
@@ -6731,8 +6749,13 @@ ${bullets}`;
         const recordsNeeded = posts.length + miniPosts.length + sidebarPosts.length;
         if (recordsNeeded === 0)
           return;
+        const selectedCategory = getCategoryFromUrl();
+        const queryParams = new URLSearchParams({ limit: String(recordsNeeded) });
+        if (selectedCategory) {
+          queryParams.set("category", selectedCategory);
+        }
         try {
-          const response = await fetch(`/api/summaries?limit=${recordsNeeded}`);
+          const response = await fetch(`/api/summaries?${queryParams.toString()}`);
           if (!response.ok)
             return;
           const payload = await response.json();
