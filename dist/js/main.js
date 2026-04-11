@@ -6552,7 +6552,64 @@
         const isDirectSource = rawImage.startsWith("data:") || rawImage.startsWith("http://") || rawImage.startsWith("https://") || rawImage.startsWith("//") || rawImage.startsWith("/");
         return isDirectSource ? rawImage : `data:image/jpeg;base64,${rawImage}`;
       }
+      function buildSummaryHref(id) {
+        if (!Number.isFinite(id))
+          return "single.html";
+        return `single.html?id=${id}`;
+      }
+      function readSummaryItemFromPayload(payload) {
+        const data = payload.data;
+        if (!data)
+          return null;
+        if (Array.isArray(data))
+          return data[0] ?? null;
+        return data;
+      }
+      async function hydrateSingleSummaryPage() {
+        if (!document.body.classList.contains("single"))
+          return false;
+        const idParam = new URLSearchParams(window.location.search).get("id");
+        const parsedId = idParam ? Number.parseInt(idParam, 10) : Number.NaN;
+        const isValidId = Number.isFinite(parsedId) && parsedId > 0;
+        const endpoint = isValidId ? `/api/summaries?id=${parsedId}` : "/api/summaries?limit=1";
+        try {
+          const response = await fetch(endpoint);
+          if (!response.ok)
+            return true;
+          const payload = await response.json();
+          const item = readSummaryItemFromPayload(payload);
+          if (!item)
+            return true;
+          const title = item.ai_title?.trim() || "Untitled Summary";
+          const description = item.ai_description?.trim() || "No description available.";
+          const summaryText = item.summary?.trim() || description;
+          const detailHref = buildSummaryHref(item.id);
+          const titleLink = document.querySelector("#main article.post header .title h2 a");
+          if (titleLink) {
+            titleLink.textContent = title;
+            titleLink.href = detailHref;
+          }
+          const subtitle = document.querySelector("#main article.post header .title p");
+          if (subtitle)
+            subtitle.textContent = description;
+          const bodyParagraphs = Array.from(document.querySelectorAll("#main article.post > p"));
+          if (bodyParagraphs[0])
+            bodyParagraphs[0].textContent = summaryText;
+          if (bodyParagraphs[1])
+            bodyParagraphs[1].textContent = description;
+          const image = document.querySelector("#main article.post .image.featured img");
+          const rawImage = item.url_to_image?.trim();
+          if (image && rawImage) {
+            image.src = resolveImageSource(rawImage);
+            image.alt = title;
+          }
+        } catch {
+        }
+        return true;
+      }
       async function hydrateSummaryPosts() {
+        if (await hydrateSingleSummaryPage())
+          return;
         const posts = Array.from(document.querySelectorAll("#main article.post"));
         const miniPosts = Array.from(
           document.querySelectorAll("#sidebar .mini-posts article.mini-post")
@@ -6574,9 +6631,12 @@
             const title = item.ai_title?.trim() || "Untitled Summary";
             const description = item.ai_description?.trim() || "No description available.";
             const summaryText = item.summary?.trim() || description;
+            const detailHref = buildSummaryHref(item.id);
             const headingLink = post.querySelector("header .title h2 a");
-            if (headingLink)
+            if (headingLink) {
               headingLink.textContent = title;
+              headingLink.href = detailHref;
+            }
             const headerDescription = post.querySelector("header .title p");
             if (headerDescription)
               headerDescription.textContent = description;
@@ -6584,6 +6644,12 @@
             if (bodyDescription)
               bodyDescription.textContent = summaryText;
             const image = post.querySelector("a.image.featured img");
+            const imageLink = post.querySelector("a.image.featured");
+            if (imageLink)
+              imageLink.href = detailHref;
+            const continueReading = post.querySelector("footer .actions .button");
+            if (continueReading)
+              continueReading.href = detailHref;
             const rawImage = item.url_to_image?.trim();
             if (image && rawImage) {
               image.src = resolveImageSource(rawImage);
@@ -6595,9 +6661,15 @@
             if (!item)
               return;
             const title = item.ai_title?.trim() || "Untitled Summary";
+            const detailHref = buildSummaryHref(item.id);
             const headingLink = miniPost.querySelector("header h3 a");
-            if (headingLink)
+            if (headingLink) {
               headingLink.textContent = title;
+              headingLink.href = detailHref;
+            }
+            const imageLink = miniPost.querySelector("a.image");
+            if (imageLink)
+              imageLink.href = detailHref;
             const image = miniPost.querySelector("a.image img");
             const rawImage = item.url_to_image?.trim();
             if (image && rawImage) {
@@ -6610,9 +6682,15 @@
             if (!item)
               return;
             const title = item.ai_title?.trim() || "Untitled Summary";
+            const detailHref = buildSummaryHref(item.id);
             const headingLink = sidebarPost.querySelector("header h3 a");
-            if (headingLink)
+            if (headingLink) {
               headingLink.textContent = title;
+              headingLink.href = detailHref;
+            }
+            const imageLink = sidebarPost.querySelector("a.image");
+            if (imageLink)
+              imageLink.href = detailHref;
             const image = sidebarPost.querySelector("a.image img");
             const rawImage = item.url_to_image?.trim();
             if (image && rawImage) {

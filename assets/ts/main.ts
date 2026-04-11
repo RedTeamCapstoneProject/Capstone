@@ -3,11 +3,14 @@ import breakpoints from "./breakpoints";
 import "./util"; // Load jQuery plugins
 
 type SummaryItem = {
+  id: number;
   ai_title: string | null;
   ai_description: string | null;
   url_to_image: string | null;
   summary: string | null;
 };
+
+type SummariesResponse = { data?: SummaryItem[] | SummaryItem };
 
 function resolveImageSource(rawImage: string): string {
   const isDirectSource =
@@ -20,7 +23,68 @@ function resolveImageSource(rawImage: string): string {
   return isDirectSource ? rawImage : `data:image/jpeg;base64,${rawImage}`;
 }
 
+function buildSummaryHref(id: number | null | undefined): string {
+  if (!Number.isFinite(id)) return "single.html";
+  return `single.html?id=${id}`;
+}
+
+function readSummaryItemFromPayload(payload: SummariesResponse): SummaryItem | null {
+  const data = payload.data;
+  if (!data) return null;
+  if (Array.isArray(data)) return data[0] ?? null;
+  return data;
+}
+
+async function hydrateSingleSummaryPage(): Promise<boolean> {
+  if (!document.body.classList.contains("single")) return false;
+
+  const idParam = new URLSearchParams(window.location.search).get("id");
+  const parsedId = idParam ? Number.parseInt(idParam, 10) : Number.NaN;
+  const isValidId = Number.isFinite(parsedId) && parsedId > 0;
+  const endpoint = isValidId ? `/api/summaries?id=${parsedId}` : "/api/summaries?limit=1";
+
+  try {
+    const response = await fetch(endpoint);
+    if (!response.ok) return true;
+
+    const payload = (await response.json()) as SummariesResponse;
+    const item = readSummaryItemFromPayload(payload);
+    if (!item) return true;
+
+    const title = item.ai_title?.trim() || "Untitled Summary";
+    const description = item.ai_description?.trim() || "No description available.";
+    const summaryText = item.summary?.trim() || description;
+    const detailHref = buildSummaryHref(item.id);
+
+    const titleLink = document.querySelector<HTMLAnchorElement>("#main article.post header .title h2 a");
+    if (titleLink) {
+      titleLink.textContent = title;
+      titleLink.href = detailHref;
+    }
+
+    const subtitle = document.querySelector<HTMLParagraphElement>("#main article.post header .title p");
+    if (subtitle) subtitle.textContent = description;
+
+    const bodyParagraphs = Array.from(document.querySelectorAll<HTMLParagraphElement>("#main article.post > p"));
+    if (bodyParagraphs[0]) bodyParagraphs[0].textContent = summaryText;
+    if (bodyParagraphs[1]) bodyParagraphs[1].textContent = description;
+
+    const image = document.querySelector<HTMLImageElement>("#main article.post .image.featured img");
+    const rawImage = item.url_to_image?.trim();
+    if (image && rawImage) {
+      image.src = resolveImageSource(rawImage);
+      image.alt = title;
+    }
+  } catch {
+    // Keep static fallback content if API request fails.
+  }
+
+  return true;
+}
+
 async function hydrateSummaryPosts(): Promise<void> {
+  if (await hydrateSingleSummaryPage()) return;
+
   const posts = Array.from(document.querySelectorAll<HTMLElement>("#main article.post"));
   const miniPosts = Array.from(
     document.querySelectorAll<HTMLElement>("#sidebar .mini-posts article.mini-post")
@@ -44,9 +108,13 @@ async function hydrateSummaryPosts(): Promise<void> {
       const title = item.ai_title?.trim() || "Untitled Summary";
       const description = item.ai_description?.trim() || "No description available.";
       const summaryText = item.summary?.trim() || description;
+      const detailHref = buildSummaryHref(item.id);
 
       const headingLink = post.querySelector<HTMLAnchorElement>("header .title h2 a");
-      if (headingLink) headingLink.textContent = title;
+      if (headingLink) {
+        headingLink.textContent = title;
+        headingLink.href = detailHref;
+      }
 
       const headerDescription = post.querySelector<HTMLParagraphElement>("header .title p");
       if (headerDescription) headerDescription.textContent = description;
@@ -55,6 +123,12 @@ async function hydrateSummaryPosts(): Promise<void> {
       if (bodyDescription) bodyDescription.textContent = summaryText;
 
       const image = post.querySelector<HTMLImageElement>("a.image.featured img");
+      const imageLink = post.querySelector<HTMLAnchorElement>("a.image.featured");
+      if (imageLink) imageLink.href = detailHref;
+
+      const continueReading = post.querySelector<HTMLAnchorElement>("footer .actions .button");
+      if (continueReading) continueReading.href = detailHref;
+
       const rawImage = item.url_to_image?.trim();
       if (image && rawImage) {
         image.src = resolveImageSource(rawImage);
@@ -67,8 +141,15 @@ async function hydrateSummaryPosts(): Promise<void> {
       if (!item) return;
 
       const title = item.ai_title?.trim() || "Untitled Summary";
+      const detailHref = buildSummaryHref(item.id);
       const headingLink = miniPost.querySelector<HTMLAnchorElement>("header h3 a");
-      if (headingLink) headingLink.textContent = title;
+      if (headingLink) {
+        headingLink.textContent = title;
+        headingLink.href = detailHref;
+      }
+
+      const imageLink = miniPost.querySelector<HTMLAnchorElement>("a.image");
+      if (imageLink) imageLink.href = detailHref;
 
       const image = miniPost.querySelector<HTMLImageElement>("a.image img");
       const rawImage = item.url_to_image?.trim();
@@ -83,8 +164,15 @@ async function hydrateSummaryPosts(): Promise<void> {
       if (!item) return;
 
       const title = item.ai_title?.trim() || "Untitled Summary";
+      const detailHref = buildSummaryHref(item.id);
       const headingLink = sidebarPost.querySelector<HTMLAnchorElement>("header h3 a");
-      if (headingLink) headingLink.textContent = title;
+      if (headingLink) {
+        headingLink.textContent = title;
+        headingLink.href = detailHref;
+      }
+
+      const imageLink = sidebarPost.querySelector<HTMLAnchorElement>("a.image");
+      if (imageLink) imageLink.href = detailHref;
 
       const image = sidebarPost.querySelector<HTMLImageElement>("a.image img");
       const rawImage = item.url_to_image?.trim();
