@@ -3,7 +3,7 @@ import breakpoints from "./breakpoints";
 import "./util"; // Load jQuery plugins
 
 type SummaryItem = {
-  id: number;
+  id: number | string;
   ai_title: string | null;
   ai_description: string | null;
   url_to_image: string | null;
@@ -23,9 +23,21 @@ function resolveImageSource(rawImage: string): string {
   return isDirectSource ? rawImage : `data:image/jpeg;base64,${rawImage}`;
 }
 
-function buildSummaryHref(id: number | null | undefined): string {
-  if (!Number.isFinite(id)) return "single.html";
-  return `single.html?id=${id}`;
+function normalizeSummaryId(value: number | string | null | undefined): number | null {
+  const numeric =
+    typeof value === "number"
+      ? value
+      : typeof value === "string"
+        ? Number.parseInt(value, 10)
+        : Number.NaN;
+
+  return Number.isFinite(numeric) && numeric > 0 ? numeric : null;
+}
+
+function buildSummaryHref(id: number | string | null | undefined): string {
+  const normalizedId = normalizeSummaryId(id);
+  if (normalizedId === null) return "single.html";
+  return `single.html?id=${normalizedId}`;
 }
 
 function readSummaryItemFromPayload(payload: SummariesResponse): SummaryItem | null {
@@ -67,7 +79,10 @@ async function hydrateSingleSummaryPage(): Promise<boolean> {
 
     const bodyParagraphs = Array.from(document.querySelectorAll<HTMLParagraphElement>("#main article.post > p"));
     if (bodyParagraphs[0]) bodyParagraphs[0].textContent = summaryText;
-    if (bodyParagraphs[1]) bodyParagraphs[1].textContent = description;
+    bodyParagraphs.slice(1).forEach((paragraph) => {
+      paragraph.textContent = "";
+      paragraph.style.display = "none";
+    });
 
     const image = document.querySelector<HTMLImageElement>("#main article.post .image.featured img");
     const rawImage = item.url_to_image?.trim();

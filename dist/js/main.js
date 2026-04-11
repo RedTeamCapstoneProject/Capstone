@@ -6552,10 +6552,15 @@
         const isDirectSource = rawImage.startsWith("data:") || rawImage.startsWith("http://") || rawImage.startsWith("https://") || rawImage.startsWith("//") || rawImage.startsWith("/");
         return isDirectSource ? rawImage : `data:image/jpeg;base64,${rawImage}`;
       }
+      function normalizeSummaryId(value) {
+        const numeric = typeof value === "number" ? value : typeof value === "string" ? Number.parseInt(value, 10) : Number.NaN;
+        return Number.isFinite(numeric) && numeric > 0 ? numeric : null;
+      }
       function buildSummaryHref(id) {
-        if (!Number.isFinite(id))
+        const normalizedId = normalizeSummaryId(id);
+        if (normalizedId === null)
           return "single.html";
-        return `single.html?id=${id}`;
+        return `single.html?id=${normalizedId}`;
       }
       function readSummaryItemFromPayload(payload) {
         const data = payload.data;
@@ -6595,8 +6600,10 @@
           const bodyParagraphs = Array.from(document.querySelectorAll("#main article.post > p"));
           if (bodyParagraphs[0])
             bodyParagraphs[0].textContent = summaryText;
-          if (bodyParagraphs[1])
-            bodyParagraphs[1].textContent = description;
+          bodyParagraphs.slice(1).forEach((paragraph) => {
+            paragraph.textContent = "";
+            paragraph.style.display = "none";
+          });
           const image = document.querySelector("#main article.post .image.featured img");
           const rawImage = item.url_to_image?.trim();
           if (image && rawImage) {
