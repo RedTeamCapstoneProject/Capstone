@@ -600,13 +600,13 @@ function ResetPasswordPage() {
 // ── Preferences popup ────────────────────────────────────────────────────
 
 const FILTER_CATEGORIES = [
-  "Technology",
-  "Politics",
-  "Sports",
-  "World News",
-  "Economics",
+  "Business",
   "Entertainment",
-  "Culture",
+  "General",
+  "Health",
+  "Science",
+  "Sports",
+  "Technology",
 ] as const;
 
 type FilterCategory = (typeof FILTER_CATEGORIES)[number];

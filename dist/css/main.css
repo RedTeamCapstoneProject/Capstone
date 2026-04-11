@@ -2854,6 +2854,22 @@ ul.posts article header > :last-child {
 	margin-bottom: 0;
 }
 
+.post > header .article-actions {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 0.75em;
+	padding: 3.75em 3em 3.3em 2em;
+	min-width: auto;
+	width: auto;
+	flex-shrink: 0;
+}
+
+.post > header .article-actions .button {
+	margin: 0;
+	white-space: nowrap;
+}
+
 .post > header .meta .published {
 	color: #3c3b3b;
 	display: block;
@@ -2978,6 +2994,14 @@ ul.posts article header > :last-child {
 		padding-top: 0;
 		padding: 0;
 		text-align: left;
+		width: 100%;
+	}
+
+	.post > header .article-actions {
+		justify-content: center;
+		border-left: 0;
+		padding: 0;
+		margin: 0 0 2em 0;
 		width: 100%;
 	}
 
