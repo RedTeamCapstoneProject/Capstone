@@ -42,6 +42,21 @@ function normalizePreferences(input: unknown): string[] | null {
   return normalized;
 }
 
+function normalizeUserId(input: unknown): number | null {
+  const parsed =
+    typeof input === "number"
+      ? input
+      : typeof input === "string"
+      ? Number.parseInt(input, 10)
+      : Number.NaN;
+
+  if (!Number.isInteger(parsed) || parsed <= 0) {
+    return null;
+  }
+
+  return parsed;
+}
+
 export default async (req: VercelRequest, res: VercelResponse) => {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
@@ -49,11 +64,13 @@ export default async (req: VercelRequest, res: VercelResponse) => {
 
   try {
     const { userId, preferences } = req.body as {
-      userId?: number;
+      userId?: unknown;
       preferences?: unknown;
     };
 
-    if (!userId || !Number.isInteger(userId)) {
+    const parsedUserId = normalizeUserId(userId);
+
+    if (!parsedUserId) {
       return res.status(400).json({ error: "A valid userId is required" });
     }
 
@@ -70,7 +87,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
        SET preferences = $1
        WHERE id = $2
        RETURNING id, email, preferences`,
-      [normalizedPreferences, userId]
+      [normalizedPreferences, parsedUserId]
     );
 
     if (result.rows.length === 0) {

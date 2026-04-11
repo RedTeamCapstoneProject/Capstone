@@ -13,6 +13,21 @@ const pool = new Pool({
     : false,
 });
 
+function normalizeUserId(input: unknown): number | null {
+  const parsed =
+    typeof input === "number"
+      ? input
+      : typeof input === "string"
+      ? Number.parseInt(input, 10)
+      : Number.NaN;
+
+  if (!Number.isInteger(parsed) || parsed <= 0) {
+    return null;
+  }
+
+  return parsed;
+}
+
 export default async (req: VercelRequest, res: VercelResponse) => {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
@@ -49,7 +64,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     return res.status(200).json({
       message: "Login successful",
       user: {
-        id: user.id,
+        id: normalizeUserId(user.id),
         email: user.email,
         preferences: user.preferences ?? [],
       },
