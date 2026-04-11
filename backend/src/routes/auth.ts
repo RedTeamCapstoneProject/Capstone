@@ -5,6 +5,35 @@ import pool from "../database";
 import { sendPasswordResetEmail } from "../mailer";
 
 const router = Router();
+const ALLOWED_PREFERENCES = [
+  "business",
+  "entertainment",
+  "general",
+  "health",
+  "science",
+  "sports",
+  "technology",
+];
+
+function normalizePreferences(input: unknown): string[] | null {
+  if (!Array.isArray(input)) {
+    return null;
+  }
+
+  const normalized = Array.from(
+    new Set(
+      input
+        .filter((item): item is string => typeof item === "string")
+        .map((item) => item.trim().toLowerCase())
+    )
+  );
+
+  if (normalized.some((item) => !ALLOWED_PREFERENCES.includes(item))) {
+    return null;
+  }
+
+  return normalized;
+}
 
 // Create account with normalized email and hashed password.
 router.post("/signup", async (req: Request, res: Response) => {
@@ -63,7 +92,7 @@ router.post("/login", async (req: Request, res: Response) => {
     const normalizedEmail = email.trim().toLowerCase();
 
     const result = await pool.query(
-      "SELECT id, email, password_hash FROM users WHERE email = $1",
+      "SELECT id, email, password_hash, preferences FROM users WHERE email = $1",
       [normalizedEmail]
     );
 
@@ -84,10 +113,52 @@ router.post("/login", async (req: Request, res: Response) => {
       user: {
         id: user.id,
         email: user.email,
+        preferences: user.preferences ?? [],
       },
     });
   } catch (error) {
     console.error("Login error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+router.post("/preferences", async (req: Request, res: Response) => {
+  try {
+    const { userId, preferences } = req.body as {
+      userId?: number;
+      preferences?: unknown;
+    };
+
+    if (!userId || !Number.isInteger(userId)) {
+      return res.status(400).json({ error: "A valid userId is required" });
+    }
+
+    const normalizedPreferences = normalizePreferences(preferences);
+
+    if (normalizedPreferences === null) {
+      return res.status(400).json({
+        error: "preferences must be an array containing only: business, entertainment, general, health, science, sports, technology",
+      });
+    }
+
+    const result = await pool.query(
+      `UPDATE users
+       SET preferences = $1
+       WHERE id = $2
+       RETURNING id, email, preferences`,
+      [normalizedPreferences, userId]
+    );
+
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    return res.status(200).json({
+      message: "Preferences saved",
+      user: result.rows[0],
+    });
+  } catch (error) {
+    console.error("Preferences update error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 });

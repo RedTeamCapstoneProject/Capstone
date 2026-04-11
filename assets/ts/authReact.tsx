@@ -7,6 +7,7 @@ type AuthResponse = {
   user?: {
     id: number;
     email: string;
+    preferences?: string[];
   };
 };
 
@@ -91,6 +92,34 @@ async function postForgotPassword(apiBaseUrl: string, email: string): Promise<Re
   return lastResponse as Response;
 }
 
+async function postPreferences(apiBaseUrl: string, userId: number, preferences: string[]): Promise<Response> {
+  const relativeBase = apiBaseUrl || "";
+  const absoluteBase = window.location.origin;
+  const candidates = Array.from(new Set([
+    `${relativeBase}/api/auth/preferences`,
+    `${relativeBase}/api/auth/preferences/`,
+    `${absoluteBase}/api/auth/preferences`,
+    `${absoluteBase}/api/auth/preferences/`,
+  ]));
+
+  let lastResponse: Response | null = null;
+
+  for (const endpoint of candidates) {
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ userId, preferences }),
+    });
+
+    lastResponse = response;
+    if (response.status !== 404 && response.status !== 405) {
+      return response;
+    }
+  }
+
+  return lastResponse as Response;
+}
+
 // ── Toast notification system ───────────────────────────────────────────
 
 type ToastType = "success" | "error" | "info";
@@ -152,6 +181,7 @@ function ToastContainer() {
 interface StoredUser {
   id: number;
   email: string;
+  preferences?: string[];
 }
 
 function getStoredUser(): StoredUser | null {
@@ -223,7 +253,11 @@ function LoginForm() {
       const result = (await response.json()) as AuthResponse;
 
       if (response.ok && result.user?.email) {
-        setStoredUser({ id: result.user.id, email: result.user.email });
+        const serverPreferences = Array.isArray(result.user.preferences)
+          ? result.user.preferences.filter((item): item is string => typeof item === "string")
+          : [];
+        setStoredUser({ id: result.user.id, email: result.user.email, preferences: serverPreferences });
+        localStorage.setItem("newsFilters", JSON.stringify(filtersFromPreferences(serverPreferences)));
         syncHeaderIcon();
         showToast(`Welcome back, ${result.user.email}!`, "success");
         setEmail("");
@@ -611,25 +645,101 @@ const FILTER_CATEGORIES = [
 
 type FilterCategory = (typeof FILTER_CATEGORIES)[number];
 
-function loadSavedFilters(): Record<FilterCategory, boolean> {
+const FILTER_CATEGORY_TO_KEY: Record<FilterCategory, string> = {
+  Business: "business",
+  Entertainment: "entertainment",
+  General: "general",
+  Health: "health",
+  Science: "science",
+  Sports: "sports",
+  Technology: "technology",
+};
+
+function buildDefaultFilters(): Record<FilterCategory, boolean> {
+  return Object.fromEntries(FILTER_CATEGORIES.map((category) => [category, true])) as Record<FilterCategory, boolean>;
+}
+
+function filtersFromPreferences(preferences: string[]): Record<FilterCategory, boolean> {
+  const selected = new Set(preferences.map((item) => item.trim().toLowerCase()));
+  return Object.fromEntries(
+    FILTER_CATEGORIES.map((category) => [category, selected.has(FILTER_CATEGORY_TO_KEY[category])])
+  ) as Record<FilterCategory, boolean>;
+}
+
+function preferencesFromFilters(filters: Record<FilterCategory, boolean>): string[] {
+  return FILTER_CATEGORIES
+    .filter((category) => filters[category])
+    .map((category) => FILTER_CATEGORY_TO_KEY[category]);
+}
+
+function loadSavedFilters(savedPreferences?: string[]): Record<FilterCategory, boolean> {
+  if (savedPreferences && Array.isArray(savedPreferences)) {
+    return filtersFromPreferences(savedPreferences);
+  }
+
   try {
     const raw = localStorage.getItem("newsFilters");
     if (raw) return JSON.parse(raw) as Record<FilterCategory, boolean>;
   } catch { /* ignore */ }
-  return Object.fromEntries(FILTER_CATEGORIES.map((c) => [c, true])) as Record<FilterCategory, boolean>;
+  return buildDefaultFilters();
 }
 
-function PreferencesPopup({ onClose }: { onClose: () => void }) {
-  const [filters, setFilters] = useState<Record<FilterCategory, boolean>>(loadSavedFilters);
+function PreferencesPopup({
+  user,
+  onClose,
+  onUserUpdated,
+}: {
+  user: StoredUser | null;
+  onClose: () => void;
+  onUserUpdated: (updatedUser: StoredUser) => void;
+}) {
+  const [filters, setFilters] = useState<Record<FilterCategory, boolean>>(loadSavedFilters(user?.preferences));
+  const [submitting, setSubmitting] = useState(false);
+  const apiBaseUrl = useMemo(() => getApiBaseUrl(), []);
+
+  useEffect(() => {
+    setFilters(loadSavedFilters(user?.preferences));
+  }, [user]);
 
   const toggle = (category: FilterCategory) => {
     setFilters((prev) => ({ ...prev, [category]: !prev[category] }));
   };
 
-  const handleSave = () => {
-    localStorage.setItem("newsFilters", JSON.stringify(filters));
-    showToast("Preferences saved.", "success");
-    onClose();
+  const handleSave = async () => {
+    if (!user) {
+      showToast("Please log in to save preferences.", "error");
+      return;
+    }
+
+    const selectedPreferences = preferencesFromFilters(filters);
+    setSubmitting(true);
+
+    try {
+      const response = await postPreferences(apiBaseUrl, user.id, selectedPreferences);
+      const result = (await response.json()) as AuthResponse;
+
+      if (!response.ok || !result.user) {
+        showToast(result.error || "Could not save preferences.", "error");
+        return;
+      }
+
+      const updatedUser: StoredUser = {
+        id: result.user.id,
+        email: result.user.email,
+        preferences: Array.isArray(result.user.preferences) ? result.user.preferences : selectedPreferences,
+      };
+
+      setStoredUser(updatedUser);
+      onUserUpdated(updatedUser);
+      localStorage.setItem("newsFilters", JSON.stringify(filtersFromPreferences(updatedUser.preferences || selectedPreferences)));
+      showToast("Preferences saved.", "success");
+      onClose();
+    } catch (error) {
+      console.error("Save preferences request failed", error);
+      showToast("Could not reach server. Please try again later.", "error");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -653,7 +763,9 @@ function PreferencesPopup({ onClose }: { onClose: () => void }) {
         </ul>
         <ul className="actions stacked">
           <li>
-            <button type="button" className="button large fit" onClick={handleSave}>Save Preferences</button>
+            <button type="button" className="button large fit" onClick={handleSave} disabled={submitting}>
+              {submitting ? "Saving..." : "Save Preferences"}
+            </button>
           </li>
         </ul>
       </div>
@@ -675,6 +787,7 @@ function SettingsPanel() {
 
   const handleLogOut = () => {
     setStoredUser(null);
+    localStorage.removeItem("newsFilters");
     syncHeaderIcon();
     window.location.hash = "";
     showToast("You have been logged out.", "info");
@@ -691,7 +804,13 @@ function SettingsPanel() {
           <button type="button" className="button large fit settings-logout-btn" onClick={handleLogOut}>Log Out</button>
         </li>
       </ul>
-      {showPrefs && <PreferencesPopup onClose={() => setShowPrefs(false)} />}
+      {showPrefs && (
+        <PreferencesPopup
+          user={user}
+          onClose={() => setShowPrefs(false)}
+          onUserUpdated={(updatedUser) => setUser(updatedUser)}
+        />
+      )}
     </div>
   );
 }
