@@ -8,6 +8,9 @@ type SummaryItem = {
   ai_description: string | null;
   url_to_image: string | null;
   summary: string | null;
+  source_names?: string[] | null;
+  authors?: string[] | null;
+  urls?: string[] | null;
 };
 
 type SummariesResponse = { data?: SummaryItem[] | SummaryItem };
@@ -47,6 +50,123 @@ function readSummaryItemFromPayload(payload: SummariesResponse): SummaryItem | n
   return data;
 }
 
+function formatSummaryForDisplay(summaryText: string): string {
+  const normalized = summaryText.replace(/\r\n/g, "\n").trim();
+  const bulletsOnNewLines = normalized.replace(/\n?\s*\*\s+/g, "\n* ");
+  const firstBulletIndex = bulletsOnNewLines.indexOf("\n* ");
+
+  if (firstBulletIndex === -1) return bulletsOnNewLines;
+
+  const body = bulletsOnNewLines.slice(0, firstBulletIndex).trimEnd();
+  const bullets = bulletsOnNewLines.slice(firstBulletIndex).trimStart();
+  return `${body}\n\n${bullets}`;
+}
+
+function toCleanList(values?: string[] | null): string[] {
+  if (!Array.isArray(values)) return [];
+  return values
+    .map((value) => value?.trim())
+    .filter((value): value is string => Boolean(value));
+}
+
+function uniqueList(values: string[]): string[] {
+  const seen = new Set<string>();
+  const ordered: string[] = [];
+
+  values.forEach((value) => {
+    if (seen.has(value)) return;
+    seen.add(value);
+    ordered.push(value);
+  });
+
+  return ordered;
+}
+
+function renderArticleMeta(item: SummaryItem): void {
+  const footer = document.querySelector<HTMLElement>("#main article.post footer");
+  if (!footer) return;
+
+  const sourceNames = uniqueList(toCleanList(item.source_names));
+  const authors = uniqueList(toCleanList(item.authors));
+  const urls = uniqueList(toCleanList(item.urls));
+
+  footer.innerHTML = "";
+  footer.style.display = "block";
+  footer.style.alignItems = "initial";
+
+  const metaWrapper = document.createElement("div");
+  metaWrapper.className = "article-meta";
+
+  const createSection = (label: string, content: HTMLElement | string): void => {
+    const section = document.createElement("section");
+    section.style.marginBottom = "1.25rem";
+
+    const heading = document.createElement("h4");
+    heading.textContent = `${label}:`;
+    heading.style.marginBottom = "0.5rem";
+    section.appendChild(heading);
+
+    if (typeof content === "string") {
+      const paragraph = document.createElement("p");
+      paragraph.textContent = content;
+      paragraph.style.marginBottom = "0";
+      paragraph.style.whiteSpace = "normal";
+      section.appendChild(paragraph);
+    } else {
+      section.appendChild(content);
+    }
+
+    metaWrapper.appendChild(section);
+  };
+
+  if (sourceNames.length > 0) {
+    const list = document.createElement("ul");
+    sourceNames.forEach((source) => {
+      const listItem = document.createElement("li");
+      listItem.textContent = source;
+      list.appendChild(listItem);
+    });
+    createSection("Sources", list);
+  } else {
+    createSection("Sources", "Not available");
+  }
+
+  if (authors.length > 0) {
+    const list = document.createElement("ul");
+    authors.forEach((author) => {
+      const listItem = document.createElement("li");
+      listItem.textContent = author;
+      list.appendChild(listItem);
+    });
+    createSection("Authors", list);
+  } else {
+    createSection("Authors", "Not available");
+  }
+
+  if (urls.length > 0) {
+    const list = document.createElement("ul");
+    urls.forEach((url) => {
+      const itemElement = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = url;
+      link.textContent = url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      itemElement.appendChild(link);
+      list.appendChild(itemElement);
+    });
+
+    createSection("URLs", list);
+  } else {
+    createSection("URLs", "Not available");
+  }
+
+  const lastSection = metaWrapper.lastElementChild as HTMLElement | null;
+  if (lastSection) lastSection.style.marginBottom = "0";
+
+  footer.appendChild(metaWrapper);
+}
+
 async function hydrateSingleSummaryPage(): Promise<boolean> {
   if (!document.body.classList.contains("single")) return false;
 
@@ -78,7 +198,10 @@ async function hydrateSingleSummaryPage(): Promise<boolean> {
     if (subtitle) subtitle.textContent = description;
 
     const bodyParagraphs = Array.from(document.querySelectorAll<HTMLParagraphElement>("#main article.post > p"));
-    if (bodyParagraphs[0]) bodyParagraphs[0].textContent = summaryText;
+    if (bodyParagraphs[0]) {
+      bodyParagraphs[0].textContent = formatSummaryForDisplay(summaryText);
+      bodyParagraphs[0].style.whiteSpace = "pre-line";
+    }
     bodyParagraphs.slice(1).forEach((paragraph) => {
       paragraph.textContent = "";
       paragraph.style.display = "none";
@@ -90,6 +213,8 @@ async function hydrateSingleSummaryPage(): Promise<boolean> {
       image.src = resolveImageSource(rawImage);
       image.alt = title;
     }
+
+    renderArticleMeta(item);
   } catch {
     // Keep static fallback content if API request fails.
   }

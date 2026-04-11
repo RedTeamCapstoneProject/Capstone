@@ -6570,6 +6570,107 @@
           return data[0] ?? null;
         return data;
       }
+      function formatSummaryForDisplay(summaryText) {
+        const normalized = summaryText.replace(/\r\n/g, "\n").trim();
+        const bulletsOnNewLines = normalized.replace(/\n?\s*\*\s+/g, "\n* ");
+        const firstBulletIndex = bulletsOnNewLines.indexOf("\n* ");
+        if (firstBulletIndex === -1)
+          return bulletsOnNewLines;
+        const body = bulletsOnNewLines.slice(0, firstBulletIndex).trimEnd();
+        const bullets = bulletsOnNewLines.slice(firstBulletIndex).trimStart();
+        return `${body}
+
+${bullets}`;
+      }
+      function toCleanList(values) {
+        if (!Array.isArray(values))
+          return [];
+        return values.map((value) => value?.trim()).filter((value) => Boolean(value));
+      }
+      function uniqueList(values) {
+        const seen = /* @__PURE__ */ new Set();
+        const ordered = [];
+        values.forEach((value) => {
+          if (seen.has(value))
+            return;
+          seen.add(value);
+          ordered.push(value);
+        });
+        return ordered;
+      }
+      function renderArticleMeta(item) {
+        const footer = document.querySelector("#main article.post footer");
+        if (!footer)
+          return;
+        const sourceNames = uniqueList(toCleanList(item.source_names));
+        const authors = uniqueList(toCleanList(item.authors));
+        const urls = uniqueList(toCleanList(item.urls));
+        footer.innerHTML = "";
+        footer.style.display = "block";
+        footer.style.alignItems = "initial";
+        const metaWrapper = document.createElement("div");
+        metaWrapper.className = "article-meta";
+        const createSection = (label, content) => {
+          const section = document.createElement("section");
+          section.style.marginBottom = "1.25rem";
+          const heading = document.createElement("h4");
+          heading.textContent = `${label}:`;
+          heading.style.marginBottom = "0.5rem";
+          section.appendChild(heading);
+          if (typeof content === "string") {
+            const paragraph = document.createElement("p");
+            paragraph.textContent = content;
+            paragraph.style.marginBottom = "0";
+            paragraph.style.whiteSpace = "normal";
+            section.appendChild(paragraph);
+          } else {
+            section.appendChild(content);
+          }
+          metaWrapper.appendChild(section);
+        };
+        if (sourceNames.length > 0) {
+          const list = document.createElement("ul");
+          sourceNames.forEach((source) => {
+            const listItem = document.createElement("li");
+            listItem.textContent = source;
+            list.appendChild(listItem);
+          });
+          createSection("Sources", list);
+        } else {
+          createSection("Sources", "Not available");
+        }
+        if (authors.length > 0) {
+          const list = document.createElement("ul");
+          authors.forEach((author) => {
+            const listItem = document.createElement("li");
+            listItem.textContent = author;
+            list.appendChild(listItem);
+          });
+          createSection("Authors", list);
+        } else {
+          createSection("Authors", "Not available");
+        }
+        if (urls.length > 0) {
+          const list = document.createElement("ul");
+          urls.forEach((url) => {
+            const itemElement = document.createElement("li");
+            const link = document.createElement("a");
+            link.href = url;
+            link.textContent = url;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            itemElement.appendChild(link);
+            list.appendChild(itemElement);
+          });
+          createSection("URLs", list);
+        } else {
+          createSection("URLs", "Not available");
+        }
+        const lastSection = metaWrapper.lastElementChild;
+        if (lastSection)
+          lastSection.style.marginBottom = "0";
+        footer.appendChild(metaWrapper);
+      }
       async function hydrateSingleSummaryPage() {
         if (!document.body.classList.contains("single"))
           return false;
@@ -6598,8 +6699,10 @@
           if (subtitle)
             subtitle.textContent = description;
           const bodyParagraphs = Array.from(document.querySelectorAll("#main article.post > p"));
-          if (bodyParagraphs[0])
-            bodyParagraphs[0].textContent = summaryText;
+          if (bodyParagraphs[0]) {
+            bodyParagraphs[0].textContent = formatSummaryForDisplay(summaryText);
+            bodyParagraphs[0].style.whiteSpace = "pre-line";
+          }
           bodyParagraphs.slice(1).forEach((paragraph) => {
             paragraph.textContent = "";
             paragraph.style.display = "none";
@@ -6610,6 +6713,7 @@
             image.src = resolveImageSource(rawImage);
             image.alt = title;
           }
+          renderArticleMeta(item);
         } catch {
         }
         return true;
