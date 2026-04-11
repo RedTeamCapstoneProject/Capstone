@@ -2,20 +2,11 @@
 $projectRoot = Resolve-Path (Join-Path $PSScriptRoot "..")
 Set-Location $projectRoot
 
-Write-Host "Starting Summarizer Pipeline..."
+Write-Host "Triggering Summarizer: backend\src\newsArticlesToSummary.ts"
 
-# Explicitly tell the TS compiler to allow modern ESM features and .mts extensions
-$env:TS_NODE_COMPILER_OPTIONS = '{
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "target": "ESNext",
-    "allowImportingTsExtensions": true,
-    "noEmit": true
-}'
+# Set Node to handle the TypeScript modules correctly
+$env:TS_NODE_COMPILER_OPTIONS = '{"module":"CommonJS","moduleResolution":"node"}'
 
-# Use the ESM loader for Node 20+
-$env:NODE_OPTIONS = "--loader ts-node/esm --no-warnings"
-$env:TRIGGER_RUN = "true"
-
-# Execute the file directly
-npx ts-node --esm --transpile-only "./backend/src/newsArticlesToSummary.ts"
+# Execute the specific function
+# Note: Ensure the function name 'newsArticlesToSummaryFolder' matches the export in your .ts file
+npx ts-node --transpile-only -e "const api = require('./backend/src/newsArticlesToSummary'); console.log('Summarizer module loaded...'); api.fetchNewsArticlesAndSummarize().then(c => { console.log('Process finished. Items handled:', c); process.exit(0); }).catch(e => { console.error('TS Error:', e); process.exit(1); })"
