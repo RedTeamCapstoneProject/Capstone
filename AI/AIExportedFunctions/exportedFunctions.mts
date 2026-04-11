@@ -50,7 +50,7 @@ if (!GEMINI_API_KEY){
 //input a prompt as parameter and return results from AI 
 export async function callAI(prompt: string):Promise<string> {
     try {
-        console.log("Attempting to connect to Groq...");
+       //console.log("Attempting to connect to Groq...");
         
         
         const response = await groq.chat.completions.create({
@@ -66,7 +66,7 @@ export async function callAI(prompt: string):Promise<string> {
         });
 
         const aiText = response.choices[0]?.message?.content || "";
-        console.log("groq reponse complete");
+        //console.log("groq reponse complete");
         return aiText;
     } catch (error: any) {
         console.error("Groq Connection failed!", error.message);

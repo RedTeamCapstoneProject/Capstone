@@ -2,12 +2,43 @@ import { writeFile } from "fs";
 import { type newsArticle, callAI, readJSON, tempreadJSON } from "../AIExportedFunctions/exportedFunctions.mts";
 import fs from 'fs';
 import { title } from "process";
+import { exec } from 'child_process';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+
+
 const finalSummaryDatabase: summarizedArticle[] = [];
 /*
 function quickWrite(content: string) {
     fs.writeFileSync('test.txt', content, 'utf-8');
 }
 */
+
+
+
+export const runSummaryToDB = () => {
+    const currentFile = fileURLToPath(import.meta.url);
+    const scriptPath = path.resolve(path.dirname(currentFile), '../../scripts/summaryToDB.ps1');
+
+    console.log('--- Triggering Summary to DB Sync ---');
+
+    return new Promise((resolve) => {
+        exec(`powershell -ExecutionPolicy Bypass -File "${scriptPath}"`, { env: process.env }, (error, stdout, stderr) => {
+            if (error) {
+                console.error(`PS Execution Error: ${error.message}`);
+            }
+            console.log(`PS Output: ${stdout}`);
+            resolve(true);
+        });
+    });
+};
+
+
+
+
+
+
 
 //this is the object structure of the summarized articles in a JSON
 interface summarizedArticle{
@@ -67,6 +98,8 @@ export async function summaryManager(articleObjArray: newsArticle[],numberOfTopi
     if (finalSummaryDatabase.length === Number(numberOfTopics)) {
         console.log("All topics summarized. Writing final JSON...");
         await writeSummarizedJSON(finalSummaryDatabase);
+
+
     }
 }
 
@@ -216,16 +249,22 @@ async function constructJSON(articleObjArray:newsArticle[],summarizedContent:str
 
 async function writeSummarizedJSON(finalSummarizedList:summarizedArticle[]){
 const filePath = "outputJSONs/summarizedJSON/summarizedTopic.json";
-    
-    const dir = "outputJSONs/summarizedJSON";
-    if (!fs.existsSync(dir)){
-        fs.mkdirSync(dir, { recursive: true });
+    try{
+        const dir = "outputJSONs/summarizedJSON";
+        if (!fs.existsSync(dir)){
+            fs.mkdirSync(dir, { recursive: true });
+        }
+
+        // Write the full batch as a proper JSON array
+        fs.writeFileSync(filePath, JSON.stringify(finalSummarizedList, null, 2), "utf8");
+        console.log(`Success! saved ${finalSummarizedList.length} topics to ${filePath}`);
+        await new Promise(resolve => setTimeout(resolve, 10000));
+
+    }catch(err){
+        console.log("error")
+    }finally{
+       await runSummaryToDB()
     }
-
-    // Write the full batch as a proper JSON array
-    fs.writeFileSync(filePath, JSON.stringify(finalSummarizedList, null, 2), "utf8");
-    console.log(`Success! saved ${finalSummarizedList.length} topics to ${filePath}`);
 }
-
 //var catArray = await tempReadMethodForTesting()
 //summaryManager(catArray)

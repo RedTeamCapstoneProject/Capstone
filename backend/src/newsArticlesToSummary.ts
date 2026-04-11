@@ -51,7 +51,6 @@ function toStringWithFallback(value: unknown, fallback = ""): string {
 
 function rowCellsToNewsArticle(cells: RowAsCellObjects): NewsArticle {
 	// Rehydrate the cell-object row back into the shape expected by summaryManager.
-	console.log("test")
 	const publishedRaw = getCellValue(cells, "published_at");
 	const publishedAt =
 		publishedRaw instanceof Date
@@ -104,7 +103,7 @@ async function importSummaryManager(): Promise<
 
 export async function fetchNewsArticlesAndSummarize(): Promise<{
 	rowCount: number;
-	rowsAsCellObjects: RowAsCellObjects[];
+	//rowsAsCellObjects: RowAsCellObjects[];
 }> {
 	// Only pull articles whose topic appears 3 or more times in the table.
 	const query = `
@@ -156,10 +155,10 @@ export async function fetchNewsArticlesAndSummarize(): Promise<{
 
 	return {
 		rowCount: result.rowCount ?? 0,
-		rowsAsCellObjects,
+		//rowsAsCellObjects,
 	};
 }
 
-fetchNewsArticlesAndSummarize()
-  .then(() => console.log("Done!"))
-  .catch(err => console.error(err));
+//fetchNewsArticlesAndSummarize()
+//  .then(() => console.log("Done!"))
+ // .catch(err => console.error(err));

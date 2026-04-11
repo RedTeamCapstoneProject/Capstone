@@ -1,11 +1,275 @@
 {
   "fetch_info": {
-    "timestamp": "2026-04-11T16:44:56.660156",
+    "timestamp": "2026-04-11T13:06:24.327679",
     "article_range": "200-300",
-    "articles_in_file": 64,
+    "articles_in_file": 63,
     "file_number": 3
   },
   "articles": [
+    {
+      "source_name": "The Verge",
+      "source_id": "the-verge",
+      "author": "Tom Warren",
+      "title": "The MacBook Neo is the best thing to happen to Windows in years - The Verge",
+      "description": "Microsoft is always willing to respond to a threat to Windows. The MacBook Neo is the latest in a line of competition that will force Windows to improve.",
+      "url": "https://www.theverge.com/tech/909140/microsoft-windows-11-fixes-macbook-neo-response-notepad",
+      "urlToImage": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/03/268387_Apple_MacBook_Neo_AKrales_0507.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+      "publishedAt": "2026-04-09T16:00:00Z",
+      "content": "<ul><li></li><li></li><li></li></ul>\r\nMicrosoft always responds to a threat to Windows by improving the operating system.\r\nMicrosoft always responds to a threat to Windows by improving the operating … [+12999 chars]",
+      "category": "technology"
+    },
+    {
+      "source_name": "Nature.com",
+      "source_id": null,
+      "author": null,
+      "title": "One woman, three autoimmune diseases: CAR-T therapy vanquishes ultra-rare disease trio - Nature",
+      "description": "Fourteen months after treatment with engineered immune cells, the recipient has no symptoms and doesn’t need to take medication.",
+      "url": "https://www.nature.com/articles/d41586-026-01108-4",
+      "urlToImage": "https://media.nature.com/lw1200/magazine-assets/d41586-026-01108-4/d41586-026-01108-4_52262908.jpg",
+      "publishedAt": "2026-04-09T15:59:52Z",
+      "content": "Antibodies (three-lobed structures, artists impression) that attack a persons own tissues can lead to autoimmune disease.Credit: Ruslanas Baranauskas/Science Photo Library\r\nA woman with an ultra-rare… [+4344 chars]",
+      "category": "health"
+    },
+    {
+      "source_name": "IGN",
+      "source_id": "ign",
+      "author": "Josh Du",
+      "title": "One Piece Team Answers the BIG Question About What's Next for the Live-Action Show - IGN",
+      "description": "One Piece team answers the BIG question about what's next for the live-action show.",
+      "url": "https://www.ign.com/articles/one-piece-live-action-creative-team-on-the-future-of-the-show-working-with-oda-and-whether-well-see-a-fan-favorite-character-in-season-3",
+      "urlToImage": "https://assets-prd.ignimgs.com/2026/04/09/one-piece-main-1775732491573.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "publishedAt": "2026-04-09T15:56:45Z",
+      "content": "Once thought impossible, Netflix and Tomorrow Studios actually pulled off a live-action adaptation of One Piece. Not only were fans pleasantly surprised by the first season, the follow-up was receive… [+26189 chars]",
+      "category": "entertainment"
+    },
+    {
+      "source_name": "Tipranks.com",
+      "source_id": null,
+      "author": "William White",
+      "title": "AMD Stock Climbs Alongside the Reveal of the Most Expensive Ryzen CPU Yet - TipRanks",
+      "description": "AMD stock was up on Thursday after the company revealed the price of the Ryzen 9950X3D2 Dual Edition CPU.",
+      "url": "https://www.tipranks.com/news/amd-stock-climbs-alongside-the-reveal-of-the-most-expensive-ryzen-cpu-yet",
+      "urlToImage": "https://blog.tipranks.com/wp-content/uploads/2026/04/amdstock-3-750x406.jpg",
+      "publishedAt": "2026-04-09T15:56:40Z",
+      "content": "Story Highlights<ul><li>AMD stock rallied on Thursday after it announced a new Ryzen price.</li><li>The company revealed an $899 MSRP for the Ryzen 9950X3D2 Dual Edition CPU.</li></ul>",
+      "category": "technology"
+    },
+    {
+      "source_name": "Deadline",
+      "source_id": null,
+      "author": "Ted Johnson",
+      "title": "Michael J. Fox Reacts After CNN Mistakenly Posts Memorial To Actor’s Passing - Deadline",
+      "description": "The network said that the post was made in error.",
+      "url": "http://deadline.com/2026/04/michael-j-fox-cnn-death-1236785742/",
+      "urlToImage": "https://deadline.com/wp-content/uploads/2024/04/MCDSTIL_G2001.jpg?w=1024",
+      "publishedAt": "2026-04-09T15:42:00Z",
+      "content": "Michael J. Fox said that he is “OK” after CNN posted a remembrance of the actor, which has subsequently been taken down. \r\n“The package was published in error; we have removed it from our platforms a… [+1250 chars]",
+      "category": "entertainment"
+    },
+    {
+      "source_name": "9to5google.com",
+      "source_id": null,
+      "author": "Ben Schoon",
+      "title": "Oppo teases Find X9 Ultra camera with dual 200MP sensors, 10x periscope [Gallery] - 9to5Google",
+      "description": "Oppo is teasing the camera setup on its new Find X9 Ultra, which will see a global release, and it looks crazy.",
+      "url": "http://9to5google.com/2026/04/09/oppo-find-x9-ultra-camera-teaser-samples/",
+      "urlToImage": "https://i0.wp.com/9to5google.com/wp-content/uploads/sites/4/2026/04/oppo-find-x9-ultra-camera-hardware-1.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2026-04-09T15:40:00Z",
+      "content": "As its launch approaches this month, Oppo is continuing to tease its upcoming camera-centric Find X9 Ultra which packs a pair of 200MP sensors, as well as a 10x periscope zoom lens.\r\nIn a post on Twi… [+1400 chars]",
+      "category": "technology"
+    },
+    {
+      "source_name": "CNN",
+      "source_id": "cnn",
+      "author": "Jack Guy, CNN",
+      "title": "The ‘oldest octopus’ in the world isn’t an octopus after all, scientists find - Yahoo News New Zealand",
+      "description": "The story of a 300-million-year-old fossil has been rewritten after scientists discovered that it doesn’t actually belong to the world’s oldest octopus as...",
+      "url": "https://www.cnn.com/2026/04/09/science/oldest-octopus-fossil-study-scli-intl",
+      "urlToImage": "https://s.yimg.com/os/en/cnn_articles_875/5779f724c9d5f2b367b60b5e3d70c9a9",
+      "publishedAt": "2026-04-09T15:25:42Z",
+      "content": "The story of a 300-million-year-old fossil has been rewritten after scientists discovered that it doesnt actually belong to the worlds oldest octopus as previously thought.\r\nIn fact, it belongs to an… [+3190 chars]",
+      "category": "science"
+    },
+    {
+      "source_name": "Gizmodo.com",
+      "source_id": null,
+      "author": "Kyle Barr",
+      "title": "Laptops Are About to Get Very Exciting Again… Thanks to Nvidia - Gizmodo",
+      "description": "Nvidia is about to throw another wrench into laptops led by Intel, AMD, and Qualcomm.",
+      "url": "https://gizmodo.com/laptops-are-about-to-get-very-exciting-again-thanks-to-nvidia-2000744490",
+      "urlToImage": "https://gizmodo.com/app/uploads/2026/02/Nvidia-CEO-Jensen-Huang-RTX-50-Series-GPU-1-1200x675.jpg",
+      "publishedAt": "2026-04-09T15:15:00Z",
+      "content": "Nvidia is gearing up to throw the entire laptop scene out of wack. Eagle-eyed leakers spotted a listing for a supposed Nvidia N1 chip housed on an engineering motherboard listed on the Chinese-langua… [+3027 chars]",
+      "category": "technology"
+    },
+    {
+      "source_name": "MacRumors",
+      "source_id": null,
+      "author": "Hartley Charlton",
+      "title": "Apple Apparently Still Undecided on iPhone 18 Pro Dynamic Island - MacRumors",
+      "description": "Apple is weighing two options for the iPhone 18 Pro's Dynamic Island, and a final decision has yet to be made, according to the Weibo leaker...",
+      "url": "https://www.macrumors.com/2026/04/09/apple-undecided-on-iphone-18-pro-dynamic-island/",
+      "urlToImage": "https://images.macrumors.com/t/GEiBu2iaA9GrrmRRMXVC3ULLfZo=/2500x/article-new/2026/01/Dynamic-Island-iPhone-18-Pro-Feature.jpg",
+      "publishedAt": "2026-04-09T15:11:01Z",
+      "content": "Apple is weighing two options for the iPhone 18 Pro's Dynamic Island, and a final decision has yet to be made, according to the Weibo leaker known as Digital Chat Station.\r\nIn a new post today, the l… [+1715 chars]",
+      "category": "technology"
+    },
+    {
+      "source_name": "TweakTown",
+      "source_id": null,
+      "author": "Jak Connor",
+      "title": "Former GTA 6 developer warns trailer visuals won't match final gameplay - TweakTown",
+      "description": "A former Grand Theft Auto 6 developer has tempered expectations for GTA 6's graphics when it releases, suggesting it will fall short of the trailers.",
+      "url": "https://www.tweaktown.com/news/110946/former-gta-6-developer-warns-trailer-visuals-wont-match-final-gameplay/index.html",
+      "urlToImage": "https://static.tweaktown.com/news/1/1/110946_9541541_former-gta-6-developer-casts-doubt-on-graphics-being-as-good-the-trailer_full.png",
+      "publishedAt": "2026-04-09T15:04:03Z",
+      "content": "A former Rockstar developer who worked on the highly anticipated Grand Theft Auto 6 has cast doubt on the game's extremely high graphical expectations, following the extremely impressive trailers 1 a… [+2027 chars]",
+      "category": "technology"
+    },
+    {
+      "source_name": "Gizmodo.com",
+      "source_id": null,
+      "author": "Ece Yildirim",
+      "title": "Gen Z’s Use of AI Is Plateauing as Youth Feel Less Hopeful About the Tech - Gizmodo",
+      "description": "Adoption by the rising generation in the workforce could have big implications for the economy.",
+      "url": "https://gizmodo.com/gen-zs-use-of-ai-is-plateauing-and-its-feeling-less-hopeful-about-the-tech-2000744463",
+      "urlToImage": "https://gizmodo.com/app/uploads/2026/04/shutterstock_2751351053-1200x675.jpg",
+      "publishedAt": "2026-04-09T14:55:20Z",
+      "content": "Young people have grown increasingly skeptical of artificial intelligence, even those who use it daily, according to a new Gallup poll of more than 1,500 people aged 14 to 29.\r\nThere is no decline in… [+4542 chars]",
+      "category": "business"
+    },
+    {
+      "source_name": "Daily Beast",
+      "source_id": null,
+      "author": "Tamilore Oshikanlu",
+      "title": "Grim ‘Victorian Disease’ Flea-Borne Typhus Makes Terrifying Comeback in U.S. - The Daily Beast",
+      "description": "It can hospitalize up to 90 percent of those who catch it.",
+      "url": "https://thelooker.thedailybeast.com/grim-victorian-disease-flea-borne-typhus-makes-terrifying-comeback-in-us/",
+      "urlToImage": "https://media.thedailybeast.com/resizer/v2/SB7ALXIX5FFKXCP2OAUC4CT56Y.jpg?auth=8109a902e563e1d32a3952f1c3fa9f972f3bd998962fb23f6227450702691cee&width=1200&height=630&smart=true",
+      "publishedAt": "2026-04-09T14:51:44Z",
+      "content": "It can hospitalize up to 90 percent of those who catch it.\r\nPhoto Illustration by The Daily Beast/Public Domain\r\nA fast-spreading Victorian disease rarely associated with the modern era is making a c… [+5079 chars]",
+      "category": "health"
+    },
+    {
+      "source_name": "Vice News",
+      "source_id": "vice-news",
+      "author": "Luis Prada",
+      "title": "This Common Bedtime Habit Is Horrible for Your Heart - VICE",
+      "description": "According to a new study published in BMC Cardiovascular Disorders, your bedtime might matter as much as how long you sleep.",
+      "url": "http://www.vice.com/en/article/this-common-bedtime-habit-is-horrible-for-your-heart/",
+      "urlToImage": "https://www.vice.com/wp-content/uploads/sites/2/2026/04/This-Common-Bedtime-Habit-Is-Horrible-for-Your-Heart.jpg?w=2000",
+      "publishedAt": "2026-04-09T14:46:36Z",
+      "content": "According to a new study, your bedtime might matter as much as how long you sleep. Especially if youre already running on less than a full nights rest.\r\nResearchers from the University of Oulu, who p… [+2450 chars]",
+      "category": "health"
+    },
+    {
+      "source_name": "Tom's Guide",
+      "source_id": null,
+      "author": "Kaycee Hill",
+      "title": "NASA just shared jaw-dropping Artemis II wallpapers — here's how to set them on your Mac or Windows PC - Tom's Guide",
+      "description": "NASA's high-resolution Artemis II photos make stunning desktop wallpapers",
+      "url": "https://www.tomsguide.com/computing/nasa-just-shared-jaw-dropping-artemis-ii-wallpapers-heres-how-to-set-them-on-your-mac-or-windows-pc",
+      "urlToImage": "https://cdn.mos.cms.futurecdn.net/VitPRenJKLvi4C6bDyPZo3-1200-80.jpg",
+      "publishedAt": "2026-04-09T14:44:06Z",
+      "content": null,
+      "category": "technology"
+    },
+    {
+      "source_name": "SciTechDaily",
+      "source_id": null,
+      "author": null,
+      "title": "This Diet–Gut Interaction Could Transform Fat Into a Calorie-Burning Machine - SciTechDaily",
+      "description": "Gut bacteria can convert white fat into energy-burning beige fat through diet-driven signals, offering new therapeutic targets for metabolic diseases.",
+      "url": "https://scitechdaily.com/?p=514895",
+      "urlToImage": "https://scitechdaily.com/images/Biomedical-Microscopic-Fat-Cells.jpg",
+      "publishedAt": "2026-04-09T14:43:27Z",
+      "content": "Scientists have uncovered a surprising link between diet and gut microbes that can reprogram how the body handles fat, turning energy-storing tissue into a calorie-burning form—at least in mice. Cred… [+6131 chars]",
+      "category": "health"
+    },
+    {
+      "source_name": "Variety",
+      "source_id": null,
+      "author": "Anna Tingley",
+      "title": "Zendaya and Law Roach Design Debut Collection Together, With Campaign Video Directed by Spike Jonze - Variety",
+      "description": "Zendaya and Law Roach have announced their first co-designed collection with sportswear brand On. Shop the full collection online here.",
+      "url": "https://variety.com/2026/shopping/news/zendaya-law-roach-on-collection-shop-online-1236710860/",
+      "urlToImage": "https://variety.com/wp-content/uploads/2026/04/AI-SEARCH-ss26-zendaya_brand_build-pad-head_to_toe_still-1x1-z-srgb-02.jpg?w=1000&h=563&crop=1",
+      "publishedAt": "2026-04-09T14:42:00Z",
+      "content": "If you purchase an independently reviewed product or service through a link on our website, Variety may receive an affiliate commission.\r\nOne of fashion’s most indomitable duos have finally come toge… [+1898 chars]",
+      "category": "entertainment"
+    },
+    {
+      "source_name": "Verywellhealth.com",
+      "source_id": null,
+      "author": "https://www.facebook.com/verywell",
+      "title": "Fish Oil and Other Supplements Don't Lower Cholesterol, New Guidance Says - Verywell Health",
+      "description": "New guidelines say fish oil supplements don’t lower cholesterol or heart risk—and may even cause harm in some cases.",
+      "url": "https://www.verywellhealth.com/cholesterol-guidelines-fish-oil-supplements-11930827",
+      "urlToImage": "https://www.verywellhealth.com/thmb/Xw3N_kiKt1w5FRKYDgFGcWlm5lQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/VWH-GettyImages-2255383881-97027b27c1104d178efb9c7ab2f32eaf.jpg",
+      "publishedAt": "2026-04-09T14:37:45Z",
+      "content": "<ul><li>New guidelines say fish oil and other supplements are not recommended for lowering LDL cholesterol.</li><li>Some fish oil supplements may raise LDL levels and increase the risk of atrial fibr… [+3897 chars]",
+      "category": "health"
+    },
+    {
+      "source_name": "Yahoo Entertainment",
+      "source_id": null,
+      "author": "Maressa Brown",
+      "title": "Katherine LaNasa was always cast in 'sexual' roles. The Emmy winner says playing Dana on 'The Pitt' is 'freeing.' - Yahoo",
+      "description": "\"The Pitt\" actress on playing \"imperfect-looking\" women and what marrying Dennis Hopper at 22 taught her about age-gap relationships.",
+      "url": "https://www.yahoo.com/lifestyle/article/katherine-lanasa-was-always-cast-in-sexual-roles-the-emmy-winner-says-playing-dana-on-the-pitt-is-freeing-090015239.html",
+      "urlToImage": "https://s.yimg.com/ny/api/res/1.2/yJKVQ5ddW.QHEsivM0fmDA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU7Y2Y9d2VicA--/https://s.yimg.com/os/creatr-uploaded-images/2025-06/bdc15f40-50fd-11f0-bcff-e49e4064baac",
+      "publishedAt": "2026-04-09T14:30:34Z",
+      "content": "As a teen ballet dancer turned actress with a list of credits (including Two and a Half Men and Big Love) as long as her arm, Katherine LaNasa has spent most of her life in the spotlight. But starrin… [+9033 chars]",
+      "category": "entertainment"
+    },
+    {
+      "source_name": "Deadline",
+      "source_id": null,
+      "author": "Jill Goldsmith",
+      "title": "Paramount Details Separation Agreement With Jeff Shell - Deadline",
+      "description": "Paramount Skydance today detailed is separation agreement with former President Jeff Shell.",
+      "url": "http://deadline.com/2026/04/paramount-jeff-shell-separation-agreement-1236785688/",
+      "urlToImage": "https://deadline.com/wp-content/uploads/2024/07/Paramount-Jeff-Shell.jpg?w=1024",
+      "publishedAt": "2026-04-09T14:29:00Z",
+      "content": "Paramount Skydance confirmed that its former president Jeff Shell exited the company on April 8 and outlined in a SEC filing how much he will be leaving with.\r\nHis cash severance will equal the sum o… [+3054 chars]",
+      "category": "business"
+    },
+    {
+      "source_name": "Science Daily",
+      "source_id": null,
+      "author": null,
+      "title": "Scientists just found a hidden “drain” inside the human brain - ScienceDaily",
+      "description": "A hidden waste-removal pathway in the brain has finally been caught in action. Using cutting-edge MRI scans, researchers discovered that fluid flows along the middle meningeal artery in a slow, lymphatic-like pattern—very different from blood. This confirms t…",
+      "url": "https://www.sciencedaily.com/releases/2026/04/260408225934.htm",
+      "urlToImage": "https://www.sciencedaily.com/images/1920/lymphatic-vessels-brain-drainage-area.webp",
+      "publishedAt": "2026-04-09T14:12:44Z",
+      "content": "How does the brain get rid of waste? It relies on a specialized drainage network known as the lymphatic system. Scientists have been working to understand how this system functions, and in the proces… [+4226 chars]",
+      "category": "health"
+    },
+    {
+      "source_name": "KGO-TV",
+      "source_id": null,
+      "author": "Tim Johns",
+      "title": "Bay Area-based Philz Coffee to remove Pride flags, all other flags from its locations - ABC7 San Francisco",
+      "description": "A coffee controversy is brewing after Philz Coffee says it's removing not just Pride flags, but also other flags and decor as well, to be inclusive to all customers. Many of those customers are upset over the new policy.",
+      "url": "https://abc7news.com/post/bay-area-based-philz-coffee-remove-pride-flags-other-locations/18859275/",
+      "urlToImage": "https://cdn.abcotvs.com/dip/images/18860781_040926-kgo-philz-pride-flags-split-img.jpg?w=1600",
+      "publishedAt": "2026-04-09T14:10:31Z",
+      "content": "SAN FRANCISCO (KGO) -- A new policy by Bay Area-based Philz Coffee has some people upset as the chain says it will no longer allow flags of any kind in its stores, including Pride flags.\r\nWhat starte… [+2060 chars]",
+      "category": "business"
+    },
+    {
+      "source_name": "Science Daily",
+      "source_id": null,
+      "author": null,
+      "title": "Brain study reveals hidden link between autism and ADHD - ScienceDaily",
+      "description": "Scientists are uncovering a surprising connection between autism and ADHD that goes deeper than labels. Instead of diagnoses, it’s the severity of autism-like traits that seems to shape how the brain is wired—even in children who don’t officially have autism.…",
+      "url": "https://www.sciencedaily.com/releases/2026/04/260408225941.htm",
+      "urlToImage": "https://www.sciencedaily.com/images/1920/glitchy-face-distortion.webp",
+      "publishedAt": "2026-04-09T14:06:26Z",
+      "content": "A study published in Molecular Psychiatry suggests that autism and ADHD may be connected at a biological level in ways that go beyond traditional diagnostic labels. While it is well known that the tw… [+4718 chars]",
+      "category": "health"
+    },
     {
       "source_name": "Gematsu",
       "source_id": null,
@@ -31,30 +295,6 @@
       "category": "technology"
     },
     {
-      "source_name": "TODAY",
-      "source_id": null,
-      "author": "Chrissy Callahan",
-      "title": "'Game of Thrones' Actor Michael Patrick Dies at 35. What Is Motor Neuron Disease? - TODAY.com",
-      "description": "Irish actor Michael Patrick has died at the age of 35 after a three-year long battle with Motor Neuron Disease. Learn about the disease and its symptoms.",
-      "url": "https://www.today.com/health/news/michael-patrick-motor-neuron-disease-death-cause-rcna267412",
-      "urlToImage": "https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1200x630_center,f_auto,q_auto:best/rockcms/2026-04/Michael-patrick-death-AS04092026-333b25.png",
-      "publishedAt": "2026-04-09T14:03:44Z",
-      "content": "\"Game of Thrones\" actor Michael Patrick has died at the age of 35.\r\nPatrick's wife, Naomi Sheehan, shared the news on Instagram, revealing that her husband passed away in Northern Ireland on April 7 … [+3418 chars]",
-      "category": "entertainment"
-    },
-    {
-      "source_name": "The Verge",
-      "source_id": "the-verge",
-      "author": "Lauren Feiner",
-      "title": "A jury is about to decide the fate of Ticketmaster - The Verge",
-      "description": "A jury will decide whether Live Nation-Ticketmaster broke antitrust laws after weeks of trial against more than 30 state AGs.",
-      "url": "https://www.theverge.com/policy/909192/live-nation-ticketmaster-antitrust-closing-arguments",
-      "urlToImage": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/03/STK268_TICKETMASTER_CVIRGINIA_A.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
-      "publishedAt": "2026-04-09T14:01:43Z",
-      "content": "<ul><li></li><li></li><li></li></ul>\r\nThe Manhattan jury heard weeks of testimony from concert industry executives and rivals.\r\nThe Manhattan jury heard weeks of testimony from concert industry execu… [+10599 chars]",
-      "category": "entertainment"
-    },
-    {
       "source_name": "Live Science",
       "source_id": null,
       "author": "Harry Baker",
@@ -65,6 +305,18 @@
       "publishedAt": "2026-04-09T14:00:59Z",
       "content": null,
       "category": "science"
+    },
+    {
+      "source_name": "/FILM",
+      "source_id": null,
+      "author": "Chris Evangelista",
+      "title": "Exit 8 Review: This Creepy Liminal Horror Movie Keeps Going In Circles - SlashFilm",
+      "description": "A subway corridor becomes an endless nightmare loop in Exit 8, a somewhat successful liminal space horror video game adaptation. Here's our review.",
+      "url": "https://www.slashfilm.com/2143418/exit-8-horror-movie-review/",
+      "urlToImage": "https://www.slashfilm.com/img/gallery/exit-8-review-this-creepy-liminal-horror-movie-keeps-going-in-circles/l-intro-1775672636.jpg",
+      "publishedAt": "2026-04-09T14:00:00Z",
+      "content": "\"Exit 8\" is primarily focused on The Lost Man, using his fears of fatherhood to influence the horrors he experiences underground, but the narrative also shifts perspective from time to time. As The L… [+1381 chars]",
+      "category": "entertainment"
     },
     {
       "source_name": "Theregister.com",
@@ -91,27 +343,15 @@
       "category": "science"
     },
     {
-      "source_name": "Reality Tea",
+      "source_name": "Gamingbible.com",
       "source_id": null,
-      "author": "Jade Biggs",
-      "title": "Lauren Sánchez and Jeff Bezos ‘Divorce’ Rumors Swirl With Reports of ‘Eligible Bachelors’ - Yahoo",
-      "description": "They tied the knot in June last year. The post Lauren Sánchez and Jeff Bezos ‘Divorce’ Rumors Swirl With Reports of ‘Eligible Bachelors’ appeared first on...",
-      "url": "https://www.realitytea.com/2026/04/09/lauren-sanchez-jeff-bezos-divorce-rumors/",
-      "urlToImage": "https://s.yimg.com/os/en/reality_tea_694/1caf02efaef1e867f7a0c7d723104a81",
-      "publishedAt": "2026-04-09T13:32:55Z",
-      "content": "Less than a year since tying the knot, Lauren Sánchez and Jeff Bezos have been hit with divorce rumors. The pair wed in a luxurious and star-studded ceremony in Italy last summer, but questions are s… [+1828 chars]",
-      "category": "entertainment"
-    },
-    {
-      "source_name": "Nintendoeverything.com",
-      "source_id": null,
-      "author": "Brian",
-      "title": "Nintendo announces Rhythm Heaven Groove release date - Nintendo Everything",
-      "description": "Rhythm Heaven Groove now has a release date. The game is due out on July 2, 2026, the company just announced. News about the release date just dropped on the Nintendo Today app. Footage from one of the mini-games was also shown. Rhythm Heaven Groove continues…",
-      "url": "https://nintendoeverything.com/nintendo-announces-rhythm-heaven-groove-release-date/",
-      "urlToImage": "https://nintendoeverything.com/wp-content/uploads/Rhythm-Heaven-Groove-release-date.jpg",
-      "publishedAt": "2026-04-09T13:25:43Z",
-      "content": "Rhythm Heaven Groove now has a release date. The game is due out on July 2, 2026, the company just announced.\r\nNews about the release date just dropped on the Nintendo Today app. Footage from one of … [+333 chars]",
+      "author": "Sam Cawley",
+      "title": "Steam's New AI Assistant Is Bad News For The Steam Machine - GAMINGbible",
+      "description": "Steam's AI takeover is imminent.",
+      "url": "https://www.gamingbible.com/news/platform/steam/steam-new-ai-assistant-bad-steam-machine-549358-20260409",
+      "urlToImage": "https://resizer.ladbiblegroup.com/ogimage/v3/assets/bltbc1876152fcd9f07/blt4a1f4df1e0ee7d5c/69d7a6f44c0ee819af31d326/steammachine.jpg",
+      "publishedAt": "2026-04-09T13:28:01Z",
+      "content": "Steam is said to be getting a new digital AI assistant, aptly nicknamed SteamGPT, and it has big implications for Valves upcoming console the Steam Machine.\r\nFor the longest time now, Steam has been … [+2498 chars]",
       "category": "technology"
     },
     {
@@ -151,18 +391,6 @@
       "category": "business"
     },
     {
-      "source_name": "Hollywood Reporter",
-      "source_id": null,
-      "author": "Claudia Rosenbaum, Benjamin Svetkey, Editor",
-      "title": "Hollywood’s 100 Most Powerful Lawyers - The Hollywood Reporter",
-      "description": "Meltdowns on movie sets, billion-dollar megamergers, backend battles — sooner or later, everybody needs a good lawyer. These are the best.",
-      "url": "http://www.hollywoodreporter.com/lists/top-hollywoodl-lawyers-2026/",
-      "urlToImage": "https://www.hollywoodreporter.com/wp-content/uploads/2026/04/7fea_Lawyers-With-Badge-SPLASH-2026.jpg?w=1440&h=810&crop=1",
-      "publishedAt": "2026-04-09T13:00:45Z",
-      "content": "Even in Hollywood, nobody is above the law even if youre above the line. So if youre a star, mogul or auteur who suddenly finds themselves on the wrong side of a contract dispute or a copyright infri… [+63407 chars]",
-      "category": "entertainment"
-    },
-    {
       "source_name": "The Verge",
       "source_id": "the-verge",
       "author": "Andrew J. Hawkins",
@@ -173,66 +401,6 @@
       "publishedAt": "2026-04-09T13:00:00Z",
       "content": "<ul><li></li><li></li><li></li></ul>\r\nThe company is sharing data about potholes to select cities in the interest of making streets safer to drive for humans and robots.\r\nThe company is sharing data … [+5707 chars]",
       "category": "business"
-    },
-    {
-      "source_name": "The Information",
-      "source_id": null,
-      "author": "Sri Muppidi",
-      "title": "OpenAI Forecasts Advertising to Hit $102 billion by 2030 - The Information",
-      "description": "OpenAI’s advertising effort is so new that the company is still working out the kinks in it. That hasn’t stopped it from setting ambitious aims for the business, which it expects to become the largest driver of its revenue by the end of the decade. OpenAI exp…",
-      "url": "https://www.theinformation.com/articles/openai-forecasts-advertising-hit-102-billion-2030",
-      "urlToImage": "https://tii.imgix.net/production/articles/16901/32c5cd98-165e-4c3f-9f4b-20dcc12cd21c.png?fm=jpg&auto=compress&w=1200&frame=0",
-      "publishedAt": "2026-04-09T13:00:00Z",
-      "content": null,
-      "category": "business"
-    },
-    {
-      "source_name": "Space.com",
-      "source_id": null,
-      "author": "Mike Wall",
-      "title": "'We all pretty much broke down right there': Inside the Artemis 2 astronauts' emotional moment near the moon - Space",
-      "description": "\"That was, I think, where the four of us were the most forged, the most bonded, and we came out of that really focused on that day ahead.\"",
-      "url": "https://www.space.com/space-exploration/artemis/we-all-pretty-much-broke-down-right-there-inside-the-artemis-2-astronauts-emotional-moment-near-the-moon",
-      "urlToImage": "https://cdn.mos.cms.futurecdn.net/LRscCZte5KTkwFp3GeWQdB-1920-80.jpg",
-      "publishedAt": "2026-04-09T13:00:00Z",
-      "content": null,
-      "category": "science"
-    },
-    {
-      "source_name": "Spotify.com",
-      "source_id": null,
-      "author": "Lauren.Peterson@groupsjr.com",
-      "title": "Spotify Introduces New Video Controls for Listeners - Spotify",
-      "description": "Spotify has always been about putting listeners in the driver’s seat. Today, people don’t just want more ways to spend their time; they want that time to be well spent. That’s why, from Taste Profile to Prompted Playlist, and the expansion of managed accounts…",
-      "url": "https://newsroom.spotify.com/2026-04-09/video-control-settings-update/",
-      "urlToImage": "https://storage.googleapis.com/pr-newsroom-wp/1/2026/04/Asset-1_-FTR-Header-scaled.jpg",
-      "publishedAt": "2026-04-09T12:50:15Z",
-      "content": "Spotify has always been about putting listeners in the drivers seat. Today, people dont just want more ways to spend their time; they want that time to be well spent. Thats why, from Taste Profile to… [+2732 chars]",
-      "category": "technology"
-    },
-    {
-      "source_name": "HuffPost",
-      "source_id": null,
-      "author": null,
-      "title": "Jimmy Kimmel Spells Out Why Trump's Iran Negotiations Won't Work In 1 Brutal Dig - HuffPost",
-      "description": "The late night host turned the Trump administration into a punch line, and the joke seemed to go right over his audience members' heads.",
-      "url": "https://www.huffpost.com/entry/jimmy-kimmel-trump-iran-war-negotiations_n_69d77869e4b00247ba998a59",
-      "urlToImage": "https://img.huffingtonpost.com/asset/69d78b5d1400006d0a86db4b.jpeg?cache=8he06Race9&ops=1200_630",
-      "publishedAt": "2026-04-09T12:36:50Z",
-      "content": "Jimmy Kimmel on Wednesday questioned how Donald Trumps administration could work out a deal with Iran using a not-so-subtle swipe at the president and his Cabinet.\r\nHow is this negotiation even going… [+1594 chars]",
-      "category": "entertainment"
-    },
-    {
-      "source_name": "Prevention.com",
-      "source_id": null,
-      "author": "Alyssa Sybertz",
-      "title": "Dermatologists Reveal the Number-1 Sign of Skin Cancer—and It’s Sneaky - Prevention",
-      "description": "Doctors reveal the number-one sign of skin cancer across every type, plus why early detection is so important to getting potentially life-saving treatment.",
-      "url": "https://www.prevention.com/health/a70966202/top-sign-of-skin-cancer/",
-      "urlToImage": "https://hips.hearstapps.com/hmg-prod/images/1ea865ee-ffd9-4c25-bebe-8b327bb4c4f5.jpeg?crop=1xw:0.75xh;0xw,0.148xh&resize=1200:*",
-      "publishedAt": "2026-04-09T12:33:14Z",
-      "content": "There are few things we love more than the feel of the hot sun warming our faces, except remembering to slather on sunscreen before heading out into that cloudless day. But even if youre doing your b… [+2530 chars]",
-      "category": "health"
     },
     {
       "source_name": "Business Insider",
@@ -247,18 +415,6 @@
       "category": "health"
     },
     {
-      "source_name": "HuffPost",
-      "source_id": null,
-      "author": "LuLu Grant",
-      "title": "In Nursing School, My Roommates Asked To See My Breasts. Their Reactions Confirmed What I Already Knew. - Yahoo Lifestyle Canada",
-      "description": "“I didn’t think about my breasts being different from the white majority surrounding me again until that night.”",
-      "url": "https://www.huffpost.com/entry/asian-breasts-bridgerton-yerin-ha-body-representation_n_69cae0abe4b010178ee69bde",
-      "urlToImage": "https://s.yimg.com/os/en/the_huffington_post_584/ce35ddd9689696ce44f0ae32a6a87cdd",
-      "publishedAt": "2026-04-09T12:23:12Z",
-      "content": "When Bridgerton Season 4 Part One debuted, I joined 40 million other viewers in binging it. Like everyone else, I was ready to reenter the world of outrageous sets, extravagant costumes and passionat… [+6384 chars]",
-      "category": "entertainment"
-    },
-    {
       "source_name": "The Washington Post",
       "source_id": "the-washington-post",
       "author": "Christa Sgobba",
@@ -271,18 +427,6 @@
       "category": "health"
     },
     {
-      "source_name": "Salt Lake Tribune",
-      "source_id": null,
-      "author": null,
-      "title": "A Utah woman helped bring down a polygamous sect leader. Now her story is on Netflix. - The Salt Lake Tribune",
-      "description": "A Utah woman helped bring down a polygamous sect leader. Now her story is on Netflix.\nWe spoke with Christine Marie about the risks of coming forward, where the victims are now and what she hopes viewers take away.",
-      "url": "https://www.sltrib.com/news/2026/04/09/netflixs-trust-me-woman-who/",
-      "urlToImage": "https://www.sltrib.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fsltrib%2F3QG4F5KNNRB53DVZVIVSFCBMM4.jpg?auth=1ef77de5d7631c575b9bdbca74d76ed309c20196dfdf5887abd9e0819e6281b2&width=1200",
-      "publishedAt": "2026-04-09T12:00:23Z",
-      "content": "Four years ago, a Utah couple infiltrated a polygamous sect and helped bring down its leader, Samuel Bateman, who had sexually abused girls he had taken as wives. \r\nNow, a new four-part Netflix docum… [+7622 chars]",
-      "category": "entertainment"
-    },
-    {
       "source_name": "One Mile at a Time",
       "source_id": null,
       "author": "Ben Schlappig",
@@ -293,18 +437,6 @@
       "publishedAt": "2026-04-09T12:00:11Z",
       "content": null,
       "category": "business"
-    },
-    {
-      "source_name": "Samsung.com",
-      "source_id": null,
-      "author": "Samsung Newsroom",
-      "title": "Samsung Continues Expanding One UI 8.5 Beta Program to More Galaxy Devices - samsung.com",
-      "description": "Samsung is expanding the One UI 8.5 beta program to additional Galaxy devices. Following the expansion of One UI 8.5 beta in March,1 the program is now rolling out to more devices, including the Galaxy S23 series, Galaxy Z Fold5, Galaxy Z Flip5, Galaxy S23 FE…",
-      "url": "https://news.samsung.com/global/samsung-continues-expanding-one-ui-8-5-beta-program-to-more-galaxy-devices",
-      "urlToImage": "https://img.global.news.samsung.com/global/wp-content/uploads/2026/04/09110039/Samsung-Mobile-One-UI-8.5-Beta-AIrDrop-Support-Beta-to-More-Galaxy-Devices_Thumb932.jpg",
-      "publishedAt": "2026-04-09T12:00:00Z",
-      "content": "Samsung is expanding the One UI 8.5 beta program to additional Galaxy devices.\r\nFollowing the expansion of One UI 8.5 beta in March,1 the program is now rolling out to more devices, including the Gal… [+1197 chars]",
-      "category": "technology"
     },
     {
       "source_name": "SciTechDaily",
@@ -355,18 +487,6 @@
       "category": "health"
     },
     {
-      "source_name": "Abcnews.com",
-      "source_id": null,
-      "author": "ABC News",
-      "title": "Judges appear skeptical of arguments seeking to reduce Sean 'Diddy' Combs' sentence - ABC News",
-      "description": null,
-      "url": "https://abcnews.com/US/federal-appeals-court-hears-arguments-overturning-sean-diddy/story?id\\\\u003d131858859",
-      "urlToImage": null,
-      "publishedAt": "2026-04-09T11:02:58Z",
-      "content": null,
-      "category": "entertainment"
-    },
-    {
       "source_name": "STAT",
       "source_id": null,
       "author": "David S. Ludwig",
@@ -415,30 +535,6 @@
       "category": "health"
     },
     {
-      "source_name": "NPR",
-      "source_id": null,
-      "author": "",
-      "title": "'Big Mistakes' review: Dan Levy's hilariously caustic comedy drags siblings into organized crime - NPR",
-      "description": "The new Netflix comedy created by Dan Levy and Rachel Sennott stars Levy as an uptight pastor and Taylor Ortega as his sister.",
-      "url": "https://www.npr.org/2026/04/09/nx-s1-5770424/big-mistakes-netflix-review-dan-levy-rachel-sennott-taylor-ortega",
-      "urlToImage": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3600x2024+0+0/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F11%2F3e%2Fb1a64f5242f4a1597ba1dee6268d%2Fbigmistakes-103-250829-sp-00216-rc.jpg",
-      "publishedAt": "2026-04-09T11:00:00Z",
-      "content": "Big Mistakes, the new Netflix comedy co-created by Dan Levy (Schitt's Creek) and Rachel Sennott (I Love LA), opens with Laurie Metcalf yelling at a dying old lady. Episode one, scene one. It's the pr… [+5354 chars]",
-      "category": "entertainment"
-    },
-    {
-      "source_name": "SciTechDaily",
-      "source_id": null,
-      "author": null,
-      "title": "Scientists Discover Hidden Virus Linked to Colorectal Cancer - SciTechDaily",
-      "description": "A newly identified virus may be linked to colorectal cancer.",
-      "url": "https://scitechdaily.com/?p=516147",
-      "urlToImage": "https://scitechdaily.com/images/Colon-Colorectal-Cancer.jpg",
-      "publishedAt": "2026-04-09T10:46:05Z",
-      "content": "A new study suggests that the key to understanding colorectal cancer may lie not only in gut bacteria, but in the viruses hidden within them. By tracing an unusual viral pattern across patient sample… [+7342 chars]",
-      "category": "health"
-    },
-    {
       "source_name": "Science Daily",
       "source_id": null,
       "author": null,
@@ -461,18 +557,6 @@
       "publishedAt": "2026-04-09T10:31:00Z",
       "content": "While the weather still has New Yorkers asking whether to grab their hoodies or their puffy coats, the blooms on the trees are a clear sign that both spring and allergy season have arrived.\r\nAll the … [+3558 chars]",
       "category": "health"
-    },
-    {
-      "source_name": "IndieWire",
-      "source_id": null,
-      "author": "Ryan Lattanzio",
-      "title": "Cannes Film Festival 2026 Lineup Revealed - IndieWire",
-      "description": "See the full lineup of movies for the 2026 Cannes Film Festival.",
-      "url": "https://www.indiewire.com/news/festivals/cannes-film-festival-2026-lineup-1235188020/",
-      "urlToImage": "https://www.indiewire.com/wp-content/uploads/2026/02/CampMiasma_Still_1_AMUBI.jpg?w=650",
-      "publishedAt": "2026-04-09T10:13:53Z",
-      "content": "The CannesFilm Festival returns to the Côte d’Azur beginning May 12 through May 23. As the last few Cannes have shown — with Neon responsible for the North American release of six consecutive Palme d… [+5358 chars]",
-      "category": "entertainment"
     },
     {
       "source_name": "SciTechDaily",
@@ -511,18 +595,6 @@
       "category": "health"
     },
     {
-      "source_name": "Fortune",
-      "source_id": "fortune",
-      "author": "Nick Lichtenberg",
-      "title": "White-collar workers are quietly rebelling against AI as 80% outright refuse adoption mandates - Fortune",
-      "description": "\"AI didn't deliver,\" Johns Hopkins professor Steve Hanke told Fortune. \"Welcome to the real world. Forget the AI bubble.\"",
-      "url": "https://fortune.com/2026/04/09/ai-backlash-quiet-quitting-fobo-obsolete-white-collar-rebellion/",
-      "urlToImage": "https://fortune.com/img-assets/wp-content/uploads/2026/04/GettyImages-1158799707-e1775498134484.jpg?resize=1200,600",
-      "publishedAt": "2026-04-09T10:00:00Z",
-      "content": "There was a moment, not long ago, when shadow AI felt like a good-news story. Workers were sneaking ChatGPT and Claude past the IT department, using personal accounts to do what used to take hours in… [+10496 chars]",
-      "category": "business"
-    },
-    {
       "source_name": "IFLScience",
       "source_id": null,
       "author": "Dr. Alfredo Carpineti",
@@ -532,18 +604,6 @@
       "urlToImage": "https://assets.iflscience.com/assets/articleNo/83125/aImg/89948/captorhinus-meta.jpg",
       "publishedAt": "2026-04-09T08:59:45Z",
       "content": "Scientists have discovered the remains of a tiny, mummified reptile in an Oklahoma cave. The species is Captorhinus aguti, a small lizard-like animal that lived in the Permian period, dying 289 milli… [+2626 chars]",
-      "category": "science"
-    },
-    {
-      "source_name": "Phys.Org",
-      "source_id": null,
-      "author": "Phys.org",
-      "title": "Houston, we have a problem ... with the toilet - Phys.org",
-      "description": null,
-      "url": "https://phys.org/news/2026-04-houston-problem-toilet.html",
-      "urlToImage": null,
-      "publishedAt": "2026-04-09T08:28:32Z",
-      "content": null,
       "category": "science"
     },
     {
@@ -607,27 +667,27 @@
       "category": "science"
     },
     {
-      "source_name": "TVInsider",
-      "source_id": null,
-      "author": "Meaghan Darwish",
-      "title": "'The Boys' Boss on What That Soldier Boy Twist Means for Butcher's Virus - TV Insider",
-      "description": "Eric Kripke talks Homelander's call towards religion, Ashley's power, A-Train's ending, and more.",
-      "url": "https://www.tvinsider.com/1257055/the-boys-season-5-soldier-boy-virus-a-train-death-homelander-religion-ashley/",
-      "urlToImage": "https://www.tvinsider.com/wp-content/uploads/2026/04/the-boys-season-5-soldier-boy-virus-jensen-ackles-1420x798.jpg",
-      "publishedAt": "2026-04-09T02:30:22Z",
-      "content": "What To Know\r\n<ul><li>The Boys showrunner Eric Kripke breaks down Season 5’s first two episodes, including A-Train’s fate, Soldier Boy’s run-in with the virus, and much more.</li><li>Find out what’s … [+7250 chars]",
-      "category": "entertainment"
+      "source_name": "Associated Press",
+      "source_id": "associated-press",
+      "author": "Marcia Dunn",
+      "title": "Artemis II astronauts paused to remember commander's wife and name a lunar crater after her - AP News",
+      "description": "Lunar love knows no bounds. Artemis II's astronauts took a poignant page from Apollo 8 earlier this week, proposing deeply personal names for a pair of lunar craters. They're seeking permission to name one crater after their capsule Integrity and another afte…",
+      "url": "https://apnews.com/article/artemis-apollo-nasa-moon-crater-names-26017ccb57b285e66d504852ed80900e",
+      "urlToImage": "https://dims.apnews.com/dims4/default/6e03bac/2147483647/strip/true/crop/2048x1365+0+0/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fd1%2Fef%2F63e9ef4eeb471676a6f793fa3ff6%2F1b6b8cf79a9f4f51bfce68c3b952eca4",
+      "publishedAt": "2026-04-09T03:35:00Z",
+      "content": "HOUSTON (AP) Lunar love knows no bounds.\r\nNow hurtling home from the moon, the Artemis II astronauts took a poignant page from Apollo 8 earlier this week, proposing deeply personal names for a pair o… [+3916 chars]",
+      "category": "science"
     },
     {
-      "source_name": "KARE11.com",
-      "source_id": null,
-      "author": "Kent Erdahl",
-      "title": "Minnesota toddler Stella McMahon dies after cancer battle - kare11.com",
-      "description": "The public attention quickly made its way to Billionaire Mark Cuban who paid for the flight in hopes of helping Stella.",
-      "url": "https://www.kare11.com/article/news/local/breaking-the-news/minnesota-toddler-stella-mcmahon-dies-cancer/89-4cabd1a7-63db-4f11-83ec-82b6efad2019",
-      "urlToImage": "https://media.kare11.com/assets/KARE/images/e87116a9-63bc-4a52-a62b-2eadfc6ab724/20260409T005604/e87116a9-63bc-4a52-a62b-2eadfc6ab724_1140x641.jpg",
-      "publishedAt": "2026-04-09T00:57:00Z",
-      "content": "MINNEAPOLIS A Minnesota family is in need of all the love and support it can get after the death of their one year old daughter.\r\nMillions of people followed Stella McMahons journey on social media a… [+2602 chars]",
+      "source_name": "Google News",
+      "source_id": "google-news",
+      "author": "Bored Panda",
+      "title": "“No Sleepovers”: 63 Healthcare Workers Warn About Things That Are Much More Dangerous Than They Seem - Bored Panda",
+      "description": null,
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNdk0yZEFLaUFZaDV1RWdJdWJqR2VkbGR6eENoQThJbEEzNUx6OHhMRWRmNXl1RU13MDBJZVJTX2x6SlA0NDdyNlY4djhsWHBSSUlkWjQya0ZuQ1d4MDkxOEZwSnZWUWJHSE9JMlBXX0dnYWdNNWxRWlZ3aUdBRzdIbG5sbF83Y0k?oc=5",
+      "urlToImage": null,
+      "publishedAt": "2026-04-09T03:01:02Z",
+      "content": null,
       "category": "health"
     },
     {
@@ -643,87 +703,15 @@
       "category": "science"
     },
     {
-      "source_name": "Earth.com",
-      "source_id": null,
-      "author": null,
-      "title": "Common fungus and bacterium can join forces and cause a much more aggressive infection, according to a new study - Earth.com",
-      "description": "Scientists have discovered that a common fungus and a common bacterium can combine to cause much worse injuries to living tissue.",
-      "url": "https://www.earth.com/news/fungus-and-bacterium-can-join-forces-and-cause-much-more-aggressive-infection/",
-      "urlToImage": "https://cff2.earth.com/uploads/2026/04/07200456/fungus-bacteria-aggressive-infection-discovery.jpg",
-      "publishedAt": "2026-04-08T23:45:57Z",
-      "content": "Scientists have discovered that a common fungus and a common bacterium can combine to injure living tissue far more severely than either microbe does alone.\r\nThe finding recasts some mixed infections… [+5017 chars]",
-      "category": "health"
-    },
-    {
-      "source_name": "KUER 90.1",
-      "source_id": null,
-      "author": "Sean Higgins",
-      "title": "Measles outbreak spreads in Utah, hitting people without the vaccine - KUER",
-      "description": "What started as a small outbreak of measles along the Utah-Arizona border has spread to every corner of the Beehive State.",
-      "url": "https://www.kuer.org/health/2026-04-08/measles-outbreak-spreads-in-utah-hitting-people-without-the-vaccine",
-      "urlToImage": "https://npr.brightspotcdn.com/dims4/default/6a27cdd/2147483647/strip/true/crop/4032x2117+0+454/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fcd%2F20%2F194fc06a4f04a0fcf1d194d78cd7%2Fredmed-u-clinic-measles-higgins.jpeg",
-      "publishedAt": "2026-04-08T23:21:00Z",
-      "content": "Utahs measles outbreak started in a remote area, but is now spreading across the state.\r\nAs of the most recent update\r\n from the Utah Department of Health and Human Services, there have now been 583 … [+4556 chars]",
-      "category": "health"
-    },
-    {
       "source_name": "Nature.com",
       "source_id": null,
       "author": null,
-      "title": "Saturation editing of RNU4-2 reveals distinct dominant and recessive disorders - Nature",
-      "description": "Saturation genome editing of RNU4-2 identifies the functional and clinical impact of variants across the entire gene and delineates variants that&nbsp;cause a new recessive neurodevelopmental disorder distinct from ReNU syndrome.",
-      "url": "https://www.nature.com/articles/s41586-026-10334-9",
-      "urlToImage": "https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs41586-026-10334-9/MediaObjects/41586_2026_10334_Fig1_HTML.png",
-      "publishedAt": "2026-04-08T22:38:57Z",
-      "content": "Single guide RNA design and cloning\r\nThe gRNA used for SGE was designed using Benchlings CRISPR design tool to search the RNU4-2 locus, including upstream and downstream regions of low sequence homol… [+20846 chars]",
-      "category": "health"
-    },
-    {
-      "source_name": "Nature.com",
-      "source_id": null,
-      "author": null,
-      "title": "Engineered immunosuppressive dendritic cells protect against cardiac remodelling - Nature",
-      "description": "Lesion-targeted immune modulation is a feasible strategy to control cardiac fibrosis, and engineered dendritic cells are a promising therapeutic platform for treating cardiac remodelling and heart failure.",
-      "url": "https://www.nature.com/articles/s41586-026-10346-5",
-      "urlToImage": "https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs41586-026-10346-5/MediaObjects/41586_2026_10346_Fig1_HTML.png",
-      "publishedAt": "2026-04-08T21:57:35Z",
-      "content": "<li>Conrad, N. et al. Temporal trends and patterns in heart failure incidence: a population-based study of 4 million individuals. Lancet391, 572580 (2018).\r\nArticle \r\n PubMed \r\nGoogle Scholar \r\n</li>… [+8375 chars]",
-      "category": "health"
-    },
-    {
-      "source_name": "Nature.com",
-      "source_id": null,
-      "author": null,
-      "title": "Tumour trap: engineered enhancer sequences enlisted to kill cancer cells - Nature",
-      "description": "New cancer therapies are needed that do not harm healthy tissue. An engineered DNA sequence shows promise as one of the tools in a method to target brain tumour cells.",
-      "url": "https://www.nature.com/articles/d41586-026-00812-5",
-      "urlToImage": "https://media.nature.com/lw1200/magazine-assets/d41586-026-00812-5/d41586-026-00812-5_52258252.jpg",
-      "publishedAt": "2026-04-08T21:07:25Z",
-      "content": "<li>Koeber, U. et al.Nature https://doi.org/10.1038/s41586-026-10329-6 (2026).\r\nArticle \r\nGoogle Scholar \r\n</li><li>Sarkar, A. &amp; Hochedlinger, K. Cell Stem Cell12, 1530 (2013).\r\nArticle \r\n PubMed… [+720 chars]",
-      "category": "health"
-    },
-    {
-      "source_name": "HarpersBAZAAR.com",
-      "source_id": null,
-      "author": "Marie-Claire Chappet",
-      "title": "Could Your Relationship Survive A Shocking Revelation? A Therapist Weighs In On The Drama Behind The Drama - Yahoo",
-      "description": "What would you do if your partner revealed the 'worst thing they'd ever done'?",
-      "url": "https://www.harpersbazaar.com/culture/film-tv/a70967348/the-drama-film-real-story/",
-      "urlToImage": "https://s.yimg.com/os/en/harper_s_bazaar_391/a1b8cc5796b4ae6a388dba0e30f2964b",
-      "publishedAt": "2026-04-08T20:58:57Z",
-      "content": "\"Hearst Magazines and Yahoo may earn commission or revenue on some items through these links.\"\r\nTheres been some drama So says Robert Pattinson in the aptly titled new film The Drama. His words are s… [+4975 chars]",
-      "category": "entertainment"
-    },
-    {
-      "source_name": "CNN",
-      "source_id": "cnn",
-      "author": "Michal Ruprecht",
-      "title": "Should’ve put a ring on it? Maybe! Marriage is linked to lower risk of cancer - CNN",
-      "description": "A new study suggests marriage may be linked to a lower risk of cancer, adding to a growing body of research tying it to improved health outcomes.",
-      "url": "https://www.cnn.com/2026/04/08/health/marriage-cancer-wellness",
-      "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/c-gettyimages-149262448.jpg?c=16x9&q=w_800,c_fill",
-      "publishedAt": "2026-04-08T19:08:56Z",
-      "content": "Marriage has existed for thousands of years and it was once almost universal, according to Dr. Andrew J. Cherlin. But marriage rates are falling, and that means some people may be missing out on a po… [+5467 chars]",
+      "title": "Why obesity drugs work better for some people: these genes hold clues - Nature",
+      "description": "Study of almost 28,000 people also identifies genetic variants that raise the risk of gastrointestinal side effects from GLP-1 medications.",
+      "url": "https://www.nature.com/articles/d41586-026-01107-5",
+      "urlToImage": "https://media.nature.com/lw1200/magazine-assets/d41586-026-01107-5/d41586-026-01107-5_52258730.jpg",
+      "publishedAt": "2026-04-08T19:34:22Z",
+      "content": "A study of the varied response to obesity drugs harnessed data from people who used 23andMe DNA tests.Credit: Tiffany Hagler-Geard/Bloomberg via Getty\r\nScientists have identified a set of genetic var… [+4017 chars]",
       "category": "general"
     },
     {

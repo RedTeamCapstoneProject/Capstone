@@ -6,7 +6,7 @@ import fs from "fs";
 const targetFile = path.resolve("outputJSONs/summarizedJSON/summarizedTopic.json");
 
 console.log(`checking for stuff at: ${targetFile}`);
-
+/*
 const watcher = chokidar.watch(targetFile, {
     persistent: true,
     ignoreInitial: true, //only run on new changes
@@ -26,6 +26,7 @@ watcher.on('change', async (filePath) => {
     }
 });
 
+*/
 
 interface SummaryRow {
   source_names: string[];

@@ -7,7 +7,7 @@ import * as fs from 'fs';
 import chokidar from 'chokidar';
 import cron from 'node-cron';
 import Fs from 'node:fs/promises';
-
+//import {fetchNewsArticlesAndSummarize} from "/backend/src/newsArticlesToSummary.ts";
 
 //MAKE DYNAMIC KEY SWITCHING FOR AI CALLS GEMINI OR GROQ
 
@@ -75,7 +75,27 @@ export const runDataImport = () => {
     });
 };
 
+export const runSummarization = () => {
+    const currentFile = fileURLToPath(import.meta.url);
+    const currentDir = path.dirname(currentFile);
+    
+    const scriptPath = path.resolve(currentDir, '../../scripts/newArticleToSummary.ps1');
 
+    console.log('--- Calling Summarizer Script ---');
+
+    return new Promise((resolve) => {
+        exec(`powershell -ExecutionPolicy Bypass -File "${scriptPath}"`, { env: process.env }, (error, stdout, stderr) => {
+            if (error) {
+                console.error(`Summarizer Execution Error: ${error.message}`);
+            }
+            if (stderr && !stderr.includes("Debugger attached")) {
+                console.error(`Summarizer Stderr: ${stderr}`);
+            }
+            console.log(`Summarizer Output: ${stdout}`);
+            resolve(true);
+        });
+    });
+};
 
 async function categorizeNews(originalArticleArray: newsArticle[]){
 
@@ -224,39 +244,7 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
 //if 5:00 only read 200-300 and delete files to reset 
 //call runDataImport to store the topicJSON after each run
 export async function run() {
-    try {
-        /*
-        var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_0_100.json")
-        // var categoryArticleArray = await categorizeNews(originalArticleArray)
-        var completedArray = await determineTopics(originalArticleArray)
-        await writeToJSON(completedArray)
-        console.log("articles written succesfully")
-        
-        if (time == "12:10"){
-            var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_0_100.json")
-           // var categoryArticleArray = await categorizeNews(originalArticleArray)
-            var completedArray = await determineTopics(originalArticleArray)
-            await writeToJSON(completedArray)
-            console.log("articles written succesfully")
-        } else if(time == "3:00"){
-            var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_100_200.json")
-            //var categoryArticleArray = await categorizeNews(originalArticleArray)
-            var completedArray = await determineTopics(originalArticleArray)
-            await writeToJSON(completedArray)
-            console.log("articles written succesfully")
-        }else if(time == "5:00"){
-            var originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_200_300.json")
-            //var categoryArticleArray = await categorizeNews(originalArticleArray)
-            var completedArray = await determineTopics(originalArticleArray)
-            await writeToJSON(completedArray)
-            console.log("articles written succesfully")
-            console.log("deleting the jsons and topic csv to reset...")
-            await Fs.unlink('outputJSONs/newsAPI/trending_news_0_100.json');
-            await Fs.unlink('outputJSONs/newsAPI/trending_news_100_200.json');
-            await Fs.unlink('outputJSONs/newsAPI/trending_news_200_300.json');
-            fs.writeFileSync('AI/Grouping/topicList.csv', '');
-           */
-          
+    try { 
             try{
                 let originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_0_100.json")
             // var categoryArticleArray = await categorizeNews(originalArticleArray)
@@ -271,9 +259,11 @@ export async function run() {
             }finally{
                 console.log("finished processing batch 1, running db script and waiting 5 minutes");
                 runDataImport()
+                //await new Promise(resolve => setTimeout(resolve, 10000));
                 await new Promise(resolve => setTimeout(resolve, 300000)); // 300,000ms = 5 minutes
 
             }
+            
             try{
                 let originalArticleArray = await readJSON("outputJSONs/newsAPI/trending_news_100_200.json")
             // var categoryArticleArray = await categorizeNews(originalArticleArray)
@@ -307,7 +297,7 @@ export async function run() {
             }finally{
                 console.log("finished processing batch 3, running db script and waiting 5 minutes");
                 runDataImport()
-                await new Promise(resolve => setTimeout(resolve, 300000)); // 300,000ms = 5 minutes
+                //await new Promise(resolve => setTimeout(resolve, 300000)); // 300,000ms = 5 minutes
 
             }
         
@@ -315,14 +305,16 @@ export async function run() {
         
 
     } catch(error){
-        console.error("Error processing the data: ", error);
+            console.error("Error processing the data: ", error);
     }finally {
             console.log("articles written succesfully")
             console.log("deleting the jsons and topic csv to reset...")
-            fs.writeFileSync('outputJSONs/newsAPI/trending_news_0_100.json', '');
-            fs.writeFileSync('outputJSONs/newsAPI/trending_news_100_200.json','');
-            fs.writeFileSync('outputJSONs/newsAPI/trending_news_200_300.json','');
+            //fs.writeFileSync('outputJSONs/newsAPI/trending_news_0_100.json', '');
+            //fs.writeFileSync('outputJSONs/newsAPI/trending_news_100_200.json','');
+            //fs.writeFileSync('outputJSONs/newsAPI/trending_news_200_300.json','');
             fs.writeFileSync('AI/Grouping/topicList.csv', '');
+            await new Promise(resolve => setTimeout(resolve, 300000)); // 300,000ms = 5 minutes
+            await runSummarization()
     }
 }
 
