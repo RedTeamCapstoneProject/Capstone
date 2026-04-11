@@ -9,4 +9,4 @@ $env:TS_NODE_COMPILER_OPTIONS = '{"module":"CommonJS","moduleResolution":"node"}
 
 # Execute the specific function
 # Note: Ensure the function name 'newsArticlesToSummaryFolder' matches the export in your .ts file
-npx ts-node --transpile-only -e "const api = require('./backend/src/newsArticlesToSummary'); console.log('Summarizer module loaded...'); api.fetchNewsArticlesAndSummarize().then(c => { console.log('Process finished. Items handled:', c); process.exit(0); }).catch(e => { console.error('TS Error:', e); process.exit(1); })"
+npx ts-node --esm --transpile-only -e "const api = require('./backend/src/newsArticlesToSummary'); api.newsArticlesToSummaryFolder().then(c => { process.exit(0); }).catch(e => { console.error('TS Error:', e); process.exit(1); })"
