@@ -29,7 +29,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
 
     console.log("Looking up user...");
     const result = await pool.query(
-      "SELECT id, email, password_hash FROM users WHERE email = $1",
+      "SELECT id, email, password_hash, preferences FROM users WHERE email = $1",
       [normalizedEmail]
     );
 
@@ -51,6 +51,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
       user: {
         id: user.id,
         email: user.email,
+        preferences: user.preferences ?? [],
       },
     });
   } catch (error) {

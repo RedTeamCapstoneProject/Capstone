@@ -1547,6 +1547,12 @@ hr.major {
 }
 .blurb p {
   font-size: 0.9em;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
 }
 
 .box {
@@ -2579,6 +2585,14 @@ ul.posts article header > :last-child {
   }
 }
 
+.post p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 section.special,
 article.special {
   text-align: center;
@@ -3081,12 +3095,13 @@ body.is-menu-visible #menu {
     padding: 1.5em;
   }
 }
+
 .post p {
-  display: -webkit-box !important;
-  -webkit-line-clamp: 3 !important;
-  line-clamp: 3 !important;
-  -webkit-box-orient: vertical !important;
-  overflow: hidden !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */
