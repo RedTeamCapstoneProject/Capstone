@@ -159,6 +159,7 @@ export async function fetchNewsArticlesAndSummarize(): Promise<{
 	};
 }
 
+/*
 if (process.env.TRIGGER_RUN === "true") {
     console.log("Process triggered by PowerShell. Starting fetch and summarize...");
     fetchNewsArticlesAndSummarize()
@@ -171,3 +172,4 @@ if (process.env.TRIGGER_RUN === "true") {
             process.exit(1);
         });
 }
+		*/
