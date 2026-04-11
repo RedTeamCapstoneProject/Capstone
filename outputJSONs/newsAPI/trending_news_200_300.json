@@ -1,11 +1,155 @@
 {
   "fetch_info": {
-    "timestamp": "2026-04-11T22:32:50.178882",
+    "timestamp": "2026-04-11T23:34:26.700246",
     "article_range": "200-300",
-    "articles_in_file": 54,
+    "articles_in_file": 45,
     "file_number": 3
   },
   "articles": [
+    {
+      "source_name": "Google News",
+      "source_id": "google-news",
+      "author": "Investor's Business Daily",
+      "title": "Chip Stocks Are Rocking As Investors Come Knocking - Investor's Business Daily",
+      "description": null,
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPOFBxSkc3Z3lUcFN5c1NMc2c5WGppWWoyb3Q4dXY3M1hycUNUUmtQYWFrZEhER2x3WnhGTnM5VDhaQUJ1NHlhZUpXeWlvOGRheG80N3FSdlNiWGc5ekJ5QXVxM3Z2ZXQyNVZRTmZpSjhoYjFQS1JaM3k4QmhsczJSV2thZFhRWGM?oc=5",
+      "urlToImage": null,
+      "publishedAt": "2026-04-09T20:39:00Z",
+      "content": null,
+      "category": "business"
+    },
+    {
+      "source_name": "Nintendoeverything.com",
+      "source_id": null,
+      "author": "Brian",
+      "title": "Early Punch-Out prototype surfaces, ROM shared online - Nintendo Everything",
+      "description": "Nintendo fans can now get their hands on a new and special Punch-Out prototype that just surfaced.",
+      "url": "https://nintendoeverything.com/early-punch-out-prototype-surfaces-rom-shared-online/",
+      "urlToImage": "https://nintendoeverything.com/wp-content/uploads/Punch-Out-prototype.jpg",
+      "publishedAt": "2026-04-09T20:11:22Z",
+      "content": "A new piece of Nintendo history is making the rounds as a prototype of Punch-Out has surfaced. It’s claimed that the cartridge initially belonged to a former Nintendo of America employee who sold it … [+1501 chars]",
+      "category": "technology"
+    },
+    {
+      "source_name": "ABC15 Arizona",
+      "source_id": null,
+      "author": "abc15.com staff",
+      "title": "Maricopa County public health officials confirm measles exposure in Queen Creek, list locations - ABC15 Arizona",
+      "description": "The Maricopa County Department of Public Health confirmed a measles case in a Valley resident with exposure in Queen Creek, prompting health officials to identify public exposure sites.",
+      "url": "https://www.abc15.com/news/local-news/maricopa-county-public-health-officials-confirm-a-measles-case-in-queen-creek",
+      "urlToImage": "https://ewscripps.brightspotcdn.com/dims4/default/bfd44d4/2147483647/strip/true/crop/500x263+0+35/resize/1200x630!/quality/90/?url=https%3A%2F%2Fewscripps.brightspotcdn.com%2Fdc%2F35%2Fb526f11c47a2a1fb6fe78c010b4b%2Fshutterstock-2460960295.jpg",
+      "publishedAt": "2026-04-09T20:09:00Z",
+      "content": "QUEEN CREEK, AZ The Maricopa County Department of Public Health confirmed a measles case in a Valley resident with exposures in Queen Creek, prompting health officials to identify public exposure sit… [+1874 chars]",
+      "category": "health"
+    },
+    {
+      "source_name": "CBS News",
+      "source_id": "cbs-news",
+      "author": "Aimee  Picchi",
+      "title": "Property taxes are rising faster than inflation. See what homeowners pay across the U.S. - CBS News",
+      "description": "The average U.S. property tax bill rose 3.7% last year to $4,427, outpacing inflation even as the typical home lost value.",
+      "url": "https://www.cbsnews.com/news/property-taxes-inflation-see-what-homeowners-pay-across-us/",
+      "urlToImage": "https://assets1.cbsnewsstatic.com/hub/i/r/2024/12/23/f2ed0ada-8ffe-49a1-864d-3c686992c8f3/thumbnail/1200x630/eb3db7a6a0fa40341e89392de8863493/gettyimages-1598945865.jpg",
+      "publishedAt": "2026-04-09T20:03:22Z",
+      "content": "Property taxes across the U.S. are rising faster than inflation, with the average homeowner last year paying $4,427, up 3.7% from 2024, according to a new analysis from real estate data firm ATTOM. \r… [+2463 chars]",
+      "category": "business"
+    },
+    {
+      "source_name": "The A.V. Club",
+      "source_id": null,
+      "author": null,
+      "title": "Can AI dream of electric sheep? The team behind the award-winning 1000XResist on their next game - AV Club",
+      "description": "We talked with Remy Siu, the Creative Director behind the award-winning 1000XResist, about their upcoming AI-centric game.",
+      "url": "https://www.avclub.com/prove-your-human-interview-remy-siu-1000xresist-sunset-visitor",
+      "urlToImage": "https://img.pastemagazine.com/wp-content/avuploads/2026/04/08180646/prove-your-human-main-1.jpg",
+      "publishedAt": "2026-04-09T20:00:00Z",
+      "content": "Sunset Visitor got off to a mesmerizing start with its 2024 debut, 1000XResist, a sci-fi game that paired personal storytelling about being a first-generation immigrant with commentary on, well, basi… [+17081 chars]",
+      "category": "technology"
+    },
+    {
+      "source_name": "Umn.edu",
+      "source_id": null,
+      "author": null,
+      "title": "Vampire bats in Mexico may feed on CWD-positive deer, spreading disease and posing species-jump threat - CIDRAP",
+      "description": null,
+      "url": "https://www.cidrap.umn.edu/chronic-wasting-disease/vampire-bats-mexico-may-feed-cwd-positive-deer-spreading-disease-and-posing",
+      "urlToImage": "https://www.cidrap.umn.edu/sites/default/files/styles/layout_large/public/article/Vampire%20bat.jpg?itok=e1kj_gkm",
+      "publishedAt": "2026-04-09T19:54:40Z",
+      "content": "In fact, speaking with Texas Parks and Wildlife veterinarian J. Hunter Reed, DVM, MPH, the researchers learned that from 2021 to 2025, Texas ranches that were later confirmed to have housed CWD-posit… [+4693 chars]",
+      "category": "health"
+    },
+    {
+      "source_name": "LADbible",
+      "source_id": null,
+      "author": "Anish Vij",
+      "title": "Doctor explains key lifestyle choices that can cause your penis to shrink - LADbible",
+      "description": "There are several factors that can cause up to a one inch loss in penis size",
+      "url": "https://www.ladbible.com/news/health/penis-shrink-length-smaller-size-lifestyle-choice-007558-20260409",
+      "urlToImage": "https://resizer.ladbiblegroup.com/ogimage/v3/assets/bltcd74acc1d0a99f3a/bltdc50b0bfbc4dbdb4/69d785cb80ee7212f785a95f/penis-shrinkage.jpg",
+      "publishedAt": "2026-04-09T19:16:59Z",
+      "content": "It's safe to say that many blokes will worry about their penises shrinking over time - and it turns out that this is very much a possibility thanks to certain lifestyle choices and events.\r\nPenis shr… [+2740 chars]",
+      "category": "health"
+    },
+    {
+      "source_name": "Nintendo Life",
+      "source_id": null,
+      "author": "Alana Hagues",
+      "title": "Castlevania: Belmont's Curse Let's You Fight Joan Of Arc And Explore Notre Dame In New Trailer - Nintendo Life",
+      "description": "Bonjour, evildoers",
+      "url": "https://www.nintendolife.com/news/2026/04/castlevania-belmonts-curse-lets-you-fight-joan-of-arc-and-explore-notre-dame-in-new-trailer",
+      "urlToImage": "https://images.nintendolife.com/2bb8cb187ca3d/large.jpg",
+      "publishedAt": "2026-04-09T19:15:00Z",
+      "content": "Today's Triple-i Initiative showcase promised us some Castlevania: Belmont's Curse news, and we got a little bit of that during today's presentation.\r\nIn the short new trailer up top, featuring comme… [+1015 chars]",
+      "category": "technology"
+    },
+    {
+      "source_name": "UploadVR",
+      "source_id": null,
+      "author": "Diego Nicolás Argüello",
+      "title": "Wrath: Aeon of Ruin VR - Brutal Edition Review: Valiant Effort - UploadVR",
+      "description": "Wrath: Aeon of Ruin VR - Brutal Edition is a valiant effort to translate an old-school genre into VR, but its design pulls it back from greatness.",
+      "url": "https://www.uploadvr.com/wrath-aeon-of-ruin-vr-brutal-edition-review/",
+      "urlToImage": "https://www.uploadvr.com/content/images/size/w1200/2026/04/wrath.jpg",
+      "publishedAt": "2026-04-09T19:13:09Z",
+      "content": "The boomer shooter genre has established itself for years now. Wrath: Aeon of Ruin VR - Brutal Edition, however, shows how difficult it can be to translate the signature breakneck speed to VR.\r\nRelea… [+5996 chars]",
+      "category": "technology"
+    },
+    {
+      "source_name": "Neurosciencenews.com",
+      "source_id": null,
+      "author": "Neuroscience News",
+      "title": "How the Brain Replays Sight to Create Mental Images - Neuroscience News",
+      "description": "How does the brain create mental images? A new study reveals that visual imagination and perception share a common neural code.",
+      "url": "https://neurosciencenews.com/imagination-neural-code-visual-perception-30490/",
+      "urlToImage": "https://neurosciencenews.com/files/2026/04/vision-mental-image-neuroscience.jpg",
+      "publishedAt": "2026-04-09T19:02:56Z",
+      "content": "Summary: Have you ever wondered why a memory can feel as vivid as a photograph? A groundbreaking study has finally cracked the “neural code” behind visual imagination. By recording the electrical act… [+10846 chars]",
+      "category": "health"
+    },
+    {
+      "source_name": "Business Insider",
+      "source_id": "business-insider",
+      "author": "Laura Italiano, Natalie Musumeci",
+      "title": "Appellate judges signal strong interest in overturning Diddy's sentence — but there's a big catch - Business Insider",
+      "description": "Attorneys for Sean \"Diddy\" Combs argued that the music tycoon was treated unjustly at his Manhattan sentencing last year.",
+      "url": "https://www.businessinsider.com/diddy-lawyers-fight-to-overturn-conviction-sentence-2026-4",
+      "urlToImage": "https://i.insider.com/69d7aeef05c9b303c4e76862?width=1200&format=jpeg",
+      "publishedAt": "2026-04-09T19:02:00Z",
+      "content": "During a lively exchange of questions and arguments on Thursday, a trio of federal appeals judges signaled their strong interest in overturning last year's sentence on prostitution-related charges fo… [+4331 chars]",
+      "category": "entertainment"
+    },
+    {
+      "source_name": "Eatingwell.com",
+      "source_id": null,
+      "author": "https://www.facebook.com/EatingWell/",
+      "title": "5 Surprising Plant-Based Foods With More Protein Than Tofu - EatingWell",
+      "description": "Tofu is not the be-all, end-all of plant-based eating. Boost your protein intake with healthy alternatives like seitan, tempeh, edamame and more.",
+      "url": "https://www.eatingwell.com/plant-based-foods-with-more-protein-than-tofu-11945084",
+      "urlToImage": "https://www.eatingwell.com/thmb/3o3WGeC0B1wPnWgnESALvMteouc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/5-Surprising-Plant-Based-Foods-With-More-Protein-Than-Tofu-1af8cf4df1754be3b66e10e1688e44f5.jpg",
+      "publishedAt": "2026-04-09T19:00:00Z",
+      "content": "Tofu has long been the OG plant-based protein since its a budget-friendly staple with plenty of culinary versatility. Tofu-haters may say its bland and boring, but the neutral flavor profile of tofu … [+4631 chars]",
+      "category": "health"
+    },
     {
       "source_name": "Delish.com",
       "source_id": null,
@@ -17,18 +161,6 @@
       "publishedAt": "2026-04-09T18:39:09Z",
       "content": "\"Hearst Magazines and Yahoo may earn commission or revenue on some items through these links.\"\r\nWinemaking is a tradition that has thrived for millennia, with evidence of the practice dating back as … [+4563 chars]",
       "category": "health"
-    },
-    {
-      "source_name": "Pure Xbox",
-      "source_id": null,
-      "author": "Ben Kerry",
-      "title": "'Graveyard Keeper' Is Available To Claim For Free On Xbox For A Limited Time - Pure Xbox",
-      "description": "Here's when you can grab it!",
-      "url": "https://www.purexbox.com/news/2026/04/graveyard-keeper-is-available-to-claim-for-free-on-xbox-for-a-limited-time",
-      "urlToImage": "https://images.purexbox.com/9d31004fcca3a/large.jpg",
-      "publishedAt": "2026-04-09T18:30:00Z",
-      "content": "As part of today's 'Triple-I Interactive' showcase, Graveyard Keeper 2 has been announced for Xbox and other platforms, and to celebrate its reveal, the team has announced that folks can grab Graveya… [+1362 chars]",
-      "category": "technology"
     },
     {
       "source_name": "Riotgames.com",
@@ -43,18 +175,6 @@
       "category": "technology"
     },
     {
-      "source_name": "Billboard",
-      "source_id": null,
-      "author": "Hannah Dailey",
-      "title": "BTS’ Jin Reflects on Band’s First Concert of ARIRANG World Tour: ‘I Feel Like I’m Back Home’ - Billboard",
-      "description": "BTS' Jin reflected on the band's ARIRANG Tour kickoff show, saying, \"I feel like I'm back home.\"",
-      "url": "http://www.billboard.com/music/music-news/bts-jin-reflects-arirang-tour-kickoff-show-1236218974/",
-      "urlToImage": "https://www.billboard.com/wp-content/uploads/2026/04/2216173487-e1775685572397.jpg?w=1024",
-      "publishedAt": "2026-04-09T17:58:08Z",
-      "content": "BTS gave ARMY permission to dance for the first of many times on the band’s world tour supporting ARIRANG, which kicked off Thursday (April 9) with a spectacular performance at Goyang Stadium in Sout… [+1500 chars]",
-      "category": "entertainment"
-    },
-    {
       "source_name": "The Verge",
       "source_id": "the-verge",
       "author": "Emma Roth",
@@ -65,18 +185,6 @@
       "publishedAt": "2026-04-09T17:57:58Z",
       "content": "<ul><li></li><li></li><li></li></ul>\r\nYou can interact with the 3D models and adjust variables in real-time.\r\nYou can interact with the 3D models and adjust variables in real-time.\r\nby\r\nEmma RothClos… [+2323 chars]",
       "category": "technology"
-    },
-    {
-      "source_name": "The Information",
-      "source_id": null,
-      "author": "Theo Wayt, Cory Weinberg, Valida Pau",
-      "title": "SpaceX Woos Investors As C-Suite Shakeups Continue - The Information",
-      "description": "Some of the biggest Wall Street fund managers are planning to trek to the southernmost tip of Texas, then about 950 miles to Memphis, Tenn, in two weeks, for exclusive visits to SpaceX facilities ahead of what could be the biggest initial public offering of a…",
-      "url": "https://www.theinformation.com/articles/spacex-woos-investors-c-suite-shakeups-continue",
-      "urlToImage": "https://tii.imgix.net/production/articles/16904/dc46ea62-9862-4ac3-9526-93c9e054947c.png?fm=jpg&auto=compress&w=1200&frame=0",
-      "publishedAt": "2026-04-09T17:53:00Z",
-      "content": null,
-      "category": "business"
     },
     {
       "source_name": "Variety",
@@ -91,18 +199,6 @@
       "category": "business"
     },
     {
-      "source_name": "The Daily Galaxy --Great Discoveries Channel",
-      "source_id": null,
-      "author": "Lydia Amazouz",
-      "title": "Northern Lights Set to Illuminate Skies Across the U.S. Tonight: Here’s Where to See Them! - The Daily Galaxy",
-      "description": "The northern lights may be visible farther south than usual due to heightened solar activity. Here's where to see them!",
-      "url": "https://dailygalaxy.com/2026/04/northern-lights-u-s-tonight-heres-where/",
-      "urlToImage": "https://dailygalaxy.com/wp-content/uploads/2026/04/Northern-Lights-Set-to-Illuminate-Skies-Across-the-U.S.-Tonight-Heres-Where-to-See-Them-scaled.png",
-      "publishedAt": "2026-04-09T17:45:00Z",
-      "content": "A dazzling spectacle of color is set to light up the sky tonight, April 9, 2026, as the northern lights (aurora borealis) prepare to make a rare, vivid appearance. According to NOAA (National Oceanic… [+4049 chars]",
-      "category": "science"
-    },
-    {
       "source_name": "NPR",
       "source_id": null,
       "author": "Katia Riddle",
@@ -115,18 +211,6 @@
       "category": "science"
     },
     {
-      "source_name": "9to5google.com",
-      "source_id": null,
-      "author": "Abner Li",
-      "title": "Pixel Now Playing brings back ‘Tap to see what’s playing’ lockscreen search - 9to5Google",
-      "description": "Google is bringing back Pixel Now Playing’s ability to manually start a ‘Tap to see what’s playing’ song search from the lockscreen.",
-      "url": "http://9to5google.com/2026/04/09/pixel-now-playing-search/",
-      "urlToImage": "https://i0.wp.com/9to5google.com/wp-content/uploads/sites/4/2026/03/Pixel-Now-Playing-redesign-cover.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
-      "publishedAt": "2026-04-09T17:36:00Z",
-      "content": "Google is bringing back Pixel Now Playings ability to manually start a song search from the lockscreen.\r\nThe Now Playing redesign removed the ability to trigger a manual song search on your lockscree… [+842 chars]",
-      "category": "technology"
-    },
-    {
       "source_name": "Videocardz.com",
       "source_id": null,
       "author": null,
@@ -136,6 +220,18 @@
       "urlToImage": "https://cdn.videocardz.com/1/2026/04/ASUS-ROG-EQUALIZER-CABLE-HERO.jpg",
       "publishedAt": "2026-04-09T17:36:00Z",
       "content": "Update: ASUS has clarified that the upgrade program will not include a free cable. Eligible users will instead receive a discount on the ROG Equalizer upgrade.\r\nThe program is currently planned to of… [+2154 chars]",
+      "category": "technology"
+    },
+    {
+      "source_name": "9to5google.com",
+      "source_id": null,
+      "author": "Abner Li",
+      "title": "Pixel Now Playing brings back ‘Tap to see what’s playing’ lockscreen search - 9to5Google",
+      "description": "Google is bringing back Pixel Now Playing’s ability to manually start a ‘Tap to see what’s playing’ song search from the lockscreen.",
+      "url": "http://9to5google.com/2026/04/09/pixel-now-playing-search/",
+      "urlToImage": "https://i0.wp.com/9to5google.com/wp-content/uploads/sites/4/2026/03/Pixel-Now-Playing-redesign-cover.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2026-04-09T17:36:00Z",
+      "content": "Google is bringing back Pixel Now Playings ability to manually start a song search from the lockscreen.\r\nThe Now Playing redesign removed the ability to trigger a manual song search on your lockscree… [+842 chars]",
       "category": "technology"
     },
     {
@@ -163,30 +259,6 @@
       "category": "entertainment"
     },
     {
-      "source_name": "WRAL.com",
-      "source_id": null,
-      "author": "WRAL staff",
-      "title": "2 rabies cases identified in Orange County from cat and raccoon - WRAL",
-      "description": "The release stated that the first incident involving a raccoon happened on April 4 in the vicinity of Dixie Lane in Chapel Hill. The second incident involving a cat happened on April 7 near Holiday Park Road in Hillsborough.",
-      "url": "https://www.wral.com/news/local/2-positive-rabies-tests-orange-county-april-9-2026/",
-      "urlToImage": "https://images.wral.com/3a4f7c78-5f19-4faa-9167-8544ae0dc089?w=1200&h=630",
-      "publishedAt": "2026-04-09T17:27:58Z",
-      "content": "Orange County Animal Services received two positive rabies tests, according to the North Carolina State Laboratory of Public Health. \r\nThe release stated that the first incident involving a raccoon h… [+2241 chars]",
-      "category": "health"
-    },
-    {
-      "source_name": "Android Authority",
-      "source_id": null,
-      "author": null,
-      "title": "Is your Galaxy on the list? Every Samsung phone getting AirDrop support in today's update - Android Authority",
-      "description": "Samsung has released a One UI 8.5 beta update. That update expands AirDrop support through Quick Share to more Galaxy devices.",
-      "url": "https://www.androidauthority.com/samsung-expands-airdrop-support-3656304/",
-      "urlToImage": "https://www.androidauthority.com/wp-content/uploads/2025/09/samsung-galaxy-s25-back-in-hand-outside-scaled.jpg",
-      "publishedAt": "2026-04-09T17:26:35Z",
-      "content": "<ul><li>AirDrop support through Quick Share is expanding to more Galaxy devices.</li><li>Its now available on the Galaxy S25 series, S24 series, Z Fold 7, Z Flip 7, Z Fold 6, and Z Flip 6.</li><li>Yo… [+1288 chars]",
-      "category": "technology"
-    },
-    {
       "source_name": "Polygon",
       "source_id": "polygon",
       "author": "Jen Glennon",
@@ -209,54 +281,6 @@
       "publishedAt": "2026-04-09T17:18:45Z",
       "content": "Apple today released macOS Tahoe 26.4.1, a minor update to the ‌macOS Tahoe‌ operating system that came out last September. ‌macOS Tahoe‌ 26.4.1 comes two weeks after Apple launched macOS Tahoe 26.4.… [+332 chars]",
       "category": "technology"
-    },
-    {
-      "source_name": "The Verge",
-      "source_id": "the-verge",
-      "author": "Jay Peters",
-      "title": "Castlevania headlines a big list of exciting indie game reveals - The Verge",
-      "description": "The 2026 Triple-I Initiative, an indie game showcase, featured news about Castlevania: Belmont’s Curse, a new game from the developers of 1000xResist, and more.",
-      "url": "https://www.theverge.com/games/908898/triple-i-initiative-indie-game-showcase-2026-recap-trailers",
-      "urlToImage": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/04/ss_8ef8b46f7d9f5e1878c40caca5febcf594e3d4c9.1920x1080.jpg?quality=90&strip=all&crop=0%2C3.4613147178592%2C100%2C93.077370564282&w=1200",
-      "publishedAt": "2026-04-09T17:13:38Z",
-      "content": "<ul><li></li><li></li><li></li></ul>\r\nHeres some of the news from the third Triple-I showcase.\r\nHeres some of the news from the third Triple-I showcase.\r\nby\r\nJay PetersClose\r\nPosts from this author w… [+5360 chars]",
-      "category": "technology"
-    },
-    {
-      "source_name": "Windows Central",
-      "source_id": null,
-      "author": "Jez Corden",
-      "title": "Windows and Xbox rediscover user feedback and fans are wondering what took so long - Windows Central",
-      "description": "Is Microsoft's big AI push falling off the rails? Possibly, but not for the reasons you might think.",
-      "url": "https://www.windowscentral.com/microsoft/windows-and-xbox-are-now-prioritizing-user-feedback-in-a-huge-pivot-but-why-now",
-      "urlToImage": "https://cdn.mos.cms.futurecdn.net/wqtsyV68fTaFo6f4ti4Qt6-1099-80.jpg",
-      "publishedAt": "2026-04-09T17:13:29Z",
-      "content": "Something odd happened this year. Microsoft actually seemed to start to listen.\r\nAfter years of Xbox Series X|S being ignored and bereft of updates, Microsoft began issuing a flurry of new Xbox featu… [+9029 chars]",
-      "category": "technology"
-    },
-    {
-      "source_name": "Xbox.com",
-      "source_id": null,
-      "author": "Mike Nelson, Xbox Wire Editor",
-      "title": "Kiln: Double Fine Shares Their Favorite Pots as Open Beta Goes Live - Xbox Wire",
-      "description": "Now’s your chance to sample Kiln before launch on April 23 during the Open Beta Throwdown on Steam – and Double Fine is here to help inspire your creations with some of their most-favorite pots! Pre-order Kiln today on Xbox, PlayStation, and PC.",
-      "url": "https://news.xbox.com/en-us/2026/04/09/kiln-double-fine-shares-favorite-pots-open-beta-goes-live/",
-      "urlToImage": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/01/Kiln_KeyArt_Master_RGB_FINAL-v260114-d1fc965560069cc65cec.jpg",
-      "publishedAt": "2026-04-09T17:01:52Z",
-      "content": "Were just a few short weeks away from the launch of Double Fines unique pottery brawler, with Kiln rolling ever closer to its April 23, 2026, launch date. If you cant wait to start playing, Kilns Ope… [+1496 chars]",
-      "category": "technology"
-    },
-    {
-      "source_name": "Cdc.gov",
-      "source_id": null,
-      "author": "CDC",
-      "title": "Severe Illness Associated with Eating Mushroom... - Centers for Disease Control and Prevention | CDC (.gov)",
-      "description": "This report describes severe illness associated with eating mushroom-containing chocolate products.",
-      "url": "https://www.cdc.gov/mmwr/volumes/75/wr/mm7513a2.htm",
-      "urlToImage": "https://www.cdc.gov/mmwr/volumes/75/wr/social-media/weekly_generic_logo_1200x675.jpg?_=17133",
-      "publishedAt": "2026-04-09T17:01:49Z",
-      "content": "Jelonia T. Rumph, PhD1,2,3; Andrea Winquist, MD, PhD2; Alyssa N. Troeschel, PhD2; Skylar Pulver, MPH2; Amy Helene Schnall, DrPH2; Joseph Ebersole, MD2; Michael Yeh, MD2; Brooke Burt, MAT2; Sharon L. … [+30657 chars]",
-      "category": "health"
     },
     {
       "source_name": "Broadway World",
@@ -283,40 +307,28 @@
       "category": "health"
     },
     {
-      "source_name": "Yahoo Entertainment",
-      "source_id": null,
-      "author": "Nauman Khan",
-      "title": "Why Is Microsoft Stock Down Today - Yahoo Finance",
-      "description": "Microsoft Stock Drops Below Key Levels as Risk Pressure Builds",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/why-microsoft-stock-down-today-165304660.html",
-      "urlToImage": "https://s.yimg.com/cv/apiv2/cv/apiv2/social/images/yahoo-finance-default-logo.png",
-      "publishedAt": "2026-04-09T16:53:04Z",
-      "content": "This article first appeared on GuruFocus.\r\nMicrosoft (NASDAQ:MSFT) stock fell about 2% on Thursday as geopolitical tensions in the Middle East and renewed cybersecurity concerns pressured the name.\r\n… [+847 chars]",
-      "category": "business"
-    },
-    {
-      "source_name": "Live Science",
-      "source_id": null,
-      "author": "Shreejaya Karantha",
-      "title": "James Webb telescope spots 'stingray' galaxy system that could solve the mystery of 'little red dots' - Live Science",
-      "description": "A study of the fascinating galaxy system nicknamed \"The Stingray\" suggests that mysterious little red dots could be a phase in the evolution of galaxies powered by actively feeding black holes, rather than a distinct class of objects.",
-      "url": "https://www.livescience.com/space/james-webb-telescope-spots-stingray-galaxy-system-that-could-solve-the-mystery-of-little-red-dots",
-      "urlToImage": "https://cdn.mos.cms.futurecdn.net/UkprHGA42FadhtrtuczhWK-1920-80.jpg",
-      "publishedAt": "2026-04-09T16:49:19Z",
+      "source_name": "Google News",
+      "source_id": "google-news",
+      "author": "Medical Xpress",
+      "title": "Meditation changes brain activity quickly with a noticeable peak at 7 minutes, research reveals - Medical Xpress",
+      "description": null,
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaC1oMmRiUXhFRTJFQ2FNeW5PWEhhUzFiS04zMnJ1TkdvQUxsUzZBa19UQk0xMVNkSGJFaGEzOUROMW81SDgxMFk5MC1SaEh0LXgta0RHTTJDWERZSlFrbTkyaTN4eGllUmNDaDVYRDBVSVdHUmlxbjhXV3J4bExEbDRIQkhQS1dS?oc=5",
+      "urlToImage": null,
+      "publishedAt": "2026-04-09T16:40:03Z",
       "content": null,
-      "category": "science"
+      "category": "health"
     },
     {
-      "source_name": "Gematsu",
-      "source_id": null,
-      "author": "Sal Romano",
-      "title": "Neverway launches in October; ‘Prologue’ demo now available for PC - Gematsu",
-      "description": "Neverway, the horror, life simulation, and action RPG hybrid co-created by the pixel artist behind Celeste, will launch for Switch and PC via Steam in October, with “more consoles to be annou…",
-      "url": "https://www.gematsu.com/2026/04/neverway-launches-in-october-prologue-demo-now-available-for-pc",
-      "urlToImage": "https://www.gematsu.com/wp-content/uploads/2026/04/Neverway_2026_04-09-26_013.png",
-      "publishedAt": "2026-04-09T16:45:37Z",
-      "content": "Neverway, the horror, life simulation, and action RPG hybrid co-created by the pixel artist behind Celeste, will launch for Switch and PC via Steam in October, with “more consoles to be announced,” d… [+1502 chars]",
-      "category": "technology"
+      "source_name": "USA Today",
+      "source_id": "usa-today",
+      "author": null,
+      "title": "Wish granted: 'I Dream of Jeannie' star Barbara Eden's life in photos - USA Today",
+      "description": "Barbara Eden became a sitcom icon thanks to her role on the fantasy comedy \"I Dream of Jeannie.\" Take a look back at the actress's life and career.",
+      "url": "https://www.usatoday.com/picture-gallery/entertainment/celebrities/2026/04/09/barbara-eden-photos-i-dream-of-jeannie/89533286007/",
+      "urlToImage": "https://www.usatoday.com/gcdn/authoring/authoring-images/2026/04/09/USAT/89533611007-getty-images-2147051079-1.jpg?crop=5151,2899,x3,y496&width=3200&height=1801&format=pjpg&auto=webp",
+      "publishedAt": "2026-04-09T16:40:00Z",
+      "content": "We're still dreaming of Barbara Eden!The Golden Globe-nominated actress became a sitcom icon thanks to her role on the fantasy comedy \"I Dream of Jeannie,\" which starred Eden as a wish-granting genie… [+155 chars]",
+      "category": "entertainment"
     },
     {
       "source_name": "NBC News",
@@ -343,27 +355,15 @@
       "category": "entertainment"
     },
     {
-      "source_name": "Prevention.com",
-      "source_id": null,
-      "author": "Alyssa Sybertz",
-      "title": "Dermatologists Reveal the Number-1 Sign of Skin Cancer—and It’s Sneaky - AOL.com",
-      "description": "Doctors reveal the number-one sign of skin cancer across every type, plus why early detection is so important to getting potentially life-saving treatment.",
-      "url": "https://www.prevention.com/health/a70966202/top-sign-of-skin-cancer/",
-      "urlToImage": "https://s.yimg.com/ny/api/res/1.2/QVqcs2hLXF.K3_rT1.SZMw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02MDA-/https://media.zenfs.com/en/aol_prevention_182/830a02393134717f06c2fd405f79ff70",
-      "publishedAt": "2026-04-09T16:33:35Z",
-      "content": "There are few things we love more than the feel of the hot sun warming our faces, except remembering to slather on sunscreen before heading out into that cloudless day. But even if youre doing your b… [+2551 chars]",
-      "category": "health"
-    },
-    {
-      "source_name": "PEOPLE",
-      "source_id": null,
-      "author": "Kimberlee Speakman",
-      "title": "Doctors Suspected 17-Year-Old Boy Had Mono. A Blood Test Revealed a Life-Threatening Diagnosis - Yahoo News New Zealand",
-      "description": "Jody White, now 44, looks back at his experience of being diagnosed with cancer as a teen, something he says came as a \"complete shock\"",
-      "url": "https://people.com/doctors-suspected-teen-boy-had-mono-blood-test-uncovered-life-threatening-diagnosis-11946270",
-      "urlToImage": "https://s.yimg.com/ny/api/res/1.2/N.2awgtzhpHjwWhaBFSd8Q--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA7Y2Y9d2VicA--/https://media.zenfs.com/en/people_218/b4d5c41e880151baa8b5316b03bcf624",
+      "source_name": "Google News",
+      "source_id": "google-news",
+      "author": "Yahoo",
+      "title": "Doctors Suspected 17-Year-Old Boy Had Mono. A Blood Test Revealed a Life-Threatening Diagnosis - Yahoo",
+      "description": null,
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNWkVwdWRTWklpckc3MWZJVmtUbk9BbFk1S2ctN2ZnX2NlWkg3R3ZMX1NRUUFvYjF2THhXUDN3UnFQSXRqS1FxNkxBaElTVlR4Q0VqVlVSLXpaS0FCVlRuVzg4a3EwS09OV1Z1Vi1lTS0tY01JdnBKOG9oQVhYY29pbU9jejJ6OWptc1Q0UQ?oc=5",
+      "urlToImage": null,
       "publishedAt": "2026-04-09T16:20:18Z",
-      "content": "NEED TO KNOW\r\n<ul><li>Jody White recalled his leukemia diagnosis at the age of 17 after experiencing several different symptoms\r\n</li><li>The British man said doctors suspected he had glandular fever… [+3637 chars]",
+      "content": null,
       "category": "health"
     },
     {
@@ -403,16 +403,16 @@
       "category": "entertainment"
     },
     {
-      "source_name": "Space.com",
-      "source_id": null,
-      "author": "Anthony Wood",
-      "title": "1 week until the Lyrid meteor shower lights up April skies — Here's what you need to know - Space",
-      "description": "The Lyrid meteor shower peaks overnight on April 21-22.",
-      "url": "https://www.space.com/stargazing/meteor-showers/1-week-until-the-lyrid-meteor-shower-lights-up-april-skies-heres-what-you-need-to-know",
-      "urlToImage": "https://cdn.mos.cms.futurecdn.net/cppHPJKvQLPQGYnMEQ8V8A-1920-80.jpg",
-      "publishedAt": "2026-04-09T16:00:00Z",
-      "content": null,
-      "category": "science"
+      "source_name": "Buzzfeed",
+      "source_id": "buzzfeed",
+      "author": "Leyla Mohammed",
+      "title": "Zendaya, Sydney Sweeney, Sam Levinson At 'Euphoria' Premiere - BuzzFeed",
+      "description": "Yikes.",
+      "url": "https://www.buzzfeed.com/leylamohammed/zendaya-sydney-sweeney-sam-levinson-euphoria-premiere",
+      "urlToImage": "https://img.buzzfeed.com/buzzfeed-static/static/2026-04/09/13/thumb/uIrPfKiQt.jpg?crop=1250:654;0,0%26downsize=1250:*",
+      "publishedAt": "2026-04-09T15:31:42Z",
+      "content": "Did Z walk to carpet then leave immediately or, one popular X post read, while someone else said in a translated tweet, Im crying from laughter Zendaya went to the Euphoria premiere she took the phot… [+22 chars]",
+      "category": "entertainment"
     },
     {
       "source_name": "The Points Guy",
@@ -463,6 +463,18 @@
       "category": "health"
     },
     {
+      "source_name": "Variety",
+      "source_id": null,
+      "author": "Anna Tingley",
+      "title": "Zendaya and Law Roach Design Debut Collection Together, With Campaign Video Directed by Spike Jonze - Variety",
+      "description": "Zendaya and Law Roach have announced their first co-designed collection with sportswear brand On. Shop the full collection online here.",
+      "url": "https://variety.com/2026/shopping/news/zendaya-law-roach-on-collection-shop-online-1236710860/",
+      "urlToImage": "https://variety.com/wp-content/uploads/2026/04/AI-SEARCH-ss26-zendaya_brand_build-pad-head_to_toe_still-1x1-z-srgb-02.jpg?w=1000&h=563&crop=1",
+      "publishedAt": "2026-04-09T14:42:00Z",
+      "content": "If you purchase an independently reviewed product or service through a link on our website, Variety may receive an affiliate commission.\r\nOne of fashion’s most indomitable duos have finally come toge… [+1898 chars]",
+      "category": "entertainment"
+    },
+    {
       "source_name": "Verywellhealth.com",
       "source_id": null,
       "author": "https://www.facebook.com/verywell",
@@ -475,16 +487,16 @@
       "category": "health"
     },
     {
-      "source_name": "Science Daily",
+      "source_name": "TODAY",
       "source_id": null,
-      "author": null,
-      "title": "Brain study reveals hidden link between autism and ADHD - ScienceDaily",
-      "description": "Scientists are uncovering a surprising connection between autism and ADHD that goes deeper than labels. Instead of diagnoses, it’s the severity of autism-like traits that seems to shape how the brain is wired—even in children who don’t officially have autism.…",
-      "url": "https://www.sciencedaily.com/releases/2026/04/260408225941.htm",
-      "urlToImage": "https://www.sciencedaily.com/images/1920/glitchy-face-distortion.webp",
-      "publishedAt": "2026-04-09T14:06:26Z",
-      "content": "A study published in Molecular Psychiatry suggests that autism and ADHD may be connected at a biological level in ways that go beyond traditional diagnostic labels. While it is well known that the tw… [+4718 chars]",
-      "category": "health"
+      "author": "Chrissy Callahan",
+      "title": "'Game of Thrones' Actor Michael Patrick Dies at 35. What Is Motor Neuron Disease? - TODAY.com",
+      "description": "Irish actor Michael Patrick has died at the age of 35 after a three-year long battle with Motor Neuron Disease. Learn about the disease and its symptoms.",
+      "url": "https://www.today.com/health/news/michael-patrick-motor-neuron-disease-death-cause-rcna267412",
+      "urlToImage": "https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1200x630_center,f_auto,q_auto:best/rockcms/2026-04/Michael-patrick-death-AS04092026-333b25.png",
+      "publishedAt": "2026-04-09T14:03:44Z",
+      "content": "\"Game of Thrones\" actor Michael Patrick has died at the age of 35.\r\nPatrick's wife, Naomi Sheehan, shared the news on Instagram, revealing that her husband passed away in Northern Ireland on April 7 … [+3418 chars]",
+      "category": "entertainment"
     },
     {
       "source_name": "Live Science",
@@ -499,16 +511,16 @@
       "category": "science"
     },
     {
-      "source_name": "Nature.com",
+      "source_name": "Vulture",
       "source_id": null,
-      "author": null,
-      "title": "Female mice grow testes after this single DNA tweak - Nature",
-      "description": "Small changes in the non-coding part of the genome have a key role in sex determination.",
-      "url": "https://www.nature.com/articles/d41586-026-01120-8",
-      "urlToImage": "https://media.nature.com/lw1200/magazine-assets/d41586-026-01120-8/d41586-026-01120-8_52265006.jpg",
-      "publishedAt": "2026-04-09T13:57:01Z",
-      "content": "Small changes to the non-coding genome can alter whether a mouse embryo (pictured here at 9.5 days old) develops male or female sex organs.Credit: Sinclair Stammers/SPL\r\nFemale mouse embryos with a s… [+2330 chars]",
-      "category": "science"
+      "author": "Roxana Hadadi",
+      "title": "‘Hacks’ Celebrates Itself in Its Final Season - Vulture",
+      "description": "In season five, ‘Hacks’ makes a case for comedy as our greatest defense from repression. Could the end of this show ever be anything but a celebration of itself? Probably not. By its own definition of merit triumphing above cynicism, ‘Hacks’ has won.",
+      "url": "http://www.vulture.com/article/hacks-season-five-final-review.html",
+      "urlToImage": "https://pyxis.nymag.com/v1/imgs/d62/ede/e806feaa6524358725dfe57b5186b1e813-hacks-season5.1x.rsocial.w1200.jpg",
+      "publishedAt": "2026-04-09T13:50:45Z",
+      "content": "Over its five-season run, Hacks has won a slew of Emmys and a Peabody; accumulated acclaim from critics and a devoted fan base; propelled Jean Smart, Hannah Einbinder, and Megan Stalter to new levels… [+10586 chars]",
+      "category": "entertainment"
     },
     {
       "source_name": "Space.com",
@@ -523,90 +535,6 @@
       "category": "science"
     },
     {
-      "source_name": "Business Insider",
-      "source_id": "business-insider",
-      "author": "Janet Osborne",
-      "title": "I'm a 65-year-old fitness trainer who stocks up on healthy foods at Costco. These are the 11 products I swear by. - Business Insider",
-      "description": "As a personal trainer focused on longevity and healthy eating, I stock up on protein-filled foods like frozen chicken and Greek yogurt at Costco.",
-      "url": "https://www.businessinsider.com/favorite-costco-healthy-foods-trainer-grocery-list-2026-4",
-      "urlToImage": "https://i.insider.com/69ce51b0c02a678bd7e47433?width=1200&format=jpeg",
-      "publishedAt": "2026-04-09T12:33:00Z",
-      "content": "As a 65-year-old fitness trainer, I prioritize consistency and simplicity over perfection in my workouts and diet. I avoid fads and strict rules, instead sticking to simple, easy-to-follow habits I c… [+4630 chars]",
-      "category": "health"
-    },
-    {
-      "source_name": "The Washington Post",
-      "source_id": "the-washington-post",
-      "author": "Christa Sgobba",
-      "title": "6 science-backed exercises that may help people with Parkinson’s - The Washington Post",
-      "description": "Exercise may offer a benefit that pills, tablets and patches can’t replicate.",
-      "url": "https://www.washingtonpost.com/wellness/2026/04/09/parkinsons-exercise/",
-      "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://cloudfront-us-east-1.images.arcpublishing.com/wapo/RZOOJCYNK42UA6WR5FSDDDT3E4.jpg&w=1440",
-      "publishedAt": "2026-04-09T12:01:59Z",
-      "content": "While medications can help manage the symptoms of Parkinsons disease, theres a natural remedy that can play a big role, too: movement.\r\nExercise should always be part of the prescription for Parkinso… [+120 chars]",
-      "category": "health"
-    },
-    {
-      "source_name": "SciTechDaily",
-      "source_id": null,
-      "author": null,
-      "title": "Why Some People Reach 100: New Study Reveals Key Biological Differences - SciTechDaily",
-      "description": "Centenarians appear to age differently at the molecular level, maintaining unexpectedly “younger” biological signatures in key systems.",
-      "url": "https://scitechdaily.com/why-some-people-reach-100-new-study-reveals-key-biological-differences/",
-      "urlToImage": "https://scitechdaily.com/images/Glowing-Human-Stars-Longevity.jpg",
-      "publishedAt": "2026-04-09T11:56:15Z",
-      "content": "Scientists studying Swiss centenarians discovered that some of their blood protein patterns resemble those of much younger individuals, hinting that key biological aging processes may slow rather tha… [+5874 chars]",
-      "category": "health"
-    },
-    {
-      "source_name": "Discoverwildlife.com",
-      "source_id": null,
-      "author": "Will Newton",
-      "title": "500-million-year-old clawed predator found in Utah desert forces scientists to rethink origin of spiders - BBC Wildlife Magazine",
-      "description": "Named after French explorer Jacques Cousteau, Megachelicerax cousteaui is the oldest of its kind ever found, not to mention one of the strangest…",
-      "url": "https://www.discoverwildlife.com/prehistoric-life/megachelicerax-cousteaui",
-      "urlToImage": "https://c02.purpledshub.com/uploads/sites/62/2026/04/Megachelicerax-cousteaui-2.jpeg?w=1200",
-      "publishedAt": "2026-04-09T11:49:17Z",
-      "content": "More than 40 years after it was discovered in a desert in western Utah, an unassuming fossil has been re-examined and identified as a brand-new species of chelicerate - the arthropod group that inclu… [+4080 chars]",
-      "category": "science"
-    },
-    {
-      "source_name": "STAT",
-      "source_id": null,
-      "author": "David S. Ludwig",
-      "title": "Tastiness is not why people overeat - statnews.com",
-      "description": "“We can’t afford another sweeping restructuring of the food supply based on imprecise interventions and uncertain science,” writes David L. Ludwig.",
-      "url": "https://www.statnews.com/2026/04/09/tastiness-overeating-obesity-ultra-processed-food-research/",
-      "urlToImage": "https://www.statnews.com/wp-content/uploads/2026/04/AdobeStock_146055652-1024x576.jpeg",
-      "publishedAt": "2026-04-09T11:02:43Z",
-      "content": "Betcha cant eat just one! \r\nThis slogan for Lays potato chips seemed endearing in mid-20th-century America, before the rise of the obesity epidemic. Looking back from today, it foreshadowed a food in… [+5363 chars]",
-      "category": "health"
-    },
-    {
-      "source_name": "HuffPost",
-      "source_id": null,
-      "author": null,
-      "title": "Here's What It Means If Your Socks Leave Marks On Your Legs — And When To Be Concerned - HuffPost",
-      "description": "Many people experience indents on their legs after wearing socks all day long — but is it normal?",
-      "url": "https://www.huffpost.com/entry/sock-lines-indentations-normal-health_l_69d504ade4b06b69686cac88",
-      "urlToImage": "https://img.huffingtonpost.com/asset/69d6d684140000cad486d9de.jpg?cache=8QEtec0lAv&ops=500_281%2Cscalefit_1200_630",
-      "publishedAt": "2026-04-09T11:00:18Z",
-      "content": "Sock marks commonly show up on peoples ankles and legs after wearing the garment all day long, or even after several hours. Most people dont think much of these indentations but the seemingly-innocuo… [+6051 chars]",
-      "category": "health"
-    },
-    {
-      "source_name": "IFLScience",
-      "source_id": null,
-      "author": "Dr. Alfredo Carpineti",
-      "title": "A 289-Million-Year-Old Mummified Reptile From An Oklahoma Cave Shows How We Breathe The Way We Do - IFLScience",
-      "description": "Every breath you take, every move you make, you should thank Captorhinus aguti.",
-      "url": "https://www.iflscience.com/a-289-million-year-old-mummified-reptile-from-an-oklahoma-cave-shows-how-we-breathe-the-way-we-do-83125",
-      "urlToImage": "https://assets.iflscience.com/assets/articleNo/83125/aImg/89948/captorhinus-meta.jpg",
-      "publishedAt": "2026-04-09T08:59:45Z",
-      "content": "Scientists have discovered the remains of a tiny, mummified reptile in an Oklahoma cave. The species is Captorhinus aguti, a small lizard-like animal that lived in the Permian period, dying 289 milli… [+2626 chars]",
-      "category": "science"
-    },
-    {
       "source_name": "Thegospelcoalition.org",
       "source_id": null,
       "author": "Joe Carter",
@@ -617,42 +545,6 @@
       "publishedAt": "2026-04-09T04:02:00Z",
       "content": "Most Christians would likely struggle if, out of the blue, someone asked them to share a message about Easter Sunday. But Victor Glover was put on the spot while 250,000 miles from home and with the … [+6359 chars]",
       "category": "science"
-    },
-    {
-      "source_name": "Phys.Org",
-      "source_id": null,
-      "author": "Phys.org",
-      "title": "What if dark matter came in two states? - Phys.org",
-      "description": null,
-      "url": "https://phys.org/news/2026-04-dark-states.html",
-      "urlToImage": null,
-      "publishedAt": "2026-04-09T04:00:01Z",
-      "content": null,
-      "category": "science"
-    },
-    {
-      "source_name": "Snopes.com",
-      "source_id": null,
-      "author": "Emery Winter",
-      "title": "Artemis II moon images: Separating fact from science fiction - Snopes",
-      "description": "",
-      "url": "https://www.snopes.com//news/2026/04/08/artemis-ii-moon-photos/",
-      "urlToImage": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2026/04/artemis_moon_fact_and_fiction_feature.png",
-      "publishedAt": "2026-04-08T23:53:52Z",
-      "content": "<ul><li>Astronauts on NASA's Artemis II mission circled the moon on April 6, 2026, allowing them to take photos of the moon's far side, which never faces the earth. </li><li>NASA released photos from… [+7336 chars]",
-      "category": "science"
-    },
-    {
-      "source_name": "KUER 90.1",
-      "source_id": null,
-      "author": "Sean Higgins",
-      "title": "Measles outbreak spreads in Utah, hitting people without the vaccine - KUER",
-      "description": "What started as a small outbreak of measles along the Utah-Arizona border has spread to every corner of the Beehive State.",
-      "url": "https://www.kuer.org/health/2026-04-08/measles-outbreak-spreads-in-utah-hitting-people-without-the-vaccine",
-      "urlToImage": "https://npr.brightspotcdn.com/dims4/default/6a27cdd/2147483647/strip/true/crop/4032x2117+0+454/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fcd%2F20%2F194fc06a4f04a0fcf1d194d78cd7%2Fredmed-u-clinic-measles-higgins.jpeg",
-      "publishedAt": "2026-04-08T23:21:00Z",
-      "content": "Utahs measles outbreak started in a remote area, but is now spreading across the state.\r\nAs of the most recent update\r\n from the Utah Department of Health and Human Services, there have now been 583 … [+4556 chars]",
-      "category": "general"
     }
   ]
 }
