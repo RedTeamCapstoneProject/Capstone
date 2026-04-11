@@ -6570,6 +6570,50 @@
           return data[0] ?? null;
         return data;
       }
+      function toCleanList(values) {
+        if (!Array.isArray(values))
+          return [];
+        return values.map((value) => value?.trim()).filter((value) => Boolean(value));
+      }
+      function renderArticleMeta(item) {
+        const footer = document.querySelector("#main article.post footer");
+        if (!footer)
+          return;
+        const sourceNames = toCleanList(item.source_names);
+        const authors = toCleanList(item.authors);
+        const urls = toCleanList(item.urls);
+        footer.innerHTML = "";
+        const createRow = (label, content) => {
+          const paragraph = document.createElement("p");
+          const strong = document.createElement("strong");
+          strong.textContent = `${label}: `;
+          paragraph.appendChild(strong);
+          if (typeof content === "string") {
+            paragraph.append(content);
+          } else {
+            paragraph.appendChild(content);
+          }
+          footer.appendChild(paragraph);
+        };
+        createRow("Sources", sourceNames.length > 0 ? sourceNames.join(", ") : "Not available");
+        createRow("Authors", authors.length > 0 ? authors.join(", ") : "Not available");
+        if (urls.length > 0) {
+          const list = document.createElement("ul");
+          urls.forEach((url) => {
+            const itemElement = document.createElement("li");
+            const link = document.createElement("a");
+            link.href = url;
+            link.textContent = url;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            itemElement.appendChild(link);
+            list.appendChild(itemElement);
+          });
+          createRow("URLs", list);
+        } else {
+          createRow("URLs", "Not available");
+        }
+      }
       async function hydrateSingleSummaryPage() {
         if (!document.body.classList.contains("single"))
           return false;
@@ -6610,6 +6654,7 @@
             image.src = resolveImageSource(rawImage);
             image.alt = title;
           }
+          renderArticleMeta(item);
         } catch {
         }
         return true;
