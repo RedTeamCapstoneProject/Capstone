@@ -211,7 +211,7 @@ def run_fetch_job(api_key: str, output_dir: str = "outputJSONs/newsAPI"):
 
 def start_midnight_scheduler(api_key: str, output_dir: str = "outputJSONs/newsAPI"):
 
-    schedule.every().day.at("00:00").do(run_fetch_job, api_key, output_dir)
+    schedule.every().day.at("11:25").do(run_fetch_job, api_key, output_dir)
     
     
     while True:
