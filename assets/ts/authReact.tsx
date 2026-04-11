@@ -184,10 +184,49 @@ interface StoredUser {
   preferences?: string[];
 }
 
+function parseUserId(value: unknown): number | null {
+  const parsed =
+    typeof value === "number"
+      ? value
+      : typeof value === "string"
+      ? Number.parseInt(value, 10)
+      : Number.NaN;
+
+  if (!Number.isInteger(parsed) || parsed <= 0) {
+    return null;
+  }
+
+  return parsed;
+}
+
 function getStoredUser(): StoredUser | null {
   try {
     const raw = localStorage.getItem("loggedInUser");
-    return raw ? (JSON.parse(raw) as StoredUser) : null;
+    if (!raw) {
+      return null;
+    }
+
+    const parsed = JSON.parse(raw) as {
+      id?: unknown;
+      email?: unknown;
+      preferences?: unknown;
+    };
+
+    const id = parseUserId(parsed.id);
+    const email = typeof parsed.email === "string" ? parsed.email : "";
+
+    if (!id || !email) {
+      localStorage.removeItem("loggedInUser");
+      return null;
+    }
+
+    return {
+      id,
+      email,
+      preferences: Array.isArray(parsed.preferences)
+        ? parsed.preferences.filter((item): item is string => typeof item === "string")
+        : undefined,
+    };
   } catch {
     return null;
   }
@@ -253,10 +292,16 @@ function LoginForm() {
       const result = (await response.json()) as AuthResponse;
 
       if (response.ok && result.user?.email) {
+        const parsedUserId = parseUserId(result.user.id);
+        if (!parsedUserId) {
+          showToast("Login response is missing a valid user id.", "error");
+          return;
+        }
+
         const serverPreferences = Array.isArray(result.user.preferences)
           ? result.user.preferences.filter((item): item is string => typeof item === "string")
           : [];
-        setStoredUser({ id: result.user.id, email: result.user.email, preferences: serverPreferences });
+        setStoredUser({ id: parsedUserId, email: result.user.email, preferences: serverPreferences });
         localStorage.setItem("newsFilters", JSON.stringify(filtersFromPreferences(serverPreferences)));
         syncHeaderIcon();
         showToast(`Welcome back, ${result.user.email}!`, "success");
@@ -711,11 +756,17 @@ function PreferencesPopup({
       return;
     }
 
+    const parsedUserId = parseUserId(user.id);
+    if (!parsedUserId) {
+      showToast("Please log out and log back in before saving preferences.", "error");
+      return;
+    }
+
     const selectedPreferences = preferencesFromFilters(filters);
     setSubmitting(true);
 
     try {
-      const response = await postPreferences(apiBaseUrl, user.id, selectedPreferences);
+      const response = await postPreferences(apiBaseUrl, parsedUserId, selectedPreferences);
       const result = (await response.json()) as AuthResponse;
 
       if (!response.ok || !result.user) {
