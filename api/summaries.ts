@@ -9,6 +9,7 @@ const pool = new Pool({
 });
 
 type SummaryRow = {
+  id: number;
   ai_title: string | null;
   ai_description: string | null;
   url_to_image: string | null;
@@ -29,7 +30,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     const id = Number.parseInt(rawId, 10);
 
     const byIdResult = await pool.query<SummaryRow>(
-      `SELECT ai_title, ai_description, url_to_image, summary
+      `SELECT id, ai_title, ai_description, url_to_image, summary
        FROM summary
        WHERE id = $1`,
       [id]
@@ -69,7 +70,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
   const whereSql = whereClauses.length > 0 ? `WHERE ${whereClauses.join(" AND ")}` : "";
 
   const query = `
-    SELECT ai_title, ai_description, url_to_image, summary
+    SELECT id, ai_title, ai_description, url_to_image, summary
     FROM summary
     ${whereSql}
     ORDER BY created_at DESC, id DESC

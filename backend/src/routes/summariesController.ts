@@ -4,6 +4,7 @@ import pool from "../database";
 const router = Router();
 
 type SummaryRow = {
+  id: number;
   ai_title: string | null;
   ai_description: string | null;
   url_to_image: string | null;
@@ -18,6 +19,20 @@ function parsePositiveInt(value: string | undefined, fallback: number): number {
 }
 
 router.get("/", async (req: Request, res: Response) => {
+  const rawId = req.query.id as string | undefined;
+  const id = rawId ? Number.parseInt(rawId, 10) : Number.NaN;
+
+  if (Number.isFinite(id) && id > 0) {
+    const byIdResult = await pool.query<SummaryRow>(
+      `SELECT id, ai_title, ai_description, url_to_image, summary
+       FROM summary
+       WHERE id = $1`,
+      [id]
+    );
+
+    return res.status(200).json({ data: byIdResult.rows[0] });
+  }
+
   const limit = Math.min(parsePositiveInt(req.query.limit as string | undefined, 10), 50);
   const offset = Math.max(parsePositiveInt(req.query.offset as string | undefined, 0), 0);
   const topic = (req.query.topic as string | undefined)?.trim();
@@ -44,7 +59,7 @@ router.get("/", async (req: Request, res: Response) => {
   const whereSql = whereClauses.length > 0 ? `WHERE ${whereClauses.join(" AND ")}` : "";
 
   const query = `
-    SELECT ai_title, ai_description, url_to_image, summary
+    SELECT id, ai_title, ai_description, url_to_image, summary
     FROM summary
     ${whereSql}
     ORDER BY created_at DESC, id DESC
@@ -73,7 +88,7 @@ router.get("/:id", async (req: Request, res: Response) => {
   const id = Number.parseInt(normalizedId, 10);
 
   const result = await pool.query<SummaryRow>(
-    `SELECT ai_title, ai_description, url_to_image, summary
+    `SELECT id, ai_title, ai_description, url_to_image, summary
      FROM summary
      WHERE id = $1`,
     [id]
