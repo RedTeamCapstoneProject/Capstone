@@ -57,12 +57,12 @@ export default async (req: VercelRequest, res: VercelResponse) => {
 
   if (topic) {
     params.push(topic);
-    whereClauses.push(`topic = $${params.length}`);
+    whereClauses.push(`LOWER(TRIM(topic)) = LOWER(TRIM($${params.length}::text))`);
   }
 
   if (category) {
     params.push(category);
-    whereClauses.push(`category = $${params.length}`);
+    whereClauses.push(`LOWER(TRIM(category)) = LOWER(TRIM($${params.length}::text))`);
   }
 
   params.push(limit);
