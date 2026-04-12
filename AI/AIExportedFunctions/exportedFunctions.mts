@@ -1,4 +1,4 @@
-import Groq from "groq-sdk";
+//import Groq from "groq-sdk";
 import { config } from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -6,6 +6,8 @@ import fs, { write } from 'fs';
 import { exec } from 'child_process';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { time } from "console";
+import { Groq } from "groq-sdk";
+
 
 //this is how the news articles are formated with category and topic as an object
 //often used in an array like this: newsArticle[]

@@ -260,7 +260,7 @@ export async function run() {
                 console.log("finished processing batch 1, running db script and waiting 5 minutes");
                 runDataImport()
                 //await new Promise(resolve => setTimeout(resolve, 10000));
-                await new Promise(resolve => setTimeout(resolve, 200000)); // 300,000ms = 5 minutes
+                await new Promise(resolve => setTimeout(resolve, 200000)); // 200,000ms 
 
             }
             
@@ -279,7 +279,7 @@ export async function run() {
             }finally{
                 console.log("finished processing batch 2, running db script and waiting 5 minutes");
                 runDataImport()
-                await new Promise(resolve => setTimeout(resolve, 200000)); // 300,000ms = 5 minutes
+                await new Promise(resolve => setTimeout(resolve, 200000)); // 200,000ms 
 
             }
            
@@ -300,6 +300,7 @@ export async function run() {
                 //await new Promise(resolve => setTimeout(resolve, 300000)); // 300,000ms = 5 minutes
 
             }
+                
         
            
         
@@ -313,7 +314,7 @@ export async function run() {
             //fs.writeFileSync('outputJSONs/newsAPI/trending_news_100_200.json','');
             //fs.writeFileSync('outputJSONs/newsAPI/trending_news_200_300.json','');
             fs.writeFileSync('AI/Grouping/topicList.csv', '');
-            await new Promise(resolve => setTimeout(resolve, 15000)); // 300,000ms = 5 minutes
+            await new Promise(resolve => setTimeout(resolve, 15000)); // 15,000ms 
             await runSummarization()
     }
 }

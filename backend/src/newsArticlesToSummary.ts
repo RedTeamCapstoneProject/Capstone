@@ -101,6 +101,7 @@ async function importSummaryManager(): Promise<
 
 
 
+
 export async function fetchNewsArticlesAndSummarize(): Promise<{
 	rowCount: number;
 	//rowsAsCellObjects: RowAsCellObjects[];
@@ -160,8 +161,6 @@ export async function fetchNewsArticlesAndSummarize(): Promise<{
 }
 
 /*
-if (process.env.TRIGGER_RUN === "true") {
-    console.log("Process triggered by PowerShell. Starting fetch and summarize...");
     fetchNewsArticlesAndSummarize()
         .then(() => {
             console.log("Success: Summary Pipeline Finished.");
@@ -171,5 +170,4 @@ if (process.env.TRIGGER_RUN === "true") {
             console.error("Critical Failure in Summary Pipeline:", err);
             process.exit(1);
         });
-}
 		*/
