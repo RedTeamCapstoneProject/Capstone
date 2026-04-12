@@ -38,6 +38,8 @@ interface SummaryRow {
   category?: string;
   topic?: string;
   summary: string;
+  "5ws"?: string | null;
+  likeIm5?: string | null;
 }
 
 async function tempreadJSON(filePath: string): Promise<SummaryRow[]> {
@@ -92,8 +94,8 @@ export async function summaryJsonToDB(
     const result = await pool.query(
       `INSERT INTO summary
         (source_names, authors, ai_title, ai_description, urls,
-         url_to_image, category, topic, summary)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)`,
+         url_to_image, category, topic, summary, "5ws", "likeIm5")
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)`,
       [
         summary.source_names,
         summary.authors,
@@ -104,6 +106,8 @@ export async function summaryJsonToDB(
         summary.category ?? "unknown",
         summary.topic ?? "unknown",
         summary.summary,
+        summary["5ws"] ?? null,
+        summary.likeIm5 ?? null,
       ]
     );
 
