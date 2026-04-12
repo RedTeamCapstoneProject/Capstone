@@ -310,9 +310,9 @@ export async function run() {
     }finally {
             console.log("articles written succesfully")
             console.log("deleting the jsons and topic csv to reset...")
-            //fs.writeFileSync('outputJSONs/newsAPI/trending_news_0_100.json', '');
-            //fs.writeFileSync('outputJSONs/newsAPI/trending_news_100_200.json','');
-            //fs.writeFileSync('outputJSONs/newsAPI/trending_news_200_300.json','');
+            fs.writeFileSync('outputJSONs/newsAPI/trending_news_0_100.json', '');
+            fs.writeFileSync('outputJSONs/newsAPI/trending_news_100_200.json','');
+            fs.writeFileSync('outputJSONs/newsAPI/trending_news_200_300.json','');
             fs.writeFileSync('AI/Grouping/topicList.csv', '');
             await new Promise(resolve => setTimeout(resolve, 15000)); // 15,000ms 
             await runSummarization()
