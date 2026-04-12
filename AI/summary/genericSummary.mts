@@ -51,6 +51,8 @@ interface summarizedArticle{
     category: string,
     topic:string,
     summary:string,
+    "5ws"?: string | null;
+    likeIm5?: string | null;
 }
 
 
@@ -91,7 +93,9 @@ export async function summaryManager(articleObjArray: newsArticle[],numberOfTopi
     var summarizedContent:string= await summarizeContent(contentArray,descriptionArray,titleArray)
     var summarizedDescription:string = await summarizeDescription(descriptionArray)
     var summarizedTitle:string = await summarizeTitle(titleArray)
-    var completedObject = await constructJSON(articleObjArray,summarizedContent,summarizedDescription,summarizedTitle)
+    var likeImfive:string = await likeIm5(articleObjArray)
+    var fivews:string = await fiveWs(articleObjArray)
+    var completedObject = await constructJSON(articleObjArray,summarizedContent,summarizedDescription,summarizedTitle,likeImfive,fivews)
     finalSummaryDatabase.push(completedObject);
     console.log(`Progress: ${finalSummaryDatabase.length} / ${numberOfTopics}`);
 
@@ -206,10 +210,72 @@ async function summarizeTitle(titleArray: Array<string>){
     return response
 }
 
+
+
+async function likeIm5(newsArray: newsArticle[]){
+
+     const sysPrompt = `
+            You are a master storyteller for children. Your goal is to explain the "Big News" so a five-year-old understands not just what is happening, but who is involved and why it matters.
+
+            INPUT DATA: 
+            ${JSON.stringify(newsArray)}
+
+            TASK:
+            1. **The Story:** Explain the main events using a "Once upon a time" or "Imagine this" narrative style. 
+            2. **The Analogy:** Use a high-stakes but relatable playground or school analogy.
+            3. **The 'Who':** You MUST mention at least 2-3 specific people or teams from the input data but give them friendly labels (e.g., "The New York Jets team").
+            4. **The Big Why:** Explain the goal (winning, fixing a problem, or helping others).
+
+            STRICT RULES:
+            - **NO JARGON:** Replace "Draft Picks" with "Chances to pick the best friends" or "Golden Tickets."
+            - **BE COMPLETE:** Don't just explain the concept of a Draft; explain *this specific* Draft where teams like the Jets and Cowboys are trying to get better.
+            - **LENGTH:** 60-90 words.
+            - **NO BULLETS:** One cohesive, warm paragraph.
+            `;
+                        
+    var response = await callAI(sysPrompt)
+    
+    return response
+}
+
+
+async function fiveWs(newsArray: newsArticle[]){
+
+     const sysPrompt = `
+            You are a Senior News Intelligence Analyst. Your goal is to provide a definitive "SITREP" (Situation Report) by synthesizing input data with confirmed contextual facts.
+
+            INPUT DATA: 
+            ${JSON.stringify(newsArray)}
+
+            TASK:
+            Extract the "Five Ws." You must cross-reference the input with your internal knowledge of the current year (2026) to ensure completeness. For example, if "NFL Draft" is mentioned, you know the "Why" is the annual recruitment of college athletes.
+
+            FORMATTING RULES:
+            Who: [Primary entities/stakeholders. Be specific: name the key teams/people.]
+            What: [The central action or event. Use a punchy, informative summary.]
+            When: [The specific date or window. Use current knowledge for 2026 events.]
+            Where: [Physical location or platform. Include city/venue if known globally.]
+            Why: [The fundamental purpose or goal. Explain the "so what" of the event.]
+
+            STRICT GUIDELINES:
+            1. INFERENCE IS ALLOWED: Use context to fill gaps. If the text says "Draft in Pittsburgh," the Where is "Pittsburgh, Pennsylvania." 
+            2. NO GENERIC ANSWERS: Avoid "Not specified" unless the information is truly unknowable. Use logical deduction based on the topic.
+            3. MAX 25 WORDS per "W": Be detailed but efficient.
+            4. TONE: Objective, professional, and definitive.
+            `;
+            
+    var response = await callAI(sysPrompt)
+    
+    return response
+}
+
+
+
+
 //takes in the summarized content and descriptions and builds the summarizedArticle structure
 //uses articleArray and the summized things to create the object summarizedArticle
 //returns the object
-async function constructJSON(articleObjArray:newsArticle[],summarizedContent:string,summarizedDescription:string,summarizedTitle:string){
+async function constructJSON(articleObjArray:newsArticle[],summarizedContent:string,summarizedDescription:string,summarizedTitle:string,likeIfive:string,fivews:string){
    //console.log("\nTHIS IS SUMMARY:")
     //console.log(summarizedContent)
     //console.log("\nTHIS IS description:")
@@ -238,6 +304,9 @@ async function constructJSON(articleObjArray:newsArticle[],summarizedContent:str
         category: articleObjArray[0].category ?? "unknown",
         topic:articleObjArray[0].topic ?? "unknown",
         summary:summarizedContent,
+        "5ws":  fivews,
+        likeIm5:likeIfive
+
     }
 
     return summarizedArticle
@@ -245,8 +314,9 @@ async function constructJSON(articleObjArray:newsArticle[],summarizedContent:str
 }
 
 
-//write the object to a json
 
+
+//write the object to a json
 async function writeSummarizedJSON(finalSummarizedList:summarizedArticle[]){
 const filePath = "outputJSONs/summarizedJSON/summarizedTopic.json";
     try{
