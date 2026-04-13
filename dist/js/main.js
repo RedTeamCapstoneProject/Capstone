@@ -6754,15 +6754,30 @@ ${bullets}`;
           const subtitle = document.querySelector("#main article.post header .title p");
           if (subtitle)
             subtitle.textContent = description;
-          const bodyParagraphs = Array.from(document.querySelectorAll("#main article.post > p"));
-          if (bodyParagraphs[0]) {
-            bodyParagraphs[0].textContent = formatSummaryForDisplay(summaryText);
-            bodyParagraphs[0].style.whiteSpace = "pre-line";
+          const generalTabPanel = document.querySelector("#tab-general");
+          const bodyParagraph = generalTabPanel?.querySelector("p");
+          if (bodyParagraph) {
+            bodyParagraph.textContent = formatSummaryForDisplay(summaryText);
+            bodyParagraph.style.whiteSpace = "pre-line";
           }
-          bodyParagraphs.slice(1).forEach((paragraph) => {
-            paragraph.textContent = "";
-            paragraph.style.display = "none";
-          });
+          const eli5Panel = document.querySelector("#tab-eli5");
+          if (eli5Panel) {
+            const eli5Text = item.likeIm5?.trim();
+            eli5Panel.innerHTML = "";
+            const eli5P = document.createElement("p");
+            eli5P.textContent = eli5Text ? formatSummaryForDisplay(eli5Text) : "Like I'm Five summary not available.";
+            eli5P.style.whiteSpace = "pre-line";
+            eli5Panel.appendChild(eli5P);
+          }
+          const fiveWsPanel = document.querySelector("#tab-fivews");
+          if (fiveWsPanel) {
+            const fiveWsText = item["5ws"]?.trim();
+            fiveWsPanel.innerHTML = "";
+            const fiveWsP = document.createElement("p");
+            fiveWsP.textContent = fiveWsText ? formatSummaryForDisplay(fiveWsText) : "Five W's summary not available.";
+            fiveWsP.style.whiteSpace = "pre-line";
+            fiveWsPanel.appendChild(fiveWsP);
+          }
           const image = document.querySelector("#main article.post .image.featured img");
           const rawImage = item.url_to_image?.trim();
           if (image && rawImage) {

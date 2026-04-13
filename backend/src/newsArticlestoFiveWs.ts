@@ -25,7 +25,6 @@ type NewsArticleDbRow = {
 };
 
 function toRowCellObjects(row: Record<string, unknown>): RowAsCellObjects {
-  // Convert one SQL row into the requested "array of cell objects" format.
   return Object.entries(row).map(([column, value]) => ({ column, value }));
 }
 
@@ -48,7 +47,6 @@ function toStringWithFallback(value: unknown, fallback = ""): string {
 }
 
 function rowCellsToNewsArticle(cells: RowAsCellObjects): NewsArticle {
-  // Rehydrate the cell-object row back into the shape expected by summaryManager.
   const publishedRaw = getCellValue(cells, "published_at");
   const publishedAt =
     publishedRaw instanceof Date
@@ -134,7 +132,6 @@ async function fetchNewsArticlesAndUserSummarize(
     toRowCellObjects(row as unknown as Record<string, unknown>)
   );
 
-  // Map rows to article objects and group by topic for per-topic summarization.
   const articleObjArray = rowsAsCellObjects.map(rowCellsToNewsArticle);
 
   const byTopic = new Map<string, NewsArticle[]>();

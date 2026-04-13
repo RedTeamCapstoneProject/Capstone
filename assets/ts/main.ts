@@ -9,6 +9,8 @@ type SummaryItem = {
   ai_description: string | null;
   url_to_image: string | null;
   summary: string | null;
+  likeIm5?: string | null;
+  "5ws"?: string | null;
   source_names?: string[] | null;
   authors?: string[] | null;
   urls?: string[] | null;
@@ -274,15 +276,32 @@ async function hydrateSingleSummaryPage(): Promise<boolean> {
     const subtitle = document.querySelector<HTMLParagraphElement>("#main article.post header .title p");
     if (subtitle) subtitle.textContent = description;
 
-    const bodyParagraphs = Array.from(document.querySelectorAll<HTMLParagraphElement>("#main article.post > p"));
-    if (bodyParagraphs[0]) {
-      bodyParagraphs[0].textContent = formatSummaryForDisplay(summaryText);
-      bodyParagraphs[0].style.whiteSpace = "pre-line";
+    const generalTabPanel = document.querySelector<HTMLElement>("#tab-general");
+    const bodyParagraph = generalTabPanel?.querySelector<HTMLParagraphElement>("p");
+    if (bodyParagraph) {
+      bodyParagraph.textContent = formatSummaryForDisplay(summaryText);
+      bodyParagraph.style.whiteSpace = "pre-line";
     }
-    bodyParagraphs.slice(1).forEach((paragraph) => {
-      paragraph.textContent = "";
-      paragraph.style.display = "none";
-    });
+
+    const eli5Panel = document.querySelector<HTMLElement>("#tab-eli5");
+    if (eli5Panel) {
+      const eli5Text = item.likeIm5?.trim();
+      eli5Panel.innerHTML = "";
+      const eli5P = document.createElement("p");
+      eli5P.textContent = eli5Text ? formatSummaryForDisplay(eli5Text) : "Like I'm Five summary not available.";
+      eli5P.style.whiteSpace = "pre-line";
+      eli5Panel.appendChild(eli5P);
+    }
+
+    const fiveWsPanel = document.querySelector<HTMLElement>("#tab-fivews");
+    if (fiveWsPanel) {
+      const fiveWsText = item["5ws"]?.trim();
+      fiveWsPanel.innerHTML = "";
+      const fiveWsP = document.createElement("p");
+      fiveWsP.textContent = fiveWsText ? formatSummaryForDisplay(fiveWsText) : "Five W's summary not available.";
+      fiveWsP.style.whiteSpace = "pre-line";
+      fiveWsPanel.appendChild(fiveWsP);
+    }
 
     const image = document.querySelector<HTMLImageElement>("#main article.post .image.featured img");
     const rawImage = item.url_to_image?.trim();
@@ -293,7 +312,6 @@ async function hydrateSingleSummaryPage(): Promise<boolean> {
 
     renderArticleMeta(item);
   } catch {
-    // Keep static fallback content if API request fails.
   }
 
   return true;
@@ -444,7 +462,6 @@ async function hydrateSummaryPosts(): Promise<void> {
       }
     });
   } catch {
-    // Keep static fallback content if API request fails.
   }
 }
 
@@ -460,7 +477,6 @@ async function hydrateSummaryPosts(): Promise<void> {
   const $sidebar = $("#sidebar");
   const $main = $("#main");
 
-  // Breakpoints
   breakpoints({
     xlarge: ["1281px", "1680px"],
     large: ["981px", "1280px"],
@@ -469,14 +485,12 @@ async function hydrateSummaryPosts(): Promise<void> {
     xsmall: [null as any, "480px"],
   });
 
-  // Play initial animations
   $window.on("load", () => {
     window.setTimeout(() => {
       $body.removeClass("is-preload");
     }, 100);
   });
 
-  // Menu
   $menu.appendTo($body).panel({
     delay: 500,
     hideOnClick: true,
@@ -488,13 +502,11 @@ async function hydrateSummaryPosts(): Promise<void> {
     visibleClass: "is-menu-visible",
   });
 
-  // Menu toggle
   $body.on("click", '[href="#menu"]', (event) => {
     event.preventDefault();
     $body.toggleClass("is-menu-visible");
   });
 
-  // Search (header)
   const $search = $("#search");
   const $search_input = $search.find("input");
 
@@ -517,7 +529,6 @@ async function hydrateSummaryPosts(): Promise<void> {
       }, 100);
     });
 
-  // Intro repositioning
   const $intro = $("#intro");
 
   breakpoints.on("<=large", () => {

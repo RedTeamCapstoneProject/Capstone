@@ -185,10 +185,8 @@
 							</footer>
 						</div>
 						<div class="article-tab-panel" id="tab-eli5">
-							<p>Explain Like I'm Five content goes here.</p>
 						</div>
 						<div class="article-tab-panel" id="tab-fivews">
-							<p>Five Ws content goes here.</p>
 						</div>
 						<div class="article-tab-panel" id="tab-chatbot">
 							<div class="chatbot-container">
@@ -220,6 +218,10 @@
 		<script src="js/auth-react.js?v=20260328b"></script>
 		<script>
 		(function() {
+			var style = document.createElement('style');
+			style.textContent = '.article-tab-panel { display: none; } .article-tab-panel.active { display: block; }';
+			document.head.appendChild(style);
+
 			var tabs = document.querySelectorAll('.article-tab');
 			var panels = document.querySelectorAll('.article-tab-panel');
 
