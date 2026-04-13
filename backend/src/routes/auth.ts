@@ -50,7 +50,6 @@ function normalizeUserId(input: unknown): number | null {
   return parsed;
 }
 
-// Create account with normalized email and hashed password.
 router.post("/signup", async (req: Request, res: Response) => {
   try {
     const { email, password } = req.body as {
@@ -92,7 +91,6 @@ router.post("/signup", async (req: Request, res: Response) => {
   }
 });
 
-// Authenticate user by email/password and return basic user payload.
 router.post("/login", async (req: Request, res: Response) => {
   try {
     const { email, password } = req.body as {
@@ -180,7 +178,6 @@ router.post("/preferences", async (req: Request, res: Response) => {
   }
 });
 
-// Issue and email a one-time reset token.
 router.post("/forgot-password", async (req: Request, res: Response) => {
   try {
     const { email } = req.body as { email?: string };
@@ -203,7 +200,6 @@ router.post("/forgot-password", async (req: Request, res: Response) => {
     }
 
     const resetToken = randomBytes(32).toString("hex");
-    // Persist a hash of the token, not the raw token.
     const resetTokenHash = await bcrypt.hash(resetToken, 10);
     const expiresAt = new Date(Date.now() + 3600000);
 
@@ -227,8 +223,6 @@ router.post("/forgot-password", async (req: Request, res: Response) => {
   }
 });
 
-// Validate reset token and replace the user's password hash.
-// Accepts either 'password' or 'newPassword' field names for compatibility with different clients.
 router.post("/reset-password", async (req: Request, res: Response) => {
   try {
     const { token, newPassword, password } = req.body as {
@@ -237,7 +231,6 @@ router.post("/reset-password", async (req: Request, res: Response) => {
       password?: string;
     };
 
-    // Accept either field name for compatibility.
     const submittedPassword = newPassword ?? password;
 
     if (!token || !submittedPassword) {
@@ -249,7 +242,6 @@ router.post("/reset-password", async (req: Request, res: Response) => {
       []
     );
 
-    // Find user by comparing submitted token against stored bcrypt hash.
     let validUser = null;
     for (const user of result.rows) {
       const isTokenValid = await bcrypt.compare(token, user.password_reset_token);

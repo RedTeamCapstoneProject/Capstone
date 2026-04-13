@@ -11,8 +11,6 @@ type AuthResponse = {
   };
 };
 
-// ── API helpers ─────────────────────────────────────────────────────────
-
 function getApiBaseUrl(): string {
   const fromWindow = (window as typeof window & { API_BASE_URL?: string }).API_BASE_URL;
   if (fromWindow) {
@@ -120,8 +118,6 @@ async function postPreferences(apiBaseUrl: string, userId: number, preferences: 
   return lastResponse as Response;
 }
 
-// ── Toast notification system ───────────────────────────────────────────
-
 type ToastType = "success" | "error" | "info";
 
 interface ToastData {
@@ -175,8 +171,6 @@ function ToastContainer() {
     </div>
   );
 }
-
-// ── Auth state (localStorage) ───────────────────────────────────────────
 
 interface StoredUser {
   id: number;
@@ -241,7 +235,6 @@ function setStoredUser(user: StoredUser | null) {
   window.dispatchEvent(new CustomEvent("auth-state-changed"));
 }
 
-// Swap the header account icon between user (logged out) and gear (logged in).
 function syncHeaderIcon() {
   const link = document.querySelector(
     "#header .main ul li > a.fa-user, #header .main ul li > a.fa-gear"
@@ -262,8 +255,6 @@ function syncHeaderIcon() {
     link.textContent = "Account";
   }
 }
-
-// ── Form components ─────────────────────────────────────────────────────
 
 function LoginForm() {
   const [email, setEmail] = useState("");
@@ -676,8 +667,6 @@ function ResetPasswordPage() {
   );
 }
 
-// ── Preferences popup ────────────────────────────────────────────────────
-
 const FILTER_CATEGORIES = [
   "Business",
   "Entertainment",
@@ -725,7 +714,7 @@ function loadSavedFilters(savedPreferences?: string[]): Record<FilterCategory, b
   try {
     const raw = localStorage.getItem("newsFilters");
     if (raw) return JSON.parse(raw) as Record<FilterCategory, boolean>;
-  } catch { /* ignore */ }
+  } catch {}
   return buildDefaultFilters();
 }
 
@@ -824,8 +813,6 @@ function PreferencesPopup({
   );
 }
 
-// ── Settings panel (shown when logged in) ───────────────────────────────
-
 function SettingsPanel() {
   const [user, setUser] = useState<StoredUser | null>(getStoredUser);
   const [showPrefs, setShowPrefs] = useState(false);
@@ -865,8 +852,6 @@ function SettingsPanel() {
     </div>
   );
 }
-
-// ── Mount everything ────────────────────────────────────────────────────
 
 function mountAuthUi() {
   const loginRootEl = document.getElementById("login-form-root");

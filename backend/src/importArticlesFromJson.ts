@@ -50,10 +50,6 @@ function resolveJsonFromFolder(folderPath: string, preferredFileName?: string): 
   return jsonFiles[0].fullPath;
 }
 
-/**
- * Reads a JSON file containing an array of news articles (NewsAPI format) and
- * inserts them into the news_articles table. Rows whose URL already exists are skipped.
-**/
 export async function importArticlesFromJson(filePath: string): Promise<number> {
   const resolvedPath = path.resolve(filePath);
   const articles: newsArticle[] = await tempreadJSON(resolvedPath);

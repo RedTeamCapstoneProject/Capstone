@@ -312,7 +312,6 @@ async function hydrateSingleSummaryPage(): Promise<boolean> {
 
     renderArticleMeta(item);
   } catch {
-    // Keep static fallback content if API request fails.
   }
 
   return true;
@@ -463,7 +462,6 @@ async function hydrateSummaryPosts(): Promise<void> {
       }
     });
   } catch {
-    // Keep static fallback content if API request fails.
   }
 }
 
@@ -479,7 +477,6 @@ async function hydrateSummaryPosts(): Promise<void> {
   const $sidebar = $("#sidebar");
   const $main = $("#main");
 
-  // Breakpoints
   breakpoints({
     xlarge: ["1281px", "1680px"],
     large: ["981px", "1280px"],
@@ -488,14 +485,12 @@ async function hydrateSummaryPosts(): Promise<void> {
     xsmall: [null as any, "480px"],
   });
 
-  // Play initial animations
   $window.on("load", () => {
     window.setTimeout(() => {
       $body.removeClass("is-preload");
     }, 100);
   });
 
-  // Menu
   $menu.appendTo($body).panel({
     delay: 500,
     hideOnClick: true,
@@ -507,13 +502,11 @@ async function hydrateSummaryPosts(): Promise<void> {
     visibleClass: "is-menu-visible",
   });
 
-  // Menu toggle
   $body.on("click", '[href="#menu"]', (event) => {
     event.preventDefault();
     $body.toggleClass("is-menu-visible");
   });
 
-  // Search (header)
   const $search = $("#search");
   const $search_input = $search.find("input");
 
@@ -536,7 +529,6 @@ async function hydrateSummaryPosts(): Promise<void> {
       }, 100);
     });
 
-  // Intro repositioning
   const $intro = $("#intro");
 
   breakpoints.on("<=large", () => {

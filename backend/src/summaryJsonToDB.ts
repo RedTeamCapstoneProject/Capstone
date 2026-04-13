@@ -6,27 +6,6 @@ import fs from "fs";
 const targetFile = path.resolve("outputJSONs/summarizedJSON/summarizedTopic.json");
 
 console.log(`checking for stuff at: ${targetFile}`);
-/*
-const watcher = chokidar.watch(targetFile, {
-    persistent: true,
-    ignoreInitial: true, //only run on new changes
-    awaitWriteFinish: {
-        stabilityThreshold: 10000, // wait 10 seconds after the last change to ensure file is closed/done 
-        pollInterval: 100
-    }
-});
-
-watcher.on('change', async (filePath) => {
-    console.log(`\n change detected in ${path.basename(filePath)}`);
-    try {
-        const inserted = await summaryJsonToDB(filePath);
-        console.log("added summary to DB")
-    } catch (err) {
-        console.error("Error :", err);
-    }
-});
-
-*/
 
 interface SummaryRow {
   source_names: string[];

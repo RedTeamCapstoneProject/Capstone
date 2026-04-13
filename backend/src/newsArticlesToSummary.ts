@@ -27,7 +27,6 @@ type NewsArticleDbRow = {
 };
 
 function toRowCellObjects(row: Record<string, unknown>): RowAsCellObjects {
-	// Convert one SQL row into the requested "array of cell objects" format.
 	return Object.entries(row).map(([column, value]) => ({ column, value }));
 }
 
@@ -50,7 +49,6 @@ function toStringWithFallback(value: unknown, fallback = ""): string {
 }
 
 function rowCellsToNewsArticle(cells: RowAsCellObjects): NewsArticle {
-	// Rehydrate the cell-object row back into the shape expected by summaryManager.
 	const publishedRaw = getCellValue(cells, "published_at");
 	const publishedAt =
 		publishedRaw instanceof Date
@@ -76,12 +74,10 @@ function rowCellsToNewsArticle(cells: RowAsCellObjects): NewsArticle {
 async function importSummaryManager(): Promise<
 	(articleObjArray: NewsArticle[],numberOfTopics:number) => Promise<void>
 > {
-	// Resolve the .mts summary module from backend/src at runtime.
 	const summaryModulePath = pathToFileURL(
 		path.resolve(__dirname, "../../AI/summary/genericSummary.mts")
 	).href;
 
-	// Use dynamic import to bridge CJS backend code with the ESM .mts module.
 	const dynamicImport = new Function(
 		"modulePath",
 		"return import(modulePath);"
@@ -104,9 +100,7 @@ async function importSummaryManager(): Promise<
 
 export async function fetchNewsArticlesAndSummarize(): Promise<{
 	rowCount: number;
-	//rowsAsCellObjects: RowAsCellObjects[];
 }> {
-	// Only pull articles whose topic appears 3 or more times in the table.
 	const query = `
 		SELECT
 			source_id,
@@ -136,7 +130,6 @@ export async function fetchNewsArticlesAndSummarize(): Promise<{
 		toRowCellObjects(row as unknown as Record<string, unknown>)
 	);
 
-	// Map rows to article objects and group by topic for per-topic summarization.
 	const articleObjArray = rowsAsCellObjects.map(rowCellsToNewsArticle);
 
 	const byTopic = new Map<string, NewsArticle[]>();
@@ -146,7 +139,6 @@ export async function fetchNewsArticlesAndSummarize(): Promise<{
 		byTopic.get(topic)!.push(article);
 	}
 	console.log("there are: ", byTopic.size, "topics that need to be summarized" )
-	// Call summaryManager once per qualifying topic group.
 	const summaryManager = await importSummaryManager();
 	for (const [topic, articles] of byTopic) {
 		console.log(`Summarizing topic "${topic}" (${articles.length} articles)`);
@@ -156,18 +148,5 @@ export async function fetchNewsArticlesAndSummarize(): Promise<{
 
 	return {
 		rowCount: result.rowCount ?? 0,
-		//rowsAsCellObjects,
 	};
 }
-
-/*
-    fetchNewsArticlesAndSummarize()
-        .then(() => {
-            console.log("Success: Summary Pipeline Finished.");
-            process.exit(0);
-        })
-        .catch((err) => {
-            console.error("Critical Failure in Summary Pipeline:", err);
-            process.exit(1);
-        });
-		*/
