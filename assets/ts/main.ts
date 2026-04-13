@@ -274,15 +274,12 @@ async function hydrateSingleSummaryPage(): Promise<boolean> {
     const subtitle = document.querySelector<HTMLParagraphElement>("#main article.post header .title p");
     if (subtitle) subtitle.textContent = description;
 
-    const bodyParagraphs = Array.from(document.querySelectorAll<HTMLParagraphElement>("#main article.post > p"));
-    if (bodyParagraphs[0]) {
-      bodyParagraphs[0].textContent = formatSummaryForDisplay(summaryText);
-      bodyParagraphs[0].style.whiteSpace = "pre-line";
+    const generalTabPanel = document.querySelector<HTMLElement>("#tab-general");
+    const bodyParagraph = generalTabPanel?.querySelector<HTMLParagraphElement>("p");
+    if (bodyParagraph) {
+      bodyParagraph.textContent = formatSummaryForDisplay(summaryText);
+      bodyParagraph.style.whiteSpace = "pre-line";
     }
-    bodyParagraphs.slice(1).forEach((paragraph) => {
-      paragraph.textContent = "";
-      paragraph.style.display = "none";
-    });
 
     const image = document.querySelector<HTMLImageElement>("#main article.post .image.featured img");
     const rawImage = item.url_to_image?.trim();
