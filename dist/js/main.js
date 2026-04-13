@@ -6568,6 +6568,17 @@
       }
       function getStoredUserPreferenceCategories() {
         try {
+          const rawNewsFilters = localStorage.getItem("newsFilters");
+          if (rawNewsFilters) {
+            const parsed = JSON.parse(rawNewsFilters);
+            const selectedFromFilters = Object.entries(parsed).filter(([, value]) => value === true).map(([key]) => key.trim().toLowerCase()).filter((key) => categories.has(key));
+            if (selectedFromFilters.length > 0) {
+              return Array.from(new Set(selectedFromFilters));
+            }
+          }
+        } catch {
+        }
+        try {
           const raw = localStorage.getItem("loggedInUser");
           if (!raw)
             return [];
