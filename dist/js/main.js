@@ -6557,6 +6557,26 @@
         "sports",
         "technology"
       ]);
+      function normalizeCategoryPreferences(values) {
+        if (!Array.isArray(values))
+          return [];
+        return Array.from(
+          new Set(
+            values.filter((value) => typeof value === "string").map((value) => value.trim().toLowerCase()).filter((value) => categories.has(value))
+          )
+        );
+      }
+      function getStoredUserPreferenceCategories() {
+        try {
+          const raw = localStorage.getItem("loggedInUser");
+          if (!raw)
+            return [];
+          const user = JSON.parse(raw);
+          return normalizeCategoryPreferences(user.preferences);
+        } catch {
+          return [];
+        }
+      }
       function resolveImageSource(rawImage) {
         const isDirectSource = rawImage.startsWith("data:") || rawImage.startsWith("http://") || rawImage.startsWith("https://") || rawImage.startsWith("//") || rawImage.startsWith("/");
         return isDirectSource ? rawImage : `data:image/jpeg;base64,${rawImage}`;
@@ -6751,8 +6771,13 @@ ${bullets}`;
           return;
         const selectedCategory = getCategoryFromUrl();
         const queryParams = new URLSearchParams({ limit: String(recordsNeeded) });
+        const preferredCategories = selectedCategory ? [] : getStoredUserPreferenceCategories();
         if (selectedCategory) {
           queryParams.set("category", selectedCategory);
+        } else if (preferredCategories.length === 1) {
+          queryParams.set("category", preferredCategories[0]);
+        } else if (preferredCategories.length > 1) {
+          queryParams.set("categories", preferredCategories.join(","));
         }
         try {
           const response = await fetch(`/api/summaries?${queryParams.toString()}`);
@@ -6837,6 +6862,9 @@ ${bullets}`;
       }
       (function($) {
         void hydrateSummaryPosts();
+        window.addEventListener("auth-state-changed", () => {
+          void hydrateSummaryPosts();
+        });
         const $window = $(window);
         const $body = $("body");
         const $menu = $("#menu");

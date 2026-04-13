@@ -4,6 +4,7 @@ import "./util"; // Load jQuery plugins
 
 type SummaryItem = {
   id: number | string;
+  category?: string | null;
   ai_title: string | null;
   ai_description: string | null;
   url_to_image: string | null;
@@ -54,6 +55,14 @@ function getStoredUserPreferenceCategories(): string[] {
   } catch {
     return [];
   }
+}
+
+function getNormalizedItemCategory(item: SummaryItem): string | null {
+  const rawCategory = item.category;
+  if (typeof rawCategory !== "string") return null;
+
+  const normalized = rawCategory.trim().toLowerCase();
+  return categories.has(normalized) ? normalized : null;
 }
 
 function resolveImageSource(rawImage: string): string {
@@ -288,12 +297,16 @@ async function hydrateSummaryPosts(): Promise<void> {
   if (recordsNeeded === 0) return;
 
   const selectedCategory = getCategoryFromUrl();
-  const queryParams = new URLSearchParams({ limit: String(recordsNeeded) });
   const preferredCategories = selectedCategory ? [] : getStoredUserPreferenceCategories();
+  const needsPreferenceFilter = !selectedCategory && preferredCategories.length > 0;
+  const fetchLimit = needsPreferenceFilter ? recordsNeeded * 3 : recordsNeeded;
+  const queryParams = new URLSearchParams({ limit: String(fetchLimit) });
 
   if (selectedCategory) {
     queryParams.set("category", selectedCategory);
-  } else if (preferredCategories.length > 0) {
+  } else if (preferredCategories.length === 1) {
+    queryParams.set("category", preferredCategories[0]);
+  } else if (preferredCategories.length > 1) {
     queryParams.set("categories", preferredCategories.join(","));
   }
 
@@ -303,8 +316,21 @@ async function hydrateSummaryPosts(): Promise<void> {
 
     const payload = (await response.json()) as { data?: SummaryItem[] };
     const summaries = payload.data ?? [];
+    const allowedCategories =
+      selectedCategory !== null
+        ? new Set([selectedCategory])
+        : preferredCategories.length > 0
+        ? new Set(preferredCategories)
+        : null;
+    const filteredSummaries =
+      allowedCategories === null
+        ? summaries
+        : summaries.filter((item) => {
+            const itemCategory = getNormalizedItemCategory(item);
+            return itemCategory !== null && allowedCategories.has(itemCategory);
+          });
 
-    summaries.slice(0, posts.length).forEach((item, index) => {
+    filteredSummaries.slice(0, posts.length).forEach((item, index) => {
       const post = posts[index];
       const title = item.ai_title?.trim() || "Untitled Summary";
       const description = item.ai_description?.trim() || "No description available.";
@@ -338,7 +364,7 @@ async function hydrateSummaryPosts(): Promise<void> {
     });
 
     miniPosts.forEach((miniPost, index) => {
-      const item = summaries[posts.length + index] ?? summaries[index];
+      const item = filteredSummaries[posts.length + index] ?? filteredSummaries[index];
       if (!item) return;
 
       const title = item.ai_title?.trim() || "Untitled Summary";
@@ -361,7 +387,8 @@ async function hydrateSummaryPosts(): Promise<void> {
     });
 
     sidebarPosts.forEach((sidebarPost, index) => {
-      const item = summaries[posts.length + miniPosts.length + index] ?? summaries[index];
+      const item =
+        filteredSummaries[posts.length + miniPosts.length + index] ?? filteredSummaries[index];
       if (!item) return;
 
       const title = item.ai_title?.trim() || "Untitled Summary";

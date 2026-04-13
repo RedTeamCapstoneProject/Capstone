@@ -5,6 +5,7 @@ const router = Router();
 
 type SummaryRow = {
   id: number;
+  category: string | null;
   ai_title: string | null;
   ai_description: string | null;
   url_to_image: string | null;
@@ -42,7 +43,7 @@ router.get("/", async (req: Request, res: Response) => {
 
   if (Number.isFinite(id) && id > 0) {
     const byIdResult = await pool.query<SummaryRow>(
-      `SELECT id, ai_title, ai_description, url_to_image, summary, "5ws", "likeIm5", source_names, authors, urls
+      `SELECT id, category, ai_title, ai_description, url_to_image, summary, "5ws", "likeIm5", source_names, authors, urls
        FROM summary
        WHERE id = $1`,
       [id]
@@ -81,7 +82,7 @@ router.get("/", async (req: Request, res: Response) => {
   const whereSql = whereClauses.length > 0 ? `WHERE ${whereClauses.join(" AND ")}` : "";
 
   const query = `
-    SELECT id, ai_title, ai_description, url_to_image, summary, "5ws", "likeIm5", source_names, authors, urls
+    SELECT id, category, ai_title, ai_description, url_to_image, summary, "5ws", "likeIm5", source_names, authors, urls
     FROM summary
     ${whereSql}
     ORDER BY created_at DESC, id DESC
@@ -111,7 +112,7 @@ router.get("/:id", async (req: Request, res: Response) => {
   const id = Number.parseInt(normalizedId, 10);
 
   const result = await pool.query<SummaryRow>(
-    `SELECT id, ai_title, ai_description, url_to_image, summary, "5ws", "likeIm5", source_names, authors, urls
+    `SELECT id, category, ai_title, ai_description, url_to_image, summary, "5ws", "likeIm5", source_names, authors, urls
      FROM summary
      WHERE id = $1`,
     [id]
