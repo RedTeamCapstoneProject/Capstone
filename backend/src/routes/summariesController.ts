@@ -23,6 +23,19 @@ function parsePositiveInt(value: string | undefined, fallback: number): number {
   return parsed;
 }
 
+function normalizeCategoryList(value: string | undefined): string[] {
+  if (!value) return [];
+
+  return Array.from(
+    new Set(
+      value
+        .split(",")
+        .map((item) => item.trim().toLowerCase())
+        .filter((item) => item.length > 0)
+    )
+  );
+}
+
 router.get("/", async (req: Request, res: Response) => {
   const rawId = req.query.id as string | undefined;
   const id = rawId ? Number.parseInt(rawId, 10) : Number.NaN;
@@ -42,9 +55,10 @@ router.get("/", async (req: Request, res: Response) => {
   const offset = Math.max(parsePositiveInt(req.query.offset as string | undefined, 0), 0);
   const topic = (req.query.topic as string | undefined)?.trim();
   const category = (req.query.category as string | undefined)?.trim();
+  const categories = normalizeCategoryList((req.query.categories as string | undefined)?.trim());
 
   const whereClauses: string[] = [];
-  const params: Array<string | number> = [];
+  const params: Array<string | number | string[]> = [];
 
   if (topic) {
     params.push(topic);
@@ -53,7 +67,10 @@ router.get("/", async (req: Request, res: Response) => {
 
   if (category) {
     params.push(category);
-    whereClauses.push(`category = $${params.length}`);
+    whereClauses.push(`LOWER(TRIM(category)) = LOWER(TRIM($${params.length}::text))`);
+  } else if (categories.length > 0) {
+    params.push(categories);
+    whereClauses.push(`LOWER(TRIM(category)) = ANY($${params.length}::text[])`);
   }
 
   params.push(limit);
@@ -83,6 +100,7 @@ router.get("/", async (req: Request, res: Response) => {
     filters: {
       topic: topic ?? null,
       category: category ?? null,
+      categories,
     },
   });
 });

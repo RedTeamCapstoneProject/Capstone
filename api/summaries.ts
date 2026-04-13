@@ -28,6 +28,19 @@ function parsePositiveInt(value: string | undefined, fallback: number): number {
   return parsed;
 }
 
+function normalizeCategoryList(value: string | undefined): string[] {
+  if (!value) return [];
+
+  return Array.from(
+    new Set(
+      value
+        .split(",")
+        .map((item) => item.trim().toLowerCase())
+        .filter((item) => item.length > 0)
+    )
+  );
+}
+
 export default async (req: VercelRequest, res: VercelResponse) => {
   const rawId = Array.isArray(req.query.id) ? req.query.id[0] : req.query.id;
 
@@ -48,14 +61,18 @@ export default async (req: VercelRequest, res: VercelResponse) => {
   const rawOffset = Array.isArray(req.query.offset) ? req.query.offset[0] : req.query.offset;
   const rawTopic = Array.isArray(req.query.topic) ? req.query.topic[0] : req.query.topic;
   const rawCategory = Array.isArray(req.query.category) ? req.query.category[0] : req.query.category;
+  const rawCategories = Array.isArray(req.query.categories)
+    ? req.query.categories[0]
+    : req.query.categories;
 
   const limit = Math.min(parsePositiveInt(rawLimit, 10), 50);
   const offset = Math.max(parsePositiveInt(rawOffset, 0), 0);
   const topic = rawTopic?.trim();
   const category = rawCategory?.trim();
+  const categories = normalizeCategoryList(rawCategories?.trim());
 
   const whereClauses: string[] = [];
-  const params: Array<string | number> = [];
+  const params: Array<string | number | string[]> = [];
 
   if (topic) {
     params.push(topic);
@@ -65,6 +82,9 @@ export default async (req: VercelRequest, res: VercelResponse) => {
   if (category) {
     params.push(category);
     whereClauses.push(`LOWER(TRIM(category)) = LOWER(TRIM($${params.length}::text))`);
+  } else if (categories.length > 0) {
+    params.push(categories);
+    whereClauses.push(`LOWER(TRIM(category)) = ANY($${params.length}::text[])`);
   }
 
   params.push(limit);
@@ -94,6 +114,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     filters: {
       topic: topic ?? null,
       category: category ?? null,
+      categories,
     },
   });
 };
