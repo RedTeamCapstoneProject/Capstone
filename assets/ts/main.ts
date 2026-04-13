@@ -1,6 +1,6 @@
 import jQuery from "jquery";
 import breakpoints from "./breakpoints";
-import "./util"; // Load jQuery plugins
+import "./util"; 
 
 type SummaryItem = {
   id: number | string;
@@ -60,7 +60,7 @@ function getStoredUserPreferenceCategories(): string[] {
       }
     }
   } catch {
-    // Ignore malformed localStorage filter payloads and fall through.
+
   }
 
   try {
@@ -347,8 +347,16 @@ async function hydrateSummaryPosts(): Promise<void> {
             return itemCategory !== null && allowedCategories.has(itemCategory);
           });
 
-    filteredSummaries.slice(0, posts.length).forEach((item, index) => {
-      const post = posts[index];
+    let cursor = 0;
+
+    posts.forEach((post) => {
+      const item = filteredSummaries[cursor++];
+      if (!item) {
+        post.style.display = "none";
+        return;
+      }
+
+      post.style.display = "";
       const title = item.ai_title?.trim() || "Untitled Summary";
       const description = item.ai_description?.trim() || "No description available.";
       const summaryText = item.summary?.trim() || description;
@@ -380,9 +388,14 @@ async function hydrateSummaryPosts(): Promise<void> {
       }
     });
 
-    miniPosts.forEach((miniPost, index) => {
-      const item = filteredSummaries[posts.length + index] ?? filteredSummaries[index];
-      if (!item) return;
+    miniPosts.forEach((miniPost) => {
+      const item = filteredSummaries[cursor++];
+      if (!item) {
+        miniPost.style.display = "none";
+        return;
+      }
+
+      miniPost.style.display = "";
 
       const title = item.ai_title?.trim() || "Untitled Summary";
       const detailHref = buildSummaryHref(item.id);
@@ -403,10 +416,14 @@ async function hydrateSummaryPosts(): Promise<void> {
       }
     });
 
-    sidebarPosts.forEach((sidebarPost, index) => {
-      const item =
-        filteredSummaries[posts.length + miniPosts.length + index] ?? filteredSummaries[index];
-      if (!item) return;
+    sidebarPosts.forEach((sidebarPost) => {
+      const item = filteredSummaries[cursor++];
+      if (!item) {
+        sidebarPost.style.display = "none";
+        return;
+      }
+
+      sidebarPost.style.display = "";
 
       const title = item.ai_title?.trim() || "Untitled Summary";
       const detailHref = buildSummaryHref(item.id);
