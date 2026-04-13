@@ -120,7 +120,7 @@ export async function fetchNewsArticlesAndSummarize(): Promise<{
 			FROM news_articles
 			WHERE topic IS NOT NULL
 			GROUP BY topic
-			HAVING COUNT(*) >= 3
+			HAVING COUNT(*) >= 2
 		)
 		ORDER BY topic, published_at DESC NULLS LAST
 	`;
