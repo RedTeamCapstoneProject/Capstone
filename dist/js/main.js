@@ -6810,8 +6810,14 @@ ${bullets}`;
             const itemCategory = getNormalizedItemCategory(item);
             return itemCategory !== null && allowedCategories.has(itemCategory);
           });
-          filteredSummaries.slice(0, posts.length).forEach((item, index) => {
-            const post = posts[index];
+          let cursor = 0;
+          posts.forEach((post) => {
+            const item = filteredSummaries[cursor++];
+            if (!item) {
+              post.style.display = "none";
+              return;
+            }
+            post.style.display = "";
             const title = item.ai_title?.trim() || "Untitled Summary";
             const description = item.ai_description?.trim() || "No description available.";
             const summaryText = item.summary?.trim() || description;
@@ -6840,10 +6846,13 @@ ${bullets}`;
               image.alt = title;
             }
           });
-          miniPosts.forEach((miniPost, index) => {
-            const item = filteredSummaries[posts.length + index] ?? filteredSummaries[index];
-            if (!item)
+          miniPosts.forEach((miniPost) => {
+            const item = filteredSummaries[cursor++];
+            if (!item) {
+              miniPost.style.display = "none";
               return;
+            }
+            miniPost.style.display = "";
             const title = item.ai_title?.trim() || "Untitled Summary";
             const detailHref = buildSummaryHref(item.id);
             const headingLink = miniPost.querySelector("header h3 a");
@@ -6861,10 +6870,13 @@ ${bullets}`;
               image.alt = title;
             }
           });
-          sidebarPosts.forEach((sidebarPost, index) => {
-            const item = filteredSummaries[posts.length + miniPosts.length + index] ?? filteredSummaries[index];
-            if (!item)
+          sidebarPosts.forEach((sidebarPost) => {
+            const item = filteredSummaries[cursor++];
+            if (!item) {
+              sidebarPost.style.display = "none";
               return;
+            }
+            sidebarPost.style.display = "";
             const title = item.ai_title?.trim() || "Untitled Summary";
             const detailHref = buildSummaryHref(item.id);
             const headingLink = sidebarPost.querySelector("header h3 a");
