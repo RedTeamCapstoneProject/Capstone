@@ -9,6 +9,8 @@ type SummaryItem = {
   ai_description: string | null;
   url_to_image: string | null;
   summary: string | null;
+  likeIm5?: string | null;
+  "5ws"?: string | null;
   source_names?: string[] | null;
   authors?: string[] | null;
   urls?: string[] | null;
@@ -279,6 +281,26 @@ async function hydrateSingleSummaryPage(): Promise<boolean> {
     if (bodyParagraph) {
       bodyParagraph.textContent = formatSummaryForDisplay(summaryText);
       bodyParagraph.style.whiteSpace = "pre-line";
+    }
+
+    const eli5Panel = document.querySelector<HTMLElement>("#tab-eli5");
+    if (eli5Panel) {
+      const eli5Text = item.likeIm5?.trim();
+      eli5Panel.innerHTML = "";
+      const eli5P = document.createElement("p");
+      eli5P.textContent = eli5Text ? formatSummaryForDisplay(eli5Text) : "Like I'm Five summary not available.";
+      eli5P.style.whiteSpace = "pre-line";
+      eli5Panel.appendChild(eli5P);
+    }
+
+    const fiveWsPanel = document.querySelector<HTMLElement>("#tab-fivews");
+    if (fiveWsPanel) {
+      const fiveWsText = item["5ws"]?.trim();
+      fiveWsPanel.innerHTML = "";
+      const fiveWsP = document.createElement("p");
+      fiveWsP.textContent = fiveWsText ? formatSummaryForDisplay(fiveWsText) : "Five W's summary not available.";
+      fiveWsP.style.whiteSpace = "pre-line";
+      fiveWsPanel.appendChild(fiveWsP);
     }
 
     const image = document.querySelector<HTMLImageElement>("#main article.post .image.featured img");
