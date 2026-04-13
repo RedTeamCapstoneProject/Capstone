@@ -5,6 +5,7 @@ const router = Router();
 
 type SummaryRow = {
   id: number;
+  category: string | null;
   ai_title: string | null;
   ai_description: string | null;
   url_to_image: string | null;
@@ -23,13 +24,26 @@ function parsePositiveInt(value: string | undefined, fallback: number): number {
   return parsed;
 }
 
+function normalizeCategoryList(value: string | undefined): string[] {
+  if (!value) return [];
+
+  return Array.from(
+    new Set(
+      value
+        .split(",")
+        .map((item) => item.trim().toLowerCase())
+        .filter((item) => item.length > 0)
+    )
+  );
+}
+
 router.get("/", async (req: Request, res: Response) => {
   const rawId = req.query.id as string | undefined;
   const id = rawId ? Number.parseInt(rawId, 10) : Number.NaN;
 
   if (Number.isFinite(id) && id > 0) {
     const byIdResult = await pool.query<SummaryRow>(
-      `SELECT id, ai_title, ai_description, url_to_image, summary, "5ws", "likeIm5", source_names, authors, urls
+      `SELECT id, category, ai_title, ai_description, url_to_image, summary, "5ws", "likeIm5", source_names, authors, urls
        FROM summary
        WHERE id = $1`,
       [id]
@@ -42,9 +56,10 @@ router.get("/", async (req: Request, res: Response) => {
   const offset = Math.max(parsePositiveInt(req.query.offset as string | undefined, 0), 0);
   const topic = (req.query.topic as string | undefined)?.trim();
   const category = (req.query.category as string | undefined)?.trim();
+  const categories = normalizeCategoryList((req.query.categories as string | undefined)?.trim());
 
   const whereClauses: string[] = [];
-  const params: Array<string | number> = [];
+  const params: Array<string | number | string[]> = [];
 
   if (topic) {
     params.push(topic);
@@ -53,7 +68,10 @@ router.get("/", async (req: Request, res: Response) => {
 
   if (category) {
     params.push(category);
-    whereClauses.push(`category = $${params.length}`);
+    whereClauses.push(`LOWER(TRIM(category)) = LOWER(TRIM($${params.length}::text))`);
+  } else if (categories.length > 0) {
+    params.push(categories);
+    whereClauses.push(`LOWER(TRIM(category)) = ANY($${params.length}::text[])`);
   }
 
   params.push(limit);
@@ -64,7 +82,7 @@ router.get("/", async (req: Request, res: Response) => {
   const whereSql = whereClauses.length > 0 ? `WHERE ${whereClauses.join(" AND ")}` : "";
 
   const query = `
-    SELECT id, ai_title, ai_description, url_to_image, summary, "5ws", "likeIm5", source_names, authors, urls
+    SELECT id, category, ai_title, ai_description, url_to_image, summary, "5ws", "likeIm5", source_names, authors, urls
     FROM summary
     ${whereSql}
     ORDER BY created_at DESC, id DESC
@@ -83,6 +101,7 @@ router.get("/", async (req: Request, res: Response) => {
     filters: {
       topic: topic ?? null,
       category: category ?? null,
+      categories,
     },
   });
 });
@@ -93,7 +112,7 @@ router.get("/:id", async (req: Request, res: Response) => {
   const id = Number.parseInt(normalizedId, 10);
 
   const result = await pool.query<SummaryRow>(
-    `SELECT id, ai_title, ai_description, url_to_image, summary, "5ws", "likeIm5", source_names, authors, urls
+    `SELECT id, category, ai_title, ai_description, url_to_image, summary, "5ws", "likeIm5", source_names, authors, urls
      FROM summary
      WHERE id = $1`,
     [id]

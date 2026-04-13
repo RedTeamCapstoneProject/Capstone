@@ -6557,6 +6557,33 @@
         "sports",
         "technology"
       ]);
+      function normalizeCategoryPreferences(values) {
+        if (!Array.isArray(values))
+          return [];
+        return Array.from(
+          new Set(
+            values.filter((value) => typeof value === "string").map((value) => value.trim().toLowerCase()).filter((value) => categories.has(value))
+          )
+        );
+      }
+      function getStoredUserPreferenceCategories() {
+        try {
+          const raw = localStorage.getItem("loggedInUser");
+          if (!raw)
+            return [];
+          const user = JSON.parse(raw);
+          return normalizeCategoryPreferences(user.preferences);
+        } catch {
+          return [];
+        }
+      }
+      function getNormalizedItemCategory(item) {
+        const rawCategory = item.category;
+        if (typeof rawCategory !== "string")
+          return null;
+        const normalized = rawCategory.trim().toLowerCase();
+        return categories.has(normalized) ? normalized : null;
+      }
       function resolveImageSource(rawImage) {
         const isDirectSource = rawImage.startsWith("data:") || rawImage.startsWith("http://") || rawImage.startsWith("https://") || rawImage.startsWith("//") || rawImage.startsWith("/");
         return isDirectSource ? rawImage : `data:image/jpeg;base64,${rawImage}`;
@@ -6750,9 +6777,16 @@ ${bullets}`;
         if (recordsNeeded === 0)
           return;
         const selectedCategory = getCategoryFromUrl();
-        const queryParams = new URLSearchParams({ limit: String(recordsNeeded) });
+        const preferredCategories = selectedCategory ? [] : getStoredUserPreferenceCategories();
+        const needsPreferenceFilter = !selectedCategory && preferredCategories.length > 0;
+        const fetchLimit = needsPreferenceFilter ? recordsNeeded * 3 : recordsNeeded;
+        const queryParams = new URLSearchParams({ limit: String(fetchLimit) });
         if (selectedCategory) {
           queryParams.set("category", selectedCategory);
+        } else if (preferredCategories.length === 1) {
+          queryParams.set("category", preferredCategories[0]);
+        } else if (preferredCategories.length > 1) {
+          queryParams.set("categories", preferredCategories.join(","));
         }
         try {
           const response = await fetch(`/api/summaries?${queryParams.toString()}`);
@@ -6760,7 +6794,12 @@ ${bullets}`;
             return;
           const payload = await response.json();
           const summaries = payload.data ?? [];
-          summaries.slice(0, posts.length).forEach((item, index) => {
+          const allowedCategories = selectedCategory !== null ? /* @__PURE__ */ new Set([selectedCategory]) : preferredCategories.length > 0 ? new Set(preferredCategories) : null;
+          const filteredSummaries = allowedCategories === null ? summaries : summaries.filter((item) => {
+            const itemCategory = getNormalizedItemCategory(item);
+            return itemCategory !== null && allowedCategories.has(itemCategory);
+          });
+          filteredSummaries.slice(0, posts.length).forEach((item, index) => {
             const post = posts[index];
             const title = item.ai_title?.trim() || "Untitled Summary";
             const description = item.ai_description?.trim() || "No description available.";
@@ -6791,7 +6830,7 @@ ${bullets}`;
             }
           });
           miniPosts.forEach((miniPost, index) => {
-            const item = summaries[posts.length + index] ?? summaries[index];
+            const item = filteredSummaries[posts.length + index] ?? filteredSummaries[index];
             if (!item)
               return;
             const title = item.ai_title?.trim() || "Untitled Summary";
@@ -6812,7 +6851,7 @@ ${bullets}`;
             }
           });
           sidebarPosts.forEach((sidebarPost, index) => {
-            const item = summaries[posts.length + miniPosts.length + index] ?? summaries[index];
+            const item = filteredSummaries[posts.length + miniPosts.length + index] ?? filteredSummaries[index];
             if (!item)
               return;
             const title = item.ai_title?.trim() || "Untitled Summary";
@@ -6837,6 +6876,9 @@ ${bullets}`;
       }
       (function($) {
         void hydrateSummaryPosts();
+        window.addEventListener("auth-state-changed", () => {
+          void hydrateSummaryPosts();
+        });
         const $window = $(window);
         const $body = $("body");
         const $menu = $("#menu");
