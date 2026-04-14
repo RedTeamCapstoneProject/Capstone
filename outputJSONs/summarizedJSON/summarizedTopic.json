@@ -2,6 +2,28 @@
   {
     "source_names": [
       "Golf Channel",
+      "SportsLine"
+    ],
+    "authors": [
+      "Unknown Author",
+      "Unknown Author"
+    ],
+    "ai_title": "Masters Golf Updates And Odds",
+    "ai_description": "Masters champion Rory McIlroy sets up for thrilling weekend at Augusta.",
+    "urls": [
+      "https://www.golfchannel.com/pga-tour/live/2026-masters-live-updates-leaderboard-scores-results-highlights-and-news-from-round-3",
+      "https://www.sportsline.com/insiders/2026-masters-weekend-odds-picks-proven-golf-model-reveals-updated-projected-leaderboard-surprising-predictions/"
+    ],
+    "url_to_image": "https://assets.golfchannel.com/dims4/default/8fe60cc/2147483647/strip/true/crop/3824x2151+0+200/resize/1440x810!/quality/90/?url=https%3A%2F%2Fversant-production-golfchannel.s3.us-east-1.amazonaws.com%2Fbrightspot%2F19%2Fe2%2F14f8008c4fd6ad0e0785901fae86%2Fhttps-delivery-gettyimages.com%2Fdownloads%2F2270345518",
+    "category": "general",
+    "topic": "2026 Masters",
+    "summary": "The 2026 Masters Tournament is currently underway at Augusta National Golf Club, with Rory McIlroy holding a significant lead. As of the second round, McIlroy is in solo first place with a score of 12 under par. The tournament, in its 90th edition, has set up for a potentially exciting weekend. McIlroy, the reigning champion, began the third round with a historic six-shot lead, but the rest of the field is attempting to close the gap. The second round concluded with McIlroy at the top of the leaderboard, having shot par for the majority of the round after a bogey on the first hole and a birdie on the third. The Masters is one of the most prestigious golf tournaments globally, with a long history dating back to 1934. The current year's tournament, 2026, is witnessing intense competition, with various golfers vying for the top position.\n\n* Rory McIlroy is leading the 2026 Masters Tournament with a score of 12 under par as of the second round.\n* The tournament is being held at Augusta National Golf Club, a renowned golf course in the United States.\n* The 2026 Masters is the 90th edition of the tournament, which has a rich history in the world of golf.",
+    "5ws": "Who: Rory McIlroy, golfers\nWhat: 2026 Masters Tournament\nWhen: April 11-12, 2026\nWhere: Augusta National Golf Club\nWhy: Determine 2026 Masters champion",
+    "likeIm5": "Imagine this: Rory \"The Golf King\" McIlroy and friends are playing a huge game at Augusta National. It's like a big playground where they hit balls into holes. The Golf King is in the lead, but \"The Birdie Master\" Sam Burns and others want to catch up. They're all trying to win the biggest prize, the Masters title, to be the best golfer."
+  },
+  {
+    "source_names": [
+      "Golf Channel",
       "ESPN",
       "Golf Channel",
       "SportsLine"
@@ -12,8 +34,8 @@
       "Brentley Romine",
       "Unknown Author"
     ],
-    "ai_title": "Masters Tournament Intensifies Sunday",
-    "ai_description": "McIlroy's six-shot lead shattered on record-breaking Saturday.",
+    "ai_title": "Masters Sunday Highlights Surprise Leaders",
+    "ai_description": "McIlroy's six-shot lead evaporates, setting up a thrilling Masters finale.",
     "urls": [
       "https://www.golfchannel.com/pga-tour/live/2026-masters-live-updates-final-round-leaderboard-scores-results-highlights-and-news",
       "https://www.espn.com/golf/story/_/id/48465791/frustrated-sergio-garcia-breaks-driver-no-2-tee-box",
@@ -23,9 +45,31 @@
     "url_to_image": "https://assets.golfchannel.com/dims4/default/16ba372/2147483647/strip/true/crop/1920x1080+0+0/resize/1440x810!/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2F11%2F1f%2Fdb357084cc36fd205d3cb5c3a6dd%2Fflag-1920-masters16-leaderboard.jpg",
     "category": "sports",
     "topic": "2026 Masters Golf Tournament",
-    "summary": "The 90th Masters Tournament is underway at Augusta National Golf Club in Augusta, Georgia. As of April 12, 2026, Rory McIlroy and Cameron Young are tied for the lead entering the final round. Sergio García broke his driver on the second hole after an outburst, resulting in a code-of-conduct warning. The tournament has seen a dry week, allowing the course to be set up as firm and fast. The third round has concluded, setting up a thrilling final round on Sunday. Reigning champion Rory McIlroy initially had a six-stroke lead but lost it, now tied with Cameron Young. The final round is expected to be highly competitive, with six others within four shots of the lead, including four major champions.\n\n* Rory McIlroy and Cameron Young are tied for the lead entering the final round of the 90th Masters Tournament.\n* Sergio García received a code-of-conduct warning for breaking his driver on the second hole after an outburst.\n* The dry tournament week has allowed Augusta National Golf Club to be set up as firm, fast, and challenging for the final round.",
+    "summary": "The 90th Masters Tournament is underway at Augusta National Golf Club in Augusta, Georgia. As of April 12, 2026, Rory McIlroy and Cameron Young are tied for the lead entering the final round. Sergio García, a two-time Masters champion, was issued a code-of-conduct warning after breaking his driver on the No. 2 tee box during the final round. The incident occurred due to an outburst on the tee box, marking a first for García at the Masters. The tournament has seen a dry week, resulting in a firm and fast course setup. McIlroy, the reigning champion, had initially taken a six-stroke lead but lost it by the third round. The final round is expected to be thrilling, with six other players, including four major champions, within four shots of the leaders.\n\n* Rory McIlroy and Cameron Young are tied for the lead entering the final round of the 90th Masters Tournament.\n* Sergio García broke his driver on the No. 2 tee box and received a code-of-conduct warning, a first for him at the Masters.\n* The dry tournament week has resulted in a firm and fast course setup at Augusta National Golf Club, affecting gameplay and leaderboard standings.",
     "5ws": "Who: Rory McIlroy, Cameron Young, Sergio Garcia\nWhat: 2026 Masters Golf Tournament final round\nWhen: April 12, 2026\nWhere: Augusta National Golf Club, Georgia\nWhy: Determine 2026 Masters champion",
-    "likeIm5": "Imagine this: The \"Masters Golf Friends\" are having a big competition. \"Rory the Leader\" and \"Cameron the Challenger\" are tied, like two friends racing to the finish line. \"Sergio the Strong\" had a tough moment, but he's still trying. They all want to win the special trophy, the goal is to be the best and make their fans happy."
+    "likeIm5": "Imagine this: \"The Golf Friends\" like Rory McIlroy, Cameron Young, and Sergio Garcia are playing a big game at Augusta National. It's like a high-stakes playground competition where they want to win the \"Golden Trophy.\" Rory and Cameron are tied, and Sergio is trying to catch up, but got really frustrated and broke his special stick. They all want to be the best and hold the trophy high."
+  },
+  {
+    "source_names": [
+      "NASCAR",
+      "NASCAR"
+    ],
+    "authors": [
+      "Unknown Author",
+      "Zach Sturniolo"
+    ],
+    "ai_title": "Nascar Returns To Victory Lane",
+    "ai_description": "Rodney Childers' crew chief doubts ignited ahead of Bristol.",
+    "urls": [
+      "https://www.nascar.com/videos/franchise/press-pass/childers-never-doubted-victory-lane-return-not-a-chance-in-hell/",
+      "https://www.nascar.com/news-media/2026/04/11/cup-series-sunday-setup-tires-traction-compound-crew-chief-focus-bristol/"
+    ],
+    "url_to_image": "https://www.nascar.com/wp-content/uploads/sites/7/2026/04/12/NASCAR-NOAPS-Zilisch-Childers-Split.jpg",
+    "category": "technology",
+    "topic": "2026 NASCAR Season",
+    "summary": "The Food City 500 is a NASCAR Cup Series event scheduled to take place at Bristol Motor Speedway in Bristol, Tennessee. On Sunday, crew chiefs will be focusing on two key aspects: tire wear and traction compound. Goodyear has introduced a new tire combination for the event. Rodney Childers, crew chief for the No. 1 Chevrolet, has expressed confidence in his team's ability to perform well. The event will be broadcast on FS1 at 3 p.m. ET. Crew chiefs will be monitoring how the traction compound evolves throughout the race. The Food City 500 is a significant event in the NASCAR Cup Series, with crew chiefs playing a crucial role in determining their teams' success.\n\n* The Food City 500 will feature a new tire combination provided by Goodyear.\n* Crew chiefs will be monitoring tire wear and traction compound during the event.\n* The event will be broadcast on FS1 at 3 p.m. ET on the day of the race.",
+    "5ws": "Who: Rodney Childers, NASCAR crew chief\nWhat: Returns to Victory Lane\nWhen: April 2026\nWhere: Bristol Motor Speedway\nWhy: Pursue NASCAR Cup Series wins",
+    "likeIm5": "Imagine this: \"The Fast Lane Team\" with Rodney Childers and their speedy driver, Zilisch, are racing to win at Bristol. They're like the coolest kids on the playground, trying to be the first to cross the finish line. The \"Tire Masters\" like Goodyear are helping them by bringing new, super-fast tires."
   },
   {
     "source_names": [
@@ -42,8 +86,8 @@
       "Nick Faria",
       "Mauricio Rodriguez"
     ],
-    "ai_title": "Nfl Teams Prepare For Draft",
-    "ai_description": "Cowboys ignite trade rumors ahead of 2026 NFL Draft.",
+    "ai_title": "Nfl Teams Eye Quarterbacks In Draft",
+    "ai_description": "Cowboys ignite draft drama, eyeing trade-up move.",
     "urls": [
       "https://www.bleedinggreennation.com/news/173456/eagles-news-a-mock-draft-that-has-philadelphia-taking-a-first-round-quarterback",
       "https://www.prideofdetroit.com/detroit-lions-draft/161445/2026-lions-mock-draft-roundup-11-0-focus-remains-on-ot-as-draft-day-approaches",
@@ -54,9 +98,34 @@
     "url_to_image": "https://platform.bleedinggreennation.com/wp-content/uploads/sites/36/2026/04/gettyimages-2254491405.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
     "category": "sports",
     "topic": "2026 NFL Draft",
-    "summary": "The 2026 NFL Draft is scheduled to take place in Pittsburgh, with various teams having different needs and priorities. The Philadelphia Eagles have been linked to quarterback Ty Simpson from Alabama in some mock drafts. The New York Jets own two picks within the first 16 overall selections, but may consider trading them. The Dallas Cowboys have two first-round picks, but face uncertainty in landing a difference-making player to fix their defense. The Steelers, picking 21st, may address their needs on the offensive line or at wide receiver. The 2026 NFL Draft will be held in less than two weeks, with teams fine-tuning their strategies and mock drafts. As of 2026, teams are preparing for the draft, considering various prospects and potential trades.\n\n* The Philadelphia Eagles are considering drafting a quarterback, such as Ty Simpson from Alabama, in the first round.\n* The New York Jets have two picks in the first 16 overall selections, but may trade them to other teams.\n* The Dallas Cowboys have two first-round picks, but face challenges in landing a player who can significantly improve their defense.",
-    "5ws": "Who: Philadelphia Eagles, Detroit Lions, Pittsburgh Steelers, New York Jets, Dallas Cowboys\nWhat: 2026 NFL Draft preparations and predictions\nWhen: April 2026, less than two weeks before draft\nWhere: Various US cities, including Philadelphia, Detroit, Pittsburgh, New York\nWhy: Annual recruitment of college athletes to strengthen teams",
-    "likeIm5": "Imagine a big schoolyard where teams like the \"Flying Eagles\" and the \"Jet Pack Jets\" are getting ready for a special event. They have Golden Tickets to choose the best friends to join their teams. The \"Cowboy Crew\" and \"Steel City Steelers\" are also excited, trying to fix their teams to win big. They all want to pick the best friends to help them succeed."
+    "summary": "The 2026 NFL Draft is approaching, with the first round scheduled to take place in less than two weeks in Pittsburgh. The Philadelphia Eagles have been the subject of a mock draft, which suggests they may select a quarterback, Ty Simpson, in the first round. The New York Jets, who own two picks within the first 16 overall selections, are considering trading one of their picks. The Dallas Cowboys, who have two first-round picks, are also exploring trade options to address their defensive needs. The Steelers, picking 21st, are looking to address their areas of need, including the offensive line. The 2026 NFL Draft will feature a talented pool of prospects, with various teams looking to bolster their rosters. As the draft date approaches, teams are finalizing their strategies and preparing for the first round.\n\n* The Philadelphia Eagles may select a quarterback, Ty Simpson, in the first round of the 2026 NFL Draft.\n* The New York Jets own two picks within the first 16 overall selections and are considering trading one of their picks.\n* The Dallas Cowboys have two first-round picks and are exploring trade options to address their defensive needs.",
+    "5ws": "Who: Eagles, Lions, Steelers, Jets, Cowboys\nWhat: 2026 NFL Draft preparations\nWhen: April 2026, draft in late April\nWhere: Various US cities, NFL teams' venues\nWhy: Annual college athlete recruitment",
+    "likeIm5": "Imagine this: The New York Jets team, the Cowboys crew, and the Eagles squad are getting ready for a big playground game. They have Golden Tickets to choose the best friends to join their teams. The Jets team has two tickets, while the Cowboys crew wants to trade theirs to get an even better friend. Mel Kiper Jr., a wise friend, is helping them decide. Their big goal is to pick friends who can help them win the game and fix their teams' problems."
+  },
+  {
+    "source_names": [
+      "SciTechDaily",
+      "Medical Xpress",
+      "Science Daily"
+    ],
+    "authors": [
+      "Unknown Author",
+      "Medical Xpress",
+      "Unknown Author"
+    ],
+    "ai_title": "Alzheimer's Treatment Theories Challenged",
+    "ai_description": "New study shatters Alzheimer's theory, revealing a complex battle within neurons.",
+    "urls": [
+      "https://scitechdaily.com/new-study-challenges-alzheimers-theories-its-not-just-about-plaques/",
+      "https://medicalxpress.com/news/2026-04-biological-marker-early-stage-alzheimer.html",
+      "https://www.sciencedaily.com/releases/2026/04/260409101111.htm"
+    ],
+    "url_to_image": "https://scitechdaily.com/images/Alzheimers-Disease-Brain-Neuron-Inset.jpg",
+    "category": "health",
+    "topic": "Alzheimers Disease Research",
+    "summary": "Alzheimer's disease (AD) is a global health challenge that affects aging populations, causing a steady erosion of memory and thinking abilities. Researchers have been studying the condition to understand its underlying causes, with new research suggesting that AD may not be driven solely by protein plaques, but by a deeper disruption inside brain cells. A key protein can interfere with another, leading to the disease's progression. Alzheimer's disease is characterized by a complex mix of biology, aging, and overall health, making it challenging to develop effective treatments. Scientists are now pushing towards multi-pronged strategies to address the disease. As of 2026, researchers continue to explore new biological markers and treatments for AD. The latest studies aim to improve our understanding of the disease and develop more effective therapies to address its various aspects.\n\n* Alzheimer's disease is a leading global health challenge, particularly among aging populations, with no single cause or effective treatment.\n* New research suggests that the disease may be driven by a deeper disruption inside brain cells, rather than solely by protein plaques.\n* Scientists are now exploring multi-pronged strategies to address the complex biology and overall health factors contributing to Alzheimer's disease.",
+    "5ws": "Who: Scientists, researchers \nWhat: Challenging Alzheimer's theories \nWhen: April 2026 \nWhere: Global health research \nWhy: Understanding disease causes",
+    "likeIm5": "Imagine this: scientists like the \"Medical Mysteries Team\" and the \"SciTech Sleuths\" are working together to solve a big puzzle called Alzheimer's disease. They're like kids on a playground trying to fix a broken swing, and they just discovered it's not just one problem, but many tangled strings. The \"Brain Builders Team\" is also helping, and their goal is to find a way to make people's brains healthy and strong again, so everyone can play and have fun without getting hurt."
   },
   {
     "source_names": [
@@ -69,8 +138,8 @@
       "Clara Murray",
       "Brody Ford"
     ],
-    "ai_title": "Anthropic Expands AI Capacity",
-    "ai_description": "Mythos sparks emergency government meeting.",
+    "ai_title": "Anthropic Expands Ai Capacity",
+    "ai_description": "Mythos prompts emergency government meeting.",
     "urls": [
       "https://www.morningbrew.com/stories/2026/04/11/anthropic-latest-ai-model-strikes-fear-into-banks",
       "https://www.ft.com/content/abb93a6f-9060-4095-8045-84b97d394a4c?syn-25a6b1a6\\\\u003d1",
@@ -79,9 +148,31 @@
     "url_to_image": "https://morningbrew.com/cdn-cgi/image/width=1200,height=630,quality=70,format=auto/https://storage.morningbrew.com/image/2026-04-10/image-28a228049706c1b3a22bc93444067a124657bf33-1500x1000-jpg/MBD_MythosBanks_SM_04102026.jpg",
     "category": "business",
     "topic": "Anthropic AI Model",
-    "summary": "In 2026, Anthropic PBC, a leading artificial intelligence company, has been making significant strides in the development of its AI models, including Claude Mythos. This model has reportedly sparked concern among banking officials due to its capabilities, prompting an impromptu meeting between bank CEOs and federal officials in the nation's capital. Anthropic PBC has agreed to a multiyear deal with CoreWeave Inc. to tap into their data center capacity, aiming to handle the increasing demand for its artificial intelligence services. The company's growth can be attributed to the strong interest in its Claude Code products. As a result, Anthropic PBC is expanding its capacity to meet the surging demand for its AI services. The partnership with CoreWeave Inc. will provide Anthropic PBC with the necessary infrastructure to support its growing business. Anthropic PBC's rapid growth has also led to increased competition with other AI companies, such as OpenAI, in the US market.\n\n* Anthropic PBC has agreed to a multiyear deal with CoreWeave Inc. to tap into their data center capacity, aiming to handle the increasing demand for its artificial intelligence services.\n* The company's latest AI model, Claude Mythos, has sparked concern among banking officials due to its capabilities, prompting an emergency meeting between government officials and bank leaders.\n* Anthropic PBC's growth has led to increased competition with other AI companies, such as OpenAI, in the US market, with its business use surging due to strong interest in its Claude Code products.",
-    "5ws": "Who: Anthropic, bank CEOs, federal officials\nWhat: Emergency meeting on AI model Claude Mythos\nWhen: April 2026\nWhere: US nation's capital\nWhy: Addressing AI's destructive capabilities",
-    "likeIm5": "Imagine this: a big meeting happened because \"The Bank Heroes\" and \"The Government Helpers\" were worried about a powerful tool called Claude Mythos. \"The Anthropic Team\", led by friends like Dave Lozo and Clara Murray, created this tool, which can detect and do important things. The goal is to understand and control Claude Mythos to help people and banks, like \"The Morning Brew Squad\" and \"The Financial Times Friends\", work better together."
+    "summary": "In 2026, Anthropic PBC, a company developing artificial intelligence (AI) models, has been making significant strides in the industry. Anthropic's latest AI model, Claude Mythos, has garnered attention from government officials and bank leaders, prompting an emergency meeting in the nation's capital. The meeting was held to discuss the potential implications of Claude Mythos on the banking sector. Anthropic PBC has agreed to a multiyear deal with CoreWeave Inc. to tap into their data center capacity, aiming to handle the increasing demand for its AI services. This partnership is a result of Anthropic's rapid growth, driven by strong interest in its Claude Code products. As a result, Anthropic is expanding its capabilities to meet the surging demand for its AI services in the US business sector. The company's growth has also led to increased competition with other major AI companies, such as OpenAI.\n\n* Anthropic PBC has partnered with CoreWeave Inc. to access additional data center capacity and support the growing demand for its AI services.\n* The company's latest AI model, Claude Mythos, has sparked concern among government officials and bank leaders, leading to an emergency meeting to discuss its potential implications.\n* Anthropic's rapid growth has enabled it to close in on competitors like OpenAI, driven by strong interest in its Claude Code products and increasing adoption of its AI services in the US business sector.",
+    "5ws": "Who: Anthropic, bank CEOs, federal officials\nWhat: Emergency meeting on AI model Mythos\nWhen: April 2026\nWhere: US nation's capital\nWhy: Addressing AI's destructive capabilities",
+    "likeIm5": "Imagine this: The \"Bank Team\" and \"Government Helpers\" had a big meeting because of a new, powerful tool called \"Mythos\" made by the \"Anthropic Friends\", including Dave Lozo and Clara Murray, who are like the \"Superstar Coders\". They're trying to fix a problem that might hurt people's money, so they're working together to make sure everything is safe and fair, like sharing toys on the playground."
+  },
+  {
+    "source_names": [
+      "The Conversation Africa",
+      "The Daily Galaxy --Great Discoveries Channel"
+    ],
+    "authors": [
+      "Jennifer Levasseur",
+      "Sarah Jones"
+    ],
+    "ai_title": "Artemis Astronauts Capture Lunar Journey",
+    "ai_description": "Artemis II crew uncovers breathtaking new Moon views, shattering decades of familiarity.",
+    "urls": [
+      "https://theconversation.com/artemis-ii-crew-used-modern-photography-to-tell-the-visual-story-of-their-lunar-journey-and-update-some-classic-apollo-images-280341",
+      "https://dailygalaxy.com/2026/04/artemis-ii-earth-lunar-horizon/"
+    ],
+    "url_to_image": "https://images.theconversation.com/files/729093/original/file-20260409-71-pv7cum.jpg?ixlib=rb-4.1.0&rect=0%2C386%2C3088%2C1544&q=45&auto=format&w=1356&h=668&fit=crop",
+    "category": "technology",
+    "topic": "Artemis II Mission",
+    "summary": "The Artemis II mission, conducted by NASA, has provided a substantial amount of material, including documents, artifacts, and images, to tell the story of past flights to space. The crew of Artemis II has captured a rare image of Earth slipping behind the Moon during a flyby of the lunar far side. This image shows a crescent Earth descending below the lunar horizon, a view that few humans have ever witnessed. The Artemis II crew has reimagined some Apollo-era photos, finding spectacular new angles and using modern photography to tell the visual story of their lunar journey. The mission has delivered a unique view that has not been seen since the Apollo era. NASA's Artemis II mission is a significant milestone in human spaceflight, providing new insights and perspectives on space exploration. The captured image is a notable achievement, showcasing the crew's ability to capture stunning visuals during their lunar journey.\n\n* The Artemis II crew has captured a rare image of Earth slipping behind the Moon, providing a unique view of the lunar far side.\n* The mission has reimagined Apollo-era photos, using modern photography to tell the visual story of their lunar journey.\n* The captured image is a significant achievement, showcasing the crew's ability to capture stunning visuals during their lunar journey, and providing new insights into space exploration.",
+    "5ws": "Who: Artemis II crew, NASA\nWhat: Captured rare lunar images\nWhen: April 2026\nWhere: Lunar far side, space\nWhy: Document historic mission",
+    "likeIm5": "Imagine astronauts, like Jennifer's Space Explorers and Sarah's Galaxy Squad, flying to the moon on a big adventure called Artemis II. They're taking new pictures of the Earth and moon, just like their friends did a long time ago, to help us learn more about space and maybe even find new homes for people one day."
   },
   {
     "source_names": [
@@ -94,7 +185,7 @@
       "Jamie Carter",
       "Marshall Shepherd"
     ],
-    "ai_title": "Artemis II Achieves Historic Space Milestone",
+    "ai_title": "Artemis Mission Achieves Historic Space Feat",
     "ai_description": "Artemis II mission ignites new era of deep space exploration.",
     "urls": [
       "https://www.thefp.com/p/welcome-home-artemis-ii",
@@ -104,9 +195,241 @@
     "url_to_image": "https://substackcdn.com/image/fetch/$s_!yUQY!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe6ec081d-0979-4dc1-ad96-2f0fad58a3fe_1024x683.jpeg",
     "category": "general",
     "topic": "Artemis II Space Mission",
-    "summary": "The Artemis II mission successfully concluded on Friday, April 10, 2026, with the crew, consisting of Reid Wiseman, Victor Glover, Christina Koch, and Jeremy Hansen, splashing down in the Pacific Ocean off the coast of San Diego. The mission aimed to push deeper into space exploration, marking humanity's return to deep space. The Artemis II Orion capsule was recovered in the Pacific Ocean, as confirmed by NASA. The crew's journey was significant, as it marked a new era of exploration. The mission's completion was a notable achievement, with the crew safely returning to Earth. The Artemis II mission is part of a series of missions, with the ultimate goal of exploring space and expanding human knowledge. The successful recovery of the Artemis II Orion capsule was captured in an image provided by NASA, showcasing the capsule's splashdown in the Pacific Ocean.\n\n* The Artemis II mission marks a significant milestone in space exploration, with the crew successfully completing their journey and returning to Earth.\n* The mission's completion has implications for future space exploration, as it paves the way for further human missions to deep space.\n* The recovery of the Artemis II Orion capsule in the Pacific Ocean off the coast of San Diego was a notable achievement, demonstrating the success of the mission's objectives.",
+    "summary": "The Artemis II mission successfully concluded on Friday, April 10, 2026, with the crew consisting of Reid Wiseman, Victor Glover, Christina Koch, and Jeremy Hansen splashing down in the Pacific Ocean off the coast of San Diego. The mission marked a significant milestone in deep space exploration, with the Orion capsule pushing deeper into the unknown. The Artemis II mission is part of a new era of exploration, following in the footsteps of Apollo 8's Earthrise. The crew's experience of witnessing the Earth disappear was described as an unreal moment. The Artemis II mission aims to return humanity to deep space, with a commitment to always choosing Earth. The mission's success is a crucial step towards further space exploration and has significant implications for the future of space travel. The Artemis II crew's journey has sparked renewed interest in space exploration, with the mission's achievements being widely reported and celebrated.\n\n* The Artemis II mission marks a significant milestone in deep space exploration, with the Orion capsule successfully splashing down in the Pacific Ocean.\n* The mission is part of a new era of exploration, following in the footsteps of Apollo 8's Earthrise, and aims to return humanity to deep space.\n* The success of the Artemis II mission has significant implications for the future of space travel, with the crew's experiences and achievements providing valuable insights for future missions.",
     "5ws": "Who: NASA, Artemis II crew\nWhat: Artemis II space mission completion\nWhen: April 10, 2026\nWhere: Pacific Ocean, San Diego\nWhy: Deep space exploration, lunar mission",
-    "likeIm5": "Imagine astronauts like \"The Space Explorers\" - Reid Wiseman, Victor Glover, Christina Koch, and Jeremy Hansen, returning from a big adventure. They're like the school's superstar team, working together to achieve a huge goal: helping humanity explore space and protect Earth."
+    "likeIm5": "Imagine astronauts like Captain Reid, Space Explorer Victor, and Star Traveler Christina, known as the Artemis II team, flying to the moon and back. They're like the school's best explorers trying to find new wonders. Their big goal is to help Earth by exploring space and discovering new things to keep our planet safe and happy."
+  },
+  {
+    "source_names": [
+      "Abcnews.com",
+      "NBC News"
+    ],
+    "authors": [
+      "abcnews.com",
+      "Chloe Melas, Marlene Lenthang"
+    ],
+    "ai_title": "Britney Spears Enters Treatment Facility",
+    "ai_description": "Britney Spears checks into treatment facility.",
+    "urls": [
+      "https://abcnews.com/GMA/Culture/britney-spears-voluntarily-checks-treatment-facility-after-dui/story?id\\\\u003d131978789",
+      "https://www.nbcnews.com/pop-culture/pop-culture-news/britney-spears-voluntarily-checks-into-treatment-facility-rcna331449"
+    ],
+    "url_to_image": "unknown",
+    "category": "entertainment",
+    "topic": "Britney Spears Treatment",
+    "summary": "Britney Spears, a renowned American pop star, has voluntarily checked herself into a treatment facility, as confirmed by her representative. This decision was made after her arrest on suspicion of driving under the influence (DUI). A DUI arrest occurs when an individual is taken into custody by law enforcement for operating a vehicle while impaired by alcohol or other substances. The treatment facility will provide Britney Spears with the necessary care and support to address her well-being. According to reports from reputable news sources, including NBC News and ABC News, this incident took place in recent weeks. The exact date of the arrest and admittance to the facility is not specified, but it is confirmed to have occurred prior to 2026. Britney Spears' decision to seek treatment demonstrates her proactive approach to addressing her personal challenges and prioritizing her health.\n\n* Britney Spears has voluntarily checked herself into a treatment facility after her arrest on suspicion of DUI.\n* The treatment facility will provide her with the necessary care and support to address her well-being.\n* The incident has been reported by reputable news sources, including NBC News and ABC News, confirming the details of her arrest and admittance to the facility.",
+    "5ws": "Who: Britney Spears\nWhat: Checks into treatment facility\nWhen: April 13, 2026\nWhere: Unspecified facility\nWhy: Addresses DUI arrest, personal well-being",
+    "likeIm5": "Imagine this: Britney Spears, the famous Singer Star, is getting help at a special place. The NBC News Team and Abcnews.com Reporters are sharing her story. Britney's like a playground friend who made a mistake, and now she's taking a time-out to get better, just like we do when we need to calm down and think."
+  },
+  {
+    "source_names": [
+      "Vice News",
+      "Indiandefencereview.com"
+    ],
+    "authors": [
+      "Luis Prada",
+      "Emily Carter"
+    ],
+    "ai_title": "Cats Leave Food, Scientists Find Answer",
+    "ai_description": "Study unveils why cats abandon meals.",
+    "urls": [
+      "http://www.vice.com/en/article/your-cat-isnt-being-weird-theres-a-scientific-reason-they-never-finish-their-food/",
+      "https://indiandefencereview.com/why-does-your-cat-never-finish-its-food/"
+    ],
+    "url_to_image": "https://www.vice.com/wp-content/uploads/sites/2/2026/04/study-explains-why-cats-dont-finish-meals.png?w=2000",
+    "category": "science",
+    "topic": "Cat Eating Habits",
+    "summary": "A recent study published in a scientific journal provides insights into the eating habits of cats, specifically why they often leave meals unfinished. The study sheds light on the Possible reasons behind this behavior, which has puzzled pet owners for years. Cats, like Oliver, may take a few bites of their meal and then walk away, leaving food behind. This common behavior is not unique to individual pets, but rather a widespread phenomenon among felines. Research aims to understand the factors influencing cats' food choices and eating habits. The study's findings offer a scientific explanation for this behavior, which can help pet owners better understand their cats' needs. By examining the eating habits of cats, scientists can provide valuable insights into the needs and behaviors of these animals.\n\n* A study published in a scientific journal investigates the reasons behind cats' unfinished meals, providing fresh insights into their eating habits.\n* Cats' eating habits are influenced by various factors, which can affect their food choices and meal completion.\n* The research aims to understand the causes of this behavior, which can help pet owners provide better care and nutrition for their feline companions.",
+    "5ws": "Who: Cat owners, scientists \nWhat: Cats leaving food unfinished \nWhen: April 2026 \nWhere: Global, online platforms \nWhy: Understanding feline eating habits",
+    "likeIm5": "Imagine this: The Cat Food Mystery Squad, led by Luis \"The Whisker Wizard\" Prada and Emily \"The Purr-fect Detective\" Carter, are solving why cats never finish their meals, helping cat owners like you understand their pets better."
+  },
+  {
+    "source_names": [
+      "Glamour",
+      "NPR"
+    ],
+    "authors": [
+      "Fernanda Pérez Sánchez",
+      "Dora Levite"
+    ],
+    "ai_title": "Coachella 2026 Lineup Revealed",
+    "ai_description": "Justin Bieber and Sabrina Carpenter ignite Coachella 2026.",
+    "urls": [
+      "https://www.glamour.com/story/coachella-2026-lineup-news-and-artists-performing-today-april-11",
+      "https://www.npr.org/2026/04/10/nx-s1-5777664/coachella-2026-guide"
+    ],
+    "url_to_image": "https://media.glamour.com/photos/69da70c6ddb47d1eef4897f6/16:9/w_1280,c_limit/2270303151",
+    "category": "entertainment",
+    "topic": "Coachella 2026 Lineup",
+    "summary": "Coachella 2026 officially began on Friday, April 10, in the California desert. The festival features over 100 acts across eight stages, showcasing various genres of music. The lineup for Coachella 2026 was announced in September 2025 and includes artists such as Justin Bieber, Big Bang, and Sabrina Carpenter. Coachella is a prominent music festival that takes place over two weekends in the spring. The festival will feature a diverse range of artists, including those from Latin America, such as Karol. Coachella 2026 will provide live streaming of almost all performances, allowing attendees and non-attendees to experience the event. The festival is expected to be a significant event in the music world, with many notable artists performing.\n\n* Coachella 2026 features a lineup of over 100 acts across eight stages, showcasing multiple genres of music.\n* The festival will be held over two weekends in the California desert, with live streaming available for most performances.\n* Notable artists performing at Coachella 2026 include Justin Bieber, Big Bang, and Sabrina Carpenter.",
+    "5ws": "Who: Sabrina Carpenter, Justin Bieber, Big Bang, Karol \nWhat: Coachella 2026 music festival\nWhen: April 10-12, 2026\nWhere: California desert\nWhy: Annual music gathering and showcase",
+    "likeIm5": "Imagine a big music party called Coachella. The \"Superstar Squad\" with Sabrina Carpenter and the \"Music Magician\" Justin Bieber are headlining. They're like the coolest kids in school, and everyone wants to see them perform. The goal is to have fun and enjoy great music with friends, like the \"Latin Rhythm Team\" with Karol, making this party an unforgettable experience."
+  },
+  {
+    "source_names": [
+      "Boredpanda.com",
+      "Rolling Stone"
+    ],
+    "authors": [
+      "Amita Kumari",
+      "Daniel Kreps"
+    ],
+    "ai_title": "Coachella 2026 Hit By Strong Winds",
+    "ai_description": "Strong winds shatter Anyma's Coachella set.",
+    "urls": [
+      "https://www.boredpanda.com/absurd-looks-coachella-2026-first-weekend/",
+      "http://www.rollingstone.com/music/music-news/anymas-late-night-coachella-set-canceled-strong-winds-1235545324/"
+    ],
+    "url_to_image": "https://s.yimg.com/os/en/aol_bored_panda_979/a5db86e30953612cceb1f12b2dbaa20c",
+    "category": "general",
+    "topic": "Coachella Music Festival",
+    "summary": "The 25th edition of Coachella took place at the Empire Polo Club in Indio, California, from April 10 to April 12, 2026. This event brought together prominent music artists, but some performances were affected by weather conditions. Anyma, an EDM star, was scheduled to perform on the main stage at midnight on Friday, but the set was canceled due to strong winds. The strong winds hit the festival grounds on Friday, causing disruptions to the scheduled events. Coachella is a notable music festival that attracts a large audience and features various artists. The festival lasted for three days, showcasing multiple performances and activities. The cancellation of Anyma's set was a result of the adverse weather conditions, prioritizing the safety of the attendees and performers.\n\n* Anyma's late-night set at Coachella was canceled due to strong winds that hit the festival grounds on Friday.\n* The 25th edition of Coachella took place at the Empire Polo Club in Indio, California, from April 10 to April 12, 2026.\n* The strong winds caused disruptions to the scheduled events, affecting some performances during the festival.",
+    "5ws": "Who: Coachella attendees, Anyma\nWhat: Music festival, canceled performance\nWhen: April 10-12, 2026\nWhere: Empire Polo Club, Indio, California\nWhy: Annual music gathering",
+    "likeIm5": "Imagine this: Coachella, a big music party, happened in California. The \"Music Makers\" team, like Amita Kumari, shared fun stories. But, \"The Wind Warriors\" ruined \"Anyma's Amazing Night\" show due to strong winds."
+  },
+  {
+    "source_names": [
+      "Forbes",
+      "IGN"
+    ],
+    "authors": [
+      "Paul Tassi",
+      "Wesley Yin-Poole"
+    ],
+    "ai_title": "Crimson Desert Gets New Update",
+    "ai_description": "Pearl Abyss unleashes a massive Crimson Desert patch just a day after announcing its roadmap.",
+    "urls": [
+      "https://www.forbes.com/sites/paultassi/2026/04/11/fast-crimson-desert-patch-adds-new-moves-shield-hiding-and-one-great-feature/",
+      "https://www.ign.com/articles/new-crimson-desert-patch-just-dropped-with-many-of-the-improvements-pearl-abyss-said-were-due-in-the-coming-months-and-some-it-hadnt-mentioned-at-all"
+    ],
+    "url_to_image": "https://imageio.forbes.com/specials-images/imageserve/69da4152a2100fef0c8be402/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+    "category": "technology",
+    "topic": "Crimson Desert Update",
+    "summary": "Pearl Abyss, the developer of Crimson Desert, released a roadmap of upcoming changes and additions to the game on a Thursday night. The roadmap outlined improvements to be implemented over the next two months. Following the announcement, Pearl Abyss released a new patch for Crimson Desert, which added several of the announced changes, as well as a few unexpected ones. The patch, update 1.03.00, was made available shortly after the roadmap was announced. The update includes new moves, shield hiding, and other features. Pearl Abyss is a South Korean video game developer, and Crimson Desert is one of their notable games. The rapid release of the patch, just a day after the announcement, demonstrates the developer's commitment to continuously improving the game.\n\n* The new patch, update 1.03.00, adds new moves and features to Crimson Desert.\n* The update includes shield hiding, a feature that fans had been expecting.\n* Pearl Abyss released the patch just a day after announcing a roadmap of upcoming changes, showcasing their ability to quickly implement new features.",
+    "5ws": "Who: Pearl Abyss, Forbes, IGN\nWhat: Crimson Desert update patch\nWhen: April 11, 2026\nWhere: Online gaming platform\nWhy: Enhance gameplay experience",
+    "likeIm5": "Imagine this: \"The Game Changers\" at Pearl Abyss, led by friends like Paul Tassi and Wesley Yin-Poole, are like the playground heroes, making a super cool game called Crimson Desert even better. They just added new moves and features, like a surprise party for all the players."
+  },
+  {
+    "source_names": [
+      "The Times of India",
+      "SciTechDaily"
+    ],
+    "authors": [
+      "Aadya Jha",
+      "Unknown Author"
+    ],
+    "ai_title": "Dietary Changes Aid Diabetes Reversal",
+    "ai_description": "New compound in common fruits unveiled to impact brain health.",
+    "urls": [
+      "https://timesofindia.indiatimes.com/health/type-2-diabetes-doesnt-start-with-high-sugar-early-metabolic-shifts-that-begin-years-earlier-and-how-lifestyle-changes-can-help-reverse-them/photostory/130199003.cms",
+      "https://scitechdaily.com/researchers-have-found-a-dietary-compound-that-increases-longevity/"
+    ],
+    "url_to_image": "https://static.toiimg.com/thumb/msid-130199025,width-1280,height-720,imgsize-28964,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+    "category": "health",
+    "topic": "Dietary Compound Longevity",
+    "summary": "Type 2 diabetes is a complex condition that does not begin with a spike in sugar, but rather with a quiet resistance and slow overload of small imbalances that build over time. According to recent findings, a hidden dietary compound found in common fruits and vegetables may help the body resist oxidative stress and protein damage tied to aging. Researchers have discovered that this plant compound has potential effects on aging and brain health. The development of type 2 diabetes is a gradual process that can begin years before any diagnosis appears. Lifestyle changes can help reverse early metabolic shifts that occur before the onset of type 2 diabetes. The body begins to change years before any diagnosis of type 2 diabetes, with subtle changes that do not necessarily cause immediate harm. Scientific studies have shed light on the potential benefits of certain dietary compounds in increasing longevity and improving overall health.\n\n* The development of type 2 diabetes is a gradual process that can begin years before any diagnosis appears, with subtle changes that do not necessarily cause immediate harm.\n* A dietary compound found in common fruits and vegetables has been discovered to have potential effects on aging and brain health, and may help the body resist oxidative stress and protein damage.\n* Lifestyle changes can help reverse early metabolic shifts that occur before the onset of type 2 diabetes, highlighting the importance of prevention and early intervention in managing the condition.",
+    "5ws": "Who: Aadya Jha, Unknown Author\nWhat: Researchers find dietary compound for longevity\nWhen: April 11-12, 2026\nWhere: Global health, science platforms\nWhy: Prevent aging, promote healthy lifestyle",
+    "likeIm5": "Imagine this: \"The Healthy Heroes\" like Aadya Jha and the \"SciTech Squad\" are working together to help people with type 2 diabetes. They're like a team trying to win a big game, and their goal is to find special helpers in food that can make our bodies strong and healthy."
+  },
+  {
+    "source_names": [
+      "STAT",
+      "Science Daily",
+      "Iowaparkleader.com"
+    ],
+    "authors": [
+      "Denise Asafu-Adjei",
+      "Unknown Author",
+      "Caleb Morrison"
+    ],
+    "ai_title": "Scientists Link Health Issues To Hidden Warning Signs",
+    "ai_description": "AI uncovers a game-changing molecule that mimics Ozempic's effects.",
+    "urls": [
+      "https://www.statnews.com/2026/04/13/erectile-dysfunction-cardiovascular-disease-dementia-risk/",
+      "https://www.sciencedaily.com/releases/2026/04/260412221946.htm",
+      "https://www.iowaparkleader.com/gray-hair-could-be-your-bodys-most-surprising-warning-sign-scientists-say/"
+    ],
+    "url_to_image": "https://www.statnews.com/wp-content/uploads/2026/04/AdobeStock_1539626201-1024x576.jpeg",
+    "category": "general",
+    "topic": "Erectile Dysfunction Risks",
+    "summary": "As a board-certified urologist specializes in male sexual dysfunction, erectile dysfunction (ED) is often viewed as more than a sexual issue. Researchers at Stanford Medicine have identified a naturally occurring molecule that mimics the weight loss effects of semaglutide, also known as Ozempic. This molecule was discovered using artificial intelligence and has shown promise in animal studies for weight loss without the unpleasant side effects associated with Ozempic. Gray hair can also serve as an indicator of the body's inner defenses, reflecting cellular stress responses rather than simply being a sign of aging. Scientists have found that gray hair can hint at the body's hard work in responding to stress. The discovery of the molecule and the role of gray hair in indicating bodily stress are recent findings, with the molecule's discovery attributed to scientists at Stanford Medicine. These findings have the potential to impact various fields, including men's health, weight loss treatments, and our understanding of the human body's defense mechanisms.\n\n* The discovery of a naturally occurring molecule that mimics the weight loss effects of Ozempic could revolutionize weight loss treatments by providing a potentially side-effect-free alternative.\n* Erectile dysfunction is a complex issue that affects not only sexual health but also overall well-being, highlighting the need for comprehensive treatment approaches.\n* Gray hair can serve as a warning sign for the body's inner defenses, indicating that cellular stress responses are at work and potentially signaling underlying health issues.",
+    "5ws": "Who: Denise Asafu-Adjei, Stanford scientists\nWhat: Research on erectile dysfunction, weight loss, aging\nWhen: April 12-13, 2026\nWhere: Stanford Medicine, online platforms\nWhy: Understanding health risks, developing new treatments",
+    "likeIm5": "Imagine a big health fair where \"The STAT Squad\" and \"The Stanford Scientists\" are trying to help people with problems like erectile dysfunction. They're like the playground helpers, making sure everyone can play together happily and healthily. \"The Iowa Park Leader\" is also joining in, saying that even gray hair can be a warning sign. They all want to find the best ways to keep our bodies strong and healthy, like winning a big game."
+  },
+  {
+    "source_names": [
+      "Forbes",
+      "Wealthofgeeks.com",
+      "Deadline",
+      "Entertainment Weekly"
+    ],
+    "authors": [
+      "Paul Tassi",
+      "Sylvia Aderonke",
+      "Natalie Oganesyan",
+      "https://www.facebook.com/entertainmentweekly"
+    ],
+    "ai_title": "Euphoria Season 3 Premiere Details",
+    "ai_description": "Euphoria Season 3 shatters expectations with tribute to late actor Angus Cloud.",
+    "urls": [
+      "https://www.forbes.com/sites/paultassi/2026/04/13/new-details-on-the-pitt-season-3-release-date-time-jump-dr-mohan-exit/",
+      "https://wealthofgeeks.com/euphoria-season-3-sparks-fury-after-sydney-sweeneys-cassie-arc-takes-controversial-turn/",
+      "http://deadline.com/2026/04/euphoria-season-3-premiere-dedication-angus-cloud-eric-dane-1236858725/",
+      "https://ew.com/euphoria-season-3-premiere-what-happens-after-time-jump-11945740"
+    ],
+    "url_to_image": "https://imageio.forbes.com/specials-images/imageserve/69cfb57e3976baac71bf3386/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+    "category": "entertainment",
+    "topic": "Euphoria Season 3",
+    "summary": "The television series \"The Pitt\" and \"Euphoria\" have recently been in the news with their respective season updates. Euphoria's third season has started, and it has paid tribute to late actor Eric Dane. The season premiere of Euphoria also addressed the fate of a character named Fez. Additionally, the show has taken a controversial turn with a character arc involving Sydney Sweeney's Cassie. The third season of Euphoria has undergone a significant time jump of about five years. The show's creator, Sam Levinson, has been instrumental in shaping the narrative of the series. Euphoria's season 3 premiere has been notable for its tributes to actors Angus Cloud, Eric Dane, and Kevin Turen, who have passed away.\n\n* The third season of Euphoria has paid tribute to late actor Eric Dane, who was part of the TV series Grey's Anatomy.\n* The season premiere of Euphoria addressed the fate of a character named Fez, following a significant time jump of about five years.\n* The show has taken a controversial turn with a character arc involving Sydney Sweeney's Cassie, sparking intense discussion among viewers.",
+    "5ws": "Who: Euphoria cast, Sam Levinson\nWhat: Season 3 premiere, time jump\nWhen: April 2026\nWhere: HBO, streaming platforms\nWhy: Continuation of drama series",
+    "likeIm5": "Imagine a big playground where the \"Euphoria Team\" is getting ready for a new season. The \"Storyteller Squad,\" led by Sam Levinson, is working hard to make it exciting. The \"Actor All-Stars,\" including Zenday and Sydney Sweeney, are joining forces to tell an important story about growing up and helping each other. Their big goal is to make people think and feel happy, like winning a big game."
+  },
+  {
+    "source_names": [
+      "Neurosciencenews.com",
+      "Eatingwell.com",
+      "Vice News"
+    ],
+    "authors": [
+      "Neuroscience News",
+      "https://www.facebook.com/EatingWell/",
+      "Luis Prada"
+    ],
+    "ai_title": "Plant Based Diet Lowers Dementia Risk",
+    "ai_description": "Incorporating plant-based foods slows aging.",
+    "urls": [
+      "https://neurosciencenews.com/plant-based-diet-dementia-30507/",
+      "https://www.eatingwell.com/5-plant-based-proteins-for-the-mediterranean-diet-11943873",
+      "http://www.vice.com/en/article/eat-this-food-every-day-to-slow-how-fast-youre-aging/"
+    ],
+    "url_to_image": "https://neurosciencenews.com/files/2026/04/diet-dementia-neurosceince.jpg",
+    "category": "health",
+    "topic": "Healthy Plant-Based Eating",
+    "summary": "A recent study of nearly 93,000 people over 11 years investigated the link between plant-based diets and Alzheimer's disease, highlighting the importance of choosing the right plants. The Mediterranean diet, which focuses on whole, minimally processed foods like fruits, vegetables, whole grains, legumes, nuts, and healthy fats, is often praised for its heart-health benefits. Researchers found that high-quality plant foods can lower dementia risk, while unhealthful plant diets may increase it. A U.S. study of almost 5,000 people linked plant-based diets to slower biological aging. The quality of a plant-based diet is crucial for brain health and overall well-being. Incorporating plant-based proteins, such as those found in the Mediterranean diet, can provide essential nutrients and fiber. According to recent findings, even a modest shift in diet to include more plant-based foods can lead to slower aging.\n\n* High-quality plant-based diets have been linked to a lower risk of dementia and Alzheimer's disease.\n* The Mediterranean diet, which emphasizes whole, minimally processed foods, can provide numerous health benefits, including slower biological aging.\n* Incorporating plant-based proteins and foods into one's diet, even in modest amounts, can have a significant impact on overall health and aging.",
+    "5ws": "Who: Researchers, health experts\nWhat: Plant-based diets lower dementia risk\nWhen: Published April 2026\nWhere: Online health platforms\nWhy: Promote brain health, slow aging",
+    "likeIm5": "Imagine a big team effort to stay healthy. The \"Brain Heroes\" like Neuroscience News and EatingWell are working together to find the best foods to eat. They're like the \"Food Falcons\" and the \"Healthy Hawks\" on a mission to help people make good choices. The goal is to lower the risk of dementia and keep our brains strong, just like winning a big game."
+  },
+  {
+    "source_names": [
+      "The Washington Post",
+      "Daily Beast"
+    ],
+    "authors": [
+      "Ellen Francis",
+      "Harry Thompson"
+    ],
+    "ai_title": "Global Leaders Face Election Defeats",
+    "ai_description": "Hungarian prime minister suffers resounding election defeat.",
+    "urls": [
+      "https://www.washingtonpost.com/world/2026/04/13/eu-hungary-viktor-orban-defeated/",
+      "https://www.thedailybeast.com/barack-obama-twists-the-knife-after-jd-vances-humiliation/"
+    ],
+    "url_to_image": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/HFRIDEJXTW42HOXUFHHN27LAIA_size-normalized.jpg&w=1440",
+    "category": "general",
+    "topic": "Hungary Orban Election",
+    "summary": "In Brussels, Hungarian Prime Minister Viktor Orban, known for his illiberal Christian democracy stance, suffered a significant election defeat. This defeat has been met with relief from the European Union, as Orban had been obstructing EU policies. Former US President Barack Obama commented on the situation, referencing the Trump administration's failure. The Trump administration had sent Vice President JD Vance to Europe, but his trip was not successful. Orban's election defeat is a significant development in European politics, with implications for the EU's policies and relations with Hungary. The EU has been working to implement its policies, and Orban's defeat may facilitate this process. The situation is being closely watched, with many leaders, including Barack Obama, weighing in on the implications of Orban's defeat.\n\n* The European Union is expected to pursue its policies more effectively with Orban out of office, as he was a major obstacle to their implementation.\n* The US Vice President JD Vance's trip to Europe was unsuccessful, which may have implications for US-EU relations.\n* Former US President Barack Obama's comments on the situation highlight the significance of Orban's defeat and its potential impact on global politics.",
+    "5ws": "Who: Viktor Orban, Hungarian Prime Minister \nWhat: Lost election to EU-backed opponent \nWhen: April 13, 2026 \nWhere: Hungary \nWhy: EU policies opposition",
+    "likeIm5": "Imagine this: The European Team, led by friends like The Brussels Squad, just played a big game against The Hungarian Hero, Viktor Orban. The New York Jets-like team, with friends Barack Obama and JD Vance, watched as Viktor lost. The big why: they all want to make the world a better place, and Viktor's loss helps The Brussels Squad make good choices for everyone."
   },
   {
     "source_names": [
@@ -130,7 +453,7 @@
       "Edward White"
     ],
     "ai_title": "Iran War Impacts Global Economy",
-    "ai_description": "War in Iran shatters US economic dominance.",
+    "ai_description": "War with Iran shatters US economic dominance.",
     "urls": [
       "https://www.fool.com/investing/2026/04/12/donald-trump-actions-iran-damage-to-stock-market/",
       "https://apnews.com/article/oil-shocks-inflation-energy-stagflation-1970s-f12d886ce8af46862ad69be98f75a5d0",
@@ -144,9 +467,115 @@
     "url_to_image": "https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F864584%2Fpresident-donald-trump-white-house-photo-state-union-congress.jpg&w=1200&op=resize",
     "category": "business",
     "topic": "Iran War Economic Impact",
-    "summary": "The current global economic situation is being impacted by various factors, including the Iran war and surging oil prices. The Dow Jones Industrial Average and S&P 500 have experienced fluctuations in recent years. The world economy is experiencing a similarity to the 1970s, with oil prices rising due to war in the Middle East, driving up gasoline, diesel, and jet fuel costs. The United States and other countries are feeling the effects of economic warfare, which is no longer dominated by the US. The Strait of Hormuz, a vital waterway, is having difficulty reopening, affecting oil and cargo shipments. Tribally owned gas stations in the US are exempt from state fuel taxes, allowing them to sell fuel at lower prices. The global economy is facing challenges, including supply chain disruptions and volatility in the financial markets, as reported by reputable sources such as the Associated Press, The Washington Post, and the Financial Times.\n\n* The Iran war is driving up oil prices, affecting the global economy and potentially leading to stagflation.\n* The US and other countries are experiencing the effects of economic warfare, which is no longer dominated by the US.\n* Tribally owned gas stations in the US are offering cheaper fuel options due to their exemption from state fuel taxes.",
-    "5ws": "Who: US, Iran, China, Wall Street banks\nWhat: Iran war disrupts global economy\nWhen: April 2026\nWhere: Middle East, global markets\nWhy: Economic instability, oil price surge",
-    "likeIm5": "Imagine a big playground where countries are teams. The \"Iran Warriors\" and the \"US Eagles\" are playing a high-stakes game, affecting the whole playground. Coach Donald Trump, Player Paul Krugman, and the \"China Dragons\" team are involved. The goal is to keep the playground economy safe and help everyone have enough energy and resources to play happily."
+    "summary": "The current global economic situation is being impacted by the Iran war, which has led to a surge in oil prices, reminiscent of the 1970s. The Dow Jones Industrial Average and S&P 500 have been affected, with the stock market experiencing fluctuations. The United States and other countries are feeling the effects of economic warfare, with China and Iran exerting control over key supply chains. The Strait of Hormuz, a vital waterway, has been affected, leading to difficulties in reopening and returning to normal. The Iran war has also driven up gas prices, with some tribally owned gas stations offering cheaper fuel due to exemptions from state fuel taxes. The global economy is experiencing a disorienting flashback to the 1970s, with threats of stagflation and monetary hegemony. The situation is complex, with multiple factors at play, including the actions of President Donald Trump and the responses of other countries.\n\n* The Iran war has led to a surge in oil prices, causing economic instability and threatening a return to stagflation.\n* The United States and other countries are vulnerable to economic warfare, with China and Iran exerting control over key supply chains.\n* The global economy is experiencing a disorienting flashback to the 1970s, with the Strait of Hormuz playing a critical role in the current shipping woes and high oil prices.",
+    "5ws": "Who: US, Iran, China, Wall Street banks\nWhat: Iran war disrupting global economy\nWhen: April 2026\nWhere: Middle East, US, global markets\nWhy: Economic instability, oil price surge",
+    "likeIm5": "Imagine a big playground where countries like the \"US Patriots\" and \"China Dragons\" are playing a game of tag with oil prices. The \"Iran Hawks\" and \"President Donald Trump's Team\" are involved, and their actions are making the game very challenging. The goal is to keep the playground safe and affordable for everyone, and teams like the \"PBS News Squad\" and \"Paul Krugman's Economic Experts\" are working together to find a solution."
+  },
+  {
+    "source_names": [
+      "CNBC",
+      "OilPrice.com",
+      "Associated Press",
+      "Fortune",
+      "Business Insider",
+      "Al Jazeera English",
+      "The Washington Post",
+      "Business Insider"
+    ],
+    "authors": [
+      "Spencer Kimball",
+      "Kurt Cobb",
+      "Chan Ho-him, Aniruddha Ghosal, Anton L. Delgado",
+      "Eleanor Pringle",
+      "William Edwards, Jennifer Sor",
+      "John Power",
+      "Natalie Allison",
+      "Lauren Edmonds, Lakshmi Varanasi"
+    ],
+    "ai_title": "Iran War Disrupts Global Oil Markets",
+    "ai_description": "War ravages Middle East, igniting global energy shock.",
+    "urls": [
+      "https://www.cnbc.com/2026/04/13/iran-war-oil-opec-production-decline.html",
+      "https://oilprice.com/Energy/Energy-General/The-Strait-of-Hormuz-Crisis-Exposes-a-Fatal-Flaw-in-Economic-Thinking.html",
+      "https://apnews.com/article/iran-middle-east-war-energy-asia-china-05d198d6e8dc99d0209dddfff26ae52a",
+      "https://fortune.com/2026/04/13/investors-write-off-fed-rate-cut-iran-inflation/",
+      "https://www.businessinsider.com/where-to-invest-10000-right-now-iran-war-stock-market-2026-4",
+      "https://www.aljazeera.com/economy/2026/4/13/why-oil-prices-arent-what-you-think-and-what-it-means-for-global-supply",
+      "https://www.washingtonpost.com/politics/2026/04/12/jd-vance-inside-iran-negotiations/",
+      "https://www.businessinsider.com/imf-director-shock-from-us-iran-war-baked-into-economy-2026-4"
+    ],
+    "url_to_image": "https://image.cnbcfm.com/api/v1/image/105249533-RTX67GXM.jpg?v=1691390990&w=1920&h=1080",
+    "category": "business",
+    "topic": "Iran War Energy Crisis",
+    "summary": "The Iran war has significantly impacted crude oil production in the major Gulf Arab exporters, with Iraq experiencing a 61% collapse in production, according to data released by OPEC. The war has disrupted global energy supplies, exposing the fragility of fossil fuel systems and accelerating interest in electric vehicles and clean technologies. China is poised to benefit from the war as it promotes a renewable energy future. The conflict has also affected the global economy, with the International Monetary Fund director stating that the impact of the war is already \"baked\" into the economy. The war has been ongoing for 43 days, causing damage that could take years to repair. The Strait of Hormuz has been a point of tension, with damaged oil hubs and disrupted oil exports. The economic impact of the war is being closely monitored, with investors and analysts assessing the effects on inflation, labor markets, and global supply.\n\n* The war in Iran has led to a significant decline in crude oil production in the Gulf Arab states, with Iraq's production collapsing by 61%.\n* The conflict has accelerated the shift towards clean technologies and renewable power, with China poised to benefit from this trend.\n* The economic impact of the war is already being felt, with the IMF director stating that the shock is \"baked\" into the economy, and investors and analysts closely monitoring the effects on inflation, labor markets, and global supply.",
+    "5ws": "Who: US, Israel, Iran, OPEC, China\nWhat: Iran war disrupts oil production\nWhen: April 2026, 43 days into conflict\nWhere: Middle East, Strait of Hormuz\nWhy: Global energy crisis, economic instability",
+    "likeIm5": "Imagine this: a big energy crisis is happening. The \"Oil Team\", led by people like Spencer Kimball and Kurt Cobb, are working hard to fix the problem. They're like the playground monitors trying to keep everything running smoothly. Vice President JD Vance, the \"Peace Negotiator\", is talking to Iran to try to stop the war. The goal is to help everyone have enough energy and to keep the world safe and happy."
+  },
+  {
+    "source_names": [
+      "Deadline",
+      "Hollywood Reporter"
+    ],
+    "authors": [
+      "Glenn Garner",
+      "Mike Barnes"
+    ],
+    "ai_title": "John Nolan Dies At 87",
+    "ai_description": "Actor John Nolan, uncle of Christopher Nolan, dies at 87.",
+    "urls": [
+      "http://deadline.com/2026/04/john-nolan-dies-87-1236858232/",
+      "http://www.hollywoodreporter.com/movies/movie-news/john-nolan-batman-person-of-interest-1236561770/"
+    ],
+    "url_to_image": "https://deadline.com/wp-content/uploads/2026/04/GettyImages-496198276.jpg?w=1024",
+    "category": "entertainment",
+    "topic": "John Nolan Death",
+    "summary": "John Nolan, a British theater veteran and actor, has passed away at the age of 87. He was the uncle of acclaimed directors Christopher Nolan and Jonathan Nolan. Nolan had a notable career, appearing in films such as \"The Dark Knight Rises\" and the CBS drama \"Person of Interest\". He was also a member of the Royal Shakespeare Company and the National Theatre, showcasing his versatility as a performer. John Nolan's death was reported by the Stratford-upon-Avon community, where he had ties. The exact date of his death was not specified, but it was reported to have occurred on a Saturday. As of 2026, John Nolan's legacy includes his contributions to the world of theater and film, with his nephews continuing to make waves in the entertainment industry.\n\n* John Nolan was 87 years old at the time of his death.\n* He appeared in notable films and TV shows, including \"The Dark Knight Rises\" and \"Person of Interest\".\n* Nolan was a member of the Royal Shakespeare Company and the National Theatre, highlighting his extensive background in theater.",
+    "5ws": "Who: John Nolan, actor and uncle of Christopher and Jonathan Nolan.\nWhat: Died at 87, veteran of film and theater.\nWhen: April 11, 2026.\nWhere: Stratford-upon-Avon, likely his residence.\nWhy: Natural end of life, notable career legacy.",
+    "likeIm5": "Imagine this: a famous actor, \"The Batman Star,\" John Nolan, has passed away at 87. He worked with his nephews, \"The Movie Makers,\" Christopher and Jonathan Nolan, on big projects like \"The Dark Knight Rises.\""
+  },
+  {
+    "source_names": [
+      "NBC News",
+      "Forbes"
+    ],
+    "authors": [
+      "Marlene Lenthang",
+      "Conor Murray"
+    ],
+    "ai_title": "Blake Lively Trial Updates",
+    "ai_description": "Baldoni takes the stand amidst gutted harassment claims.",
+    "urls": [
+      "https://www.nbcnews.com/pop-culture/pop-culture-news/justin-baldoni-seeks-block-jenny-slate-colleen-hoover-evidence-blake-l-rcna301270",
+      "https://www.forbes.com/sites/conormurray/2026/04/10/justin-baldoni-will-testify-in-blake-lively-trial-court-filing-says/"
+    ],
+    "url_to_image": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2025-06/250609-blake-lively-justin-baldoni-vl-232p-6d091b.jpg",
+    "category": "entertainment",
+    "topic": "Justin Baldoni Blake Lively Trial",
+    "summary": "The \"It Ends With Us\" legal case involves a lawsuit filed by actress Blake Lively against actor-director Justin Baldoni. The lawsuit alleges an alleged smear campaign and includes claims of sexual harassment and defamation. A judge has already dismissed most of Lively's claims against Baldoni. Recently, Baldoni filed a request with the court to block evidence from co-star Jenny Slate and author Colleen Hoover. This development is part of the ongoing legal proceedings between Baldoni and Lively. The case is set to go to trial, with Baldoni planning to testify on his own behalf. According to court filings, Baldoni's testimony will be a key part of his defense against the remaining claims.\n\n* Justin Baldoni has asked a judge to block evidence from Jenny Slate and Colleen Hoover in the trial.\n* A judge has already dismissed most of Blake Lively's claims against Justin Baldoni, including sexual harassment and defamation.\n* Justin Baldoni plans to take the witness stand to testify in his own defense when the case goes to trial.",
+    "5ws": "Who: Justin Baldoni, Blake Lively, Jenny Slate, Colleen Hoover\nWhat: Baldoni seeks to block evidence in Lively trial\nWhen: April 2026\nWhere: US Court\nWhy: Defend against smear campaign allegations",
+    "likeIm5": "Imagine this, a big trial is happening with \"The Movie Makers\" team, including \"The Leading Lady\" Blake Lively and \"The Co-Star\" Justin Baldoni, who are like teammates on a playground. \"The Co-Star\" wants to block evidence from \"The Funny Friend\" Jenny Slate and \"The Book Author\" Colleen Hoover, to help his case and find the truth."
+  },
+  {
+    "source_names": [
+      "Yahoo Entertainment",
+      "Hollywood Reporter"
+    ],
+    "authors": [
+      "Neia Balao",
+      "Chris Gardner"
+    ],
+    "ai_title": "Coachella 2026 Faces High Demand And Controversy",
+    "ai_description": "Bieber lets fans control his setlist, sparking division.",
+    "urls": [
+      "https://www.yahoo.com/entertainment/music/live/coachella-2026-karol-g-headlines-day-3-after-justin-biebers-laptop-set-divides-the-internet-165257249.html",
+      "http://www.hollywoodreporter.com/news/general-news/coachella-news-airbnb-brand-trips-cancelled-influencers-1236561666/"
+    ],
+    "url_to_image": "https://s.yimg.com/ny/api/res/1.2/xLOFYipRN4KoHKPzGMpvuQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04NTE7Y2Y9d2VicA--/https://d29szjachogqwa.cloudfront.net/images/2026-04/2686ac03-0ab7-44b9-8681-5b7c44a1e8bc",
+    "category": "entertainment",
+    "topic": "Justin Bieber Coachella",
+    "summary": "The Coachella Valley music festival, held in Indio, California, commenced on a Friday in 2026, with an estimated 125,000 people in attendance. The 2026 edition of the festival featured various performances, including a unique set by Justin Bieber. Justin Bieber performed at the festival, but instead of a traditional concert, he set up a MacBook onstage and allowed YouTube commenters to vote on his setlist. This unconventional approach resulted in a divided response from fans. The festival, also referred to as \"Bieberchella,\" is a prominent event in the music industry. Coachella 2026 featured multiple headlining acts, including Karol G, who performed on Day 3. The festival's organizer and location are notable for their ability to attract large crowds and high-profile performers.\n\n* The 2026 Coachella festival took place in Indio, California, with an estimated 125,000 attendees.\n* Justin Bieber's performance at the festival allowed YouTube commenters to decide his setlist.\n* Karol G headlined Day 3 of the Coachella 2026 festival.",
+    "5ws": "Who: Justin Bieber, Karol G\nWhat: Coachella 2026 music festival\nWhen: April 2026 \nWhere: Indio, California\nWhy: Annual music festival showcasing artists",
+    "likeIm5": "Imagine this: Justin Bieber, the Superstar Singer, and Karol G, the Amazing Musician, are like the cool kids at school. They're performing at a big festival called Coachella, where everyone wants to have fun and listen to great music. The Coachella Team, led by organizers, is like the school principal, making sure everything runs smoothly."
   },
   {
     "source_names": [
@@ -169,9 +598,75 @@
     "url_to_image": "https://www.rollingstone.com/wp-content/uploads/2026/04/JustinBieberCoachella2026-1.jpg?w=1600&h=900&crop=1",
     "category": "entertainment",
     "topic": "Justin Bieber Coachella Performance",
-    "summary": "Justin Bieber performed at Coachella in 2026, marking a significant moment in his return to the stage. His set included surprise guests such as the Kid Laroi, Dijon, Wizkid, and Mk.gee. Bieber has been a frequent guest and audience member at the desert festival, Coachella. He performed a mixed bag of a set, which was described as \"messy\" and \"swag-heavy\". Bieber's performance was a headline turn at this year's Coachella on Saturday. He has been making a slow-walked return to the stage following a turbulent few years. Bieber's set at Coachella was an important moment in his career, welcoming him back as a shirt-optional crowd-pleaser.\n\n* Justin Bieber's Coachella performance included surprise guests the Kid Laroi, Dijon, Wizkid, and Mk.gee, making it a notable event in his return to the stage.\n* Bieber's set was described as a mixed bag, with some describing it as \"messy\" and \"swag-heavy\", indicating a varied reception from the audience.\n* The performance marked an important moment in Bieber's slow-walked return to the stage, following a turbulent few years, and welcoming him back as a festival performer.",
-    "5ws": "Who: Justin Bieber\nWhat: Headlines Coachella music festival\nWhen: Saturday, April 2026\nWhere: Coachella, Indio, California\nWhy: Marks Bieber's return to stage performance",
-    "likeIm5": "Imagine this, kids. Justin Bieber, the \"Music Star,\" performed a big show at Coachella with friends like \"The Kid Laroi Crew\" and \"The Wizkid Team.\" It's like a big playground where everyone comes to have fun and show off their talents. Justin wants to make people happy with his music and have a great time with his friends, making this a special day for everyone."
+    "summary": "Justin Bieber performed at Coachella on Saturday, marking an important moment in his return to the stage. He has been a frequent guest and audience member at the festival in the past. Bieber's set included surprise guests, such as the Kid Laroi, Dijon, Wizkid, and Mk.gee. The performance was a mixed bag, according to some reports. Justin Bieber has been slowly returning to the stage after a turbulent few years. His Coachella performance was significant, given his reclusive nature in recent times. Bieber's festival appearance is notable, as he will be a shirt-optional crowd-pleaser for the first time in several years.\n\n* Justin Bieber's Coachella set featured surprise guests, including the Kid Laroi, Dijon, Wizkid, and Mk.gee.\n* The performance was a mixed bag, indicating a varied reaction from the audience.\n* Bieber's return to the stage at Coachella marks an important moment in his slow-walked comeback following a turbulent few years.",
+    "5ws": "Who: Justin Bieber\nWhat: Headlines Coachella festival\nWhen: Saturday, April 2026\nWhere: Coachella, Indio, California\nWhy: Marks Bieber's return to stage performance",
+    "likeIm5": "Imagine this: Justin Bieber, the Superstar Singer, is back on stage at Coachella. The Rolling Stone Reporter, Jeff Miller, and the TMZ Team are watching as he performs with friends like The Kid Laroi and Wizkid. They're like a team working together to make the best show, and Justin's goal is to make everyone happy with his music."
+  },
+  {
+    "source_names": [
+      "PEOPLE",
+      "Daily Beast"
+    ],
+    "authors": [
+      "Desiree Anello",
+      "Muskaan Arshad"
+    ],
+    "ai_title": "Lauren Sanchez Bezos Opens Up",
+    "ai_description": "Former news anchor shatters norms with blended family of seven.",
+    "urls": [
+      "https://people.com/lauren-sanchez-bezos-says-she-would-have-a-baby-tomorrow-with-husband-jeff-bezos-11948263",
+      "https://www.thedailybeast.com/lauren-sanchez-bezos-reveals-her-cringe-morning-routine-with-jeff-bezos/"
+    ],
+    "url_to_image": "https://s.yimg.com/ny/api/res/1.2/k_zD8qyhynGmyJrGtxt7SQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA7Y2Y9d2VicA--/https://media.zenfs.com/en/people_218/a8f680a85e803de0ecfb63deb6826382",
+    "category": "business",
+    "topic": "Lauren Sanchez Bezos",
+    "summary": "Lauren Sánchez Bezos, the 56-year-old wife of Jeff Bezos, 62, has expressed her desire to have a baby with her husband. The couple, who got married in June 2025, already share a blended family of seven kids from previous relationships. Jeff Bezos, the founder of Amazon, is currently the world's third-richest man. Lauren Sánchez Bezos, a former news anchor, has spoken to The New York Times about her life with her husband. She has stated that she would have a baby tomorrow with Jeff Bezos, indicating her willingness to expand their family. Lauren Sánchez Bezos has also shared her morning routine with her husband, which she describes as a unique ritual. The couple's marriage and family life have been subject to media attention, with Lauren Sánchez Bezos being open about her experiences as the wife of a high-profile businessman.\n\n* Lauren Sánchez Bezos and Jeff Bezos have a blended family of seven kids from previous relationships.\n* The couple got married in June 2025, and Lauren Sánchez Bezos has expressed her desire to have a baby with her husband.\n* Jeff Bezos, the founder of Amazon, is currently the world's third-richest man, and his personal life, including his marriage and family, has been subject to media attention.",
+    "5ws": "Who: Lauren Sánchez Bezos, Jeff Bezos\nWhat: Expresses desire for another child\nWhen: April 2026\nWhere: Unknown, likely their residence\nWhy: Personal family expansion goal",
+    "likeIm5": "Imagine this, friends. Lauren, the Happy Mom, and her husband Jeff, the Space Explorer, want a new baby to join their big family of seven kids. They're like a happy school team, working together with friends like The New York Times squad and The Daily Beast club, to share their exciting news with everyone."
+  },
+  {
+    "source_names": [
+      "westsiderag.com",
+      "CBS News"
+    ],
+    "authors": [
+      "Laura Muha",
+      "Cristian  Benavides"
+    ],
+    "ai_title": "Avian Influenza Spreads In New York City",
+    "ai_description": "\"Lynette Hooker vanished after declaring her marriage 'bad' and untenable.\"",
+    "urls": [
+      "https://www.westsiderag.com/2026/04/13/monday-bulletin-avian-influenza-on-the-rise-in-nyc-chef-who-helped-put-uws-on-culinary-map-dies-after-short-illness-uws-activist-still-burns-after-50-years-uws-april-real-estate-sales-off-to",
+      "https://www.cbsnews.com/news/lynette-hooker-husband-brian-messages/"
+    ],
+    "url_to_image": "https://www.westsiderag.com/wp-content/uploads/2026/04/IMG_2801-1-scaled-e1776034379609.jpg",
+    "category": "health",
+    "topic": "Lynette Hooker Death",
+    "summary": "As of April 13, 2026, the forecast indicates mostly cloudy skies with a high of 77 degrees. On this day, various news stories are emerging, including the rise of avian influenza in NYC and the passing of a prominent chef. Lynette Hooker, who has been in the news, had sent messages to a friend in 2024 expressing concerns about her husband Brian Hooker, stating \"I can't be out there with him\" after a temporary split. These messages were sent two years prior to her disappearance. The couple had gotten back together after the split, during which Lynette had mentioned that their marriage was troubled. The details of Lynette Hooker's life and disappearance are being reported by various news outlets, including CBS News. The current year's events, including real estate sales and flower blooms in Central Park, are also being covered in the news.\n\n* The rise of avian influenza in NYC is a current health concern as of 2026.\n* Lynette Hooker had expressed concerns about her husband Brian Hooker in messages to a friend in 2024.\n* A prominent chef who contributed to the culinary scene on the Upper West Side has passed away after a short illness.",
+    "5ws": "Who: Lynette Hooker, Brian Hooker\nWhat: Avian influenza rises, chef dies, activist honored\nWhen: April 13, 2026\nWhere: New York City, USA\nWhy: Reporting local news, events, and health concerns",
+    "likeIm5": "Imagine this: The News Team, like The New York Jets, and The Health Heroes, are working together to fix a big problem. The Avian Influenza, like a big germ, is spreading, and they need to stop it. The News Team, with helpers like Laura Muha and Cristian Benavides, are sharing important information to keep everyone safe."
+  },
+  {
+    "source_names": [
+      "MovieWeb",
+      "Variety"
+    ],
+    "authors": [
+      "Rebecca Sargeant",
+      "Kennedy French"
+    ],
+    "ai_title": "Malcolm Revival Honors Original Cast",
+    "ai_description": "Caleb Ellsworth-Clark steps into Dewey role, feeling pressure.",
+    "urls": [
+      "https://movieweb.com/malcolm-in-the-middle-revival-pays-tribute/",
+      "https://variety.com/2026/tv/news/malcolm-in-the-middle-revival-fans-disappointed-dewey-1236719558/"
+    ],
+    "url_to_image": "https://static0.moviewebimages.com/wordpress/wp-content/uploads/2026/04/malcolm-in-the-middle_fllcl8-1.jpg?w=1600&h=900&fit=crop",
+    "category": "entertainment",
+    "topic": "Malcolm in the Middle Revival",
+    "summary": "The \"Malcolm in the Middle\" revival, titled \"Life's Still Unfair\", has been released, bringing back the beloved characters, but with some changes. Caleb Ellsworth-Clark took on the role of Dewey, a character originally played by Erik Per Sullivan. The revival pays tribute to late actors Daniel von Bargen, who played Spangler, and Kenneth Mars, who played Otto. The show's creators aimed to incorporate these characters in a meaningful way, despite the original actors' passing. Caleb Ellsworth-Clark acknowledged the pressure of taking on a well-known role and expressed concerns about disappointing fans. The revival has generated interest among fans and critics, with discussions around the show's ability to balance new and old elements. As of 2026, the \"Malcolm in the Middle\" revival is a notable example of a TV show reboot attempting to honor its original cast while introducing new talent.\n\n* The \"Malcolm in the Middle\" revival features Caleb Ellsworth-Clark as the new Dewey, replacing Erik Per Sullivan.\n* The show pays tribute to late actors Daniel von Bargen and Kenneth Mars, who played significant roles in the original series.\n* The revival aims to balance the inclusion of new characters and storylines while honoring the memory of the original cast members who have passed away.",
+    "5ws": "Who: Malcolm in the Middle cast, Caleb Ellsworth-Clark\nWhat: Revival with tribute to late actors\nWhen: 2026, April 11-12\nWhere: Streaming platforms, online\nWhy: Honor original actors, continue series legacy",
+    "likeIm5": "Imagine this: \"The Malcolm Team\" is like a playground crew trying to make a new, exciting game. They're bringing back old friends, but some, like \"The Funny Guys\" Daniel and Kenneth, can't join in. \"The New Dewey\" Caleb is nervous, like trying out for a big game, and wants to make the old friends proud."
   },
   {
     "source_names": [
@@ -189,7 +684,7 @@
       "Olivia Mitchell, cleveland.com"
     ],
     "ai_title": "Cancer Risk Linked To Marriage Status",
-    "ai_description": "Shatters marriage: Woman contracts HPV, cancer from cheating husband.",
+    "ai_description": "Shocking diagnosis: woman contracts cancer after husband's 30-year infidelity and HPV betrayal.",
     "urls": [
       "https://www.sfchronicle.com/health/article/aging-improvement-mindset-study-22198630.php",
       "https://people.com/woman-diagnosed-with-vulvar-cervical-anal-cancer-after-learning-her-husband-of-30-years-had-cheated-on-her-11943715",
@@ -200,9 +695,200 @@
     "url_to_image": "https://s.hdnux.com/photos/01/65/74/25/30917985/6/rawImage.jpg",
     "category": "health",
     "topic": "Marriage Status Cancer Risk",
-    "summary": "A recent study found that many older adults maintain or improve their cognitive or physical abilities over time, with mindset potentially playing a role in this trend. This research rejects the common narrative that physical and cognitive declines are inevitable with aging. In other news, a Florida woman was diagnosed with cancer of the vulva, cervix, and anus after learning her husband had given her human papillomavirus (HPV). According to a University of Miami study, adults who never married are significantly more likely to develop cancer. The study analyzed data from over 4 million Americans across 12 states. Luke Williams, a father and coach, is undergoing treatment at University Hospitals Seidman Cancer Center for advanced colorectal cancer. Researchers continue to explore the complex relationships between lifestyle, relationships, and cancer risk, with studies suggesting that marital status may have a surprising link to cancer risk.\n\n* A University of Miami study found that never-married adults are significantly more likely to develop cancer, based on an analysis of over 4 million people in 12 states.\n* A Florida woman was diagnosed with cancer of the vulva, cervix, and anus after contracting HPV from her husband, highlighting the importance of awareness and prevention of the virus.\n* Innovative treatments, such as those offered at University Hospitals Seidman Cancer Center, are helping patients like Luke Williams fight advanced cancer while maintaining their quality of life.",
-    "5ws": "Who: Researchers, cancer patients\nWhat: Cancer risk studies, surprising links found\nWhen: April 2026\nWhere: US, various cities\nWhy: Understanding cancer risk factors, improving health outcomes",
-    "likeIm5": "Imagine this: a big health challenge. The \"Medical Heroes\" team, like Catherine Ho and the \"University of Miami Squad\", are helping people understand how marriage and mindset can affect cancer risk. They're working with the \"Florida Woman's Story\" and the \"Cleveland Dad's Team\" to show that with the right treatment and support, people can fight cancer and win."
+    "summary": "A recent study found that many older adults maintain or improve their cognitive or physical abilities over time, with mindset potentially playing a role in this trend. This research challenges the common narrative that declines in physical and cognitive abilities are inevitable with aging. In other news, a Florida woman was diagnosed with cancer of the vulva, cervix, and anus after learning her husband had been cheating on her and had given her human papillomavirus (HPV). A separate study by the University of Miami discovered that adults who never married are significantly more likely to develop cancer. The study, which analyzed data from over 4 million Americans across 12 states, identified a clear link between marriage status and cancer risk. Luke Williams, a father and coach, is undergoing treatment at University Hospitals Seidman Cancer Center for advanced colorectal cancer, which has allowed him to continue coaching his daughter's sports teams. According to recent findings, innovative treatments and a positive mindset can help individuals with cancer, such as Luke Williams, manage their condition and maintain their quality of life.\n\n* A study of over 4 million Americans found that never-married adults are significantly more likely to develop cancer, suggesting a link between marriage status and cancer risk.\n* A Florida woman was diagnosed with cancer of the vulva, cervix, and anus after contracting HPV from her cheating husband, highlighting the importance of HPV prevention and screening.\n* Innovative cancer treatments, such as those used by Luke Williams at University Hospitals Seidman Cancer Center, can help individuals with advanced cancer manage their condition and maintain their quality of life.",
+    "5ws": "Who: Cancer patients, researchers, University of Miami\nWhat: Cancer risk linked to marriage status\nWhen: 2026, specifically April 11\nWhere: United States, multiple states\nWhy: Understanding cancer risk factors",
+    "likeIm5": "Imagine this: \"The Health Heroes\" like Catherine Ho and The San Francisco Chronicle team are on a mission to help people understand a big discovery. They found out that having a happy marriage can actually help keep us healthy, just like having a great team helps us win at recess. The \"Florida Fighters\" and The University of Miami squad are working together to spread the word, and their goal is to help everyone, especially The Never-Married Squad, to stay healthy and strong."
+  },
+  {
+    "source_names": [
+      "Sports Illustrated",
+      "New York Post"
+    ],
+    "authors": [
+      "Andy Nesbitt",
+      "Andrew Crane"
+    ],
+    "ai_title": "Masters Golf Controversy Unfolds",
+    "ai_description": "Garcia erupts at the Masters, sparking a code of conduct warning.",
+    "urls": [
+      "https://www.si.com/golf/masters/sergio-garcia-masters-fit-comments-driver",
+      "https://nypost.com/2026/04/13/sports/scottie-scheffler-thinks-decision-by-masters-bosses-cost-him-chance-at-green-jacket/"
+    ],
+    "url_to_image": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_216,w_3436,h_1932/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/ImagnImages/mmsport/si/01kp3c0p1m7mjaqh6gp5.jpg",
+    "category": "sports",
+    "topic": "Masters Golf Tournament",
+    "summary": "The 2026 Masters golf tournament was won by Rory McIlroy, who secured his second consecutive green jacket. The tournament featured a dramatic final round, with Scottie Scheffler, the world's number one golfer, playing two bogey-free rounds to nearly overcome a 12-shot deficit. Sergio Garcia received a code of conduct warning from a tournament official after losing his composure on the second hole on Sunday. Scheffler ultimately fell short, and McIlroy emerged as the champion. The Masters is one of the most prestigious golf tournaments, held annually in the United States. Garcia's incident occurred during the tournament, prompting a warning from officials. The 2026 Masters took place with notable performances from top golfers, including McIlroy and Scheffler, with McIlroy ultimately claiming the top prize.\n\n* Rory McIlroy won the 2026 Masters, earning his second consecutive green jacket.\n* Scottie Scheffler played two bogey-free rounds but was unable to overcome a 12-shot deficit to win the tournament.\n* Sergio Garcia received a code of conduct warning during the Masters after losing his composure on the second hole on Sunday.",
+    "5ws": "Who: Sergio Garcia, Rory McIlroy, Scottie Scheffler\nWhat: Masters Golf Tournament drama\nWhen: April 13, 2026\nWhere: Augusta, Georgia\nWhy: Determining golf's best player",
+    "likeIm5": "Imagine this: a big golf tournament like a super cool playground game. The \"Masters Magic Team\" with Sergio Garcia, Rory McIlroy, and Scottie Scheffler are playing to win a special green jacket. They want to be the best and get that jacket, but it's not easy, and sometimes they get upset like Sergio did."
+  },
+  {
+    "source_names": [
+      "On3.com",
+      "mlive.com"
+    ],
+    "authors": [
+      "Barkley Truax",
+      "Andrew Kahn | akahn1@mlive.com"
+    ],
+    "ai_title": "Michigan Extends Coach Dusty May",
+    "ai_description": "Dusty May inks contract extension with Michigan after winning national championship.",
+    "urls": [
+      "https://www.on3.com/college/michigan-wolverines/news/michigan-ad-warde-manuel-announces-dusty-may-extension-during-championship-parade/",
+      "https://www.mlive.com/wolverines/basketball/2026/04/michigan-athletic-director-dusty-may-will-remain-the-basketball-coach.html"
+    ],
+    "url_to_image": "https://on3static.com/uploads/dev/assets/cms/2026/04/07001204/USATSI_28674083_168401303_lowres.jpg",
+    "category": "sports",
+    "topic": "Michigan Basketball Coach",
+    "summary": "Michigan athletic director Warde Manuel announced that head coach Dusty May has received a contract extension during the Wolverines' national championship celebration. This event took place at Crisler Center on a Saturday. Warde Manuel made the announcement, confirming that Dusty May will remain with the school. Dusty May recently ended his second season at Michigan with a national championship. The contract extension was agreed upon by Dusty May and Warde Manuel. The announcement was made public during the championship parade. The terms of the contract extension have not been publicly disclosed as of 2026.\n\n* Head coach Dusty May has agreed to a contract extension with Michigan, as announced by athletic director Warde Manuel.\n* The contract extension was announced during the Wolverines' national championship celebration at Crisler Center.\n* Dusty May ended his second season at Michigan with a national championship, leading to the decision to extend his contract.",
+    "5ws": "Who: Dusty May, Warde Manuel, Michigan Wolverines\nWhat: Contract extension for Dusty May\nWhen: April 11, 2026\nWhere: Ann Arbor, Crisler Center\nWhy: Retain championship coach",
+    "likeIm5": "Imagine this, kids. The \"Wolverine Heroes\" are celebrating a big win with their coach, \"Coach Dusty.\" He's like a super cool teacher who helps them play basketball really well. The \"Athletic Director Wizard,\" Warde Manuel, announced that Coach Dusty gets to stay and lead the team for a longer time, making everyone happy."
+  },
+  {
+    "source_names": [
+      "Tipranks.com",
+      "The Information"
+    ],
+    "authors": [
+      "Solomon Oladipupo",
+      "Aaron Holmes"
+    ],
+    "ai_title": "Microsoft Expands OpenAI Enterprise Plans",
+    "ai_description": "Microsoft's Copilot challenges OpenClaw with new features.",
+    "urls": [
+      "https://www.tipranks.com/news/microsoft-stock-msft-defies-leaked-memo-claiming-it-limited-openais-enterprise-ambitions",
+      "https://www.theinformation.com/articles/microsoft-plots-new-copilot-features-inspired-openclaw"
+    ],
+    "url_to_image": "https://blog.tipranks.com/wp-content/uploads/2026/04/shutterstock_2258360631-750x406.jpg",
+    "category": "business",
+    "topic": "Microsoft Stock",
+    "summary": "Microsoft's shares rose on Monday morning despite an internal memo stating that the company's partnership with OpenAI has limited the startup's enterprise ambitions. The memo, seen by CNBC, highlights the complexities of the Microsoft-OpenAI relationship. Microsoft is a key investor in OpenAI, and their partnership has been crucial in the development of AI technologies. As of 2026, Microsoft faces growing competition from Anthropic for business customers. To stay competitive, Microsoft is developing new features for its AI assistant Copilot, inspired by OpenClaw, an open-source AI agent. The tech giant's shares edged higher, indicating investor confidence in the company's ability to navigate the changing AI landscape. Microsoft's efforts to enhance its AI capabilities, including the development of Copilot features, are likely driven by the need to maintain its market position in the AI industry.\n\n* Microsoft's shares rose despite a memo stating that the company's partnership with OpenAI has limited the startup's enterprise ambitions.\n* The company is developing new features for its AI assistant Copilot, inspired by OpenClaw, to stay competitive in the AI market.\n* Microsoft faces growing competition from Anthropic for business customers, driving the need for enhanced AI capabilities.",
+    "5ws": "Who: Microsoft, OpenAI, Anthropic\nWhat: Microsoft defies memo, develops Copilot\nWhen: April 13, 2026\nWhere: Global tech market\nWhy: Enhance AI capabilities, competitiveness",
+    "likeIm5": "Imagine a big playground where Microsoft, the \"Tech Titans,\" and OpenAI, the \"Brainy Bunch,\" are friends working together. Solomon, the \"News Navigator,\" and Aaron, the \"Tech Explorer,\" are watching their teams. The Tech Titans want to make their helper, Copilot, smarter like OpenClaw, to help others and win the game of making life easier."
+  },
+  {
+    "source_names": [
+      "Gizmodo.com",
+      "HODINKEE",
+      "The Conversation Africa",
+      "Phys.Org",
+      "The Times of India",
+      "Fox News",
+      "The Verge"
+    ],
+    "authors": [
+      "Ellyn Lapointe",
+      "Andy Hoffman",
+      "Art Cotterell",
+      "Phys.org",
+      "TOI Science Desk",
+      "CJ Womack",
+      "T.C. Sottek"
+    ],
+    "ai_title": "Artemis II Mission Completes Successful Spaceflight",
+    "ai_description": "Astronauts unveil flaws in Artemis II spacecraft.",
+    "urls": [
+      "https://gizmodo.com/nasa-administrator-sets-the-record-straight-on-that-missing-chunk-of-artemis-2s-heat-shield-2000745676",
+      "https://www.hodinkee.com/articles/the-breitling-navitimer-b02-chronograph-41-cosmonaute-artemis-ii-a-new-cosmonaute-just-back-from-spa",
+      "https://theconversation.com/as-artemis-ii-is-celebrated-the-world-faces-hard-questions-about-us-leadership-in-space-280371",
+      "https://phys.org/news/2026-04-artemis-ii-earthset-photo-iconic.html",
+      "https://timesofindia.indiatimes.com/science/astronomers-detect-mega-laser-beam-signal-from-8-billion-light-years-away/articleshow/130218711.cms",
+      "https://www.foxnews.com/media/artemis-ii-pilot-victor-glover-praises-god-return-says-mission-big-one-body",
+      "https://www.theverge.com/science/910730/this-artemis-ii-patch-is-sick"
+    ],
+    "url_to_image": "https://gizmodo.com/app/uploads/2026/04/Artemis-2-splashdown-Orion-1200x675.jpg",
+    "category": "science",
+    "topic": "NASA Artemis 2",
+    "summary": "The Artemis 2 mission, conducted by NASA, successfully returned to Earth after a crewed lunar fly-by, marking the first such achievement in over 50 years. The spacecraft, carrying astronauts including Victor Glover and Reid Wiseman, traveled the greatest distance yet from Earth, setting a new record. During reentry, the Orion capsule's heat shield protected the crew from extreme temperatures. The mission's success has sparked discussions about US leadership in space and the implications of international law on lunar exploration. Astronaut Victor Glover expressed gratitude and praised a higher power during a public appearance after the mission. The Artemis 2 mission has also been commemorated with the release of a new watch model, the Breitling Navitimer B02 Chronograph 41 Cosmonaute Artemis II. The mission's achievements and the crew's experiences have been widely reported and celebrated, with astronaut Reid Wiseman and other crew members wearing the new watch model during the mission.\n\n* The Artemis 2 mission marked the first crewed lunar fly-by in over 50 years, setting a new record for the greatest distance traveled by humans from Earth.\n* The mission has sparked discussions about US leadership in space and the implications of international law on lunar exploration, with some questioning the US approach to space governance.\n* The success of the Artemis 2 mission has been commemorated with the release of a new watch model, the Breitling Navitimer B02 Chronograph 41 Cosmonaute Artemis II, which was worn by astronaut Reid Wiseman and other crew members during the mission.",
+    "5ws": "Who: NASA, Artemis 2 crew\nWhat: Artemis 2 mission returns to Earth\nWhen: April 12, 2026\nWhere: Earth's orbit, lunar vicinity\nWhy: Test crewed lunar flyby mission",
+    "likeIm5": "Imagine astronauts like \"The Space Travelers\" team, including Victor Glover, Reid Wiseman, and the \"NASA Stars,\" flying super far from Earth on the Artemis 2 mission. They're like the school's best athletes working together to win a big game, trying to learn more about space and come back safely."
+  },
+  {
+    "source_names": [
+      "TribLIVE",
+      "Yahoo Entertainment"
+    ],
+    "authors": [
+      "Michael DiVittorio",
+      "Catherina Gioino"
+    ],
+    "ai_title": "Celebrities Attend Steel City Con",
+    "ai_description": "NASA's Artemis II crew sparks outrage with unusual request: Uncrustables.",
+    "urls": [
+      "https://triblive.com/aande/movies-tv/william-shatner-patricia-arquette-among-celebrities-at-steel-city-con-in-monroeville-this-weekend/",
+      "https://www.yahoo.com/news/articles/navy-confirmed-abundant-amount-uncrustables-214845102.html"
+    ],
+    "url_to_image": "https://assets-varnish.triblive.com/2026/04/9471971_web1_TE-SCCwShatner-041126.jpg",
+    "category": "technology",
+    "topic": "NASA Artemis II Mission",
+    "summary": "William Shatner, a renowned Hollywood actor, expressed his confidence in the safe return of astronauts from NASA's Artemis II mission to Earth after their lunar voyage. The Artemis II mission is a NASA spaceflight mission aimed at sending astronauts to the moon. NASA engineered a specialized menu for the mission, which includes barbecued beef brisket, broccoli au gratin, and vegetable quiche, among other items. The menu also features five types of hot sauce, catering to the astronauts' culinary preferences. Upon their return to Earth, the crew requested Uncrustables, a brand of frozen sandwiches. Smucker's, the manufacturer of Uncrustables, offered the astronauts a lifetime supply of the product. The Artemis II mission and its crew have garnered significant attention, with celebrities like William Shatner showing interest in their journey and safety.\n\n* The Artemis II mission is a NASA spaceflight mission aimed at sending astronauts to the moon, with a specialized menu designed for the crew.\n* The crew of the Artemis II mission requested Uncrustables upon their return to Earth and were offered a lifetime supply by Smucker's.\n* NASA spent months engineering the perfect menu for the Artemis II mission, which includes a variety of dishes such as barbecued beef brisket and vegetable quiche.",
+    "5ws": "Who: William Shatner, NASA astronauts, Patricia Arquette\nWhat: Artemis II mission to the moon\nWhen: 2026, exact dates not specified\nWhere: Moon, Monroeville, Pennsylvania\nWhy: Space exploration, scientific research",
+    "likeIm5": "Imagine this: brave astronauts, like the \"Space Explorers Team,\" are going to the moon. The \"NASA Navigator,\" William Shatner, thinks they'll return safely. Even the \"Snack Squad,\" like Smucker's, is helping with yummy Uncrustables. Their big goal is to explore and learn, making new discoveries to help everyone on Earth."
+  },
+  {
+    "source_names": [
+      "Push Square",
+      "IGN"
+    ],
+    "authors": [
+      "Stephen Tailby",
+      "Wesley Yin-Poole"
+    ],
+    "ai_title": "Naughty Dog Defends Crunch Culture Decision",
+    "ai_description": "Xbox veteran backs Naughty Dog's drastic shutdown of The Last of Us Online.",
+    "urls": [
+      "https://www.pushsquare.com/news/2026/04/naughty-dog-embraced-crunch-culture-after-the-last-of-us-as-its-what-it-takes-to-make-games-at-our-level",
+      "https://www.ign.com/articles/former-xbox-veteran-says-canceling-the-last-of-us-online-was-the-right-call-criticizes-naughty-dog-and-sony-for-green-lighting-it-in-the-first-place"
+    ],
+    "url_to_image": "https://images.pushsquare.com/118cd2b681168/large.jpg",
+    "category": "technology",
+    "topic": "Naughty Dog Crunch Culture",
+    "summary": "Naughty Dog, a highly valued development studio owned by Sony, is known for its intense work culture, often referred to as \"crunch culture,\" which involves extended working hours during specific periods of game production. This approach is seen as necessary by the studio to produce high-quality games. The studio's decision to cancel The Last of Us multiplayer game was met with surprise from the developers and the video game industry as a whole. The cancellation was deemed necessary by a former Xbox veteran, who shared their perspective on the matter. Naughty Dog's approach to game development is shaped by its goal to create games at a high level, which sometimes requires intense work periods. The studio's culture and decisions have significant implications for the video game industry, including the impact on developers and the quality of games produced. The cancellation of The Last of Us multiplayer game and Naughty Dog's approach to game development are notable events in the video game industry, with various stakeholders sharing their opinions on the matter.\n\n* The cancellation of The Last of Us multiplayer game had a significant impact on the video game industry, with many developers and players expressing surprise and disappointment.\n* Naughty Dog's crunch culture has been a subject of discussion, with some arguing that it is necessary to produce high-quality games, while others raise concerns about the well-being of developers.\n* The decision to cancel The Last of Us multiplayer game was supported by a former Xbox veteran, who shared their perspective on the matter, highlighting the complexities of game development and the tough decisions that studios like Naughty Dog face.",
+    "5ws": "Who: Naughty Dog, Sony\nWhat: Embraced crunch culture, canceled The Last of Us Online\nWhen: After 2013, recent comments in 2026\nWhere: Sony's studios, online platforms\nWhy: To maintain high game quality, prioritize projects",
+    "likeIm5": "Imagine a big playground where game makers like \"The Naughty Dog Team\" and \"The Sony Squad\" work together. \"Coach Stephen\" and \"Veteran Wesley\" are helping them make great games, but they're facing a challenge. The goal is to create the best games, like \"The Last of Us,\" and make people happy, but it's hard work and sometimes they have to work extra hours, like during a big playground competition."
+  },
+  {
+    "source_names": [
+      "The Denver Post",
+      "cleveland.com"
+    ],
+    "authors": [
+      "Bennett Durando",
+      "Chris Fedor, cleveland.com"
+    ],
+    "ai_title": "NBA Playoffs Seeds Remain Uncertain",
+    "ai_description": "Losses shatter Cavs' hopes for third spot.",
+    "urls": [
+      "https://www.denverpost.com/2026/04/11/nuggets-spurs-nba-playoff-scenarios-lakers-nikola-jokic/",
+      "https://www.cleveland.com/cavs/2026/04/cavs-locked-at-no-4-seed-as-playoff-opponent-remains-uncertain.html"
+    ],
+    "url_to_image": "https://www.denverpost.com/wp-content/uploads/2026/04/TDP-L-NUGGETS-GRIZZLIESA03_3130x.jpg?w=1024&h=668",
+    "category": "sports",
+    "topic": "NBA Playoffs",
+    "summary": "The National Basketball Association (NBA) regular season has concluded, with various teams securing their positions for the 2026 playoffs. The Oklahoma City Thunder finished in first place and chose to rest nine rotation players in their final game. In the Eastern Conference, the Cleveland Cavaliers have locked up the No. 4 seed. The Cavs' first-round opponent is still unknown due to the ongoing playoff seeding process. The Atlanta Hawks recently defeated the Cavaliers, while the New York Knicks secured a win against the Toronto Raptors. The Denver Nuggets and San Antonio Spurs played a significant regular-season finale, impacting playoff matchups and potential MVP ballots. As the playoff picture becomes clearer, teams are preparing for the 2026 NBA playoffs, with seedings and opponents being finalized.\n\n* The Cleveland Cavaliers have secured the No. 4 seed in the Eastern Conference for the 2026 NBA playoffs.\n* The Oklahoma City Thunder finished the regular season in first place, resting several key players in their final game.\n* The Denver Nuggets and San Antonio Spurs played a crucial regular-season finale, affecting playoff seedings and potential MVP considerations.",
+    "5ws": "Who: Nuggets, Timberwolves, Cavs, Knicks\nWhat: NBA playoff seeding\nWhen: April 2026\nWhere: Denver, Cleveland\nWhy: Determine playoff opponents",
+    "likeIm5": "Imagine this, kids. The Nuggets, the Thunder, and the Cavs are like superheroes in a big playground. Nikola Jokic, the strong Nuggets player, and his friends want to win and be the best. They're trying to figure out who they'll play next, like choosing a teammate for a big game."
+  },
+  {
+    "source_names": [
+      "Huskers.com",
+      "Huskers.com"
+    ],
+    "authors": [
+      "Unknown Author",
+      "Unknown Author"
+    ],
+    "ai_title": "Huskers Win Series Against Badgers",
+    "ai_description": "You haven't provided the array of short descriptions. Please provide the descriptions, and I'll synthesize them into a compelling sentence.",
+    "urls": [
+      "https://huskers.com/news/2026/04/11/six-run-fourth-inning-propels-huskers-to-series-win",
+      "https://huskers.com/news/2026/04/10/huskers-shut-down-badgers-on-friday"
+    ],
+    "url_to_image": "https://huskers.com/imgproxy/mFES0QkoHIROsO85XqNi-2-fYT3dUrLJNEkK3QK33P8/rs:fit:1980:0:0:0/g:ce:0:0/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2h1c2tlcnMtY29tLXByb2QvMjAyNi8wNC8xMS9Wam5BZ0xaOUl1V0V4Vk9Lc3F1THdpSUxCODh0TE5qRlY5aXRFaHoyLmpwZw.jpg",
+    "category": "sports",
+    "topic": "Nebraska Softball Team",
+    "summary": "The University of Nebraska softball team, also known as the Huskers, played against the Wisconsin Badgers in Madison, Wisconsin. The Huskers won two games, one on Friday night and one on Saturday afternoon. On Friday, they held the Badgers to two hits and secured a 5-0 shutout victory, improving their record to 31-6. The following day, the Huskers scored six runs in the fourth inning, resulting in a 6-0 win over the Badgers. This win improved their overall record to 32-6. The Huskers are currently ranked No. 7 in the nation. The team's victories over the Badgers contributed to their successful season, with the exact dates of the games not specified but implied to be part of the current athletic season in 2026.\n\n* The Huskers won a game against the Wisconsin Badgers on Friday night with a score of 5-0.\n* The Huskers won another game against the Badgers on Saturday afternoon with a score of 6-0.\n* The team's record improved to 32-6 after the two wins, with their ranking being No. 7 in the nation.",
+    "5ws": "Who: Nebraska softball team, Wisconsin Badgers\nWhat: Won series with 6-0 victory\nWhen: April 11, 2026\nWhere: Madison, Wisconsin\nWhy: Secured win in collegiate softball competition",
+    "likeIm5": "Imagine this: the \"Huskers Heroes\" softball team played against the \"Wisconsin Warriors\". They wanted to win the series, like being the line leader in school. The Huskers Heroes scored six runs in one inning, helping them win 6-0, and they felt happy and proud, like getting a gold star."
   },
   {
     "source_names": [
@@ -216,7 +902,7 @@
       "Unknown Author"
     ],
     "ai_title": "Penguins Clinch Playoff Spot",
-    "ai_description": "Penguins clinch spot, shattering playoff doubts.",
+    "ai_description": "Penguins clinch spot, shatter Capitals' dreams in thrilling matchup.",
     "urls": [
       "https://pittsburghhockeynow.com/pittsburgh-penguins-kyle-dubas-praise-playoff-scenarios-nhl-trade-talk/",
       "https://russianmachineneverbreaks.com/2026/04/11/sidney-crosby-evgeni-malkin-eight-penguins-players-miss-capitals-game/",
@@ -225,9 +911,150 @@
     "url_to_image": "https://media.pittsburghhockeynow.com/wp-content/uploads/2026/03/07091740/Kyle-Dubas-Pittsburgh-Penguins-GI-scaled-e1772893079139.jpg",
     "category": "sports",
     "topic": "Pittsburgh Penguins Lineup",
-    "summary": "The Pittsburgh Penguins have clinched their Stanley Cup Playoffs berth as of Thursday, prior to their game against the Washington Capitals. The team's achievement has eased concerns for fans during the final weekend of the NHL regular season. The Penguins played their last home game of the regular season against the Washington Capitals at PPG Paints Arena on April 11, 2026. The game started at 3:00 PM, with doors opening at 1:30 PM. This game was also the team's Fan Appreciation Game, presented by PPG. Sidney Crosby, Evgeni Malkin, and Kris Letang were held out of the Saturday game against the Capitals after the Penguins secured their playoff spot. The Penguins' playoff spot was confirmed before their last home game, allowing the team to prepare for the upcoming playoffs.\n\n* The Pittsburgh Penguins have secured a spot in the Stanley Cup Playoffs as of 2026.\n* The team's last home game of the regular season was against the Washington Capitals at PPG Paints Arena on April 11, 2026.\n* Key players, including Sidney Crosby, Evgeni Malkin, and Kris Letang, were not in the lineup for the game against the Capitals after the playoff spot was confirmed.",
-    "5ws": "Who: Pittsburgh Penguins, Washington Capitals\nWhat: Clinched playoff berth, final regular season game\nWhen: April 11, 2026\nWhere: PPG Paints Arena, Pittsburgh\nWhy: Securing Stanley Cup playoff spot",
-    "likeIm5": "Imagine this: The \"Penguin Pals\" team, led by friends like Sidney \"The Star\" Crosby, are playing their last home game. They're like the cool kids in school who already got their golden tickets to the big party, the Stanley Cup Playoffs. Now, they're facing the \"Capital Crew\" and want to win for their fans."
+    "summary": "The Pittsburgh Penguins have clinched their Stanley Cup Playoffs berth, providing relief for their fans. The team played their last home game of the regular season against the Washington Capitals at PPG Paints Arena. The game started at 3:00 PM, with doors opening at 1:30 PM. This game was also the Fan Appreciation Game, presented by PPG. The Penguins' achievement came before their final weekend of the NHL regular season. Sidney Crosby, Evgeni Malkin, and Kris Letang were held out of the game against the Capitals. The team's lineup and player decisions were made after securing their playoff spot.\n\n* The Pittsburgh Penguins have secured a spot in the Stanley Cup Playoffs, ensuring their participation in the postseason tournament.\n* The team's last home game of the regular season was played against the Washington Capitals at PPG Paints Arena on April 11, 2026.\n* Key players, including Sidney Crosby, Evgeni Malkin, and Kris Letang, were not part of the lineup for the game against the Capitals after the team clinched their playoff spot.",
+    "5ws": "Who: Pittsburgh Penguins, Washington Capitals\nWhat: NHL playoff berth clinching, regular season finale\nWhen: April 11, 2026\nWhere: PPG Paints Arena, Pittsburgh\nWhy: Securing playoff spot, fan appreciation game",
+    "likeIm5": "Imagine this: the Pittsburgh Penguins, led by friends like Sidney \"The Star\" Crosby, are playing a big game against the Washington Capitals. They're like two teams on the playground, trying to be the best. The Penguins just got their Golden Ticket to the playoffs, and now they're getting ready for the big tournament, where they'll play against other teams to win the championship."
+  },
+  {
+    "source_names": [
+      "The Spun",
+      "HITC - Football, Gaming, Movies, TV, Music",
+      "pgatour.com"
+    ],
+    "authors": [
+      "Andrew Holleran",
+      "https://www.facebook.com/peter.lynch.1276/",
+      "Rob Bolton"
+    ],
+    "ai_title": "Masters Golf Tournament Concludes",
+    "ai_description": "Rory McIlroy pockets $4.5 million.",
+    "urls": [
+      "https://thespun.com/golf/rory-mcilroys-wifes-immediate-reaction-to-his-masters-win-says-everything",
+      "https://www.hitc.com/justin-rose-touched-by-very-beautiful-gesture-from-augusta-patrons-on-the-final-hole-at-the-masters/",
+      "https://www.pgatour.com/article/news/betting-dfs/2026/04/12/prize-money-purse-payouts-breakdown-fund-masters-2026-augusta-national-rory-mcilroy-scottie-scheffler"
+    ],
+    "url_to_image": "https://thespun.com/.image/MTgzMTI4MzI3ODIwMjIzODQw/abu-dhabi-hsbc-golf-championship-day-one.jpg?io=1&profile=share16-9",
+    "category": "sports",
+    "topic": "Rory McIlroy Masters Win",
+    "summary": "Rory McIlroy won the 2026 Masters Tournament, solidifying his status among golf's elite. He successfully defended his title, following in the footsteps of notable golfers such as Jack Nicklaus, Sir Nick Faldo, and Tiger Woods. McIlroy collected 750 FedExCup points and $4.5 million with the win. The tournament took place at the Augusta National Golf Club, where Justin Rose also competed, ultimately falling short of the title. McIlroy's win marked a significant achievement in his career, cementing his position as a top golfer. The Masters Tournament is one of the most prestigious golf events, with a rich history dating back to 1934. McIlroy's victory was widely reported, with various sources highlighting his achievement, including the PGA Tour and reputable sports news outlets.\n\n* Rory McIlroy won the 2026 Masters Tournament, earning 750 FedExCup points and $4.5 million.\n* The tournament was held at the Augusta National Golf Club, where Justin Rose also competed, but ultimately fell short of the title.\n* McIlroy's win marked a significant achievement in his career, solidifying his status among golf's elite, following in the footsteps of notable golfers such as Jack Nicklaus, Sir Nick Faldo, and Tiger Woods.",
+    "5ws": "Who: Rory McIlroy\nWhat: Wins Masters Tournament\nWhen: April 2026\nWhere: Augusta National\nWhy: Solidify golf elite status",
+    "likeIm5": "Imagine this: \"The Golf Stars\" like Rory McIlroy, aka \"The Masters Magician,\" and Justin Rose, \"The Rose Ranger,\" played a big game at Augusta. They wanted to win the Golden Trophy and $4.5 million. Rory won, and his wife was super happy. It's like winning a big playground competition, where everyone cheers and you get a shiny prize."
+  },
+  {
+    "source_names": [
+      "The-independent.com",
+      "Billboard",
+      "BBC News"
+    ],
+    "authors": [
+      "Caitlin Hornik",
+      "Ashley Iasimone",
+      "Unknown Author"
+    ],
+    "ai_title": "Sabrina Carpenter Performs At Coachella",
+    "ai_description": "Sabrina Carpenter slams fan's \"weird\" culture after viral Coachella moment.",
+    "urls": [
+      "https://www.the-independent.com/arts-entertainment/music/news/sabrina-carpenter-coachella-fan-interrupt-response-viral-b2956002.html",
+      "http://www.billboard.com/music/music-news/sabrina-carpenter-coachella-zaghrouta-reaction-apology-1236221010/",
+      "https://www.bbc.com/news/articles/cpwjnvrpn8eo"
+    ],
+    "url_to_image": "https://static.the-independent.com/2026/02/02/02/GRAMMY-MODA_84940.jpg?width=1200&height=800&crop=1200:800",
+    "category": "entertainment",
+    "topic": "Sabrina Carpenter Coachella",
+    "summary": "Sabrina Carpenter performed at Coachella on Friday, April 10, 2026. During her set, a loud, high-pitched cheer from the crowd prompted a reaction from Carpenter. The incident was captured on video and shared on social media, sparking online discussion. Carpenter later addressed the incident, stating she had learned what a \"zaghrouta\" is, which refers to a traditional Middle Eastern ululation. The Coachella festival, held in California, also experienced strong winds, leading to the cancellation of a set by DJ Anyma. Carpenter's reaction to the crowd's cheer was a topic of debate, with some discussing her response to the fan's culture. The festival featured various performances, including surprise guests, and was covered by multiple news outlets, including The Independent, Billboard, and BBC.\n\n* Sabrina Carpenter performed at Coachella on April 10, 2026, and addressed online chatter regarding her reaction to a crowd cheer.\n* The Coachella festival in California was affected by strong winds, resulting in the cancellation of a set by DJ Anyma.\n* Carpenter's reaction to the crowd's cheer was a topic of debate, with the incident being shared and discussed on social media.",
+    "5ws": "Who: Sabrina Carpenter\nWhat: Reacts to fan interruption at Coachella\nWhen: April 10, 2026\nWhere: Coachella, California\nWhy: Maintaining crowd control and respect",
+    "likeIm5": "Imagine this: Sabrina Carpenter, the Superstar Singer, was performing at Coachella, a big music festival. The Cheerful Crowd, led by fans like the \"Loud Cheers Team,\" were excited, but one loud fan interrupted her. Sabrina, like the \"Quick Thinking Captain,\" apologized for not understanding the \"Zaghrouta Cheer Squad's\" tradition. The goal was to bring everyone together and have fun, like working as a team on the playground to achieve a common victory."
+  },
+  {
+    "source_names": [
+      "Variety",
+      "NPR"
+    ],
+    "authors": [
+      "Brent Lang",
+      ""
+    ],
+    "ai_title": "Soderbergh Discusses The Christophers",
+    "ai_description": "Soderbergh unleashes a film about artistic legacy.",
+    "urls": [
+      "https://variety.com/2026/film/news/steven-soderbergh-the-christophers-star-wars-ben-solo-movie-controversial-ai-comments-1236713201/",
+      "https://www.npr.org/2026/04/10/nx-s1-5769346/the-christophers-review-ian-mckellen-michaela-coel"
+    ],
+    "url_to_image": "https://variety.com/wp-content/uploads/2026/04/GettyImages-2270462747.jpg?crop=0px%2C142px%2C5000px%2C2812px&resize=1000%2C563",
+    "category": "entertainment",
+    "topic": "Steven Soderbergh The Christophers",
+    "summary": "The Christophers is a film directed by Steven Soderbergh, featuring Ian McKellen as a past-his-prime painter and Michaela Coel as his mysterious assistant. The story revolves around the destruction of the painter's half-finished artworks. Steven Soderbergh is a renowned film director with a diverse portfolio, including Erin Brockovich, Magic Mike, and Black Bag. The Christophers explores the theme of artistic legacy, adding to Soderbergh's legacy as a filmmaker. Ian McKellen and Michaela Coel are the lead actors in the film, which has been described as a twisty and tricky dramedy. The film's plot and themes have been discussed by Soderbergh and screenwriter Ed Solomon in interviews. The Christophers has been covered by various media outlets, including Variety and NPR, with discussions around its unique storyline and the director's comments on artistic legacy.\n\n* The film The Christophers is directed by Steven Soderbergh and features Ian McKellen and Michaela Coel in lead roles.\n* The story explores the theme of artistic legacy, which is a common thread in Soderbergh's films.\n* The film has been discussed in various media outlets, including Variety and NPR, with a focus on its unique storyline and the director's legacy as a filmmaker.",
+    "5ws": "Who: Steven Soderbergh, Ian McKellen, Michaela Coel\nWhat: Releases film \"The Christophers\"\nWhen: April 2026\nWhere: Global theaters\nWhy: Explores artistic legacy",
+    "likeIm5": "Imagine this: \"The Movie Makers\" team, led by director \"The Mastermind\" Steven Soderbergh, is creating a new film, \"The Christophers,\" with \"The Artistic Ace\" Ian McKellen and \"The Creative Queen\" Michaela Coel. They're working together like a dream team on the playground, trying to make the best movie ever, with the big goal of telling a unique story that touches people's hearts."
+  },
+  {
+    "source_names": [
+      "Deadline",
+      "Variety",
+      "Variety"
+    ],
+    "authors": [
+      "Anthony D'Alessandro",
+      "Rebecca Rubin",
+      "Jack Dunn"
+    ],
+    "ai_title": "Super Mario Galaxy Movie Soars At Box Office",
+    "ai_description": "\"Super Mario Galaxy Movie\" ignites with $700M global box office surge.",
+    "urls": [
+      "http://deadline.com/2026/04/box-office-global-super-mario-galaxy-project-hail-mary-detective-conan-1236858491/",
+      "https://variety.com/2026/film/box-office/box-office-super-mario-galaxy-movie-scores-second-weekend-you-me-tuscany-opening-1236719765/",
+      "https://variety.com/2026/film/news/box-office-the-super-mario-galaxy-movie-you-me-amp-tuscany-1236719521/"
+    ],
+    "url_to_image": "https://deadline.com/wp-content/uploads/2026/04/Super-Mario-Galaxy-Project-Hail-Mary-2-shot.jpg?w=1024",
+    "category": "entertainment",
+    "topic": "Super Mario Galaxy Movie",
+    "summary": "The Super Mario Galaxy Movie, an animated film distributed by Universal, has maintained its top position at the domestic box office. In its second weekend, the movie collected $69 million from 4,284 North American theaters. The film's global cume is reported to be $62 million, with a worldwide total of $152.1 million. The movie's domestic total is $69 million, while its international total is $83.5 million. The Super Mario Galaxy Movie is projected to reach a $700 million worldwide running cume gross. The film's success can be attributed to its wide release, with showings in 82 territories. As of its second weekend, the movie continues to perform well, adding $17.5 million at the Friday box office.\n\n* The Super Mario Galaxy Movie has collected $69 million from 4,284 North American theaters in its second weekend.\n* The film's global cume is $62 million, with a worldwide total of $152.1 million, comprising $69 million domestic and $83.5 million international.\n* The movie is projected to reach a $700 million worldwide running cume gross, indicating a successful box office performance.",
+    "5ws": "Who: Universal, Illumination, Mario \nWhat: Super Mario Galaxy Movie box office success\nWhen: April 2026 \nWhere: Global, North America \nWhy: Entertainment, profit",
+    "likeIm5": "Imagine this: \"The Super Mario Galaxy Movie\" team, led by friends like Anthony D'Alessandro and Rebecca Rubin, is racing to the top of the box office. It's like a big playground game where teams try to collect the most golden tickets, and \"The Super Mario Galaxy Movie\" is winning with over $700 million."
+  },
+  {
+    "source_names": [
+      "The-sun.com",
+      "The Cut"
+    ],
+    "authors": [
+      "Steve Brenner",
+      "Julia Reinstein"
+    ],
+    "ai_title": "Taylor Swift Wedding Plans",
+    "ai_description": "Taylor Swift and Travis Kelce unveil July 3 NYC wedding plans.",
+    "urls": [
+      "https://www.the-sun.com/entertainment/16188893/taylor-swift-bridesmaids-plan-surprise-wedding-travis-kelce/",
+      "http://www.thecut.com/article/maybe-taylor-swift-wants-to-get-married-in-new-york.html"
+    ],
+    "url_to_image": "https://www.the-sun.com/wp-content/uploads/sites/6/2026/04/ch-taylor-swift-bridesmaids-off-platform.jpg?quality=90&strip=all&w=1920&h=1080&crop=1",
+    "category": "entertainment",
+    "topic": "Taylor Swift Wedding",
+    "summary": "Taylor Swift is planning her wedding, which is scheduled to take place on July 3 in New York City. The event is expected to be a significant gathering, with save-the-dates already sent out to guests. According to reports, Taylor Swift and her fiancé, whose name is not specified in the provided data but is known to be Travis Kelce, have chosen New York City as the location for their wedding. The wedding plans are currently underway, with the bridal party already working on preparations. Taylor Swift's engagement was announced in August, and since then, fans have been eagerly awaiting details about her wedding. The exact details of the wedding are not fully disclosed, but it is reported that there may be some surprises in store. As of 2026, Taylor Swift and Travis Kelce are preparing for their summer wedding, with the date and location confirmed as July 3 in New York City.\n\n* Taylor Swift's wedding is scheduled to take place on July 3 in New York City.\n* The event's save-the-dates have been sent out to guests, confirming the date and location.\n* Taylor Swift and Travis Kelce are the couple getting married, with the wedding plans currently underway.",
+    "5ws": "Who: Taylor Swift, Travis Kelce\nWhat: Summer wedding preparations\nWhen: July 3, 2026\nWhere: New York City\nWhy: Celebrity wedding celebration",
+    "likeIm5": "Imagine this, a big wedding is coming. Taylor Swift, the famous singer, and her friends, like Selena, are preparing a surprise. They're like a team, \"The Swift Squad,\" working together to make the wedding special. Taylor and her fiancé, Travis Kelce, are excited, and their friends want to make it a memorable day."
+  },
+  {
+    "source_names": [
+      "Bloomberg",
+      "Fortune"
+    ],
+    "authors": [
+      "Augusta Saraiva",
+      "Shawn Tully"
+    ],
+    "ai_title": "Housing Market Sees Price Shifts",
+    "ai_description": "US home sales plummet to a 9-month low.",
+    "urls": [
+      "https://www.bloomberg.com/news/articles/2026-04-13/us-existing-home-sales-fall-to-nine-month-low-as-prices-tick-up",
+      "https://fortune.com/2026/04/11/housing-prices-by-city-2026/"
+    ],
+    "url_to_image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iE9UaZovZAJY/v1/1200x800.jpg",
+    "category": "business",
+    "topic": "US Housing Market",
+    "summary": "In the United States, sales of previously owned homes decreased in March to the lowest level since June, highlighting the challenges the housing market faces as it enters the key spring selling season. This decline is attributed to a national price downturn, led by cities such as Las Vegas, Austin, and Miami. Conversely, Midwest metros are experiencing a surge in sales. The shift in the housing market is characterized as a reversion to the mean, where formerly popular areas are now experiencing a decline in sales. The current market trend is distinct from previous years, with unexpected changes in regional sales patterns. As of 2026, the housing market is undergoing significant changes, with prices collapsing in the Sun Belt and soaring in the Rust Belt. The US housing market's performance is a crucial indicator of the overall economy, and these changes will likely have significant implications for the country's financial and social landscape.\n\n* Sales of previously owned US homes fell in March to the lowest level since June, due to a national price downturn.\n* Las Vegas, Austin, and Miami are leading the price downturn, while Midwest metros are thriving, indicating a shift in the US housing market.\n* The current market trend is marked by a reversion to the mean, where formerly popular areas are now experiencing a decline in sales, and previously less popular areas are experiencing growth.",
+    "5ws": "Who: US homebuyers, sellers, real estate agents\nWhat: Existing-home sales decline\nWhen: March 2026\nWhere: US, specifically Sun Belt, Rust Belt\nWhy: Housing market affordability challenges",
+    "likeIm5": "Imagine a big playground where \"The Bloomberg Team\" and \"The Fortune Squad\" are friends who help people understand the housing market. They're like the playground monitors, making sure everyone knows what's happening. Augusta \"The Reporter\" and Shawn \"The Analyst\" are part of these teams, working together to figure out why some houses are becoming too expensive, while others are getting more affordable, and they want to help people find their dream homes."
   },
   {
     "source_names": [
@@ -247,7 +1074,7 @@
       "Jarrell Dillard, Augusta Saraiva, Will Kubzansky"
     ],
     "ai_title": "Iran War Sparks US Inflation",
-    "ai_description": "War ignites US inflation spike.",
+    "ai_description": "War ignites US inflation's biggest jump in four years.",
     "urls": [
       "https://www.state.gov/releases/office-of-the-spokesperson/2026/04/secretary-rubio-terminates-green-cards-of-foreign-nationals-tied-to-infamous-iranian-regime-propagandist",
       "https://apnews.com/article/iran-war-gasoline-prices-native-american-reservation-7f272163a63b12eec15f23463ae3907b",
@@ -259,8 +1086,74 @@
     "url_to_image": "https://www.state.gov/wp-content/uploads/2025/01/Press_Release_Alabaster.png",
     "category": "general",
     "topic": "US Iran War",
-    "summary": "The US Secretary of State, not Marco Rubio, has the authority to terminate lawful permanent resident (LPR) statuses. Recent events have seen the arrest of three Iranian nationals by federal agents. The individuals, Seyed Eissa Hashemi, Maryam Tahmasebi, and their son, had their LPR statuses terminated due to ties to the Iranian regime. The arrests occurred amidst the ongoing Iran war, which has led to rising gas prices in the US. Consumers have been seeking relief from high gas prices, with some finding lower prices at tribally owned gas stations, which are exempt from state fuel taxes. The Labor Department reported a 3.3% Consumer Price Index (CPI) for the 12 months through March, the highest since May 2024. The ongoing conflict has also affected the US economy, with inflation rising and consumer sentiment reaching a record low.\n\n* The Iran war has led to a significant increase in US inflation, with a 3.3% CPI reported for the 12 months through March.\n* Tribally owned gas stations in states like California, New Mexico, New York, Oklahoma, and Washington offer lower gas prices due to exemptions from state fuel taxes.\n* The US economy has been impacted by the conflict, with rising inflation and a record-low consumer sentiment reported, according to economists and the Labor Department.",
-    "5ws": "Who: US, Iran, Secretary Marco Rubio\nWhat: US-Iran conflict, green card terminations\nWhen: April 2026\nWhere: US, Iran, globally\nWhy: Geopolitical tensions, national security",
-    "likeIm5": "Imagine this: a big team effort to keep our country safe. The \"US Heroes\" team, led by Secretary Marco Rubio, are working together to stop some not-so-nice people from Iran. The \"Tribal Gas Station Squad\" is helping by offering cheaper gas, and the \"News Reporter Team\", like Mead Gruver and Courtenay Brown, are sharing important updates. They're all trying to fix a big problem and help everyone have a safer and happier life."
+    "summary": "As of 2026, the US has been affected by the Iran war, leading to rising inflation and gas prices. Secretary of State Marco Rubio terminated the lawful permanent resident statuses of three Iranian nationals, Seyed Eissa Hashemi, Maryam Tahmasebi, and their son, who had ties to the Iranian regime. The Consumer Price Index (CPI) reached 3.3% in the 12 months through March, the highest since May 2024. The war has fueled the biggest jump in US inflation in nearly four years and sent consumer sentiment tumbling to a record low. Economists predict that this is just the beginning of the economic toll. The Iran war has led to a surge in gas prices, but some drivers are finding relief by fueling up at tribally owned gas stations, which are exempt from state fuel taxes. The US and Iran are set to meet in Islamabad, which may impact the fragile cease-fire and the US economy.\n\n* The Iran war has caused a significant increase in US inflation, with the CPI reaching 3.3% in the 12 months through March.\n* The war has led to a surge in gas prices, but tribally owned gas stations are offering lower prices due to their exemption from state fuel taxes.\n* The economic toll of the Iran conflict is starting to show up in the US, with consumer sentiment tumbling to a record low and economists predicting further economic impacts.",
+    "5ws": "Who: US, Iran, Secretary Marco Rubio\nWhat: US-Iran conflict, arrests, inflation\nWhen: April 2026\nWhere: US, Iran, Islamabad\nWhy: Geopolitical tensions, economic sanctions",
+    "likeIm5": "Imagine this: a big playground where the \"US Team\" and the \"Iran Team\" are having a disagreement. Secretary Marco Rubio, the \"Referee,\" and his friends, like the \"WSJ News Team\" and \"Axios Reporters,\" are trying to help fix the problem. They want to make sure everyone is safe and happy, which is the big why."
+  },
+  {
+    "source_names": [
+      "The Washington Post",
+      "TheStreet"
+    ],
+    "authors": [
+      "Abha Bhattarai, Rachel Lerman, Federica Cocco",
+      "Jeffrey Quiggle, Celine Provini"
+    ],
+    "ai_title": "Americans Struggle With Retirement Savings",
+    "ai_description": "Rising costs erode record-high American millionaires' nest eggs.",
+    "urls": [
+      "https://www.washingtonpost.com/business/2026/04/13/more-american-millionaires-than-ever/",
+      "https://www.thestreet.com/retirement/fidelity-aarp-warn-americans-on-401ks"
+    ],
+    "url_to_image": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://cloudfront-us-east-1.images.arcpublishing.com/wapo/7HXALMAU6NAGJPAS4AF6I566OA.jpg&w=1440",
+    "category": "business",
+    "topic": "US Millionaires Rise",
+    "summary": "The number of American millionaires has reached a record high, with the average net worth in the United States exceeding $1 million per household, according to Federal Reserve data. This surge in millionaires is attributed to various economic factors. However, many of these individuals do not feel rich due to rising costs and expenses. The importance of 401(k) plans in retirement cannot be overstated, particularly given the low average Social Security benefits. Early 401(k) withdrawals result in taxes, penalties, and lost potential growth, as warned by Fidelity. The Average Social Security benefits are relatively low, making 401(k) plans crucial for retirement savings. As of 2026, financial experts and organizations, such as AARP and Fidelity, continue to emphasize the significance of strategic retirement planning.\n\n* The average net worth in the United States has surpassed $1 million per household, according to Federal Reserve data.\n* 401(k) plans are crucial for retirement, given the low average Social Security benefits, with early withdrawals incurring taxes, penalties, and lost potential growth.\n* Organizations such as AARP and Fidelity are warning Americans about the importance of strategic retirement planning and the potential risks associated with early 401(k) withdrawals.",
+    "5ws": "Who: American millionaires, Fidelity, AARP \nWhat: Record high millionaire count amid rising costs \nWhen: 2026, specifically April 12-13 \nWhere: United States \nWhy: Retirement security concerns amidst inflation",
+    "likeIm5": "Imagine this: \"The Money Team\" with Abha, Rachel, and Federica, found out many Americans are millionaires, but they don't feel rich due to rising costs."
+  },
+  {
+    "source_names": [
+      "The Seattle Times",
+      "St George News"
+    ],
+    "authors": [
+      "Lauren Girgis",
+      "Written by Katie McKellar, Utah News Dispatch"
+    ],
+    "ai_title": "Measles Outbreak Spreads In Us",
+    "ai_description": "Measles outbreak ignites, spreading via international travel.",
+    "urls": [
+      "https://www.seattletimes.com/seattle-news/health/measles-infected-infant-was-in-bellevue-seattle/",
+      "https://www.stgeorgeutah.com/life/utah-now-epicenter-of-u-s-measles-outbreak/article_7bac5789-e6da-4d82-915c-a32c37abbbaa.html"
+    ],
+    "url_to_image": "https://images.seattletimes.com/wp-content/uploads/2026/04/04102026_tzr_tzr_203020.jpg?d=1200x630",
+    "category": "health",
+    "topic": "Utah Measles Outbreak",
+    "summary": "In 2026, a measles outbreak has been reported in the United States, with Utah currently being the most active. According to Public Health - Seattle & King County, an infant infected with measles may have exposed King County residents to the disease in Bellevue and Northeast Seattle. The infant is believed to have become infected while traveling internationally, and may have exposed people on public transit, at a hospital, supermarket, and restaurant. The Utah measles outbreak has reported over 121 cases in the last three weeks, making it the most active in the U.S. In contrast, South Carolina has not seen any new measles cases. Measles is a highly contagious disease that can be spread through international travel. The Centers for Disease Control and Prevention (CDC) monitors measles outbreaks and provides guidance on prevention and control.\n\n* Utah has reported over 121 measles cases in the last three weeks, making it the most active measles outbreak in the U.S.\n* An infant infected with measles may have exposed King County residents to the disease in Bellevue and Northeast Seattle, including on public transit.\n* The measles outbreak in Utah and the potential exposure in King County highlight the importance of vaccination and international travel precautions to prevent the spread of measles.",
+    "5ws": "Who: Infected infant, King County residents\nWhat: Measles outbreak exposure\nWhen: April 2026\nWhere: Bellevue, Seattle, Utah\nWhy: International travel, disease spread",
+    "likeIm5": "Imagine this: a measles outbreak is spreading. The \"Health Heroes\" team, like Lauren Girgis and Katie McKellar, are working together to stop it. They're like the playground monitors, making sure everyone is safe. The \"Utah Squad\" is having a tough time with over 120 cases, so the Health Heroes are helping them. Their big goal is to keep everyone healthy and happy."
+  },
+  {
+    "source_names": [
+      "TheStreet",
+      "Slate Magazine"
+    ],
+    "authors": [
+      "Kirk O’Neil",
+      "Adam Chandler"
+    ],
+    "ai_title": "Wendy's Franchisee Files Bankruptcy",
+    "ai_description": "Burger chain franchisee shatters under huge debt obligations.",
+    "urls": [
+      "https://www.thestreet.com/restaurants/farmer-boys-franchisee-files-chapter-11-bankruptcy",
+      "https://slate.com/life/2026/04/wendys-near-me-location-closures-menu.html"
+    ],
+    "url_to_image": "https://www.thestreet.com/.image/NDA6MDAwMDAwMDAyNzg1Mzgy/eating-hamburger-ko-112525.jpg?io=1&profile=share16-9",
+    "category": "business",
+    "topic": "Wendys Restaurant Decline",
+    "summary": "A recent bankruptcy filing by a 44-year-old burger chain's franchisee has highlighted the challenges faced by the industry, particularly Wendy's, which has seen some of its locations closing. The burger chain franchisee has filed for Chapter 11 bankruptcy due to huge debt obligations. This development is part of a larger trend in the fast-food industry, where chains like McDonald's, Burger King, and Wendy's have been battling for market share. The current market dynamics are different from the \"burger wars\" of the 1980s, with new players and shifting consumer preferences. Wendy's, in particular, has been experiencing difficulties, with some locations closing down. The exact reasons for these closures are not specified, but they are likely related to the financial struggles of the franchisee. As of 2026, the fast-food industry continues to evolve, with chains adapting to changing consumer demands and economic pressures.\n\n* A Wendy's franchisee has filed for Chapter 11 bankruptcy due to significant debt obligations.\n* The bankruptcy filing is part of a larger trend of challenges faced by the fast-food industry, particularly Wendy's.\n* The closure of some Wendy's locations is a result of the financial struggles of the franchisee, although the exact reasons are not specified.",
+    "5ws": "Who: Wendy's franchisee, Farmer Boys \nWhat: Files Chapter 11 bankruptcy\nWhen: April 12, 2026\nWhere: United States\nWhy: Huge debt obligations",
+    "likeIm5": "Imagine a big playground where \"The Burger Team\" and \"The Wendy's Squad\" are playing. Kirk O'Neil, the news reporter, and Adam Chandler, the story teller, are watching. The Burger Team's friend, Farmer Boys, is in trouble and needs help. The goal is to save Farmer Boys and make the playground happy again."
   }
 ]
