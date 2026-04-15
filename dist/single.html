@@ -99,6 +99,27 @@
 					</div>
 				</div>
 			</div>
+			<!-- Chatbot Popup -->
+			<div id="chatbot-popup" class="login-popup-overlay chatbot-popup-overlay">
+				<a href="#" class="login-popup-backdrop" title="Close"></a>
+				<div class="login-popup chatbot-popup">
+					<a href="#" class="login-popup-close" title="Close">&times;</a>
+					<div class="login-popup-inner chatbot-popup-inner">
+						<h2>Article Chatbot</h2>
+						<div class="chatbot-ui" id="chatbot-ui">
+							<div class="chatbot-thread" id="chatbot-thread">
+								<div class="chatbot-bubble chatbot-bubble-bot">
+									Hi, I can help answer questions about this article. What would you like to know?
+								</div>
+							</div>
+							<form class="chatbot-composer" id="chatbot-popup-form">
+								<input type="text" id="chatbot-popup-input" placeholder="Type your message here..." autocomplete="off" />
+								<button type="submit" class="button small">Send</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 			<!-- Toast notifications -->
 			<div id="toast-root"></div>
 			<!-- Menu -->
@@ -180,15 +201,7 @@
 						<div class="article-tab-panel" id="tab-fivews">
 						</div>
 						<div class="article-tab-panel" id="tab-chatbot">
-							<div class="chatbot-container">
-								<div class="chatbot-messages" id="chatbot-messages">
-									<p class="chatbot-placeholder">Ask a question about this article...</p>
-								</div>
-								<form class="chatbot-input-form" id="chatbot-form">
-									<input type="text" id="chatbot-input" placeholder="Type your question..." />
-									<button type="submit" class="button"><i class="fas fa-paper-plane"></i></button>
-								</form>
-							</div>
+							<p>Open the chatbot from the Chatbot tab above.</p>
 						</div>
 					</div>
 				</div>
@@ -219,16 +232,52 @@
 			var tabs = document.querySelectorAll('.article-tab');
 			var panels = document.querySelectorAll('.article-tab-panel');
 
+			var initialTab = document.querySelector('.article-tab.active');
+			var activeTabName = initialTab ? initialTab.getAttribute('data-tab') : 'general';
+
 			tabs.forEach(function(tab) {
 				tab.addEventListener('click', function() {
+					var tabName = tab.getAttribute('data-tab');
+					if (tabName === 'chatbot') {
+						window.location.hash = 'chatbot-popup';
+						return;
+					}
+
 					tabs.forEach(function(t) { t.classList.remove('active'); });
 					panels.forEach(function(p) { p.classList.remove('active'); });
 
 					tab.classList.add('active');
-					var target = document.getElementById('tab-' + tab.getAttribute('data-tab'));
-					if (target) target.classList.add('active');
+					activeTabName = tabName || 'general';
+					var target = document.getElementById('tab-' + activeTabName);
+					if (target) {
+						target.classList.add('active');
+					}
 				});
 			});
+
+			var popupForm = document.getElementById('chatbot-popup-form');
+			var popupInput = document.getElementById('chatbot-popup-input');
+			var popupThread = document.getElementById('chatbot-thread');
+
+			if (popupForm && popupInput && popupThread) {
+				popupForm.addEventListener('submit', function(event) {
+					event.preventDefault();
+					var message = popupInput.value.trim();
+					if (!message) return;
+
+					var userBubble = document.createElement('div');
+					userBubble.className = 'chatbot-bubble chatbot-bubble-user';
+					userBubble.textContent = message;
+					popupThread.appendChild(userBubble);
+
+					var botBubble = document.createElement('div');
+					botBubble.className = 'chatbot-bubble chatbot-bubble-bot';
+					popupThread.appendChild(botBubble);
+
+					popupInput.value = '';
+					popupThread.scrollTop = popupThread.scrollHeight;
+				});
+			}
 		})();
 		</script>
 	</body>
