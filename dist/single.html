@@ -101,9 +101,9 @@
 			</div>
 			<!-- Chatbot Popup -->
 			<div id="chatbot-popup" class="login-popup-overlay chatbot-popup-overlay">
-				<a href="#" class="login-popup-backdrop" title="Close"></a>
+				<a href="#" class="login-popup-backdrop chatbot-popup-dismiss" title="Close"></a>
 				<div class="login-popup chatbot-popup">
-					<a href="#" class="login-popup-close" title="Close">&times;</a>
+					<a href="#" class="login-popup-close chatbot-popup-dismiss" title="Close">&times;</a>
 					<div class="login-popup-inner chatbot-popup-inner">
 						<h2>Article Chatbot</h2>
 						<div class="chatbot-ui" id="chatbot-ui">
@@ -258,6 +258,20 @@
 			var popupForm = document.getElementById('chatbot-popup-form');
 			var popupInput = document.getElementById('chatbot-popup-input');
 			var popupThread = document.getElementById('chatbot-thread');
+			var popupDismissControls = document.querySelectorAll('#chatbot-popup .chatbot-popup-dismiss');
+
+			popupDismissControls.forEach(function(control) {
+				control.addEventListener('click', function(event) {
+					event.preventDefault();
+					var preservedScrollY = window.scrollY;
+
+					if (window.location.hash === '#chatbot-popup') {
+						history.replaceState(null, '', window.location.pathname + window.location.search);
+					}
+
+					window.scrollTo(0, preservedScrollY);
+				});
+			});
 
 			if (popupForm && popupInput && popupThread) {
 				popupForm.addEventListener('submit', function(event) {
