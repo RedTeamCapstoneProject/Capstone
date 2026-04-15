@@ -43,7 +43,54 @@ function normalizeCategoryList(value: string | undefined): string[] {
   );
 }
 
+function toSingleQueryValue(value: string | string[] | undefined): string | undefined {
+  return Array.isArray(value) ? value[0] : value;
+}
+
 export default async (req: VercelRequest, res: VercelResponse) => {
+  const rawImageUrl = toSingleQueryValue(req.query.imageUrl as string | string[] | undefined);
+  if (rawImageUrl) {
+    let parsed: URL;
+    try {
+      parsed = new URL(rawImageUrl);
+    } catch {
+      return res.status(400).json({ error: "Invalid image URL" });
+    }
+
+    if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
+      return res.status(400).json({ error: "Unsupported image URL protocol" });
+    }
+
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 12000);
+
+    try {
+      const upstream = await fetch(parsed.toString(), {
+        signal: controller.signal,
+        redirect: "follow",
+        headers: {
+          "User-Agent": "Mozilla/5.0 (compatible; RealNewsImageProxy/1.0)",
+          Accept: "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
+        },
+      });
+
+      if (!upstream.ok) {
+        return res.status(404).json({ error: "Unable to fetch image" });
+      }
+
+      const contentType = upstream.headers.get("content-type") || "image/jpeg";
+      const arrayBuffer = await upstream.arrayBuffer();
+
+      res.setHeader("Content-Type", contentType);
+      res.setHeader("Cache-Control", "public, max-age=3600, stale-while-revalidate=86400");
+      return res.status(200).send(Buffer.from(arrayBuffer));
+    } catch {
+      return res.status(504).json({ error: "Image fetch timed out or failed" });
+    } finally {
+      clearTimeout(timeout);
+    }
+  }
+
   const rawId = Array.isArray(req.query.id) ? req.query.id[0] : req.query.id;
 
   if (rawId) {

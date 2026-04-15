@@ -6600,10 +6600,10 @@
         const isDirectSource = rawImage.startsWith("data:") || rawImage.startsWith("http://") || rawImage.startsWith("https://") || rawImage.startsWith("//") || rawImage.startsWith("/");
         if (!isDirectSource)
           return `data:image/jpeg;base64,${rawImage}`;
-        if (rawImage.startsWith("http://")) {
-          return `https://${rawImage.slice("http://".length)}`;
-        }
-        return rawImage;
+        if (rawImage.startsWith("/") || rawImage.startsWith("data:"))
+          return rawImage;
+        const normalizedRemoteUrl = rawImage.startsWith("//") ? `${window.location.protocol}${rawImage}` : rawImage;
+        return `/api/summaries?imageUrl=${encodeURIComponent(normalizedRemoteUrl)}`;
       }
       function setImageWithFallback(image, rawImage, altText) {
         image.alt = altText;
