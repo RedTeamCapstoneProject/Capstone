@@ -260,16 +260,26 @@
 			var popupThread = document.getElementById('chatbot-thread');
 			var popupDismissControls = document.querySelectorAll('#chatbot-popup .chatbot-popup-dismiss');
 
+			function closeChatbotPopupPreserveScroll() {
+				var preservedScrollY = window.scrollY;
+
+				if (window.location.hash === '#chatbot-popup') {
+					try {
+						history.replaceState(null, '', window.location.pathname + window.location.search);
+					} catch (error) {
+						window.location.hash = '';
+					}
+				}
+
+				window.requestAnimationFrame(function() {
+					window.scrollTo(0, preservedScrollY);
+				});
+			}
+
 			popupDismissControls.forEach(function(control) {
 				control.addEventListener('click', function(event) {
 					event.preventDefault();
-					var preservedScrollY = window.scrollY;
-
-					if (window.location.hash === '#chatbot-popup') {
-						history.replaceState(null, '', window.location.pathname + window.location.search);
-					}
-
-					window.scrollTo(0, preservedScrollY);
+					closeChatbotPopupPreserveScroll();
 				});
 			});
 
