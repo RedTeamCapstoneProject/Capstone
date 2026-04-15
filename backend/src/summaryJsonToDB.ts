@@ -71,9 +71,13 @@ export async function summaryJsonToDB(
 
   for (const summary of summaries) {
     const result = await pool.query(
-      `INSERT INTO summary
-        (source_names, authors, ai_title, ai_description, urls,
-         url_to_image, category, topic, summary, "5ws", "likeIm5")
+      `WITH removed AS (
+         DELETE FROM summary
+         WHERE urls && $5::text[]
+       )
+       INSERT INTO summary
+         (source_names, authors, ai_title, ai_description, urls,
+          url_to_image, category, topic, summary, "5ws", "likeIm5")
        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)`,
       [
         summary.source_names,
