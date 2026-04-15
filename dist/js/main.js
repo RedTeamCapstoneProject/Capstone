@@ -6727,6 +6727,27 @@ ${bullets}`;
           lastSection.style.marginBottom = "0";
         footer.appendChild(metaWrapper);
       }
+      function setupArticleTabSwitching() {
+        const tabButtons = document.querySelectorAll(".article-tab");
+        tabButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const tabName = button.getAttribute("data-tab");
+            if (!tabName)
+              return;
+            document.querySelectorAll(".article-tab").forEach((btn) => {
+              btn.classList.remove("active");
+            });
+            document.querySelectorAll(".article-tab-panel").forEach((panel2) => {
+              panel2.classList.remove("active");
+            });
+            button.classList.add("active");
+            const panel = document.querySelector(`#tab-${tabName}`);
+            if (panel) {
+              panel.classList.add("active");
+            }
+          });
+        });
+      }
       async function hydrateSingleSummaryPage() {
         if (!document.body.classList.contains("single"))
           return false;
@@ -6760,8 +6781,12 @@ ${bullets}`;
             bodyParagraph.textContent = formatSummaryForDisplay(summaryText);
             bodyParagraph.style.whiteSpace = "pre-line";
           }
+          if (generalTabPanel) {
+            generalTabPanel.classList.add("active");
+          }
           const eli5Panel = document.querySelector("#tab-eli5");
           if (eli5Panel) {
+            eli5Panel.classList.remove("active");
             const eli5Text = item.likeIm5?.trim();
             eli5Panel.innerHTML = "";
             const eli5P = document.createElement("p");
@@ -6771,6 +6796,7 @@ ${bullets}`;
           }
           const fiveWsPanel = document.querySelector("#tab-fivews");
           if (fiveWsPanel) {
+            fiveWsPanel.classList.remove("active");
             const fiveWsText = item["5ws"]?.trim();
             fiveWsPanel.innerHTML = "";
             const fiveWsP = document.createElement("p");
@@ -6785,6 +6811,7 @@ ${bullets}`;
             image.alt = title;
           }
           renderArticleMeta(item);
+          setupArticleTabSwitching();
         } catch {
         }
         return true;
@@ -6824,6 +6851,20 @@ ${bullets}`;
           const filteredSummaries = allowedCategories === null ? summaries : summaries.filter((item) => {
             const itemCategory = getNormalizedItemCategory(item);
             return itemCategory !== null && allowedCategories.has(itemCategory);
+          });
+          filteredSummaries.sort((a, b) => {
+            const toDateOnly = (ts) => {
+              if (!ts)
+                return 0;
+              const d = new Date(ts);
+              return Date.UTC(d.getFullYear(), d.getMonth(), d.getDate());
+            };
+            const dateDiff = toDateOnly(b.created_at) - toDateOnly(a.created_at);
+            if (dateDiff !== 0)
+              return dateDiff;
+            const urlCountA = a.urls?.length ?? 0;
+            const urlCountB = b.urls?.length ?? 0;
+            return urlCountB - urlCountA;
           });
           let cursor = 0;
           posts.forEach((post) => {
