@@ -63,7 +63,6 @@ router.get("/", async (req: Request, res: Response) => {
         signal: controller.signal,
         redirect: "follow",
         headers: {
-          // Some providers require a browser-like UA to serve images.
           "User-Agent": "Mozilla/5.0 (compatible; RealNewsImageProxy/1.0)",
           Accept: "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
         },
