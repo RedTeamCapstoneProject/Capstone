@@ -74,13 +74,14 @@ export async function summaryJsonToDB(
       `WITH removed AS (
          DELETE FROM summary
          WHERE dedupe_key = md5(
-           coalesce($6::text, '') || '|' || array_to_json($5::text[])::text
+           coalesce($6::text, '') || '|' || coalesce(array_to_json($5::text[])::text, '[]')
          )
        )
        INSERT INTO summary
          (source_names, authors, ai_title, ai_description, urls,
-          url_to_image, category, topic, summary, "5ws", "likeIm5")
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)`,
+          url_to_image, category, topic, summary, "5ws", "likeIm5", dedupe_key)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11,
+         md5(coalesce($6::text, '') || '|' || coalesce(array_to_json($5::text[])::text, '[]')))`,
       [
         summary.source_names,
         summary.authors,

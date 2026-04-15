@@ -4,12 +4,12 @@ ALTER TABLE summary
 DROP COLUMN IF EXISTS dedupe_key;
 
 ALTER TABLE summary
-ADD COLUMN dedupe_key TEXT
-GENERATED ALWAYS AS (
-  md5(
-    coalesce(url_to_image, '') || '|' || array_to_json(urls)::text
-  )
-) STORED;
+ADD COLUMN dedupe_key TEXT;
+
+UPDATE summary
+SET dedupe_key = md5(
+  coalesce(url_to_image, '') || '|' || coalesce(array_to_json(urls)::text, '[]')
+);
 
 WITH ranked AS (
   SELECT
