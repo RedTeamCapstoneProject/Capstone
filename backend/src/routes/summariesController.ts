@@ -100,7 +100,7 @@ router.get("/", async (req: Request, res: Response) => {
     return res.status(200).json({ data: byIdResult.rows[0] });
   }
 
-  const limit = Math.min(parsePositiveInt(req.query.limit as string | undefined, 10), 50);
+  const limit = Math.min(parsePositiveInt(req.query.limit as string | undefined, 10), 200);
   const offset = Math.max(parsePositiveInt(req.query.offset as string | undefined, 0), 0);
   const topic = (req.query.topic as string | undefined)?.trim();
   const category = (req.query.category as string | undefined)?.trim();

@@ -114,7 +114,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     ? req.query.categories[0]
     : req.query.categories;
 
-  const limit = Math.min(parsePositiveInt(rawLimit, 10), 50);
+  const limit = Math.min(parsePositiveInt(rawLimit, 10), 200);
   const offset = Math.max(parsePositiveInt(rawOffset, 0), 0);
   const topic = rawTopic?.trim();
   const category = rawCategory?.trim();
