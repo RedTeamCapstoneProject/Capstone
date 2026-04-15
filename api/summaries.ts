@@ -20,6 +20,7 @@ type SummaryRow = {
   source_names: string[];
   authors: string[];
   urls: string[];
+  created_at: string;
 };
 
 function parsePositiveInt(value: string | undefined, fallback: number): number {
@@ -49,7 +50,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     const id = Number.parseInt(rawId, 10);
 
     const byIdResult = await pool.query<SummaryRow>(
-      `SELECT id, category, ai_title, ai_description, url_to_image, summary, "5ws", "likeIm5", source_names, authors, urls
+      `SELECT id, category, ai_title, ai_description, url_to_image, summary, "5ws", "likeIm5", source_names, authors, urls, created_at
        FROM summary
        WHERE id = $1`,
       [id]
@@ -96,7 +97,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
   const whereSql = whereClauses.length > 0 ? `WHERE ${whereClauses.join(" AND ")}` : "";
 
   const query = `
-    SELECT id, category, ai_title, ai_description, url_to_image, summary, "5ws", "likeIm5", source_names, authors, urls
+    SELECT id, category, ai_title, ai_description, url_to_image, summary, "5ws", "likeIm5", source_names, authors, urls, created_at
     FROM summary
     ${whereSql}
     ORDER BY created_at DESC, id DESC

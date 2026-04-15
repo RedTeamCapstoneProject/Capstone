@@ -14,6 +14,7 @@ type SummaryItem = {
   source_names?: string[] | null;
   authors?: string[] | null;
   urls?: string[] | null;
+  created_at?: string | null;
 };
 
 type SummariesResponse = { data?: SummaryItem[] | SummaryItem };
@@ -364,6 +365,21 @@ async function hydrateSummaryPosts(): Promise<void> {
             const itemCategory = getNormalizedItemCategory(item);
             return itemCategory !== null && allowedCategories.has(itemCategory);
           });
+
+    // Sort by date (newest first) and then by number of URLs (highest to lowest)
+    filteredSummaries.sort((a, b) => {
+      // Primary sort: by date (newest first)
+      const dateA = a.created_at ? new Date(a.created_at).getTime() : 0;
+      const dateB = b.created_at ? new Date(b.created_at).getTime() : 0;
+      const dateDiff = dateB - dateA;
+      
+      if (dateDiff !== 0) return dateDiff;
+      
+      // Secondary sort: by number of URLs (highest to lowest)
+      const urlCountA = (a.urls?.length ?? 0);
+      const urlCountB = (b.urls?.length ?? 0);
+      return urlCountB - urlCountA;
+    });
 
     let cursor = 0;
 
