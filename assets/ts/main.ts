@@ -35,6 +35,8 @@ const categories = new Set([
   "technology",
 ]);
 
+const FALLBACK_IMAGE_SRC = "images/pic01.jpg";
+
 function normalizeCategoryPreferences(values: unknown): string[] {
   if (!Array.isArray(values)) return [];
 
@@ -93,7 +95,36 @@ function resolveImageSource(rawImage: string): string {
     rawImage.startsWith("//") ||
     rawImage.startsWith("/");
 
-  return isDirectSource ? rawImage : `data:image/jpeg;base64,${rawImage}`;
+  if (!isDirectSource) return `data:image/jpeg;base64,${rawImage}`;
+
+  if (rawImage.startsWith("/") || rawImage.startsWith("data:")) return rawImage;
+
+  const normalizedRemoteUrl = rawImage.startsWith("//")
+    ? `${window.location.protocol}${rawImage}`
+    : rawImage;
+
+  return `/api/summaries?imageUrl=${encodeURIComponent(normalizedRemoteUrl)}`;
+}
+
+function setImageWithFallback(
+  image: HTMLImageElement,
+  rawImage: string | null | undefined,
+  altText: string
+): void {
+  image.alt = altText;
+
+  image.onerror = () => {
+    image.onerror = null;
+    image.src = FALLBACK_IMAGE_SRC;
+  };
+
+  const normalizedRaw = rawImage?.trim();
+  if (!normalizedRaw) {
+    image.src = FALLBACK_IMAGE_SRC;
+    return;
+  }
+
+  image.src = resolveImageSource(normalizedRaw);
 }
 
 function normalizeSummaryId(value: number | string | null | undefined): number | null {
@@ -305,11 +336,7 @@ async function hydrateSingleSummaryPage(): Promise<boolean> {
     }
 
     const image = document.querySelector<HTMLImageElement>("#main article.post .image.featured img");
-    const rawImage = item.url_to_image?.trim();
-    if (image && rawImage) {
-      image.src = resolveImageSource(rawImage);
-      image.alt = title;
-    }
+    if (image) setImageWithFallback(image, item.url_to_image, title);
 
     renderArticleMeta(item);
   } catch {
@@ -413,10 +440,7 @@ async function hydrateSummaryPosts(): Promise<void> {
       if (continueReading) continueReading.href = detailHref;
 
       const rawImage = item.url_to_image?.trim();
-      if (image && rawImage) {
-        image.src = resolveImageSource(rawImage);
-        image.alt = title;
-      }
+      if (image) setImageWithFallback(image, rawImage, title);
     });
 
     miniPosts.forEach((miniPost) => {
@@ -441,10 +465,7 @@ async function hydrateSummaryPosts(): Promise<void> {
 
       const image = miniPost.querySelector<HTMLImageElement>("a.image img");
       const rawImage = item.url_to_image?.trim();
-      if (image && rawImage) {
-        image.src = resolveImageSource(rawImage);
-        image.alt = title;
-      }
+      if (image) setImageWithFallback(image, rawImage, title);
     });
 
     sidebarPosts.forEach((sidebarPost) => {
@@ -469,10 +490,7 @@ async function hydrateSummaryPosts(): Promise<void> {
 
       const image = sidebarPost.querySelector<HTMLImageElement>("a.image img");
       const rawImage = item.url_to_image?.trim();
-      if (image && rawImage) {
-        image.src = resolveImageSource(rawImage);
-        image.alt = title;
-      }
+      if (image) setImageWithFallback(image, rawImage, title);
     });
   } catch {
   }
