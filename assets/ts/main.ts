@@ -247,6 +247,32 @@ function renderArticleMeta(item: SummaryItem): void {
   footer.appendChild(metaWrapper);
 }
 
+function setupArticleTabSwitching(): void {
+  const tabButtons = document.querySelectorAll<HTMLButtonElement>(".article-tab");
+  
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const tabName = button.getAttribute("data-tab");
+      if (!tabName) return;
+
+      // Remove active class from all tabs and panels
+      document.querySelectorAll<HTMLButtonElement>(".article-tab").forEach((btn) => {
+        btn.classList.remove("active");
+      });
+      document.querySelectorAll<HTMLElement>(".article-tab-panel").forEach((panel) => {
+        panel.classList.remove("active");
+      });
+
+      // Add active class to clicked tab and corresponding panel
+      button.classList.add("active");
+      const panel = document.querySelector<HTMLElement>(`#tab-${tabName}`);
+      if (panel) {
+        panel.classList.add("active");
+      }
+    });
+  });
+}
+
 async function hydrateSingleSummaryPage(): Promise<boolean> {
   if (!document.body.classList.contains("single")) return false;
 
@@ -283,9 +309,15 @@ async function hydrateSingleSummaryPage(): Promise<boolean> {
       bodyParagraph.textContent = formatSummaryForDisplay(summaryText);
       bodyParagraph.style.whiteSpace = "pre-line";
     }
-
+    // Ensure general panel is marked as active
+    if (generalTabPanel) {
+      generalTabPanel.classList.add("active");
+    }
+    
+    // Ensure other panels are not active
     const eli5Panel = document.querySelector<HTMLElement>("#tab-eli5");
     if (eli5Panel) {
+      eli5Panel.classList.remove("active");
       const eli5Text = item.likeIm5?.trim();
       eli5Panel.innerHTML = "";
       const eli5P = document.createElement("p");
@@ -296,6 +328,7 @@ async function hydrateSingleSummaryPage(): Promise<boolean> {
 
     const fiveWsPanel = document.querySelector<HTMLElement>("#tab-fivews");
     if (fiveWsPanel) {
+      fiveWsPanel.classList.remove("active");
       const fiveWsText = item["5ws"]?.trim();
       fiveWsPanel.innerHTML = "";
       const fiveWsP = document.createElement("p");
@@ -312,6 +345,7 @@ async function hydrateSingleSummaryPage(): Promise<boolean> {
     }
 
     renderArticleMeta(item);
+    setupArticleTabSwitching();
   } catch {
   }
 
