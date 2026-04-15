@@ -6557,6 +6557,7 @@
         "sports",
         "technology"
       ]);
+      var FALLBACK_IMAGE_SRC = "images/pic01.jpg";
       function normalizeCategoryPreferences(values) {
         if (!Array.isArray(values))
           return [];
@@ -6597,7 +6598,25 @@
       }
       function resolveImageSource(rawImage) {
         const isDirectSource = rawImage.startsWith("data:") || rawImage.startsWith("http://") || rawImage.startsWith("https://") || rawImage.startsWith("//") || rawImage.startsWith("/");
-        return isDirectSource ? rawImage : `data:image/jpeg;base64,${rawImage}`;
+        if (!isDirectSource)
+          return `data:image/jpeg;base64,${rawImage}`;
+        if (rawImage.startsWith("http://")) {
+          return `https://${rawImage.slice("http://".length)}`;
+        }
+        return rawImage;
+      }
+      function setImageWithFallback(image, rawImage, altText) {
+        image.alt = altText;
+        image.onerror = () => {
+          image.onerror = null;
+          image.src = FALLBACK_IMAGE_SRC;
+        };
+        const normalizedRaw = rawImage?.trim();
+        if (!normalizedRaw) {
+          image.src = FALLBACK_IMAGE_SRC;
+          return;
+        }
+        image.src = resolveImageSource(normalizedRaw);
       }
       function normalizeSummaryId(value) {
         const numeric = typeof value === "number" ? value : typeof value === "string" ? Number.parseInt(value, 10) : Number.NaN;
@@ -6779,11 +6798,8 @@ ${bullets}`;
             fiveWsPanel.appendChild(fiveWsP);
           }
           const image = document.querySelector("#main article.post .image.featured img");
-          const rawImage = item.url_to_image?.trim();
-          if (image && rawImage) {
-            image.src = resolveImageSource(rawImage);
-            image.alt = title;
-          }
+          if (image)
+            setImageWithFallback(image, item.url_to_image, title);
           renderArticleMeta(item);
         } catch {
         }
@@ -6825,6 +6841,20 @@ ${bullets}`;
             const itemCategory = getNormalizedItemCategory(item);
             return itemCategory !== null && allowedCategories.has(itemCategory);
           });
+          filteredSummaries.sort((a, b) => {
+            const toDateOnly = (ts) => {
+              if (!ts)
+                return 0;
+              const d = new Date(ts);
+              return Date.UTC(d.getFullYear(), d.getMonth(), d.getDate());
+            };
+            const dateDiff = toDateOnly(b.created_at) - toDateOnly(a.created_at);
+            if (dateDiff !== 0)
+              return dateDiff;
+            const urlCountA = a.urls?.length ?? 0;
+            const urlCountB = b.urls?.length ?? 0;
+            return urlCountB - urlCountA;
+          });
           let cursor = 0;
           posts.forEach((post) => {
             const item = filteredSummaries[cursor++];
@@ -6856,10 +6886,8 @@ ${bullets}`;
             if (continueReading)
               continueReading.href = detailHref;
             const rawImage = item.url_to_image?.trim();
-            if (image && rawImage) {
-              image.src = resolveImageSource(rawImage);
-              image.alt = title;
-            }
+            if (image)
+              setImageWithFallback(image, rawImage, title);
           });
           miniPosts.forEach((miniPost) => {
             const item = filteredSummaries[cursor++];
@@ -6880,10 +6908,8 @@ ${bullets}`;
               imageLink.href = detailHref;
             const image = miniPost.querySelector("a.image img");
             const rawImage = item.url_to_image?.trim();
-            if (image && rawImage) {
-              image.src = resolveImageSource(rawImage);
-              image.alt = title;
-            }
+            if (image)
+              setImageWithFallback(image, rawImage, title);
           });
           sidebarPosts.forEach((sidebarPost) => {
             const item = filteredSummaries[cursor++];
@@ -6904,10 +6930,8 @@ ${bullets}`;
               imageLink.href = detailHref;
             const image = sidebarPost.querySelector("a.image img");
             const rawImage = item.url_to_image?.trim();
-            if (image && rawImage) {
-              image.src = resolveImageSource(rawImage);
-              image.alt = title;
-            }
+            if (image)
+              setImageWithFallback(image, rawImage, title);
           });
         } catch {
         }
