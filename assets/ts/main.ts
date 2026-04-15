@@ -366,9 +366,12 @@ async function hydrateSummaryPosts(): Promise<void> {
             return itemCategory !== null && allowedCategories.has(itemCategory);
           });
     filteredSummaries.sort((a, b) => {
-      const dateA = a.created_at ? new Date(a.created_at).getTime() : 0;
-      const dateB = b.created_at ? new Date(b.created_at).getTime() : 0;
-      const dateDiff = dateB - dateA;
+      const toDateOnly = (ts: string | null | undefined): number => {
+        if (!ts) return 0;
+        const d = new Date(ts);
+        return Date.UTC(d.getFullYear(), d.getMonth(), d.getDate());
+      };
+      const dateDiff = toDateOnly(b.created_at) - toDateOnly(a.created_at);
       if (dateDiff !== 0) return dateDiff;
       const urlCountA = (a.urls?.length ?? 0);
       const urlCountB = (b.urls?.length ?? 0);
