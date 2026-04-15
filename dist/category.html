@@ -52,14 +52,13 @@
 				</nav>
 				<nav class="main">
 					<ul>
+						<li class="theme-toggle-li">
+							<button class="theme-toggle" id="theme-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">
+								<i class="fas fa-moon"></i>
+							</button>
+						</li>
 						<li>
 							<a class="fa-user" href="#login-popup" title="Account">Account</a>
-						</li>
-						<li class="search">
-							<a class="fa-magnifying-glass" href="#search">Search</a>
-							<form id="search" method="get" action="#">
-								<input type="text" name="query" placeholder="Search" />
-							</form>
 						</li>
 					</ul>
 				</nav>
@@ -399,5 +398,23 @@
 				<script src="js/util.js"></script>
 				<script src="js/main.js"></script>
 				<script src="js/auth-react.js?v=20260328b"></script>
+				<script>
+				(function() {
+					var toggle = document.getElementById('theme-toggle');
+					var icon = toggle.querySelector('i');
+					function applyTheme(dark) {
+						document.documentElement.classList.toggle('dark-mode', dark);
+						icon.className = dark ? 'fas fa-sun' : 'fas fa-moon';
+						toggle.title = dark ? 'Toggle light mode' : 'Toggle dark mode';
+					}
+					var saved = localStorage.getItem('theme');
+					applyTheme(saved === 'dark');
+					toggle.addEventListener('click', function() {
+						var isDark = !document.documentElement.classList.contains('dark-mode');
+						localStorage.setItem('theme', isDark ? 'dark' : 'light');
+						applyTheme(isDark);
+					});
+				})();
+				</script>
 	</body>
 </html>

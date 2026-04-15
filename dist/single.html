@@ -48,14 +48,13 @@
 				</nav>
 				<nav class="main">
 					<ul>
+						<li class="theme-toggle-li">
+							<button class="theme-toggle" id="theme-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">
+								<i class="fas fa-moon"></i>
+							</button>
+						</li>
 						<li>
 							<a class="fa-user" href="#login-popup" title="Account">Account</a>
-						</li>
-						<li class="search">
-							<a class="fa-magnifying-glass" href="#search">Search</a>
-							<form id="search" method="get" action="#">
-								<input type="text" name="query" placeholder="Search" />
-							</form>
 						</li>
 					</ul>
 				</nav>
@@ -164,44 +163,55 @@
 							</h2>
 							<p>A bit more info here...</p>
 						</div>
-				</header>
-				<span class="image featured">
-					<img src="images/pic01.jpg" alt="" />
-				</span>
+					</header>
+					<span class="image featured">
+						<img src="images/pic01.jpg" alt="" />
+					</span>
 
-				<!-- Article Tabs -->
-				<div class="article-tabs">
-					<nav class="article-tabs-nav">
-						<button class="article-tab active" data-tab="general">General</button>
-						<button class="article-tab" data-tab="eli5">Like I'm Five</button>
-						<button class="article-tab" data-tab="fivews">Five W's</button>
-						<button class="article-tab" data-tab="chatbot"><i class="fas fa-robot"></i> Chatbot</button>
-					</nav>
-					<div class="article-tab-panels">
-						<div class="article-tab-panel active" id="tab-general">
-							<p>A summary of the article mentioned.</p>
-						</div>
-						<div class="article-tab-panel" id="tab-eli5">
-						</div>
-						<div class="article-tab-panel" id="tab-fivews">
-						</div>
-						<div class="article-tab-panel" id="tab-chatbot">
-							<div class="chatbot-container">
-								<div class="chatbot-messages" id="chatbot-messages">
-									<p class="chatbot-placeholder">Ask a question about this article...</p>
-								</div>
-								<form class="chatbot-input-form" id="chatbot-form">
-									<input type="text" id="chatbot-input" placeholder="Type your question..." />
-									<button type="submit" class="button"><i class="fas fa-paper-plane"></i></button>
-								</form>
+					<!-- Article Tabs -->
+					<div class="article-tabs">
+						<nav class="article-tabs-nav">
+							<button class="article-tab active" data-tab="general">General</button>
+							<button class="article-tab" data-tab="eli5">Like I'm Five</button>
+							<button class="article-tab" data-tab="fivews">Five W's</button>
+							<button class="article-tab" data-tab="chatbot"><i class="fas fa-robot"></i> Chatbot</button>
+						</nav>
+						<div class="article-tab-panels">
+							<div class="article-tab-panel active" id="tab-general">
+								<p>A summary of the article mentioned.</p>
+							</div>
+							<div class="article-tab-panel" id="tab-eli5">
+							</div>
+							<div class="article-tab-panel" id="tab-fivews">
 							</div>
 						</div>
 					</div>
-				</div>
-				<footer>
-					<p>(Sources / External Links)</p>
-				</footer>
+					<footer>
+						<p>(Sources / External Links)</p>
+					</footer>
 				</article>
+			</div>
+
+			<!-- Chatbot Window -->
+			<div id="chatbot-window" class="chatbot-window">
+				<div class="chatbot-window-header">
+					<div class="chatbot-window-header-left">
+						<span class="chatbot-window-avatar"><i class="fas fa-comment"></i></span>
+						<span class="chatbot-window-title">Article Chatbot</span>
+					</div>
+					<div class="chatbot-window-header-right">
+						<button class="chatbot-window-btn" id="chatbot-close" aria-label="Close"><i class="fas fa-times"></i></button>
+					</div>
+				</div>
+				<div class="chatbot-window-notice">
+					The information you provide to the chatbot will be used to answer questions about this article.
+				</div>
+				<div class="chatbot-window-messages" id="chatbot-messages">
+				</div>
+				<form class="chatbot-window-input" id="chatbot-form">
+					<input type="text" id="chatbot-input" placeholder="Ask anything" />
+					<button type="submit" class="chatbot-input-send" aria-label="Send"><i class="fas fa-paper-plane"></i></button>
+				</form>
 			</div>
 			<!-- Footer -->
 			<section id="footer">
@@ -218,22 +228,70 @@
 		<script src="js/auth-react.js?v=20260328b"></script>
 		<script>
 		(function() {
-			var style = document.createElement('style');
-			style.textContent = '.article-tab-panel { display: none; } .article-tab-panel.active { display: block; }';
-			document.head.appendChild(style);
-
+			var toggle = document.getElementById('theme-toggle');
+			var icon = toggle.querySelector('i');
+			function applyTheme(dark) {
+				document.documentElement.classList.toggle('dark-mode', dark);
+				icon.className = dark ? 'fas fa-sun' : 'fas fa-moon';
+				toggle.title = dark ? 'Toggle light mode' : 'Toggle dark mode';
+			}
+			var saved = localStorage.getItem('theme');
+			applyTheme(saved === 'dark');
+			toggle.addEventListener('click', function() {
+				var isDark = !document.documentElement.classList.contains('dark-mode');
+				localStorage.setItem('theme', isDark ? 'dark' : 'light');
+				applyTheme(isDark);
+			});
+		})();
+		</script>
+		<script>
+		(function() {
 			var tabs = document.querySelectorAll('.article-tab');
 			var panels = document.querySelectorAll('.article-tab-panel');
+			var chatbotWindow = document.getElementById('chatbot-window');
+			var chatbotClose = document.getElementById('chatbot-close');
+			var chatbotForm = document.getElementById('chatbot-form');
+			var chatbotInput = document.getElementById('chatbot-input');
+			var chatbotMessages = document.getElementById('chatbot-messages');
 
 			tabs.forEach(function(tab) {
 				tab.addEventListener('click', function() {
+					var tabName = tab.getAttribute('data-tab');
+
+					if (tabName === 'chatbot') {
+						chatbotWindow.classList.add('open');
+						return;
+					}
+
 					tabs.forEach(function(t) { t.classList.remove('active'); });
 					panels.forEach(function(p) { p.classList.remove('active'); });
 
 					tab.classList.add('active');
-					var target = document.getElementById('tab-' + tab.getAttribute('data-tab'));
+					var target = document.getElementById('tab-' + tabName);
 					if (target) target.classList.add('active');
 				});
+			});
+
+			chatbotClose.addEventListener('click', function() {
+				chatbotWindow.classList.remove('open');
+			});
+
+			function appendMessage(text, sender) {
+				var msgDiv = document.createElement('div');
+				msgDiv.className = 'chatbot-msg chatbot-msg-' + sender;
+				var p = document.createElement('p');
+				p.textContent = text;
+				msgDiv.appendChild(p);
+				chatbotMessages.appendChild(msgDiv);
+				chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+			}
+
+			chatbotForm.addEventListener('submit', function(e) {
+				e.preventDefault();
+				var text = chatbotInput.value.trim();
+				if (!text) return;
+				appendMessage(text, 'user');
+				chatbotInput.value = '';
 			});
 		})();
 		</script>
