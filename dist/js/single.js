@@ -50,9 +50,9 @@
         if (popupForm && popupInput && popupThread) {
           popupForm.addEventListener("submit", (event) => {
             event.preventDefault();
-            const message = popupInput.value.trim();
-            if (!message)
-              return;
+            //const message = popupInput.value.trim();
+            //if (!message)
+             // return;
             const userBubble = document.createElement("div");
             userBubble.className = "chatbot-bubble chatbot-bubble-user";
             userBubble.textContent = "test"//message;
