@@ -55,7 +55,7 @@
 
       const userBubble = document.createElement("div");
       userBubble.className = "chatbot-bubble chatbot-bubble-user";
-      userBubble.textContent = message;
+      userBubble.textContent = "tets"//message;
       popupThread.appendChild(userBubble);
 
       const botBubble = document.createElement("div");
