@@ -60,7 +60,7 @@
             const botBubble = document.createElement("div");
             botBubble.className = "chatbot-bubble chatbot-bubble-bot";
             popupThread.appendChild(botBubble);
-            popupInput.value = "";
+            popupInput.value = "Thinking...";
             popupThread.scrollTop = popupThread.scrollHeight;
             botBubble.textContent = "Thinking..."
 
