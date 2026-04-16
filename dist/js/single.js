@@ -54,10 +54,10 @@
             //if (!message)
              // return;
             console.log("this is a test after submit")
-            const userBubble = document.createElement("div");
-            userBubble.className = "chatbot-bubble chatbot-bubble-user";
-            userBubble.textContent = "test"//message;
-            popupThread.appendChild(userBubble);
+            //const userBubble = document.createElement("div");
+            //userBubble.className = "chatbot-bubble chatbot-bubble-user";
+            //userBubble.textContent = "test"//message;
+            //popupThread.appendChild(userBubble);
             const botBubble = document.createElement("div");
             botBubble.className = "chatbot-bubble chatbot-bubble-bot";
             botBubble.textContent = "Thinking..."
