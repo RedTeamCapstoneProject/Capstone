@@ -50,14 +50,14 @@
         if (popupForm && popupInput && popupThread) {
           popupForm.addEventListener("submit", (event) => {
             event.preventDefault();
-            //const message = popupInput.value.trim();
-            //if (!message)
-             // return;
+            const message = popupInput.value.trim();
+            if (!message)
+              return;
             console.log("this is a test after submit")
-            //const userBubble = document.createElement("div");
-            //userBubble.className = "chatbot-bubble chatbot-bubble-user";
-            //userBubble.textContent = "test"//message;
-            //popupThread.appendChild(userBubble);
+            const userBubble = document.createElement("div");
+            userBubble.className = "chatbot-bubble chatbot-bubble-user";
+            userBubble.textContent = message;
+            popupThread.appendChild(userBubble);
             const botBubble = document.createElement("div");
             botBubble.className = "chatbot-bubble chatbot-bubble-bot";
             botBubble.textContent = "Thinking..."
@@ -66,40 +66,7 @@
             popupInput.value = "";
             popupThread.scrollTop = popupThread.scrollHeight;
 
-          /*
-            //get context data and send it to chatbot
-            const idParam = new URLSearchParams(window.location.search).get("id");
-            const parsedId = idParam ? Number.parseInt(idParam, 10) : Number.NaN;
-            const isValidId = Number.isFinite(parsedId) && parsedId > 0;
-            const endpoint = isValidId ? `/api/summaries?id=${parsedId}` : "/api/summaries?limit=1"; 
-            try {
-              fetch(endpoint)
-                .then(response =>{
-                  if (!response.ok)
-                    throw new Error("Network response was not ok");  
-                    return response.json()
-              })
-              .then(payload=>{
-                const item = readSummaryItemFromPayload(payload);
-                botBubble.textContent = "Thinking..."; 
 
-                chatbot(item, message).then(aiResponse => {
-                    botBubble.textContent = aiResponse;
-                    //popupThread.scrollTop = popupThread.scrollHeight;
-                }).catch(err => {
-                    botBubble.textContent = "Sorry, I'm having trouble connecting right now.";
-                });
-              })
-              .catch(err => {
-                console.error("Chatbot fetch error:", err);
-                botBubble.textContent = "Sorry, there was an error...";
-              });
-                      
-
-            }catch{
-              print("error")
-            }
-              */
           });
         
         }

@@ -1,3 +1,13 @@
+//import {chatbot} from "../../AI/userSummaries/userSummary.mts"
+import {readSummaryItemFromPayload} from "assets/ts/main";
+/*
+const importchatBot = async () => {
+  const { chatBot } = await import('../../AI/userSummaries/userSummary.mts')
+}
+
+importchatBot();
+*/
+
 (function () {
   const style = document.createElement("style");
   style.textContent =
@@ -55,7 +65,7 @@
 
       const userBubble = document.createElement("div");
       userBubble.className = "chatbot-bubble chatbot-bubble-user";
-      userBubble.textContent = "tets"//message;
+      userBubble.textContent = message;
       popupThread.appendChild(userBubble);
 
       const botBubble = document.createElement("div");
@@ -64,6 +74,43 @@
 
       popupInput.value = "";
       popupThread.scrollTop = popupThread.scrollHeight;
+
+
+    /*
+      //get context data and send it to chatbot
+      const idParam = new URLSearchParams(window.location.search).get("id");
+      const parsedId = idParam ? Number.parseInt(idParam, 10) : Number.NaN;
+      const isValidId = Number.isFinite(parsedId) && parsedId > 0;
+      const endpoint = isValidId ? `/api/summaries?id=${parsedId}` : "/api/summaries?limit=1"; 
+      try {
+        fetch(endpoint)
+          .then(response =>{
+            if (!response.ok)
+              throw new Error("response was not ok");  
+              return response.json()
+        })
+        .then(payload=>{
+          const item = readSummaryItemFromPayload(payload);
+          botBubble.textContent = "Thinking..."; 
+
+          chatBot(item, message).then(aiResponse => {
+              botBubble.textContent = aiResponse;
+              //popupThread.scrollTop = popupThread.scrollHeight;
+          }).catch(err => {
+              botBubble.textContent = "Sorry, I'm having trouble connecting right now.";
+          });
+        })
+        .catch(err => {
+          console.error("Chatbot fetch error:", err);
+          botBubble.textContent = "Sorry, there was an error...";
+        });
+                
+
+      }catch{
+        console.timeLog("error")
+      }
+*/
+
     });
   }
 })();

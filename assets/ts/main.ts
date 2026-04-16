@@ -144,7 +144,7 @@ function buildSummaryHref(id: number | string | null | undefined): string {
   return `single.html?id=${normalizedId}`;
 }
 
-function readSummaryItemFromPayload(payload: SummariesResponse): SummaryItem | null {
+export function readSummaryItemFromPayload(payload: SummariesResponse): SummaryItem | null {
   const data = payload.data;
   if (!data) return null;
   if (Array.isArray(data)) return data[0] ?? null;
