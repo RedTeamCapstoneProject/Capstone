@@ -106,6 +106,12 @@ function resolveImageSource(rawImage: string): string {
   return `/api/summaries?imageUrl=${encodeURIComponent(normalizedRemoteUrl)}`;
 }
 
+function resolveDirectRemoteImageSource(rawImage: string): string | null {
+  if (rawImage.startsWith("http://") || rawImage.startsWith("https://")) return rawImage;
+  if (rawImage.startsWith("//")) return `${window.location.protocol}${rawImage}`;
+  return null;
+}
+
 function setImageWithFallback(
   image: HTMLImageElement,
   rawImage: string | null | undefined,
@@ -113,12 +119,23 @@ function setImageWithFallback(
 ): void {
   image.alt = altText;
 
+  const normalizedRaw = rawImage?.trim();
+  const directRemoteSource = normalizedRaw
+    ? resolveDirectRemoteImageSource(normalizedRaw)
+    : null;
+  let retriedWithDirectSource = false;
+
   image.onerror = () => {
+    if (directRemoteSource && !retriedWithDirectSource && image.src !== directRemoteSource) {
+      retriedWithDirectSource = true;
+      image.src = directRemoteSource;
+      return;
+    }
+
     image.onerror = null;
     image.src = FALLBACK_IMAGE_SRC;
   };
 
-  const normalizedRaw = rawImage?.trim();
   if (!normalizedRaw) {
     image.src = FALLBACK_IMAGE_SRC;
     return;
