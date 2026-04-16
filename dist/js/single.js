@@ -78,7 +78,14 @@
               })
               .then(payload=>{
                 const item = readSummaryItemFromPayload(payload);
-                botBubble.textContent = chatbot(item, message);
+                botBubble.textContent = "Thinking..."; 
+
+                chatbot(item, message).then(aiResponse => {
+                    botBubble.textContent = aiResponse;
+                    //popupThread.scrollTop = popupThread.scrollHeight;
+                }).catch(err => {
+                    botBubble.textContent = "Sorry, I'm having trouble connecting right now.";
+                });
               })
               .catch(err => {
                 console.error("Chatbot fetch error:", err);
