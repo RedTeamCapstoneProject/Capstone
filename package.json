@@ -5,7 +5,7 @@
   },
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "build": "node node_modules/sass/sass.js assets/sass/main.scss dist/main.css && node node_modules/esbuild/bin/esbuild assets/ts/main.ts --bundle --tsconfig=./tsconfig.json --outfile=dist/js/main.js && node node_modules/esbuild/bin/esbuild assets/ts/browser.ts --bundle --tsconfig=./tsconfig.json --outfile=dist/js/browser.js && node node_modules/esbuild/bin/esbuild assets/ts/breakpoints.ts --bundle --tsconfig=./tsconfig.json --outfile=dist/js/breakpoints.js && node node_modules/esbuild/bin/esbuild assets/ts/util.ts --bundle --tsconfig=./tsconfig.json --outfile=dist/js/util.js && node node_modules/esbuild/bin/esbuild assets/ts/authReact.tsx --bundle --tsconfig=./tsconfig.json --outfile=dist/js/auth-react.js"
+    "build": "node node_modules/sass/sass.js assets/sass/main.scss dist/main.css && node node_modules/esbuild/bin/esbuild assets/ts/main.ts --bundle --tsconfig=./tsconfig.json --outfile=dist/js/main.js && node node_modules/esbuild/bin/esbuild assets/ts/browser.ts --bundle --tsconfig=./tsconfig.json --outfile=dist/js/browser.js && node node_modules/esbuild/bin/esbuild assets/ts/breakpoints.ts --bundle --tsconfig=./tsconfig.json --outfile=dist/js/breakpoints.js && node node_modules/esbuild/bin/esbuild assets/ts/util.ts --bundle --tsconfig=./tsconfig.json --outfile=dist/js/util.js && node node_modules/esbuild/bin/esbuild assets/ts/authReact.tsx --bundle --tsconfig=./tsconfig.json --outfile=dist/js/auth-react.js && node node_modules/esbuild/bin/esbuild assets/ts/single.ts --bundle --tsconfig=./tsconfig.json --outfile=dist/js/single.js"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
