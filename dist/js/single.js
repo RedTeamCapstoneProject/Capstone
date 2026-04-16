@@ -53,6 +53,7 @@
             //const message = popupInput.value.trim();
             //if (!message)
              // return;
+            console.log("this is a test after submit")
             const userBubble = document.createElement("div");
             userBubble.className = "chatbot-bubble chatbot-bubble-user";
             userBubble.textContent = "test"//message;
