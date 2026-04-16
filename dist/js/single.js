@@ -39,23 +39,12 @@
         const popupDismissControls = document.querySelectorAll(
           "#chatbot-popup .chatbot-popup-dismiss"
         );
-        function closeChatbotPopupPreserveScroll() {
-          const preservedScrollY = window.scrollY;
-          if (window.location.hash === "#chatbot-popup") {
-            try {
-              history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
-            } catch {
-              window.location.hash = "";
-            }
-          }
-          window.requestAnimationFrame(() => {
-            window.scrollTo(0, preservedScrollY);
-          });
-        }
         popupDismissControls.forEach((control) => {
-          control.addEventListener("click", (event) => {
-            event.preventDefault();
-            closeChatbotPopupPreserveScroll();
+          control.addEventListener("click", () => {
+            const preservedScrollY = window.scrollY;
+            window.setTimeout(() => {
+              window.scrollTo(0, preservedScrollY);
+            }, 0);
           });
         });
         if (popupForm && popupInput && popupThread) {

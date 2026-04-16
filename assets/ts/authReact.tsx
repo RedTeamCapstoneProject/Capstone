@@ -853,6 +853,22 @@ function SettingsPanel() {
   );
 }
 
+function initializeAuthPopupDismissScrollPreservation() {
+  const popupDismissControls = document.querySelectorAll<HTMLElement>(
+    ".login-popup-overlay .login-popup-close, .login-popup-overlay .login-popup-backdrop"
+  );
+
+  popupDismissControls.forEach((control) => {
+    control.addEventListener("click", () => {
+      const preservedScrollY = window.scrollY;
+
+      window.setTimeout(() => {
+        window.scrollTo(0, preservedScrollY);
+      }, 0);
+    });
+  });
+}
+
 function mountAuthUi() {
   const loginRootEl = document.getElementById("login-form-root");
   if (loginRootEl) {
@@ -884,6 +900,7 @@ function mountAuthUi() {
     createRoot(toastRootEl).render(<ToastContainer />);
   }
 
+  initializeAuthPopupDismissScrollPreservation();
   syncHeaderIcon();
 }
 
