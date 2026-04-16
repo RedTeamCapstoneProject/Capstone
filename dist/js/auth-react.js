@@ -22684,6 +22684,19 @@
           )
         ] });
       }
+      function initializeAuthPopupDismissScrollPreservation() {
+        const popupDismissControls = document.querySelectorAll(
+          ".login-popup-overlay .login-popup-close, .login-popup-overlay .login-popup-backdrop"
+        );
+        popupDismissControls.forEach((control) => {
+          control.addEventListener("click", () => {
+            const preservedScrollY = window.scrollY;
+            window.setTimeout(() => {
+              window.scrollTo(0, preservedScrollY);
+            }, 0);
+          });
+        });
+      }
       function mountAuthUi() {
         const loginRootEl = document.getElementById("login-form-root");
         if (loginRootEl) {
@@ -22709,6 +22722,7 @@
         if (toastRootEl) {
           (0, import_client.createRoot)(toastRootEl).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ToastContainer, {}));
         }
+        initializeAuthPopupDismissScrollPreservation();
         syncHeaderIcon();
       }
       mountAuthUi();
