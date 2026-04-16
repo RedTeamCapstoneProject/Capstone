@@ -20,7 +20,7 @@ export async function summaryManager(newsArray:newsArticle[],userPrompt?:string 
 
 
 //somehow get user prompt and display to site
-async function chatBot(newsArray: newsArticle[],userPrompt?:String){
+export async function chatBot(newsArray: newsArticle[],userPrompt?:String){
     if(userPrompt == null){
         console.log("THERE WAS AN ERROR WITH YOUR PROMPT")
     }

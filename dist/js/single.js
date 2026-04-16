@@ -62,7 +62,35 @@
             popupThread.appendChild(botBubble);
             popupInput.value = "";
             popupThread.scrollTop = popupThread.scrollHeight;
+
+
+          //get context data and send it to chatbot
+            const idParam = new URLSearchParams(window.location.search).get("id");
+            const parsedId = idParam ? Number.parseInt(idParam, 10) : Number.NaN;
+            const isValidId = Number.isFinite(parsedId) && parsedId > 0;
+            const endpoint = isValidId ? `/api/summaries?id=${parsedId}` : "/api/summaries?limit=1"; 
+            try {
+              fetch(endpoint)
+                .then(response =>{
+                  if (!response.ok)
+                    throw new Error("Network response was not ok");  
+                    return response.json()
+              })
+              .then(payload=>{
+                const item = readSummaryItemFromPayload(payload);
+                botBubble.textContent = chatbot(item, message);
+              })
+              .catch(err => {
+                console.error("Chatbot fetch error:", err);
+                botBubble.textContent = "Sorry, there was an error...";
+              });
+                      
+
+            }catch{
+              print("error")
+            }
           });
+        
         }
       })();
     }
