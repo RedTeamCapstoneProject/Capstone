@@ -62,7 +62,7 @@
             popupThread.appendChild(botBubble);
             popupInput.value = "";
             popupThread.scrollTop = popupThread.scrollHeight;
-
+            botBubble.textContent = "Thinking..."
 
           //get context data and send it to chatbot
             const idParam = new URLSearchParams(window.location.search).get("id");
