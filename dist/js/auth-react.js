@@ -22689,11 +22689,20 @@
           ".login-popup-overlay .login-popup-close, .login-popup-overlay .login-popup-backdrop"
         );
         popupDismissControls.forEach((control) => {
-          control.addEventListener("click", () => {
+          control.addEventListener("click", (event) => {
+            if (typeof history.replaceState !== "function") {
+              return;
+            }
+            event.preventDefault();
             const preservedScrollY = window.scrollY;
-            window.setTimeout(() => {
+            history.replaceState(
+              history.state,
+              "",
+              `${window.location.pathname}${window.location.search}`
+            );
+            window.requestAnimationFrame(() => {
               window.scrollTo(0, preservedScrollY);
-            }, 0);
+            });
           });
         });
       }

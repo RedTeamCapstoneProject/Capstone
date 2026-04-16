@@ -38,13 +38,23 @@
   );
 
   popupDismissControls.forEach((control) => {
-    control.addEventListener("click", () => {
+    control.addEventListener("click", (event) => {
+      if (typeof history.replaceState !== "function") {
+        return;
+      }
+
+      event.preventDefault();
       const preservedScrollY = window.scrollY;
 
-      // Let the anchor default close the :target popup, then restore reading position.
-      window.setTimeout(() => {
+      history.replaceState(
+        history.state,
+        "",
+        `${window.location.pathname}${window.location.search}`
+      );
+
+      window.requestAnimationFrame(() => {
         window.scrollTo(0, preservedScrollY);
-      }, 0);
+      });
     });
   });
 
