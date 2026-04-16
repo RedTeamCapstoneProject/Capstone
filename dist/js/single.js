@@ -65,7 +65,8 @@
             popupInput.value = "";
             popupThread.scrollTop = popupThread.scrollHeight;
 
-          //get context data and send it to chatbot
+          /*
+            //get context data and send it to chatbot
             const idParam = new URLSearchParams(window.location.search).get("id");
             const parsedId = idParam ? Number.parseInt(idParam, 10) : Number.NaN;
             const isValidId = Number.isFinite(parsedId) && parsedId > 0;
@@ -97,6 +98,7 @@
             }catch{
               print("error")
             }
+              */
           });
         
         }
