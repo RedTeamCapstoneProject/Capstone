@@ -55,7 +55,7 @@
               return;
             const userBubble = document.createElement("div");
             userBubble.className = "chatbot-bubble chatbot-bubble-user";
-            userBubble.textContent = message;
+            userBubble.textContent = "test"//message;
             popupThread.appendChild(userBubble);
             const botBubble = document.createElement("div");
             botBubble.className = "chatbot-bubble chatbot-bubble-bot";
