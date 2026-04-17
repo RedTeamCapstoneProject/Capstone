@@ -20,8 +20,21 @@ export async function sendPasswordResetEmail(
   const mailOptions = {
     from: process.env.EMAIL_FROM || process.env.EMAIL_USER,
     to: email,
-    subject: " Real News Password Reset Request",
+    subject: "Real News Password Reset Request",
+    text: `Real News Password Reset Request
+
+We received a request to reset the password for your account.
+
+Use the link below to choose a new password. This link will expire in 1 hour:
+${resetLink}
+
+If you did not request a password reset, no further action is required and you can safely ignore this email.
+
+This is an automated message. Please do not reply to this email.`,
     html: `
+      <div style="display: none; max-height: 0; overflow: hidden; opacity: 0; color: transparent;">
+        Reset your Real News password. This secure link expires in 1 hour.
+      </div>
       <div style="margin: 0; padding: 24px; background-color: #f4f6f8; font-family: Arial, sans-serif; color: #1f2937;">
         <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden;">
           <div style="padding: 24px 28px; border-bottom: 1px solid #e5e7eb; background-color: #f9fafb;">
