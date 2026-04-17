@@ -144,7 +144,7 @@ export async function chatBot(newsArray:SummaryItem|null,userPrompt?:String):Pro
         return "there was an error fetching the content of this article"
     }
     var userPromptLength = userPrompt.length
-    if (userPromptLength >= 5){
+    if (userPromptLength >= 50){
         return "Your prompt is too long, please shorten it and try again"
     }
  const sysPrompt = `
