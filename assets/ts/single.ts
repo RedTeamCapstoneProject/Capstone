@@ -2,6 +2,9 @@
 import {readSummaryItemFromPayload} from "assets/ts/main";
 import path from "path";
 import { pathToFileURL } from "url";
+import jQuery from "jquery";
+import breakpoints from "./breakpoints";
+import "./util"; 
 /*
 const importchatBot = async () => {
   const { chatBot } = await import('../../AI/userSummaries/userSummary.mjs')
@@ -31,7 +34,7 @@ async function importChatBot(): Promise<
 	(newsArticle:SummaryItem|null,userPrompt:string) => Promise<string>
 > {
 	const chatBotModulePath = pathToFileURL(
-		path.resolve(__dirname, "../../AI/userSummary/chatBot.mts")
+		path.resolve(__dirname, "../../AI/userSummary/userSummary.mts")
 	).href;
 
 	const dynamicImport = new Function(
@@ -49,6 +52,21 @@ async function importChatBot(): Promise<
 
 	return module.summaryManager;
 }
+
+
+/*
+async function importChatBot() {
+  // Use a simple relative path. 
+  // Note: Most bundlers (esbuild/Vite) need the extension to be .js or .mjs in the final build.
+  const module = await import("../../AI/userSummary/userSummary.mjs");
+
+  if (typeof module.summaryManager !== "function") {
+    throw new Error("summaryManager export was not found");
+  }
+
+  return module.summaryManager;
+}
+*/
 
 
 
