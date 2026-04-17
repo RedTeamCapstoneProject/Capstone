@@ -1,12 +1,12 @@
 // api/chat.ts
 //import { chatBot } from "../AI/userSummaries/userSummary.mts";
-import { config } from 'dotenv';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import fs, { write } from 'fs';
-import { exec } from 'child_process';
+//import { config } from 'dotenv';
+//import path from 'path';
+//import { fileURLToPath } from 'url';
+////import fs, { write } from 'fs';
+//import { exec } from 'child_process';
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { time } from "console";
+//import { time } from "console";
 import { Groq } from "groq-sdk";
 /*
 export default async function handler(req: any, res: any) {
@@ -45,42 +45,28 @@ type SummaryItem = {
 
 
 
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+const genAI = new GoogleGenerativeAI(process.env.geminiAPI || "");
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+// 3. MAIN HANDLER
 export default async function handler(req: any, res: any) {
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
 
   try {
     const { item, message } = req.body;
+    
+    if (!process.env.GROQ_API_KEY || !process.env.geminiAPI) {
+        throw new Error("Missing API keys in Vercel Environment Variables");
+    }
+
     const aiResponse = await chatBot(item, message);
     res.status(200).send(aiResponse);
   } catch (error: any) {
+    console.error("Handler Error:", error.message);
     res.status(500).send("Error: " + error.message);
   }
 }
-
-
-
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const envPath = path.resolve(__dirname, '../../.env');
-config({ path: envPath });
-
-const GROQ_API_KEY = process.env.GROQ_API_KEY;
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
-
-const GEMINI_API_KEY = process.env.geminiAPI;
-const genAI = new GoogleGenerativeAI(GEMINI_API_KEY || "");
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-
-
-if (!GROQ_API_KEY) {
-    throw new Error(`Missing groq in .env file`);
-}
-
-if (!GEMINI_API_KEY){
-    throw new Error (`missing GEMINI key in .env file`)
-}
-
 
 
 
