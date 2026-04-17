@@ -1,5 +1,5 @@
 // api/chat.ts
-import { chatBot } from "../AI/userSummaries/userSummary.mjs";
+import { chatBot } from "../AI/userSummaries/userSummary.mts";
 
 export default async function handler(req: any, res: any) {
   // Only allow POST requests
