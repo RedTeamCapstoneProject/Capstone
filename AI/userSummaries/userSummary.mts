@@ -1,4 +1,4 @@
-import { type newsArticle, callAI, writeToJSON } from "../AIExportedFunctions/exportedFunctions.mts";
+import {callAI} from "../AIExportedFunctions/exportedFunctions.mts";
 type SummaryItem = {
   id: number | string;
   category?: string | null;
@@ -17,8 +17,8 @@ type SummaryItem = {
 type SummariesResponse = { data?: SummaryItem[] | SummaryItem };
 
 // get newsArticle array from the news_article database from jonathan
-
-export async function summaryManager(newsArray:newsArticle[],userPrompt?:string ){
+/*
+export async function summaryManager(newsArray:SummaryItem|null,userPrompt:string ){
     let response:string = ""
     try{
 
@@ -31,11 +31,23 @@ export async function summaryManager(newsArray:newsArticle[],userPrompt?:string 
 
     }
 }
+*/
+/*
+async function importCallAI() {
+  
+  const module = await import("../../AI/AIExportedFunctions/exportedFunctions.mjs");
 
+  if (typeof module.callAI !== "function") {
+    throw new Error("summaryManager export was not found");
+  }
 
+  return module.callAI;
+}
+  */
 
 //somehow get user prompt and display to site
 export async function chatBot(newsArray:SummaryItem|null,userPrompt?:String):Promise<string>{
+   // var callAI = await importCallAI()
     if(userPrompt == null){
         return "there was an error sending your prompt"
     }
