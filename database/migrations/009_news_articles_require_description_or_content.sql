@@ -1,6 +1,6 @@
 DELETE FROM news_articles
-WHERE description IS NULL
-  AND content IS NULL;
+WHERE NULLIF(BTRIM(description), '') IS NULL
+  AND NULLIF(BTRIM(content), '') IS NULL;
 
 ALTER TABLE news_articles
 DROP CONSTRAINT IF EXISTS news_articles_description_or_content_chk;
@@ -19,5 +19,8 @@ CREATE TRIGGER news_articles_delete_empty_after_write_trg
 AFTER INSERT
 ON news_articles
 FOR EACH ROW
-WHEN (NEW.description IS NULL AND NEW.content IS NULL)
+WHEN (
+  NULLIF(BTRIM(NEW.description), '') IS NULL
+  AND NULLIF(BTRIM(NEW.content), '') IS NULL
+)
 EXECUTE FUNCTION delete_news_article_if_empty();
