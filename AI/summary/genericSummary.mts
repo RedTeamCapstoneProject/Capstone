@@ -78,7 +78,7 @@ async function tempReadMethodForTesting(){
 export async function summaryManager(articleObjArray: newsArticle[],numberOfTopics:number){
     console.log(articleObjArray.length)
     let contentArray:Array<string> = []
-    let descriptionArray:Array<string> = []
+    let descriptionArray:Array<string|null> = []
     let titleArray:Array<string>=[]
     for(const article of articleObjArray){
         let content:string = article.content
@@ -89,7 +89,7 @@ export async function summaryManager(articleObjArray: newsArticle[],numberOfTopi
         titleArray.push(title)
     }
 
-
+    
     var summarizedContent:string= await summarizeContent(contentArray,descriptionArray,titleArray)
     var summarizedDescription:string = await summarizeDescription(descriptionArray)
     var summarizedTitle:string = await summarizeTitle(titleArray)
@@ -112,7 +112,7 @@ export async function summaryManager(articleObjArray: newsArticle[],numberOfTopi
 //takes the content from all articles in an array as parameter 
 // pass the whole array for the ai to check out and respond with summary
 // returns a string response
-async function summarizeContent(contentArray: Array<string>,descriptionArray: Array<string>,titleArray: Array<string>){
+async function summarizeContent(contentArray: Array<string>,descriptionArray: Array<string|null>,titleArray: Array<string>){
    /*
     const sysPrompt = `
         You are a concise news editor. 
@@ -164,7 +164,13 @@ async function summarizeContent(contentArray: Array<string>,descriptionArray: Ar
 //takes the descriptions from all articles in an array as parameter 
 // pass the whole array for the ai to check out and respond with summary
 // returns a string response
-async function summarizeDescription(descriptionArray: Array<string>){
+
+async function summarizeDescription(descriptionArray: Array<string|null>){
+    const isAllNull = descriptionArray.every(element => element === null);
+    if(isAllNull){
+        return ""
+    }
+    
     const sysPrompt = `
             You are a master copywriter for a high-end news app. 
 
@@ -333,7 +339,7 @@ const filePath = "outputJSONs/summarizedJSON/summarizedTopic.json";
     }catch(err){
         console.log("error")
     }finally{
-       await runSummaryToDB()
+       //await runSummaryToDB()
     }
 }
 //var catArray = await tempReadMethodForTesting()
