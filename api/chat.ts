@@ -143,6 +143,10 @@ export async function chatBot(newsArray:SummaryItem|null,userPrompt?:String):Pro
     if ((newsArray==null)){
         return "there was an error fetching the content of this article"
     }
+    var userPromptLength = userPrompt.length
+    if (userPromptLength >= 5){
+        return "Your prompt is too long, please shorten it and try again"
+    }
  const sysPrompt = `
         ### ROLE
         You are a "Context-Aware News Analyst." Provide short, high-impact answers by blending the provided news with verified facts.
