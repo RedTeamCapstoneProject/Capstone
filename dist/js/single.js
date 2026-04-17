@@ -53,16 +53,22 @@
             const message = popupInput.value.trim();
             if (!message)
               return;
+            console.log("this is a test after submit")
             const userBubble = document.createElement("div");
             userBubble.className = "chatbot-bubble chatbot-bubble-user";
             userBubble.textContent = message;
             popupThread.appendChild(userBubble);
             const botBubble = document.createElement("div");
             botBubble.className = "chatbot-bubble chatbot-bubble-bot";
+            botBubble.textContent = "Thinking..."
+
             popupThread.appendChild(botBubble);
             popupInput.value = "";
             popupThread.scrollTop = popupThread.scrollHeight;
+
+
           });
+        
         }
       })();
     }

@@ -1,4 +1,9 @@
 {
+  "functions":{
+    "api/chat.ts": {
+      "includeFiles": "AI/**"
+    }
+  },
   "framework": null,
   "buildCommand": "npm run build",
   "outputDirectory": "dist",

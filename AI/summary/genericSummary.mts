@@ -170,7 +170,10 @@ async function summarizeDescription(descriptionArray: Array<string|null>){
     if(isAllNull){
         return ""
     }
-    
+    const isAllEmpty = descriptionArray.every(element => element === "");
+    if(isAllEmpty){
+        return ""
+    }
     const sysPrompt = `
             You are a master copywriter for a high-end news app. 
 
