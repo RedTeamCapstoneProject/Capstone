@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS ai_calls (
+    id BIGSERIAL PRIMARY KEY,
+    IP TEXT[] NOT NULL,
+    calls INT[] NOT NULL
+    DEFAULT ARRAY[5];
+);
