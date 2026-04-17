@@ -1,12 +1,56 @@
 //import {chatbot} from "../../AI/userSummaries/userSummary.mts"
 import {readSummaryItemFromPayload} from "assets/ts/main";
+import path from "path";
+import { pathToFileURL } from "url";
 /*
 const importchatBot = async () => {
-  const { chatBot } = await import('../../AI/userSummaries/userSummary.mts')
+  const { chatBot } = await import('../../AI/userSummaries/userSummary.mjs')
 }
 
 importchatBot();
 */
+type SummaryItem = {
+  id: number | string;
+  category?: string | null;
+  ai_title: string | null;
+  ai_description: string | null;
+  url_to_image: string | null;
+  summary: string | null;
+  likeIm5?: string | null;
+  "5ws"?: string | null;
+  source_names?: string[] | null;
+  authors?: string[] | null;
+  urls?: string[] | null;
+  created_at?: string | null;
+};
+
+type SummariesResponse = { data?: SummaryItem[] | SummaryItem };
+
+
+async function importChatBot(): Promise<
+	(newsArticle:SummaryItem|null,userPrompt:string) => Promise<string>
+> {
+	const chatBotModulePath = pathToFileURL(
+		path.resolve(__dirname, "../../AI/userSummary/chatBot.mts")
+	).href;
+
+	const dynamicImport = new Function(
+		"modulePath",
+		"return import(modulePath);"
+	) as (modulePath: string) => Promise<{
+		summaryManager: (newsArticle:SummaryItem|null,userPrompt:string) => Promise<string>;
+	}>;
+
+	const module = await dynamicImport(chatBotModulePath);
+
+	if (typeof module.summaryManager !== "function") {
+		throw new Error("summaryManager export was not found in AI/summary/genericSummary.mts");
+	}
+
+	return module.summaryManager;
+}
+
+
 
 (function () {
   const style = document.createElement("style");
@@ -58,7 +102,7 @@ importchatBot();
   });
 
   if (popupForm && popupInput && popupThread) {
-    popupForm.addEventListener("submit", (event) => {
+    popupForm.addEventListener("submit", async(event) => {
       event.preventDefault();
       const message = popupInput.value.trim();
       if (!message) return;
@@ -76,40 +120,44 @@ importchatBot();
       popupThread.scrollTop = popupThread.scrollHeight;
 
 
-    /*
+  	  const chatBot = await importChatBot();
+
       //get context data and send it to chatbot
       const idParam = new URLSearchParams(window.location.search).get("id");
       const parsedId = idParam ? Number.parseInt(idParam, 10) : Number.NaN;
       const isValidId = Number.isFinite(parsedId) && parsedId > 0;
       const endpoint = isValidId ? `/api/summaries?id=${parsedId}` : "/api/summaries?limit=1"; 
+      botBubble.textContent = "Thinking...";
+
+  // 2. Fetch the context data
       try {
-        fetch(endpoint)
-          .then(response =>{
-            if (!response.ok)
-              throw new Error("response was not ok");  
-              return response.json()
-        })
-        .then(payload=>{
-          const item = readSummaryItemFromPayload(payload);
-          botBubble.textContent = "Thinking..."; 
+        // 1. Setup UI
+        botBubble.textContent = "Thinking...";
 
-          chatBot(item, message).then(aiResponse => {
-              botBubble.textContent = aiResponse;
-              //popupThread.scrollTop = popupThread.scrollHeight;
-          }).catch(err => {
-              botBubble.textContent = "Sorry, I'm having trouble connecting right now.";
-          });
-        })
-        .catch(err => {
-          console.error("Chatbot fetch error:", err);
-          botBubble.textContent = "Sorry, there was an error...";
-        });
-                
+        // 2. Fetch the context data
+        const response = await fetch(endpoint);
+        if (!response.ok) throw new Error("API response was not ok");
+        
+        const payload = await response.json();
+        const item = readSummaryItemFromPayload(payload);
 
-      }catch{
-        console.timeLog("error")
+        // 3. Get the AI response
+        const aiResponse = await chatBot(item, message);
+
+        // 4. Update UI with the result
+        botBubble.textContent = aiResponse;
+
+      } catch (err) {
+        // This single catch block now handles EVERYTHING:
+        // - Fetch network errors
+        // - JSON parsing errors
+        // - AI/chatBot logic errors
+        console.error("Chatbot system error:", err);
+        botBubble.textContent = "Sorry, I'm having trouble connecting right now.";
+      } finally {
+        // This ensures the scroll happens regardless of success or failure
+        popupThread.scrollTop = popupThread.scrollHeight;
       }
-*/
 
     });
   }

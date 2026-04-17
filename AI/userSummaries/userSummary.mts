@@ -1,5 +1,20 @@
 import { type newsArticle, callAI, writeToJSON } from "../AIExportedFunctions/exportedFunctions.mts";
+type SummaryItem = {
+  id: number | string;
+  category?: string | null;
+  ai_title: string | null;
+  ai_description: string | null;
+  url_to_image: string | null;
+  summary: string | null;
+  likeIm5?: string | null;
+  "5ws"?: string | null;
+  source_names?: string[] | null;
+  authors?: string[] | null;
+  urls?: string[] | null;
+  created_at?: string | null;
+};
 
+type SummariesResponse = { data?: SummaryItem[] | SummaryItem };
 
 // get newsArticle array from the news_article database from jonathan
 
@@ -7,7 +22,7 @@ export async function summaryManager(newsArray:newsArticle[],userPrompt?:string 
     let response:string = ""
     try{
 
-        response = await chatBot(newsArray,userPrompt)
+        //response = await chatBot(newsArray,userPrompt)
           
     } finally{
     
@@ -20,9 +35,12 @@ export async function summaryManager(newsArray:newsArticle[],userPrompt?:string 
 
 
 //somehow get user prompt and display to site
-export async function chatBot(newsArray:Object,userPrompt?:String){
+export async function chatBot(newsArray:SummaryItem|null,userPrompt?:String):Promise<string>{
     if(userPrompt == null){
-        console.log("THERE WAS AN ERROR WITH YOUR PROMPT")
+        return "there was an error sending your prompt"
+    }
+    if ((newsArray==null)){
+        return "there was an error fetching the content of this article"
     }
  const sysPrompt = `
         ### ROLE
