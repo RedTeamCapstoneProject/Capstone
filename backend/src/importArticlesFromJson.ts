@@ -57,7 +57,9 @@ export async function importArticlesFromJson(filePath: string): Promise<number> 
   let inserted = 0;
 
   for (const article of articles) {
-    
+    const description = article.description ?? null;
+    const content = article.content ?? null;
+
     const result = await pool.query(
       `INSERT INTO news_articles
         (source_id, source_name, author, title, description, url,
@@ -70,11 +72,11 @@ export async function importArticlesFromJson(filePath: string): Promise<number> 
         article.source_name ?? null,
         article.author ?? "Unknown Author",
         article.title ?? null,
-        article.description ?? null,
+        description,
         article.url,
         article.urlToImage ?? null,
         article.publishedAt ?? null,
-        article.content ?? null,
+        content,
         article.category ?? "unknown",
         article.topic ?? "unknown",
       ]
