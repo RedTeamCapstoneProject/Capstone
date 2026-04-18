@@ -1,31 +1,8 @@
-// api/chat.ts
-//import { chatBot } from "../AI/userSummaries/userSummary.mts";
-//import { config } from 'dotenv';
-//import path from 'path';
-//import { fileURLToPath } from 'url';
-////import fs, { write } from 'fs';
-//import { exec } from 'child_process';
+
 import { GoogleGenerativeAI } from "@google/generative-ai";
-//import { time } from "console";
 import { Groq } from "groq-sdk";
-/*
-export default async function handler(req: any, res: any) {
-    if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
+import { Pool } from 'pg'; // Ensure you have npm install pg
 
-  try {
-    const { item, message } = req.body;
-
-    
-    const { chatBot } = await import("../AI/userSummaries/userSummary.mts");
-
-    const aiResponse = await chatBot(item, message);
-    res.status(200).send(aiResponse);
-  } catch (error: any) {
-    console.error(error);
-    res.status(500).send("Error: " + error.message);
-  }
-}
-*/
 
 
 type SummaryItem = {
@@ -44,29 +21,91 @@ type SummaryItem = {
 };
 
 
+const pool = new Pool({ 
+    connectionString: process.env.DATABASE_URL,
+    max: 1 
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 const genAI = new GoogleGenerativeAI(process.env.geminiAPI || "");
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-// 3. MAIN HANDLER
 export default async function handler(req: any, res: any) {
-  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
+    if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
 
-  try {
-    const { item, message } = req.body;
-    
-    if (!process.env.GROQ_API_KEY || !process.env.geminiAPI) {
-        throw new Error("Missing API keys in Vercel Environment Variables");
+        const userIP = (req.headers['x-forwarded-for'] as string)?.split(',')[0] || req.socket.remoteAddress;
+        const client = await pool.connect();
+
+    try {
+        const checkResult = await client.query(
+            'SELECT calls FROM ai_calls WHERE ip = $1',
+            [userIP]
+        );
+
+        const currentCalls = checkResult.rows.length > 0 ? checkResult.rows[0].calls : 5;
+
+        if (currentCalls <= 0) {
+            return res.status(429).json({ 
+                error: "Limit reached", 
+                message: "You have 0 messages remaining. Please log in to continue!" 
+            });
+        }
+
+        await client.query(
+            `INSERT INTO ai_calls (ip, calls) 
+            VALUES ($1, 4) 
+            ON CONFLICT (ip) 
+            DO UPDATE SET calls = ai_calls.calls - 1`,
+            [userIP]
+        );
+        
+    } catch (dbError: any) {
+        console.error("Database error:", dbError.message);
+    } finally {
+        client.release();
     }
 
-    const aiResponse = await chatBot(item, message);
-    res.status(200).send(aiResponse);
-  } catch (error: any) {
-    console.error("Handler Error:", error.message);
-    res.status(500).send("Error: " + error.message);
-  }
+    try {
+        const { item, message } = req.body;
+        
+        if (!process.env.GROQ_API_KEY || !process.env.geminiAPI) {
+            throw new Error("Missing API keys in Vercel Environment Variables");
+        }
+
+        const aiResponse = await chatBot(item, message);
+        res.status(200).send(aiResponse);
+    } catch (error: any) {
+        console.error("Handler Error:", error.message);
+        res.status(500).send("Error: " + error.message);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
