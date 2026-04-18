@@ -342,7 +342,7 @@ const filePath = "outputJSONs/summarizedJSON/summarizedTopic.json";
     }catch(err){
         console.log("error")
     }finally{
-       //await runSummaryToDB()
+       await runSummaryToDB()
     }
 }
 //var catArray = await tempReadMethodForTesting()
