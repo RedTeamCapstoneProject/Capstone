@@ -72,7 +72,7 @@ async function importChatBot() {
 (function () {
   const style = document.createElement("style");
   style.textContent =
-    ".article-tab-panel { display: none; } .article-tab-panel.active { display: block; }";
+    ".article-tab-panel { display: none; } .article-tab-panel.active { display: block; } .article-tabs-nav { display: flex; align-items: center; } .article-tabs-nav .article-tab[data-action=\"report\"] { margin-left: auto; }";
   document.head.appendChild(style);
 
   const tabs = document.querySelectorAll<HTMLElement>(".article-tab");

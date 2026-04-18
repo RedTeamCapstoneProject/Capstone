@@ -10,7 +10,7 @@
     "assets/ts/single.ts"() {
       (function() {
         const style = document.createElement("style");
-        style.textContent = ".article-tab-panel { display: none; } .article-tab-panel.active { display: block; }";
+        style.textContent = ".article-tab-panel { display: none; } .article-tab-panel.active { display: block; } .article-tabs-nav { display: flex; align-items: center; } .article-tabs-nav .article-tab[data-action=\"report\"] { margin-left: auto; }";
         document.head.appendChild(style);
         const tabs = document.querySelectorAll(".article-tab");
         const panels = document.querySelectorAll(".article-tab-panel");
