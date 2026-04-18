@@ -83,6 +83,19 @@ async function importChatBot() {
 
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
+      const action = tab.getAttribute("data-action");
+      if (action === "report") {
+        const pageUrl = window.location.href;
+        const articleTitle =
+          document.querySelector<HTMLElement>("article.post .title h2 a")?.textContent?.trim() ||
+          "Article";
+
+        const subject = encodeURIComponent(`Report article: ${articleTitle}`);
+        const body = encodeURIComponent(`Please review this article:\n${pageUrl}`);
+        window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        return;
+      }
+
       const tabName = tab.getAttribute("data-tab");
       if (tabName === "chatbot") {
         window.location.hash = "chatbot-popup";
