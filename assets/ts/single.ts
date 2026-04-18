@@ -72,7 +72,7 @@ async function importChatBot() {
 (function () {
   const style = document.createElement("style");
   style.textContent =
-    ".article-tab-panel { display: none; } .article-tab-panel.active { display: block; } .article-tabs-nav { display: flex; align-items: center; } .article-tabs-nav .article-tab[data-action=\"report\"] { margin-left: auto; }";
+    ".article-tab-panel { display: none; } .article-tab-panel.active { display: block; } .article-tabs-nav { display: flex; align-items: center; } .article-tabs-nav .article-tab[data-action=\"report\"] { margin-left: auto; } .report-form { display: block; } .report-label { display: block; margin-bottom: 0.6em; letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.75em; font-weight: 700; color: #6a6a6a; } .report-form textarea { min-height: 10.5em; resize: vertical; margin-bottom: 0.65em; } .report-form-footer { display: flex; align-items: center; justify-content: space-between; gap: 0.8em; } .report-counter { color: #8a8a8a; font-size: 0.8em; letter-spacing: 0.02em; } .report-send { margin: 0; }";
   document.head.appendChild(style);
 
   const tabs = document.querySelectorAll<HTMLElement>(".article-tab");
@@ -111,7 +111,8 @@ async function importChatBot() {
   const popupInput = document.getElementById("chatbot-popup-input") as HTMLInputElement | null;
   const popupThread = document.getElementById("chatbot-thread") as HTMLElement | null;
   const reportForm = document.getElementById("report-popup-form") as HTMLFormElement | null;
-  const reportInput = document.getElementById("report-popup-input") as HTMLInputElement | null;
+  const reportInput = document.getElementById("report-popup-input") as HTMLTextAreaElement | null;
+  const reportCounter = document.getElementById("report-popup-counter") as HTMLElement | null;
   const popupDismissControls = document.querySelectorAll<HTMLElement>(
     "#chatbot-popup .chatbot-popup-dismiss, #report-popup .report-popup-dismiss"
   );
@@ -194,10 +195,17 @@ async function importChatBot() {
   }
 
   if (reportForm && reportInput) {
+    const updateReportCounter = () => {
+      if (!reportCounter) return;
+      reportCounter.textContent = `${reportInput.value.length}/250`;
+    };
+
+    reportInput.addEventListener("input", updateReportCounter);
+    updateReportCounter();
+
     reportForm.addEventListener("submit", (event) => {
       event.preventDefault();
       const message = reportInput.value.trim();
-      if (!message) return;
 
       const pageUrl = window.location.href;
       const articleTitle =
@@ -206,11 +214,12 @@ async function importChatBot() {
 
       const subject = encodeURIComponent(`Report article: ${articleTitle}`);
       const body = encodeURIComponent(
-        `Article URL: ${pageUrl}\n\nMessage:\n${message}`
+        `Article URL: ${pageUrl}\n\nAdditional Information:\n${message || "[No additional information provided]"}`
       );
 
       window.location.href = `mailto:?subject=${subject}&body=${body}`;
       reportInput.value = "";
+      updateReportCounter();
       window.location.hash = "";
     });
   }

@@ -124,9 +124,13 @@
 					<div class="login-popup-inner chatbot-popup-inner">
 						<h2>Report Article</h2>
 						<div class="chatbot-ui">
-							<form class="chatbot-composer" id="report-popup-form">
-								<input type="text" id="report-popup-input" placeholder="Describe the issue..." autocomplete="off" />
-								<button type="submit" class="button small">Send</button>
+							<form class="report-form" id="report-popup-form">
+								<label for="report-popup-input" class="report-label">Additional Information (Optional)</label>
+								<textarea id="report-popup-input" rows="6" maxlength="250" autocomplete="off"></textarea>
+								<div class="report-form-footer">
+									<span id="report-popup-counter" class="report-counter">0/250</span>
+									<button type="submit" class="button small report-send">Send</button>
+								</div>
 							</form>
 						</div>
 					</div>
