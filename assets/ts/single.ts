@@ -169,17 +169,21 @@ async function importChatBot() {
           }),
         });
 
-      if (!AIresponse.ok) {
-          throw new Error("Server error");
+      if(AIresponse.status === 429){ //check for rate limits
+         botBubble.textContent = "You have reached the rate limit. Please log in to get a higher limit"
+        return
       }
 
+
+      if (!AIresponse.ok) {
+          throw new Error("Server error");  //check for errors
+      }
+      
+      //response is good
       const aiResponse = await AIresponse.text();
       botBubble.textContent = aiResponse;
 
     } catch (err) {
-        if(err == 429){
-          botBubble.textContent = "You have reached the rate limit. Please log in to get a higher limit"
-        }
       console.error("Chatbot system error:", err);
       botBubble.textContent = "Sorry, I'm having trouble connecting right now.";
     } finally {
