@@ -1,6 +1,53 @@
 [
   {
     "source_names": [
+      "CNN",
+      "Axios",
+      "War on the Rocks"
+    ],
+    "authors": [
+      "Hadas Gold, Alayna Treene",
+      "Jim VandeHei, Mike Allen",
+      "Madeline Field"
+    ],
+    "ai_title": "Anthropic Meets White House Officials",
+    "ai_description": "Anthropic CEO meets with White House amid bitter AI battle.",
+    "urls": [
+      "https://www.cnn.com/2026/04/17/business/anthropic-white-house-meeting-dario-amodei",
+      "https://www.axios.com/2026/04/17/anthropic-trump-administration-mythos",
+      "https://warontherocks.com/cogs-of-war/anthropics-nuclear-bomb/"
+    ],
+    "url_to_image": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2261514586-20260417123429634.jpg?c=16x9&q=w_800,c_fill",
+    "category": "business",
+    "topic": "Anthropic CEO Dario Amodei",
+    "summary": "Dario Amodei, the CEO of Anthropic, is scheduled to meet with the president's top adviser at the White House. This meeting occurs while Anthropic is involved in a legal challenge with the Trump administration regarding the blacklisting of its Claude AI model. On April 7, 2026, Anthropic launched its newest model, Claude Mythos Preview. A source close to the negotiations emphasized the importance of the US government leveraging technological advancements presented by the new model. The meeting between Amodei and the president's adviser may be a significant step in resolving the company's issues with the Pentagon. The blacklisting of Anthropic's Claude AI model is a subject of contention between the company and the Trump administration. The high-stakes meeting and the launch of the new model are closely watched events in the AI and cybersecurity communities.\n\n* The meeting between Dario Amodei and the president's top adviser may lead to a resolution of the legal challenge between Anthropic and the Trump administration.\n* The launch of Claude Mythos Preview on April 7, 2026, represents a significant technological development in the field of AI.\n* The blacklisting of Anthropic's Claude AI model by the Trump administration has significant implications for the company's operations and the broader AI industry.",
+    "5ws": "Who: Dario Amodei, Anthropic CEO\nWhat: High-stakes White House meeting\nWhen: Friday, April 17, 2026\nWhere: White House, Washington D.C.\nWhy: Resolve AI blacklist dispute",
+    "likeIm5": "Imagine this: The \"Smart Team\" led by \"Mr. Amodei\" is visiting the \"White House Friends\" to resolve a big issue. The \"Trump Team\" and \"Pentagon Pals\" are involved too. They want to find a way to use a new, powerful tool called \"Claude\" to help everyone, and Mr. Amodei is working hard to make it happen."
+  },
+  {
+    "source_names": [
+      "MacRumors",
+      "AppleInsider"
+    ],
+    "authors": [
+      "Juli Clover",
+      "Christine McKee"
+    ],
+    "ai_title": "Apple MacBooks Sell Out Amid High Demand",
+    "ai_description": "MacBook Pro price plummets to $1,580 in retailer war.",
+    "urls": [
+      "https://www.macrumors.com/2026/04/16/macbook-neo-demand-surging/",
+      "https://appleinsider.com/articles/26/04/16/price-war-apples-1tb-m5-macbook-pro-dips-to-1580"
+    ],
+    "url_to_image": "https://images.macrumors.com/t/eOzyM8ISnV9IBZyEokzQ90qZ434=/2500x/article-new/2026/03/macbook-neo-launch-day.jpeg",
+    "category": "technology",
+    "topic": "Apple MacBook Neo",
+    "summary": "The MacBook Neo, a product by Apple, has been in high demand since its launch, with its price point of $599 being a significant factor. As of the current year, 2026, the global RAM shortage has led to increased prices for PC makers. Apple's MacBook Neo has been sold out through April amid surging demand.Apple retailers have been engaged in a price war, resulting in a reduction of the 1TB M5 14-inch MacBook Pro price. The 1TB 14-inch MacBook Pro model is available for $1,580 at retailers such as Amazon. The price reduction is a result of the competitive market, with various retailers offering discounts on Apple products. The MacBook Neo and MacBook Pro are both products offered by Apple, with different price points and specifications.\n\n* The MacBook Neo is priced at $599 and has been in high demand since its launch.\n* The 1TB M5 14-inch MacBook Pro model is available for $1,580 due to a price war among Apple retailers.\n* The global RAM shortage has led to increased prices for PC makers, with Apple's products being affected by the market trends.",
+    "5ws": "Who: Apple, Juli Clover, Christine McKee\nWhat: MacBook Neo sells out, price war\nWhen: April 2026\nWhere: Online, Apple stores\nWhy: Meeting surging demand, competitive pricing",
+    "likeIm5": "Imagine a big school where Apple's team, led by Juli the Journalist and Christine the Computer Whiz, are making super cool laptops. The MacBook Neo is so popular that it's sold out, and people like Juli and Christine are working hard to make more. They want to help everyone have a great computer, and that's the big why."
+  },
+  {
+    "source_names": [
       "Space.com",
       "Minneapolis Star Tribune"
     ],
@@ -9,7 +56,7 @@
       "Kim Hyatt, Kim Hyatt"
     ],
     "ai_title": "Artemis II Mission Makes Lunar History",
-    "ai_description": "NASA's Orion spacecraft prepares for lift-off.",
+    "ai_description": "NASA's Orion spacecraft blasts off under Branelle Rodriguez's guidance.",
     "urls": [
       "https://www.space.com/space-exploration/artemis/that-was-a-wonderful-toilet-artemis-2-commander-defends-missions-lunar-loo",
       "https://www.startribune.com/brainerd-native-is-over-the-moon-after-making-history-with-artemis-ii-mission/601667941"
@@ -17,9 +64,53 @@
     "url_to_image": "https://cdn.mos.cms.futurecdn.net/XhYwpeuFZFXywkGEqVuReJ-1280-80.png",
     "category": "science",
     "topic": "Artemis 2 Lunar Loo",
-    "summary": "Branelle Rodriguez, a NASA vehicle manager, played a crucial role in the Artemis II mission, which was inspired by the clear, starry skies of northern Minnesota. Rodriguez was part of the team that prepared the Orion spacecraft for lift-off and splashdown. The Artemis II mission was a significant achievement, with Rodriguez being a key figure in its success. As the vehicle manager, Rodriguez's responsibilities included ensuring the spacecraft was ready for launch and return. The mission's success was attributed to the hard work and dedication of the team, including the engineers who designed the spacecraft's systems. The Artemis II mission's lunar loo, in particular, was defended by the commander, who praised the engineers' work. The mission marked a historic achievement for Rodriguez, a Brainerd native, who made history with the Artemis II mission.\n\n* Branelle Rodriguez was the vehicle manager of the Artemis II mission, responsible for preparing the Orion spacecraft for launch and return.\n* The Artemis II mission was a significant achievement, marking a major milestone in space exploration.\n* The mission's success was attributed to the hard work and dedication of the team, including the engineers who designed the spacecraft's systems, such as the lunar loo.",
-    "5ws": "Who: Artemis 2 commander, Branelle Rodriguez\nWhat: Defends lunar loo, Artemis II mission\nWhen: April 2026\nWhere: Lunar space, NASA\nWhy: Successful mission, historic achievement",
-    "likeIm5": "Imagine astronauts like Commander Starlight and Engineer Brainstorm, along with the Space Explorers team and NASA's Vehicle Manager, Space Navigator Branelle, working together on a big mission called Artemis 2 to explore the moon and make new discoveries."
+    "summary": "As of 2026, Branelle Rodriguez, a NASA vehicle manager, played a crucial role in the Artemis II mission. The mission was inspired by the clear, starry skies of northern Minnesota, where Rodriguez grew up. Rodriguez was part of the team that prepared the Orion spacecraft for lift-off and splashdown. The Artemis II mission aimed to send astronauts to the Moon and back to Earth. NASA's vehicle manager, Branelle Rodriguez, was involved in the mission's preparation. The Orion spacecraft was a key component of the Artemis II mission. Rodriguez's work on the mission contributed to its success, making her a notable figure in the space exploration field.\n\n* Branelle Rodriguez was the vehicle manager of the Artemis II mission, overseeing the preparation of the Orion spacecraft.\n* The Artemis II mission aimed to send astronauts to the Moon and back to Earth, with Rodriguez playing a crucial role in its preparation.\n* The mission's success was a significant achievement for NASA, with Rodriguez's work contributing to the accomplishment of the space agency's goals.",
+    "5ws": "Who: Artemis 2 commander, Branelle Rodriguez, NASA\nWhat: Defends lunar loo, Artemis II mission success\nWhen: April 2026\nWhere: Lunar orbit, NASA facilities\nWhy: Historic space exploration, lunar mission goals",
+    "likeIm5": "Imagine astronauts blasting off to the moon. The \"Space Heroes\" team, led by commander \"Lunar Leader\" and helped by \"Toilet Troubleshooter\" Mike Wall, worked with the \"Minnesota Marvels\" and \"NASANavigators\" to make a special toilet for their trip."
+  },
+  {
+    "source_names": [
+      "Bigten.org",
+      "Sports Illustrated"
+    ],
+    "authors": [
+      "Big Ten Communications",
+      "Lincoln Arneal"
+    ],
+    "ai_title": "Big Ten Adds Volleyball Tournament",
+    "ai_description": "Big Ten unveils 17-game schedule, igniting tournament debut.",
+    "urls": [
+      "https://bigten.org/wvb/article/59859/",
+      "https://www.si.com/college/nebraska/volleyball/big-ten-adds-an-end-of-season-conference-volleyball-tournament-for-2026"
+    ],
+    "url_to_image": "https://img.boostsport.ai/boost-cms/26VBT_Announcement_1920x1080.png?auto=webpll",
+    "category": "sports",
+    "topic": "Big Ten Volleyball Tournament",
+    "summary": "The Big Ten Conference will launch its inaugural volleyball tournament from November 20-25, 2026, at the Fishers Event Center in Fishers, Indiana. This tournament marks a new era for collegiate volleyball in the Big Ten. The decision to introduce the tournament comes after the Southeastern Conference (SEC) successfully reinstated its own tournament the previous year. The Big Ten volleyball schedule will be adjusted to accommodate the tournament, increasing to a 17-game schedule. The tournament's location, the Fishers Event Center, is home to various sports events. The introduction of the Big Ten Volleyball Tournament is a significant development in collegiate sports for the 2026 season. The tournament will provide a new platform for teams to compete and conclude their season.\n\n* The Big Ten Conference will host its inaugural volleyball tournament from November 20-25, 2026.\n* The tournament will be held at the Fishers Event Center in Fishers, Indiana, and will feature a 17-game schedule.\n* The introduction of the tournament follows the success of the Southeastern Conference's (SEC) reinstated volleyball tournament the previous year.",
+    "5ws": "Who: Big Ten Conference \nWhat: Inaugural volleyball tournament \nWhen: November 20-25, 2026 \nWhere: Fishers Event Center, Indiana \nWhy: Enhance collegiate volleyball competition",
+    "likeIm5": "Imagine a big volleyball party with \"The Big Ten Squad\" and friends. They're having a tournament in November 2026, like a big school competition. \"The Fishers Team\" will host, and teams like \"The Nebraska Heroes\" and \"The Illinois Stars\" will play. They want to win and have fun, showing how great they are at volleyball."
+  },
+  {
+    "source_names": [
+      "Associated Press",
+      "The Seattle Times"
+    ],
+    "authors": [
+      "Mike Stobbe",
+      "MIKE STOBBE"
+    ],
+    "ai_title": "Colon Cancer Deaths Linked To Education Levels",
+    "ai_description": "Colorectal cancer deaths surge among younger, less educated adults.",
+    "urls": [
+      "https://apnews.com/article/colon-cancer-deaths-young-adults-78c0a3287f2d29575b4004e07230b993",
+      "https://www.seattletimes.com/seattle-news/health/younger-adult-colon-cancer-deaths-are-concentrated-in-people-with-less-education-study-says/"
+    ],
+    "url_to_image": "https://dims.apnews.com/dims4/default/37437c8/2147483647/strip/true/crop/5364x3574+0+1/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F86%2F60%2F3f59846c0ea7ddcda1fcf85403eb%2Fc45711a027d949038b34ab3e3e0fe8b8",
+    "category": "health",
+    "topic": "Colorectal Cancer Study",
+    "summary": "A new study has found that the rise in colorectal cancer deaths among younger adults is concentrated in individuals with less education. This suggests that socioeconomic factors may be contributing to the increase in deaths. The study, which analyzed data over the last 30 years, found a significant correlation between lower education levels and higher colorectal cancer mortality rates. Colorectal cancer is a type of cancer that affects the colon or rectum, and its causes are multifaceted, including genetic, environmental, and lifestyle factors. The researchers behind the study aimed to identify demographic patterns in the rising mortality rates. The study's findings imply that socioeconomic disparities may play a role in the increasing deaths from colorectal cancer among younger adults. According to the study, the concentration of colorectal cancer deaths among less educated individuals highlights the need for targeted interventions to address these disparities.\n\n* The rise in colorectal cancer deaths among younger adults is concentrated in individuals with less education, suggesting socioeconomic factors may be driving the increase.\n* Colorectal cancer mortality rates have been increasing over the last 30 years, with a significant correlation between lower education levels and higher mortality rates.\n* The study's findings highlight the need for targeted interventions to address socioeconomic disparities and reduce the rising deaths from colorectal cancer among younger adults.",
+    "5ws": "Who: Younger adults with less education\nWhat: Rising colorectal cancer deaths\nWhen: Over the last 30 years\nWhere: United States, specifically New York\nWhy: Socioeconomic factors driving escalations",
+    "likeIm5": "Imagine this: The Healthy Heroes team, led by Coach Mike Stobbe, are on a mission to stop the bad guys, like colon cancer. The Associated Press Avengers and The Seattle Times Squad are working together to figure out why younger adults are getting sick. They found out that people with less education are more likely to get colon cancer, so they want to help them get healthier."
   },
   {
     "source_names": [
@@ -32,7 +123,7 @@
       "Passant Rabie",
       "Unknown Author"
     ],
-    "ai_title": "Mars Mission Gets European Rover",
+    "ai_title": "European Rover Heads To Mars",
     "ai_description": "Europe's Mars rover mission blasts off on SpaceX's Falcon Heavy.",
     "urls": [
       "https://arstechnica.com/space/2026/04/after-a-saga-of-broken-promises-a-european-rover-finally-has-a-ride-to-mars/",
@@ -42,9 +133,37 @@
     "url_to_image": "https://cdn.arstechnica.net/wp-content/uploads/2026/04/PanCam_mast_fitted_to_ExoMars_rover-1-1152x648.jpg",
     "category": "science",
     "topic": "European Rover Mars Mission",
-    "summary": "The European Space Agency's Mars rover mission has secured a new launch vehicle, SpaceX's Falcon Heavy, after a series of delays. A recent image of Mars highlights the contrast between the planet's desert-like terrain and dark deposits of volcanic ash. This image showcases a different view of Mars compared to what was observed by NASA in 1976. The planet's surface is characterized by a dusty, tan-colored landscape littered with rocks, resembling a desert-like world. Researchers, including Parker, T. J., Saunders, R. S., and Schneeberger, D. M., have studied the transitional morphology in west Deuteronilus Mensae, Mars, to understand the modification of the lowland/upland boundary. The study of Mars' topography is crucial in identifying the signatures of early Martian oceans, with shelves being considered as potential indicators of oceans on both Earth and Mars. The European rover mission aims to provide new insights into the Martian environment and geology, with its launch scheduled on the Falcon Heavy rocket.\n\n* The European Space Agency's Mars rover mission is set to launch on SpaceX's Falcon Heavy rocket after a series of delays and changes.\n* A new image of Mars reveals a striking contrast between the planet's desert-like terrain and dark deposits of volcanic ash, differing from the 1976 NASA observation.\n* Researchers are studying Mars' topography to identify the signatures of early Martian oceans, considering shelves as potential indicators of oceans on both Earth and Mars.",
-    "5ws": "Who: European Space Agency, SpaceX\nWhat: Launching Mars rover mission\nWhen: 2026, after April 17\nWhere: Mars, via Falcon Heavy rocket\nWhy: Exploring Mars' terrain, searching for signs of life",
-    "likeIm5": "Imagine a big space adventure. The \"European Space Friends\" team, led by authors like Stephen Clark, are working with the \"SpaceX Falcons\" to send a cool rover to Mars. They're trying to help us learn more about the planet and its secrets, like the \"Mars Explorers\" who found new pictures of Mars' desert terrain."
+    "summary": "The European Space Agency's Mars rover mission has secured a launch on SpaceX's Falcon Heavy rocket, marking a significant development in the exploration of Mars. Mars is characterized by its dusty, tan-colored surface littered with rocks, resembling a desert-like world that has remained relatively unchanged for millions of years. A recent image of Mars highlights the contrast between its desert-like terrain and dark deposits of volcanic ash. The study of Mars' topography is crucial in understanding the planet's history, including the presence of ancient oceans. Researchers, such as Parker, T. J., Saunders, R. S., and Schneeberger, D. M., have investigated the transitional morphology in west Deuteronilus Mensae, Mars, to better understand the modification of the lowland/upland boundary. The exploration of Mars is an ongoing effort, with scientists relying on images and data from various sources, including NASA, to gain insights into the planet's composition and history. The European rover mission aims to contribute to this effort, providing new information about Mars and its potential for supporting life.\n\n* The European Space Agency's Mars rover mission is set to launch on SpaceX's Falcon Heavy rocket, marking a significant milestone in Mars exploration.\n* A new image of Mars reveals a striking contrast between the planet's desert-like terrain and dark deposits of volcanic ash, providing insights into the planet's geological history.\n* Researchers are studying Mars' topography to identify indicators of ancient oceans, with shelves rather than shorelines potentially serving as better topographic indicators of oceans on Mars.",
+    "5ws": "Who: European Space Agency, SpaceX\nWhat: Launching Mars rover mission\nWhen: 2026, after April 17\nWhere: Mars, via SpaceX launch\nWhy: Exploring Martian terrain, geology",
+    "likeIm5": "Imagine this: SpaceX's \"Rocket Heroes\" and the \"European Explorer Team\" are working together to send a rover to Mars. They're like classmates helping each other build a big Lego project. Stephen Clark, the \"Space News Reporter,\" and Passant Rabie, the \"Gizmodo Guru,\" are sharing exciting updates about their journey. Their big goal is to learn more about Mars and its secrets, like a treasure hunt, to help us better understand our universe."
+  },
+  {
+    "source_names": [
+      "NHL News",
+      "Audacy.com",
+      "NHL News",
+      "NHL News"
+    ],
+    "authors": [
+      "Unknown Author",
+      "Paul Hamilton",
+      "Unknown Author",
+      "Unknown Author"
+    ],
+    "ai_title": "Stanley Cup Playoffs Schedule Announced",
+    "ai_description": "NHL unveils playoff schedule, Wild face Stars Saturday.",
+    "urls": [
+      "https://www.nhl.com/flyers/news/flyers-to-host-games-3-4-on-april-22-25-at-xfinity-mobile-arena",
+      "https://www.audacy.com/wgr550/sports/sabres/sabres-will-open-the-playoffs-sunday-night",
+      "https://www.nhl.com/wild/news/minnesota-wild-first-round-stanley-cup-playoff-schedule-announced-041626",
+      "https://www.nhl.com/news/first-round-game-1-schedule-of-2026-stanley-cup-playoffs-announced-by-nhl"
+    ],
+    "url_to_image": "https://media.d3.nhle.com/image/private/t_ratio16_9-size50/prd/ug28qhqntirtppzb3xrk.png",
+    "category": "general",
+    "topic": "Flyers Stanley Cup Playoffs",
+    "summary": "The National Hockey League (NHL) has announced the schedule for the First Round of the 2026 Stanley Cup Playoffs. The Philadelphia Flyers will open their postseason campaign on Saturday, April 18, at 8:00 p.m. The Minnesota Wild will play Game 1 on Saturday, April 18, at 4:30 p.m. CT at American Airlines Center. The Buffalo Sabres will open their playoffs on Sunday night. The 2026 Stanley Cup Playoffs will begin with three games on Saturday, April 18. Single-game tickets for the Minnesota Wild's First Round games at Grand Casino Arena are on sale now at wild.com and ticketmaster.com. The 2026 Stanley Cup Playoffs feature a six-team turnover compared to last season, with teams including Anaheim, Boston, Buffalo, and Philadelphia participating.\n\n* The Philadelphia Flyers will host Games 3 and 4 at Xfinity Mobile Arena on April 22 and 25.\n* The Minnesota Wild will play Game 1 of their First Round series against the Dallas Stars on Saturday, April 18, at 4:30 p.m. CT at American Airlines Center.\n* The 2026 Stanley Cup Playoffs will start with three games on Saturday, April 18, marking the beginning of the postseason.",
+    "5ws": "Who: Philadelphia Flyers, Buffalo Sabres, Minnesota Wild\nWhat: 2026 Stanley Cup Playoffs\nWhen: April 18-25, 2026\nWhere: Various NHL arenas\nWhy: Determine Stanley Cup champion",
+    "likeIm5": "Imagine this: the Philadelphia Flyers, the Buffalo Sabres, and the Minnesota Wild are like superhero teams. They're playing in a big tournament, the Stanley Cup Playoffs, to win a special trophy. The Flyers will host games at Xfinity Mobile Arena, while the Sabres will open their playoffs on Sunday night. The goal is to be the best team and make their fans happy."
   },
   {
     "source_names": [
@@ -55,8 +174,8 @@
       "Tia Goldenberg, Hallie Golden",
       "Annie Gowen"
     ],
-    "ai_title": "ICE Leader To Resign Amid Agency Controversy",
-    "ai_description": "ICE director Todd Lyons to resign amidst Trump's mass deportations agenda.",
+    "ai_title": "Ice Director To Resign Amid Agent Scandal",
+    "ai_description": "ICE director resigns amid Trump's mass deportations agenda.",
     "urls": [
       "https://apnews.com/article/immigration-customs-enforcement-ice-todd-lyons-da46097e88f93a7d6e15570222a34f06",
       "https://www.washingtonpost.com/nation/2026/04/16/ice-agent-charged-minneapolis-highway/"
@@ -64,9 +183,9 @@
     "url_to_image": "https://dims.apnews.com/dims4/default/1ffdd9b/2147483647/strip/true/crop/3744x2495+0+1/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F38%2F67%2F09c11cbacb1933b46ccf92ecdb3a%2Fb160c5a172ac4b738fe4a648295546f8",
     "category": "general",
     "topic": "ICE Acting Director Resignation",
-    "summary": "U.S. Immigration and Customs Enforcement (ICE) acting director Todd Lyons will resign at the end of May, as announced by federal officials. Todd Lyons was a key executor of President Donald Trump's deportation agenda. Homeland Security Secretary Markwayne Mullin described the resignation. In a separate incident, an ICE agent was charged with two counts of second-degree assault for allegedly pointing his gun at two people on a congested Minneapolis highway in February. The agent's actions were reported by the occupants of the other vehicle, who claimed they thought the agent was a \"crazy person\" aiming guns at people. The resignation of Todd Lyons and the charges against the ICE agent are two distinct events that have garnered attention regarding ICE's actions. These incidents have occurred under the oversight of the Department of Homeland Security, which is responsible for immigration and customs enforcement in the United States.\n\n* Todd Lyons, the acting director of U.S. Immigration and Customs Enforcement, will resign at the end of May.\n* An ICE agent has been charged with two counts of second-degree assault for allegedly pointing his gun at two people on a Minneapolis highway.\n* The Department of Homeland Security, led by Secretary Markwayne Mullin, oversees ICE and is responsible for immigration and customs enforcement in the United States.",
-    "5ws": "Who: Todd Lyons, ICE Acting Director\nWhat: Resigning at end of May\nWhen: May 2026\nWhere: Washington, D.C.\nWhy: Likely due to shift in administration policies",
-    "likeIm5": "Imagine this: The ICE Team, led by \"The Director Duo\" Todd Lyons and Markwayne Mullin, is making big changes. Todd is leaving his job, like a player switching teams. The \"Washington Watchers\" and \"AP News Agents\" are keeping an eye on everything. The goal is to help people and keep everyone safe, like being a good friend on the playground."
+    "summary": "Todd Lyons, the acting director of U.S. Immigration and Customs Enforcement (ICE), will resign at the end of May, as announced by federal officials. Lyons was a key figure in implementing President Donald Trump's immigration policies. The resignation was announced by the Department of Homeland Security (DHS), with Secretary Markwayne Mullin providing a statement. In a separate incident, an ICE agent was charged with second-degree assault for allegedly pointing a gun at two people on a Minneapolis highway in February. The agent's actions were reported by the occupants of the other vehicle, who thought the agent was a \"crazy person\" aiming a gun at them. The incident led to the agent being charged with two counts of second-degree assault. The events highlight the ongoing scrutiny of ICE and its agents' actions, with Lyons' resignation and the agent's charges being closely watched by the public and federal officials.\n\n* Todd Lyons, the acting director of ICE, will resign at the end of May, as announced by federal officials.\n* An ICE agent was charged with two counts of second-degree assault for allegedly pointing a gun at two people on a Minneapolis highway in February.\n* The incidents highlight the ongoing scrutiny of ICE and its agents' actions, with a focus on accountability and public safety.",
+    "5ws": "Who: Todd Lyons, ICE acting director\nWhat: Resigning at end of May\nWhen: May 2026\nWhere: Washington, D.C.\nWhy: Likely due to administration changes",
+    "likeIm5": "Imagine this: \"The Safety Team,\" led by Todd Lyons, is making big changes. The \"Homeland Helpers,\" with Markwayne Mullin, are working together to keep everyone safe. Todd Lyons will soon say goodbye to his job, and this affects many people, especially those helped by the \"Immigration Assistants.\""
   },
   {
     "source_names": [
@@ -81,8 +200,8 @@
       "Ayushman Ojha",
       "Sophia Cai"
     ],
-    "ai_title": "Iran Conflict Nears End Amid Peace Hopes",
-    "ai_description": "\"Trump confirms 10-day ceasefire between Israel and Lebanon.\"",
+    "ai_title": "Iran Conflict Nears Possible End",
+    "ai_description": "Trump brokers 10-day ceasefire between Israel and Lebanon.",
     "urls": [
       "https://www.cnbc.com/2026/04/16/stock-market-today-live-updates.html",
       "https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-diplomacy-ceasefire/",
@@ -92,9 +211,31 @@
     "url_to_image": "https://image.cnbcfm.com/api/v1/image/108292612-1776355592178-gettyimages-2271054207-MADISON_AIR_IPO.jpeg?v=1776355696&w=1920&h=1080",
     "category": "business",
     "topic": "Iran War Ceasefire",
-    "summary": "In 2026, President Donald Trump stated that the war in Iran \"should be ending pretty soon\" during an event in Las Vegas. This statement was made amidst ongoing tensions and uncertainty surrounding the conflict. The Head of the International Energy Agency warned that Europe has approximately six weeks of jet fuel left, which may lead to possible flight cancellations. Meanwhile, Asian stocks experienced a dip but are expected to show significant weekly gains due to hopes for peace in Iran and a boost in the tech sector. President Trump's remarks and the agreed-upon 10-day ceasefire between Israel and Lebanon have contributed to a sense of optimism. The ceasefire, which began at 5 p.m. Eastern Time, aims to alleviate some of the uncertainty surrounding the region. As a result, the Trump administration expects the Iranian team to participate in the World Cup, hosted by the U.S., Mexico, and Canada.\n\n* The 10-day ceasefire between Israel and Lebanon began at 5 p.m. Eastern Time, aiming to reduce tensions in the region.\n* The Head of the International Energy Agency warned that Europe has approximately six weeks of jet fuel left, which may lead to flight cancellations.\n* Asian stocks are expected to show significant weekly gains due to hopes for peace in Iran and a boost in the tech sector.",
-    "5ws": "Who: Trump, Israel, Lebanon, Iran \nWhat: 10-day ceasefire agreement\nWhen: April 2026\nWhere: Middle East, Washington \nWhy: Conflict resolution, regional stability",
-    "likeIm5": "Imagine a big playground where countries are teams. \"The Leader\" Donald Trump, \"The Peacemaker\" from Israel, and \"The Helper\" from Lebanon are friends trying to stop a big fight. They agreed to a 10-day time-out, which is like a ceasefire, to help everyone feel safe and happy again."
+    "summary": "President Donald Trump stated that the war in Iran \"should be ending pretty soon\" during an event in Las Vegas on Thursday. This statement was made amidst ongoing tensions and uncertainty surrounding the conflict. The head of the International Energy Agency warned that Europe may have only about six weeks of jet fuel left, potentially leading to flight cancellations. In a separate development, the leaders of Israel and Lebanon agreed to a 10-day ceasefire, which began at 5 p.m. Eastern Time. The White House has expressed optimism about Iran's participation in the World Cup, hosted by the US, Mexico, and Canada. The US stock futures traded mixed after Trump's remarks, while Asian stocks edged lower on Friday but remained on track for weekly advances. The situation is being closely monitored, with investors and officials awaiting further developments and potential resolutions to the ongoing conflicts.\n\n* The leaders of Israel and Lebanon have agreed to a 10-day ceasefire, starting at 5 p.m. Eastern Time, in an effort to reduce tensions in the region.\n* The head of the International Energy Agency has warned that Europe may have only about six weeks of jet fuel left, which could lead to flight cancellations and disruptions.\n* The US stock futures traded mixed after President Donald Trump's statement that the war in Iran \"should be ending pretty soon\", reflecting the ongoing uncertainty and volatility in the market.",
+    "5ws": "Who: Trump, Israel, Lebanon, Iran \nWhat: 10-day Iran war ceasefire agreement\nWhen: April 17, 2026, onwards\nWhere: Middle East, Washington, Las Vegas\nWhy: De-escalate regional conflict, ease tensions",
+    "likeIm5": "Imagine this: President Donald Trump, \"The Peacemaker,\" and leaders from Israel, \"The Brave Heroes,\" and Lebanon, \"The Kind Neighbors,\" agreed to a 10-day ceasefire, like a time-out to calm down and talk. They want to end the war in Iran, \"The Troubled Land,\" and help everyone be safe and happy, which is the big goal."
+  },
+  {
+    "source_names": [
+      "Rolling Stone",
+      "Bloomberg"
+    ],
+    "authors": [
+      "Jon Blistein",
+      "Leah Nylen, Patricia Hurtado, Chris Dolmetsch"
+    ],
+    "ai_title": "Live Nation Found Guilty Monopoly",
+    "ai_description": "Live Nation faces possible breakup after landmark antitrust loss.",
+    "urls": [
+      "http://www.rollingstone.com/music/music-features/live-nation-trial-jeffrey-kessler-interview-1235548203/",
+      "https://www.bloomberg.com/news/articles/2026-04-15/live-nation-illegally-monopolized-ticketing-market-jury-finds"
+    ],
+    "url_to_image": "https://www.rollingstone.com/wp-content/uploads/2026/04/live-nation-kessler-op-ed.jpg?w=1600&h=900&crop=1",
+    "category": "entertainment",
+    "topic": "Live Nation Monopoly",
+    "summary": "A landmark antitrust trial recently concluded with a jury finding Live Nation and Ticketmaster liable for operating as a monopoly. The Department of Justice had been investigating Live Nation for years, scrutinizing its dominance in the live events business. Live Nation Entertainment Inc. is the largest US concert promoter and ticket seller. The trial's outcome sets the stage for a possible breakup of the company. According to reports, the verdict is a \"total victory\" for the opposing side, led by lawyer Jeffrey Kessler. The case began after the Department of Justice settled, and Kessler took over, leading to the jury's decision. The jury's finding indicates that Live Nation and Ticketmaster illegally monopolized live events, as reported by Bloomberg.\n\n* The jury found Live Nation and Ticketmaster liable for operating as a monopoly, potentially leading to a breakup of the company.\n* The Department of Justice had been investigating Live Nation for years, scrutinizing its dominance in the live events business.\n* The verdict is seen as a significant outcome, with lawyer Jeffrey Kessler leading the opposing side to a \"total victory\" against Live Nation Entertainment Inc.",
+    "5ws": "Who: Live Nation, Ticketmaster, Jeffrey Kessler\nWhat: Landmark antitrust trial verdict\nWhen: April 15-16, 2026\nWhere: United States\nWhy: Monopoly regulation in live events industry",
+    "likeIm5": "Imagine a big playground where concerts and events happen. The \"Rockstar Team\" with Jeffrey Kessler as their leader, and the \"Justice League\" with helpers like Leah Nylen, Patricia Hurtado, and Chris Dolmetsch, worked together to stop the \"Ticket Titans\" from being too powerful. They wanted to make sure everyone gets a fair chance to buy tickets and enjoy fun events, so they fought for fairness and won."
   },
   {
     "source_names": [
@@ -105,8 +246,8 @@
       "Harry Baker",
       "Anthony Wood"
     ],
-    "ai_title": "Meteor Shower Begins Over UK",
-    "ai_description": "\"Spectacular emerald-green fireball meteor streaks above historic Lindisfarne, England.\"",
+    "ai_title": "Meteor Shower Hits Viking Raid Site",
+    "ai_description": "A fireball meteor streaks above northeast England's historic Lindisfarne.",
     "urls": [
       "https://www.livescience.com/space/meteoroids/we-all-screamed-when-it-happened-bright-green-fireball-meteor-caught-exploding-over-famous-viking-raid-site-in-uk",
       "https://www.space.com/stargazing/meteor-showers/the-lyrid-meteor-shower-2026-has-begun-heres-what-to-expect"
@@ -114,9 +255,9 @@
     "url_to_image": "https://cdn.mos.cms.futurecdn.net/m3hN2hwAjdhWwuwqLGiTWb-1600-80.jpg",
     "category": "science",
     "topic": "Lyrid Meteor Shower",
-    "summary": "In 2026, a fireball meteor was observed above Lindisfarne in northeast England, an area historically known for Viking raids on Christian monks in the eighth century. This event occurred during the Lyrid meteor shower, which takes place when the constellation Lyra is visible in the night sky. The Lyrid meteor shower is a annual astronomical event. The fireball meteor was described as emerald-green and was caught on camera by photographers. The Lyrid meteor shower can be seen anytime the constellation Lyra is above the horizon. The shower is named after the constellation Lyra, which is visible in the night sky during this time. The fireball meteor was a notable event during the 2026 Lyrid meteor shower, which began in 2026.\n\n* The Lyrid meteor shower occurs when the Earth passes through the tail of a comet, resulting in meteors entering the Earth's atmosphere.\n* The fireball meteor was seen above Lindisfarne, a historic site in northeast England.\n* The Lyrid meteor shower can be viewed when the constellation Lyra is above the horizon, allowing for potential meteor sightings.",
-    "5ws": "Who: Photographers, astronomers\nWhat: Bright-green fireball meteor explosion\nWhen: April 16, 2026\nWhere: Lindisfarne, northeast England\nWhy: Lyrid Meteor Shower phenomenon",
-    "likeIm5": "Imagine this: a bright-green fireball meteor streaked across the sky. The Space Squad, led by Anthony Wood, and the Science Searchers, with Harry Baker, are excitedly watching the Lyrid meteor shower. They're like teams trying to catch the most meteors in a big game, with the whole world as their playground."
+    "summary": "A spectacular emerald-green fireball meteor was observed above Lindisfarne in northeast England, a location historically known for Viking raids on Christian monks in the eighth century. This event occurred during the Lyrid meteor shower, which takes place when the constellation Lyra is visible above the horizon. The Lyrid meteor shower is an annual astronomical event. Photographers captured the fireball meteor, providing visual documentation of the incident. The Lyrid meteor shower 2026 has begun, and observers can expect to see fireballs and meteors when the constellation Lyra is above the horizon. The event was witnessed by multiple individuals, with some reporting a loud noise and a bright flash of light. The fireball meteor was seen exploding over Lindisfarne, a site famous for its historical significance and Viking raids.\n\n* The Lyrid meteor shower 2026 is an annual astronomical event that occurs when the constellation Lyra is visible above the horizon.\n* Fireballs and meteors can be seen during this event, providing a spectacular display of celestial activity.\n* The fireball meteor was observed above Lindisfarne in northeast England, a location historically significant for Viking raids on Christian monks in the eighth century.",
+    "5ws": "Who: Photographers, Viking historians\nWhat: Bright-green fireball meteor explodes\nWhen: April 2026, Lyrid Meteor Shower\nWhere: Lindisfarne, northeast England\nWhy: Natural celestial event, astronomical spectacle",
+    "likeIm5": "Imagine this: a bright green fireball meteor streaked across the sky. The Space Explorers, led by Harry Baker and Anthony Wood, witnessed this amazing sight over a famous Viking raid site. They're like the Meteor Hunters team, trying to spot the most fireballs during the Lyrid meteor shower, to help us learn more about the sky and its secrets."
   },
   {
     "source_names": [
@@ -129,8 +270,8 @@
       "Unknown Author",
       "Michael Blinn"
     ],
-    "ai_title": "NHL Playoffs Begin With Key Matchups",
-    "ai_description": "Russian Machine ignites playoff push.",
+    "ai_title": "NHL Playoffs Begin Amid Retirement Rumors",
+    "ai_description": "Russian Machine roars on, defying shutdown.",
     "urls": [
       "https://bleacherreport.com/articles/25418908-nhl-stanley-cup-playoffs-bracket-2026-dates-matchups-game-times-and-tv-schedule-info",
       "https://www.nhl.com/hurricanes/news/2026-playoffs-round-1-preview-canes-vs-senators",
@@ -139,9 +280,9 @@
     "url_to_image": "https://gsp-image-cdn.wmsports.io/cms/prod/bleacher-report/2026-04/24ee7faa-7f58-41e4-88bc-77bf35395851.jpg?w=3800&h=2000",
     "category": "general",
     "topic": "NHL Stanley Cup Playoffs",
-    "summary": "The 2026 NHL Stanley Cup playoffs have confirmed all 16 participating teams, with the Pacific Division's second and third seeds and the Western Conference's second wild card still to be determined. The playoffs will feature a series of matches, including a matchup between the Canes and Senators. Rod Brind'Amour, the team's coach, expressed eagerness for the postseason, stating that the team has been prepared for a long time. Alex Ovechkin, the NHL's all-time leading goal scorer, has hinted at his plans for retirement after his 21st NHL season. The NHL regular season's final day will decide the remaining seedings. The playoffs will be covered by various media outlets, including Bleacher Report and NHL.com. The schedule, including dates, matchups, game times, and TV information, will be available to the public.\n\n* The 2026 NHL Stanley Cup playoffs will feature 16 teams, with the Pacific Division's second and third seeds and the Western Conference's second wild card to be determined on the final day of the regular season.\n* Rod Brind'Amour's team, the Canes, will face the Senators in the first round of the playoffs, with the series starting on a Saturday.\n* Alex Ovechkin, the NHL's all-time leading goal scorer, is considering his retirement options after completing his 21st NHL season with the Capitals.",
-    "5ws": "Who: NHL teams, Alex Ovechkin\nWhat: 2026 Stanley Cup Playoffs\nWhen: April 2026\nWhere: Various NHL arenas\nWhy: Determine league champion",
-    "likeIm5": "Imagine a big hockey tournament. The \"Carolina Hurricanes Team\" and \"Ottawa Senators Team\" are playing. Alex Ovechkin, the \"Russian Machine,\" is deciding if he'll keep playing. They all want to win the Stanley Cup, like getting a big trophy for being the best team."
+    "summary": "The 2026 NHL Stanley Cup playoffs have been confirmed with all 16 teams entering the final day of the regular season. The Pacific Division's second and third seeds, as well as the Western Conference's second wild card, were still to be determined. Rod Brind'Amour, the coach of the Carolina Hurricanes, expressed his team's eagerness to start the postseason. Alex Ovechkin, the NHL's all-time leading goal scorer, has given insight into his mindset after his 21st NHL season. The NHL regular season has come to a close, and the playoffs are set to begin. The Carolina Hurricanes will face the Ottawa Senators in the first round of the playoffs. The 2026 Stanley Cup playoffs schedule, including dates, matchups, game times, and TV information, is available for fans to plan their viewing.\n\n* The Carolina Hurricanes will play the Ottawa Senators in the first round of the 2026 Stanley Cup playoffs.\n* Alex Ovechkin, the NHL's all-time leading goal scorer, is considering his retirement decision after his 21st NHL season.\n* The 2026 NHL Stanley Cup playoffs bracket, including dates, matchups, game times, and TV schedule information, has been confirmed and is available to the public.",
+    "5ws": "Who: NHL teams, Alex Ovechkin\nWhat: Stanley Cup Playoffs, retirement decision\nWhen: April 2026, postseason\nWhere: Various NHL arenas\nWhy: Determine champion, conclude season",
+    "likeIm5": "Imagine this, the \"Hockey Heroes\" like the \"Carolina Cheetahs\" and the \"Ottawa Olympians\" are racing to win the big Stanley Cup trophy. Alex Ovechkin, the \"Russian Rocket,\" is leading his team, while Rod Brind'Amour coaches the Cheetahs. They're all trying to be the best and make their fans happy."
   },
   {
     "source_names": [
@@ -153,7 +294,7 @@
       "Mae Anderson, Cathy Bussewitz, Wyatte Grantham-phillips"
     ],
     "ai_title": "Oil Prices Rise Amid Iran Tensions",
-    "ai_description": "War ignites global oil crisis, threatening air travel disruptions.",
+    "ai_description": "\"Iran war sparks looming jet fuel shortage, threatening higher airfares and flight cancellations.\"",
     "urls": [
       "https://oilprice.com/Energy/Oil-Prices/Oil-Markets-Reprice-War-Risk-After-Congress-Rejects-Iran-Pullback.html",
       "https://apnews.com/article/jet-fuel-shortage-iran-war-iea-travel-b77b3d7113e88d1862f90db433cb95af"
@@ -161,9 +302,53 @@
     "url_to_image": "https://d32r1sh890xpii.cloudfront.net/article/1200x675/2026-04-16_q3sit62zrh.jpg",
     "category": "business",
     "topic": "Oil Markets Iran War",
-    "summary": "As of April 16, 2026, oil prices have rebounded due to the ongoing conflict in Iran, with U.S. lawmakers backing continued military involvement, leading to expectations of a prolonged conflict and tighter supply. The Iran war has sparked a looming jet fuel shortage in Europe and Asia, which could disrupt world travel within weeks if oil supply does not increase. The effective closure of the Strait of Hormuz has contributed to the shortage, causing concerns for airlines and travelers. According to JP Morgan, the international oil market is experiencing a crisis, with major producers facing significant challenges. The current situation has led to increased expectations of higher airfares and flight cancellations. Oil markets are closely watching the situation, with prices potentially affected by the ongoing conflict and supply chain disruptions. The impact of the jet fuel shortage and oil price fluctuations will likely be felt by travelers and the airline industry in the coming weeks.\n\n* The looming jet fuel shortage in Europe and Asia could lead to higher airfares and flight cancellations if oil supply does not increase soon.\n* The effective closure of the Strait of Hormuz has contributed to the shortage, exacerbating the impact on the airline industry and travelers.\n* The ongoing conflict in Iran and the resulting supply chain disruptions are expected to continue affecting oil prices and the global energy market.",
-    "5ws": "Who: US Congress, Oil markets, Airlines \nWhat: Reject Iran pullback, Oil price rebound\nWhen: April 16, 2026\nWhere: US, Europe, Asia \nWhy: Prolonged conflict, supply concerns",
-    "likeIm5": "Imagine this: Alex the Reporter, Mae the Travel Helper, and Cathy the Oil Expert are like referees in a big playground. They're watching as the Oil Markets Team and the Airlines Team play a game of sharing resources. The goal is to get oil flowing smoothly so everyone can travel safely and happily, and Alex, Mae, and Cathy are helping us understand why it matters."
+    "summary": "As of April 16, 2026, oil prices have rebounded due to US lawmakers' decision to continue military involvement in Iran, leading to expectations of a prolonged conflict and tighter supply. This development has sparked concerns about a potential jet fuel shortage in Europe and Asia. The effective closure of the Strait of Hormuz has further exacerbated the situation. JP Morgan has forecasted the international oil market trends, considering major crises in oil-producing countries. Oil markets have clawed back their recent losses, with oil prices increasing. The looming jet fuel shortage could lead to higher airfares and flight cancellations within weeks if oil supply doesn't improve. The current situation is being closely monitored by analysts and experts, including Alex Kimani, who reported on the oil market trends.\n\n* A potential jet fuel shortage in Europe and Asia could lead to higher airfares and flight cancellations within weeks.\n* The effective closure of the Strait of Hormuz has disrupted oil supply, contributing to the potential shortage.\n* The US lawmakers' decision to continue military involvement in Iran has led to expectations of a prolonged conflict and tighter oil supply, affecting global oil prices.",
+    "5ws": "Who: US lawmakers, Iran, Oil Markets \nWhat: Rejected Iran pullback\nWhen: April 16, 2026\nWhere: US, Iran, Europe, Asia\nWhy: Prolonged conflict, tighter oil supply",
+    "likeIm5": "Imagine this: Alex the Reporter, Mae the Traveler, and Cathy the Explorer are like a team working together. They're telling us about a big issue with oil, which is like the playground's energy to keep everyone playing. The Iran Helpers, led by the US Congress, are making big decisions that affect everyone, like how much oil we have to play with, and it's causing problems for the Airline Friends, who need oil to fly planes."
+  },
+  {
+    "source_names": [
+      "CNN",
+      "Bloomberg"
+    ],
+    "authors": [
+      "John Towfighi",
+      "Cristin Flanagan"
+    ],
+    "ai_title": "Oil Drops, Stocks Surge Amid Hormuz Ceasefire",
+    "ai_description": "Oil prices plummet as Iran unveils open Strait of Hormuz.",
+    "urls": [
+      "https://www.cnn.com/2026/04/17/investing/oil-strait-hormuz-iran",
+      "https://www.bloomberg.com/news/articles/2026-04-16/stock-market-today-dow-s-p-live-updates"
+    ],
+    "url_to_image": "https://media.cnn.com/api/v1/images/stellar/prod/ap26106351785410.jpg?c=16x9&q=w_800,c_fill",
+    "category": "general",
+    "topic": "Oil Prices Drop",
+    "summary": "In 2026, the Iranian foreign minister announced that the Strait of Hormuz will be completely open for commercial transit during the remainder of the ceasefire. This announcement led to a significant drop in oil prices and a surge in US stocks on Friday. The Strait of Hormuz is a vital shipping route located between the Persian Gulf and the Gulf of Oman, connecting the Middle East to the global economy. As a result of the announcement, equities climbed, and traders took on more risk after an extraordinary rally. Oil prices dropped by 10%, while the dollar also tumbled. The Iranian foreign minister's statement aimed to reassure the international community about the safety of commercial transit through the Strait of Hormuz. The opening of the Strait of Hormuz for commercial traffic has significant implications for global trade, oil prices, and financial markets.\n\n* The Strait of Hormuz is now completely open for commercial traffic, according to the Iranian foreign minister's announcement.\n* Oil prices dropped by 10% in response to the announcement, while the dollar also declined.\n* US stocks surged on Friday following the news, with equities climbing as traders took on more risk after an extraordinary rally.",
+    "5ws": "Who: Iranian foreign minister, US stock traders\nWhat: Oil prices drop, stocks surge\nWhen: Friday, April 17, 2026\nWhere: Strait of Hormuz, global markets\nWhy: Ceasefire enables commercial transit",
+    "likeIm5": "Imagine this: Iran's team, led by their foreign minister, said a important waterway is now \"completely open\" for big ships to pass through. This made John Towfighi and Cristin Flanagan, like two happy reporters, share the news, and it helped the US stocks team, like the Cowboys, feel happy and strong."
+  },
+  {
+    "source_names": [
+      "Kotaku",
+      "Digitalfoundry.net"
+    ],
+    "authors": [
+      "Lewis Parker",
+      "Oliver Mackenzie"
+    ],
+    "ai_title": "Pragmata Game Faces Controversy",
+    "ai_description": "Pragmata's \"Cryana\" Twitch badge sparks controversy.",
+    "urls": [
+      "https://kotaku.com/pragmata-twitch-chat-badge-loli-uoh-2000688503",
+      "https://www.digitalfoundry.net/reviews/pragmata-on-switch-2-an-ambitious-port-held-back-by-variable-performance"
+    ],
+    "url_to_image": "https://kotaku.com/app/uploads/2026/03/PRAGMATA_SS_15-1200x675.jpg",
+    "category": "technology",
+    "topic": "Pragmata Game Release",
+    "summary": "Capcom's Pragmata was officially released, offering a chance for fans to earn rewards through a partnership with Twitch. The game is available on various platforms, including Switch 2, which has been reviewed by Digital Foundry. Pragmata's release has been highly anticipated, and its capabilities have been showcased in various reviews and breakdowns. Capcom has partnered with Twitch to offer fans a chance to earn rewards, including a 'Cryana' Twitch badge. However, some fans have raised concerns that the badge bears similarities to a 'loli' meme, prompting accusations against Capcom. As of 2026, Pragmata is available for play, and its performance on Switch 2 has been reviewed by gaming outlets such as Digital Foundry. The release of Pragmata and its associated promotions have been covered by gaming news websites, including Kotaku and Digital Foundry.\n\n* The release of Pragmata on Switch 2 has been reviewed by Digital Foundry, highlighting its variable performance.\n* Capcom has partnered with Twitch to offer Pragmata fans a chance to earn rewards, including a 'Cryana' Twitch badge.\n* Some fans have raised concerns that the 'Cryana' Twitch badge bears similarities to a 'loli' meme, prompting accusations against Capcom.",
+    "5ws": "Who: Capcom, Twitch, Pragmata fans\nWhat: Pragmata game release and Twitch badge controversy\nWhen: April 17, 2026\nWhere: Global, online platforms\nWhy: Promote game, engage fans, address controversy",
+    "likeIm5": "Imagine this: The Game Makers, like Lewis and Oliver, are creating fun games. The Capcom Team, led by friends like Lewis \"The Reporter\" Parker, and Oliver \"The Reviewer\" Mackenzie, are working hard to make a great game called Pragmata. They want to make players happy and fix any problems, like a big puzzle."
   },
   {
     "source_names": [
@@ -175,7 +360,7 @@
       "Dawn Chmielewski"
     ],
     "ai_title": "Netflix Co-Founder Reed Hastings Steps Down",
-    "ai_description": "Netflix Chairman Reed Hastings quits after 29 years.",
+    "ai_description": "Netflix Chairman Reed Hastings quits after shares plummet 9%.",
     "urls": [
       "https://finance.yahoo.com/markets/stocks/articles/netflix-shares-dive-revenue-barely-225215127.html",
       "https://finance.yahoo.com/markets/stocks/articles/netflix-co-founder-reed-hastings-200217404.html"
@@ -183,9 +368,9 @@
     "url_to_image": "https://s.yimg.com/os/en/afp.com/35f0aeea630d566806a2ae519d1fc18c",
     "category": "business",
     "topic": "Reed Hastings Netflix Exit",
-    "summary": "Netflix Chairman Reed Hastings is leaving the streaming service he co-founded 29 years ago. This departure comes at a time when the company's quarterly earnings have not met investor expectations, resulting in a significant drop in Netflix shares. The World Baseball Classic, held earlier this year in Japan, has been noted by Netflix as a factor that boosted its popularity in the country. Reed Hastings, 65, co-founded Netflix and has been a key figure in its development over the years. As of 2026, the company is navigating changes in its leadership and financial performance. Netflix's quarterly earnings report has led to a more than nine percent drop in its shares. The departure of Hastings and the company's financial performance are currently key topics of discussion regarding Netflix's future.\n\n* Netflix Chairman Reed Hastings is quitting the company he co-founded 29 years ago.\n* The company's quarterly earnings have led to a significant drop in shares, with a decline of more than nine percent.\n* The World Baseball Classic has been identified as a factor that boosted Netflix's popularity in Japan, one of the countries where the games were played.",
-    "5ws": "Who: Reed Hastings, Netflix \nWhat: Steps down as chairman \nWhen: April 16, 2026 \nWhere: Netflix, Los Angeles \nWhy: Company restructuring",
-    "likeIm5": "Imagine a big playground where Netflix is a popular team. The team's leader, \"The Coach\" Reed Hastings, is stepping down after 29 years. His friends, like \"The Reporter\" Glenn Chapman and \"The Writer\" Dawn Chmielewski, are talking about it. The team's goal is to make people happy with great shows and movies, but now they need to find a new leader to help them win."
+    "summary": "Netflix Chairman Reed Hastings, 65, is quitting the streaming service he co-founded 29 years ago. The World Baseball Classic, held earlier this year in Japan, has boosted Netflix's popularity in the country. Reed Hastings' departure comes at a time when Netflix's quarterly earnings have failed to impress investors. As a result, Netflix shares plummeted more than nine percent on Thursday. Hastings co-founded Netflix 29 years ago, and his exit is a significant change for the company. The departure of Hastings is an inopportune time for Netflix, which is currently navigating its next move. Reed Hastings' exit and the company's earnings have led to a decline in Netflix's shares, with the company now considering its next steps, as reported by Yahoo Finance and Reuters on April 16, 2026.\n\n* Netflix Chairman Reed Hastings is quitting the company after 29 years, with his departure coming at a time when the company's quarterly earnings have failed to impress investors.\n* The World Baseball Classic, held in Japan, has boosted Netflix's popularity in the country, according to the company.\n* Netflix shares have plummeted more than nine percent due to the company's earnings and Hastings' departure, as reported by Yahoo Finance and Reuters.",
+    "5ws": "Who: Reed Hastings, Netflix \nWhat: Steps down as chairman \nWhen: April 16, 2026 \nWhere: Los Angeles, California \nWhy: Quarterly earnings disappointment",
+    "likeIm5": "Imagine this: Netflix, a big team, has a leader, \"The Chairman,\" Reed Hastings, who's stepping down. It's like the school principal leaving, and it's making the team's score, or \"shares,\" go down. The \"Netflix Players,\" including Reed Hastings and his friends, are trying to figure out their next move to make their team stronger and make people happy with their shows and movies."
   },
   {
     "source_names": [
@@ -196,8 +381,8 @@
       "Olivia Hebert",
       "Aidin Vaziri"
     ],
-    "ai_title": "San Francisco Reports Measles Case",
-    "ai_description": "Measles strikes San Francisco after 4-year hiatus.",
+    "ai_title": "Measles Returns To San Francisco",
+    "ai_description": "Measles strikes San Francisco, infecting an unvaccinated infant.",
     "urls": [
       "https://www.sfgate.com/bayarea/article/measles-sf-case-confirmed-22210649.php",
       "https://www.sfchronicle.com/health/article/san-francisco-clade-i-mpox-22210400.php"
@@ -205,8 +390,55 @@
     "url_to_image": "https://s.hdnux.com/photos/01/63/43/17/30290938/3/rawImage.jpg",
     "category": "general",
     "topic": "San Francisco Measles Outbreak",
-    "summary": "In 2026, San Francisco confirmed its first measles case since 2019, involving an unvaccinated infant. The city's public health officials announced this diagnosis on a Monday. Measles is a highly contagious viral disease that can be prevented through vaccination. San Francisco has also confirmed its first case of clade I mpox, also known as monkeypox, in an unvaccinated adult who had contact with someone who had traveled internationally. Clade I mpox is a strain of the virus that can cause more severe symptoms. The Centers for Disease Control and Prevention (CDC) provides guidance on the diagnosis, treatment, and prevention of these diseases. These cases highlight the importance of vaccination and international travel precautions to prevent the spread of infectious diseases.\n\n* The measles case in San Francisco involves an unvaccinated infant, marking the first case in the city since 2019.\n* San Francisco has confirmed its first case of clade I mpox in an unvaccinated adult who had contact with someone who had traveled internationally.\n* Both cases emphasize the need for vaccination and adherence to public health guidelines to prevent the spread of infectious diseases.",
-    "5ws": "Who: San Francisco health officials, unvaccinated infant, unvaccinated adult\nWhat: Measles, mpox cases confirmed\nWhen: April 16, 2026\nWhere: San Francisco, California\nWhy: Disease outbreak, public health concern",
-    "likeIm5": "Imagine this: in San Francisco, \"The Health Heroes\" like Olivia Hebert and Aidin Vaziri are working together to stop the spread of measles. It's like a big playground game where they need to tag all their friends to keep them safe, but this time, \"The Vaccine Team\" is helping by giving special shots to keep everyone healthy, and their goal is to keep everyone safe and happy."
+    "summary": "In 2026, San Francisco health officials confirmed the city's first measles case in seven years, involving an unvaccinated infant. This diagnosis marks the first recorded case of measles in San Francisco since 2019. Measles is a highly contagious viral disease that can be prevented through vaccination. San Francisco has also reported its first case of clade I mpox, a more severe strain of the disease, in an unvaccinated adult who had contact with someone who had traveled internationally. The Centers for Disease Control and Prevention (CDC) defines mpox as a rare but potentially serious viral illness. The city's health officials have confirmed these cases, emphasizing the importance of vaccination in preventing the spread of these diseases. According to the CDC, vaccines such as the measles vaccine are crucial in protecting individuals and communities from outbreaks.\n\n* The measles case in San Francisco involves an unvaccinated infant, highlighting the importance of vaccination in preventing the disease.\n* San Francisco has reported its first case of clade I mpox in an unvaccinated adult who had contact with someone who had traveled internationally.\n* The CDC defines mpox as a rare but potentially serious viral illness, and the measles vaccine is crucial in protecting individuals and communities from outbreaks.",
+    "5ws": "Who: San Francisco health officials, unvaccinated infant \nWhat: Confirmed measles case, mpox strain \nWhen: April 16, 2026 \nWhere: San Francisco, California \nWhy: Disease outbreak, public health concern",
+    "likeIm5": "Imagine this: a team of helpers, like Olivia the Reporter and Aidin the Health Hero, are working together to stop the spread of measles in San Francisco, where an unvaccinated infant was diagnosed, and a stronger mpox strain was found in an unvaccinated adult who had contact with someone who traveled internationally."
+  },
+  {
+    "source_names": [
+      "Pittsburgh Post-Gazette",
+      "Steelers Depot"
+    ],
+    "authors": [
+      "Ray Fittipaldo",
+      "Josh Carney"
+    ],
+    "ai_title": "Steelers 2026 Draft Preview",
+    "ai_description": "Steelers ignite draft frenzy with league-high 12 picks.",
+    "urls": [
+      "https://www.post-gazette.com/sports/2026-nfl-draft/2026/04/17/nfl-mock-draft-boston-khan-mccarthy/stories/202604170015",
+      "https://steelersdepot.com/2026/04/espn-analyst-names-three-things-steelers-must-do-to-ace-2026-nfl-draft/"
+    ],
+    "url_to_image": "https://73f3e7d5672db1849e6c-6434aaf008a29447cc424990bc6a54a7.ssl.cf2.rackcdn.com/stories/202604170015/1140x_a10-7_cTC/20260127mf-steelers02_1776362997.jpg",
+    "category": "sports",
+    "topic": "Steelers NFL Draft",
+    "summary": "The Pittsburgh Steelers are scheduled to host the 2026 NFL Draft. As the host team, they also possess a league-high 12 picks, giving them a significant opportunity to shape their roster. The 2026 NFL Draft is expected to take place in Pittsburgh, with the exact dates to be confirmed. The Steelers' 12 picks provide them with considerable flexibility in terms of drafting new players or trading picks to other teams. According to reports, the Steelers may not use all 12 picks, potentially opting to trade up to secure key players. The team's draft strategy will be influenced by their new coach, who will play a crucial role in shaping the team's roster. The 2026 NFL Draft will be a significant event for the Steelers, with the team aiming to make the most of their hosting opportunity and high number of draft picks.\n\n* The Pittsburgh Steelers have a league-high 12 picks in the 2026 NFL Draft, providing them with significant flexibility in terms of drafting new players or trading picks.\n* The team is scheduled to host the 2026 NFL Draft, giving them a unique opportunity to shape their roster and make a lasting impression on the league.\n* The Steelers' draft strategy will be influenced by their new coach, who will play a crucial role in shaping the team's roster and making key decisions on draft day.",
+    "5ws": "Who: Pittsburgh Steelers, NFL teams\nWhat: 2026 NFL Draft\nWhen: 2026, exact dates unknown\nWhere: Pittsburgh, Pennsylvania\nWhy: Annual recruitment of college athletes",
+    "likeIm5": "Imagine this: the \"Steel City Team\" has 12 Golden Tickets to pick the best friends for their football family. They're working with Coach Omar Khan and friends like Ray Fittipaldo to make great choices, just like the \"Cowboys Team\" and \"Jets Team\" are doing, to win big games and make their fans happy."
+  },
+  {
+    "source_names": [
+      "Hollywood Reporter",
+      "Deadline",
+      "Variety"
+    ],
+    "authors": [
+      "Hilary Lewis",
+      "Rosy Cordero",
+      "Emily Longeretta"
+    ],
+    "ai_title": "The Pitt Season 2 Finale Unfolds",
+    "ai_description": "Creator R. Scott Gemmill reveals Dr. Mohan's shocking exit.",
+    "urls": [
+      "http://www.hollywoodreporter.com/tv/tv-features/the-pitt-season-2-finale-explained-season-3-what-to-expect-1236567229/",
+      "http://deadline.com/2026/04/the-pitt-r-scott-gemmill-season-2-finale-interview-1236863967/",
+      "https://variety.com/2026/tv/news/supriya-ganesh-the-pitt-season-2-finale-mohan-future-1236723738/"
+    ],
+    "url_to_image": "https://www.hollywoodreporter.com/wp-content/uploads/2026/04/shawn-hatosy-noah-wyle.jpg?crop=0px%2C9px%2C1920px%2C1075px&resize=1440%2C810",
+    "category": "entertainment",
+    "topic": "The Pitt Season Finale",
+    "summary": "The Pitt, a medical drama on HBO Max, has concluded its second season with a finale titled \"9:00 p.m.\" The season finale included significant plot points, including the departure of Supriya Ganesh's character, Dr. Mohan. Supriya Ganesh played the role of Dr. Mohan in the show. The Pitt's creator, R. Scott Gemmill, discussed the season finale and the future of the show. The finale also addressed mental health issues, as noted by The Hollywood Reporter. The show's cast, including Patrick Ball and Sepideh Moafi, shared their thoughts on the season's conclusion. The Pitt's second season has received critical acclaim, with the finale marking a significant turning point in the series.\n\n* The Pitt's season two finale, \"9:00 p.m.,\" included the departure of Supriya Ganesh's character, Dr. Mohan.\n* The show's creator, R. Scott Gemmill, discussed the season finale and the potential return of Dr. Mohan in future episodes.\n* The season finale addressed mental health issues, highlighting the importance of resolving these problems, as mentioned by The Hollywood Reporter.",
+    "5ws": "Who: Scott Gemmill, Noah Wyle, Supriya Ganesh\nWhat: The Pitt Season 2 finale\nWhen: April 17, 2026\nWhere: HBO Max\nWhy: Resolving character storylines",
+    "likeIm5": "Imagine this: a big show called \"The Pitt\" has a exciting finale. The \"Medical Heroes\" team, led by creator \"The Story Master\" R. Scott Gemmill, and stars like \"The Doctor\" Noah Wyle and \"The Helper\" Supriya Ganesh, are working together to help people. They want to show that taking care of mental health is very important, just like solving a big puzzle to make everyone happy and healthy."
   }
 ]
