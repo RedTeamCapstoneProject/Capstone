@@ -86,17 +86,53 @@
           };
           reportInput.addEventListener("input", updateReportCounter);
           updateReportCounter();
-          reportForm.addEventListener("submit", (event) => {
+          reportForm.addEventListener("submit", async (event) => {
             event.preventDefault();
             const message = reportInput.value.trim();
-            const pageUrl = window.location.href;
+            if (!message)
+              return;
+            const reportSendButton = reportForm.querySelector("button[type=\"submit\"]");
+            const originalSendLabel = reportSendButton?.textContent ?? "Send";
+            const pageUrl = `${window.location.origin}${window.location.pathname}${window.location.search}#`;
+            const idParam = new URLSearchParams(window.location.search).get("id");
+            const parsedId = idParam ? Number.parseInt(idParam, 10) : Number.NaN;
             const articleTitle = document.querySelector("article.post .title h2 a")?.textContent?.trim() || "Article";
-            const subject = encodeURIComponent(`Report article: ${articleTitle}`);
-            const body = encodeURIComponent(`Article URL: ${pageUrl}\n\nAdditional Information:\n${message || "[No additional information provided]"}`);
-            window.location.href = `mailto:?subject=${subject}&body=${body}`;
-            reportInput.value = "";
-            updateReportCounter();
-            window.location.hash = "";
+            if (!Number.isFinite(parsedId) || parsedId <= 0) {
+              alert("Unable to send report: missing article ID.");
+              return;
+            }
+            try {
+              if (reportSendButton) {
+                reportSendButton.disabled = true;
+                reportSendButton.textContent = "Sending...";
+              }
+              const response = await fetch("/api/report", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                  articleId: parsedId,
+                  articleUrl: pageUrl,
+                  information: message,
+                  articleTitle
+                })
+              });
+              if (!response.ok) {
+                throw new Error("Failed to send report email");
+              }
+              reportInput.value = "";
+              updateReportCounter();
+              window.location.hash = "";
+            } catch (error) {
+              console.error("Report submit error:", error);
+              alert("Unable to send report right now. Please try again.");
+            } finally {
+              if (reportSendButton) {
+                reportSendButton.disabled = false;
+                reportSendButton.textContent = originalSendLabel;
+              }
+            }
           });
         }
       })();
