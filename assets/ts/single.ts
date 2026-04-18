@@ -70,6 +70,17 @@ async function importChatBot() {
 
 
 (function () {
+  type ToastType = "success" | "error" | "info";
+  let nextToastId = 0;
+
+  const showToast = (message: string, type: ToastType = "info") => {
+    window.dispatchEvent(
+      new CustomEvent("show-toast", {
+        detail: { message, type, id: ++nextToastId },
+      })
+    );
+  };
+
   const style = document.createElement("style");
   style.textContent =
     ".article-tab-panel { display: none; } .article-tab-panel.active { display: block; } .article-tabs-nav { display: flex; align-items: center; } .article-tabs-nav .article-tab[data-action=\"report\"] { margin-left: auto; } .report-form { display: block; } .report-label { display: block; margin-bottom: 0.6em; letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.75em; font-weight: 700; color: #6a6a6a; } .report-form textarea { min-height: 10.5em; resize: vertical; margin-bottom: 0.65em; } .report-form-footer { display: flex; align-items: center; justify-content: space-between; gap: 0.8em; } .report-counter { color: #8a8a8a; font-size: 0.8em; letter-spacing: 0.02em; } .report-send { margin: 0; }";
@@ -206,7 +217,10 @@ async function importChatBot() {
     reportForm.addEventListener("submit", async(event) => {
       event.preventDefault();
       const message = reportInput.value.trim();
-      if (!message) return;
+      if (!message) {
+        showToast("Please enter information before sending.", "error");
+        return;
+      }
 
       const reportSendButton = reportForm.querySelector<HTMLButtonElement>("button[type=\"submit\"]");
       const originalSendLabel = reportSendButton?.textContent ?? "Send";
@@ -219,7 +233,7 @@ async function importChatBot() {
         "Article";
 
       if (!Number.isFinite(parsedId) || parsedId <= 0) {
-        alert("Unable to send report: missing article ID.");
+        showToast("Unable to send report: missing article ID.", "error");
         return;
       }
 
@@ -249,9 +263,10 @@ async function importChatBot() {
         reportInput.value = "";
         updateReportCounter();
         window.location.hash = "";
+        showToast("Report sent successfully.", "success");
       } catch (error) {
         console.error("Report submit error:", error);
-        alert("Unable to send report right now. Please try again.");
+        showToast("Unable to send report right now. Please try again.", "error");
       } finally {
         if (reportSendButton) {
           reportSendButton.disabled = false;
