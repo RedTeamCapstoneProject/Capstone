@@ -85,14 +85,7 @@ async function importChatBot() {
     tab.addEventListener("click", () => {
       const action = tab.getAttribute("data-action");
       if (action === "report") {
-        const pageUrl = window.location.href;
-        const articleTitle =
-          document.querySelector<HTMLElement>("article.post .title h2 a")?.textContent?.trim() ||
-          "Article";
-
-        const subject = encodeURIComponent(`Report article: ${articleTitle}`);
-        const body = encodeURIComponent(`Please review this article:\n${pageUrl}`);
-        window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        window.location.hash = "report-popup";
         return;
       }
 
@@ -117,8 +110,10 @@ async function importChatBot() {
   const popupForm = document.getElementById("chatbot-popup-form") as HTMLFormElement | null;
   const popupInput = document.getElementById("chatbot-popup-input") as HTMLInputElement | null;
   const popupThread = document.getElementById("chatbot-thread") as HTMLElement | null;
+  const reportForm = document.getElementById("report-popup-form") as HTMLFormElement | null;
+  const reportInput = document.getElementById("report-popup-input") as HTMLInputElement | null;
   const popupDismissControls = document.querySelectorAll<HTMLElement>(
-    "#chatbot-popup .chatbot-popup-dismiss"
+    "#chatbot-popup .chatbot-popup-dismiss, #report-popup .report-popup-dismiss"
   );
 
   popupDismissControls.forEach((control) => {
@@ -195,6 +190,28 @@ async function importChatBot() {
     } finally {
       popupThread.scrollTop = popupThread.scrollHeight;
     }
+    });
+  }
+
+  if (reportForm && reportInput) {
+    reportForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const message = reportInput.value.trim();
+      if (!message) return;
+
+      const pageUrl = window.location.href;
+      const articleTitle =
+        document.querySelector<HTMLElement>("article.post .title h2 a")?.textContent?.trim() ||
+        "Article";
+
+      const subject = encodeURIComponent(`Report article: ${articleTitle}`);
+      const body = encodeURIComponent(
+        `Article URL: ${pageUrl}\n\nMessage:\n${message}`
+      );
+
+      window.location.href = `mailto:?subject=${subject}&body=${body}`;
+      reportInput.value = "";
+      window.location.hash = "";
     });
   }
 })();
