@@ -190,6 +190,46 @@ function formatSummaryForDisplay(summaryText: string): string {
   return `${body}\n\n${bullets}`;
 }
 
+function formatCreatedAtDate(
+  createdAt: string | null | undefined
+): { displayDate: string; isoDate: string } | null {
+  const normalized = createdAt?.trim();
+  if (!normalized) return null;
+
+  const directDateMatch = normalized.match(/^(\d{4})-(\d{2})-(\d{2})/);
+
+  let year = 0;
+  let month = 0;
+  let day = 0;
+
+  if (directDateMatch) {
+    year = Number.parseInt(directDateMatch[1], 10);
+    month = Number.parseInt(directDateMatch[2], 10);
+    day = Number.parseInt(directDateMatch[3], 10);
+  } else {
+    const parsed = new Date(normalized);
+    if (Number.isNaN(parsed.getTime())) return null;
+
+    year = parsed.getUTCFullYear();
+    month = parsed.getUTCMonth() + 1;
+    day = parsed.getUTCDate();
+  }
+
+  const safeMonth = String(month).padStart(2, "0");
+  const safeDay = String(day).padStart(2, "0");
+  const isoDate = `${year}-${safeMonth}-${safeDay}`;
+
+  const dateForDisplay = new Date(Date.UTC(year, month - 1, day));
+  const displayDate = new Intl.DateTimeFormat(undefined, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  }).format(dateForDisplay);
+
+  return { displayDate, isoDate };
+}
+
 function toCleanList(values?: string[] | null): string[] {
   if (!Array.isArray(values)) return [];
   return values
@@ -324,6 +364,21 @@ async function hydrateSingleSummaryPage(): Promise<boolean> {
 
     const subtitle = document.querySelector<HTMLParagraphElement>("#main article.post header .title p");
     if (subtitle) subtitle.textContent = description;
+
+    const createdAt = formatCreatedAtDate(item.created_at);
+    const createdAtElement = document.querySelector<HTMLElement>(
+      "#main article.post header .meta .published"
+    );
+
+    if (createdAtElement) {
+      createdAtElement.textContent = createdAt
+        ? `Created at ${createdAt.displayDate}`
+        : "Created at unavailable";
+
+      if (createdAtElement instanceof HTMLTimeElement) {
+        createdAtElement.dateTime = createdAt?.isoDate ?? "";
+      }
+    }
 
     const generalTabPanel = document.querySelector<HTMLElement>("#tab-general");
     const bodyParagraph = generalTabPanel?.querySelector<HTMLParagraphElement>("p");

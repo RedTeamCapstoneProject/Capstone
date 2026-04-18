@@ -6657,6 +6657,38 @@
 
 ${bullets}`;
       }
+      function formatCreatedAtDate(createdAt) {
+        const normalized = createdAt?.trim();
+        if (!normalized)
+          return null;
+        const directDateMatch = normalized.match(/^(\d{4})-(\d{2})-(\d{2})/);
+        let year = 0;
+        let month = 0;
+        let day = 0;
+        if (directDateMatch) {
+          year = Number.parseInt(directDateMatch[1], 10);
+          month = Number.parseInt(directDateMatch[2], 10);
+          day = Number.parseInt(directDateMatch[3], 10);
+        } else {
+          const parsed = new Date(normalized);
+          if (Number.isNaN(parsed.getTime()))
+            return null;
+          year = parsed.getUTCFullYear();
+          month = parsed.getUTCMonth() + 1;
+          day = parsed.getUTCDate();
+        }
+        const safeMonth = String(month).padStart(2, "0");
+        const safeDay = String(day).padStart(2, "0");
+        const isoDate = `${year}-${safeMonth}-${safeDay}`;
+        const dateForDisplay = new Date(Date.UTC(year, month - 1, day));
+        const displayDate = new Intl.DateTimeFormat(void 0, {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          timeZone: "UTC"
+        }).format(dateForDisplay);
+        return { displayDate, isoDate };
+      }
       function toCleanList(values) {
         if (!Array.isArray(values))
           return [];
@@ -6773,6 +6805,14 @@ ${bullets}`;
           const subtitle = document.querySelector("#main article.post header .title p");
           if (subtitle)
             subtitle.textContent = description;
+          const createdAt = formatCreatedAtDate(item.created_at);
+          const createdAtElement = document.querySelector("#main article.post header .meta .published");
+          if (createdAtElement) {
+            createdAtElement.textContent = createdAt ? `Created at ${createdAt.displayDate}` : "Created at unavailable";
+            if (createdAtElement instanceof HTMLTimeElement) {
+              createdAtElement.dateTime = createdAt?.isoDate ?? "";
+            }
+          }
           const generalTabPanel = document.querySelector("#tab-general");
           const bodyParagraph = generalTabPanel?.querySelector("p");
           if (bodyParagraph) {
