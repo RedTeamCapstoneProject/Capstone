@@ -190,6 +190,74 @@ function formatSummaryForDisplay(summaryText: string): string {
   return `${body}\n\n${bullets}`;
 }
 
+function formatCreatedAtDate(
+  createdAt: string | null | undefined
+): { displayDate: string; isoDate: string } | null {
+  const normalized = createdAt?.trim();
+  if (!normalized) return null;
+
+  const dateOnlyMatch = normalized.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+
+  if (dateOnlyMatch) {
+    const year = Number.parseInt(dateOnlyMatch[1], 10);
+    const month = Number.parseInt(dateOnlyMatch[2], 10);
+    const day = Number.parseInt(dateOnlyMatch[3], 10);
+    const safeMonth = String(month).padStart(2, "0");
+    const safeDay = String(day).padStart(2, "0");
+    const isoDate = `${year}-${safeMonth}-${safeDay}`;
+
+    // Use noon UTC so formatting in Central Time stays on the same calendar date.
+    const displayDate = new Intl.DateTimeFormat(undefined, {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      timeZone: "America/Chicago",
+    }).format(new Date(Date.UTC(year, month - 1, day, 12, 0, 0)));
+
+    return { displayDate, isoDate };
+  }
+
+  const parsed = new Date(normalized);
+  if (Number.isNaN(parsed.getTime())) return null;
+
+  const dateParts = new Intl.DateTimeFormat("en-CA", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    timeZone: "America/Chicago",
+  }).formatToParts(parsed);
+
+  const year = Number.parseInt(
+    dateParts.find((part) => part.type === "year")?.value ?? "",
+    10
+  );
+  const month = Number.parseInt(
+    dateParts.find((part) => part.type === "month")?.value ?? "",
+    10
+  );
+  const day = Number.parseInt(
+    dateParts.find((part) => part.type === "day")?.value ?? "",
+    10
+  );
+
+  if (!Number.isFinite(year) || !Number.isFinite(month) || !Number.isFinite(day)) {
+    return null;
+  }
+
+  const safeMonth = String(month).padStart(2, "0");
+  const safeDay = String(day).padStart(2, "0");
+  const isoDate = `${year}-${safeMonth}-${safeDay}`;
+
+  const displayDate = new Intl.DateTimeFormat(undefined, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "America/Chicago",
+  }).format(parsed);
+
+  return { displayDate, isoDate };
+}
+
 function toCleanList(values?: string[] | null): string[] {
   if (!Array.isArray(values)) return [];
   return values
@@ -324,6 +392,21 @@ async function hydrateSingleSummaryPage(): Promise<boolean> {
 
     const subtitle = document.querySelector<HTMLParagraphElement>("#main article.post header .title p");
     if (subtitle) subtitle.textContent = description;
+
+    const createdAt = formatCreatedAtDate(item.created_at);
+    const createdAtElement = document.querySelector<HTMLElement>(
+      "#main article.post header .meta .published"
+    );
+
+    if (createdAtElement) {
+      createdAtElement.textContent = createdAt
+        ? `Created at ${createdAt.displayDate}`
+        : "Created at unavailable";
+
+      if (createdAtElement instanceof HTMLTimeElement) {
+        createdAtElement.dateTime = createdAt?.isoDate ?? "";
+      }
+    }
 
     const generalTabPanel = document.querySelector<HTMLElement>("#tab-general");
     const bodyParagraph = generalTabPanel?.querySelector<HTMLParagraphElement>("p");

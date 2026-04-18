@@ -116,6 +116,26 @@
 					</div>
 				</div>
 			</div>
+			<!-- Report Popup -->
+			<div id="report-popup" class="login-popup-overlay chatbot-popup-overlay">
+				<a href="#" class="login-popup-backdrop report-popup-dismiss" title="Close"></a>
+				<div class="login-popup chatbot-popup">
+					<a href="#" class="login-popup-close report-popup-dismiss" title="Close">&times;</a>
+					<div class="login-popup-inner chatbot-popup-inner">
+						<h2>Report Article</h2>
+						<div class="chatbot-ui">
+							<form class="report-form" id="report-popup-form">
+								<label for="report-popup-input" class="report-label">Information</label>
+								<textarea id="report-popup-input" rows="6" maxlength="250" autocomplete="off"></textarea>
+								<div class="report-form-footer">
+									<span id="report-popup-counter" class="report-counter">0/250</span>
+									<button type="submit" class="button small">Send</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 			<!-- Toast notifications -->
 			<div id="toast-root"></div>
 			<!-- Menu -->
@@ -175,6 +195,9 @@
 							</h2>
 							<p>A bit more info here...</p>
 						</div>
+						<div class="meta">
+							<time class="published" id="article-created-at" datetime="">Created at</time>
+						</div>
 				</header>
 				<span class="image featured">
 					<img src="images/pic01.jpg" alt="" />
@@ -187,6 +210,7 @@
 						<button class="article-tab" data-tab="eli5">Like I'm Five</button>
 						<button class="article-tab" data-tab="fivews">Five W's</button>
 						<button class="article-tab" data-tab="chatbot"><i class="fas fa-robot"></i> Chatbot</button>
+						<button class="article-tab" data-action="report"><i class="fas fa-flag"></i> Report</button>
 					</nav>
 					<div class="article-tab-panels">
 						<div class="article-tab-panel active" id="tab-general">

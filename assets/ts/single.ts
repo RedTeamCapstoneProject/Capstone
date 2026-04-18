@@ -70,9 +70,20 @@ async function importChatBot() {
 
 
 (function () {
+  type ToastType = "success" | "error" | "info";
+  let nextToastId = 0;
+
+  const showToast = (message: string, type: ToastType = "info") => {
+    window.dispatchEvent(
+      new CustomEvent("show-toast", {
+        detail: { message, type, id: ++nextToastId },
+      })
+    );
+  };
+
   const style = document.createElement("style");
   style.textContent =
-    ".article-tab-panel { display: none; } .article-tab-panel.active { display: block; }";
+    ".article-tab-panel { display: none; } .article-tab-panel.active { display: block; } .article-tabs-nav { display: flex; align-items: center; } .article-tabs-nav .article-tab[data-action=\"report\"] { margin-left: auto; } .report-form { display: block; } .report-label { display: block; margin-bottom: 0.6em; letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.75em; font-weight: 700; color: #6a6a6a; } .report-form textarea { min-height: 10.5em; resize: vertical; margin-bottom: 0.65em; } .report-form-footer { display: flex; align-items: center; justify-content: space-between; gap: 0.8em; } .report-counter { color: #8a8a8a; font-size: 0.8em; letter-spacing: 0.02em; } body.single #main article.post > header .meta { border-left: 0; display: flex; align-items: center; justify-content: center; text-align: center; } body.single #main article.post > header .meta .published { margin-top: 0; white-space: normal; line-height: 1.45; }";
   document.head.appendChild(style);
 
   const tabs = document.querySelectorAll<HTMLElement>(".article-tab");
@@ -83,6 +94,12 @@ async function importChatBot() {
 
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
+      const action = tab.getAttribute("data-action");
+      if (action === "report") {
+        window.location.hash = "report-popup";
+        return;
+      }
+
       const tabName = tab.getAttribute("data-tab");
       if (tabName === "chatbot") {
         window.location.hash = "chatbot-popup";
@@ -104,8 +121,11 @@ async function importChatBot() {
   const popupForm = document.getElementById("chatbot-popup-form") as HTMLFormElement | null;
   const popupInput = document.getElementById("chatbot-popup-input") as HTMLInputElement | null;
   const popupThread = document.getElementById("chatbot-thread") as HTMLElement | null;
+  const reportForm = document.getElementById("report-popup-form") as HTMLFormElement | null;
+  const reportInput = document.getElementById("report-popup-input") as HTMLTextAreaElement | null;
+  const reportCounter = document.getElementById("report-popup-counter") as HTMLElement | null;
   const popupDismissControls = document.querySelectorAll<HTMLElement>(
-    "#chatbot-popup .chatbot-popup-dismiss"
+    "#chatbot-popup .chatbot-popup-dismiss, #report-popup .report-popup-dismiss"
   );
 
   popupDismissControls.forEach((control) => {
@@ -182,6 +202,77 @@ async function importChatBot() {
     } finally {
       popupThread.scrollTop = popupThread.scrollHeight;
     }
+    });
+  }
+
+  if (reportForm && reportInput) {
+    const updateReportCounter = () => {
+      if (!reportCounter) return;
+      reportCounter.textContent = `${reportInput.value.length}/250`;
+    };
+
+    reportInput.addEventListener("input", updateReportCounter);
+    updateReportCounter();
+
+    reportForm.addEventListener("submit", async(event) => {
+      event.preventDefault();
+      const message = reportInput.value.trim();
+      if (!message) {
+        showToast("Please enter information before sending.", "error");
+        return;
+      }
+
+      const reportSendButton = reportForm.querySelector<HTMLButtonElement>("button[type=\"submit\"]");
+      const originalSendLabel = reportSendButton?.textContent ?? "Send";
+
+      const pageUrl = `${window.location.origin}${window.location.pathname}${window.location.search}#`;
+      const idParam = new URLSearchParams(window.location.search).get("id");
+      const parsedId = idParam ? Number.parseInt(idParam, 10) : Number.NaN;
+      const articleTitle =
+        document.querySelector<HTMLElement>("article.post .title h2 a")?.textContent?.trim() ||
+        "Article";
+
+      if (!Number.isFinite(parsedId) || parsedId <= 0) {
+        showToast("Unable to send report: missing article ID.", "error");
+        return;
+      }
+
+      try {
+        if (reportSendButton) {
+          reportSendButton.disabled = true;
+          reportSendButton.textContent = "Sending...";
+        }
+
+        const response = await fetch("/api/report", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            articleId: parsedId,
+            articleUrl: pageUrl,
+            information: message,
+            articleTitle,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to send report email");
+        }
+
+        reportInput.value = "";
+        updateReportCounter();
+        window.location.hash = "";
+        showToast("Report sent successfully.", "success");
+      } catch (error) {
+        console.error("Report submit error:", error);
+        showToast("Unable to send report right now. Please try again.", "error");
+      } finally {
+        if (reportSendButton) {
+          reportSendButton.disabled = false;
+          reportSendButton.textContent = originalSendLabel;
+        }
+      }
     });
   }
 })();

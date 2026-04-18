@@ -6657,6 +6657,61 @@
 
 ${bullets}`;
       }
+      function formatCreatedAtDate(createdAt) {
+        const normalized = createdAt?.trim();
+        if (!normalized)
+          return null;
+        const dateOnlyMatch = normalized.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+        if (dateOnlyMatch) {
+          const year2 = Number.parseInt(dateOnlyMatch[1], 10);
+          const month2 = Number.parseInt(dateOnlyMatch[2], 10);
+          const day2 = Number.parseInt(dateOnlyMatch[3], 10);
+          const safeMonth2 = String(month2).padStart(2, "0");
+          const safeDay2 = String(day2).padStart(2, "0");
+          const isoDate2 = `${year2}-${safeMonth2}-${safeDay2}`;
+          const displayDate2 = new Intl.DateTimeFormat(void 0, {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            timeZone: "America/Chicago"
+          }).format(new Date(Date.UTC(year2, month2 - 1, day2, 12, 0, 0)));
+          return { displayDate: displayDate2, isoDate: isoDate2 };
+        }
+        const parsed = new Date(normalized);
+        if (Number.isNaN(parsed.getTime()))
+          return null;
+        const dateParts = new Intl.DateTimeFormat("en-CA", {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+          timeZone: "America/Chicago"
+        }).formatToParts(parsed);
+        const year = Number.parseInt(
+          dateParts.find((part) => part.type === "year")?.value ?? "",
+          10
+        );
+        const month = Number.parseInt(
+          dateParts.find((part) => part.type === "month")?.value ?? "",
+          10
+        );
+        const day = Number.parseInt(
+          dateParts.find((part) => part.type === "day")?.value ?? "",
+          10
+        );
+        if (!Number.isFinite(year) || !Number.isFinite(month) || !Number.isFinite(day)) {
+          return null;
+        }
+        const safeMonth = String(month).padStart(2, "0");
+        const safeDay = String(day).padStart(2, "0");
+        const isoDate = `${year}-${safeMonth}-${safeDay}`;
+        const displayDate = new Intl.DateTimeFormat(void 0, {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          timeZone: "America/Chicago"
+        }).format(parsed);
+        return { displayDate, isoDate };
+      }
       function toCleanList(values) {
         if (!Array.isArray(values))
           return [];
@@ -6773,6 +6828,14 @@ ${bullets}`;
           const subtitle = document.querySelector("#main article.post header .title p");
           if (subtitle)
             subtitle.textContent = description;
+          const createdAt = formatCreatedAtDate(item.created_at);
+          const createdAtElement = document.querySelector("#main article.post header .meta .published");
+          if (createdAtElement) {
+            createdAtElement.textContent = createdAt ? `Created at ${createdAt.displayDate}` : "Created at unavailable";
+            if (createdAtElement instanceof HTMLTimeElement) {
+              createdAtElement.dateTime = createdAt?.isoDate ?? "";
+            }
+          }
           const generalTabPanel = document.querySelector("#tab-general");
           const bodyParagraph = generalTabPanel?.querySelector("p");
           if (bodyParagraph) {
