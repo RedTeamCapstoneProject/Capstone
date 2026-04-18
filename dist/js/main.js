@@ -6831,7 +6831,7 @@ ${bullets}`;
           const createdAt = formatCreatedAtDate(item.created_at);
           const createdAtElement = document.querySelector("#main article.post header .meta .published");
           if (createdAtElement) {
-            createdAtElement.textContent = createdAt ? `Created at ${createdAt.displayDate}` : "Created at unavailable";
+            createdAtElement.textContent = createdAt ? `Created on ${createdAt.displayDate}` : "Created on unavailable";
             if (createdAtElement instanceof HTMLTimeElement) {
               createdAtElement.dateTime = createdAt?.isoDate ?? "";
             }

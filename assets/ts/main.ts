@@ -400,8 +400,8 @@ async function hydrateSingleSummaryPage(): Promise<boolean> {
 
     if (createdAtElement) {
       createdAtElement.textContent = createdAt
-        ? `Created at ${createdAt.displayDate}`
-        : "Created at unavailable";
+        ? `Created on ${createdAt.displayDate}`
+        : "Created on unavailable";
 
       if (createdAtElement instanceof HTMLTimeElement) {
         createdAtElement.dateTime = createdAt?.isoDate ?? "";
