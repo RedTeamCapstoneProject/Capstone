@@ -196,36 +196,64 @@ function formatCreatedAtDate(
   const normalized = createdAt?.trim();
   if (!normalized) return null;
 
-  const directDateMatch = normalized.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  const dateOnlyMatch = normalized.match(/^(\d{4})-(\d{2})-(\d{2})$/);
 
-  let year = 0;
-  let month = 0;
-  let day = 0;
+  if (dateOnlyMatch) {
+    const year = Number.parseInt(dateOnlyMatch[1], 10);
+    const month = Number.parseInt(dateOnlyMatch[2], 10);
+    const day = Number.parseInt(dateOnlyMatch[3], 10);
+    const safeMonth = String(month).padStart(2, "0");
+    const safeDay = String(day).padStart(2, "0");
+    const isoDate = `${year}-${safeMonth}-${safeDay}`;
 
-  if (directDateMatch) {
-    year = Number.parseInt(directDateMatch[1], 10);
-    month = Number.parseInt(directDateMatch[2], 10);
-    day = Number.parseInt(directDateMatch[3], 10);
-  } else {
-    const parsed = new Date(normalized);
-    if (Number.isNaN(parsed.getTime())) return null;
+    // Use noon UTC so formatting in Central Time stays on the same calendar date.
+    const displayDate = new Intl.DateTimeFormat(undefined, {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      timeZone: "America/Chicago",
+    }).format(new Date(Date.UTC(year, month - 1, day, 12, 0, 0)));
 
-    year = parsed.getUTCFullYear();
-    month = parsed.getUTCMonth() + 1;
-    day = parsed.getUTCDate();
+    return { displayDate, isoDate };
+  }
+
+  const parsed = new Date(normalized);
+  if (Number.isNaN(parsed.getTime())) return null;
+
+  const dateParts = new Intl.DateTimeFormat("en-CA", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    timeZone: "America/Chicago",
+  }).formatToParts(parsed);
+
+  const year = Number.parseInt(
+    dateParts.find((part) => part.type === "year")?.value ?? "",
+    10
+  );
+  const month = Number.parseInt(
+    dateParts.find((part) => part.type === "month")?.value ?? "",
+    10
+  );
+  const day = Number.parseInt(
+    dateParts.find((part) => part.type === "day")?.value ?? "",
+    10
+  );
+
+  if (!Number.isFinite(year) || !Number.isFinite(month) || !Number.isFinite(day)) {
+    return null;
   }
 
   const safeMonth = String(month).padStart(2, "0");
   const safeDay = String(day).padStart(2, "0");
   const isoDate = `${year}-${safeMonth}-${safeDay}`;
 
-  const dateForDisplay = new Date(Date.UTC(year, month - 1, day));
   const displayDate = new Intl.DateTimeFormat(undefined, {
     year: "numeric",
     month: "long",
     day: "numeric",
-    timeZone: "UTC",
-  }).format(dateForDisplay);
+    timeZone: "America/Chicago",
+  }).format(parsed);
 
   return { displayDate, isoDate };
 }
