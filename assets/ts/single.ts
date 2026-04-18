@@ -177,6 +177,9 @@ async function importChatBot() {
       botBubble.textContent = aiResponse;
 
     } catch (err) {
+        if(err == 429){
+          botBubble.textContent = "You have reached the rate limit. Please log in to get a higher limit"
+        }
       console.error("Chatbot system error:", err);
       botBubble.textContent = "Sorry, I'm having trouble connecting right now.";
     } finally {

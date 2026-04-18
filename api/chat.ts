@@ -1,8 +1,8 @@
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { Groq } from "groq-sdk";
-import { Pool } from 'pg'; // Ensure you have npm install pg
-
+import { Pool } from 'pg'; 
+import { createHash } from 'crypto';
 
 
 type SummaryItem = {
@@ -37,7 +37,11 @@ const pool = new Pool({
 
 
 
-
+const hashIP = (ip: string): string => {
+  return createHash('sha256')
+    .update(ip + process.env.HASH_SALT) 
+    .digest('hex');
+};
 
 
 
@@ -48,9 +52,12 @@ const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 export default async function handler(req: any, res: any) {
     if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
 
-        const userIP = (req.headers['x-forwarded-for'] as string)?.split(',')[0] || req.socket.remoteAddress;
-        const client = await pool.connect();
+      const rawIP = (req.headers['x-forwarded-for'] as string)?.split(',')[0] || req.socket.remoteAddress;
 
+    // 2. SCRAMBLE IT IMMEDIATELY
+        const userIP = hashIP(rawIP || "unknown");
+
+        const client = await pool.connect();
     try {
         const checkResult = await client.query(
             'SELECT calls FROM ai_calls WHERE ip = $1',
@@ -64,6 +71,7 @@ export default async function handler(req: any, res: any) {
                 error: "Limit reached", 
                 message: "You have 0 messages remaining. Please log in to continue!" 
             });
+            
         }
 
         await client.query(
