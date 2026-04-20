@@ -1,350 +1,220 @@
 [
   {
     "source_names": [
-      "NHL News",
-      "ESPN Press Room"
+      "The Daily Galaxy --Great Discoveries Channel",
+      "Gizmodo.com"
     ],
     "authors": [
+      "Kouceila Rekik",
+      "Matthew Phelan"
+    ],
+    "ai_title": "Black Holes Create Cosmic Explosions",
+    "ai_description": "Supermassive black hole erupts, unleashing a colossal explosion.",
+    "urls": [
+      "https://dailygalaxy.com/2026/04/black-hole-erupts-after-100-million-years/",
+      "https://gizmodo.com/how-relic-black-holes-could-turn-the-big-bang-into-the-big-bounce-2000748030"
+    ],
+    "url_to_image": "https://dailygalaxy.com/wp-content/uploads/2026/04/Black-Hole-Erupts-After-100-Million-Years-Of-Silence-Creating-A-Cosmic-Explosion-Like-Never-Before-scaled.png",
+    "category": "science",
+    "topic": "Black Hole Erupts",
+    "summary": "A recent study published in the Monthly Notices of the Royal Astronomical Society has shed new light on the volatile nature of supermassive black holes. The study focused on a newly reignited supermassive black hole in galaxy J1007+3540, which has created a colossal eruption and a cosmic explosion stretching nearly a million light-years. This event has shocked astronomers, providing an unprecedented glimpse into the behavior of these celestial entities. The James Webb Space Telescope has also detected mysterious little red dots, which have been dated to a time before the Big Bang. According to a new study, these red dots could be evidence of dense pockets of matter that survived over an age-old cycle of multiple 'Big Bangs'. The research suggests that these pockets of matter could have led to the formation of 'relic' black holes that predate the Big Bang. The findings of these studies have significant implications for our understanding of the universe, its origins, and the behavior of black holes.\n\n* The reignited supermassive black hole in galaxy J1007+3540 has created a colossal eruption, stretching nearly a million light-years, after 100 million years of silence.\n* The James Webb Space Telescope has detected mysterious little red dots that could be evidence of dense pockets of matter that survived over an age-old cycle of multiple 'Big Bangs'.\n* The discovery of 'relic' black holes that predate the Big Bang could provide new insights into the origins and evolution of the universe.",
+    "5ws": "Who: Astronomers, Kouceila Rekik, Matthew Phelan\nWhat: Black hole eruption, cosmic explosion\nWhen: April 18, 2026\nWhere: Galaxy J1007+3540\nWhy: Understanding black hole nature, cosmic events",
+    "likeIm5": "Imagine this: a huge explosion in space. The Daily Galaxy Team, led by Kouceila Rekik, and the Gizmodo Squad, with Matthew Phelan, are like superheroes exploring the cosmos. They're trying to understand a big black hole that woke up after 100 million years, creating a huge cosmic explosion, like a giant firework in the sky, to learn more about our universe and its secrets."
+  },
+  {
+    "source_names": [
+      "ScienceAlert",
+      "Ground.news",
+      "Live Science"
+    ],
+    "authors": [
+      "Michelle Starr",
       "Unknown Author",
-      "Andrea DiCristoforo"
+      "Ben Turner"
     ],
-    "ai_title": "Stanley Cup Playoffs Begin Saturday",
-    "ai_description": "Flyers ignite playoffs with 10-day, 16-game stretch.",
+    "ai_title": "Human Evolution Accelerates Rapidly",
+    "ai_description": "Study unveils human evolution acceleration, favoring traits like red hair.",
     "urls": [
-      "https://www.nhl.com/flyers/news/flyers-to-host-games-3-4-on-april-22-25-at-xfinity-mobile-arena",
-      "https://espnpressroom.com/us/press-releases/2026/04/2026-stanley-cup-playoffs-presented-by-geico-begin-saturday-on-espn/"
+      "https://www.sciencealert.com/mysterious-collapse-reshaped-europe-5000-years-ago-scientists-say",
+      "https://ground.news/article/human-evolution-has-accelerated-to-favour-traits-like-red-hair-lower-body-fat-study_9769bf",
+      "https://www.livescience.com/space/science-news-this-week-physicists-witness-faster-than-light-darkness-pinpricks-humans-found-to-still-be-evolving-and-the-endanered-polar-bears-that-are-getting-fatter-than-ever"
     ],
-    "url_to_image": "https://media.d3.nhle.com/image/private/t_ratio16_9-size50/prd/ug28qhqntirtppzb3xrk.png",
-    "category": "sports",
-    "topic": "2026 Stanley Cup Playoffs",
-    "summary": "The National Hockey League (NHL) has announced the schedule for the First Round of the 2026 Stanley Cup Playoffs. The Philadelphia Flyers will commence their postseason campaign on Saturday, April 18, at 8:00. The playoffs will feature a Saturday tripleheader and a Sunday doubleheader, kicking off a ten-day stretch of 16 First Round games. The First Round coverage marks the beginning of a two-month playoffs stretch, culminating in exclusive coverage of the Stanley Cup Finals. The Flyers are set to host Games 3 and 4 at the Xfinity Mobile Arena on April 22 and 25, respectively. The 2026 Stanley Cup Playoffs are presented by GEICO and will be broadcast on ESPN. The playoffs schedule and coverage details are available on the official NHL website and ESPN Press Room.\n\n* The Philadelphia Flyers will host Games 3 and 4 at the Xfinity Mobile Arena on April 22 and 25.\n* The 2026 Stanley Cup Playoffs will feature a Saturday tripleheader and a Sunday doubleheader, starting a ten-day stretch of 16 First Round games.\n* The playoffs will be presented by GEICO and broadcast on ESPN, with exclusive coverage of the Stanley Cup Finals.",
-    "5ws": "Who: Philadelphia Flyers\nWhat: Host Games 3 & 4\nWhen: April 22 & 25\nWhere: Xfinity Mobile Arena\nWhy: 2026 Stanley Cup Playoffs",
-    "likeIm5": "Imagine this: The Flyers team, led by their brave players, are playing important hockey games. They're like the school's best hockey club, and they want to win the big trophy. The ESPN friends, like Andrea DiCristoforo, are helping tell everyone about these exciting games. The goal is to be the best team and make their fans happy."
+    "url_to_image": "https://www.sciencealert.com/images/2026/04/gallaery-grave.jpg",
+    "category": "science",
+    "topic": "Human Evolution Red Hair",
+    "summary": "A recent study analyzing DNA samples from nearly 16,000 ancient humans across West Eurasia has revealed that natural selection has significantly shaped modern human genomes over the past 10,000 years. This research, led by Harvard University, has found that human evolution has accelerated since the advent of farming, favoring traits such as red hair and lower body fat. The study's findings suggest that the growth of the human population has been marked by fluctuations, including a mysterious collapse in Europe around 5,000 years ago. According to scientists, this collapse had a profound impact on the population's genetics. The research was published as part of a weekly roundup of the latest science news on April 18, 2026. The study's results provide new insights into human evolution and the factors that have influenced the development of modern human traits. The findings of this study contribute to our understanding of human history and the complex factors that have shaped our species over time.\n\n* The study analyzed DNA samples from nearly 16,000 ancient humans across West Eurasia, covering a period of over 10,000 years.\n* The research found that human evolution has accelerated since the advent of farming, favoring traits such as red hair and lower body fat.\n* A mysterious collapse in Europe around 5,000 years ago had a significant impact on the population's genetics, according to the study's findings.",
+    "5ws": "Who: Scientists, researchers from Harvard University\nWhat: Studied human evolution, population fluctuations\nWhen: Published on April 18, 2026\nWhere: West Eurasia, Harvard University\nWhy: Understand human adaptation, genetic changes",
+    "likeIm5": "Imagine this: a big team effort to understand humans. The \"Harvard Heroes\" and \"ScienceAlert Squad\" are working together to figure out how people changed over time, like getting red hair. They're trying to solve a mystery from 5,000 years ago, and it's like finding the missing puzzle piece in a big game."
   },
   {
     "source_names": [
-      "Neurosciencenews.com",
-      "ScienceAlert"
-    ],
-    "authors": [
-      "Neuroscience News",
-      "AFP"
-    ],
-    "ai_title": "Alzheimer's Treatment Shows No Benefit Found",
-    "ai_description": "Research shatters Alzheimer's theory, suggesting disease may originate in muscles.",
-    "urls": [
-      "https://neurosciencenews.com/alzheimers-peripheral-nervous-system-30540/",
-      "https://www.sciencealert.com/much-hyped-alzheimers-drugs-show-no-meaningful-benefit-major-review-finds"
-    ],
-    "url_to_image": "https://neurosciencenews.com/files/2026/04/alzheimers-pns-neuroscience.jpg",
-    "category": "health",
-    "topic": "Alzheimers Disease Research",
-    "summary": "Recent research suggests that Alzheimer's disease may not solely be a \"top-down\" problem caused by brain decay, but rather a \"bottom-up\" issue originating from failures in the peripheral nervous system. This theory proposes that motor neuron mutations can disrupt the neuromuscular junction, independent of the brain. A major review found that certain drugs, once considered a breakthrough in the fight against Alzheimer's, do not provide meaningful benefits to patients. However, some experts have criticized this research, sparking debate within the medical community. Alzheimer's disease is a complex condition that affects balance, walking, and overall cognitive function. The cause of Alzheimer's is still not fully understood, and ongoing research aims to uncover the underlying mechanisms of the disease. As of 2026, scientists continue to investigate the relationship between the peripheral nervous system and Alzheimer's, seeking to develop more effective treatments.\n\n* A major review found that certain Alzheimer's drugs do not provide meaningful benefits to patients, prompting criticism from some experts.\n* Research suggests that Alzheimer's may be a \"bottom-up\" issue, originating from failures in the peripheral nervous system, rather than solely a \"top-down\" problem caused by brain decay.\n* Motor neuron mutations can disrupt the neuromuscular junction, independent of the brain, potentially contributing to the development of Alzheimer's disease.",
-    "5ws": "Who: Neuroscientists, Alzheimer's researchers\nWhat: New findings on Alzheimer's origin\nWhen: April 2026\nWhere: Neuroscience research institutions\nWhy: Understanding disease progression",
-    "likeIm5": "Imagine this: a big team effort to help people with Alzheimer's. The \"Brain Helpers\" and \"Science Superheroes\" are working together to find a cure. They're like the \"Research Rangers\" and \"Medicine Masters\" on a mission to fix the problem, and their big why is to help people remember and be happy again."
-  },
-  {
-    "source_names": [
-      "Variety",
-      "Yahoo Entertainment"
-    ],
-    "authors": [
-      "Alex Ritman",
-      "Brett Arnold"
-    ],
-    "ai_title": "Lee Cronin's The Mummy Hits Theaters",
-    "ai_description": "Lee Cronin unveils a dark, R-rated Mummy reboot.",
-    "urls": [
-      "https://variety.com/2026/film/global/lee-cronin-unique-the-mummy-jason-blum-name-in-title-horror-1236723457/",
-      "https://www.yahoo.com/entertainment/movies/article/new-movies-to-watch-this-weekend-see-lee-cronins-the-mummy-in-theaters-rent-alpha-stream-dust-bunny-on-hbo-max-141927844.html"
-    ],
-    "url_to_image": "https://variety.com/wp-content/uploads/2026/04/LC-Headshot-2.jpeg?w=1000&h=563&crop=1",
-    "category": "entertainment",
-    "topic": "Lee Cronin The Mummy",
-    "summary": "In early March 2026, Warner Bros. achieved success at the Oscars with films such as \"One Battle After Another\" and \"Sinners\". Meanwhile, Lee Cronin was working on the Warner Bros. studio lot, developing his project, \"The Mummy\". Lee Cronin's \"The Mummy\" is a unique and R-rated spin on the classic franchise. The idea for the film was born out of a conversation with James Wan and a title idea from Jason Blum. Lee Cronin is a film director who has put his name in a horror film title, as seen in \"Lee Cronin's The Mummy\". The film is now available to watch in theaters, offering a distinct take on the classic franchise. The current releases also include other movies like \"Normal\" starring Bob Odenkirk and a World Cup caper starring Mark Wahlberg.\n\n* Lee Cronin's \"The Mummy\" is a unique and R-rated spin on the classic franchise, available in theaters.\n* New movie releases include \"Normal\" starring Bob Odenkirk and a World Cup caper starring Mark Wahlberg.\n* Other movies like \"Alpha\" and \"Dust Bunny\" are available for rent or streaming on platforms like HBO Max.",
-    "5ws": "Who: Lee Cronin, James Wan, Jason Blum\nWhat: Directing unique R-rated \"The Mummy\" film\nWhen: Released in 2026\nWhere: Warner Bros. studio, theaters\nWhy: Rebooting classic horror franchise",
-    "likeIm5": "Imagine this: The Movie Makers team, led by \"The Creative Coach\" Lee Cronin, \"The Horror Hero\" James Wan, and \"The Title Master\" Jason Blum, are working together to make a new movie, \"The Mummy.\" They want to make it super exciting and a little scary, like a big adventure on the playground, to entertain everyone and make them happy."
-  },
-  {
-    "source_names": [
-      "San Francisco Chronicle",
-      "Tipranks.com"
-    ],
-    "authors": [
-      "Aidin Vaziri",
-      "Joel Baglole"
-    ],
-    "ai_title": "Meta To Cut 8,000 Jobs",
-    "ai_description": "Meta slashes 8,000 jobs starting May 20.",
-    "urls": [
-      "https://www.sfchronicle.com/tech/article/meta-layoffs-may-reuters-22212763.php",
-      "https://www.tipranks.com/news/meta-platforms-stock-meta-sinks-as-vr-headset-prices-rise"
-    ],
-    "url_to_image": "https://s.hdnux.com/photos/01/66/00/46/30935455/8/rawImage.jpg",
-    "category": "business",
-    "topic": "Meta Layoffs",
-    "summary": "As of 2026, Meta, a technology company, is facing significant challenges, including a landmark trial in Los Angeles on February 18, 2026, where CEO Mark Zuckerberg testified regarding the potential harm of social media platforms to children. Meta is preparing for potential outcomes of this trial. The company is also struggling with high costs for memory chips, which are being passed on to consumers. Additionally, Meta's virtual reality world, known as the \"Metaverse,\" has seen limited adoption. Meta has announced plans to lay off approximately 8,000 workers starting May 20, 2026, with potential further cuts later in the year. These layoffs are reportedly due to the company's struggles with high costs. Meta's financial situation is also reflected in its stock performance, with Meta Platforms Stock (META) experiencing declines.\n\n* The cost of memory chips is being passed onto consumers, contributing to increased prices for Meta's products.\n* Meta plans to lay off around 8,000 workers starting May 20, 2026, with more cuts possible later in the year.\n* The company's virtual reality world, the \"Metaverse,\" has largely been abandoned, indicating a shift in Meta's focus or a lack of consumer interest.",
-    "5ws": "Who: Meta, Mark Zuckerberg\nWhat: Layoffs of 8,000 jobs\nWhen: May 20, 2026\nWhere: Global, Meta HQ\nWhy: Cost-cutting, high memory chip costs",
-    "likeIm5": "Imagine this: Meta's team, led by Captain Mark Zuckerberg, is making big changes. They're like the playground monitors, deciding who will be on their team. Sadly, about 8,000 friends might not get to play together anymore. The Memory Chip Mavericks, like Joel Baglole, say it's because of high costs. Captain Mark wants to make Meta stronger, so they can create fun things like VR headsets for everyone."
-  },
-  {
-    "source_names": [
-      "Forbes",
-      "Forbes"
-    ],
-    "authors": [
-      "Zak Doffman",
-      "Zak Doffman"
-    ],
-    "ai_title": "Microsoft Updates Windows Login System",
-    "ai_description": "Microsoft warns: 1 billion Windows PCs face certificate expiration in 8 weeks.",
-    "urls": [
-      "https://www.forbes.com/sites/zakdoffman/2026/04/17/microsoft-warns-pc-users-new-windows-update-may-lock-you-out/",
-      "https://www.forbes.com/sites/zakdoffman/2026/04/16/starting-in-april-microsoft-changes-windows-update-after-15-years/"
-    ],
-    "url_to_image": "https://imageio.forbes.com/specials-images/imageserve/665fd748f52ec6750cddbbf1/0x0.jpg?format=jpg&crop=991,664,x1820,y500,safe&height=900&width=1600&fit=bounds",
-    "category": "technology",
-    "topic": "Microsoft Windows Update",
-    "summary": "Microsoft has issued a warning to Windows users regarding a potential issue with their new security update, which was released as part of the company's regular Patch Tuesday updates. This update includes fixes for eight critical flaws, one of which is being actively exploited by hackers. The warning comes barely 48 hours after the update went live, and it is advised that users check for any issues before updating their Windows PC. Microsoft's new update is a significant one, with changes to the Windows update process after 15 years. Security certificates on over a billion Windows PCs are set to expire in eight weeks, and users are advised to check theirs now. The update includes fixes for several critical flaws, including one that is being actively exploited, and users are warned that the update may cause issues for some users. As of April 16, 2026, Microsoft has provided further information on the update, and users are advised to exercise caution when updating their Windows PC.\n\n* Microsoft's new security update includes fixes for eight critical flaws, one of which is being actively exploited by hackers.\n* Security certificates on over a billion Windows PCs are set to expire in eight weeks, and users are advised to check theirs now.\n* The update may cause issues for some users, and Microsoft has issued a warning to Windows users regarding the potential problem.",
-    "5ws": "Who: Microsoft, Windows users\nWhat: New Windows update causes lockout issues\nWhen: April 2026\nWhere: Global, online platforms\nWhy: Security update, certificate expiration",
-    "likeIm5": "Imagine this: Microsoft's special team, the \"Tech Titans,\" led by Zak Doffman, the \"Warning Whiz,\" found a big problem. The \"Update Helpers,\" like Zak, are rushing to fix it so people like you can safely use your computers. They want to help everyone have a secure and happy time online."
-  },
-  {
-    "source_names": [
-      "Ars Technica",
-      "Space.com",
-      "IFLScience",
-      "Global News",
-      "Space.com"
-    ],
-    "authors": [
-      "Eric Berger",
-      "Mike Wall",
-      "James Felton",
-      "Sean Boynton, Jackson Proskow",
-      "Mike Wall"
-    ],
-    "ai_title": "Artemis II Mission Achieves Success",
-    "ai_description": "AI-generated Artemis mission image goes viral, but one clue shatters its authenticity.",
-    "urls": [
-      "https://arstechnica.com/space/2026/04/artemis-ii-pilot-describes-landing-in-orion-from-intense-to-pure-elation/",
-      "https://www.space.com/space-exploration/artemis/artemis-2s-heat-shield-seems-to-have-aced-its-trial-by-fire",
-      "https://www.iflscience.com/theres-just-one-small-81-billion-billion-ton-mistake-in-the-viral-ai-artemis-mission-photo-83215",
-      "https://globalnews.ca/news/11804946/artemis-ii-jeremy-hansen-canada-interview/",
-      "https://www.space.com/space-exploration/artemis/that-was-a-wonderful-toilet-artemis-2-commander-defends-missions-lunar-loo"
-    ],
-    "url_to_image": "https://cdn.arstechnica.net/wp-content/uploads/2026/04/art002e016204large-1152x648.jpg",
-    "category": "general",
-    "topic": "NASA Artemis 2 Mission",
-    "summary": "The Artemis II mission, a NASA lunar mission, has garnered significant attention, with Canadian astronaut Jeremy Hansen participating in the historic event. As of 2026, the mission has been notable for its achievements, including the performance of its heat shield. An artificial intelligence (AI)-generated photo claiming to be from the mission has gone viral on social media, with tens of thousands of shares. However, the image has been deemed inaccurate due to a noticeable error. Astronaut Jeremy Hansen has spoken about his experience on the mission, highlighting Canada's capability to undertake significant endeavors. The Artemis II mission aims to send the first woman and the first person of color to the lunar surface. The mission's success has sparked inspiration and interest in space exploration, with astronauts and engineers sharing their experiences and insights.\n\n* The Artemis II mission has successfully tested its heat shield, with the crew describing it as looking \"wonderful\" after reentry.\n* Canadian astronaut Jeremy Hansen's participation in the mission demonstrates Canada's ability to contribute to significant space exploration endeavors.\n* An AI-generated image claiming to be from the Artemis II mission has been debunked due to an error, highlighting the importance of verifying information shared on social media.",
-    "5ws": "Who: NASA, Artemis II crew\nWhat: Successfully completed lunar mission\nWhen: April 2026\nWhere: Moon, space\nWhy: Advance human space exploration",
-    "likeIm5": "Imagine astronauts like Jeremy Hansen, the Brave Space Explorer, and Eric Berger, the Space Storyteller, working together on a big mission called Artemis II. They're like a team of friends trying to reach the moon, and their goal is to show that people can do amazing things when they work together."
-  },
-  {
-    "source_names": [
-      "Libertyballers.com",
-      "NBC News"
-    ],
-    "authors": [
-      "Josh Grieb",
-      "Rohan Nadkarni, Andrew Greif, Joe Prince-Wright, NBC Sports"
-    ],
-    "ai_title": "NBA Playoff Preview Begins",
-    "ai_description": "NBA playoffs ignite tomorrow.",
-    "urls": [
-      "https://www.libertyballers.com/76ers-analysis/91111/sixers-celtics-2026-nba-playoffs-preview-paul-george-jayson-tatum-tyrese-maxey-jaylen-brown",
-      "https://www.nbcnews.com/sports/nba/sports-newsletter-nba-playoff-preview-rcna332343"
-    ],
-    "url_to_image": "https://platform.libertyballers.com/wp-content/uploads/sites/97/2025/11/gettyimages-2243872750.jpg?quality=90&strip=all&crop=0%2C10.728236739608%2C100%2C78.543526520784&w=1200",
-    "category": "sports",
-    "topic": "NBA Playoff Preview",
-    "summary": "The National Basketball Association (NBA) playoffs are set to begin, featuring several intriguing matchups, including a series between the Philadelphia 76ers and the Boston Celtics. This is not the first time these two teams have met in the playoffs, with a long history of competition between them. The 76ers are looking to defeat their rival in the postseason. The series is scheduled to start soon, with the first round of the NBA playoffs beginning tomorrow. The NBA playoffs are a tournament held at the end of the NBA regular season to determine the league champion. The tournament features 16 teams, with the winners of each series advancing to the next round. The 76ers and Celtics series is one of several matchups in the first round of the playoffs.\n\n* The Philadelphia 76ers and Boston Celtics are facing each other in the first round of the NBA playoffs.\n* The NBA playoffs feature 16 teams competing in a tournament to determine the league champion.\n* The first round of the NBA playoffs is scheduled to begin tomorrow, with several intriguing matchups, including the 76ers and Celtics series.",
-    "5ws": "Who: Philadelphia 76ers, Boston Celtics\nWhat: NBA playoff series\nWhen: April 2026\nWhere: Boston, Philadelphia\nWhy: NBA championship pursuit",
-    "likeIm5": "Imagine this: the \"Hoops Heroes\" like Jayson Tatum and Tyrese Maxey are playing a big game. The \"Boston Buddies\" and \"Philadelphia Pals\" are rival teams competing to win. They want to be the best and make their fans happy, that's the big why."
-  },
-  {
-    "source_names": [
+      "CNN",
+      "DW (English)",
+      "NBC News",
+      "The Washington Post",
+      "Financial Times",
       "Business Insider",
-      "The Information"
+      "Daily Beast"
     ],
     "authors": [
-      "Charles Rollet",
-      "Anissa Gardizy, Valida Pau"
+      "Tori B. Powell, Ivana Kottasová, Tim Lister, Max Saltman, Nic Robertson, Eugenia Yosef, Chris Lau, Laura Sharman, Ally Barnard",
+      "Midhat Fatimah",
+      "Peter Nicholas",
+      "Evan Halper",
+      "Myles McCormick, Martin Arnold, Claire Jones, Sam Fleming",
+      "William Edwards",
+      "Tamilore Oshikanlu"
     ],
-    "ai_title": "OpenAI Makes Big Changes Amid Billions Investment",
-    "ai_description": "OpenAI strikes $20B deal with Cerebras.",
+    "ai_title": "Iran War Crisis Deepens Globally",
+    "ai_description": "Iran blocks Strait of Hormuz, igniting global chaos.",
     "urls": [
-      "https://www.businessinsider.com/openai-executive-departures-shake-up-leadership-team-2026-4",
-      "https://www.theinformation.com/articles/openai-spend-20-billion-cerebras-chips-receive-equity-stake"
+      "https://www.cnn.com/2026/04/19/world/live-news/iran-war-us-trump-hormuz",
+      "https://www.dw.com/en/iran-war-tehran-says-progress-made-in-talks-with-us/live-76845923",
+      "https://www.nbcnews.com/politics/donald-trump/trump-voters-say-pope-stay-lane-fight-iran-war-rcna331604",
+      "https://www.washingtonpost.com/business/2026/04/18/iran-oil-stock-market-economy/",
+      "https://www.ft.com/content/4e163a6e-c151-47da-9e3a-35ce5cd0dd06?syn-25a6b1a6\\\\u003d1",
+      "https://www.businessinsider.com/where-to-invest-iran-war-strait-of-hormuz-stock-market-2026-4",
+      "https://www.thedailybeast.com/trumps-war-sends-airlines-scrambling-in-mass-cancellations/"
     ],
-    "url_to_image": "https://i.insider.com/69e2bd3c367066d7c296e3ce?width=1200&format=jpeg",
-    "category": "business",
-    "topic": "OpenAI Executive Departures",
-    "summary": "OpenAI, a leading artificial intelligence company, has lost three top executives, including Kevin Weil, who headed the company's scientific research efforts. Weil announced his departure on LinkedIn, stating that his team, OpenAI for Science, was affected by the changes. OpenAI has been sharpening its business focus and facing pressure from competitors like Anthropic. The company has also made significant deals to reduce its dependence on Nvidia's AI chips, including a recent agreement with Cerebras. This agreement involves OpenAI paying over $20 billion to use servers powered by Cerebras' chips, with OpenAI also receiving an equity stake in the company. The deal aims to lower OpenAI's computing expenses in the coming years. OpenAI's recent moves are reportedly part of its efforts to streamline its operations and reduce costs, with the company set to participate in an event at the NYSE on April 27 to discuss the AI boom and its funding.\n\n* OpenAI has lost three top executives, including Kevin Weil, as part of its efforts to sharpen its business focus.\n* The company has agreed to pay over $20 billion to use Cerebras' chips and receive an equity stake, aiming to reduce its dependence on Nvidia's AI chips.\n* OpenAI is set to participate in an event at the NYSE on April 27 to discuss the AI boom and its funding, with the company facing rising pressure from competitors like Anthropic.",
-    "5ws": "Who: OpenAI, Kevin Weil, Anthropic\nWhat: Loses executives, invests $20B in Cerebras chips\nWhen: April 2026\nWhere: Global tech industry\nWhy: Sharpen business focus, reduce Nvidia dependence",
-    "likeIm5": "Imagine a big playground where \"The OpenAI Team\" is playing with really smart computers. Their friends, \"The Cerebras Chip Squad\" and \"The Nvidia Crew,\" help them play. Recently, some friends like \"Kevin the Science Helper\" left the team, and now \"The OpenAI Team\" is making new deals with \"The Cerebras Chip Squad\" to get better toys for over $20 billion, so they can play smarter and faster, and help lots of people."
+    "url_to_image": "https://media.cnn.com/api/v1/images/stellar/prod/ap26108447289863a.JPG?c=16x9&q=w_800,c_fill",
+    "category": "general",
+    "topic": "Iran US Tehran Talks",
+    "summary": "As of 2026, the United States and Iran are engaged in ongoing discussions, with Iran's parliament speaker, Mohammad Bagher Ghalibaf, stating that while progress has been made, significant gaps and fundamental points remain unresolved. The situation is further complicated by the looming expiry of a ceasefire and the intermittent closure of the Strait of Hormuz. Iran has reopened the Strait of Hormuz, providing relief to investors and the global economy. The conflict between the US and Iran has resulted in increased fuel costs, prompting airline cancellations and economic strain. The International Monetary Fund (IMF) and World Bank have warned that the economic consequences of the conflict may disproportionately affect developing countries. The US stock market has responded positively to developments in the conflict, with some investors predicting a resurgence in economic activity. The ongoing situation continues to be monitored by global leaders, scholars, and financial experts, with a focus on resolving the outstanding issues between the US and Iran.\n\n* The US and Iran are engaged in ongoing discussions, with significant gaps and fundamental points remaining unresolved.\n* The intermittent closure of the Strait of Hormuz has resulted in economic strain and increased fuel costs, prompting airline cancellations.\n* The conflict may disproportionately affect developing countries, with the IMF and World Bank warning of potential economic consequences.",
+    "5ws": "Who: US, Iran, Trump, Mohammad Bagher Ghalibaf\nWhat: Iran-US war ceasefire talks\nWhen: April 19, 2026\nWhere: Tehran, Washington\nWhy: Resolve conflict, reopen Strait of Hormuz",
+    "likeIm5": "Imagine this: a big playground where \"The US Team\" and \"The Iran Team\" are trying to find a way to play nicely. \"Coach Trump\" and \"Captain Ghalibaf\" are talking, but they're not agreeing. \"The Pope's Helpers\" want everyone to be friends, while \"The Airline Squad\" is worried about fuel costs. They all want to fix the problem and help others, so they can have a happy playground again."
   },
   {
     "source_names": [
-      "Associated Press",
-      "HuffPost"
+      "DawgNation",
+      "DawgNation"
     ],
     "authors": [
-      "Devi Shastri",
+      "Connor Riley",
+      "Connor Riley"
+    ],
+    "ai_title": "Georgia Football Updates Injury Report",
+    "ai_description": "",
+    "urls": [
+      "https://www.DawgNation.com/football/around-the-dawghouse/georgia-football-injury-report-nate-frazier-amaris-williams-among-those-banged-up/L3JUYMLB6ZGNVPW35TSO7RRJOE/",
+      "https://www.DawgNation.com/football/spring-updates/georgia-football-instant-observations-2026-g-day-game/GP3EHW4LWZEIBJ4TRMLVDZLR7A/"
+    ],
+    "url_to_image": "https://www.dawgnation.com/resizer/v2/XKLXPNTMVRDWVNOTALVLB3CQ7I.jpg?auth=d73c9601d52618622c36383ab8c79a92b71d244e0c09a4fb0af05d610e76c216&width=2560&height=1346&smart=true",
+    "category": "sports",
+    "topic": "Kirby Smart Georgia Football",
+    "summary": "The University of Georgia's football team held its spring game on Saturday, with most players participating. However, outside linebacker Amaris Williams was not present, according to reports. The team's head coach, Kirby Smart, did not rule out a potential return for Williams. The Georgia football team is preparing for the upcoming season, with the spring game serving as a crucial evaluation period. The Bulldogs' defense performed well during the spring game, outshining the offense. Coach Smart provided updates on the status of several players, including Nate Frazier. The university's football program is based in Athens, Georgia, and competes in the National Collegiate Athletic Association (NCAA).\n\n* Amaris Williams, an outside linebacker, was absent from the Georgia football team's spring game.\n* Coach Kirby Smart did not rule out a potential return for Williams, indicating his status is uncertain.\n* The Georgia Bulldogs' defense outperformed the offense during the spring game, providing a key takeaway for the team's evaluation period.",
+    "5ws": "Who: Georgia football team, Kirby Smart, Amaris Williams, Nate Frazier\nWhat: Georgia football spring game, injury reports\nWhen: April 18, 2026\nWhere: Athens, Georgia\nWhy: Team evaluation, preparation for season",
+    "likeIm5": "Imagine this: \"The Bulldogs Team\" is getting ready for a big game, but some friends like \"The Speedy Amaris\" and \"The Strong Nate\" are hurt. Their coach, \"The Wise Kirby,\" is trying to help them feel better so they can play again and win together."
+  },
+  {
+    "source_names": [
+      "BBC News",
+      "HITC - Football, Gaming, Movies, TV, Music"
+    ],
+    "authors": [
+      "Sean Kearns",
       "Unknown Author"
     ],
-    "ai_title": "RFK Jr Challenges Health Findings",
-    "ai_description": "Health Secretary Robert F. Kennedy Jr. shatters faith in a key study, calling it \"garbage\".",
+    "ai_title": "Fitzpatrick Leads Heritage Amid Scheffler Surge",
+    "ai_description": "Matt Fitzpatrick seizes a three-shot lead at the RBC Heritage.",
     "urls": [
-      "https://apnews.com/article/measles-vaccine-outbreak-mmr-rfk-canada-mexico-bed6d69b668b9d8548ad65dab1a4fd9c",
-      "https://www.huffpost.com/entry/rfk-jr-tylenol-autism-study-garbage_n_69e26a60e4b0555d213b4442"
+      "https://www.bbc.com/sport/golf/articles/cy0147plzk8o",
+      "https://www.hitc.com/scottie-scheffler-speaks-out-about-matt-fitzpatrick-after-firing-third-round-64-at-the-rbc-heritage/"
     ],
-    "url_to_image": "https://dims.apnews.com/dims4/default/9ef6240/2147483647/strip/true/crop/4769x3178+0+1/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F2a%2Fa5%2F4cbc482b05b2a31a8ec3506ef231%2F0a6e03fd0c7b4b8a93f87d8a98caa044",
-    "category": "health",
-    "topic": "RFK Jr Measles Comments",
-    "summary": "In 2026, Robert F. Kennedy Jr., the Health Secretary, stated that the United States is limiting the spread of measles more effectively than any other country globally. According to his claims, this achievement is a direct result of his leadership. Measles is a highly contagious viral disease that affects people worldwide, and its spread has been a concern for health authorities globally. Kennedy Jr. also commented on a Danish study that found no link between autism and the use of Tylenol during pregnancy, dismissing the research as \"garbage\" and \"fraudulent.\" The study in question investigated the potential correlation between Tylenol use during pregnancy and the development of autism in children. Robert F. Kennedy Jr.'s comments were made during a congressional hearing, where he addressed various health-related topics. The Health Secretary's statements have been reported by multiple news outlets, including AP News and HuffPost.\n\n* The Health Secretary claims the US is limiting measles outbreaks better than the rest of the world under his leadership.\n* Robert F. Kennedy Jr. rejected a Danish study's findings on the lack of link between autism and Tylenol use during pregnancy.\n* The Health Secretary has publicly warned pregnant women about the potential risks of taking Tylenol, despite the study's findings suggesting no correlation with autism.",
-    "5ws": "Who: Robert F. Kennedy Jr., US Health Secretary\nWhat: Claims US leads in limiting measles outbreaks\nWhen: April 17, 2026\nWhere: US Congressional hearing\nWhy: Defend US health policies and initiatives",
-    "likeIm5": "Imagine this: \"The Health Heroes,\" like Robert F. Kennedy Jr., are working to stop measles from spreading. They're like a team trying to protect the playground, and their goal is to keep everyone safe and healthy."
-  },
-  {
-    "source_names": [
-      "The Air Current",
-      "TheStreet"
-    ],
-    "authors": [
-      "Jon Ostrower, Will Guisbond, Julie Johnsson",
-      "Veronika Bondarenko, Celine Provini"
-    ],
-    "ai_title": "Airline Industry Seeks Government Aid",
-    "ai_description": "Airline shutdowns ignite amid soaring fuel costs.",
-    "urls": [
-      "https://theaircurrent.com/airlines/spirit-duffy-bailout-dot-fuel/",
-      "https://www.thestreet.com/travel/another-regional-airline-shut-down-overnight-all-flights-off"
-    ],
-    "url_to_image": "https://theaircurrent.com/wp-content/uploads/2023/09/spirit-airlines-a320neo-refuel-airport-2023.jpg",
-    "category": "business",
-    "topic": "Spirit Airlines Bailout",
-    "summary": "Spirit Airlines has requested hundreds of millions of dollars in emergency funding from the US government to offset rising fuel costs. The request is a result of skyrocketing jet fuel prices, which have reached unprecedented highs due to global events. Low-cost carriers, including Spirit Airlines, are expected to meet with the Transportation Secretary to discuss the issue. The high fuel costs pose a significant risk to smaller regional and charter airlines, which may face bankruptcies. The airline industry is experiencing a challenging time, with some airlines already shutting down due to financial difficulties. Regional airlines are particularly vulnerable to the increasing fuel costs, which may lead to a domino effect of shutdowns. As of 2026, the US government has not announced any decisions regarding Spirit Airlines' request for emergency funding.\n\n* Spirit Airlines has requested hundreds of millions of dollars in emergency funding to offset rising fuel costs.\n* The high fuel costs pose a significant risk to smaller regional and charter airlines, which may face bankruptcies.\n* Low-cost carriers are expected to meet with the Transportation Secretary to discuss the issue and potential solutions.",
-    "5ws": "Who: Spirit Airlines, U.S. government \nWhat: Seeks aid amid oil spike \nWhen: Early next week, 2026 \nWhere: U.S., Washington D.C. \nWhy: Offset skyrocketing fuel costs",
-    "likeIm5": "Imagine this: Spirit Airlines, like \"The Flying Friends\" team, needs help from \"The Government Helpers,\" led by Secretary Duffy, because oil prices are rising like a big storm. Jon, Will, and Julie, \"The News Explorers,\" are watching closely. The goal is to save \"The Flying Friends\" and other airlines from shutting down, so everyone can keep flying safely."
-  },
-  {
-    "source_names": [
-      "Steelers Depot",
-      "NFL News"
-    ],
-    "authors": [
-      "Josh Carney",
-      "Bucky Brooks"
-    ],
-    "ai_title": "Nfl Draft Preview 2026",
-    "ai_description": "NFL Draft intrigue ignites with top picks undecided.",
-    "urls": [
-      "https://steelersdepot.com/2026/04/carney-steelers-2026-mock-draft-final-version/",
-      "https://www.nfl.com/news/2026-nfl-draft-burning-questions-no-2-overall-pick-first-receiver-selected-ty-simpson-s-draft-range"
-    ],
-    "url_to_image": "https://steelersdepot.com/wp-content/uploads/2026/03/Germie-Bernard-1000x600.jpg",
+    "url_to_image": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/3e16/live/35485020-3b75-11f1-b6a4-a730d6a718fc.jpg",
     "category": "sports",
-    "topic": "Steelers 2026 Mock Draft",
-    "summary": "The 2026 NFL Draft is scheduled to take place in six days, marking the culmination of the pre-draft process. The pre-draft process involved evaluating prospects through tape, background checks, and medical assessments. As of 2026, the NFL Draft is a highly anticipated event where teams select college football players to join their rosters. The draft order is determined by a combination of factors, including the previous season's standings and a random drawing. Safety positions have not been heavily represented in the top 10 picks since 2017, when the Jets selected Jamal Adams at No. 6 overall. The 2026 NFL Draft will feature a new class of prospects, including quarterback Ty Simpson, whose draft range is currently being discussed. The upcoming draft will answer questions about top picks, including who will be selected at No. 2 overall and which receiver prospect will be chosen first.\n\n* The 2026 NFL Draft will take place in six days, with all pre-draft assessments complete.\n* Safety positions have historically been underrepresented in the top 10 picks, with the last safety selected in the top 10 being Jamal Adams in 2017.\n* The draft range of quarterback Ty Simpson is currently being discussed, with his selection likely to be a key storyline in the 2026 NFL Draft.",
-    "5ws": "Who: Steelers, NFL teams, Josh Carney, Bucky Brooks\nWhat: 2026 NFL Draft preparations\nWhen: April 2026, 6 days before draft\nWhere: Pittsburgh, Pennsylvania, NFL.com\nWhy: Annual college athlete recruitment",
-    "likeIm5": "Imagine this: The Steelers team, with friends like Josh Carney, and The Jets team are playing a big game. They're trying to collect Golden Tickets to pick the best friends, like Ty Simpson, to join their team, with help from Bucky Brooks."
+    "topic": "Matt Fitzpatrick RBC Heritage",
+    "summary": "Matt Fitzpatrick, an English golfer, currently holds a three-shot lead over Scottie Scheffler at the RBC Heritage in South Carolina. The RBC Heritage is a golf tournament, and Matt Fitzpatrick achieved this lead after hitting an impressive third-round 68. Scottie Scheffler, an American golfer, fired a superb round of 64 to put himself back into contention. As of the current information, Matt Fitzpatrick is leading the tournament. The RBC Heritage is taking place in South Carolina, and the final round will determine the winner. Matt Fitzpatrick's lead is significant, but Scottie Scheffler's recent performance has put him in a position to potentially catch up. The outcome of the tournament will be decided in the final round, with Matt Fitzpatrick and Scottie Scheffler being the top contenders.\n\n* Matt Fitzpatrick leads the RBC Heritage by three strokes over Scottie Scheffler.\n* Scottie Scheffler achieved a score of 64 in the third round to put himself back into contention.\n* The RBC Heritage is a golf tournament currently taking place in South Carolina, with the final round pending.",
+    "5ws": "Who: Matt Fitzpatrick, Scottie Scheffler\nWhat: Leads RBC Heritage golf tournament\nWhen: April 18-19, 2026\nWhere: South Carolina, RBC Heritage venue\nWhy: Competing for golf championship title",
+    "likeIm5": "Imagine this: Matt \"The Leader\" Fitzpatrick and Scottie \"The Challenger\" Scheffler are playing a big golf game in South Carolina. It's like a high-stakes playground contest where they take turns hitting balls into holes. Matt is ahead by three points, but Scottie is trying to catch up. The goal is to win the RBC Heritage trophy, and it matters because it shows who's the best golfer."
   },
   {
     "source_names": [
-      "Fox News",
-      "Politico",
-      "Associated Press",
-      "POLITICO.eu",
-      "The Bulwark"
+      "Deadline",
+      "Hollywood Reporter",
+      "Slate Magazine"
     ],
     "authors": [
-      "Unknown Author",
-      "Jordain Carney",
-      "Mae Anderson, Cathy Bussewitz, Wyatte Grantham-phillips",
-      "Clea Caulcutt",
-      "William Kristol, Andrew Egger, Jim Swift"
+      "Natalie Oganesyan",
+      "Abbey White",
+      "Logan Sachon"
     ],
-    "ai_title": "Tensions Rise Over Strait Of Hormuz Blockade",
-    "ai_description": "Tensions ignite as 30 leaders scramble to secure the Strait of Hormuz.",
+    "ai_title": "Celebrity News And Personal Stories",
+    "ai_description": "Nadia Farès dies after pool accident, shocking Hollywood.",
     "urls": [
-      "https://www.foxnews.com/live-news/trump-iran-us-war-israel-lebanon-ceasefire-strait-hormuz-blockade-april-17",
-      "https://www.politico.com/news/2026/04/17/republicans-trump-war-energy-prices-00879104",
-      "https://apnews.com/article/jet-fuel-shortage-iran-war-iea-travel-b77b3d7113e88d1862f90db433cb95af",
-      "https://www.politico.eu/article/europe-to-accelerate-effort-secure-hormuz-despite-donald-trump-order-to-stay-away/",
-      "https://www.thebulwark.com/p/the-father-the-don-and-the-fed-chairs-post-trump-powell-leo-pope-federal-reserve-tillis-iran-war"
+      "http://deadline.com/2026/04/nadia-fares-dead-the-crimson-rivers-actress-1236865053/",
+      "http://www.hollywoodreporter.com/news/general-news/nicole-kidman-death-doula-mothers-passing-1236568584/",
+      "https://slate.com/advice/2026/04/parenting-advice-wife-wont-use-eggs.html"
     ],
-    "url_to_image": "https://assets.foxnews.com/liveblog/fn/prod/images/2026/04/52529c4de7d1146c3f36ba17bab68c20.jpg",
-    "category": "general",
-    "topic": "Strait of Hormuz Blockade",
-    "summary": "Israeli Prime Minister Benjamin Netanyahu stated that his country aims to provide a political and military solution with Lebanon. The statement comes as the Israel Defense Forces (IDF) have been engaged in conflict with Iran-aligned groups. In a related development, a potential jet fuel shortage in Europe and Asia could exacerbate the impact of the Iran conflict on global travel. The Strait of Hormuz, a critical oil shipment route, remains a point of contention, with Iranian Foreign Minister Seyed Abbas Araghchi announcing its reopening through a \"coordinated route.\" However, US President Donald Trump has maintained a blockade on Iranian ports. Senate Majority Leader John Thune expressed interest in exploring next steps regarding the Iran situation. The international community, including over 30 leaders, has discussed an international mission to secure the Strait of Hormuz via video conference.\n\n* The US blockade on Iranian ports remains in effect, despite the announcement of the Strait of Hormuz's reopening.\n* A potential jet fuel shortage in Europe and Asia could lead to higher airfares and flight cancellations if the agreement to reopen the Strait of Hormuz collapses.\n* The international community is considering an international mission to secure the Strait of Hormuz, with over 30 leaders participating in a video conference to discuss the matter.",
-    "5ws": "Who: Trump, Iranian Foreign Minister Seyed Abbas Araghchi, US, Iran\nWhat: US blockade of Iranian ports, Strait of Hormuz dispute\nWhen: April 17-18, 2026\nWhere: Strait of Hormuz, Middle East\nWhy: Enforcing economic pressure on Iran",
-    "likeIm5": "Imagine a big playground where \"The Trump Team,\" \"The Iranian Squad,\" and \"The European Friends\" are playing together. They're trying to share a important path, the Strait of Hormuz, but there's a big blockade. \"The Trump Team\" wants to keep the blockade, while \"The Iranian Squad\" wants it removed. \"The European Friends,\" led by leaders like Melon, are trying to help find a solution to make everyone happy and keep the playground safe."
-  },
-  {
-    "source_names": [
-      "Umn.edu",
-      "Newsday"
-    ],
-    "authors": [
-      "Unknown Author",
-      "David Olson"
-    ],
-    "ai_title": "Vaccine Refusal Sparks Health Concerns",
-    "ai_description": "Allegations shatter trust: ex-nurse falsified hundreds of kids' immunization records.",
-    "urls": [
-      "https://www.cidrap.umn.edu/misc-emerging-topics/report-details-tetanus-4-unvaccinated-us-kids-including-refusal-post-exposure",
-      "https://www.newsday.com/news/health/vaccine-skepticism-cancer-filjw5u8"
-    ],
-    "url_to_image": "https://www.cidrap.umn.edu/sites/default/files/styles/layout_large/public/article/Tetanus_0.jpg?h=997452a2&itok=EtUqveGI",
-    "category": "general",
-    "topic": "Tetanus in Unvaccinated US Kids",
-    "summary": "According to recent reports, four US children were diagnosed with tetanus in 2024, and none of them had completed the recommended primary tetanus toxoid-containing vaccine (TTCV) series. The Centers for Disease Control and Prevention (CDC) recommends a primary series of TTCV for all children. A primary series typically consists of a series of vaccinations, usually given at 2, 4, 6, and 15-18 months of age, with a booster dose given at 4-6 years of age. The CDC also recommends post-exposure prophylaxis, including tetanus immunoglobulin (TIG) and a TTCV booster, for individuals who have not completed the primary series and have a tetanus-prone wound. In a separate incident, a former nurse in Amityville was alleged to have falsified immunization records of hundreds of children, highlighting increased skepticism towards vaccination. Ella Wanderer, a 5-year-old girl from Babylon, was diagnosed with leukemia at the age of 2 and had to live in isolation due to her weakened immune system. The reports and allegations have raised concerns about vaccine skepticism and its potential impact on public health, particularly for children with compromised immune systems.\n\n* The four US children diagnosed with tetanus in 2024 had not completed the recommended primary tetanus toxoid-containing vaccine (TTCV) series.\n* Allegations of falsified immunization records by a former Amityville nurse have highlighted increased skepticism towards vaccination.\n* Children with compromised immune systems, such as 5-year-old Ella Wanderer who was diagnosed with leukemia, are particularly vulnerable to the risks of vaccine skepticism and incomplete vaccination.",
-    "5ws": "Who: Unvaccinated US kids, parents, scientists\nWhat: Contracted tetanus due to vaccine refusal\nWhen: 2024, reported in 2026\nWhere: US, specifically Long Island\nWhy: Vaccine skepticism, immunization gaps",
-    "likeIm5": "Imagine this: The Vaccine Helpers, like David the Reporter, and The University Team, are working together to keep kids safe from tetanus. They're like a school team trying to win a game by making sure all players are protected. The Goalkeepers, including parents like Ella's, want to help their kids stay healthy and happy."
-  },
-  {
-    "source_names": [
-      "TVLine",
-      "Deadline"
-    ],
-    "authors": [
-      "Ryan Schwartz",
-      "Rosy Cordero"
-    ],
-    "ai_title": "Noah Wyle Previews Season 3",
-    "ai_description": "Noah Wyle unveils Dr. Robby's rock bottom in Season 3.",
-    "urls": [
-      "https://www.tvline.com/2149441/noah-wyle-the-pitt-season-2-finale-interview-does-dr-robby-leave/",
-      "http://deadline.com/2026/04/the-pitt-noah-wyle-teases-season-3-interview-1236864356/"
-    ],
-    "url_to_image": "https://www.tvline.com/img/gallery/noah-wyle-the-pitt-season-2-finale-interview-does-dr-robby-leave/l-intro-1776437777.jpg",
+    "url_to_image": "https://deadline.com/wp-content/uploads/2026/04/nadia.jpg?w=1000",
     "category": "entertainment",
-    "topic": "The Pitt Season 3",
-    "summary": "The TV series \"The Pitt\" on HBO Max has concluded its second season, with actor Noah Wyle's character, Dr. Michael \"Robby\" Robinavitch, facing a pivotal moment. In the season finale, it is revealed that Dr. Robby was abandoned by his mother, which provides context for his actions throughout the season. Noah Wyle discussed the finale and his character's development in an interview with TVLine. Wyle mentioned that the upcoming third season will explore the idea that \"doctors benefit from being patients,\" implying a deeper dive into Dr. Robby's personal struggles. The second season of \"The Pitt\" ended with Dr. Robby at a critical point, having uncovered a traumatic experience from his past. Noah Wyle's portrayal of Dr. Robby has been a central aspect of the show, and his character's journey is expected to continue in the next season. The third season of \"The Pitt\" is anticipated to premiere, although a release date has not been officially announced.\n\n* The third season of \"The Pitt\" will explore Dr. Robby's personal struggles and the concept that doctors can benefit from being patients.\n* Noah Wyle's character, Dr. Robby, was revealed to have been abandoned by his mother in the season 2 finale, providing context for his actions.\n* The show's upcoming season is expected to delve into Dr. Robby's \"rock bottom,\" as teased by Noah Wyle in an interview.",
-    "5ws": "Who: Noah Wyle, Dr. Robby \nWhat: Discusses The Pitt Season 3 \nWhen: April 17, 2026 \nWhere: TVLine, Deadline \nWhy: Explores character trauma",
-    "likeIm5": "Imagine this: Noah Wyle, the \"TV Hero,\" and his team, the \"Pitt Crew,\" are working on a new adventure, \"The Pitt Season 3.\" They're helping their friend, Dr. Robby, who's feeling sad because of something that happened to him. The \"Deadline Detectives\" and \"TVLine Team\" are trying to figure out how to make Dr. Robby feel better, and they want to show everyone that even doctors need help sometimes."
+    "topic": "Nadia Farès Death",
+    "summary": "Moroccan French actress Nadia Farès died at the age of 57 after being in a coma for a week following an incident in a swimming pool. Her daughters confirmed her death, which occurred yesterday. Nadia Farès was known for her role in 'The Crimson Rivers'. In other news, Nicole Kidman has been training to become a death doula, which involves supporting people and their families in their final moments together. Nicole Kidman finds this act \"beautiful\" and important to her. Meanwhile, a man has written to a parenting advice column, Care and Feeding, seeking advice on having a baby with his wife, Nadia, who has some rules for the process that he finds upsetting. These are separate and unrelated incidents, each with its own unique circumstances and outcomes.\n\n* Nadia Farès, a Moroccan French actress, died at 57 after a week in a coma.\n* Nicole Kidman is training to become a death doula, supporting people in their final moments.\n* A man has sought parenting advice regarding his wife's rules for having a baby, which he finds upsetting.",
+    "5ws": "Who: Nadia Farès\nWhat: Died at 57\nWhen: April 18, 2026\nWhere: Unspecified location\nWhy: Swimming pool accident",
+    "likeIm5": "Imagine this: The News Team, like Deadline and Hollywood Reporter, are talking about two important stories. The Actress Squad, including Nadia Farès and Nicole Kidman, are in the news, one sadly passing away and the other helping people say goodbye to their loved ones."
   },
   {
     "source_names": [
-      "The Washington Post",
-      "Politico"
+      "Futurism",
+      "SpaceNews"
     ],
     "authors": [
-      "Emily Davies",
-      "Sophia Cai"
+      "Sharon Adarlo",
+      "Jeff Foust"
     ],
-    "ai_title": "Trump Faces Mixed Reception Nationally",
-    "ai_description": "Trump unveils biblical reading amid party divisions.",
+    "ai_title": "NASA Launches Mars Rover Mission",
+    "ai_description": "NASA's Curiosity Rover uncovers Martian rocks, hinting at water.",
     "urls": [
-      "https://www.washingtonpost.com/politics/2026/04/17/trump-turning-point-arizona/",
-      "https://www.politico.com/news/2026/04/17/trump-scripture-angering-christians-00879747"
+      "http://futurism.com/space/nasa-mars-rover-crater-rocks",
+      "http://spacenews.com/nasa-selects-falcon-heavy-to-launch-esa-mars-rover-mission-despite-budget-threat/"
     ],
-    "url_to_image": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://cloudfront-us-east-1.images.arcpublishing.com/wapo/HPVLW5ZMBQWMLGKE6YQWHFAKEE.JPG&w=1440",
-    "category": "general",
-    "topic": "Trump Arizona Rally",
-    "summary": "President Donald Trump visited a megachurch in Phoenix to rally support among young voters. The event was intended to drum up support for the midterm elections, but the crowd that greeted him was older than expected. Despite some empty seats, Trump expressed confidence in his party's ability to win the elections. Trump had previously angered many Christians with a social media post that appeared to depict him as Jesus, which led to public quarrels. In an effort to connect with Christian voters, Trump prepared an Old Testament reading for an event at the Museum of the Bible, which was scheduled to air on a Tuesday. The reading, which lasted roughly two-and-a-half minutes, was seen as an attempt to appeal to Christian voters after the controversy. The events surrounding Trump's visit and reading were closely watched due to their potential impact on the midterm elections and his relationship with Christian voters.\n\n* Trump's visit to the megachurch in Phoenix was intended to rally support among young voters, but the crowd was primarily composed of older individuals.\n* The president's social media post depicting him as Jesus angered many Christians, leading to public quarrels and a perceived need to reconnect with Christian voters.\n* Trump's Old Testament reading at the Museum of the Bible was a scheduled event aimed at appealing to Christian voters and mitigating the controversy surrounding his previous social media post.",
-    "5ws": "Who: Donald Trump\nWhat: Rallies in Arizona\nWhen: April 17, 2026\nWhere: Phoenix, Arizona\nWhy: Mobilize voters for midterms",
-    "likeIm5": "Imagine this: \"The President's Team\", led by Donald Trump, is trying to win a big game. They're visiting Arizona to get support from young voters, like \"The Cool Kids Club\". But, some seats were empty, and \"The Washington Post Team\", with Emily Davies, and \"The Politico Team\", with Sophia Cai, are watching closely to see what happens. The goal is to win the midterm elections, like getting a Golden Ticket to make big decisions."
+    "url_to_image": "https://futurism.com/wp-content/uploads/2026/04/nasa-mars-rover-crater-rocks.jpg?quality=85&w=1200",
+    "category": "science",
+    "topic": "NASA Mars Rover",
+    "summary": "NASA's Curiosity Rover has discovered a large cluster of polygonal rocks on Mars, which may indicate evidence of water on the planet. The rover, launched by NASA, is a robotic spacecraft designed to explore Mars and gather data about the planet's geology and climate. On April 16, 2026, NASA announced that it has selected SpaceX's Falcon Heavy to launch a European Mars rover, a mission that will support the agency's ongoing exploration of the Red Planet. The European Mars rover is a joint project between NASA and the European Space Agency (ESA), aimed at studying the Martian surface and searching for signs of life. NASA's decision to launch the rover on SpaceX's Falcon Heavy comes despite proposals to cancel support for the mission due to budget constraints. The Curiosity Rover's discovery of polygonal rocks is significant, as it may provide insights into the planet's geological history and the potential for water to have existed on Mars. The Falcon Heavy launch is a crucial step in the European Mars rover mission, which is scheduled to take place in the coming years, pending budget approval.\n\n* NASA has selected SpaceX's Falcon Heavy to launch a European Mars rover, a mission that will support the agency's ongoing exploration of Mars.\n* The European Mars rover is a joint project between NASA and the European Space Agency (ESA), aimed at studying the Martian surface and searching for signs of life.\n* The Curiosity Rover's discovery of polygonal rocks on Mars may indicate evidence of water on the planet, providing valuable insights into the planet's geological history.",
+    "5ws": "Who: NASA, SpaceX, European Space Agency\nWhat: Mars rover discoveries and launch plans\nWhen: April 2026\nWhere: Mars, NASA facilities\nWhy: Space exploration and research",
+    "likeIm5": "Imagine this: The Space Explorers, like Sharon and Jeff, are on a big adventure with their friend, NASA's Curiosity Rover. They're like a team working together to solve a mystery on Mars, looking for signs of water, and they found some cool rocks that might help."
+  },
+  {
+    "source_names": [
+      "ESPN",
+      "Cageside Seats",
+      "Cageside Seats",
+      "Nodq.com",
+      "Yahoo Entertainment",
+      "Nodq.com",
+      "Nodq.com",
+      "Sports Illustrated",
+      "Ringside News"
+    ],
+    "authors": [
+      "ESPN staff",
+      "Sean Rueter",
+      "Geno Mrosko",
+      "Aaron Rift",
+      "Drake Riggs",
+      "Aaron Rift",
+      "Aaron Rift",
+      "Blake Lovell",
+      "Steve Carrier"
+    ],
+    "ai_title": "WrestleMania 42 Results Unfold",
+    "ai_description": "Judgment Day leader shatters WWE gold drought in Las Vegas.",
+    "urls": [
+      "https://www.espn.com/wwe/story/_/id/48494667/wwe-wrestlemania-42-night-1-live-match-results-analysis-cody-rhodes-vs-randy-orton",
+      "https://www.cagesideseats.com/wwe/435162/liv-morgan-does-full-dance-number-at-wrestlemania-42-then-wins-title",
+      "https://www.cagesideseats.com/wwe/435109/bron-breakker-return-costs-seth-rollins-match-wrestlemania-42-gunther",
+      "https://nodq.com/news/results-of-aj-lee-vs-becky-lynch-at-wwe-wrestlemania-42-saturday/",
+      "https://sports.yahoo.com/wrestling/breaking-news/article/wrestlemania-42-results-paige-returns-after-nicki-bella-injury-wins-womens-tag-team-titles-231956599.html",
+      "https://nodq.com/news/results-of-drew-mcintyre-vs-jacob-fatu-at-wwe-wrestlemania-42-saturday/",
+      "https://nodq.com/news/results-of-the-usos-la-knight-vs-the-vision-ishowspeed-at-wwe-wrestlemania-42-saturday/",
+      "https://www.si.com/fannation/wrestling/wwe/wwe-wrestlemania-42-match-order-reportedly-revealed-for-saturday",
+      "https://www.ringsidenews.com/wwe-wrestlemania-42-spoiler-lineup-april-18-2026-full-match-card-backstage-notes-revealed/"
+    ],
+    "url_to_image": "https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0415%2Fr1643997_1296x729_16%2D9.jpg",
+    "category": "entertainment",
+    "topic": "WrestleMania 42 Results",
+    "summary": "WrestleMania 42 took place on April 18, 2026, at Allegiant Stadium in Las Vegas. The event featured various matches, including a six-man tag team match and a women's Intercontinental title match between AJ Lee and Becky Lynch. Paige made her WWE return after an eight-year absence, teaming up with Brie Bella to win the women's tag team titles. Seth Rollins and GUNTHER argued over the world heavyweight title, with GUNTHER ultimately winning the match. The event also featured a performance by the rock band The Wonder Years and an introduction by John Cena. Logan Paul, Austin Theory, and IShowSpeed faced off against The Usos and LA Knight in another match. Overall, WrestleMania 42 featured a range of exciting matches and surprises for fans.\n\n* The match order for WWE WrestleMania 42 on Saturday was reportedly revealed, featuring a lineup of thrilling matches and intense rivalries.\n* Paige returned to WWE after an eight-year absence, teaming up with Brie Bella to win the women's tag team titles.\n* WrestleMania 42 took place on April 18, 2026, at Allegiant Stadium in Las Vegas, featuring matches such as AJ Lee vs. Becky Lynch and Drew McIntyre vs. Jacob Fatu.",
+    "5ws": "Who: WWE wrestlers (Cody Rhodes, Randy Orton)\nWhat: WrestleMania 42 Night One\nWhen: April 18, 2026\nWhere: Allegiant Stadium, Las Vegas\nWhy: Annual wrestling championship event",
+    "likeIm5": "Imagine this: a big playground where wrestlers like \"The Champion Cody\" and \"The Tough Randy\" compete. It's like a school tournament where \"The Dancing Queen Liv\" and \"The Brave Becky\" show off their skills. The goal is to win the golden title, helping them become the best and making their fans happy."
   }
 ]
