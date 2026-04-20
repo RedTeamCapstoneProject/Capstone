@@ -98,7 +98,7 @@ type SummariesResponse = { data?: SummaryItem[] | SummaryItem };
       const isValidId = Number.isFinite(parsedId) && parsedId > 0;
       const endpoint = isValidId ? `/api/summaries?id=${parsedId}` : "/api/summaries?limit=1"; 
       
-      const userData = JSON.parse(localStorage.getItem("loggedInUser") || "null");
+      const userData = JSON.parse(localStorage.getItem("loggedInUser") || "null"); //get user id from local storage
       const userId = userData ? userData.id : null; 
 
 
@@ -108,7 +108,7 @@ type SummariesResponse = { data?: SummaryItem[] | SummaryItem };
       try {
         //  UI
         botBubble.textContent = "Thinking...";
-        console.log(userId)
+
         //  get the context data
         const response = await fetch(endpoint);
         if (!response.ok) throw new Error("API response was not ok");

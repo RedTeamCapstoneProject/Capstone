@@ -28,8 +28,6 @@ const pool = new Pool({
 
 
 
-
-
 const hashIP = (ip: string): string => {
   return createHash('sha256')
     .update(ip + process.env.HASH_SALT) 
@@ -37,112 +35,11 @@ const hashIP = (ip: string): string => {
 };
 
 
-
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 const genAI = new GoogleGenerativeAI(process.env.geminiAPI || "");
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-/*
-export default async function handler(req: any, res: any) {
-    if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
-        
-    const { item, message, UserId } = req.body; // Grab userId from body
-        
-        const rawIP = (req.headers['x-forwarded-for'] as string)?.split(',')[0] || req.socket.remoteAddress;
-        const userIP = hashIP(rawIP || "unknown");        //hash ips for security
 
-        
-        const client = await pool.connect();
-    try {
-        if(UserId){ //if user is logged in 
 
-            //get the current amount of calls for the user from the db
-            const userCheck = await client.query( 
-                'SELECT chatbot_calls FROM users WHERE id = $1',
-                [UserId]
-            );
-            const currentCalls = userCheck.rows.length > 0 ? userCheck.rows[0].chatbot_calls : 0;
-            
-            //if they are out of calls
-            if (currentCalls <= 0) {
-                return res.status(429).json({ 
-                    error: "Limit reached", 
-                    message: "I'm sorry, you have reached your chatbot call limit..." 
-                });
-            }
-
-            /*
-            // Update the amount of calls by subtracting 1 
-            await client.query(
-                'UPDATE users SET chatbot_calls = chatbot_calls - 1 WHERE id = $1',
-                [UserId]
-            );
-            
-
-        }else{ //if user isnt logged in
-
-            //check how many calls they have at that IP
-            const checkResult = await client.query(
-                'SELECT calls FROM ai_calls WHERE ip = $1',
-                [userIP]
-            );
-            const currentCalls = checkResult.rows.length > 0 ? checkResult.rows[0].calls : 5;
-
-            //if out of calls
-            if (currentCalls <= 0) {
-                return res.status(429).json({ 
-                    error: "Limit reached", 
-                    message: "You have 0 messages remaining. Please log in to continue!" 
-                });
-                
-            }
-
-            /*
-            //update by subtracting one
-            await client.query(
-                `INSERT INTO ai_calls (ip, calls) 
-                VALUES ($1, 4) 
-                ON CONFLICT (ip) 
-                DO UPDATE SET calls = ai_calls.calls - 1`,
-                [userIP]
-            );
-            
-        }
-
-    } catch (dbError: any) {
-        console.error("Database error:", dbError.message);
-    } finally {
-        client.release();
-    }
-
-    try {
-        const { item, message } = req.body;
-        
-        if (!process.env.GROQ_API_KEY || !process.env.geminiAPI) {
-            throw new Error("Missing API keys in Vercel Environment Variables");
-        }
-
-        const aiResponse = await chatBot(item, message);
-        res.status(200).send(aiResponse);
-        if(UserId){
-            await client.query(
-                'UPDATE users SET chatbot_calls = chatbot_calls - 1 WHERE id = $1',
-                [UserId]
-            );
-        }else{
-            await client.query(
-                `INSERT INTO ai_calls (ip, calls) 
-                VALUES ($1, 4) 
-                ON CONFLICT (ip) 
-                DO UPDATE SET calls = ai_calls.calls - 1`,
-                [userIP]
-            );
-        }
-    } catch (error: any) {
-        console.error("Handler Error:", error.message);
-        res.status(500).send("Error: " + error.message);
-    }
-}
-*/
 export default async function handler(req: any, res: any) {
     if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
         
@@ -162,9 +59,8 @@ export default async function handler(req: any, res: any) {
             );
             currentCalls = userCheck.rows.length > 0 ? userCheck.rows[0].chatbot_calls : 0;
             
-            //if nocalls left
+            //if no calls left
             if (currentCalls <= 0) {
-                //client.release(); 
                 return res.status(429).json({ 
                     error: "Limit reached", 
                     message: "I'm sorry, you have reached your chatbot call limit..." 
@@ -181,7 +77,6 @@ export default async function handler(req: any, res: any) {
 
             //if no calls left
             if (currentCalls <= 0) {
-                //client.release(); 
                 return res.status(429).json({ 
                     error: "Limit reached", 
                     message: "You have 0 messages remaining. Please log in to continue!" 

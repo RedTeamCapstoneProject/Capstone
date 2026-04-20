@@ -7,47 +7,7 @@ import * as fs from 'fs';
 import chokidar from 'chokidar';
 import cron from 'node-cron';
 import Fs from 'node:fs/promises';
-//import {fetchNewsArticlesAndSummarize} from "/backend/src/newsArticlesToSummary.ts";
 
-//MAKE DYNAMIC KEY SWITCHING FOR AI CALLS GEMINI OR GROQ
-
-
-/*
-//wait for 12:10 to read 0_100
-cron.schedule('10 0 * * *', async () => {
-    console.log('It is 12:10! Starting the fetch and summary...');
-    try {
-        await run("12:10");
-        console.log(' 12:10 task complete.');
-    } catch (err) {
-        console.log('12:10 task failed:', err);
-    }
-});
-
-//wait for 3:00am to read 100_200
-cron.schedule('0 3 * * *', async () => {
-    console.log('It is 3:00! Starting the fetch and summary...');
-    try {
-        await run("3:00");
-        console.log(' 3:00 task complete.');
-    } catch (err) {
-        console.log('3:00 task failed:', err);
-    }
-});
-
-//wait for 5am to read 200_300 and delete the files to reset
-cron.schedule('0 5 * * *', async () => {
-    console.log('It is 5:00! Starting the fetch and summary...');
-    try {
-        await run("5:00");
-        console.log(' 5:00 task complete.');
-    } catch (err) {
-        console.log('5:00 task failed:', err);
-    }
-});
-
-console.log('Scheduler is running. Standing by for 12:10, 3:00, and 5:00');
-*/
 
 
 //runs the powershell script to get data in DB
@@ -58,7 +18,7 @@ export const runDataImport = () => {
 
     console.log('Starting database import...');
 
-    // We add { env: process.env } as the second argument
+    
     exec(`powershell -ExecutionPolicy Bypass -File "${scriptPath}"`, { env: process.env }, (error, stdout, stderr) => {
         if (error) {
             console.error(`Execution Error: ${error.message}`);
@@ -67,7 +27,7 @@ export const runDataImport = () => {
 
         if (stderr) {
             console.error(`PowerShell Error: ${stderr}`);
-            // Note: Some PS warnings show up here; check if it actually failed
+            
             return;
         }
 
@@ -75,6 +35,7 @@ export const runDataImport = () => {
     });
 };
 
+//run script to get data from news article db and give it to summary
 export const runSummarization = () => {
     const currentFile = fileURLToPath(import.meta.url);
     const currentDir = path.dirname(currentFile);
@@ -236,12 +197,8 @@ async function determineTopics(categoryArticleArray: newsArticle[]){
 
 
 
-//FIX THE RUN FUNCTION TO CHECK FOR TIMES
 
 // handels calling all the functions.
-//if 12:20 only read 0-100 
-//if 3:00 only read 100-200
-//if 5:00 only read 200-300 and delete files to reset 
 //call runDataImport to store the topicJSON after each run
 export async function run() {
     try { 
@@ -296,8 +253,7 @@ export async function run() {
 
             }finally{
                 console.log("finished processing batch 3, running db script and waiting 5 minutes");
-                runDataImport()
-                //await new Promise(resolve => setTimeout(resolve, 300000)); // 300,000ms = 5 minutes
+                runDataImport() //import data to news_article db
 
             }
                 
