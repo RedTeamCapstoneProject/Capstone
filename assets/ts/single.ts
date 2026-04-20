@@ -97,8 +97,11 @@ type SummariesResponse = { data?: SummaryItem[] | SummaryItem };
       const parsedId = idParam ? Number.parseInt(idParam, 10) : Number.NaN;
       const isValidId = Number.isFinite(parsedId) && parsedId > 0;
       const endpoint = isValidId ? `/api/summaries?id=${parsedId}` : "/api/summaries?limit=1"; 
+      
       const userData = JSON.parse(localStorage.getItem("loggedInUser") || "null");
       const userId = userData ? userData.id : null; 
+
+
 
       botBubble.textContent = "Thinking...";
 

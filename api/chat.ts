@@ -146,25 +146,25 @@ export default async function handler(req: any, res: any) {
 export default async function handler(req: any, res: any) {
     if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
         
-    const { item, message, UserId } = req.body; //get the stuff
+    const { item, message, UserID } = req.body; //get the stuff
     const rawIP = (req.headers['x-forwarded-for'] as string)?.split(',')[0] || req.socket.remoteAddress; //use node to get the rawIP
     const userIP = hashIP(rawIP || "unknown"); //hash ip
 
     const client = await pool.connect();    
     try {
         let currentCalls = 0;
-        console.log("this is user id: "+ UserId)
-        if (UserId && UserId !== "null") { //if user is logged in
+        console.log("this is user id: "+ UserID)
+        if (UserID && UserID !== "null") { //if user is logged in
             //get there call number from db
             const userCheck = await client.query( 
                 'SELECT chatbot_calls FROM users WHERE id = $1',
-                [UserId]
+                [UserID]
             );
             currentCalls = userCheck.rows.length > 0 ? userCheck.rows[0].chatbot_calls : 0;
             
             //if nocalls left
             if (currentCalls <= 0) {
-                client.release(); 
+                //client.release(); 
                 return res.status(429).json({ 
                     error: "Limit reached", 
                     message: "I'm sorry, you have reached your chatbot call limit..." 
@@ -181,7 +181,7 @@ export default async function handler(req: any, res: any) {
 
             //if no calls left
             if (currentCalls <= 0) {
-                client.release(); 
+                //client.release(); 
                 return res.status(429).json({ 
                     error: "Limit reached", 
                     message: "You have 0 messages remaining. Please log in to continue!" 
@@ -197,10 +197,10 @@ export default async function handler(req: any, res: any) {
         const aiResponse = await chatBot(item, message);
 
         // update DB 
-        if (UserId && UserId !== "null") { //subtract 1 if user is logged in 
+        if (UserID && UserID !== "null") { //subtract 1 if user is logged in 
             await client.query(
                 'UPDATE users SET chatbot_calls = chatbot_calls - 1 WHERE id = $1',
-                [UserId]
+                [UserID]
             );
         } else { //subtract 1 if user is logged out
             await client.query(
