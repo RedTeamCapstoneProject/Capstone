@@ -285,10 +285,7 @@ async function fiveWs(newsArray: newsArticle[]){
 //uses articleArray and the summized things to create the object summarizedArticle
 //returns the object
 async function constructJSON(articleObjArray:newsArticle[],summarizedContent:string,summarizedDescription:string,summarizedTitle:string,likeIfive:string,fivews:string){
-   //console.log("\nTHIS IS SUMMARY:")
-    //console.log(summarizedContent)
-    //console.log("\nTHIS IS description:")
-   // console.log(summarizedDescription)
+  
     const summaryObjArray:summarizedArticle[]=[]
     const article_sources: string[] = []
     const authors:string[]= []
@@ -301,7 +298,6 @@ async function constructJSON(articleObjArray:newsArticle[],summarizedContent:str
         urls.push(article.url)
 
     }
-    //quickWrite(summarizedContent)  //just for testing
     
      const summarizedArticle:summarizedArticle = {
         source_names: article_sources,
@@ -345,5 +341,3 @@ const filePath = "outputJSONs/summarizedJSON/summarizedTopic.json";
        await runSummaryToDB()
     }
 }
-//var catArray = await tempReadMethodForTesting()
-//summaryManager(catArray)

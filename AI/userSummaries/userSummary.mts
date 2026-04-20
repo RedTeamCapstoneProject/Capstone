@@ -16,7 +16,7 @@ type SummaryItem = {
 
 type SummariesResponse = { data?: SummaryItem[] | SummaryItem };
 
-// get newsArticle array from the news_article database from jonathan
+// get newsArticle array from the news_article database 
 /*
 export async function summaryManager(newsArray:SummaryItem|null,userPrompt:string ){
     let response:string = ""
@@ -32,22 +32,9 @@ export async function summaryManager(newsArray:SummaryItem|null,userPrompt:strin
     }
 }
 */
-/*
-async function importCallAI() {
-  
-  const module = await import("../../AI/AIExportedFunctions/exportedFunctions.mjs");
 
-  if (typeof module.callAI !== "function") {
-    throw new Error("summaryManager export was not found");
-  }
 
-  return module.callAI;
-}
-  */
-
-//somehow get user prompt and display to site
 export async function chatBot(newsArray:SummaryItem|null,userPrompt?:String):Promise<string>{
-   // var callAI = await importCallAI()
     if(userPrompt == null){
         return "there was an error sending your prompt"
     }

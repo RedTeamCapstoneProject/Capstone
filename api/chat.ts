@@ -1,31 +1,8 @@
-// api/chat.ts
-//import { chatBot } from "../AI/userSummaries/userSummary.mts";
-//import { config } from 'dotenv';
-//import path from 'path';
-//import { fileURLToPath } from 'url';
-////import fs, { write } from 'fs';
-//import { exec } from 'child_process';
+
 import { GoogleGenerativeAI } from "@google/generative-ai";
-//import { time } from "console";
 import { Groq } from "groq-sdk";
-/*
-export default async function handler(req: any, res: any) {
-    if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
-
-  try {
-    const { item, message } = req.body;
-
-    
-    const { chatBot } = await import("../AI/userSummaries/userSummary.mts");
-
-    const aiResponse = await chatBot(item, message);
-    res.status(200).send(aiResponse);
-  } catch (error: any) {
-    console.error(error);
-    res.status(500).send("Error: " + error.message);
-  }
-}
-*/
+import { Pool } from 'pg'; 
+import { createHash } from 'crypto';
 
 
 type SummaryItem = {
@@ -44,35 +21,113 @@ type SummaryItem = {
 };
 
 
+const pool = new Pool({ 
+    connectionString: process.env.DATABASE_URL,
+    max: 1 
+});
+
+
+
+const hashIP = (ip: string): string => {
+  return createHash('sha256')
+    .update(ip + process.env.HASH_SALT) 
+    .digest('hex');
+};
+
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 const genAI = new GoogleGenerativeAI(process.env.geminiAPI || "");
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-// 3. MAIN HANDLER
+
 export default async function handler(req: any, res: any) {
-  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
+    if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
+        
+    const { item, message, UserID } = req.body; //get the stuff
+    const rawIP = (req.headers['x-forwarded-for'] as string)?.split(',')[0] || req.socket.remoteAddress; //use node to get the rawIP
+    const userIP = hashIP(rawIP || "unknown"); //hash ip
 
-  try {
-    const { item, message } = req.body;
-    
-    if (!process.env.GROQ_API_KEY || !process.env.geminiAPI) {
-        throw new Error("Missing API keys in Vercel Environment Variables");
+    const client = await pool.connect();    
+    try {
+        let currentCalls = 0;
+        console.log("this is user id: "+ UserID)
+        if (UserID && UserID !== "null") { //if user is logged in
+            //get there call number from db
+            const userCheck = await client.query( 
+                'SELECT chatbot_calls FROM users WHERE id = $1',
+                [UserID]
+            );
+            currentCalls = userCheck.rows.length > 0 ? userCheck.rows[0].chatbot_calls : 0;
+            
+            //if no calls left
+            if (currentCalls <= 0) {
+                return res.status(429).json({ 
+                    error: "Limit reached", 
+                    message: "I'm sorry, you have reached your chatbot call limit..." 
+                });
+            }
+        } else { //user is not logged in
+
+            //get count from db based on IP
+            const checkResult = await client.query(
+                'SELECT calls FROM ai_calls WHERE ip = $1',
+                [userIP]
+            );
+            currentCalls = checkResult.rows.length > 0 ? checkResult.rows[0].calls : 5;
+
+            //if no calls left
+            if (currentCalls <= 0) {
+                return res.status(429).json({ 
+                    error: "Limit reached", 
+                    message: "You have 0 messages remaining. Please log in to continue!" 
+                });
+            }
+        }
+
+        // call ai
+        if (!process.env.GROQ_API_KEY || !process.env.geminiAPI) {
+            throw new Error("Missing API keys");
+        }
+
+        const aiResponse = await chatBot(item, message);
+
+        // update DB 
+        if (UserID && UserID !== "null") { //subtract 1 if user is logged in 
+            await client.query(
+                'UPDATE users SET chatbot_calls = chatbot_calls - 1 WHERE id = $1',
+                [UserID]
+            );
+        } else { //subtract 1 if user is logged out
+            await client.query(
+                `INSERT INTO ai_calls (ip, calls) 
+                VALUES ($1, 4) 
+                ON CONFLICT (ip) 
+                DO UPDATE SET calls = ai_calls.calls - 1`,
+                [userIP]
+            );
+        }
+
+        //send it over to single.ts
+        res.status(200).send(aiResponse);
+
+    } catch (dbError: any) {
+        console.error("Handler Error:", dbError.message);
+        res.status(500).send("Error: " + dbError.message);
+    } finally {
+        
+        client.release();
     }
-
-    const aiResponse = await chatBot(item, message);
-    res.status(200).send(aiResponse);
-  } catch (error: any) {
-    console.error("Handler Error:", error.message);
-    res.status(500).send("Error: " + error.message);
-  }
 }
+
+
+
+
+
 
 
 
 export async function callAI(prompt: string):Promise<string> {
     try {
-       //console.log("Attempting to connect to Groq...");
         
         
         const response = await groq.chat.completions.create({
@@ -136,7 +191,6 @@ export async function callGeminiAI(prompt:string):Promise<string>{
 
 
 export async function chatBot(newsArray:SummaryItem|null,userPrompt?:String):Promise<string>{
-   // var callAI = await importCallAI()
     if(userPrompt == null){
         return "there was an error sending your prompt"
     }
@@ -147,27 +201,33 @@ export async function chatBot(newsArray:SummaryItem|null,userPrompt?:String):Pro
     if (userPromptLength >= 50){
         return "Your prompt is too long, please shorten it and try again"
     }
- const sysPrompt = `
+    const sysPrompt = `
         ### ROLE
-        You are a "Context-Aware News Analyst." Provide short, high-impact answers by blending the provided news with verified facts.
+        You are a "Personable News Assistant." You are helpful and approachable, but maintain high journalistic standards.
 
         ### PRIMARY KNOWLEDGE BASE (Provided News)
         ${JSON.stringify(newsArray)}
 
         ### OPERATIONAL GUIDELINES
-        1. **Brevity is King:** Keep your responses under 3 paragraphs. Use short, punchy sentences. Avoid fluff.
-        2. **Grounded Augmentation:** Use the provided JSON as your primary source, but fill in missing background context (names, definitions, history) using your internal knowledge.
-        3. **The "Fact-Checking" Filter:** Supplement vague details with verified facts, but do not invent quotes or statistics.
-        4. **Deflection:** If a query is unrelated to the news, give a 1-sentence deflection and nudge them back to the stories.
-        5. **Neutrality:** Maintain a clinical, objective tone.
+        1. **Conditional Personality:** - If the user provides a greeting (e.g., "Hi", "Hello", "How are you?"), respond with a brief, warm greeting like "Hey! I'm doing well, thanks for asking. I'm here to help you dive into these news stories. What's on your mind?"
+        - For news-related questions, get straight to the facts with a professional tone.
+        
+        2. **Brevity & Impact:** Keep responses under 3 paragraphs. Use short, punchy sentences. Avoid fluff unless it's a brief greeting.
+
+        3. **Grounded Augmentation:** Use the provided JSON as your primary source. Use internal knowledge only to provide background (definitions, history, verified entities).
+
+        4. **The "Topic Guardrail":** - If the user asks about something controversial, "crazy," or unrelated to the news provided, provide a 1-sentence polite deflection. 
+        - Example: "I'd prefer to stick to the news coverage we have here—do you have any questions about the [Topic A] or [Topic B] stories?"
+
+        5. **Clinical Neutrality:** Once the "Social Talk" is over, maintain a clinical, objective tone. Do not take sides.
 
         ### OUTPUT FORMAT
-        - Use clear headings or bold text for key terms if it helps clarity.
-        - No introductory filler like "Sure, I can help with that." Get straight to the answer.
+        - Use **bold text** for key terms or names.
+        - No filler like "Based on the provided text..." Go directly from a greeting (if needed) into the answer.
 
         ### USER QUERY
         "${userPrompt}"
-        `;
+    `;
             
     var response = await callAI(sysPrompt)
     
