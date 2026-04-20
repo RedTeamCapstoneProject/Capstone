@@ -105,7 +105,7 @@ type SummariesResponse = { data?: SummaryItem[] | SummaryItem };
       try {
         //  UI
         botBubble.textContent = "Thinking...";
-
+        console.log(userId)
         //  get the context data
         const response = await fetch(endpoint);
         if (!response.ok) throw new Error("API response was not ok");
