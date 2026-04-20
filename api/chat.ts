@@ -153,7 +153,7 @@ export default async function handler(req: any, res: any) {
     const client = await pool.connect();    
     try {
         let currentCalls = 0;
-
+        console.log("this is user id: "+ UserId)
         if (UserId == true && UserId !== "null") { //if user is logged in
             //get there call number from db
             const userCheck = await client.query( 
