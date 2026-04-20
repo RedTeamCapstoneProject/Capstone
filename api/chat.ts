@@ -154,7 +154,7 @@ export default async function handler(req: any, res: any) {
     try {
         let currentCalls = 0;
         console.log("this is user id: "+ UserId)
-        if (UserId == true && UserId !== "null") { //if user is logged in
+        if (UserId && UserId !== "null") { //if user is logged in
             //get there call number from db
             const userCheck = await client.query( 
                 'SELECT chatbot_calls FROM users WHERE id = $1',
@@ -197,7 +197,7 @@ export default async function handler(req: any, res: any) {
         const aiResponse = await chatBot(item, message);
 
         // update DB 
-        if (UserId == true && UserId !== "null") { //subtract 1 if user is logged in 
+        if (UserId && UserId !== "null") { //subtract 1 if user is logged in 
             await client.query(
                 'UPDATE users SET chatbot_calls = chatbot_calls - 1 WHERE id = $1',
                 [UserId]
