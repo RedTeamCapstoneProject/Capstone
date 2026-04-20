@@ -30,13 +30,6 @@ const pool = new Pool({
 
 
 
-
-
-
-
-
-
-
 const hashIP = (ip: string): string => {
   return createHash('sha256')
     .update(ip + process.env.HASH_SALT) 
@@ -48,40 +41,73 @@ const hashIP = (ip: string): string => {
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 const genAI = new GoogleGenerativeAI(process.env.geminiAPI || "");
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-
+/*
 export default async function handler(req: any, res: any) {
     if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
+        
+    const { item, message, UserId } = req.body; // Grab userId from body
+        
+        const rawIP = (req.headers['x-forwarded-for'] as string)?.split(',')[0] || req.socket.remoteAddress;
+        const userIP = hashIP(rawIP || "unknown");        //hash ips for security
 
-      const rawIP = (req.headers['x-forwarded-for'] as string)?.split(',')[0] || req.socket.remoteAddress;
-
-    // 2. SCRAMBLE IT IMMEDIATELY
-        const userIP = hashIP(rawIP || "unknown");
-
+        
         const client = await pool.connect();
     try {
-        const checkResult = await client.query(
-            'SELECT calls FROM ai_calls WHERE ip = $1',
-            [userIP]
-        );
+        if(UserId){ //if user is logged in 
 
-        const currentCalls = checkResult.rows.length > 0 ? checkResult.rows[0].calls : 5;
+            //get the current amount of calls for the user from the db
+            const userCheck = await client.query( 
+                'SELECT chatbot_calls FROM users WHERE id = $1',
+                [UserId]
+            );
+            const currentCalls = userCheck.rows.length > 0 ? userCheck.rows[0].chatbot_calls : 0;
+            
+            //if they are out of calls
+            if (currentCalls <= 0) {
+                return res.status(429).json({ 
+                    error: "Limit reached", 
+                    message: "I'm sorry, you have reached your chatbot call limit..." 
+                });
+            }
 
-        if (currentCalls <= 0) {
-            return res.status(429).json({ 
-                error: "Limit reached", 
-                message: "You have 0 messages remaining. Please log in to continue!" 
-            });
+            /*
+            // Update the amount of calls by subtracting 1 
+            await client.query(
+                'UPDATE users SET chatbot_calls = chatbot_calls - 1 WHERE id = $1',
+                [UserId]
+            );
+            
+
+        }else{ //if user isnt logged in
+
+            //check how many calls they have at that IP
+            const checkResult = await client.query(
+                'SELECT calls FROM ai_calls WHERE ip = $1',
+                [userIP]
+            );
+            const currentCalls = checkResult.rows.length > 0 ? checkResult.rows[0].calls : 5;
+
+            //if out of calls
+            if (currentCalls <= 0) {
+                return res.status(429).json({ 
+                    error: "Limit reached", 
+                    message: "You have 0 messages remaining. Please log in to continue!" 
+                });
+                
+            }
+
+            /*
+            //update by subtracting one
+            await client.query(
+                `INSERT INTO ai_calls (ip, calls) 
+                VALUES ($1, 4) 
+                ON CONFLICT (ip) 
+                DO UPDATE SET calls = ai_calls.calls - 1`,
+                [userIP]
+            );
             
         }
 
-        await client.query(
-            `INSERT INTO ai_calls (ip, calls) 
-            VALUES ($1, 4) 
-            ON CONFLICT (ip) 
-            DO UPDATE SET calls = ai_calls.calls - 1`,
-            [userIP]
-        );
-        
     } catch (dbError: any) {
         console.error("Database error:", dbError.message);
     } finally {
@@ -97,9 +123,104 @@ export default async function handler(req: any, res: any) {
 
         const aiResponse = await chatBot(item, message);
         res.status(200).send(aiResponse);
+        if(UserId){
+            await client.query(
+                'UPDATE users SET chatbot_calls = chatbot_calls - 1 WHERE id = $1',
+                [UserId]
+            );
+        }else{
+            await client.query(
+                `INSERT INTO ai_calls (ip, calls) 
+                VALUES ($1, 4) 
+                ON CONFLICT (ip) 
+                DO UPDATE SET calls = ai_calls.calls - 1`,
+                [userIP]
+            );
+        }
     } catch (error: any) {
         console.error("Handler Error:", error.message);
         res.status(500).send("Error: " + error.message);
+    }
+}
+*/
+export default async function handler(req: any, res: any) {
+    if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
+        
+    const { item, message, UserId } = req.body; //get the stuff
+    const rawIP = (req.headers['x-forwarded-for'] as string)?.split(',')[0] || req.socket.remoteAddress; //use node to get the rawIP
+    const userIP = hashIP(rawIP || "unknown"); //hash ip
+
+    const client = await pool.connect();    
+    try {
+        let currentCalls = 0;
+
+        if (UserId == true && UserId !== "null") { //if user is logged in
+            //get there call number from db
+            const userCheck = await client.query( 
+                'SELECT chatbot_calls FROM users WHERE id = $1',
+                [UserId]
+            );
+            currentCalls = userCheck.rows.length > 0 ? userCheck.rows[0].chatbot_calls : 0;
+            
+            //if nocalls left
+            if (currentCalls <= 0) {
+                client.release(); 
+                return res.status(429).json({ 
+                    error: "Limit reached", 
+                    message: "I'm sorry, you have reached your chatbot call limit..." 
+                });
+            }
+        } else { //user is not logged in
+
+            //get count from db based on IP
+            const checkResult = await client.query(
+                'SELECT calls FROM ai_calls WHERE ip = $1',
+                [userIP]
+            );
+            currentCalls = checkResult.rows.length > 0 ? checkResult.rows[0].calls : 5;
+
+            //if no calls left
+            if (currentCalls <= 0) {
+                client.release(); 
+                return res.status(429).json({ 
+                    error: "Limit reached", 
+                    message: "You have 0 messages remaining. Please log in to continue!" 
+                });
+            }
+        }
+
+        // call ai
+        if (!process.env.GROQ_API_KEY || !process.env.geminiAPI) {
+            throw new Error("Missing API keys");
+        }
+
+        const aiResponse = await chatBot(item, message);
+
+        // update DB 
+        if (UserId == true && UserId !== "null") { //subtract 1 if user is logged in 
+            await client.query(
+                'UPDATE users SET chatbot_calls = chatbot_calls - 1 WHERE id = $1',
+                [UserId]
+            );
+        } else { //subtract 1 if user is logged out
+            await client.query(
+                `INSERT INTO ai_calls (ip, calls) 
+                VALUES ($1, 4) 
+                ON CONFLICT (ip) 
+                DO UPDATE SET calls = ai_calls.calls - 1`,
+                [userIP]
+            );
+        }
+
+        //send it over to single.ts
+        res.status(200).send(aiResponse);
+
+    } catch (dbError: any) {
+        console.error("Handler Error:", dbError.message);
+        res.status(500).send("Error: " + dbError.message);
+    } finally {
+        
+        client.release();
     }
 }
 
@@ -110,16 +231,8 @@ export default async function handler(req: any, res: any) {
 
 
 
-
-
-
-
-
-
-
 export async function callAI(prompt: string):Promise<string> {
     try {
-       //console.log("Attempting to connect to Groq...");
         
         
         const response = await groq.chat.completions.create({
@@ -183,7 +296,6 @@ export async function callGeminiAI(prompt:string):Promise<string>{
 
 
 export async function chatBot(newsArray:SummaryItem|null,userPrompt?:String):Promise<string>{
-   // var callAI = await importCallAI()
     if(userPrompt == null){
         return "there was an error sending your prompt"
     }

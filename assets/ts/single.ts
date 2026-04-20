@@ -1,17 +1,9 @@
-//import {chatbot} from "../../AI/userSummaries/userSummary.mts"
 import {readSummaryItemFromPayload} from "assets/ts/main";
-//import path from "path";
-//import { pathToFileURL } from "url";
+
 import jQuery from "jquery";
 import breakpoints from "./breakpoints";
 import "./util"; 
-/*
-const importchatBot = async () => {
-  const { chatBot } = await import('../../AI/userSummaries/userSummary.mjs')
-}
 
-importchatBot();
-*/
 type SummaryItem = {
   id: number | string;
   category?: string | null;
@@ -28,44 +20,6 @@ type SummaryItem = {
 };
 
 type SummariesResponse = { data?: SummaryItem[] | SummaryItem };
-
-/*
-async function importChatBot(): Promise<
-	(newsArticle:SummaryItem|null,userPrompt:string) => Promise<string>
-> {
-	const chatBotModulePath = pathToFileURL(
-		path.resolve(__dirname, "../../AI/userSummary/userSummary.mts")
-	).href;
-
-	const dynamicImport = new Function(
-		"modulePath",
-		"return import(modulePath);"
-	) as (modulePath: string) => Promise<{
-		summaryManager: (newsArticle:SummaryItem|null,userPrompt:string) => Promise<string>;
-	}>;
-
-	const module = await dynamicImport(chatBotModulePath);
-
-	if (typeof module.summaryManager !== "function") {
-		throw new Error("summaryManager export was not found in AI/summary/genericSummary.mts");
-	}
-
-	return module.summaryManager;
-}
-*/
-/*
-
-async function importChatBot() {
-  
-  const module = await import("../../AI/userSummaries/userSummary.mjs");
-
-  if (typeof module.chatBot !== "function") {
-    throw new Error("summaryManager export was not found");
-  }
-
-  return module.chatBot;
-}
-*/
 
 
 
@@ -137,21 +91,22 @@ async function importChatBot() {
       popupThread.scrollTop = popupThread.scrollHeight;
 
 
-  	 // const chatBot = await importChatBot();
 
       //get context data and send it to chatbot
       const idParam = new URLSearchParams(window.location.search).get("id");
       const parsedId = idParam ? Number.parseInt(idParam, 10) : Number.NaN;
       const isValidId = Number.isFinite(parsedId) && parsedId > 0;
       const endpoint = isValidId ? `/api/summaries?id=${parsedId}` : "/api/summaries?limit=1"; 
+      const userData = JSON.parse(localStorage.getItem("loggedInUser") || "null");
+      const userId = userData ? userData.id : null; 
+
       botBubble.textContent = "Thinking...";
 
-  // 2. Fetch the context data
       try {
-        // 1. Setup UI
+        //  UI
         botBubble.textContent = "Thinking...";
 
-        // 2. Fetch the context data
+        //  get the context data
         const response = await fetch(endpoint);
         if (!response.ok) throw new Error("API response was not ok");
         
@@ -165,7 +120,8 @@ async function importChatBot() {
           },
           body: JSON.stringify({ 
               item: item, 
-              message: message 
+              message: message,
+              UserID:userId 
           }),
         });
 

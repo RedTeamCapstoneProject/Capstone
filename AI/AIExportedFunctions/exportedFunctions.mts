@@ -47,7 +47,6 @@ if (!GEMINI_API_KEY){
     throw new Error (`missing GEMINI key in .env file`)
 }
 
-//IMPLEMENT EXPONENTIAL BACKOFF, READ ERROR AND WAIT TO PROCESS REQUEST
 
 //input a prompt as parameter and return results from AI 
 export async function callAI(prompt: string):Promise<string> {
