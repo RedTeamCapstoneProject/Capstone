@@ -25,3 +25,10 @@ A full-stack news aggregation and summarization app that fetches current headlin
 
 # Logic Structure
 <img width="975" height="394" alt="image" src="https://github.com/user-attachments/assets/0023860d-6cdc-4860-8eab-c3187bb4755c" />
+
+# Future Improvements
+
+- Social Functionality: Allow for users to share and discuss articles 
+- Wider Content Range: Expand the scope of articles that the website fetches from 
+- Further Refinement: Further refine the chatbot and summarization if needed
+
