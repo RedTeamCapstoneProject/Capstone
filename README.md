@@ -1,6 +1,6 @@
-# Real News Capstone
+# Real News
 
-A full-stack news aggregation and summarization project built for CS499. The app fetches current headlines, groups related stories, generates AI summaries, stores results in PostgreSQL, and serves them through API endpoints for the frontend.
+A full-stack news aggregation and summarization app that fetches current headlines, clusters related stories, generates AI summaries, stores the results in PostgreSQL, and exposes them through API endpoints for a frontend client.
 
 ## What This Project Does
 
