@@ -5,8 +5,8 @@ A full-stack news aggregation and summarization app that fetches current headlin
 # Project Features
 
 - News Aggregation: Fetches trending news and displays them on the website 
-- User Dashboard:  Simple, easy navigation with articles that are organized by category
-- Chatbot: provides an interactive Q/A to answer any questions
+- User Dashboard: Simple, easy navigation with articles that are organized by category
+- Chatbot: Provides an interactive Q/A to answer any questions
 - Unique Summaries: Summarizes articles in  “Explain like I'm 5” and “Give me the 5 W’s” 
 - User Accounts: Allows for user to set preferences for article categories
 
