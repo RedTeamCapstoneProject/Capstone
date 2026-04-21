@@ -1,6 +1,6 @@
 # Real News
 
-A full-stack news aggregation and summarization app that fetches current headlines, clusters related stories, generates AI summaries, stores the results in PostgreSQL, and exposes them through API endpoints for a frontend client.
+A full-stack news aggregation and summarization web application that fetches current headlines, clusters related stories, generates AI summaries, stores the results in PostgreSQL, and exposes them through API endpoints for a frontend client.
 
 # Project Features
 
