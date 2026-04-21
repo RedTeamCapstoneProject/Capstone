@@ -2,7 +2,7 @@
 
 A full-stack news aggregation and summarization app that fetches current headlines, clusters related stories, generates AI summaries, stores the results in PostgreSQL, and exposes them through API endpoints for a frontend client.
 
-## What This Project Does
+# Project Features
 
 - News Aggregation: Fetches trending news and displays them on the website 
 - User Dashboard:  Simple, easy navigation with articles that are organized by category
