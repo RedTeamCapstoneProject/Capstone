@@ -380,7 +380,7 @@ async function hydrateSingleSummaryPage(): Promise<boolean> {
     if (!item) return true;
 
     const title = item.ai_title?.trim() || "Untitled Summary";
-    const description = item.ai_description?.trim() || "No description available.";
+    const description = item.ai_description?.trim() || "";
     const summaryText = item.summary?.trim() || description;
     const detailHref = buildSummaryHref(item.id);
 
@@ -516,7 +516,7 @@ async function hydrateSummaryPosts(): Promise<void> {
 
       post.style.display = "";
       const title = item.ai_title?.trim() || "Untitled Summary";
-      const description = item.ai_description?.trim() || "No description available.";
+      const description = item.ai_description?.trim() || "";
       const summaryText = item.summary?.trim() || description;
       const detailHref = buildSummaryHref(item.id);
 
