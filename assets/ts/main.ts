@@ -134,11 +134,7 @@ function resolveImageSource(rawImage: string): string {
     return normalizedImageUrl;
   }
 
-  const normalizedRemoteUrl = normalizedImageUrl.startsWith("//")
-    ? `${window.location.protocol}${normalizedImageUrl}`
-    : normalizedImageUrl;
-
-  return `/api/summaries?imageUrl=${encodeURIComponent(normalizedRemoteUrl)}`;
+  return resolveDirectRemoteImageSource(normalizedImageUrl) ?? FALLBACK_IMAGE_SRC;
 }
 
 function resolveDirectRemoteImageSource(rawImage: string): string | null {
@@ -155,6 +151,12 @@ function resolveDirectRemoteImageSource(rawImage: string): string | null {
   return null;
 }
 
+function resolveProxyImageSource(rawImage: string): string | null {
+  const directRemoteSource = resolveDirectRemoteImageSource(rawImage);
+  if (!directRemoteSource) return null;
+  return `/api/summaries?imageUrl=${encodeURIComponent(directRemoteSource)}`;
+}
+
 function setImageWithFallback(
   image: HTMLImageElement,
   rawImage: string | null | undefined,
@@ -166,12 +168,15 @@ function setImageWithFallback(
   const directRemoteSource = normalizedRaw
     ? resolveDirectRemoteImageSource(normalizedRaw)
     : null;
-  let retriedWithDirectSource = false;
+  const proxyImageSource = normalizedRaw
+    ? resolveProxyImageSource(normalizedRaw)
+    : null;
+  let retriedWithProxySource = false;
 
   image.onerror = () => {
-    if (directRemoteSource && !retriedWithDirectSource && image.src !== directRemoteSource) {
-      retriedWithDirectSource = true;
-      image.src = directRemoteSource;
+    if (proxyImageSource && !retriedWithProxySource && image.src !== proxyImageSource) {
+      retriedWithProxySource = true;
+      image.src = proxyImageSource;
       return;
     }
 
@@ -184,7 +189,7 @@ function setImageWithFallback(
     return;
   }
 
-  image.src = resolveImageSource(normalizedRaw);
+  image.src = directRemoteSource ?? resolveImageSource(normalizedRaw);
 }
 
 function normalizeSummaryId(value: number | string | null | undefined): number | null {

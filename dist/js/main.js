@@ -6617,8 +6617,7 @@
     if (normalizedImageUrl.startsWith("/") || normalizedImageUrl.startsWith("data:")) {
       return normalizedImageUrl;
     }
-    const normalizedRemoteUrl = normalizedImageUrl.startsWith("//") ? `${window.location.protocol}${normalizedImageUrl}` : normalizedImageUrl;
-    return `/api/summaries?imageUrl=${encodeURIComponent(normalizedRemoteUrl)}`;
+    return resolveDirectRemoteImageSource(normalizedImageUrl) ?? FALLBACK_IMAGE_SRC;
   }
   function resolveDirectRemoteImageSource(rawImage) {
     const normalizedImageUrl = normalizeRemoteImageUrl(rawImage);
@@ -6630,15 +6629,22 @@
     }
     return null;
   }
+  function resolveProxyImageSource(rawImage) {
+    const directRemoteSource = resolveDirectRemoteImageSource(rawImage);
+    if (!directRemoteSource)
+      return null;
+    return `/api/summaries?imageUrl=${encodeURIComponent(directRemoteSource)}`;
+  }
   function setImageWithFallback(image, rawImage, altText) {
     image.alt = altText;
     const normalizedRaw = rawImage?.trim();
     const directRemoteSource = normalizedRaw ? resolveDirectRemoteImageSource(normalizedRaw) : null;
-    let retriedWithDirectSource = false;
+    const proxyImageSource = normalizedRaw ? resolveProxyImageSource(normalizedRaw) : null;
+    let retriedWithProxySource = false;
     image.onerror = () => {
-      if (directRemoteSource && !retriedWithDirectSource && image.src !== directRemoteSource) {
-        retriedWithDirectSource = true;
-        image.src = directRemoteSource;
+      if (proxyImageSource && !retriedWithProxySource && image.src !== proxyImageSource) {
+        retriedWithProxySource = true;
+        image.src = proxyImageSource;
         return;
       }
       image.onerror = null;
@@ -6648,7 +6654,7 @@
       image.src = FALLBACK_IMAGE_SRC;
       return;
     }
-    image.src = resolveImageSource(normalizedRaw);
+    image.src = directRemoteSource ?? resolveImageSource(normalizedRaw);
   }
   function normalizeSummaryId(value) {
     const numeric = typeof value === "number" ? value : typeof value === "string" ? Number.parseInt(value, 10) : Number.NaN;
