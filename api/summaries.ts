@@ -60,7 +60,20 @@ function normalizeRemoteImageUrl(rawImageUrl: string): string {
 
   const firstProtocolIndex = trimmed.search(/https?:\/\//);
   if (firstProtocolIndex > 0) {
-    return trimmed.slice(firstProtocolIndex);
+    return normalizeRemoteImageUrl(trimmed.slice(firstProtocolIndex));
+  }
+
+  try {
+    const parsed = new URL(trimmed);
+    const nestedImageUrl = ["src", "url", "imageUrl", "image", "img"]
+      .map((key) => parsed.searchParams.get(key)?.trim())
+      .find((value): value is string => typeof value === "string" && /^https?:\/\//.test(value));
+
+    if (nestedImageUrl) {
+      return normalizeRemoteImageUrl(nestedImageUrl);
+    }
+  } catch {
+
   }
 
   return trimmed;
