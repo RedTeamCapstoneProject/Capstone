@@ -41,32 +41,12 @@ function toSingleQueryValue(value: string | string[] | undefined): string | unde
   return Array.isArray(value) ? value[0] : value;
 }
 
-function normalizeRemoteImageUrl(rawImageUrl: string): string {
-  const trimmed = rawImageUrl.trim();
-  const protocolMatches = Array.from(trimmed.matchAll(/https?:\/\//g));
-
-  if (protocolMatches.length > 1) {
-    const lastProtocolIndex = protocolMatches[protocolMatches.length - 1]?.index;
-    if (typeof lastProtocolIndex === "number") {
-      return trimmed.slice(lastProtocolIndex);
-    }
-  }
-
-  const firstProtocolIndex = trimmed.search(/https?:\/\//);
-  if (firstProtocolIndex > 0) {
-    return trimmed.slice(firstProtocolIndex);
-  }
-
-  return trimmed;
-}
-
 router.get("/", async (req: Request, res: Response) => {
   const rawImageUrl = toSingleQueryValue(req.query.imageUrl as string | string[] | undefined);
   if (rawImageUrl) {
-    const normalizedImageUrl = normalizeRemoteImageUrl(rawImageUrl);
     let parsed: URL;
     try {
-      parsed = new URL(normalizedImageUrl);
+      parsed = new URL(rawImageUrl);
     } catch {
       return res.status(400).json({ error: "Invalid image URL" });
     }
