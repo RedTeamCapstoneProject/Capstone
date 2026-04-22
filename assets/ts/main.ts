@@ -88,9 +88,11 @@ function getNormalizedItemCategory(item: SummaryItem): string | null {
 }
 
 function stripDuplicatedUrlPrefix(rawImage: string): string {
-  const secondProtocol = rawImage.indexOf("https://", 8);
+  const queryStart = rawImage.indexOf("?");
+  const pathPart = queryStart === -1 ? rawImage : rawImage.slice(0, queryStart);
+  const secondProtocol = pathPart.indexOf("https://", 8);
   if (secondProtocol !== -1) return rawImage.slice(secondProtocol);
-  const secondHttp = rawImage.indexOf("http://", 7);
+  const secondHttp = pathPart.indexOf("http://", 7);
   if (secondHttp !== -1) return rawImage.slice(secondHttp);
   return rawImage;
 }
