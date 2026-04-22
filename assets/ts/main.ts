@@ -87,28 +87,58 @@ function getNormalizedItemCategory(item: SummaryItem): string | null {
   return categories.has(normalized) ? normalized : null;
 }
 
+function normalizeRemoteImageUrl(rawImage: string): string {
+  const trimmed = rawImage.trim();
+  const protocolMatches = Array.from(trimmed.matchAll(/https?:\/\//g));
+
+  if (protocolMatches.length > 1) {
+    const lastProtocolIndex = protocolMatches[protocolMatches.length - 1]?.index;
+    if (typeof lastProtocolIndex === "number") {
+      return trimmed.slice(lastProtocolIndex);
+    }
+  }
+
+  const firstProtocolIndex = trimmed.search(/https?:\/\//);
+  if (firstProtocolIndex > 0) {
+    return trimmed.slice(firstProtocolIndex);
+  }
+
+  return trimmed;
+}
+
 function resolveImageSource(rawImage: string): string {
+  const normalizedImageUrl = normalizeRemoteImageUrl(rawImage);
   const isDirectSource =
-    rawImage.startsWith("data:") ||
-    rawImage.startsWith("http://") ||
-    rawImage.startsWith("https://") ||
-    rawImage.startsWith("//") ||
-    rawImage.startsWith("/");
+    normalizedImageUrl.startsWith("data:") ||
+    normalizedImageUrl.startsWith("http://") ||
+    normalizedImageUrl.startsWith("https://") ||
+    normalizedImageUrl.startsWith("//") ||
+    normalizedImageUrl.startsWith("/");
 
-  if (!isDirectSource) return `data:image/jpeg;base64,${rawImage}`;
+  if (!isDirectSource) return `data:image/jpeg;base64,${normalizedImageUrl}`;
 
-  if (rawImage.startsWith("/") || rawImage.startsWith("data:")) return rawImage;
+  if (normalizedImageUrl.startsWith("/") || normalizedImageUrl.startsWith("data:")) {
+    return normalizedImageUrl;
+  }
 
-  const normalizedRemoteUrl = rawImage.startsWith("//")
-    ? `${window.location.protocol}${rawImage}`
-    : rawImage;
+  const normalizedRemoteUrl = normalizedImageUrl.startsWith("//")
+    ? `${window.location.protocol}${normalizedImageUrl}`
+    : normalizedImageUrl;
 
   return `/api/summaries?imageUrl=${encodeURIComponent(normalizedRemoteUrl)}`;
 }
 
 function resolveDirectRemoteImageSource(rawImage: string): string | null {
-  if (rawImage.startsWith("http://") || rawImage.startsWith("https://")) return rawImage;
-  if (rawImage.startsWith("//")) return `${window.location.protocol}${rawImage}`;
+  const normalizedImageUrl = normalizeRemoteImageUrl(rawImage);
+
+  if (normalizedImageUrl.startsWith("http://") || normalizedImageUrl.startsWith("https://")) {
+    return normalizedImageUrl;
+  }
+
+  if (normalizedImageUrl.startsWith("//")) {
+    return `${window.location.protocol}${normalizedImageUrl}`;
+  }
+
   return null;
 }
 
