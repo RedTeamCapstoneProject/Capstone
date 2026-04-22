@@ -6586,65 +6586,31 @@
     const normalized = rawCategory.trim().toLowerCase();
     return categories.has(normalized) ? normalized : null;
   }
-  function normalizeRemoteImageUrl(rawImage) {
-    const trimmed = rawImage.trim();
-    const protocolMatches = Array.from(trimmed.matchAll(/https?:\/\//g));
-    if (protocolMatches.length > 1) {
-      const lastProtocolIndex = protocolMatches[protocolMatches.length - 1]?.index;
-      if (typeof lastProtocolIndex === "number") {
-        return trimmed.slice(lastProtocolIndex);
-      }
-    }
-    const firstProtocolIndex = trimmed.search(/https?:\/\//);
-    if (firstProtocolIndex > 0) {
-      return normalizeRemoteImageUrl(trimmed.slice(firstProtocolIndex));
-    }
-    try {
-      const parsed = new URL(trimmed);
-      const nestedImageUrl = ["src", "url", "imageUrl", "image", "img"].map((key) => parsed.searchParams.get(key)?.trim()).find((value) => typeof value === "string" && /^https?:\/\//.test(value));
-      if (nestedImageUrl) {
-        return normalizeRemoteImageUrl(nestedImageUrl);
-      }
-    } catch {
-    }
-    return trimmed;
-  }
   function resolveImageSource(rawImage) {
-    const normalizedImageUrl = normalizeRemoteImageUrl(rawImage);
-    const isDirectSource = normalizedImageUrl.startsWith("data:") || normalizedImageUrl.startsWith("http://") || normalizedImageUrl.startsWith("https://") || normalizedImageUrl.startsWith("//") || normalizedImageUrl.startsWith("/");
+    const isDirectSource = rawImage.startsWith("data:") || rawImage.startsWith("http://") || rawImage.startsWith("https://") || rawImage.startsWith("//") || rawImage.startsWith("/");
     if (!isDirectSource)
-      return `data:image/jpeg;base64,${normalizedImageUrl}`;
-    if (normalizedImageUrl.startsWith("/") || normalizedImageUrl.startsWith("data:")) {
-      return normalizedImageUrl;
-    }
-    return resolveDirectRemoteImageSource(normalizedImageUrl) ?? FALLBACK_IMAGE_SRC;
+      return `data:image/jpeg;base64,${rawImage}`;
+    if (rawImage.startsWith("/") || rawImage.startsWith("data:"))
+      return rawImage;
+    const normalizedRemoteUrl = rawImage.startsWith("//") ? `${window.location.protocol}${rawImage}` : rawImage;
+    return `/api/summaries?imageUrl=${encodeURIComponent(normalizedRemoteUrl)}`;
   }
   function resolveDirectRemoteImageSource(rawImage) {
-    const normalizedImageUrl = normalizeRemoteImageUrl(rawImage);
-    if (normalizedImageUrl.startsWith("http://") || normalizedImageUrl.startsWith("https://")) {
-      return normalizedImageUrl;
-    }
-    if (normalizedImageUrl.startsWith("//")) {
-      return `${window.location.protocol}${normalizedImageUrl}`;
-    }
+    if (rawImage.startsWith("http://") || rawImage.startsWith("https://"))
+      return rawImage;
+    if (rawImage.startsWith("//"))
+      return `${window.location.protocol}${rawImage}`;
     return null;
-  }
-  function resolveProxyImageSource(rawImage) {
-    const directRemoteSource = resolveDirectRemoteImageSource(rawImage);
-    if (!directRemoteSource)
-      return null;
-    return `/api/summaries?imageUrl=${encodeURIComponent(directRemoteSource)}`;
   }
   function setImageWithFallback(image, rawImage, altText) {
     image.alt = altText;
     const normalizedRaw = rawImage?.trim();
     const directRemoteSource = normalizedRaw ? resolveDirectRemoteImageSource(normalizedRaw) : null;
-    const proxyImageSource = normalizedRaw ? resolveProxyImageSource(normalizedRaw) : null;
-    let retriedWithProxySource = false;
+    let retriedWithDirectSource = false;
     image.onerror = () => {
-      if (proxyImageSource && !retriedWithProxySource && image.src !== proxyImageSource) {
-        retriedWithProxySource = true;
-        image.src = proxyImageSource;
+      if (directRemoteSource && !retriedWithDirectSource && image.src !== directRemoteSource) {
+        retriedWithDirectSource = true;
+        image.src = directRemoteSource;
         return;
       }
       image.onerror = null;
@@ -6654,7 +6620,7 @@
       image.src = FALLBACK_IMAGE_SRC;
       return;
     }
-    image.src = directRemoteSource ?? resolveImageSource(normalizedRaw);
+    image.src = resolveImageSource(normalizedRaw);
   }
   function normalizeSummaryId(value) {
     const numeric = typeof value === "number" ? value : typeof value === "string" ? Number.parseInt(value, 10) : Number.NaN;
