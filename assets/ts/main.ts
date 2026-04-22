@@ -87,6 +87,14 @@ function getNormalizedItemCategory(item: SummaryItem): string | null {
   return categories.has(normalized) ? normalized : null;
 }
 
+function stripDuplicatedUrlPrefix(rawImage: string): string {
+  const secondProtocol = rawImage.indexOf("https://", 8);
+  if (secondProtocol !== -1) return rawImage.slice(secondProtocol);
+  const secondHttp = rawImage.indexOf("http://", 7);
+  if (secondHttp !== -1) return rawImage.slice(secondHttp);
+  return rawImage;
+}
+
 function resolveImageSource(rawImage: string): string {
   const isDirectSource =
     rawImage.startsWith("data:") ||
@@ -119,7 +127,7 @@ function setImageWithFallback(
 ): void {
   image.alt = altText;
 
-  const normalizedRaw = rawImage?.trim();
+  const normalizedRaw = rawImage ? stripDuplicatedUrlPrefix(rawImage.trim()) : undefined;
   const directRemoteSource = normalizedRaw
     ? resolveDirectRemoteImageSource(normalizedRaw)
     : null;

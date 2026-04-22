@@ -6581,6 +6581,15 @@
     const normalized = rawCategory.trim().toLowerCase();
     return categories.has(normalized) ? normalized : null;
   }
+  function stripDuplicatedUrlPrefix(rawImage) {
+    const secondProtocol = rawImage.indexOf("https://", 8);
+    if (secondProtocol !== -1)
+      return rawImage.slice(secondProtocol);
+    const secondHttp = rawImage.indexOf("http://", 7);
+    if (secondHttp !== -1)
+      return rawImage.slice(secondHttp);
+    return rawImage;
+  }
   function resolveImageSource(rawImage) {
     const isDirectSource = rawImage.startsWith("data:") || rawImage.startsWith("http://") || rawImage.startsWith("https://") || rawImage.startsWith("//") || rawImage.startsWith("/");
     if (!isDirectSource)
@@ -6599,7 +6608,7 @@
   }
   function setImageWithFallback(image, rawImage, altText) {
     image.alt = altText;
-    const normalizedRaw = rawImage?.trim();
+    const normalizedRaw = rawImage ? stripDuplicatedUrlPrefix(rawImage.trim()) : void 0;
     const directRemoteSource = normalizedRaw ? resolveDirectRemoteImageSource(normalizedRaw) : null;
     let retriedWithDirectSource = false;
     image.onerror = () => {
