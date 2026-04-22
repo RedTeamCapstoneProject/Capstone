@@ -1,338 +1,293 @@
 [
   {
     "source_names": [
-      "Axios",
-      "XDA Developers"
-    ],
-    "authors": [
-      "Megan Morrone",
-      "Simon Batt"
-    ],
-    "ai_title": "AI Expands Into New Frontiers",
-    "ai_description": "AI model Anthropic stuns with Claude Opus 4.7.",
-    "urls": [
-      "https://www.axios.com/2026/04/19/ai-taste-anthropic-claude-opus",
-      "https://www.xda-developers.com/claude-code-control-of-my-desktop-for-a-week-automated-things-i-didnt-think-were-possible/"
-    ],
-    "url_to_image": "https://images.axios.com/R5Xnie5_5BI1amBsOzhjfUwpCSc=/0x0:1920x1080/1366x768/2026/04/17/1776463655355.jpg",
-    "category": "general",
-    "topic": "Anthropic Claude Opus",
-    "summary": "Anthropic has introduced its newest model, Opus 4.7, which is designed to be more tasteful and creative when completing professional tasks. This model is capable of producing higher-quality interfaces, slides, and documents. The development of Opus 4.7 is a significant step forward in the field of artificial intelligence. Anthropic's goal is to create a model that can assist users in a more efficient and effective manner. The model's capabilities have been tested and reviewed by various individuals, including a user who utilized Claude Code for a week and found it to be highly capable. Claude Code is a tool that can automate various tasks on a desktop, and its abilities have been described as impressive. The introduction of Opus 4.7 and the existence of Claude Code demonstrate the ongoing advancements in artificial intelligence technology.\n\n* Anthropic's Opus 4.7 model is designed to improve the quality of professional tasks such as creating interfaces, slides, and documents.\n* Claude Code is a tool that can automate various tasks on a desktop, and its capabilities have been reviewed and tested by users.\n* The development of models like Opus 4.7 and tools like Claude Code represents a significant step forward in the field of artificial intelligence, with potential applications in various industries.",
-    "5ws": "Who: Anthropic, Axios, XDA Developers\nWhat: AI model Claude Opus 4.7 launch\nWhen: April 19, 2026\nWhere: Online platforms\nWhy: Enhance professional tasks",
-    "likeIm5": "Imagine this: a big team, \"The Anthropic All-Stars,\" made a super smart computer friend, Claude. They want Claude to help people work better, like a genius assistant. \"The Axios Avengers,\" led by Megan Morrone, and \"The XDA Xperts,\" with Simon Batt, are watching Claude grow and get smarter, making work easier and more fun for everyone."
-  },
-  {
-    "source_names": [
-      "Variety",
-      "The Blast",
-      "Rolling Stone"
-    ],
-    "authors": [
-      "Jem Aswad",
-      "Kelly Coffey-Behrens",
-      "Daniel Kreps"
-    ],
-    "ai_title": "Coachella Weekend Two Tops Weekend One",
-    "ai_description": "Coachella Weekend 2 shatters expectations with epic surprises.",
-    "urls": [
-      "https://variety.com/2026/music/news/madonna-sza-why-is-coachella-weekend-2-crushing-weekend-1-1236725610/",
-      "https://theblast.com/796604/madonna-slammed-for-acting-coachella-clip/",
-      "http://www.rollingstone.com/music/music-news/justin-bieber-billie-eilish-sza-coachella-weekend-two-show-1235550107/"
-    ],
-    "url_to_image": "https://variety.com/wp-content/uploads/2026/04/FotoJet-4-e1776636428575.jpg?w=1000&h=563&crop=1",
-    "category": "entertainment",
-    "topic": "Coachella Weekend 2",
-    "summary": "The Coachella Valley Music and Arts Festival has featured several surprise guest appearances in 2026, including performances by Madonna, SZA, Billie Eilish, Snoop Dogg, Olivia Rodrigo, and Billy Idol. Madonna, a 67-year-old pop icon, was spotted dancing at the festival and went viral. Justin Bieber's second headlining set at Coachella included surprise guests Billie Eilish and SZA. The festival's second weekend has had notable surprises, with some considering it to be outdoing the first weekend. Coachella is a annual music and arts festival held in Indio, California. The event features a wide range of musical performances and art installations. In 2026, the festival has seen a number of high-profile performers and surprise guest appearances, making it a notable event in the music industry.\n\n* Madonna appeared as a surprise guest at Coachella, dancing to the music and generating a significant amount of attention.\n* Justin Bieber's second headlining set at the festival included guest performances by Billie Eilish and SZA.\n* The Coachella Valley Music and Arts Festival has featured a number of surprise guest appearances in 2026, including performances by Snoop Dogg, Olivia Rodrigo, and Billy Idol.",
-    "5ws": "Who: Madonna, SZA, Snoop Dogg, Olivia Rodrigo, Billie Eilish\nWhat: Coachella Weekend 2 performances\nWhen: April 2026\nWhere: Coachella Valley, California\nWhy: Surpassing Weekend 1 with surprise guest appearances",
-    "likeIm5": "Imagine this: a big music festival called Coachella. The \"Music Makers\" team, with friends like \"The Queen of Pop\" Madonna, \"The Young Songstress\" Olivia Rodrigo, and \"The Doggfather\" Snoop, are trying to make Weekend 2 the best. They want to surprise and delight the crowd, making it even better than Weekend 1, and that's the big goal."
-  },
-  {
-    "source_names": [
-      "Ground.news",
-      "Earth.com",
-      "Live Science"
-    ],
-    "authors": [
-      "Unknown Author",
-      "Unknown Author",
-      "Ben Turner"
-    ],
-    "ai_title": "Humans Continue To Evolve",
-    "ai_description": "Human evolution accelerates, favoring traits like red hair.",
-    "urls": [
-      "https://ground.news/article/human-evolution-has-accelerated-to-favour-traits-like-red-hair-lower-body-fat-study_9769bf",
-      "https://www.earth.com/news/archaeologists-discover-early-humans-built-vast-island-networks-across-the-philippines/",
-      "https://www.livescience.com/space/science-news-this-week-physicists-witness-faster-than-light-darkness-pinpricks-humans-found-to-still-be-evolving-and-the-endanered-polar-bears-that-are-getting-fatter-than-ever"
-    ],
-    "url_to_image": "unknown",
-    "category": "health",
-    "topic": "Human Evolution Acceleration",
-    "summary": "A recent study published in 2026 analyzed DNA samples from nearly 16,000 ancient humans, revealing that human evolution has accelerated since the advent of farming, favoring traits such as red hair and lower body fat. The research, led by Harvard University, examined ancient DNA from over 10,000 years in West Eurasia. Another study found that early humans were capable of crossing open seas in the Philippine islands approximately 40,000 years ago, establishing long-term coastal settlements. This discovery was made by archaeologists who uncovered evidence of early humans building coastal networks, fishing offshore, and developing maritime skills. The findings suggest that early humans were more capable and adaptable than previously thought. On April 18, 2026, a weekly science news roundup highlighted these discoveries, along with other recent scientific breakthroughs. The studies demonstrate significant advancements in our understanding of human evolution and early human capabilities, providing new insights into the history of our species.\n\n* The study of ancient DNA from West Eurasia reveals that natural selection has shaped modern human genomes, favoring certain traits such as red hair and lower body fat.\n* Early humans were able to cross open seas in the Philippine islands around 40,000 years ago, building coastal networks and developing maritime skills.\n* The findings of these studies were published in 2026, as part of a series of scientific discoveries highlighting the ongoing evolution of humans and their capabilities.",
-    "5ws": "Who: Harvard University researchers\nWhat: Human evolution acceleration study\nWhen: 2026, specifically April 18\nWhere: West Eurasia, Philippines\nWhy: Understand natural selection's impact",
-    "likeIm5": "Imagine this: a big adventure to understand humans. The \"Harvard Heroes\" and \"Earth Explorers\" are like a team working together, trying to figure out how people changed over time, like how some got red hair. They want to help us learn about our bodies and why we're different, so we can be healthy and happy."
-  },
-  {
-    "source_names": [
-      "Neurosciencenews.com",
-      "Newser"
-    ],
-    "authors": [
-      "Neuroscience News",
-      "John Johnson"
-    ],
-    "ai_title": "Limb Regeneration Breakthrough Reported",
-    "ai_description": "Researchers unveil gene therapy that mimics salamander limb regrowth.",
-    "urls": [
-      "https://neurosciencenews.com/sp-gene-limb-regeneration-30553/",
-      "https://www.newser.com/story/387293/peptides-are-booming-in-a-medical-gray-zone.html"
-    ],
-    "url_to_image": "https://neurosciencenews.com/files/2026/04/limb-regeneration-neurocience.jpg",
-    "category": "general",
-    "topic": "Human Limb Regeneration",
-    "summary": "Scientists have identified a universal genetic program that drives limb regeneration by studying axolotls, zebrafish, and mice. The SP6 and SP8 genes have been found to be vital for regeneration in axolotls and mice. Researchers have created a viral gene therapy that mimics salamander regrowth powers, which is a foundational step towards human limb regeneration. This breakthrough has sparked interest in the potential for humans to regrow limbs. However, some individuals are sourcing compounds from compounding pharmacies or gray-market suppliers, which raises concerns about the safety and efficacy of these treatments. The use of these compounds is currently in a medical gray zone, with promising science but limited regulation. As of 2026, researchers are continuing to study the genetic program and its potential applications for human limb regeneration.\n\n* The SP6 and SP8 genes have been identified as vital for regeneration in axolotls and mice.\n* Researchers have created a viral gene therapy that mimics salamander regrowth powers.\n* The use of compounds for limb regeneration is currently in a medical gray zone, with limited regulation and safety oversight.",
-    "5ws": "Who: Researchers, scientists\nWhat: Breakthrough in limb regeneration\nWhen: April 19, 2026\nWhere: Global medical research\nWhy: Enable human limb regrowth",
-    "likeIm5": "Imagine this: The Neuroscience News Squad and The Newser Team are like playground friends trying to solve a big puzzle. They want to help people grow back lost limbs, like a superhero power. The goal is to make people whole again, and it's a big deal."
-  },
-  {
-    "source_names": [
-      "CNBC",
-      "BBC News",
-      "The-independent.com",
-      "BBC News",
-      "Bloomberg",
-      "Yahoo Entertainment",
-      "Financial Times"
-    ],
-    "authors": [
-      "Fred Imbert",
-      "https://www.facebook.com/bbcnews",
-      "Carsen Holaday",
-      "Unknown Author",
-      "María Paula Mijares Torres",
-      "Jake Conley",
-      "Stephanie Findlay, Myles McCormick, Oliver Roeder, Gregory Meyer"
-    ],
-    "ai_title": "Iran Crisis Hits Global Markets",
-    "ai_description": "US navy \"blows a hole\" in Iranian ship's engine room.",
-    "urls": [
-      "https://www.cnbc.com/2026/04/19/stock-market-today-live-updates.html",
-      "https://www.bbc.com/news/live/cly90l3ln30t",
-      "https://www.the-independent.com/arts-entertainment/music/news/the-strokes-coachella-set-gaza-trump-video-b2960778.html",
-      "https://www.bbc.com/news/articles/cge0grppe3po",
-      "https://www.bloomberg.com/news/articles/2026-04-19/uae-in-talks-with-us-for-possible-financial-lifeline-wsj-says",
-      "https://finance.yahoo.com/news/stock-market-records-iran-updates-and-tesla-earnings-what-to-watch-this-week-115312657.html",
-      "https://www.ft.com/content/80436d72-25e1-4a97-be09-3327c2d0af9a?syn-25a6b1a6\\\\u003d1"
-    ],
-    "url_to_image": "https://image.cnbcfm.com/api/v1/image/108293236-1776440608596-gettyimages-2271796513-mms10190_eaoevhme.jpeg?v=1776440683&w=1920&h=1080",
-    "category": "business",
-    "topic": "Iran US Tensions",
-    "summary": "As tensions between the US and Iran escalated over the weekend, stock futures fell early Monday following the seizure of an Iranian-flagged cargo ship. The Dow Jones Industrial Average futures shed 358 points, indicating a decline in investor confidence. The US negotiators are set to head to Pakistan on Monday to hold further talks on a potential ceasefire. The United Arab Emirates has begun talks with the US about a financial backstop in case the Iran war plunges the country into further crisis. The US has released footage of the attack on the Iranian ship, which was seized after ignoring warnings. The incident has sparked concerns about a potential war and its impact on the global economy. The US stock market has shown resilience, with two out of three major indexes breaking through to new all-time highs despite the geopolitical tensions.\n\n* The United Arab Emirates is in talks with the US for a possible financial lifeline in case the Iran war leads to a crisis.\n* The US has seized an Iranian-flagged cargo ship, which has led to an escalation of tensions between the two countries.\n* The US stock market has shown record highs, with investors focusing on ceasefire talks, Tesla earnings, and the potential impact of the Iran war on the economy.",
-    "5ws": "Who: US, Iran, Trump\nWhat: US seizes Iranian cargo ship\nWhen: April 19-20, 2026\nWhere: Gulf of Oman\nWhy: Escalating US-Iran tensions",
-    "likeIm5": "Imagine a big playground where countries are teams. The \"Trump Team\" and the \"Iran Squad\" are having a disagreement. The \"Trump Team\" has seized an Iranian ship, and the \"Iran Squad\" is upset. Meanwhile, the \"UAE Helpers\" are talking to the \"Trump Team\" about getting financial support. The goal is to resolve the issue and keep everyone safe, with leaders like Donald Trump and Iranian officials working towards a peaceful solution."
-  },
-  {
-    "source_names": [
-      "Axios",
-      "Fox Business",
-      "The Washington Post"
-    ],
-    "authors": [
-      "Ben Geman",
-      "Bonny Chu",
-      "Todd C. Frankel, Rachel Siegel"
-    ],
-    "ai_title": "Oil Prices Surge Amid Global Shortages",
-    "ai_description": "Airfare prices skyrocket as war disrupts supplies.",
-    "urls": [
-      "https://www.axios.com/2026/04/19/oil-prices-us-iran-war-strait-hormuz-ship-seized",
-      "https://www.foxbusiness.com/lifestyle/air-canada-scraps-key-us-routes-fuel-costs-surge-amid-iran-war",
-      "https://www.washingtonpost.com/business/2026/04/19/jet-fuel-shortages-europe-travel-summer-vacation/"
-    ],
-    "url_to_image": "https://images.axios.com/-5tWFuzq1XP7B7U_7Rln1njJF50=/0x0:1920x1080/1366x768/2026/04/19/1776638746015.jpg",
-    "category": "business",
-    "topic": "Iran War Oil Prices",
-    "summary": "The current geopolitical situation, particularly the war in Iran, has led to a significant impact on the global oil market, resulting in high crude prices. As a result, U.S. drivers are affected due to the country's deep connection to the global oil market. Air Canada has announced the suspension of select U.S.-bound flights, citing skyrocketing jet fuel prices. The airline's decision is set to take effect this summer, amidst the ongoing Iran war. The war in Iran has caused jet fuel shortages and supply disruptions, which are expected to persist for months, potentially leading to chaotic air travel in Europe. The Strait of Hormuz, a crucial oil transit route, has been affected by the war, contributing to the rise in oil prices. The situation has led to increased airfare prices in the United States and overseas, with further climbs expected as the war disrupts supplies.\n\n* The Iran war has caused a significant increase in crude prices, affecting U.S. drivers and the global oil market.\n* Air Canada has suspended select U.S.-bound flights due to soaring jet fuel costs, with the changes set to take effect this summer.\n* The war in Iran has led to jet fuel shortages and supply disruptions, potentially causing chaotic air travel in Europe and increased airfare prices worldwide.",
-    "5ws": "Who: Air Canada, US drivers, global oil market \nWhat: Oil prices surge, flights suspended \nWhen: April 2026 \nWhere: US, Europe, Strait of Hormuz \nWhy: Iran war disrupts oil supplies",
-    "likeIm5": "Imagine this: Ben the News Explorer, Bonny the Flight Master, and Todd the Travel Guide are trying to help people understand big changes in oil prices. They're like a team working together to fix a problem on the playground, where some friends, like the Air Canada Flyers, are having trouble flying to certain places because of high fuel costs."
-  },
-  {
-    "source_names": [
-      "BBC News",
-      "Space.com"
-    ],
-    "authors": [
-      "Richard Hollingham",
-      "Julian Dossett"
-    ],
-    "ai_title": "Artemis Astronauts Set New Distance Record",
-    "ai_description": "Artemis astronauts recreate iconic Earthrise photo, revealing shocking changes.",
-    "urls": [
-      "https://www.bbc.com/future/article/20260417-apollo-v-artemis-how-the-earth-changed-in-58-years",
-      "https://www.space.com/space-exploration/artemis/artemis-2-and-tiangong-space-station-astronauts-set-record-for-farthest-distance-between-humans"
-    ],
-    "url_to_image": "https://ychef.files.bbci.co.uk/624x351/p0nf0x09.jpg",
-    "category": "science",
-    "topic": "NASA Artemis 2 Record",
-    "summary": "The Apollo 8 crew captured the iconic Earthrise photo in 1968, which has been recreated by Artemis astronauts, revealing changes to the Earth over the past 58 years. The new image shows differences in the planet's condition, with Antarctica and the Southern Ocean being visible in both images. The Earthrise photo was taken during the Apollo 8 mission, which was the first manned mission to orbit the Moon. The recreation of this image by Artemis astronauts highlights the progress made in space exploration and the importance of monitoring the Earth's condition. The Artemis program is a NASA mission that aims to return humans to the lunar surface by 2025. The astronauts on board the Artemis 2 mission have also set a record for the farthest distance between humans, along with the Tiangong space station astronauts. The comparison of the two images provides a unique perspective on the changes that have occurred on our planet over the past six decades.\n\n* The Apollo 8 crew's Earthrise photo in 1968 has been recreated by Artemis astronauts, showing changes to the Earth's condition.\n* The Artemis 2 mission has set a record for the farthest distance between humans, along with the Tiangong space station astronauts.\n* The comparison of the two images highlights the importance of monitoring the Earth's condition and the progress made in space exploration.",
-    "5ws": "Who: Artemis astronauts, Apollo 8 crew\nWhat: Recreated Earthrise photo\nWhen: 58 years after Apollo 8 (2026)\nWhere: Space, Earth's orbit\nWhy: Document Earth's changes",
-    "likeIm5": "Imagine astronauts, like the Apollo Astronauts, and the Artemis Space Team, taking pictures of Earth from space, showing how our planet has changed over 58 years, with help from friends like Richard Hollingham and Julian Dossett, to understand and protect our home."
-  },
-  {
-    "source_names": [
-      "Yahoo Entertainment",
-      "Sports Illustrated",
-      "Arizona Sports",
-      "Royals Review",
-      "Heavy.com",
       "Heat.com",
-      "The Action Network",
-      "Allphly.com",
-      "cleveland.com"
+      "NBCSports.com"
     ],
     "authors": [
-      "Yahoo Sports Staff",
-      "Liam McKeone, Blake Silverman",
-      "Kellan Olson",
-      "Brian Henry",
-      "Adel Ahmad",
       "Unknown Author",
-      "Matt Moore",
-      "Unknown Author",
-      "Terry Pluto, cleveland.com"
+      "Kurt Helin"
     ],
-    "ai_title": "NBA Playoffs Kick Off With Key Wins",
-    "ai_description": "Celtics shatter 76ers in humiliating Game 1 loss.",
+    "ai_title": "NBA Playoffs Begin Tonight",
+    "ai_description": "Denver reminds everyone not to sleep on them.",
     "urls": [
-      "https://sports.yahoo.com/nba/article/nba-playoffs-2026-takeaways-pistons-disappear-against-magic-wemby-dominates-thunder-roll-to-begin-title-defense-jayson-tatum-stars-in-celtics-big-win-194717958.html",
-      "https://www.si.com/nba/playoffs/winners-losers-from-the-first-weekend-lebron-tatum-durant",
-      "https://arizonasports.com/nba/phoenix-suns/suns-thunder-playoffs/3618325/",
-      "https://www.royalsreview.com/kansas-city-royals-scores-standings/97221/royals-lose-in-uninspired-fashion-7-0",
-      "https://heavy.com/sports/nba/los-angeles-lakers/lakers-return-doncic-reaves-game-rockets/",
-      "https://www.nba.com/news/live-updates-2026-nba-playoffs-r1-celtics-76ers-renew-classic-rivalry-to-open-slate",
-      "https://www.actionnetwork.com/nba/trail-blazers-vs-spurs-prediction-pick-nba-playoffs-game-1-odds-for-sunday-april-19",
-      "https://allphly.com/sixers-celtics-game-1-tyrese-maxey-nick-nurse/",
-      "https://www.cleveland.com/cavs/2026/04/a-magic-word-from-harden-mitchells-job-terry-plutos-cavs-playoff-scribbles.html"
+      "https://www.nba.com/news/live-updates-2026-nba-playoffs-r1-raptors-cavaliers-starts-off-the-night-on-peacock",
+      "https://www.nbcsports.com/nba/news/five-takeaways-from-first-weekend-of-2026-nba-playoffs-detroit-shouldnt-panic-yet"
     ],
-    "url_to_image": "https://s.yimg.com/ny/api/res/1.2/sXVlQQjKCSlthBdmtk5VIA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA7Y2Y9d2VicA--/https://d29szjachogqwa.cloudfront.net/images/2026-04/84c0e6ef-2bcb-4b05-893b-332e8fbb5e58",
+    "url_to_image": "https://cdn.nba.com/manage/2026/04/GettyImages-2271791459-Cropped-scaled.jpg",
     "category": "general",
-    "topic": "NBA Playoffs",
-    "summary": "The 2026 NBA playoffs have commenced, with several Game 1 matches taking place over the weekend. The Los Angeles Lakers won their first game against the Houston Rockets with a score of 107-98. The Boston Celtics also secured a win against the 76ers, with a significant score of 123-91. The Portland Trail Blazers and San Antonio Spurs faced off in their first-round series, with the Trail Blazers having a record of 42-40 and the Spurs having a record of 62-20. The Phoenix Suns lost to the Oklahoma City Thunder with a score of 119-84. The Cleveland Cavaliers beat the Toronto Raptors 126-113 in their opening round. The Magic visited the Pistons in Detroit for their Game 1 match. \nThe key matchups have set the stage for an exciting playoffs series. \nThe teams are preparing for their next games, with some teams looking to bounce back from their losses. \nThe playoffs series will continue with more matches throughout the week. \nThe teams' performance in the first games has given insight into their strengths and weaknesses. \nThe results of the first games have been significant, with some teams winning convincingly. \nThe playoffs series is expected to be highly competitive, with several strong teams competing.\n\n* The Los Angeles Lakers won their first game against the Houston Rockets with a score of 107-98, setting the stage for their series.\n* The Boston Celtics secured a significant win against the 76ers, with a score of 123-91, giving them an early advantage in their series.\n* The Phoenix Suns lost to the Oklahoma City Thunder with a score of 119-84, highlighting the Thunder's strong defense and the Suns' need to improve.",
-    "5ws": "Who: Celtics, 76ers, Lakers, Rockets, Thunder\nWhat: 2026 NBA Playoffs Game 1\nWhen: April 19-20, 2026\nWhere: Various NBA arenas\nWhy: Annual postseason tournament",
-    "likeIm5": "Imagine this: the NBA playoffs are like a big school tournament. The \"Boston Celtics Superstars\" and \"Philadelphia Sixers Squad\" are competing to be the best. The \"Oklahoma City Thunder Champions\" are defending their title, while the \"Los Angeles Lakers Dream Team\" is hoping for a comeback with \"Luka Doncic\" and \"Austin Reaves\" returning. The goal is to win the championship, and every game matters."
+    "topic": "2026 NBA Playoffs",
+    "summary": "The 2026 NBA Playoffs have commenced, with all eight first-round series currently underway. The series are being broadcast on various platforms, including NBC and Peacock, allowing fans to stay up-to-date with the latest developments. Aaron Gordon and the Denver Nuggets are hosting the Minnesota Timberwolves in Game 2 of their series. The playoffs have largely gone as expected, with favorite teams showcasing their dominance. However, there have been some notable exceptions, with certain teams exceeding expectations. The 2026 NBA Playoffs can be followed through the NBA.com live blog, which features highlights, news, and observations from the games. As of 2026, the playoffs are ongoing, with teams such as Boston, Oklahoma City, and Denver demonstrating strong performances.\n\n* The 2026 NBA Playoffs series are being broadcast on NBC and Peacock, providing fans with access to live games and updates.\n* Favorite teams have generally performed well in the playoffs, with some exceptions where underdog teams have shown strong performances.\n* The Denver Nuggets, led by players like Aaron Gordon, are competing in the playoffs, hosting teams like the Minnesota Timberwolves in their series.",
+    "5ws": "Who: Raptors, Cavaliers, Nuggets, Timberwolves\nWhat: 2026 NBA Playoffs first round\nWhen: April 2026\nWhere: Various NBA arenas\nWhy: Determine 2026 NBA champion",
+    "likeIm5": "Imagine this: The \"Hoops Heroes\" like Aaron Gordon and the \"Denver Dynamos\" are playing exciting games in the 2026 NBA Playoffs. It's like a big playground tournament where teams like the \"Raptors Rockstars\" and \"Cavaliers Champions\" compete to be the best. They want to win and make their fans happy, just like you want to win a game with your friends at school."
+  },
+  {
+    "source_names": [
+      "Steelers Depot",
+      "NBCSports.com",
+      "Raiders.com",
+      "Prideofdetroit.com"
+    ],
+    "authors": [
+      "Alex Kozora",
+      "Mike Florio",
+      "Paul Gutierrez",
+      "Jeremy Reisman"
+    ],
+    "ai_title": "Nfl Teams Release 2026 Mock Drafts",
+    "ai_description": "Raiders unveil shocking 7-round mock draft.",
+    "urls": [
+      "https://steelersdepot.com/2026/04/kozora-pittsburgh-steelers-2026-mock-draft-final-version/",
+      "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/pfts-one-and-only-2026-mock-draft",
+      "https://www.raiders.com/news/2026-7-round-raiders-mock-draft-fernando-mendoza-kayden-mcdonald-zachariah-branch",
+      "https://www.prideofdetroit.com/detroit-lions-draft/162106/top-10-players-fans-mock-drafting-detroit-lions-1st-round"
+    ],
+    "url_to_image": "https://steelersdepot.com/wp-content/uploads/2026/04/StockMarlinKleinResize2-1000x600.jpg",
+    "category": "sports",
+    "topic": "2026 NFL Draft",
+    "summary": "The 2026 NFL Draft cycle is nearing its end, with teams preparing for the upcoming draft on Thursday, Friday, and Saturday. The Pittsburgh Steelers, among other teams, are subjects of various mock drafts, which are simulations of the draft process. These mock drafts, such as the one by Kozora for the Steelers Depot, provide predictions of team selections, including potential trades. Paul Gutierrez of Raiders.com has also created a seven-round mock draft for the Raiders. The Detroit Lions are another team being analyzed, with a look at the top 10 players most commonly mocked to them using ESPN's simulator. The 2026 NFL Draft will feature players like Fernando Mendoza, a quarterback from Indiana, who has been mentioned in some mock drafts. The mock drafts are based on current information and are subject to change as the actual draft approaches.\n\n* The Pittsburgh Steelers are the subject of a final mock draft by Kozora for the Steelers Depot, which predicts their selections for the 2026 NFL Draft.\n* Paul Gutierrez of Raiders.com has created a seven-round mock draft for the Raiders, simulating their potential picks.\n* The Detroit Lions are being analyzed through mock drafts, with a focus on the top 10 players most commonly mocked to them using ESPN's simulator.",
+    "5ws": "Who: Pittsburgh Steelers, NFL teams\nWhat: 2026 NFL Draft preparations\nWhen: April 25-27, 2026\nWhere: New York City, NFL Draft venue\nWhy: Annual college athlete recruitment",
+    "likeIm5": "Imagine a big school where teams like \"The Jets Squad\" and \"The Raiders Crew\" are trying to pick the best friends to play together. They have Golden Tickets to choose new friends, and everyone wants the best ones. People like Alex Kozora and Paul Gutierrez are trying to guess who will pick whom. The goal is to build a strong team to win games and make their fans happy."
   },
   {
     "source_names": [
       "NHL News",
-      "TribLIVE"
+      "Nbcsportsphiladelphia.com"
     ],
     "authors": [
       "Unknown Author",
-      "Joe Starkey"
+      "Jordan Hall"
     ],
-    "ai_title": "NHL Sabres Beat Bruins",
-    "ai_description": "Malkin shockingly plays defense in Penguins' chaotic Game 1.",
+    "ai_title": "Flyers Take Early Playoff Lead",
+    "ai_description": "Flyers ignite rivalry, shattering Penguins 3-0.",
     "urls": [
-      "https://www.nhl.com/sabres/news/sabres-bruins-playoff-highlights-game-1-tage-thompson",
-      "https://triblive.com/sports/cup-of-joe-starkey-flyers-looked-like-2016-penguins-in-game-1-as-rick-tocchet-outcoached-dan-muse-time-to-simplify/"
+      "https://www.nhl.com/news/porter-martone-playing-beyond-his-years-for-flyers-in-playoffs",
+      "https://www.nbcsportsphiladelphia.com/nhl/philadelphia-flyers/flyers-rip-off-two-road-wins-to-open-playoffs-put-penguins-on-their-heels/727661/"
     ],
-    "url_to_image": "https://media.d3.nhle.com/image/private/t_ratio16_9-size50/prd/xt36efvowmtxrbunizf5.png",
+    "url_to_image": "https://media.d3.nhle.com/image/private/t_ratio16_9-size50/v1776737245/prd/duwu2sr2hnofq1mgpyv9.jpg",
     "category": "general",
-    "topic": "NHL Playoffs",
-    "summary": "The Buffalo Sabres secured a 4-3 win in Game 1 of their first-round series against the Boston Bruins, with Tage Thompson scoring his first and second career playoff goals. This win was a result of a furious comeback by the Sabres. The game took place at KeyBank Center, the home of the Buffalo Sabres. In other NHL news, Evgeni Malkin, a professional hockey player, was moved to different positions on the field, including defense. The movement of players to different positions is a common strategy in hockey. The NHL, or National Hockey League, is a professional ice hockey league consisting of 32 teams. The outcome of the game and player movements are part of the league's competitive nature.\n\n* The Buffalo Sabres won Game 1 of their series against the Boston Bruins with a score of 4-3.\n* Tage Thompson scored his first and second career playoff goals in the same game.\n* Evgeni Malkin was moved to different positions, including defense, during a game, as part of the team's strategy.",
-    "5ws": "Who: Buffalo Sabres, Boston Bruins, Tage Thompson, Mattias Samuelsson\nWhat: Sabres win Game 1 in comeback\nWhen: April 20, 2026\nWhere: KeyBank Center, Buffalo\nWhy: NHL playoffs, first-round series",
-    "likeIm5": "Imagine this: The Sabres team, led by Tage Thompson, are like the classroom heroes, coming back strong to win 4-3 against The Bruins team. It's like a big playground game where The Flyers team, guided by Rick Tocchet, are trying to outsmart The Penguins team, with Evgeni Malkin, to reach the top. The goal is to be the best and make it to the final game, like winning the school trophy."
+    "topic": "Flyers Beat Penguins",
+    "summary": "The Philadelphia Flyers are currently leading the Pittsburgh Penguins 2-0 in their best-of-seven playoff series. The Flyers' 19-year-old rookie, Martone, has been playing a significant role in the team's success. According to Martone, winning walls and blue lines is a crucial aspect of the game of hockey. The Flyers' head coach, Rick Tocchet, emphasized the importance of his team not becoming too comfortable with their series lead. The Flyers won the first two games on the road, with the second game ending in a 3-0 decision in favor of the Flyers. The series will now move to the Flyers' home ice, where they will look to maintain their lead. As of 2026, the Flyers are seeking to capitalize on their strong start to the playoffs, with Martone's performance being a key factor in their success.\n\n* The Flyers have taken a 2-0 lead in the best-of-seven playoff series against the Pittsburgh Penguins.\n* The team's 19-year-old rookie, Martone, has been contributing to the Flyers' success with his confident play.\n* The series will now move to the Flyers' home ice, where they will look to maintain their lead and advance in the playoffs.",
+    "5ws": "Who: Philadelphia Flyers, Pittsburgh Penguins, Martone\nWhat: Flyers lead 2-0 in playoffs\nWhen: April 2026\nWhere: Pittsburgh, Pennsylvania\nWhy: NHL playoffs series",
+    "likeIm5": "Imagine this: The \"Flyers Team\" and the \"Penguins Team\" are playing a big hockey game. The Flyers' young star, \"Martone the Rookie,\" is helping his team win. He's like a superhero, learning fast and playing confidently. The Flyers' coach, \"Coach Tocchet,\" is happy with the team's progress. Their goal is to win the series and make it to the next round, kind of like getting a golden ticket to the championship playground."
   },
   {
     "source_names": [
-      "Abcnews.com",
-      "Variety"
+      "Investing.com",
+      "The Wall Street Journal",
+      "CNN",
+      "Business Insider",
+      "MarketWatch"
     ],
     "authors": [
-      "LINDSEY BAHR AP film writer",
-      "Brent Lang"
+      "Unknown Author",
+      "Summer Said, Natalie Andrews, Dov Lieber",
+      "Chris Isidore",
+      "Chris Panella",
+      "Frances Yue, Joseph Adinolfi, Jamie Chisholm, Nora Redmond"
     ],
-    "ai_title": "Super Mario Tops Box Office Again",
-    "ai_description": "\"Super Mario Galaxy Movie\" shatters box office records.",
+    "ai_title": "Iran Tensions Impact Global Markets",
+    "ai_description": "US-Iran tensions ignite as Trump threatens strikes on power plants.",
     "urls": [
-      "https://abcnews.com/Entertainment/wireStory/lee-cronins-mummy-match-super-mario-hail-mary-132186620",
-      "https://variety.com/2026/film/news/box-office-super-mario-galaxy-movie-3rd-weekend-lee-cronin-the-mummy-1236725452/"
+      "https://www.investing.com/news/commodities-news/us-crude-futures-fall-as-investors-reassess-usiran-risks-ahead-of-ceasefire-deadline-4624920",
+      "https://www.wsj.com/world/middle-east/iran-to-attend-pakistan-peace-talks-2cba73c8",
+      "https://www.cnn.com/2026/04/20/business/jet-fuel-airlines-iran-war",
+      "https://www.businessinsider.com/us-navy-destroyer-shooting-cargo-ship-engine-room-iran-blockade-2026-4",
+      "https://www.marketwatch.com/livecoverage/s-p-500-dow-jones-nasdaq-oil-prices-war-in-iran-strait-of-hormuz-opened-closed"
     ],
-    "url_to_image": "https://i.abcnewsfe.com/a/da2e240f-a475-4b5b-8d9e-89b19be01498/wirestory_965c2fb1e54a7789362077c1733ff8d3_16x9.jpg?w=1600",
-    "category": "entertainment",
-    "topic": "Super Mario Galaxy Movie",
-    "summary": "The Super Mario Galaxy Movie has retained its top position at the North American box office for the third consecutive weekend, earning $35 million. This Universal and Illumination release has performed well, with its current earnings making it a notable film this year. Project Hail Mary has also continued to perform well, securing its position alongside The Super Mario Galaxy Movie. Lee Cronin's The Mummy debuted in third place, marking its initial entry into the box office rankings. The Super Mario Galaxy Movie's success can be attributed to its widespread appeal and strong marketing efforts. The film's earnings have contributed significantly to its production companies, Universal and Illumination. As of 2026, The Super Mario Galaxy Movie remains a prominent film, with its box office performance being closely monitored by industry analysts.\n\n* The Super Mario Galaxy Movie earned $35 million in its third weekend, solidifying its position at the top of the box office.\n* Project Hail Mary continued to perform well, maintaining its position alongside The Super Mario Galaxy Movie.\n* Lee Cronin's The Mummy debuted in third place, marking its initial entry into the box office rankings with a notable, though lower, earnings compared to the top two films.",
-    "5ws": "Who: Universal, Illumination, Lee Cronin\nWhat: Super Mario Galaxy Movie leads box office\nWhen: Weekend of April 19, 2026\nWhere: North American theaters\nWhy: Entertain audiences, generate revenue",
-    "likeIm5": "Imagine this: a big movie competition. The \"Super Mario Team\" and \"Hail Mary Squad\" are winning, while \"Lee Cronin's Mummy Crew\" is trying to catch up. Lindsey Bahr and Brent Lang are like the announcers, telling us who's ahead. The goal is to be the most popular movie, making people happy and selling lots of tickets."
+    "url_to_image": "https://i-invdn-com.investing.com/news/https://i-invdn-com.investing.com/trkd-images/LYNXMPEM3J191_L.jpg",
+    "category": "business",
+    "topic": "Iran US Talks",
+    "summary": "As of April 2026, oil prices have fallen due to expectations of upcoming peace talks between the US and Iran. The talks are set to take place in Pakistan, with Iran sending a negotiating team. The US and Iran have been engaged in a conflict that has impacted the oil supply and air travel. The US Navy has demonstrated its willingness to enforce its blockade on Iran by opening fire on an Iranian-flagged cargo vessel in the north Arabian Sea. The vessel did not comply with procedures, leading to the use of force. The conflict has entered its eighth week, with the latest cease-fire deadline looming. The situation is being closely monitored, with market action and oil prices affected by the developments.\n\n* The US and Iran are engaged in peace talks, with the second round set to take place in Pakistan.\n* The US Navy has enforced its blockade on Iran by opening fire on an Iranian-flagged cargo vessel that did not comply with procedures.\n* The conflict has impacted the oil supply and air travel, with oil prices falling due to expectations of the peace talks and airlines facing potential jet fuel shortages.",
+    "5ws": "Who: US, Iran, Pakistan \nWhat: US-Iran peace talks \nWhen: April 21, 2026 \nWhere: Pakistan \nWhy: Ceasefire, supply stability",
+    "likeIm5": "Imagine this: The \"USA Eagles\" and the \"Iran Lions\" are talking to solve a big problem. The \"Reuters Reporters\" and the \"Wall Street Journal Investigators\" are watching closely. They want to make sure everyone has enough \"special liquid\" to make cars and planes go, so people like \"Anmol the Traveler\" and \"Chris the Pilot\" can get where they need to go safely."
   },
   {
     "source_names": [
-      "WindowsLatest",
-      "Wccftech"
+      "NPR",
+      "WLS-TV"
     ],
     "authors": [
-      "Abhijith M B",
-      "Sarfraz Khan"
+      "The Associated Press",
+      "Unknown Author"
     ],
-    "ai_title": "Windows 11 Gets Major Update",
-    "ai_description": "Microsoft unleashes AI-powered Windows 11 updates.",
+    "ai_title": "Mexico Violence Targets Tourists And Diplomats",
+    "ai_description": "Gunfire erupts at Teotihuacan pyramids, killing one.",
     "urls": [
-      "https://www.windowslatest.com/2026/04/19/windows-11-to-get-a-major-reliability-update-in-may-with-faster-clipboard-stable-taskbar-storage-and-more/",
-      "https://wccftech.com/microsoft-continues-with-its-plan-to-bring-ai-agents-to-windows-11/"
+      "https://www.npr.org/2026/04/21/g-s1-118185/gunman-pyramids-mexico",
+      "https://abc7chicago.com/post/mexicos-sheinbaum-demands-explanations-us-embassy-officials-die-chihuahua/18927919/"
     ],
-    "url_to_image": "https://www.windowslatest.com/wp-content/uploads/2026/04/Windows-11-is-getting-a-bunch-of-reliability-improvements-in-May-2026.jpg",
+    "url_to_image": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/2175x1223+0+113/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fab%2Fab%2Fed8706a742efbd31ad2e338ee19a%2Fap26110785005303.jpg",
     "category": "general",
-    "topic": "Windows 11 Update",
-    "summary": "Microsoft is releasing a major Windows 11 reliability update in May 2026, which will improve various features such as File Explorer, taskbar, Settings, clipboard history, input systems, and Windows Hello. This update aims to make Windows 11 more reliable, with early Insider builds showing faster performance and fewer crashes. The update is currently being tested across the Release Preview, Beta, Dev, and Canary channels. Microsoft has also announced the launch of AI Agents for Windows 11, which will support third-party options and enhance productivity with Microsoft 365 Researcher and more. The AI Agents will be integrated into the Windows 11 taskbar, allowing users to interact with them directly. The Windows 11 Builds 26100.8313 and 26200.8313 have been released to test these new features. As of 2026, Microsoft is focused on improving the overall user experience of Windows 11, with a emphasis on reliability and productivity.\n\n* Microsoft is releasing a major Windows 11 reliability update in May 2026 to improve features such as File Explorer and taskbar.\n* The company is launching AI Agents for Windows 11, which will support third-party options and enhance productivity.\n* The Windows 11 update will include improvements to clipboard history, input systems, and Windows Hello, making the operating system more reliable and efficient.",
-    "5ws": "Who: Microsoft\nWhat: Windows 11 reliability update\nWhen: May 2026\nWhere: Global, Windows 11 platform\nWhy: Enhance system stability, performance",
-    "likeIm5": "Imagine this: Microsoft's \"Tech Team\" and \"Innovator Squad,\" led by Abhijith and Sarfraz, are working together to make Windows 11 better. They're like the school's IT club, fixing bugs and making things faster, so everyone can have a smoother experience, just like having a stable playground."
+    "topic": "Mexico Pyramid Shooting",
+    "summary": "In Mexico City, an armed individual stood atop one of the historic Teotihuacan pyramids and opened fire on tourists, resulting in the death of one Canadian and injuring at least 13 people. This incident occurred on a Monday at the archaeological site. Mexican President Claudia Sheinbaum has demanded explanations for a separate incident involving the death of four U.S. and Mexican officials in an accident over the weekend. President Sheinbaum stated she was unaware of any collaboration between the U.S. and local authorities regarding this incident. The Teotihuacan pyramids are a significant historical site in Mexico, attracting numerous tourists. The president's demand for explanations highlights the importance of transparency and accountability in such incidents. As of 2026, these events have drawn attention to the need for enhanced security and cooperation between authorities.\n\n* The shooting incident at Teotihuacan pyramids resulted in one Canadian death and at least 13 injuries.\n* Mexican President Claudia Sheinbaum has demanded explanations for the death of four U.S. and Mexican officials in a separate incident.\n* The incidents have raised concerns about security and cooperation between U.S. and Mexican authorities.",
+    "5ws": "Who: Mexican authorities, tourists, Canadian victim\nWhat: Gunman shoots tourists at pyramids\nWhen: Monday, April 21, 2026\nWhere: Teotihuacan pyramids, Mexico City\nWhy: Unconfirmed motive, likely terrorism or crime",
+    "likeIm5": "Imagine this: a sad day in Mexico. The \"Pyramid Protectors\" team, led by President Claudia Sheinbaum, are trying to keep everyone safe. A bad person hurt some \"World Explorers\" at the pyramids, and one \"Canadian Friend\" got very hurt. The \"NPR News Team\" and \"ABC7 Chicago Squad\" are helping tell the story. They want to figure out what happened so they can help the \"Pyramid Protectors\" keep everyone safe."
+  },
+  {
+    "source_names": [
+      "BleepingComputer",
+      "Windows Central"
+    ],
+    "authors": [
+      "Sergiu Gatlan",
+      "Zac Bowden"
+    ],
+    "ai_title": "Microsoft Enhances Windows Explorer With Ai Support",
+    "ai_description": "Microsoft unveils AI-powered Taskbar and Search Box for Windows 11.",
+    "urls": [
+      "https://www.bleepingcomputer.com/news/microsoft/microsoft-tests-file-explorer-speed-performance-improvements/",
+      "https://www.windowscentral.com/microsoft/windows-11/microsoft-is-finally-adding-the-right-kind-of-ai-support-to-windows-11-as-it-struggles-to-combat-ai-popularity-on-mac"
+    ],
+    "url_to_image": "https://www.bleepstatic.com/content/hl-images/2026/03/10/Windows.jpg",
+    "category": "technology",
+    "topic": "Microsoft Windows Explorer",
+    "summary": "Microsoft is introducing several updates to Windows 11, specifically to the File Explorer, for users participating in the Insider program. These updates include improvements to launch speed and performance. Additionally, the Taskbar and Search Box in Windows 11 are scheduled to receive a significant update next month. This update will introduce support for AI agents, a feature initially announced last year for AI developers. The incorporation of AI agents aims to enhance user experience. Microsoft's decision to roll out these updates is part of their ongoing effort to refine and expand the capabilities of Windows 11. The updates are expected to be available to users in the near future, although an exact date for the general release has not been specified.\n\n* Microsoft is rolling out updates to the File Explorer in Windows 11 to improve launch speed and performance.\n* The Taskbar and Search Box in Windows 11 will gain support for AI agents next month.\n* These updates are part of Microsoft's efforts to enhance the user experience and functionality of Windows 11.",
+    "5ws": "Who: Microsoft \nWhat: Improves Windows Explorer \nWhen: April 2026 \nWhere: Windows 11 platform \nWhy: Enhance performance",
+    "likeIm5": "Imagine this: Microsoft's \"Speedsters\" team, led by Sergiu Gatlan and Zac Bowden, are racing to make Windows 11 better. They're like the school's tech club, trying to fix a slow computer. Their goal is to help people work faster and happier, by making the File Explorer run quickly and adding smart AI helpers, like a super-smart librarian."
+  },
+  {
+    "source_names": [
+      "NASA",
+      "Upworthy"
+    ],
+    "authors": [
+      "Lauren E. Low",
+      "Adam Albright-Hanna"
+    ],
+    "ai_title": "NASA Artemis II Mission Advances",
+    "ai_description": "NASA's Artemis II mission sparks deep space camera revelations.",
+    "urls": [
+      "https://www.nasa.gov/missions/nasa-on-track-for-future-missions-with-initial-artemis-ii-assessments/",
+      "https://www.upworthy.com/pn-nasa-space-photos-no-stars-explanation/"
+    ],
+    "url_to_image": "https://www.nasa.gov/wp-content/uploads/2026/04/launch-11a3a5.jpg",
+    "category": "general",
+    "topic": "NASA Artemis II Mission",
+    "summary": "NASA's Artemis II mission has successfully splashed down on Earth, marking a significant milestone in the agency's plans for future missions. The Orion spacecraft and Space Launch System (SLS) are being thoroughly analyzed by engineers to assess the performance of key systems and subsystems. This analysis is crucial for the success of future missions, including the Artemis III mission, which aims to return humans to the lunar surface. The Artemis II mission has provided a wealth of data, which is being carefully examined to identify areas of improvement and optimize the spacecraft's systems. NASA's engineers are applying the same principles of camera science used on Earth to analyze the photos taken by cameras on the Orion spacecraft, which can be up to 400,000 kilometers away from our planet. The absence of stars in space photos is due to basic camera settings, as explained by NASA, and a photo from the Artemis II mission serves as an example of this phenomenon. The successful completion of the Artemis II mission and the ongoing analysis of its data are essential steps towards achieving NASA's goals for future space exploration.\n\n* The Artemis II mission has successfully splashed down on Earth, providing valuable data for future missions.\n* The analysis of the mission's data is crucial for optimizing the performance of key systems and subsystems on the Orion spacecraft and SLS.\n* NASA's explanation for the absence of stars in space photos highlights the application of basic camera science principles in space photography.",
+    "5ws": "Who: NASA, Engineers, Lauren E. Low, Adam Albright-Hanna\nWhat: Artemis II mission assessment, space photo analysis\nWhen: April 20, 2026\nWhere: Earth, NASA facilities\nWhy: Future mission success, technological advancement",
+    "likeIm5": "Imagine astronauts like Lauren's Space Squad and Adam's Cosmic Crew trying to reach the moon. They're like a school team working together to win a big contest, with NASA as their coach. Their goal is to make space travel safer and explore new worlds."
+  },
+  {
+    "source_names": [
+      "Indiandefencereview.com",
+      "Phys.Org",
+      "IFLScience"
+    ],
+    "authors": [
+      "Rania Hadid",
+      "University of Bologna",
+      "Benjamin Taub"
+    ],
+    "ai_title": "Neanderthal Populations Revealed Through New Genetic Evidence",
+    "ai_description": "Study unveils Neanderthals' devastating pre-extinction collapse.",
+    "urls": [
+      "https://indiandefencereview.com/event-reduced-neanderthal-populations/",
+      "https://phys.org/news/2026-04-genetic-evidence-stajnia-cave-reveals.html",
+      "https://www.iflscience.com/7500-year-old-neanderthal-human-hybrid-skull-turns-out-to-be-something-different-83250"
+    ],
+    "url_to_image": "https://indiandefencereview.com/wp-content/uploads/2026/04/scientists-uncover-the-event-that-drastically-reduced-neanderthal-populations-across-eurasia-scaled.png",
+    "category": "science",
+    "topic": "Neanderthal Population Collapse",
+    "summary": "In 2026, research on Neanderthals continues to uncover new information about their extinction. A study published in Current Biology analyzed ancient mitochondrial DNA from eight Neanderthal teeth found in Stajnia Cave, Poland. The research reconstructs the genetic profile of the oldest Neanderthal group in Central-Eastern Europe. Archaeologists in Germany discovered a human skull in 1973 that was later analyzed to determine its origin. A new genetic study reveals that Neanderthals suffered a population collapse long before their extinction. The study of Neanderthal teeth and the human skull provides insights into the evolutionary story of Neanderthals. The research also explores the possibility of hybrid offspring between modern humans and Neanderthals, based on the analysis of a frontal bone from Germany.\n\n* The analysis of ancient mitochondrial DNA from Neanderthal teeth provides new information about the genetic profile of Neanderthals in Central-Eastern Europe.\n* A human skull discovered in Germany in 1973 was later found to not be a hybrid of a Neanderthal and a modern human.\n* The new genetic study reveals that a devastating population collapse occurred among Neanderthals before their extinction, reshaping their evolutionary story.",
+    "5ws": "Who: Scientists, Neanderthals \nWhat: Genetic study on population collapse \nWhen: Published April 20, 2026 \nWhere: Eurasia, Stajnia Cave, Poland \nWhy: Uncover Neanderthal extinction causes",
+    "likeIm5": "Imagine this: scientists like Rania Hadid, the Discovery Detective, and the University of Bologna Team, the History Helpers, are solving a mystery about Neanderthals. They're like a school team working together to figure out what happened to these ancient humans, and they're using special clues like old teeth and bones to uncover the truth, helping us learn more about our past."
+  },
+  {
+    "source_names": [
+      "Associated Press",
+      "POLITICO.eu"
+    ],
+    "authors": [
+      "Nicole Winfield",
+      "Aitor Hernández-Morales"
+    ],
+    "ai_title": "Pope Faces Global Leaders",
+    "ai_description": "Pope Leo XIV shatters chains of corruption in Africa.",
+    "urls": [
+      "https://apnews.com/article/africa-pope-leo-trump-iran-war-d72ee89589d821785fa4ed195f0e99f6",
+      "https://www.politico.eu/article/pope-leo-attila-the-hun-donald-j-trump-brief-history-popes-fighting-world-leaders/"
+    ],
+    "url_to_image": "https://dims.apnews.com/dims4/default/23bf1e3/2147483647/strip/true/crop/5159x3438+0+1/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F8d%2Fdc%2F016ef1d499ee88ed0fa94dc13c35%2F715e1398114049179fc3856728c968af",
+    "category": "general",
+    "topic": "Pope Leo Africa Trip",
+    "summary": "Pope Leo XIV has been traveling through Africa, where he has been criticizing the \"handful of tyrants\" and \"chains of corruption\" that have held parts of the continent hostage for centuries. During his trip, he has found his voice and has been speaking out against injustices. Pope Leo XIV's actions are part of a long tradition of popes sparring with historical figures, including French Emperor Napoleon Bonaparte, who had a tumultuous relationship with the Catholic Church's leadership. Napoleon Bonaparte invaded Italy and defeated the troops guarding the Pope, showcasing the complex history between the church and political leaders. The current Pope's veiled rebukes of the U.S. president also highlight this ongoing dynamic. Pope Leo XIV's trip through Africa has brought attention to the issues affecting the continent, including corruption and tyranny. The Pope's statements and actions have been reported on by various news outlets, including AP News and Politico.\n\n* Pope Leo XIV has been criticizing the \"handful of tyrants\" and \"chains of corruption\" in Africa during his trip.\n* The Pope's actions are part of a long tradition of popes sparring with historical figures, including French Emperor Napoleon Bonaparte.\n* The current Pope's statements have been reported on by various news outlets, including AP News and Politico, highlighting the complex relationship between the Catholic Church and political leaders.",
+    "5ws": "Who: Pope Leo XIV\nWhat: Criticizes African corruption\nWhen: April 2026\nWhere: Africa, specifically Angola\nWhy: Exposes tyranny, promotes reform",
+    "likeIm5": "Imagine a big trip to Africa where \"The Kind Pope\" traveled to help people. He met \"The African Friends\" and talked about being fair and kind. \"The World Leader,\" like a principal, listened to his important message. The goal is to make the world a better place by stopping mean actions and helping everyone be happy and free."
+  },
+  {
+    "source_names": [
+      "Healthline",
+      "Healthandme.com"
+    ],
+    "authors": [
+      "Mandy French",
+      "Simran Arora"
+    ],
+    "ai_title": "Weight Loss Drugs Cause Muscle Loss",
+    "ai_description": "Study uncovers overlooked Ozempic side effects.",
+    "urls": [
+      "https://www.healthline.com/health-news/hidden-side-effects-glp-1-drugs-ozempic-reddit-study",
+      "https://www.healthandme.com/health-news/shocking-study-claims-weight-loss-drugs-cause-more-muscle-loss-than-expected-article-154118635"
+    ],
+    "url_to_image": "https://media.post.rvohealth.io/wp-content/uploads/2026/04/holding-glp-1-pen-1200x628-facebook.jpg",
+    "category": "health",
+    "topic": "Weight Loss Drugs",
+    "summary": "A recent study examined the side effects of GLP-1 drugs, such as Ozempic and Mounjaro, which are used for weight loss. The research utilized self-reported data from Reddit users to identify overlooked side effects. The study found that users of these medications reported experiencing chills, hot flashes, and irregular periods. GLP-1, or glucagon-like peptide-1, is a hormone that helps regulate blood sugar levels and is often used in medications for weight loss and diabetes management. The side effects reported in the study were not previously well-documented, highlighting the importance of continued research into the effects of these medications. The medications in question, Ozempic and Mounjaro, are prescription drugs approved for weight loss and blood sugar management. As of 2026, these findings contribute to the ongoing monitoring of GLP-1 drugs' safety and efficacy by health professionals and regulatory agencies.\n\n* The study identified chills, hot flashes, and irregular periods as previously underreported side effects of GLP-1 weight loss medications.\n* GLP-1 medications, including Ozempic and Mounjaro, are designed to help regulate blood sugar levels and facilitate weight loss.\n* The research relied on self-reported data from Reddit users, providing valuable insights into the experiences of individuals using these medications.",
+    "5ws": "Who: Mandy French, Simran Arora, Healthline, Healthandme.com\nWhat: Reporting hidden side effects of GLP-1 weight loss drugs\nWhen: April 20, 2026\nWhere: Online health platforms\nWhy: Informing public about unforeseen weight loss drug effects",
+    "likeIm5": "Imagine this: \"The Healthy Helpers\" team, like Mandy French and Simran Arora, are on a mission to understand weight loss medicines like Ozempic. They're like referees on a playground, making sure everyone knows the rules and stays safe. Their big goal is to help people get healthier, not just thinner, by figuring out any hidden side effects."
   },
   {
     "source_names": [
       "Cageside Seats",
-      "Forbes",
       "Cageside Seats",
-      "Ringside News",
       "Cageside Seats",
-      "New York Post",
-      "Wrestling Inc.",
-      "Wrestling Inc.",
-      "Ringside News",
-      "Nodq.com",
-      "Ringside News"
+      "SPORTbible"
     ],
     "authors": [
       "Geno Mrosko",
-      "Alfred Konuwa",
-      "Sean Rueter",
-      "Steve Carrier",
-      "Cain A. Knight",
-      "Joseph Staszewski",
-      "Daisy Ruth",
-      "Daisy Ruth",
-      "Steve Carrier",
-      "Aaron Rift",
-      "Derek Holloway"
+      "Geno Mrosko",
+      "Claire Elizabeth",
+      "Luke Davies"
     ],
-    "ai_title": "WrestleMania 42 Results Revealed",
-    "ai_description": "Randy Orton's title loss shatters plans.",
+    "ai_title": "WrestleMania Aftermath Unfolds Slowly",
+    "ai_description": "WWE icon provokes retirement speculation, dropping gear in the ring.",
     "urls": [
-      "https://www.cagesideseats.com/wwe/435592/oba-femi-roman-reigns-wwe-wrestlemania-42",
-      "https://www.forbes.com/sites/alfredkonuwa/2026/04/19/wwe-wrestlemania-42-results-winners-and-grades-on-night-2-april-19-2026/",
-      "https://www.cagesideseats.com/wwe/435548/wrestlemania-42-danhausen-debut-john-cena-mini-hausen-dog-pile-miz-kit-wilson",
-      "https://www.ringsidenews.com/backstage-timing-trick-williams-character-change-comes-light-wrestlemania-42/",
-      "https://www.cagesideseats.com/wwe/435472/wrestlemania-42-results-ladder-match-ic-title-penta-mysterio-jevon-shao-khan-spot-fest-wow",
-      "https://nypost.com/2026/04/19/sports/brock-lesnar-appears-to-stunningly-retire-at-wrestlemania-42/",
-      "https://www.wrestlinginc.com/2151983/wwe-wrestlemania-42-randy-orton-supposed-win-title-cody-rhodes/",
-      "https://www.wrestlinginc.com/2151966/wwe-wrestlemania-42-night-2-match-order/",
-      "https://www.ringsidenews.com/wwe-wrestlemania-42-spoiler-lineup-april-19-2026-full-match-card-backstage-notes-revealed/",
-      "https://nodq.com/news/aj-lee-issues-emotional-statement-following-her-loss-to-becky-lynch-at-wwe-wrestlemania-42/",
-      "https://www.ringsidenews.com/tony-khan-promotes-aew-dynamite-minutes-wrestlemania-42-night-one-ends/"
+      "https://www.cagesideseats.com/wwe/436058/the-bloodline-reunite-jacob-fatu-vs-roman-reigns-wwe-backlash-2026-raw-after-wrestlemania",
+      "https://www.cagesideseats.com/wwe/436005/oba-femi-promo-raw-after-wrestlemania-42-brock-lesnar-match-wwe",
+      "https://www.cagesideseats.com/wwe/434306/wwe-raw-results-live-discussion-apr-20-2026-its-the-one-after-mania",
+      "https://www.sportbible.com/wrestling/wwe/brock-lesnar-retirement-wrestlemania-triple-h-update-653537-20260420"
     ],
-    "url_to_image": "https://platform.cagesideseats.com/wp-content/uploads/sites/54/2026/04/gettyimages-2272110888.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+    "url_to_image": "https://platform.cagesideseats.com/wp-content/uploads/sites/54/2026/04/Bloodline.png?quality=90&strip=all&crop=0%2C3.1866195077019%2C100%2C93.626760984596&w=1200",
     "category": "entertainment",
-    "topic": "WrestleMania 42",
-    "summary": "WrestleMania 42 took place at Allegiant Stadium in Las Vegas, Nevada, featuring notable matches and events. On Night 2, Oba Femi defeated Brock Lesnar, potentially marking a significant shift in career trajectory for both wrestlers. Brock Lesnar subsequently appeared to retire from professional wrestling, leaving his gloves and boots in the ring. The event also saw Trick Williams capture the United States Championship, indicating prior planning by WWE for his character development. AJ Lee lost the women's Intercontinental title to Becky Lynch, prompting an emotional statement after the match. WrestleMania 42 featured a range of thrilling matches, including a 6-man ladder match for Penta's Intercontinental championship. The event concluded with various implications for WWE and its wrestlers, setting the stage for future developments.\n\n* Trick Williams won the United States Championship, indicating prior planning by WWE for his character direction.\n* Brock Lesnar appeared to retire from professional wrestling after losing to Oba Femi on Night 2 of WrestleMania 42.\n* AJ Lee lost the women's Intercontinental title to Becky Lynch, prompting an emotional statement after the match.",
-    "5ws": "Who: Oba Femi, Roman Reigns, Brock Lesnar\nWhat: WrestleMania 42 matches\nWhen: April 19-20, 2026\nWhere: Allegiant Stadium, Las Vegas\nWhy: Annual WWE championship event",
-    "likeIm5": "Imagine this big playground where wrestlers like \"The Beast\" Brock Lesnar, \"The Ruler\" Oba Femi, and \"The Man\" Becky Lynch are competing. It's like a huge game of tag, where the goal is to be the last one standing, and the prize is the championship title. The New York Giants of wrestling, led by John Cena, are trying to win, while the Las Vegas Raiders, with AJ Lee, are giving it their all."
+    "topic": "WWE Raw After WrestleMania",
+    "summary": "Roman Reigns, the New World Heavyweight Champion, appeared on Monday Night Raw on April 20, 2026, at the T-Mobile Arena in Paradise, Nevada. He had previously promised to work full-time, at least for the summer. The event was a follow-up to WrestleMania 42, which took place earlier. WWE Chief Content Officer Triple H revealed what happened backstage after Brock Lesnar's defeat at WrestleMania 42. Lesnar's actions sparked speculation about his potential retirement. Roman Reigns' appearance on Monday Night Raw was significant, as it marked his return to the show. The events of Monday Night Raw and WrestleMania 42 have been widely reported and discussed in the media, including on Cageside Seats and SPORTbible.\n\n* Roman Reigns appeared on Monday Night Raw on April 20, 2026, at the T-Mobile Arena in Paradise, Nevada.\n* Triple H revealed what happened backstage after Brock Lesnar's defeat at WrestleMania 42, which took place earlier in 2026.\n* The WWE has been hosting various events, including Monday Night Raw and WrestleMania 42, which have been covered by multiple media outlets.",
+    "5ws": "Who: Roman Reigns, Jacob Fatu, Brock Lesnar\nWhat: WWE Raw After WrestleMania 42\nWhen: April 20, 2026\nWhere: T-Mobile Arena, Paradise, Nevada\nWhy: Post-WrestleMania fallout, new storylines",
+    "likeIm5": "Imagine this: Roman Reigns, the \"Champion Hero,\" and his friends, \"The Bloodline Team,\" are getting ready for a big match at Backlash. They're like the coolest kids on the playground, and everyone wants to be their friend or beat them in a game of tag. Jacob Fatu, the \"New Challenger,\" might get a chance to play against Roman, and it's going to be a big deal."
+  },
+  {
+    "source_names": [
+      "ScienceAlert",
+      "AL.com",
+      "The Jerusalem Post"
+    ],
+    "authors": [
+      "Associated Press",
+      "Savannah Tryens-Fernandes | stryens-fernandes@al.com",
+      "NEWS AGENCIES"
+    ],
+    "ai_title": "Bowel Cancer Deaths Rise Unexpectedly",
+    "ai_description": "Colorectal cancer deaths surge in younger, less educated adults.",
+    "urls": [
+      "https://www.sciencealert.com/young-adult-bowel-cancer-deaths-concentrated-in-one-group-study-finds",
+      "https://www.al.com/news/2026/04/untreated-syphilis-on-the-rise-in-alabama-with-no-sign-of-letting-up-heres-why.html",
+      "https://www.jpost.com/health-and-wellness/health-and-wellness-around-the-world/article-892946"
+    ],
+    "url_to_image": "https://www.sciencealert.com/images/2026/04/WomanSittingAloneOnHospitalBed.jpg",
+    "category": "health",
+    "topic": "Young Adult Bowel Cancer",
+    "summary": "A recent study found that the rise in colorectal cancer deaths in younger adults is concentrated in people with less education, suggesting socioeconomic factors could be driving the escalation. According to the study, this correlation indicates a potential link between education level and health outcomes. The Alabama Department of Public Health reported a decline in rates of some sexually transmitted diseases over the last three years, but expects syphilis cases to increase over the next two years. A separate study examined the relationship between bowel movement frequency and gut health, identifying an ideal range of once to twice a day. This study included over 1,400 participants and aimed to understand the implications of bowel movement frequency on overall health. The findings suggest that socioeconomic factors and health habits may contribute to the rise in colorectal cancer deaths and other health issues. The studies highlight the importance of addressing health disparities and promoting healthy habits to mitigate these trends.\n\n* The rise in colorectal cancer deaths in younger adults is concentrated in people with less education, suggesting socioeconomic factors are a driving force.\n* The Alabama Department of Public Health expects syphilis cases to increase over the next two years, despite a decline in rates of some other sexually transmitted diseases.\n* A study found that a bowel movement frequency of once to twice a day is ideal, with persistent deviations from this range linked to an increased risk of hidden health problems.",
+    "5ws": "Who: Young adults, Alabama residents\nWhat: Rising bowel cancer deaths, syphilis cases\nWhen: 2026, specifically April 20\nWhere: US, Alabama, New York\nWhy: Socioeconomic factors, untreated diseases",
+    "likeIm5": "Imagine this: The \"Health Heroes\" team, including the \"Science Alert Squad\" and the \"Alabama Avengers,\" are working together to solve a big problem. They're trying to figure out why some younger adults are getting very sick with bowel cancer, and they think it might have something to do with how much money their families have."
   }
 ]
