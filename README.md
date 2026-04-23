@@ -4,6 +4,7 @@ A full-stack news aggregation and summarization web application that fetches cur
 
 # Purpose
 The world is filled with a constant flood of news, and the ability to stay informed in today’s fast-paced world is a struggle for many people. Be it long, complex articles or watching out for bias, it leads people not to stay informed. The main objective of this project is to create a website that would summarize and explain news articles.
+
 # Product Scope
 The main objective of Real News is to create a website that summarizes and explains news articles. The website will provide users with an easy way to inform themselves in multiple ways. The platform generates summaries of submitted articles and features an interactive Q&A capability based on the content.  Users can tailor the article's AI  summary to match their unique needs(certain topics, certain complexity, etc), further increasing their efficiency.  The website will gather current and trending articles by scraping the web and using the NewsAPI, and then analyze them. The articles will be sorted by popularity and topic, making it easier for users to find relevant information. These groups of related articles are then summarized using artificial intelligence. The summarized groups and their corresponding topics are displayed on a user dashboard for easy browsing. Additional functionality is provided for each group, including options such as “explain like I’m 5” and “give me the five Ws.” The final deliverable will be a fully functional website that will be able to aggregate, analyze, sort, and then output news content in an easy, accessible way. 
 
@@ -38,7 +39,7 @@ The website was built to be intuitive enough that minimal user doucmentation and
 # Logic Structure
 <img width="975" height="394" alt="image" src="https://github.com/user-attachments/assets/0023860d-6cdc-4860-8eab-c3187bb4755c" />
 
-#Maintaing
+# Maintaing 
 - API keys: Currently limited access to API calls so the website could be throttled in the future
 - Report Button: If users encounter an error in an article description or in a feature, they can report it
 - 
