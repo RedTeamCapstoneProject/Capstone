@@ -1,293 +1,177 @@
 [
   {
     "source_names": [
-      "Heat.com",
-      "NBCSports.com"
+      "Page Six",
+      "Awful Announcing",
+      "Windy City Gridiron",
+      "Prideofdetroit.com",
+      "Yahoo Entertainment"
     ],
     "authors": [
-      "Unknown Author",
-      "Kurt Helin"
+      "Jolie Zenna",
+      "Brendon Kleen",
+      "Aaron Leming",
+      "Jeremy Reisman",
+      "Nate Tice"
     ],
-    "ai_title": "NBA Playoffs Begin Tonight",
-    "ai_description": "Denver reminds everyone not to sleep on them.",
+    "ai_title": "Nfl Draft Rumors Emerge",
+    "ai_description": "Photos surface of Vrabel with NFL reporter, sparking controversy.",
     "urls": [
-      "https://www.nba.com/news/live-updates-2026-nba-playoffs-r1-raptors-cavaliers-starts-off-the-night-on-peacock",
-      "https://www.nbcsports.com/nba/news/five-takeaways-from-first-weekend-of-2026-nba-playoffs-detroit-shouldnt-panic-yet"
+      "https://pagesix.com/2026/04/21/celebrity-news/mike-vrabel-dodges-questions-about-dianna-russinis-resignation/",
+      "https://awfulannouncing.com/nfl/todd-mcshay-draft-intel-fanduel-bets.html",
+      "https://www.windycitygridiron.com/chicago-bears-draft/114778/nfl-full-first-round-2026-mock-draft-ohio-state-texas-tech-indiana-bears",
+      "https://www.prideofdetroit.com/detroit-lions-rumors/162239/nfl-draft-rumor-early-run-offensive-tackles-detroit-lions",
+      "https://sports.yahoo.com/nfl/article/2026-nfl-mock-draft-91-fernando-mendoza-to-raiders-david-bailey-to-jets-how-chiefs-cowboys-did-143901201.html"
     ],
-    "url_to_image": "https://cdn.nba.com/manage/2026/04/GettyImages-2271791459-Cropped-scaled.jpg",
-    "category": "general",
-    "topic": "2026 NBA Playoffs",
-    "summary": "The 2026 NBA Playoffs have commenced, with all eight first-round series currently underway. The series are being broadcast on various platforms, including NBC and Peacock, allowing fans to stay up-to-date with the latest developments. Aaron Gordon and the Denver Nuggets are hosting the Minnesota Timberwolves in Game 2 of their series. The playoffs have largely gone as expected, with favorite teams showcasing their dominance. However, there have been some notable exceptions, with certain teams exceeding expectations. The 2026 NBA Playoffs can be followed through the NBA.com live blog, which features highlights, news, and observations from the games. As of 2026, the playoffs are ongoing, with teams such as Boston, Oklahoma City, and Denver demonstrating strong performances.\n\n* The 2026 NBA Playoffs series are being broadcast on NBC and Peacock, providing fans with access to live games and updates.\n* Favorite teams have generally performed well in the playoffs, with some exceptions where underdog teams have shown strong performances.\n* The Denver Nuggets, led by players like Aaron Gordon, are competing in the playoffs, hosting teams like the Minnesota Timberwolves in their series.",
-    "5ws": "Who: Raptors, Cavaliers, Nuggets, Timberwolves\nWhat: 2026 NBA Playoffs first round\nWhen: April 2026\nWhere: Various NBA arenas\nWhy: Determine 2026 NBA champion",
-    "likeIm5": "Imagine this: The \"Hoops Heroes\" like Aaron Gordon and the \"Denver Dynamos\" are playing exciting games in the 2026 NBA Playoffs. It's like a big playground tournament where teams like the \"Raptors Rockstars\" and \"Cavaliers Champions\" compete to be the best. They want to win and make their fans happy, just like you want to win a game with your friends at school."
-  },
-  {
-    "source_names": [
-      "Steelers Depot",
-      "NBCSports.com",
-      "Raiders.com",
-      "Prideofdetroit.com"
-    ],
-    "authors": [
-      "Alex Kozora",
-      "Mike Florio",
-      "Paul Gutierrez",
-      "Jeremy Reisman"
-    ],
-    "ai_title": "Nfl Teams Release 2026 Mock Drafts",
-    "ai_description": "Raiders unveil shocking 7-round mock draft.",
-    "urls": [
-      "https://steelersdepot.com/2026/04/kozora-pittsburgh-steelers-2026-mock-draft-final-version/",
-      "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/pfts-one-and-only-2026-mock-draft",
-      "https://www.raiders.com/news/2026-7-round-raiders-mock-draft-fernando-mendoza-kayden-mcdonald-zachariah-branch",
-      "https://www.prideofdetroit.com/detroit-lions-draft/162106/top-10-players-fans-mock-drafting-detroit-lions-1st-round"
-    ],
-    "url_to_image": "https://steelersdepot.com/wp-content/uploads/2026/04/StockMarlinKleinResize2-1000x600.jpg",
+    "url_to_image": "https://pagesix.com/wp-content/uploads/sites/3/2026/04/126122770.jpg?quality=75&strip=all&w=1200",
     "category": "sports",
     "topic": "2026 NFL Draft",
-    "summary": "The 2026 NFL Draft cycle is nearing its end, with teams preparing for the upcoming draft on Thursday, Friday, and Saturday. The Pittsburgh Steelers, among other teams, are subjects of various mock drafts, which are simulations of the draft process. These mock drafts, such as the one by Kozora for the Steelers Depot, provide predictions of team selections, including potential trades. Paul Gutierrez of Raiders.com has also created a seven-round mock draft for the Raiders. The Detroit Lions are another team being analyzed, with a look at the top 10 players most commonly mocked to them using ESPN's simulator. The 2026 NFL Draft will feature players like Fernando Mendoza, a quarterback from Indiana, who has been mentioned in some mock drafts. The mock drafts are based on current information and are subject to change as the actual draft approaches.\n\n* The Pittsburgh Steelers are the subject of a final mock draft by Kozora for the Steelers Depot, which predicts their selections for the 2026 NFL Draft.\n* Paul Gutierrez of Raiders.com has created a seven-round mock draft for the Raiders, simulating their potential picks.\n* The Detroit Lions are being analyzed through mock drafts, with a focus on the top 10 players most commonly mocked to them using ESPN's simulator.",
-    "5ws": "Who: Pittsburgh Steelers, NFL teams\nWhat: 2026 NFL Draft preparations\nWhen: April 25-27, 2026\nWhere: New York City, NFL Draft venue\nWhy: Annual college athlete recruitment",
-    "likeIm5": "Imagine a big school where teams like \"The Jets Squad\" and \"The Raiders Crew\" are trying to pick the best friends to play together. They have Golden Tickets to choose new friends, and everyone wants the best ones. People like Alex Kozora and Paul Gutierrez are trying to guess who will pick whom. The goal is to build a strong team to win games and make their fans happy."
+    "summary": "The 2026 NFL Draft is nearing, with the event scheduled to take place in Pittsburgh from Thursday to Saturday. Mike Vrabel, a notable figure in the NFL, recently addressed reporters, dodging questions related to a photo scandal involving Dianna Russini. Todd McShay, a longtime NFL Draft analyst, has been active during this period, providing player analysis and participating in promotions. The draft process involves scouting evaluations, testing numbers, pro days, team visits, trades, and other factors that contribute to the selection of 257 players. Reporters are currently contacting sources to gather information and rumors before the event. The 2026 NFL Draft will feature 32 picks in the first round, with various teams and players being discussed in mock drafts. As the draft approaches, teams like the Chicago Bears and the Lions are preparing for their selections, with some predictions suggesting an early run on offensive tackles.\n\n* The 2026 NFL Draft will feature 257 players being selected over three days in Pittsburgh.\n* Mike Vrabel dodged questions related to a photo scandal involving Dianna Russini during a recent press conference.\n* The draft process involves various factors, including scouting evaluations, testing numbers, and team visits, which contribute to the selection of players by teams like the Chicago Bears and the Lions.",
+    "5ws": "Who: Mike Vrabel, Dianna Russini, NFL teams\nWhat: 2026 NFL Draft, team selections\nWhen: April 2026, Thursday-Saturday\nWhere: Pittsburgh, Pennsylvania\nWhy: Annual recruitment of college athletes",
+    "likeIm5": "Imagine this, the NFL friends are having a big gathering to pick their new teammates. The New York Jets team, the Cowboys team, and the Chicago Bears team are all trying to get the best players. Mike Vrabel, Todd McShay, and Dianna Russini are like the playground coaches, helping teams choose wisely. They want to win and make their teams stronger, so they're using their Golden Tickets to pick the best friends."
   },
   {
     "source_names": [
-      "NHL News",
-      "Nbcsportsphiladelphia.com"
+      "The Verge",
+      "ScienceAlert"
     ],
     "authors": [
-      "Unknown Author",
-      "Jordan Hall"
+      "Victoria Song",
+      "The Conversation"
     ],
-    "ai_title": "Flyers Take Early Playoff Lead",
-    "ai_description": "Flyers ignite rivalry, shattering Penguins 3-0.",
+    "ai_title": "Smartwatches Provide Flawed Health Metrics",
+    "ai_description": "Apple Watch ignites the modern health tech era.",
     "urls": [
-      "https://www.nhl.com/news/porter-martone-playing-beyond-his-years-for-flyers-in-playoffs",
-      "https://www.nbcsportsphiladelphia.com/nhl/philadelphia-flyers/flyers-rip-off-two-road-wins-to-open-playoffs-put-penguins-on-their-heels/727661/"
+      "https://www.theverge.com/tech/915976/tim-cook-john-ternus-apple-watch-health-tech-wearables",
+      "https://www.sciencealert.com/your-smartwatch-may-be-getting-6-key-health-metrics-wrong"
     ],
-    "url_to_image": "https://media.d3.nhle.com/image/private/t_ratio16_9-size50/v1776737245/prd/duwu2sr2hnofq1mgpyv9.jpg",
+    "url_to_image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25623076/247270_Apple_watch_series_10_AKrales_0557.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
     "category": "general",
-    "topic": "Flyers Beat Penguins",
-    "summary": "The Philadelphia Flyers are currently leading the Pittsburgh Penguins 2-0 in their best-of-seven playoff series. The Flyers' 19-year-old rookie, Martone, has been playing a significant role in the team's success. According to Martone, winning walls and blue lines is a crucial aspect of the game of hockey. The Flyers' head coach, Rick Tocchet, emphasized the importance of his team not becoming too comfortable with their series lead. The Flyers won the first two games on the road, with the second game ending in a 3-0 decision in favor of the Flyers. The series will now move to the Flyers' home ice, where they will look to maintain their lead. As of 2026, the Flyers are seeking to capitalize on their strong start to the playoffs, with Martone's performance being a key factor in their success.\n\n* The Flyers have taken a 2-0 lead in the best-of-seven playoff series against the Pittsburgh Penguins.\n* The team's 19-year-old rookie, Martone, has been contributing to the Flyers' success with his confident play.\n* The series will now move to the Flyers' home ice, where they will look to maintain their lead and advance in the playoffs.",
-    "5ws": "Who: Philadelphia Flyers, Pittsburgh Penguins, Martone\nWhat: Flyers lead 2-0 in playoffs\nWhen: April 2026\nWhere: Pittsburgh, Pennsylvania\nWhy: NHL playoffs series",
-    "likeIm5": "Imagine this: The \"Flyers Team\" and the \"Penguins Team\" are playing a big hockey game. The Flyers' young star, \"Martone the Rookie,\" is helping his team win. He's like a superhero, learning fast and playing confidently. The Flyers' coach, \"Coach Tocchet,\" is happy with the team's progress. Their goal is to win the series and make it to the next round, kind of like getting a golden ticket to the championship playground."
+    "topic": "Apple Watch Health Tech",
+    "summary": "As of 2026, wearable health technology has become a significant aspect of the health industry, with major companies like Apple contributing to its development. Apple's CEO, Tim Cook, has stated that the company's greatest contribution to mankind would be in the health sector. The Apple Watch, introduced under Tim Cook's leadership, has played a crucial role in shaping the modern health tech era. Wearable devices like smartwatches can track various health metrics, including fitness scores, calories burned, and recovery scores. However, there have been concerns about the accuracy of these metrics, with some studies suggesting that smartwatches may provide incorrect data. According to reports, Tim Cook's vision for health tech may have a lasting impact on the industry. The development and accuracy of wearable health technology continue to be important topics of discussion, with companies working to improve their products and provide reliable health data to consumers.\n\n* The Apple Watch was the first major product released by Apple under Tim Cook's leadership, marking a significant shift towards health-focused technology.\n* Wearable devices like smartwatches can track various health metrics, but their accuracy has been questioned in some studies.\n* Tim Cook has stated that Apple's greatest contribution to mankind will be in the health sector, indicating a long-term commitment to developing health-focused technology.",
+    "5ws": "Who: Tim Cook, Apple \nWhat: Advancing wearable health tech \nWhen: 2026, post-Jobs era \nWhere: Global, Apple platforms \nWhy: Revolutionizing personal health metrics",
+    "likeIm5": "Imagine a big playground where Tim Cook, the Apple Team Captain, and Victoria Song, the Tech Reporter, are working together to make health tracking super cool and accurate. They're like the Fitness Friends, trying to help everyone get healthier and happier, with the help of John Ternus, the Apple Watch Coach."
   },
   {
     "source_names": [
-      "Investing.com",
-      "The Wall Street Journal",
-      "CNN",
-      "Business Insider",
-      "MarketWatch"
+      "Vulture",
+      "Deadline"
     ],
     "authors": [
-      "Unknown Author",
-      "Summer Said, Natalie Andrews, Dov Lieber",
-      "Chris Isidore",
-      "Chris Panella",
-      "Frances Yue, Joseph Adinolfi, Jamie Chisholm, Nora Redmond"
+      "Jason P. Frank",
+      "Anthony D'Alessandro"
     ],
-    "ai_title": "Iran Tensions Impact Global Markets",
-    "ai_description": "US-Iran tensions ignite as Trump threatens strikes on power plants.",
+    "ai_title": "Michael Jackson Biopic Eyes $150M Debut",
+    "ai_description": "Janet and Randy Jackson omitted from new Michael Jackson biopic.",
     "urls": [
-      "https://www.investing.com/news/commodities-news/us-crude-futures-fall-as-investors-reassess-usiran-risks-ahead-of-ceasefire-deadline-4624920",
-      "https://www.wsj.com/world/middle-east/iran-to-attend-pakistan-peace-talks-2cba73c8",
-      "https://www.cnn.com/2026/04/20/business/jet-fuel-airlines-iran-war",
-      "https://www.businessinsider.com/us-navy-destroyer-shooting-cargo-ship-engine-room-iran-blockade-2026-4",
-      "https://www.marketwatch.com/livecoverage/s-p-500-dow-jones-nasdaq-oil-prices-war-in-iran-strait-of-hormuz-opened-closed"
+      "http://www.vulture.com/article/are-janet-randy-jackson-michael-biopic.html",
+      "http://deadline.com/2026/04/box-office-michael-weekend-projection-1236867306/"
     ],
-    "url_to_image": "https://i-invdn-com.investing.com/news/https://i-invdn-com.investing.com/trkd-images/LYNXMPEM3J191_L.jpg",
-    "category": "business",
-    "topic": "Iran US Talks",
-    "summary": "As of April 2026, oil prices have fallen due to expectations of upcoming peace talks between the US and Iran. The talks are set to take place in Pakistan, with Iran sending a negotiating team. The US and Iran have been engaged in a conflict that has impacted the oil supply and air travel. The US Navy has demonstrated its willingness to enforce its blockade on Iran by opening fire on an Iranian-flagged cargo vessel in the north Arabian Sea. The vessel did not comply with procedures, leading to the use of force. The conflict has entered its eighth week, with the latest cease-fire deadline looming. The situation is being closely monitored, with market action and oil prices affected by the developments.\n\n* The US and Iran are engaged in peace talks, with the second round set to take place in Pakistan.\n* The US Navy has enforced its blockade on Iran by opening fire on an Iranian-flagged cargo vessel that did not comply with procedures.\n* The conflict has impacted the oil supply and air travel, with oil prices falling due to expectations of the peace talks and airlines facing potential jet fuel shortages.",
-    "5ws": "Who: US, Iran, Pakistan \nWhat: US-Iran peace talks \nWhen: April 21, 2026 \nWhere: Pakistan \nWhy: Ceasefire, supply stability",
-    "likeIm5": "Imagine this: The \"USA Eagles\" and the \"Iran Lions\" are talking to solve a big problem. The \"Reuters Reporters\" and the \"Wall Street Journal Investigators\" are watching closely. They want to make sure everyone has enough \"special liquid\" to make cars and planes go, so people like \"Anmol the Traveler\" and \"Chris the Pilot\" can get where they need to go safely."
-  },
-  {
-    "source_names": [
-      "NPR",
-      "WLS-TV"
-    ],
-    "authors": [
-      "The Associated Press",
-      "Unknown Author"
-    ],
-    "ai_title": "Mexico Violence Targets Tourists And Diplomats",
-    "ai_description": "Gunfire erupts at Teotihuacan pyramids, killing one.",
-    "urls": [
-      "https://www.npr.org/2026/04/21/g-s1-118185/gunman-pyramids-mexico",
-      "https://abc7chicago.com/post/mexicos-sheinbaum-demands-explanations-us-embassy-officials-die-chihuahua/18927919/"
-    ],
-    "url_to_image": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/2175x1223+0+113/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fab%2Fab%2Fed8706a742efbd31ad2e338ee19a%2Fap26110785005303.jpg",
-    "category": "general",
-    "topic": "Mexico Pyramid Shooting",
-    "summary": "In Mexico City, an armed individual stood atop one of the historic Teotihuacan pyramids and opened fire on tourists, resulting in the death of one Canadian and injuring at least 13 people. This incident occurred on a Monday at the archaeological site. Mexican President Claudia Sheinbaum has demanded explanations for a separate incident involving the death of four U.S. and Mexican officials in an accident over the weekend. President Sheinbaum stated she was unaware of any collaboration between the U.S. and local authorities regarding this incident. The Teotihuacan pyramids are a significant historical site in Mexico, attracting numerous tourists. The president's demand for explanations highlights the importance of transparency and accountability in such incidents. As of 2026, these events have drawn attention to the need for enhanced security and cooperation between authorities.\n\n* The shooting incident at Teotihuacan pyramids resulted in one Canadian death and at least 13 injuries.\n* Mexican President Claudia Sheinbaum has demanded explanations for the death of four U.S. and Mexican officials in a separate incident.\n* The incidents have raised concerns about security and cooperation between U.S. and Mexican authorities.",
-    "5ws": "Who: Mexican authorities, tourists, Canadian victim\nWhat: Gunman shoots tourists at pyramids\nWhen: Monday, April 21, 2026\nWhere: Teotihuacan pyramids, Mexico City\nWhy: Unconfirmed motive, likely terrorism or crime",
-    "likeIm5": "Imagine this: a sad day in Mexico. The \"Pyramid Protectors\" team, led by President Claudia Sheinbaum, are trying to keep everyone safe. A bad person hurt some \"World Explorers\" at the pyramids, and one \"Canadian Friend\" got very hurt. The \"NPR News Team\" and \"ABC7 Chicago Squad\" are helping tell the story. They want to figure out what happened so they can help the \"Pyramid Protectors\" keep everyone safe."
-  },
-  {
-    "source_names": [
-      "BleepingComputer",
-      "Windows Central"
-    ],
-    "authors": [
-      "Sergiu Gatlan",
-      "Zac Bowden"
-    ],
-    "ai_title": "Microsoft Enhances Windows Explorer With Ai Support",
-    "ai_description": "Microsoft unveils AI-powered Taskbar and Search Box for Windows 11.",
-    "urls": [
-      "https://www.bleepingcomputer.com/news/microsoft/microsoft-tests-file-explorer-speed-performance-improvements/",
-      "https://www.windowscentral.com/microsoft/windows-11/microsoft-is-finally-adding-the-right-kind-of-ai-support-to-windows-11-as-it-struggles-to-combat-ai-popularity-on-mac"
-    ],
-    "url_to_image": "https://www.bleepstatic.com/content/hl-images/2026/03/10/Windows.jpg",
-    "category": "technology",
-    "topic": "Microsoft Windows Explorer",
-    "summary": "Microsoft is introducing several updates to Windows 11, specifically to the File Explorer, for users participating in the Insider program. These updates include improvements to launch speed and performance. Additionally, the Taskbar and Search Box in Windows 11 are scheduled to receive a significant update next month. This update will introduce support for AI agents, a feature initially announced last year for AI developers. The incorporation of AI agents aims to enhance user experience. Microsoft's decision to roll out these updates is part of their ongoing effort to refine and expand the capabilities of Windows 11. The updates are expected to be available to users in the near future, although an exact date for the general release has not been specified.\n\n* Microsoft is rolling out updates to the File Explorer in Windows 11 to improve launch speed and performance.\n* The Taskbar and Search Box in Windows 11 will gain support for AI agents next month.\n* These updates are part of Microsoft's efforts to enhance the user experience and functionality of Windows 11.",
-    "5ws": "Who: Microsoft \nWhat: Improves Windows Explorer \nWhen: April 2026 \nWhere: Windows 11 platform \nWhy: Enhance performance",
-    "likeIm5": "Imagine this: Microsoft's \"Speedsters\" team, led by Sergiu Gatlan and Zac Bowden, are racing to make Windows 11 better. They're like the school's tech club, trying to fix a slow computer. Their goal is to help people work faster and happier, by making the File Explorer run quickly and adding smart AI helpers, like a super-smart librarian."
-  },
-  {
-    "source_names": [
-      "NASA",
-      "Upworthy"
-    ],
-    "authors": [
-      "Lauren E. Low",
-      "Adam Albright-Hanna"
-    ],
-    "ai_title": "NASA Artemis II Mission Advances",
-    "ai_description": "NASA's Artemis II mission sparks deep space camera revelations.",
-    "urls": [
-      "https://www.nasa.gov/missions/nasa-on-track-for-future-missions-with-initial-artemis-ii-assessments/",
-      "https://www.upworthy.com/pn-nasa-space-photos-no-stars-explanation/"
-    ],
-    "url_to_image": "https://www.nasa.gov/wp-content/uploads/2026/04/launch-11a3a5.jpg",
-    "category": "general",
-    "topic": "NASA Artemis II Mission",
-    "summary": "NASA's Artemis II mission has successfully splashed down on Earth, marking a significant milestone in the agency's plans for future missions. The Orion spacecraft and Space Launch System (SLS) are being thoroughly analyzed by engineers to assess the performance of key systems and subsystems. This analysis is crucial for the success of future missions, including the Artemis III mission, which aims to return humans to the lunar surface. The Artemis II mission has provided a wealth of data, which is being carefully examined to identify areas of improvement and optimize the spacecraft's systems. NASA's engineers are applying the same principles of camera science used on Earth to analyze the photos taken by cameras on the Orion spacecraft, which can be up to 400,000 kilometers away from our planet. The absence of stars in space photos is due to basic camera settings, as explained by NASA, and a photo from the Artemis II mission serves as an example of this phenomenon. The successful completion of the Artemis II mission and the ongoing analysis of its data are essential steps towards achieving NASA's goals for future space exploration.\n\n* The Artemis II mission has successfully splashed down on Earth, providing valuable data for future missions.\n* The analysis of the mission's data is crucial for optimizing the performance of key systems and subsystems on the Orion spacecraft and SLS.\n* NASA's explanation for the absence of stars in space photos highlights the application of basic camera science principles in space photography.",
-    "5ws": "Who: NASA, Engineers, Lauren E. Low, Adam Albright-Hanna\nWhat: Artemis II mission assessment, space photo analysis\nWhen: April 20, 2026\nWhere: Earth, NASA facilities\nWhy: Future mission success, technological advancement",
-    "likeIm5": "Imagine astronauts like Lauren's Space Squad and Adam's Cosmic Crew trying to reach the moon. They're like a school team working together to win a big contest, with NASA as their coach. Their goal is to make space travel safer and explore new worlds."
-  },
-  {
-    "source_names": [
-      "Indiandefencereview.com",
-      "Phys.Org",
-      "IFLScience"
-    ],
-    "authors": [
-      "Rania Hadid",
-      "University of Bologna",
-      "Benjamin Taub"
-    ],
-    "ai_title": "Neanderthal Populations Revealed Through New Genetic Evidence",
-    "ai_description": "Study unveils Neanderthals' devastating pre-extinction collapse.",
-    "urls": [
-      "https://indiandefencereview.com/event-reduced-neanderthal-populations/",
-      "https://phys.org/news/2026-04-genetic-evidence-stajnia-cave-reveals.html",
-      "https://www.iflscience.com/7500-year-old-neanderthal-human-hybrid-skull-turns-out-to-be-something-different-83250"
-    ],
-    "url_to_image": "https://indiandefencereview.com/wp-content/uploads/2026/04/scientists-uncover-the-event-that-drastically-reduced-neanderthal-populations-across-eurasia-scaled.png",
-    "category": "science",
-    "topic": "Neanderthal Population Collapse",
-    "summary": "In 2026, research on Neanderthals continues to uncover new information about their extinction. A study published in Current Biology analyzed ancient mitochondrial DNA from eight Neanderthal teeth found in Stajnia Cave, Poland. The research reconstructs the genetic profile of the oldest Neanderthal group in Central-Eastern Europe. Archaeologists in Germany discovered a human skull in 1973 that was later analyzed to determine its origin. A new genetic study reveals that Neanderthals suffered a population collapse long before their extinction. The study of Neanderthal teeth and the human skull provides insights into the evolutionary story of Neanderthals. The research also explores the possibility of hybrid offspring between modern humans and Neanderthals, based on the analysis of a frontal bone from Germany.\n\n* The analysis of ancient mitochondrial DNA from Neanderthal teeth provides new information about the genetic profile of Neanderthals in Central-Eastern Europe.\n* A human skull discovered in Germany in 1973 was later found to not be a hybrid of a Neanderthal and a modern human.\n* The new genetic study reveals that a devastating population collapse occurred among Neanderthals before their extinction, reshaping their evolutionary story.",
-    "5ws": "Who: Scientists, Neanderthals \nWhat: Genetic study on population collapse \nWhen: Published April 20, 2026 \nWhere: Eurasia, Stajnia Cave, Poland \nWhy: Uncover Neanderthal extinction causes",
-    "likeIm5": "Imagine this: scientists like Rania Hadid, the Discovery Detective, and the University of Bologna Team, the History Helpers, are solving a mystery about Neanderthals. They're like a school team working together to figure out what happened to these ancient humans, and they're using special clues like old teeth and bones to uncover the truth, helping us learn more about our past."
-  },
-  {
-    "source_names": [
-      "Associated Press",
-      "POLITICO.eu"
-    ],
-    "authors": [
-      "Nicole Winfield",
-      "Aitor Hernández-Morales"
-    ],
-    "ai_title": "Pope Faces Global Leaders",
-    "ai_description": "Pope Leo XIV shatters chains of corruption in Africa.",
-    "urls": [
-      "https://apnews.com/article/africa-pope-leo-trump-iran-war-d72ee89589d821785fa4ed195f0e99f6",
-      "https://www.politico.eu/article/pope-leo-attila-the-hun-donald-j-trump-brief-history-popes-fighting-world-leaders/"
-    ],
-    "url_to_image": "https://dims.apnews.com/dims4/default/23bf1e3/2147483647/strip/true/crop/5159x3438+0+1/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F8d%2Fdc%2F016ef1d499ee88ed0fa94dc13c35%2F715e1398114049179fc3856728c968af",
-    "category": "general",
-    "topic": "Pope Leo Africa Trip",
-    "summary": "Pope Leo XIV has been traveling through Africa, where he has been criticizing the \"handful of tyrants\" and \"chains of corruption\" that have held parts of the continent hostage for centuries. During his trip, he has found his voice and has been speaking out against injustices. Pope Leo XIV's actions are part of a long tradition of popes sparring with historical figures, including French Emperor Napoleon Bonaparte, who had a tumultuous relationship with the Catholic Church's leadership. Napoleon Bonaparte invaded Italy and defeated the troops guarding the Pope, showcasing the complex history between the church and political leaders. The current Pope's veiled rebukes of the U.S. president also highlight this ongoing dynamic. Pope Leo XIV's trip through Africa has brought attention to the issues affecting the continent, including corruption and tyranny. The Pope's statements and actions have been reported on by various news outlets, including AP News and Politico.\n\n* Pope Leo XIV has been criticizing the \"handful of tyrants\" and \"chains of corruption\" in Africa during his trip.\n* The Pope's actions are part of a long tradition of popes sparring with historical figures, including French Emperor Napoleon Bonaparte.\n* The current Pope's statements have been reported on by various news outlets, including AP News and Politico, highlighting the complex relationship between the Catholic Church and political leaders.",
-    "5ws": "Who: Pope Leo XIV\nWhat: Criticizes African corruption\nWhen: April 2026\nWhere: Africa, specifically Angola\nWhy: Exposes tyranny, promotes reform",
-    "likeIm5": "Imagine a big trip to Africa where \"The Kind Pope\" traveled to help people. He met \"The African Friends\" and talked about being fair and kind. \"The World Leader,\" like a principal, listened to his important message. The goal is to make the world a better place by stopping mean actions and helping everyone be happy and free."
-  },
-  {
-    "source_names": [
-      "Healthline",
-      "Healthandme.com"
-    ],
-    "authors": [
-      "Mandy French",
-      "Simran Arora"
-    ],
-    "ai_title": "Weight Loss Drugs Cause Muscle Loss",
-    "ai_description": "Study uncovers overlooked Ozempic side effects.",
-    "urls": [
-      "https://www.healthline.com/health-news/hidden-side-effects-glp-1-drugs-ozempic-reddit-study",
-      "https://www.healthandme.com/health-news/shocking-study-claims-weight-loss-drugs-cause-more-muscle-loss-than-expected-article-154118635"
-    ],
-    "url_to_image": "https://media.post.rvohealth.io/wp-content/uploads/2026/04/holding-glp-1-pen-1200x628-facebook.jpg",
-    "category": "health",
-    "topic": "Weight Loss Drugs",
-    "summary": "A recent study examined the side effects of GLP-1 drugs, such as Ozempic and Mounjaro, which are used for weight loss. The research utilized self-reported data from Reddit users to identify overlooked side effects. The study found that users of these medications reported experiencing chills, hot flashes, and irregular periods. GLP-1, or glucagon-like peptide-1, is a hormone that helps regulate blood sugar levels and is often used in medications for weight loss and diabetes management. The side effects reported in the study were not previously well-documented, highlighting the importance of continued research into the effects of these medications. The medications in question, Ozempic and Mounjaro, are prescription drugs approved for weight loss and blood sugar management. As of 2026, these findings contribute to the ongoing monitoring of GLP-1 drugs' safety and efficacy by health professionals and regulatory agencies.\n\n* The study identified chills, hot flashes, and irregular periods as previously underreported side effects of GLP-1 weight loss medications.\n* GLP-1 medications, including Ozempic and Mounjaro, are designed to help regulate blood sugar levels and facilitate weight loss.\n* The research relied on self-reported data from Reddit users, providing valuable insights into the experiences of individuals using these medications.",
-    "5ws": "Who: Mandy French, Simran Arora, Healthline, Healthandme.com\nWhat: Reporting hidden side effects of GLP-1 weight loss drugs\nWhen: April 20, 2026\nWhere: Online health platforms\nWhy: Informing public about unforeseen weight loss drug effects",
-    "likeIm5": "Imagine this: \"The Healthy Helpers\" team, like Mandy French and Simran Arora, are on a mission to understand weight loss medicines like Ozempic. They're like referees on a playground, making sure everyone knows the rules and stays safe. Their big goal is to help people get healthier, not just thinner, by figuring out any hidden side effects."
-  },
-  {
-    "source_names": [
-      "Cageside Seats",
-      "Cageside Seats",
-      "Cageside Seats",
-      "SPORTbible"
-    ],
-    "authors": [
-      "Geno Mrosko",
-      "Geno Mrosko",
-      "Claire Elizabeth",
-      "Luke Davies"
-    ],
-    "ai_title": "WrestleMania Aftermath Unfolds Slowly",
-    "ai_description": "WWE icon provokes retirement speculation, dropping gear in the ring.",
-    "urls": [
-      "https://www.cagesideseats.com/wwe/436058/the-bloodline-reunite-jacob-fatu-vs-roman-reigns-wwe-backlash-2026-raw-after-wrestlemania",
-      "https://www.cagesideseats.com/wwe/436005/oba-femi-promo-raw-after-wrestlemania-42-brock-lesnar-match-wwe",
-      "https://www.cagesideseats.com/wwe/434306/wwe-raw-results-live-discussion-apr-20-2026-its-the-one-after-mania",
-      "https://www.sportbible.com/wrestling/wwe/brock-lesnar-retirement-wrestlemania-triple-h-update-653537-20260420"
-    ],
-    "url_to_image": "https://platform.cagesideseats.com/wp-content/uploads/sites/54/2026/04/Bloodline.png?quality=90&strip=all&crop=0%2C3.1866195077019%2C100%2C93.626760984596&w=1200",
+    "url_to_image": "https://pyxis.nymag.com/v1/imgs/89b/1d2/101c8559bb11cccb42364622c4308d2020-Janet-Jackson.1x.rsocial.w1200.jpg",
     "category": "entertainment",
-    "topic": "WWE Raw After WrestleMania",
-    "summary": "Roman Reigns, the New World Heavyweight Champion, appeared on Monday Night Raw on April 20, 2026, at the T-Mobile Arena in Paradise, Nevada. He had previously promised to work full-time, at least for the summer. The event was a follow-up to WrestleMania 42, which took place earlier. WWE Chief Content Officer Triple H revealed what happened backstage after Brock Lesnar's defeat at WrestleMania 42. Lesnar's actions sparked speculation about his potential retirement. Roman Reigns' appearance on Monday Night Raw was significant, as it marked his return to the show. The events of Monday Night Raw and WrestleMania 42 have been widely reported and discussed in the media, including on Cageside Seats and SPORTbible.\n\n* Roman Reigns appeared on Monday Night Raw on April 20, 2026, at the T-Mobile Arena in Paradise, Nevada.\n* Triple H revealed what happened backstage after Brock Lesnar's defeat at WrestleMania 42, which took place earlier in 2026.\n* The WWE has been hosting various events, including Monday Night Raw and WrestleMania 42, which have been covered by multiple media outlets.",
-    "5ws": "Who: Roman Reigns, Jacob Fatu, Brock Lesnar\nWhat: WWE Raw After WrestleMania 42\nWhen: April 20, 2026\nWhere: T-Mobile Arena, Paradise, Nevada\nWhy: Post-WrestleMania fallout, new storylines",
-    "likeIm5": "Imagine this: Roman Reigns, the \"Champion Hero,\" and his friends, \"The Bloodline Team,\" are getting ready for a big match at Backlash. They're like the coolest kids on the playground, and everyone wants to be their friend or beat them in a game of tag. Jacob Fatu, the \"New Challenger,\" might get a chance to play against Roman, and it's going to be a big deal."
+    "topic": "Michael Jackson Biopic",
+    "summary": "The upcoming Michael Jackson biopic, titled \"Michael,\" is set to be released and has garnered significant attention. The film is a collaborative effort between Lionsgate and Universal, with a projected global box office start of $150 million. Notably, some members of the Jackson family, including Janet and Randy Jackson, are not featured in the biopic. The reasons behind their exclusion are attributed to their personal decisions. The biopic's release is expected to be a significant event, with high expectations for its performance. The film's production involved additional shoots, indicating a thorough effort to ensure its quality. As of 2026, the Michael Jackson biopic \"Michael\" is poised to make a substantial impact at the box office, with its worldwide debut anticipated to reach $150 million.\n\n* The Michael Jackson biopic \"Michael\" is expected to have a $150 million worldwide start at the box office.\n* Janet and Randy Jackson are not featured in the film, as per their own decisions.\n* The biopic is a collaborative effort between Lionsgate and Universal, with additional shoots conducted to ensure its quality.",
+    "5ws": "Who: Michael Jackson, Janet Jackson, Randy Jackson\nWhat: Michael Jackson biopic release\nWhen: Weekend of April 2026\nWhere: Global box offices\nWhy: Showcase Jackson's life and music",
+    "likeIm5": "Imagine this: the \"Movie Makers\" team, including \"The Vulture Squad\" and \"The Deadline Dynamos,\" are working on a big film about \"The King of Pop.\" But, some of his family members, like \"The Janet Jackson Jets\" and \"The Randy Jackson Rangers,\" aren't part of the movie. The goal is to make a great film that people will love, and the \"Movie Makers\" want to succeed and make everyone happy."
   },
   {
     "source_names": [
-      "ScienceAlert",
-      "AL.com",
-      "The Jerusalem Post"
+      "Space.com",
+      "Gizmodo.com"
     ],
     "authors": [
-      "Associated Press",
-      "Savannah Tryens-Fernandes | stryens-fernandes@al.com",
-      "NEWS AGENCIES"
+      "Monisha Ravisetti",
+      "Ellyn Lapointe"
     ],
-    "ai_title": "Bowel Cancer Deaths Rise Unexpectedly",
-    "ai_description": "Colorectal cancer deaths surge in younger, less educated adults.",
+    "ai_title": "NASA Completes New Space Telescope",
+    "ai_description": "Shatters boundaries: Orion's camera captures images too large for any screen.",
     "urls": [
-      "https://www.sciencealert.com/young-adult-bowel-cancer-deaths-concentrated-in-one-group-study-finds",
-      "https://www.al.com/news/2026/04/untreated-syphilis-on-the-rise-in-alabama-with-no-sign-of-letting-up-heres-why.html",
-      "https://www.jpost.com/health-and-wellness/health-and-wellness-around-the-world/article-892946"
+      "https://www.space.com/space-exploration/the-nancy-grace-roman-space-telescope-nasas-next-great-observatory-is-finally-complete",
+      "https://gizmodo.com/so-how-did-artemis-2s-heat-shield-hold-up-the-first-results-are-in-2000749198"
     ],
-    "url_to_image": "https://www.sciencealert.com/images/2026/04/WomanSittingAloneOnHospitalBed.jpg",
+    "url_to_image": "https://cdn.mos.cms.futurecdn.net/ugva9aKX7FMtMoqXyEVGCL-1920-80.jpg",
+    "category": "science",
+    "topic": "NASA Roman Space Telescope",
+    "summary": "The Artemis 2 mission returned to Earth on April 10, with a focus on the Orion spacecraft's heat shield, a critical component designed to protect the capsule and its crew from extreme temperatures. The heat shield's performance was under scrutiny due to concerns raised after the Artemis 1 mission. The Nancy Grace Roman Space Telescope, NASA's next great observatory, is also nearing completion. The telescope is expected to capture large images, but the details of its capabilities are not fully disclosed. The Artemis 2 mission aimed to test the heat shield's durability, and the first results are now available. According to NASA, the heat shield performed as expected, alleviating concerns about its durability. The success of the Artemis 2 mission is a crucial step towards future manned missions to the Moon and beyond.\n\n* The Artemis 2 mission tested the Orion spacecraft's heat shield, which performed as expected, addressing concerns about its durability.\n* The Nancy Grace Roman Space Telescope is complete and will capture large images, although the details of its capabilities are not fully disclosed.\n* The success of the Artemis 2 mission is a crucial step towards future manned missions to the Moon and beyond, with the heat shield's performance being a critical component.",
+    "5ws": "Who: NASA, Monisha Ravisetti, Ellyn Lapointe\nWhat: Completing Roman Space Telescope, testing Artemis 2 heat shield\nWhen: April 2026\nWhere: NASA facilities, Space\nWhy: Advancing space exploration, crew safety",
+    "likeIm5": "Imagine astronauts like Monisha and Ellyn, the Space Explorers, building a super powerful telescope, the Nancy Grace Roman Space Telescope, to take huge pictures of the universe, helping us learn more about the stars and planets."
+  },
+  {
+    "source_names": [
+      "Sci.news",
+      "Live Science"
+    ],
+    "authors": [
+      "Enrico de Lazaro",
+      "Kristina Killgrove"
+    ],
+    "ai_title": "Neanderthals Grew Faster In Harsh Environments",
+    "ai_description": "DNA analysis unveils Neanderthals' secret lives.",
+    "urls": [
+      "https://www.sci.news/genetics/stajnia-neanderthals-14709.html",
+      "https://www.livescience.com/archaeology/neanderthals/neanderthal-toddlers-grew-faster-than-modern-humans-probably-because-of-the-harsh-environment-they-evolved-in"
+    ],
+    "url_to_image": "https://cdn.sci.news/images/2013/12/image_1624f-Neanderthals.jpg",
+    "category": "general",
+    "topic": "Neanderthal Toddlers Growth Patterns",
+    "summary": "In 2026, scientists have made significant discoveries about Neanderthals, including the analysis of mitochondrial DNA (mtDNA) from eight fossils found in Stajnia Cave in Poland. The fossils reveal a tight-knit group of Neanderthals that lived approximately 100,000 years ago. This finding provides one of the clearest genetic snapshots of a single community in prehistoric Europe. Mitochondrial DNA is genetic material found in the mitochondria, which is passed down from mother to child, allowing researchers to study the genetic relationships within the group. A separate study examined the growth patterns of a Neanderthal toddler, comparing them to those of modern humans. The research suggests that Neanderthal toddlers grew at a faster rate, likely due to the harsh environment in which they evolved. The discoveries contribute to our understanding of Neanderthals and their way of life, shedding light on their growth patterns, genetics, and community structures.\n\n* The analysis of mitochondrial DNA from eight Neanderthal fossils in Poland provides a clear genetic snapshot of a prehistoric community.\n* Neanderthal toddlers grew at a faster rate than modern human toddlers, likely as a result of adapting to their environment.\n* The study of Neanderthal growth patterns and genetics offers insights into the lives of our closest evolutionary relatives and their communities in prehistoric Europe.",
+    "5ws": "Who: Scientists, Enrico de Lazaro, Kristina Killgrove\nWhat: Reconstruct Neanderthal community, study growth patterns\nWhen: 100,000 years ago, published 2026-04-21\nWhere: Stajnia Cave, Poland\nWhy: Understand Neanderthal evolution, genetic makeup",
+    "likeIm5": "Imagine this: Enrico's Explorers and Kristina's Discoverers are like two superhero teams. They're on a quest to learn about Neanderthals, finding clues like Golden Tickets in a cave in Poland, to help us understand how they grew and lived 100,000 years ago."
+  },
+  {
+    "source_names": [
+      "nj.com",
+      "SILive.com"
+    ],
+    "authors": [
+      "Jackie Roman | NJ.com",
+      "Jillian Delaney | jdelaney@siadvance.com"
+    ],
+    "ai_title": "Drug Resistant Stomach Bug Spreads",
+    "ai_description": "Rotavirus poses a major threat, especially to children.",
+    "urls": [
+      "https://www.nj.com/healthfit/2026/04/the-stomach-bug-on-steroids-thats-surging-across-the-us-heres-what-parents-need-to-know.html",
+      "https://www.silive.com/news/2026/04/a-drugresistant-stomach-bug-is-spreading-cdc-warns.html"
+    ],
+    "url_to_image": "https://www.nj.com/resizer/v2/C7OE6CW4Q5CK3PUM6TPQSHGX7Q.png?auth=1404db07d5c483b19c75985c9f5c0d22efa9bb5369a36eed7e1a7c537b80a8ac&width=1280&smart=true&quality=90",
     "category": "health",
-    "topic": "Young Adult Bowel Cancer",
-    "summary": "A recent study found that the rise in colorectal cancer deaths in younger adults is concentrated in people with less education, suggesting socioeconomic factors could be driving the escalation. According to the study, this correlation indicates a potential link between education level and health outcomes. The Alabama Department of Public Health reported a decline in rates of some sexually transmitted diseases over the last three years, but expects syphilis cases to increase over the next two years. A separate study examined the relationship between bowel movement frequency and gut health, identifying an ideal range of once to twice a day. This study included over 1,400 participants and aimed to understand the implications of bowel movement frequency on overall health. The findings suggest that socioeconomic factors and health habits may contribute to the rise in colorectal cancer deaths and other health issues. The studies highlight the importance of addressing health disparities and promoting healthy habits to mitigate these trends.\n\n* The rise in colorectal cancer deaths in younger adults is concentrated in people with less education, suggesting socioeconomic factors are a driving force.\n* The Alabama Department of Public Health expects syphilis cases to increase over the next two years, despite a decline in rates of some other sexually transmitted diseases.\n* A study found that a bowel movement frequency of once to twice a day is ideal, with persistent deviations from this range linked to an increased risk of hidden health problems.",
-    "5ws": "Who: Young adults, Alabama residents\nWhat: Rising bowel cancer deaths, syphilis cases\nWhen: 2026, specifically April 20\nWhere: US, Alabama, New York\nWhy: Socioeconomic factors, untreated diseases",
-    "likeIm5": "Imagine this: The \"Health Heroes\" team, including the \"Science Alert Squad\" and the \"Alabama Avengers,\" are working together to solve a big problem. They're trying to figure out why some younger adults are getting very sick with bowel cancer, and they think it might have something to do with how much money their families have."
+    "topic": "Rotavirus Stomach Bug",
+    "summary": "The Centers for Disease Control and Prevention (CDC) has warned about a fast-spreading, drug-resistant strain of shigella, a bacteria that causes severe diarrhea. This strain has no FDA-approved oral treatment, posing a significant public health threat. According to Dr. Harpreet Pall, young children are particularly vulnerable to rotavirus, a common and vaccine-preventable illness. Rotavirus can lead to hospitalization in severe cases, primarily affecting children under a certain age. Federal health officials are sounding the alarm over the spread of this drug-resistant strain, which can cause severe diarrhea. The CDC is monitoring the situation closely, as the lack of an FDA-approved oral treatment complicates treatment options. As of 2026, the CDC continues to emphasize the importance of preventive measures, such as vaccination, to mitigate the spread of rotavirus and other vaccine-preventable illnesses.\n\n* The CDC has warned about a fast-spreading, drug-resistant strain of shigella with no FDA-approved oral treatment.\n* Rotavirus is a common and vaccine-preventable illness that can lead to hospitalization in young children.\n* The lack of an FDA-approved oral treatment for the drug-resistant shigella strain poses a significant public health threat, particularly for vulnerable populations such as children.",
+    "5ws": "Who: Parents, children, Dr. Harpreet Pall, CDC \nWhat: Rotavirus, drug-resistant stomach bug outbreak\nWhen: April 2026 \nWhere: United States \nWhy: Public health threat, vaccine prevention",
+    "likeIm5": "Imagine this: a superhero team, \"The Health Heroes,\" including Dr. Harpreet Pall, \"The Vaccine Victor,\" and Jillian Delaney, \"The News Navigator,\" are fighting a bad guy called the \"Stomach Bug.\" They're working together to stop it from spreading and making people sick, especially young children, to keep everyone safe and healthy."
+  },
+  {
+    "source_names": [
+      "Axios",
+      "Apnorc.org",
+      "BBC News",
+      "Tipranks.com",
+      "Rolling Stone",
+      "CBS News"
+    ],
+    "authors": [
+      "Barak Ravid",
+      "Jordan Hinkle",
+      "Unknown Author",
+      "Eddie Pan",
+      "Nikki McCann Ramirez",
+      "Frank  Andrews"
+    ],
+    "ai_title": "US Iran Peace Talks Stall",
+    "ai_description": "Trump extends Iran ceasefire as gas price chaos erupts.",
+    "urls": [
+      "https://www.axios.com/2026/04/22/trump-iran-war-power-struggle-ceasefire",
+      "https://apnorc.org/projects/fewer-approve-of-trumps-handling-of-the-economy/",
+      "https://www.bbc.com/news/articles/c995dkl4dvvo",
+      "https://www.tipranks.com/news/stock-market-today-spy-qqq-reverse-gains-as-iran-calls-off-peace-talks-trump-extends-ceasefire-deadline",
+      "http://www.rollingstone.com/politics/politics-news/trump-administration-gas-prices-1235551286/",
+      "https://www.cbsnews.com/news/iran-war-era-fossil-fuel-security-over-uk-trump-north-sea-drilling/"
+    ],
+    "url_to_image": "https://images.axios.com/1ZBsE-DUZ6doszJndyARFbVmbH4=/0x0:1920x1080/1366x768/2026/04/21/1776801247215.jpeg",
+    "category": "general",
+    "topic": "Trump Iran Peace Talks",
+    "summary": "As of April 21, 2026, the ongoing war in Iran has led to rising gas prices, affecting public views of President Trump's handling of the economy, with only 30% approving. The Supreme Leader of Iran, Mojtaba Khamenei, has been largely silent, while IRGC generals and Iran's civilian negotiators are openly at odds over strategy. President Trump has extended a ceasefire with Iran until talks between the two countries have progressed, with the US continuing to blockade Iran's ports. The US-Iran peace talks have been uncertain, with Iran announcing it would not participate in a second round, causing US equities to close lower. The war has also impacted fuel and transportation costs in the United States, with gas prices increasing. The UK government has announced its commitment to net-zero emissions targets despite President Trump's encouragement to \"drill baby, drill\" in the oil-rich North Sea. The situation remains complex, with the US and Iran navigating a delicate ceasefire and ongoing negotiations.\n\n* The US-Iran war has led to rising gas prices, affecting the US economy and President Trump's approval ratings.\n* The UK has committed to net-zero emissions targets, defying President Trump's calls for increased oil drilling in the North Sea.\n* The ceasefire between the US and Iran has been extended, with the US continuing to blockade Iran's ports until peace talks have progressed.",
+    "5ws": "Who: Trump, Iran leaders, US officials\nWhat: US-Iran peace talks, ceasefire extensions\nWhen: April 2026\nWhere: US, Iran, Islamabad\nWhy: Ending power struggle, war, and economic crisis",
+    "likeIm5": "Imagine a big playground where the \"Trump Team\" and the \"Iran Friends\" are trying to resolve their differences. The \"Supreme Leader Squad\" is being very quiet, while the \"IRGC Generals\" and \"Civilian Negotiators\" are openly disagreeing. The goal is for everyone to work together and find peace, helping many people affected by the conflict, like those feeling the impact of high gas prices, which the \"Trump Team\" and \"UK Officials\" are discussing."
   }
 ]
