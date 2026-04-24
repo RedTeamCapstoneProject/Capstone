@@ -42,7 +42,6 @@ The website was built to be intuitive enough that minimal user doucmentation and
 # Maintaining Real News
 - API keys: Currently limited access to API calls so the website could be throttled in the future
 - Report Button: If users encounter an error in an article description or in a feature, they can report it
-- 
 
 # Future Improvements
 
