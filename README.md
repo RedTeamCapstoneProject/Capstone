@@ -27,7 +27,7 @@ The website was built to be intuitive enough that minimal user doucmentation and
 - Topic Agent Pipeline: Uses two AI agents to determine topics for each article to group into dynamic clusters and fact check each other’s decisions. 
 - Summary Agents: Uses three different unique agents that takes the groups of articles and transforms them into formats: “Generic Summary”, “like I’m Five”, and  “Five W’s.”
 - Storage: Store summaries and articles in a database in PostgreSQL
-- Interactive Context Agent: Acts as a personal assistant to query about a specific news article. Uses the context of the article to keepstrict to article content
+- Interactive Context Agent: Acts as a personal assistant to query about a specific news article. Uses the context of the article to keep strict to article content
 
 # Technical Approach
 
