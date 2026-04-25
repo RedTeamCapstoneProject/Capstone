@@ -1,177 +1,68 @@
 [
   {
     "source_names": [
-      "Page Six",
-      "Awful Announcing",
-      "Windy City Gridiron",
-      "Prideofdetroit.com",
-      "Yahoo Entertainment"
+      "WDIV ClickOnDetroit",
+      "Gothamist"
     ],
     "authors": [
-      "Jolie Zenna",
-      "Brendon Kleen",
-      "Aaron Leming",
-      "Jeremy Reisman",
-      "Nate Tice"
+      "Samantha Sayles",
+      "https://gothamist.com/staff/caroline-lewis"
     ],
-    "ai_title": "Nfl Draft Rumors Emerge",
-    "ai_description": "Photos surface of Vrabel with NFL reporter, sparking controversy.",
+    "ai_title": "Measles Cases Confirmed In Us Counties",
+    "ai_description": "Measles cases erupt in Michigan and New Jersey.",
     "urls": [
-      "https://pagesix.com/2026/04/21/celebrity-news/mike-vrabel-dodges-questions-about-dianna-russinis-resignation/",
-      "https://awfulannouncing.com/nfl/todd-mcshay-draft-intel-fanduel-bets.html",
-      "https://www.windycitygridiron.com/chicago-bears-draft/114778/nfl-full-first-round-2026-mock-draft-ohio-state-texas-tech-indiana-bears",
-      "https://www.prideofdetroit.com/detroit-lions-rumors/162239/nfl-draft-rumor-early-run-offensive-tackles-detroit-lions",
-      "https://sports.yahoo.com/nfl/article/2026-nfl-mock-draft-91-fernando-mendoza-to-raiders-david-bailey-to-jets-how-chiefs-cowboys-did-143901201.html"
+      "https://www.clickondetroit.com/news/local/2026/04/23/measles-case-confirmed-in-macomb-county-heres-what-to-know/",
+      "https://gothamist.com/news/nj-warns-of-possible-measles-exposures-at-newark-airport"
     ],
-    "url_to_image": "https://pagesix.com/wp-content/uploads/sites/3/2026/04/126122770.jpg?quality=75&strip=all&w=1200",
-    "category": "sports",
-    "topic": "2026 NFL Draft",
-    "summary": "The 2026 NFL Draft is nearing, with the event scheduled to take place in Pittsburgh from Thursday to Saturday. Mike Vrabel, a notable figure in the NFL, recently addressed reporters, dodging questions related to a photo scandal involving Dianna Russini. Todd McShay, a longtime NFL Draft analyst, has been active during this period, providing player analysis and participating in promotions. The draft process involves scouting evaluations, testing numbers, pro days, team visits, trades, and other factors that contribute to the selection of 257 players. Reporters are currently contacting sources to gather information and rumors before the event. The 2026 NFL Draft will feature 32 picks in the first round, with various teams and players being discussed in mock drafts. As the draft approaches, teams like the Chicago Bears and the Lions are preparing for their selections, with some predictions suggesting an early run on offensive tackles.\n\n* The 2026 NFL Draft will feature 257 players being selected over three days in Pittsburgh.\n* Mike Vrabel dodged questions related to a photo scandal involving Dianna Russini during a recent press conference.\n* The draft process involves various factors, including scouting evaluations, testing numbers, and team visits, which contribute to the selection of players by teams like the Chicago Bears and the Lions.",
-    "5ws": "Who: Mike Vrabel, Dianna Russini, NFL teams\nWhat: 2026 NFL Draft, team selections\nWhen: April 2026, Thursday-Saturday\nWhere: Pittsburgh, Pennsylvania\nWhy: Annual recruitment of college athletes",
-    "likeIm5": "Imagine this, the NFL friends are having a big gathering to pick their new teammates. The New York Jets team, the Cowboys team, and the Chicago Bears team are all trying to get the best players. Mike Vrabel, Todd McShay, and Dianna Russini are like the playground coaches, helping teams choose wisely. They want to win and make their teams stronger, so they're using their Golden Tickets to pick the best friends."
-  },
-  {
-    "source_names": [
-      "The Verge",
-      "ScienceAlert"
-    ],
-    "authors": [
-      "Victoria Song",
-      "The Conversation"
-    ],
-    "ai_title": "Smartwatches Provide Flawed Health Metrics",
-    "ai_description": "Apple Watch ignites the modern health tech era.",
-    "urls": [
-      "https://www.theverge.com/tech/915976/tim-cook-john-ternus-apple-watch-health-tech-wearables",
-      "https://www.sciencealert.com/your-smartwatch-may-be-getting-6-key-health-metrics-wrong"
-    ],
-    "url_to_image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25623076/247270_Apple_watch_series_10_AKrales_0557.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
-    "category": "general",
-    "topic": "Apple Watch Health Tech",
-    "summary": "As of 2026, wearable health technology has become a significant aspect of the health industry, with major companies like Apple contributing to its development. Apple's CEO, Tim Cook, has stated that the company's greatest contribution to mankind would be in the health sector. The Apple Watch, introduced under Tim Cook's leadership, has played a crucial role in shaping the modern health tech era. Wearable devices like smartwatches can track various health metrics, including fitness scores, calories burned, and recovery scores. However, there have been concerns about the accuracy of these metrics, with some studies suggesting that smartwatches may provide incorrect data. According to reports, Tim Cook's vision for health tech may have a lasting impact on the industry. The development and accuracy of wearable health technology continue to be important topics of discussion, with companies working to improve their products and provide reliable health data to consumers.\n\n* The Apple Watch was the first major product released by Apple under Tim Cook's leadership, marking a significant shift towards health-focused technology.\n* Wearable devices like smartwatches can track various health metrics, but their accuracy has been questioned in some studies.\n* Tim Cook has stated that Apple's greatest contribution to mankind will be in the health sector, indicating a long-term commitment to developing health-focused technology.",
-    "5ws": "Who: Tim Cook, Apple \nWhat: Advancing wearable health tech \nWhen: 2026, post-Jobs era \nWhere: Global, Apple platforms \nWhy: Revolutionizing personal health metrics",
-    "likeIm5": "Imagine a big playground where Tim Cook, the Apple Team Captain, and Victoria Song, the Tech Reporter, are working together to make health tracking super cool and accurate. They're like the Fitness Friends, trying to help everyone get healthier and happier, with the help of John Ternus, the Apple Watch Coach."
-  },
-  {
-    "source_names": [
-      "Vulture",
-      "Deadline"
-    ],
-    "authors": [
-      "Jason P. Frank",
-      "Anthony D'Alessandro"
-    ],
-    "ai_title": "Michael Jackson Biopic Eyes $150M Debut",
-    "ai_description": "Janet and Randy Jackson omitted from new Michael Jackson biopic.",
-    "urls": [
-      "http://www.vulture.com/article/are-janet-randy-jackson-michael-biopic.html",
-      "http://deadline.com/2026/04/box-office-michael-weekend-projection-1236867306/"
-    ],
-    "url_to_image": "https://pyxis.nymag.com/v1/imgs/89b/1d2/101c8559bb11cccb42364622c4308d2020-Janet-Jackson.1x.rsocial.w1200.jpg",
-    "category": "entertainment",
-    "topic": "Michael Jackson Biopic",
-    "summary": "The upcoming Michael Jackson biopic, titled \"Michael,\" is set to be released and has garnered significant attention. The film is a collaborative effort between Lionsgate and Universal, with a projected global box office start of $150 million. Notably, some members of the Jackson family, including Janet and Randy Jackson, are not featured in the biopic. The reasons behind their exclusion are attributed to their personal decisions. The biopic's release is expected to be a significant event, with high expectations for its performance. The film's production involved additional shoots, indicating a thorough effort to ensure its quality. As of 2026, the Michael Jackson biopic \"Michael\" is poised to make a substantial impact at the box office, with its worldwide debut anticipated to reach $150 million.\n\n* The Michael Jackson biopic \"Michael\" is expected to have a $150 million worldwide start at the box office.\n* Janet and Randy Jackson are not featured in the film, as per their own decisions.\n* The biopic is a collaborative effort between Lionsgate and Universal, with additional shoots conducted to ensure its quality.",
-    "5ws": "Who: Michael Jackson, Janet Jackson, Randy Jackson\nWhat: Michael Jackson biopic release\nWhen: Weekend of April 2026\nWhere: Global box offices\nWhy: Showcase Jackson's life and music",
-    "likeIm5": "Imagine this: the \"Movie Makers\" team, including \"The Vulture Squad\" and \"The Deadline Dynamos,\" are working on a big film about \"The King of Pop.\" But, some of his family members, like \"The Janet Jackson Jets\" and \"The Randy Jackson Rangers,\" aren't part of the movie. The goal is to make a great film that people will love, and the \"Movie Makers\" want to succeed and make everyone happy."
-  },
-  {
-    "source_names": [
-      "Space.com",
-      "Gizmodo.com"
-    ],
-    "authors": [
-      "Monisha Ravisetti",
-      "Ellyn Lapointe"
-    ],
-    "ai_title": "NASA Completes New Space Telescope",
-    "ai_description": "Shatters boundaries: Orion's camera captures images too large for any screen.",
-    "urls": [
-      "https://www.space.com/space-exploration/the-nancy-grace-roman-space-telescope-nasas-next-great-observatory-is-finally-complete",
-      "https://gizmodo.com/so-how-did-artemis-2s-heat-shield-hold-up-the-first-results-are-in-2000749198"
-    ],
-    "url_to_image": "https://cdn.mos.cms.futurecdn.net/ugva9aKX7FMtMoqXyEVGCL-1920-80.jpg",
-    "category": "science",
-    "topic": "NASA Roman Space Telescope",
-    "summary": "The Artemis 2 mission returned to Earth on April 10, with a focus on the Orion spacecraft's heat shield, a critical component designed to protect the capsule and its crew from extreme temperatures. The heat shield's performance was under scrutiny due to concerns raised after the Artemis 1 mission. The Nancy Grace Roman Space Telescope, NASA's next great observatory, is also nearing completion. The telescope is expected to capture large images, but the details of its capabilities are not fully disclosed. The Artemis 2 mission aimed to test the heat shield's durability, and the first results are now available. According to NASA, the heat shield performed as expected, alleviating concerns about its durability. The success of the Artemis 2 mission is a crucial step towards future manned missions to the Moon and beyond.\n\n* The Artemis 2 mission tested the Orion spacecraft's heat shield, which performed as expected, addressing concerns about its durability.\n* The Nancy Grace Roman Space Telescope is complete and will capture large images, although the details of its capabilities are not fully disclosed.\n* The success of the Artemis 2 mission is a crucial step towards future manned missions to the Moon and beyond, with the heat shield's performance being a critical component.",
-    "5ws": "Who: NASA, Monisha Ravisetti, Ellyn Lapointe\nWhat: Completing Roman Space Telescope, testing Artemis 2 heat shield\nWhen: April 2026\nWhere: NASA facilities, Space\nWhy: Advancing space exploration, crew safety",
-    "likeIm5": "Imagine astronauts like Monisha and Ellyn, the Space Explorers, building a super powerful telescope, the Nancy Grace Roman Space Telescope, to take huge pictures of the universe, helping us learn more about the stars and planets."
-  },
-  {
-    "source_names": [
-      "Sci.news",
-      "Live Science"
-    ],
-    "authors": [
-      "Enrico de Lazaro",
-      "Kristina Killgrove"
-    ],
-    "ai_title": "Neanderthals Grew Faster In Harsh Environments",
-    "ai_description": "DNA analysis unveils Neanderthals' secret lives.",
-    "urls": [
-      "https://www.sci.news/genetics/stajnia-neanderthals-14709.html",
-      "https://www.livescience.com/archaeology/neanderthals/neanderthal-toddlers-grew-faster-than-modern-humans-probably-because-of-the-harsh-environment-they-evolved-in"
-    ],
-    "url_to_image": "https://cdn.sci.news/images/2013/12/image_1624f-Neanderthals.jpg",
-    "category": "general",
-    "topic": "Neanderthal Toddlers Growth Patterns",
-    "summary": "In 2026, scientists have made significant discoveries about Neanderthals, including the analysis of mitochondrial DNA (mtDNA) from eight fossils found in Stajnia Cave in Poland. The fossils reveal a tight-knit group of Neanderthals that lived approximately 100,000 years ago. This finding provides one of the clearest genetic snapshots of a single community in prehistoric Europe. Mitochondrial DNA is genetic material found in the mitochondria, which is passed down from mother to child, allowing researchers to study the genetic relationships within the group. A separate study examined the growth patterns of a Neanderthal toddler, comparing them to those of modern humans. The research suggests that Neanderthal toddlers grew at a faster rate, likely due to the harsh environment in which they evolved. The discoveries contribute to our understanding of Neanderthals and their way of life, shedding light on their growth patterns, genetics, and community structures.\n\n* The analysis of mitochondrial DNA from eight Neanderthal fossils in Poland provides a clear genetic snapshot of a prehistoric community.\n* Neanderthal toddlers grew at a faster rate than modern human toddlers, likely as a result of adapting to their environment.\n* The study of Neanderthal growth patterns and genetics offers insights into the lives of our closest evolutionary relatives and their communities in prehistoric Europe.",
-    "5ws": "Who: Scientists, Enrico de Lazaro, Kristina Killgrove\nWhat: Reconstruct Neanderthal community, study growth patterns\nWhen: 100,000 years ago, published 2026-04-21\nWhere: Stajnia Cave, Poland\nWhy: Understand Neanderthal evolution, genetic makeup",
-    "likeIm5": "Imagine this: Enrico's Explorers and Kristina's Discoverers are like two superhero teams. They're on a quest to learn about Neanderthals, finding clues like Golden Tickets in a cave in Poland, to help us understand how they grew and lived 100,000 years ago."
-  },
-  {
-    "source_names": [
-      "nj.com",
-      "SILive.com"
-    ],
-    "authors": [
-      "Jackie Roman | NJ.com",
-      "Jillian Delaney | jdelaney@siadvance.com"
-    ],
-    "ai_title": "Drug Resistant Stomach Bug Spreads",
-    "ai_description": "Rotavirus poses a major threat, especially to children.",
-    "urls": [
-      "https://www.nj.com/healthfit/2026/04/the-stomach-bug-on-steroids-thats-surging-across-the-us-heres-what-parents-need-to-know.html",
-      "https://www.silive.com/news/2026/04/a-drugresistant-stomach-bug-is-spreading-cdc-warns.html"
-    ],
-    "url_to_image": "https://www.nj.com/resizer/v2/C7OE6CW4Q5CK3PUM6TPQSHGX7Q.png?auth=1404db07d5c483b19c75985c9f5c0d22efa9bb5369a36eed7e1a7c537b80a8ac&width=1280&smart=true&quality=90",
+    "url_to_image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/OT5CCL5NSFD6HIZAW23RJ4BEPQ.jpg?_a=DATAg1fkZAA0",
     "category": "health",
-    "topic": "Rotavirus Stomach Bug",
-    "summary": "The Centers for Disease Control and Prevention (CDC) has warned about a fast-spreading, drug-resistant strain of shigella, a bacteria that causes severe diarrhea. This strain has no FDA-approved oral treatment, posing a significant public health threat. According to Dr. Harpreet Pall, young children are particularly vulnerable to rotavirus, a common and vaccine-preventable illness. Rotavirus can lead to hospitalization in severe cases, primarily affecting children under a certain age. Federal health officials are sounding the alarm over the spread of this drug-resistant strain, which can cause severe diarrhea. The CDC is monitoring the situation closely, as the lack of an FDA-approved oral treatment complicates treatment options. As of 2026, the CDC continues to emphasize the importance of preventive measures, such as vaccination, to mitigate the spread of rotavirus and other vaccine-preventable illnesses.\n\n* The CDC has warned about a fast-spreading, drug-resistant strain of shigella with no FDA-approved oral treatment.\n* Rotavirus is a common and vaccine-preventable illness that can lead to hospitalization in young children.\n* The lack of an FDA-approved oral treatment for the drug-resistant shigella strain poses a significant public health threat, particularly for vulnerable populations such as children.",
-    "5ws": "Who: Parents, children, Dr. Harpreet Pall, CDC \nWhat: Rotavirus, drug-resistant stomach bug outbreak\nWhen: April 2026 \nWhere: United States \nWhy: Public health threat, vaccine prevention",
-    "likeIm5": "Imagine this: a superhero team, \"The Health Heroes,\" including Dr. Harpreet Pall, \"The Vaccine Victor,\" and Jillian Delaney, \"The News Navigator,\" are fighting a bad guy called the \"Stomach Bug.\" They're working together to stop it from spreading and making people sick, especially young children, to keep everyone safe and healthy."
+    "topic": "Measles Macomb County",
+    "summary": "In 2026, a measles case was confirmed in a Macomb County resident, according to the Macomb County Health Department and the Michigan Department of Health and Human Services. The case was reported in Macomb County, Michigan, and health officials are working to alert residents about the highly contagious virus. A separate case was also reported in New Jersey, where a Hudson County resident was diagnosed with measles after returning from an international trip. The New Jersey state health department issued a warning about possible measles exposures at Newark Airport. Measles is a highly contagious virus that can be spread through the air when an infected person coughs or sneezes. The virus can cause symptoms such as fever, cough, and rash, and can be prevented with vaccination. Health officials in both Michigan and New Jersey are working to inform residents about the risks of measles and the importance of vaccination.\n\n* The Macomb County Health Department and the Michigan Department of Health and Human Services are investigating a confirmed measles case in Macomb County, Michigan.\n* A measles case was confirmed in a Hudson County resident in New Jersey, who had recently returned from an international trip, prompting a warning about possible exposures at Newark Airport.\n* Health officials in both states are working to alert residents about the symptoms of measles and the importance of vaccination to prevent the spread of the virus.",
+    "5ws": "Who: Macomb County resident, Michigan health officials\nWhat: Measles case confirmed\nWhen: April 23, 2026\nWhere: Macomb County, Michigan\nWhy: Public health alert, disease prevention",
+    "likeIm5": "Imagine this: Samantha the Helper and Caroline the Guardian are working together to stop the spread of measles. The Macomb County Health Heroes and the Michigan Health Team are like the playground monitors, making sure everyone is safe and healthy. Their big goal is to help people and keep them from getting sick, just like how we try to avoid getting tagged out in a game of tag."
   },
   {
     "source_names": [
-      "Axios",
-      "Apnorc.org",
-      "BBC News",
-      "Tipranks.com",
-      "Rolling Stone",
-      "CBS News"
+      "Eurogamer.net",
+      "IGN"
     ],
     "authors": [
-      "Barak Ravid",
-      "Jordan Hinkle",
-      "Unknown Author",
-      "Eddie Pan",
-      "Nikki McCann Ramirez",
-      "Frank  Andrews"
+      "Tom Regan",
+      "Chris Reed"
     ],
-    "ai_title": "US Iran Peace Talks Stall",
-    "ai_description": "Trump extends Iran ceasefire as gas price chaos erupts.",
+    "ai_title": "Switch 2 Exclusive Games Announced",
+    "ai_description": "Splatoon Raiders ignites on Nintendo Switch 2 with exclusive preorder details.",
     "urls": [
-      "https://www.axios.com/2026/04/22/trump-iran-war-power-struggle-ceasefire",
-      "https://apnorc.org/projects/fewer-approve-of-trumps-handling-of-the-economy/",
-      "https://www.bbc.com/news/articles/c995dkl4dvvo",
-      "https://www.tipranks.com/news/stock-market-today-spy-qqq-reverse-gains-as-iran-calls-off-peace-talks-trump-extends-ceasefire-deadline",
-      "http://www.rollingstone.com/politics/politics-news/trump-administration-gas-prices-1235551286/",
-      "https://www.cbsnews.com/news/iran-war-era-fossil-fuel-security-over-uk-trump-north-sea-drilling/"
+      "https://www.eurogamer.net/orbitals-80s-anime-legendary-gundam-director-it-takes-two-co-op-preview",
+      "https://www.ign.com/articles/splatoon-raiders-switch-2-and-amiibo-where-to-buy"
     ],
-    "url_to_image": "https://images.axios.com/1ZBsE-DUZ6doszJndyARFbVmbH4=/0x0:1920x1080/1366x768/2026/04/21/1776801247215.jpeg",
-    "category": "general",
-    "topic": "Trump Iran Peace Talks",
-    "summary": "As of April 21, 2026, the ongoing war in Iran has led to rising gas prices, affecting public views of President Trump's handling of the economy, with only 30% approving. The Supreme Leader of Iran, Mojtaba Khamenei, has been largely silent, while IRGC generals and Iran's civilian negotiators are openly at odds over strategy. President Trump has extended a ceasefire with Iran until talks between the two countries have progressed, with the US continuing to blockade Iran's ports. The US-Iran peace talks have been uncertain, with Iran announcing it would not participate in a second round, causing US equities to close lower. The war has also impacted fuel and transportation costs in the United States, with gas prices increasing. The UK government has announced its commitment to net-zero emissions targets despite President Trump's encouragement to \"drill baby, drill\" in the oil-rich North Sea. The situation remains complex, with the US and Iran navigating a delicate ceasefire and ongoing negotiations.\n\n* The US-Iran war has led to rising gas prices, affecting the US economy and President Trump's approval ratings.\n* The UK has committed to net-zero emissions targets, defying President Trump's calls for increased oil drilling in the North Sea.\n* The ceasefire between the US and Iran has been extended, with the US continuing to blockade Iran's ports until peace talks have progressed.",
-    "5ws": "Who: Trump, Iran leaders, US officials\nWhat: US-Iran peace talks, ceasefire extensions\nWhen: April 2026\nWhere: US, Iran, Islamabad\nWhy: Ending power struggle, war, and economic crisis",
-    "likeIm5": "Imagine a big playground where the \"Trump Team\" and the \"Iran Friends\" are trying to resolve their differences. The \"Supreme Leader Squad\" is being very quiet, while the \"IRGC Generals\" and \"Civilian Negotiators\" are openly disagreeing. The goal is for everyone to work together and find peace, helping many people affected by the conflict, like those feeling the impact of high gas prices, which the \"Trump Team\" and \"UK Officials\" are discussing."
+    "url_to_image": "https://assetsio.gnwcdn.com/orbitals-key-art-cropped.png?width=1200&height=630&fit=crop&enable=upscale&auto=webp",
+    "category": "technology",
+    "topic": "Nintendo Switch 2 Games",
+    "summary": "The intersection of anime and video games has led to notable collaborations, such as Akira Toriyama's design contributions to Chrono Trigger and Hayao Miyazaki's influence on Final Fantasy's airships. A recent example of this crossover is the upcoming game Orbitals, developed for the Nintendo Switch 2. The game's development involved a collaborative effort, with talent from the anime industry, including a legendary Gundam director, and the team behind It Takes Two. Splatoon Raiders, another Switch 2 exclusive, is set to release on July 23, offering a single-player-focused experience. This game is part of a series known for its online multiplayer aspect but will still feature the series' signature colorful imagery. The release of Splatoon Raiders will be accompanied by three amiibo figures, which can be preordered along with the game. The preorder process for Splatoon Raiders, including pricing and availability, has been outlined, providing fans with the necessary information to secure their copy.\n\n* The release of Splatoon Raiders on July 23 marks a new single-player-focused direction for the series, available exclusively on the Nintendo Switch 2.\n* Orbitals, another Switch 2 exclusive, is the result of a collaborative development process involving anime industry talent and the team behind It Takes Two.\n* Preorders for Splatoon Raiders and its accompanying amiibo figures are currently live, with pricing and availability information available to fans.",
+    "5ws": "Who: Nintendo, Eurogamer, IGN, Tom Regan, Chris Reed\nWhat: New Switch 2 games announced\nWhen: April 2026\nWhere: Online platforms, Nintendo Switch 2\nWhy: Promote upcoming game releases",
+    "likeIm5": "Imagine this, a big game is coming to the Nintendo Switch 2. The \"Game Masters\" team, including Tom Regan and Chris Reed, are working together to make it fun. They're like the \"Dream Team\" and the \"Creative Crew,\" making exciting games like Orbitals and Splatoon Raiders. Their big goal is to make the best games for everyone to enjoy, like winning a big playground contest."
+  },
+  {
+    "source_names": [
+      "Phys.Org",
+      "Thedebrief.org"
+    ],
+    "authors": [
+      "Sam Jarman",
+      "Christopher Plain, Christopher Plain"
+    ],
+    "ai_title": "Physicists Develop Next-Gen Laser Technology",
+    "ai_description": "Researchers unveil a laser-driven atomic clock, harnessing synchronized atoms.",
+    "urls": [
+      "https://phys.org/news/2026-04-physicists-revive-1990s-laser-concept.html",
+      "https://thedebrief.org/scientists-discover-path-to-extreme-light-intensities-that-could-enable-ultra-powerful-laser-weapons-and-advanced-tech/"
+    ],
+    "url_to_image": "https://scx2.b-cdn.net/gfx/news/2026/physicists-revive-1990.jpg",
+    "category": "science",
+    "topic": "Physicists Revive Laser Concept",
+    "summary": "Researchers in the US and Germany have developed a theoretical blueprint for an atomic clock driven by a highly synchronized laser. This blueprint, published in Physical Review Letters, proposes a new approach where atoms work together rather than independently. An international team of physicists has also announced a significant advance in laser science, offering a practical path to achieving extreme light intensities. These intensities have the potential to boost the intensity of lasers used in various applications. The research was published in a reputable scientific journal, providing a foundation for further studies. The development of extreme light intensities can be utilized in combat lasers, nuclear fusion, and studies exploring the laws of physics. The breakthroughs in laser science and atomic clocks are expected to have significant implications for various fields, including physics, engineering, and technology.\n\n* The theoretical blueprint for an atomic clock driven by a highly synchronized laser has the potential to revolutionize timekeeping and precision measurements.\n* The achievement of extreme light intensities can enable the development of ultra-powerful laser weapons and advanced technologies.\n* The breakthroughs in laser science can lead to significant advancements in fields such as nuclear fusion, materials science, and fundamental physics research.",
+    "5ws": "Who: US and German physicists\nWhat: Proposed atomic clock with synchronized laser\nWhen: April 23, 2026\nWhere: US and Germany\nWhy: Advance atomic clock technology",
+    "likeIm5": "Imagine this: The Laser League is trying to make the most accurate clock ever. The \"US Patriots\" team, with Jarrod Reilly, and the \"German Giants\" team, are working together, using a special laser to help atoms work in harmony."
   }
 ]
