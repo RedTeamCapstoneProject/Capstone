@@ -1,25 +1,25 @@
-name: Scheduled News Archive
+#name: Scheduled News Archive
 
-on:
-  schedule:
-    - cron: '0 18 * * *'
-  workflow_dispatch:
+#on:
+#  schedule:
+#    - cron: '0 18 * * *'
+#  workflow_dispatch:
 
-jobs:
-  archive-news:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v4
+#jobs:
+#  archive-news:
+#    runs-on: windows-latest
+#    steps:
+#      - uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
+#      - name: Setup Node
+#        uses: actions/setup-node@v4
+#        with:
+#          node-version: "20"
 
-      - name: Install Dependencies
-        run: npm install
+#      - name: Install Dependencies
+ #       run: npm install
 
-      - name: Archive News Articles
-        run: powershell -ExecutionPolicy Bypass -File scripts/archiveNewsArticles.ps1
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+  #    - name: Archive News Articles
+#        run: powershell -ExecutionPolicy Bypass -File scripts/archiveNewsArticles.ps1
+#        env:
+ #         DATABASE_URL: ${{ secrets.DATABASE_URL }}
