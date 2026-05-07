@@ -36,8 +36,47 @@ type SummariesResponse = { data?: SummaryItem[] | SummaryItem };
   };
 
   const style = document.createElement("style");
-  style.textContent =
-    ".article-tab-panel { display: none; } .article-tab-panel.active { display: block; } .article-tabs-nav { display: flex; align-items: center; } .article-tabs-nav .article-tab[data-action=\"report\"] { margin-left: auto; } .report-form { display: block; } .report-label { display: block; margin-bottom: 0.6em; letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.75em; font-weight: 700; color: #6a6a6a; } .report-form textarea { min-height: 10.5em; resize: vertical; margin-bottom: 0.65em; } .report-form-footer { display: flex; align-items: center; justify-content: space-between; gap: 0.8em; } .report-counter { color: #8a8a8a; font-size: 0.8em; letter-spacing: 0.02em; } body.single #main article.post > header .meta { border-left: 0; display: flex; align-items: center; justify-content: center; text-align: center; } body.single #main article.post > header .meta .published { margin-top: 0; white-space: normal; line-height: 1.45; }";
+  style.textContent = `
+    .article-tab-panel { display: none; }
+    .article-tab-panel.active { display: block; }
+    .article-tabs-nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 0.5em;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .article-tabs-nav .article-tab {
+      flex: 1 1 auto;
+      min-width: 0;
+      max-width: 100%;
+      box-sizing: border-box;
+      white-space: normal;
+      line-height: 1.35;
+      height: auto;
+      min-height: 4.8125em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75em 1.25em;
+    }
+    .article-tabs-nav .article-tab[data-action="report"] { margin-left: auto; }
+    @media screen and (max-width: 736px) {
+      .article-tabs-nav .article-tab[data-action="report"] { margin-left: 0; }
+      .article-tabs-nav .article-tab { flex: 1 1 calc(50% - 0.35em); }
+    }
+    @media screen and (max-width: 480px) {
+      .article-tabs-nav .article-tab { flex: 1 1 100%; }
+    }
+    .report-form { display: block; }
+    .report-label { display: block; margin-bottom: 0.6em; letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.75em; font-weight: 700; color: #6a6a6a; }
+    .report-form textarea { min-height: 10.5em; resize: vertical; margin-bottom: 0.65em; }
+    .report-form-footer { display: flex; align-items: center; justify-content: space-between; gap: 0.8em; }
+    .report-counter { color: #8a8a8a; font-size: 0.8em; letter-spacing: 0.02em; }
+    body.single #main article.post > header .meta { border-left: 0; display: flex; align-items: center; justify-content: center; text-align: center; }
+    body.single #main article.post > header .meta .published { margin-top: 0; white-space: normal; line-height: 1.45; }
+  `;
   document.head.appendChild(style);
 
   const tabs = document.querySelectorAll<HTMLElement>(".article-tab");
